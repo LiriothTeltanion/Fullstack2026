@@ -1,356 +1,443 @@
-# 🥇 Fullstack2026 Master Documentation
+<div align="center">
 
-Comprehensive guide to the progressive full-stack learning track, covering Python foundations through TypeScript development.
+<img src="./assets/readme/nova-fullstack-banner.svg" width="100%" alt="Animated Fullstack2026 banner">
 
-**🌍 Language Note**: This README stays entirely in English while using emojis to highlight key ideas and milestones.
+<br>
 
----
-## 📑 Table of Contents
-1. 🗺️ Overview & Learning Path
-2. 🏗️ Week Structure & Prerequisites
-3. 📅 Detailed Week Breakdown
-4. 🛠️ Technology Stack & Tools
-5. 💻 Development Environment Setup
-6. ▶️ Running & Testing Code
-7. 📁 Project Structure & Standards
-8. 📊 Assessment & Progress Tracking
-9. 📚 Resources & References
-10. 🔧 Troubleshooting Guide
-11. 🚀 Future Enhancements
+[![Repository](https://img.shields.io/badge/GitHub-Fullstack2026-181717?style=for-the-badge&logo=github)](https://github.com/LiriothTeltanion/Fullstack2026)
+[![Last commit](https://img.shields.io/github/last-commit/LiriothTeltanion/Fullstack2026?style=for-the-badge&logo=git)](https://github.com/LiriothTeltanion/Fullstack2026/commits/main)
+[![Repo size](https://img.shields.io/github/repo-size/LiriothTeltanion/Fullstack2026?style=for-the-badge&logo=github)](https://github.com/LiriothTeltanion/Fullstack2026)
+[![License](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)](LICENSE)
+[![Maintainer](https://img.shields.io/badge/Maintainer-Kevin%20Cusnir-7c3aed?style=for-the-badge)](https://github.com/LiriothTeltanion)
+
+### A progressive full-stack learning archive evolving into a complete product portfolio
+
+**Python · OOP · JavaScript · DOM · HTTP · Async · TypeScript · APIs · React · Databases · Deployment**
+
+</div>
 
 ---
-## 1. 🗺️ Overview & Learning Path
 
-**Fullstack2026** is a progressive curriculum designed to build full-stack development skills through hands-on practice and incremental complexity.
+## 🧭 Navigation
 
-### 📈 Learning Progression
-```
-🐍 Week1: Python Foundations → 🏗️ Week2: OOP Mastery → 🌐 Week3: DOM & Events → 
-⚡ Week4: Async JavaScript → 🔷 Week5: TypeScript → 🚀 Week6-8: Integration & Projects
-```
-
-### 🎯 Target Outcomes
-- 🐍 Solid Python programming and OOP principles
-- 🌐 Modern JavaScript (ES6+) and DOM manipulation
-- ⚡ Asynchronous programming patterns
-- 🔷 TypeScript for type-safe development
-- 🚀 Full-stack project integration skills
+[About](#-what-fullstack2026-is) ·
+[Snapshot](#-live-repository-snapshot) ·
+[Learning path](#-learning-architecture) ·
+[Projects](#-selected-projects-and-challenges) ·
+[Setup](#-quick-start) ·
+[Quality](#-engineering-quality-workflow) ·
+[Roadmap](#-2026-roadmap) ·
+[Capstone](#-proposed-capstone--nova-learning-dashboard) ·
+[Languages](#-multilingual-summary)
 
 ---
-## 2. 🏗️ Week Structure & Prerequisites
 
-Each week follows a consistent structure:
-```
-📁 WeekX<Topic>/
-  📅 DayX<Focus>/
-    🏋️ Exercises/
-      🥉 ExercisesXP/        # Standard level
-      🥈 ExercisesXPGold/    # Intermediate level  
-      🥇 ExercisesXPNinja/   # Advanced level
-    💪 DailyChallenge/       # Problem-solving focused
-  📄 README.md               # Week objectives & guidance
-```
+## ✨ What Fullstack2026 is
 
-### ⚡ Prerequisites by Week
-| Week | Prerequisites | Estimated Hours ⏱️ |
-|------|--------------|-------------------|
-| 🐍 Week1 | Basic computer literacy | 20-25 |
-| 🏗️ Week2 | Week1 completion | 25-30 |
-| 🌐 Week3 | HTML/CSS basics, Week2 | 30-35 |
-| ⚡ Week4 | Week3, JavaScript fundamentals | 35-40 |
-| 🔷 Week5 | Week4, ES6+ comfort | 25-30 |
-| 🚀 Week6-8 | All previous weeks | 40-50 each |
+`Fullstack2026` is my practical development-learning repository and the technical foundation of my software portfolio.
+
+It is not a collection of empty demonstrations. It contains progressive exercises, daily challenges, interactive browser work and increasingly structured mini-projects that document the transition from programming fundamentals toward full-stack product engineering.
+
+### What this repository demonstrates
+
+- 🐍 **Programming foundations:** Python syntax, data structures, functions and problem decomposition
+- 🏗️ **Object-oriented design:** classes, inheritance, encapsulation, modularity and reusable models
+- 🌐 **Browser engineering:** JavaScript, DOM manipulation, forms, events and accessible interaction
+- ⚡ **Asynchronous workflows:** HTTP requests, promises, validation and resilient error states
+- 🔷 **Type safety:** TypeScript unions, interfaces, classes, guards and safer domain modeling
+- 🧪 **Engineering discipline:** linting, formatting, tests, documentation and version-control hygiene
+- 🚀 **Product direction:** planned backend, React, database, authentication, CI and deployment layers
+
+> **Honest current status:** the repository is already a strong learning archive with real exercises and mini-projects. It is not yet one unified production application. Building that integrated capstone is the next major milestone.
 
 ---
-## 3. 📅 Detailed Week Breakdown
 
-### 🐍 Week1Python - Foundations
-**🎯 Objective**: Master Python syntax, data structures, and control flow
+## 📊 Live repository snapshot
 
-#### 📅 Day1StartingwithPython
-- **🧠 Core Concepts**: Variables, data types, operators, basic I/O
-- **📄 Key Files**: `exercisesxp.py` (9 exercises covering fundamentals)
-- **🛠️ Skills Gained**: Print formatting, type conversion, user input handling
-- **📊 Assessment**: XP exercises completion + daily challenge
+| Metric | Current local value |
+|---|---:|
+| Working branch | `main` |
+| Current revision | `fd10e5e` |
+| Local commit count | 283 |
+| Tracked files | 375 |
+| Week folders detected | 6 |
+| Project/challenge candidates detected | 40 |
+| Last commit date | 2025-10-21 |
+| Last commit message | Move StarWarsWebApp out of Exercises directory |
+| README generated | 2026-07-14 |
 
-#### 📅 Day2ListsIteratingandFormattingData  
-- **🧠 Core Concepts**: Lists, indexing, slicing, iteration patterns
-- **🛠️ Key Skills**: List comprehensions, string formatting methods
-- **💪 Practice**: Data manipulation and formatting exercises
+**Most common tracked extensions:** `.md` 125 · `.py` 70 · `.js` 60 · `.html` 42 · `.json` 14 · `.ts` 12 · `.css` 12 · `.gitignore` 10 · `.wav` 9 · `.txt` 8
 
-#### 📅 Day3Dictionaries
-- **🧠 Core Concepts**: Dictionary operations, key-value manipulation
-- **⚡ Advanced Topics**: Nested structures, dictionary methods
-- **🌍 Real-world Applications**: Data parsing and transformation
-
-#### 📅 Day4Functions
-- **🧠 Core Concepts**: Function definition, parameters, return values
-- **⚡ Advanced Topics**: Default parameters, *args, **kwargs, scope
-- **✅ Best Practices**: Documentation, modularity, testing approaches
-
-#### 📅 Day5MiniProject
-- **🔗 Integration**: Combine all Week1 concepts in a cohesive project
-- **🛠️ Skills**: Problem decomposition, code organization, debugging
-
-### 🏗️ Week2OOP - Object-Oriented Programming
-**🎯 Objective**: Design and implement object-oriented solutions
-
-#### 📅 Week Structure
-- **Day1**: Classes, objects, attributes, methods
-- **Day2**: Inheritance, encapsulation, polymorphism
-- **Day3**: Modules, packages, advanced OOP patterns
-- **Day4**: File I/O, JSON handling, API interactions
-- **Day5**: Comprehensive OOP project
-
-### 🌐 Week3JavaScriptandDOM - Client-Side Development
-**🎯 Objective**: Master DOM manipulation, browser events, and mini front-end projects
-
-#### 📅 Day1 — Introduction to JavaScript
-- **Key skills**: Array iteration, conditionals, prompt validation, object traversal, basic DOM output helpers.
-- **Representative work**: [`ExercisesXP/script.js`](Week3JavaScriptandDOM/Day1IntroductiontoJavaScript/Exercises/ExercisesXP/script.js) implements seven warm-up challenges plus reusable logging utilities; daily challenges explore string manipulation patterns.
-
-#### 📅 Day2 — Functions & DOM Foundations
-- **Key skills**: Function decomposition, higher-order utilities, control flow with prompts, and introductory DOM querying/styling.
-- **Representative work**: [`ExercisesXP/script.js`](Week3JavaScriptandDOM/Day2FunctionsandDOMIntroduction/Exercises/ExercisesXP/script.js) refactors billing calculators, travel estimators, and multi-step DOM edits (class toggling, element creation, alert-driven interactions). The [`DailyChallengePlanets`](Week3JavaScriptandDOM/Day2FunctionsandDOMIntroduction/DailyChallenge/DailyChallengePlanets/) folder reinforces dynamic element creation.
-
-#### 📅 Day3 — DOM Events & Animations
-- **Exercises XP**: Event-driven DOM manipulations, hover interactions, and paragraph animations highlighted in [`README_DOM_XP.md`](Week3JavaScriptandDOM/Day3LearningDOMEvents/Exercises/ExercisesXP/README_DOM_XP.md) and [`README_Animations_XP.md`](Week3JavaScriptandDOM/Day3LearningDOMEvents/Exercises/ExercisesXPAnimations/README_Animations_XP.md).
-- **Daily Challenge**: A Mad Libs generator with shuffle support (`TellTheStory`) encourages form validation and accessible announcements.【F:Week3JavaScriptandDOM/Day3LearningDOMEvents/Exercises/ExercisesXP/README_DOM_XP.md†L1-L33】【F:Week3JavaScriptandDOM/Day3LearningDOMEvents/DailyChallenge/TellTheStory/README_MadLibs.md†L1-L27】
-
-#### 📅 Day4 — Advanced Functions
-- **Exercises XP**: Arrow functions, scope practice, ternaries, and self-invoking modules rendered via a single-page playground.【F:Week3JavaScriptandDOM/Day4AdvancedJavaScriptFunctions/Exercises/ExercisesXP/README_Advanced_JS.md†L1-L29】
-- **Daily Challenge**: `Groceries` highlights pass-by-value vs pass-by-reference and introduces deep cloning with `structuredClone`.【F:Week3JavaScriptandDOM/Day4AdvancedJavaScriptFunctions/DailyChallenge/Groceries/README_Groceries.md†L1-L21】
-
-#### 📅 Day5 — Mini Project & Daily Challenge
-- **Mini Project**: `MiniProjectColoringGame` builds a responsive pixel painter with dynamic grid sizing, color swatches, and click-and-drag painting.【F:Week3JavaScriptandDOM/Day5MiniProject/MiniProjectColoringGame/script.js†L1-L40】
-- **Daily Challenge**: `TodoList` manages task objects with completion toggles and deletions, emphasising DOM data binding best practices.【F:Week3JavaScriptandDOM/Day5MiniProject/DailyChallenge/TodoList/script.js†L1-L86】
-
-#### 🔁 Integration ideas
-- Combine Day3 event patterns with Day4 function modules to build reusable UI helpers.
-- Extend the coloring game with async saving (Week4) or typed configs (Week5) to cement cross-week learning.
-
-### ⚡ Week4AdvAsynchronousJavaScript — Async Patterns & HTTP
-**🎯 Objective**: Consolidate higher-order JavaScript, HTTP workflows, and promise-based async code.
-
-#### 📅 Day1 — Advanced Array Methods
-- **Daily Challenge (`GoWildcats.ts`)**: Applies `forEach` transformations to produce username lists, filter winners, and aggregate scores in TypeScript.【F:Week4AdvAsynchronousJavaScript/Day1AdvancedArrayMethods/DailyChallenge/README.md†L1-L24】
-
-#### 📅 Day2 — Advanced Object Methods
-- **Exercises XP (`ObjectsDestructuringClassesXP.ts`)**: Covers destructuring, `Object.entries`, and class inheritance patterns in strongly typed TypeScript.【F:Week4AdvAsynchronousJavaScript/Day2AdvancedObjectMethods/Exercises/ExercisesXP/README.md†L1-L26】
-- **Daily Challenge**: Video metadata manipulation reinforces object method fluency (see `VideoObjects.ts`).
-
-#### 📅 Day3 — HTTP & Forms
-- **Exercises XP**: Demonstrates GET vs POST submissions, devtools payload inspection, and JSON serialization walkthroughs.【F:Week4AdvAsynchronousJavaScript/Day3HTTPandFormmethodGETandPOST/Exercises/exercises-xp-http-forms/README.md†L1-L37】
-- **Daily Challenges**: Includes a truthiness utility and a form-to-JSON converter with running history to reinforce event handling and validation patterns.【F:Week4AdvAsynchronousJavaScript/Day3HTTPandFormmethodGETandPOST/DailyChallenge/TrueOrFalse/README.md†L1-L20】【F:Week4AdvAsynchronousJavaScript/Day3HTTPandFormmethodGETandPOST/DailyChallenge/HTMLForm/README.md†L1-L17】
-
-#### 📅 Day4 — Promises & Async Flows
-- **Exercises XP**: Promise construction practice, including timed resolution and error handling utilities, runnable via browser UI or Node.【F:Week4AdvAsynchronousJavaScript/Day4AsynchronousJavaScript/Exercises/ExercisesXP/README.md†L1-L36】
-- **Daily Challenge (`PlayWithWords`)**: Chains promise-based string transformations and a Morse translator UI with graceful rejection flows.【F:Week4AdvAsynchronousJavaScript/Day4AsynchronousJavaScript/DailyChallenge/PlayWithWords/README.md†L1-L35】
-
-#### 🔁 Integration ideas
-- Convert Week3 DOM projects into async-ready apps by layering HTTP requests from Day3.
-- Pair Day1/Day2 TypeScript exercises with Day4 promise utilities to enforce typing on async operations.
-
-### 🔷 Week5MiniProjectAndTypeScript — TypeScript Deep Dive
-**🎯 Objective**: Practice type guards, discriminated unions, and object-oriented design using TypeScript tooling.
-
-#### 📅 Day2 — Union Types
-- **Daily Challenge (`UnionTypeValidator.ts`)**: Validates runtime values against whitelisted type strings, including aliases for arrays, null, and dates.【F:Week5MiniProjectAndTypeScript/Day2IntroductionToTypeScriptAndKeyConcepts/DailyChallenge/README.md†L1-L27】
-
-#### 📅 Day3 — Classes & Interfaces
-- **Daily Challenge (`LibrarySystem.ts`)**: Implements a library domain model with inheritance, optional fields, and readonly modifiers to contrast physical vs digital catalogues.【F:Week5MiniProjectAndTypeScript/Day3AdvancedTypeScriptConceptsAndApplications/DailyChallenge/README.md†L1-L15】
-
-#### 📅 Day4 — Type Guards & Unions
-- **Daily Challenge (`TypeGuardUnion.ts`)**: Demonstrates discriminated unions, custom guard predicates, and resilient fallbacks when unexpected payloads arrive.【F:Week5MiniProjectAndTypeScript/Day4AdvancedTypeScriptConceptsAndApplications/DailyChallenge/README.md†L1-L20】
-
-> ℹ️ **Week5 Tip**: Each TypeScript exercise includes both `ts-node` and `tsc` execution instructions for rapid feedback loops.
+> Repository statistics above are generated by `NOVA Fullstack2026 README Studio` from the local Git history and tracked files.
 
 ---
-## 4. 🛠️ Technology Stack & Tools
 
-- **Languages**: Python (Weeks 1–2), JavaScript/TypeScript (Weeks 3–5) with growing emphasis on modern ES features and strong typing.
-- **Tooling**: Node.js 18+ for JS/TS execution, `ts-node`/`tsc` for TypeScript compilation, and browser DevTools for DOM/HTTP debugging.【F:Week4AdvAsynchronousJavaScript/Day4AsynchronousJavaScript/Exercises/ExercisesXP/README.md†L28-L36】【F:Week5MiniProjectAndTypeScript/Day4AdvancedTypeScriptConceptsAndApplications/DailyChallenge/README.md†L9-L18】
-- **Testing Helpers**: Inline demo blocks (guarded against auto-graders) provide quick sanity checks across TypeScript challenges.【F:Week4AdvAsynchronousJavaScript/Day1AdvancedArrayMethods/DailyChallenge/README.md†L15-L24】【F:Week5MiniProjectAndTypeScript/Day3AdvancedTypeScriptConceptsAndApplications/DailyChallenge/README.md†L5-L15】
-- **Planned Additions**: ESLint/Prettier, pytest, and Vitest/Jest remain roadmap priorities (see §11).
+## 🪐 Learning architecture
 
----
-## 5. 💻 Development Environment Setup
+<img src="./assets/readme/learning-orbit.svg" width="100%" alt="Animated orbit showing the Fullstack2026 learning path">
 
-1. **Install prerequisites**
-   - Python 3.11+ for Weeks 1–2.
-   - Node.js 18+ plus `npm` for DOM, HTTP, async, and TypeScript modules.【F:Week4AdvAsynchronousJavaScript/Day3HTTPandFormmethodGETandPOST/Exercises/exercises-xp-http-forms/README.md†L24-L32】【F:Week5MiniProjectAndTypeScript/Day4AdvancedTypeScriptConceptsAndApplications/DailyChallenge/README.md†L9-L18】
-2. **Global tooling (optional but recommended)**
-   - `npx ts-node` for running `.ts` files without intermediate builds.【F:Week4AdvAsynchronousJavaScript/Day1AdvancedArrayMethods/DailyChallenge/README.md†L15-L24】
-   - Simple static servers (`python -m http.server`, `npx http-server`) for HTTP form demos.【F:Week4AdvAsynchronousJavaScript/Day3HTTPandFormmethodGETandPOST/Exercises/exercises-xp-http-forms/README.md†L24-L32】
-3. **Editor setup**
-   - Enable ESLint/Prettier or equivalent formatters to keep JS/TS code consistent.
-   - Install Python and TypeScript language extensions for intellisense and type checking.
-4. **Project tooling**
-   - Run `npm install` in the repository root once to download the shared ESLint/Prettier toolchain ⚙️.
-   - Run `npm run lint` to audit Week3 JavaScript and Week5 TypeScript sources for common pitfalls before submitting work.
-   - Run `npm run format` to apply Prettier's consistent spacing and punctuation rules across those folders.
+| Module | Main focus | Status |
+|---|---|---|
+| [Week1Python](Week1Python/) | Python syntax, data structures, control flow, functions and foundational projects. | ✅ Present |
+| [Week2OOP](Week2OOP/) | Object-oriented programming, modules, files, JSON, APIs and reusable design. | ✅ Present |
+| [Week3JavaScriptandDOM](Week3JavaScriptandDOM/) | Modern JavaScript, DOM manipulation, events and interactive browser interfaces. | ✅ Present |
+| [Week4AdvAsynchronousJavaScript](Week4AdvAsynchronousJavaScript/) | Advanced arrays/objects, HTTP forms, promises and asynchronous workflows. | ✅ Present |
+| [Week5MiniProjectAndTypeScript](Week5MiniProjectAndTypeScript/) | Mini-projects and TypeScript: unions, interfaces, classes and type guards. | ✅ Present |
+| [Week6DatabasesAndNodejs](Week6DatabasesAndNodejs/) | Progressive exercises, challenges and practical integration work. | ✅ Present |
+| **Week6 — planned** | Backend fundamentals, routing, REST APIs, validation and service structure. | 🧭 Roadmap |
+| **Week7 — planned** | React + TypeScript frontend, state, reusable components and API integration. | 🧭 Roadmap |
+| **Week8 — planned** | Database persistence, authentication, automated testing and deployment. | 🧭 Roadmap |
 
----
-## 6. ▶️ Running & Testing Code
+### Target outcomes
 
-| Week | Quick start |
-|------|-------------|
-| 🐍 Week1–2 | Run Python files with `python <file>.py`; add virtual environments for package isolation. |
-| 🌐 Week3 | Open HTML files directly in a browser; keep DevTools console visible for logs and interactive debugging.【F:Week3JavaScriptandDOM/Day3LearningDOMEvents/Exercises/ExercisesXP/README_DOM_XP.md†L11-L33】 |
-| ⚡ Week4 | Combine browser sessions with Node CLI (`node` or `npx ts-node`) to inspect promises, HTTP submissions, and TypeScript utilities.【F:Week4AdvAsynchronousJavaScript/Day3HTTPandFormmethodGETandPOST/Exercises/exercises-xp-http-forms/README.md†L24-L37】【F:Week4AdvAsynchronousJavaScript/Day4AsynchronousJavaScript/Exercises/ExercisesXP/README.md†L28-L36】 |
-| 🔷 Week5 | Execute TypeScript via `npx ts-node` or compile with `npx tsc` followed by `node` for grader-friendly outputs.【F:Week5MiniProjectAndTypeScript/Day2IntroductionToTypeScriptAndKeyConcepts/DailyChallenge/README.md†L15-L23】 |
+By completing the full roadmap, this repository should prove the ability to:
 
-> 💡 **Automation idea**: Add npm scripts (`npm run dev:week4`) to standardise local servers and TS execution.
-
-### 🧰 Shared npm scripts
-
-- `npm run lint`: Executes ESLint against `Week3JavaScriptandDOM/**/*.js` and `Week5MiniProjectAndTypeScript/**/*.ts`, blending browser and Node environments for accurate feedback.
-- `npm run format`: Runs Prettier in write mode across the same paths to keep diffs minimal and beginner-friendly.
+1. Design and explain clear algorithms.
+2. Build maintainable Python and TypeScript modules.
+3. Create interactive browser interfaces.
+4. consume and expose HTTP APIs.
+5. Model persistent data safely.
+6. Test, document and automate software workflows.
+7. Deploy an integrated full-stack product.
 
 ---
-## 7. 📁 Project Structure & Standards
 
-### 📂 File Organization
-```
-📁 Fullstack2026/
-  🐍 Week1Python/
-  🏗️ Week2OOP/
-  🌐 Week3JavaScriptandDOM/
-    📅 Day3LearningDOMEvents/...
-    📅 Day5MiniProject/
-  ⚡ Week4AdvAsynchronousJavaScript/
-    📅 Day1AdvancedArrayMethods/
-    📅 Day3HTTPandFormmethodGETandPOST/
-    📅 Day4AsynchronousJavaScript/
-  🔷 Week5MiniProjectAndTypeScript/
-    📅 Day2IntroductionToTypeScriptAndKeyConcepts/
-    📅 Day4AdvancedTypeScriptConceptsAndApplications/
+## 🌟 Selected projects and challenges
+
+| Module | Project or challenge | What it practices |
+|---|---|---|
+| Week1Python | [DailyChallenge](Week1Python/Day1StartingwithPython/DailyChallenge/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
+| Week1Python | [DailyChallenge](Week1Python/Day2ListsIteratingAndFormattingData/DailyChallenge/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
+| Week1Python | [DailyChallenge](Week1Python/Day3Dictionaries/DailyChallenge/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
+| Week1Python | [DailyChallenge](Week1Python/Day4Functions/DailyChallenge/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
+| Week1Python | [Day5MiniProject](Week1Python/Day5MiniProject/) | Integrated mini-project combining the core concepts of its week in a practical browser experience. |
+| Week1Python | [DailyChallenge](Week1Python/Day5MiniProject/DailyChallenge/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
+| Week2OOP | [DailyChallenge](Week2OOP/Day1IntroductiontoOOP/DailyChallenge/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
+| Week2OOP | [DailyChallenge](Week2OOP/Day2OOPInheritanceEncapsulationPolymorphism/DailyChallenge/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
+| Week2OOP | [DailyChallenge](Week2OOP/Day3OOPandModules/DailyChallenge/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
+| Week2OOP | [DailyChallenge](Week2OOP/Day4PythonFileIOJSONandAPI/DailyChallenge/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
+| Week2OOP | [Day5MiniProject](Week2OOP/Day5MiniProject/) | Integrated mini-project combining the core concepts of its week in a practical browser experience. |
+| Week2OOP | [DailyChallenge](Week2OOP/Day5MiniProject/DailyChallenge/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
+| Week2OOP | [DailyChallenge](Week2OOP/RemoteLearningOOP/DailyChallenge/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
+| Week2OOP | [MiniProjectVaccines](Week2OOP/RemoteLearningOOP/Exercises/MiniProjectVaccines/) | Integrated mini-project combining the core concepts of its week in a practical browser experience. |
+| Week3JavaScriptandDOM | [DailyChallenge](Week3JavaScriptandDOM/Day1IntroductiontoJavaScript/DailyChallenge/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
+| Week3JavaScriptandDOM | [DailyChallengeNotBad](Week3JavaScriptandDOM/Day1IntroductiontoJavaScript/DailyChallenge/DailyChallengeNotBad/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
+| Week3JavaScriptandDOM | [DailyChallengeStars](Week3JavaScriptandDOM/Day1IntroductiontoJavaScript/DailyChallenge/DailyChallengeStars/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
+| Week3JavaScriptandDOM | [DailyChallenge](Week3JavaScriptandDOM/Day2FunctionsandDOMIntroduction/DailyChallenge/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
+| Week3JavaScriptandDOM | [DailyChallengePlanets](Week3JavaScriptandDOM/Day2FunctionsandDOMIntroduction/DailyChallenge/DailyChallengePlanets/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
+| Week3JavaScriptandDOM | [DailyChallenge](Week3JavaScriptandDOM/Day3LearningDOMEvents/DailyChallenge/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
+
+The repository also contains XP exercises, Gold/Ninja extensions and focused daily challenges inside the week structure.
+
+---
+
+## 🧬 Technology constellation
+
+<img src="./assets/readme/stack-pulse.svg" width="100%" alt="Animated progression from learning foundations to product delivery">
+
+| Layer | Current and planned technologies |
+|---|---|
+| Foundations | Python, object-oriented programming, JSON and file workflows |
+| Browser | HTML, CSS, JavaScript, DOM, events, forms and browser DevTools |
+| Typed development | TypeScript, interfaces, unions, classes and type guards |
+| Tooling | Node.js, npm, ESLint, Prettier, Git and GitHub |
+| Planned backend | FastAPI or Express, REST APIs and structured validation |
+| Planned frontend | React + TypeScript |
+| Planned persistence | SQLite first, optional PostgreSQL migration |
+| Planned delivery | Automated tests, GitHub Actions and public deployment |
+
+---
+
+## ⚡ Quick start
+
+### Clone into a short local development path
+
+```powershell
+New-Item -ItemType Directory -Force C:\Dev | Out-Null
+git clone https://github.com/LiriothTeltanion/Fullstack2026.git C:\Dev\Fullstack2026
+Set-Location C:\Dev\Fullstack2026
 ```
 
-### 🏷️ Naming Conventions
-| Element | Convention | Example |
-|---------|------------|---------|
-| 📁 Folders | PascalCase or Week#Topic | `Week1Python`, `ExercisesXP` |
-| 🐍 Python files | snake_case | `exercisesxp.py`, `daily_challenge.py` |
-| 🌐 JS/TS files | camelCase/PascalCase per spec | `UnionTypeValidator.ts`, `dom_exercises.js` |
-| 🏗️ Classes | PascalCase | `Student`, `DatabaseManager` |
-| 🔧 Functions/variables | camelCase (JS/TS), snake_case (Python) | `getUserData()`, `get_user_data()` |
+### Install the root JavaScript tooling
 
-### ✅ Code Quality Standards
-- **📖 Documentation**: Docstrings for Python, JSDoc for TypeScript
-- **🛡️ Error Handling**: Try-catch blocks, input validation
-- **🔧 Modularity**: Single responsibility principle, reusable functions
-- **🔷 Type Safety**: TypeScript interfaces, Python type hints (future)
+```powershell
+npm install
+npm run format:check
+npm run lint
+npm test
+```
 
-### 🚫 Version Control Hygiene
-- **🧼 Clean Commits**: Keep version history focused on source code and learning materials.
-- **📦 Ignore Build Artifacts**: Exclude compiled assets (e.g., `__pycache__/`, `dist/`, `node_modules/`) and local environment files via the project `.gitignore`.
-- **🔁 Regenerate Locally**: Rebuild assets as needed instead of committing generated outputs.
+### Run material by module
 
----
-## 8. 📊 Assessment & Progress Tracking
+```powershell
+# Python
+python .\Week1Python\path\to\exercise.py
 
-### 🏆 Exercise Tiers
-- **🥉 XP (Standard)**: Core concepts, required for progression
-- **🥈 XP Gold**: Additional practice, recommended for solid understanding
-- **🥇 XP Ninja**: Advanced challenges, optional but valuable
+# Static browser project
+python -m http.server 8000
 
-### 📈 Progress Indicators
-- [ ] 🐍 Week1: All XP exercises completed, daily challenges attempted
-- [ ] 🏗️ Week2: OOP project demonstrates inheritance and encapsulation
-- [ ] 🌐 Week3: Interactive DOM application with event handling
-- [ ] ⚡ Week4: Async application with API integration
-- [ ] 🔷 Week5: TypeScript project with proper typing
-- [ ] 🚀 Week6-8: Full-stack integration project
+# TypeScript through npx
+npx ts-node .\path\to\exercise.ts
 
-### 🤔 Self-Assessment Questions
-After each week, verify:
-1. ❓ Can you explain core concepts to someone else?
-2. 💡 Can you solve similar problems without referring to examples?
-3. 🔄 Are you comfortable with the development workflow?
-4. 🔧 Can you debug common issues independently?
+# Compile TypeScript
+npx tsc
+```
+
+> Use an active Node.js LTS release for the most predictable dependency compatibility. Use a Python virtual environment whenever a module introduces external packages.
 
 ---
-## 9. 📚 Resources & References
 
-### 📖 Documentation
-- [🐍 Python Official Docs](https://docs.python.org/3/)
-- [🌐 MDN JavaScript Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- [🔷 TypeScript Handbook](https://www.typescriptlang.org/docs/)
+## 🧰 Available npm commands
 
-### 💪 Practice Platforms
-- [🐍 Python.org Tutorial](https://docs.python.org/3/tutorial/)
-- [🌐 JavaScript.info](https://javascript.info/)
-- [🔷 TypeScript Playground](https://www.typescriptlang.org/play)
+| Command | Purpose |
+|---|---|
+| `npm run lint` | Audit JavaScript and TypeScript sources with ESLint. |
+| `npm run lint:fix` | Apply ESLint autofixes; review the resulting diff. |
+| `npm run format` | Format supported source files with Prettier. |
+| `npm run format:check` | Verify formatting without modifying files. |
+| `npm run test` | Run the built-in Node test runner. |
+| `npm run dev` | Placeholder until a unified development application exists. |
+| `npm run build` | Placeholder until a deployable integrated application exists. |
 
-### 👥 Community & Support
-- 🔍 Stack Overflow for specific problems
-- 💬 Python/JavaScript Discord communities
-- 🗣️ GitHub Discussions for course-related questions
+> `dev` and `build` are currently placeholders. They should become real commands when the repository gains a unified application or capstone workspace.
 
 ---
-## 10. 🔧 Troubleshooting Guide
 
-### ⚠️ Common Issues
+## 📁 Repository organization
 
-#### 🐍 Python Issues
-| Problem | Cause | Solution |
-|---------|-------|----------|
-| `ModuleNotFoundError` | Missing package or wrong Python env | ✅ Check virtual environment activation |
-| Scripts hang on `input()` | Interactive code in automated context | 🛡️ Wrap in `if __name__ == "__main__":` |
-| Import errors | Incorrect Python path | 🔧 Use absolute imports or adjust PYTHONPATH |
+```text
+Fullstack2026/
+├─ Week1Python/
+├─ Week2OOP/
+├─ Week3JavaScriptandDOM/
+├─ Week4AdvAsynchronousJavaScript/
+├─ Week5MiniProjectAndTypeScript/
+├─ assets/
+│  └─ readme/
+│     ├─ nova-fullstack-banner.svg
+│     ├─ learning-orbit.svg
+│     └─ stack-pulse.svg
+├─ package.json
+├─ .gitignore
+├─ LICENSE
+└─ README.md
+```
 
-#### 🔷 TypeScript Issues
-| Problem | Cause | Solution |
-|---------|-------|----------|
-| `tsc not found` | TypeScript not installed | 📦 Run `npm install` |
-| Compilation errors | Type mismatches | 🔍 Check type annotations, fix TypeScript errors |
-| Runtime errors after compilation | Logic errors, not type errors | 🐛 Debug compiled JavaScript in `dist/` |
+### Conventions
 
-#### 🔧 General Development
-| Problem | Cause | Solution |
-|---------|-------|----------|
-| Git merge conflicts | Concurrent edits | 🤝 Use git merge tools, communicate with team |
-| Missing dependencies | Incomplete environment setup | ✅ Check both Python and npm requirements |
-| Performance issues | Inefficient algorithms | ⚡ Profile code, optimize bottlenecks |
-
----
-## 11. 🚀 Future Enhancements
-
-### 📅 Short-term (Next 4 weeks)
-- [ ] 🌐 Publish Week3 DOM integration guide and additional capstone scenarios
-- [ ] ✅ Add ESLint + Prettier configuration
-- [ ] 🧪 Implement basic testing framework (pytest + vitest)
-- [ ] 🔗 Create Week6 backend integration content
-
-### 📈 Medium-term (2-3 months)  
-- [ ] 🗄️ Add database integration (SQLite/PostgreSQL)
-- [ ] 🔌 Implement REST API project
-- [ ] ⚛️ Add React.js introduction (Week7)
-- [ ] 🚀 Create deployment guides (Heroku, Vercel)
-
-### 🎯 Long-term (6+ months)
-- [ ] 🔷 Add advanced TypeScript patterns
-- [ ] 🔐 Implement full-stack project with authentication
-- [ ] ⚡ Add performance optimization modules
-- [ ] 🏆 Create assessment and certification system
-
-### 🤝 Contribution Guidelines
-When adding content:
-1. 🏷️ Follow established naming conventions
-2. 📄 Include comprehensive README for new weeks
-3. 🏆 Add both basic and advanced exercise tiers
-4. 🎯 Provide clear learning objectives and outcomes
-5. ✅ Test all code before committing
+- Week and topic folders use readable, descriptive names.
+- Python prefers `snake_case`, clear functions and focused modules.
+- JavaScript and TypeScript use consistent project-level naming.
+- Generated dependencies, caches and build output stay outside Git history.
+- The selected package manager should have exactly one tracked lockfile.
+- Exercise-specific documentation should live close to the relevant code.
+- Larger structural changes should use a dedicated branch and pull request.
 
 ---
+
+## ✅ Engineering quality workflow
+
+### Safe pre-commit review
+
+```powershell
+npm run format:check
+npm run lint
+npm test
+git status
+```
+
+### Deliberate automatic corrections
+
+```powershell
+npm run format
+npm run lint:fix
+git diff
+```
+
+Review every generated diff before committing.
+
+### Recommended CI pipeline
+
+A future `.github/workflows/quality.yml` should run:
+
+1. Dependency installation with the tracked lockfile
+2. Prettier format verification
+3. ESLint
+4. Node tests
+5. Python tests when pytest coverage is added
+6. Build verification once `build` becomes real
+
+---
+
+## 🚦 Current strengths and known gaps
+
+### Strengths
+
+- [x] Progressive Python learning material
+- [x] Object-oriented programming exercises
+- [x] JavaScript and DOM applications
+- [x] HTTP and asynchronous JavaScript practice
+- [x] TypeScript challenges and mini-projects
+- [x] Root linting and formatting workflow
+- [x] Multiple interactive browser projects
+- [x] Public Git history preserving the learning progression
+
+### Gaps to address
+
+- [ ] Commit the correct package-manager lockfile
+- [ ] Add GitHub Actions
+- [ ] Remove obsolete imported citation markers from older documentation
+- [ ] Expand automated Python and JavaScript/TypeScript testing
+- [ ] Replace placeholder `dev` and `build` commands
+- [ ] Add backend and database modules
+- [ ] Build an integrated React frontend
+- [ ] Deploy one complete capstone application
+- [ ] Add screenshots, short demos and accessibility notes to the strongest projects
+
+---
+
+## 🚀 2026 roadmap
+
+### Phase 1 — Stabilize Weeks 1–5
+
+- Run all available formatting, linting and tests
+- Repair broken project links and stale documentation
+- Normalize project-level README files
+- Add screenshots to the strongest browser projects
+- Track one lockfile
+- Add CI
+
+### Phase 2 — Week 6: Backend engineering
+
+- Build REST endpoints
+- Add request/response validation
+- Separate routes, services and domain logic
+- Add structured error handling
+- Add automated backend tests
+
+### Phase 3 — Week 7: React + TypeScript
+
+- Build reusable UI components
+- Add routing and state management
+- Connect to the backend API
+- Add loading, empty and error states
+- Apply accessibility and responsive design
+
+### Phase 4 — Week 8: Persistence and delivery
+
+- Add SQLite persistence
+- Introduce authentication
+- Add integration tests
+- Containerize or package the application
+- Deploy frontend and backend
+- Document the complete architecture
+
+---
+
+## 🏆 Proposed capstone — Nova Learning Dashboard
+
+A complete portfolio application can transform the learning archive into an interactive product.
+
+### Core experience
+
+- User authentication
+- Progress tracking by week and day
+- Searchable exercise and project catalog
+- Completion status and personal notes
+- Direct links to source code and live demos
+- Skills and technology visualization
+- Responsive dashboard design
+
+### Proposed architecture
+
+```mermaid
+flowchart LR
+    U[User] --> R[React + TypeScript]
+    R --> A[REST API]
+    A --> S[Service Layer]
+    S --> D[(SQLite / PostgreSQL)]
+    A --> T[Automated Tests]
+    R --> V[Vitest]
+    A --> P[pytest / Node Tests]
+    G[GitHub Actions] --> V
+    G --> P
+    G --> B[Build and Deployment]
+```
+
+### Definition of done
+
+- Frontend and backend both run from documented commands
+- Authentication and persistent progress work
+- Automated tests pass
+- CI validates every pull request
+- Public deployment is available
+- README includes architecture, screenshots and live links
+- The project is strong enough to present in a technical interview
+
+---
+
+## 🔐 Version-control hygiene
+
+- Never commit `.env`, API keys or credentials.
+- Ignore generated dependencies and caches.
+- Commit one package-manager lockfile.
+- Keep commits focused and descriptive.
+- Use branches for structural work.
+- Review pull-request diffs before merging.
+- Tag stable milestones and releases.
+
+---
+
+## 🌍 Multilingual summary
+
+<details>
+<summary><strong>🇻🇪 Resumen en español</strong></summary>
+
+### ¿Qué es Fullstack2026?
+
+Es mi repositorio principal de aprendizaje práctico de desarrollo full-stack. Conserva ejercicios reales, retos diarios y mini proyectos desde Python y programación orientada a objetos hasta JavaScript, DOM, asincronía y TypeScript.
+
+La siguiente etapa consiste en convertir esta base educativa en un producto completo: backend, React, base de datos, autenticación, pruebas, integración continua y despliegue.
+
+**Objetivo final:** demostrar no solo que sé resolver ejercicios, sino también que puedo diseñar, construir, probar, documentar y publicar una aplicación full-stack completa.
+
+</details>
+
+<details>
+<summary><strong>🇮🇱 סיכום בעברית</strong></summary>
+
+### מהו Fullstack2026?
+
+זהו מאגר הלמידה המעשי המרכזי שלי לפיתוח Full-Stack. המאגר כולל תרגילים, אתגרים יומיים ומיני־פרויקטים ב-Python, תכנות מונחה עצמים, JavaScript, DOM, עבודה אסינכרונית ו-TypeScript.
+
+השלב הבא הוא להפוך את בסיס הלמידה למוצר מלא: Backend, ממשק React, מסד נתונים, אימות משתמשים, בדיקות אוטומטיות, CI ופריסה ציבורית.
+
+**המטרה הסופית:** להראות שאני מסוגל לא רק לפתור תרגילים, אלא גם לתכנן, לבנות, לבדוק, לתעד ולפרסם אפליקציית Full-Stack מלאה.
+
+</details>
+
+---
+
+## 👨‍💻 Maintainer
+
+**Kevin Cusnir** — `LiriothTeltanion`
+
+- GitHub: [github.com/LiriothTeltanion](https://github.com/LiriothTeltanion)
+- Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)
+- Focus: full-stack development, AI-assisted engineering, practical automation and creative software
+
+---
+
 ## 📜 License
 
-This repository is distributed under the [MIT License](LICENSE). Feel free to explore, remix, and build upon the content while retaining the copyright notice.
+Distributed under the [MIT License](LICENSE).
 
 ---
-**📅 Last Updated**: February 2025
-**🔖 Version**: 1.2
-**👥 Maintainer**: Course Development Team
 
-For questions, suggestions, or contributions, please refer to the main repository or create an issue in the project tracker.
+<div align="center">
+
+### Build steadily. Document honestly. Turn learning into products.
+
+**README edition 3.0 · Generated 2026-07-14**
+
+</div>

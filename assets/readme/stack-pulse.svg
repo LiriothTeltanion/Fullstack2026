@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260" role="img" aria-labelledby="title desc">
+  <title id="title">Animated Fullstack2026 stack pulse</title>
+  <desc id="desc">Animated bars representing the progression from foundational learning to product delivery.</desc>
+  <defs>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="55%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#d946ef"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="260" rx="24" fill="#0b1123"/>
+  <text x="600" y="42" text-anchor="middle" fill="#dbeafe" font-family="Segoe UI, Arial" font-size="21" font-weight="700">LEARNING → ENGINEERING → PRODUCT</text>
+
+  <g font-family="Segoe UI, Arial" font-size="15" fill="#cbd5e1">
+    <text x="70" y="96">FOUNDATIONS</text>
+    <text x="70" y="142">INTERACTIVE WEB</text>
+    <text x="70" y="188">FULL-STACK DELIVERY</text>
+  </g>
+
+  <g>
+    <rect x="250" y="74" width="790" height="26" rx="13" fill="#16213c"/>
+    <rect x="250" y="74" width="515" height="26" rx="13" fill="url(#bar)">
+      <animate attributeName="width" values="260;515;430;515" dur="6s" repeatCount="indefinite"/>
+    </rect>
+
+    <rect x="250" y="120" width="790" height="26" rx="13" fill="#16213c"/>
+    <rect x="250" y="120" width="610" height="26" rx="13" fill="url(#bar)">
+      <animate attributeName="width" values="350;610;520;610" dur="7s" repeatCount="indefinite"/>
+    </rect>
+
+    <rect x="250" y="166" width="790" height="26" rx="13" fill="#16213c"/>
+    <rect x="250" y="166" width="285" height="26" rx="13" fill="url(#bar)">
+      <animate attributeName="width" values="120;285;210;285" dur="8s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <g font-family="Segoe UI, Arial" font-size="14" font-weight="700">
+    <text x="1060" y="94" fill="#67e8f9">Weeks 1–2</text>
+    <text x="1060" y="140" fill="#a5b4fc">Weeks 3–5</text>
+    <text x="1060" y="186" fill="#f0abfc">Weeks 6–8</text>
+  </g>
+
+  <text x="600" y="230" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, Arial" font-size="15">
+    Honest status: the learning foundation is strong; the unified capstone is the next major build.
+  </text>
+</svg>
