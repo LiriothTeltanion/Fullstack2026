@@ -1,0 +1,61 @@
+name: Repository Quality
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Audit Python syntax
+        shell: bash
+        run: |
+          python -m compileall -q Week1Python Week2OOP
+
+      - name: Run NOVA repository audit
+        if: hashFiles('tools/nova_fullstack_studio.py') != ''
+        run: python tools/nova_fullstack_studio.py --repo . --output .nova-ci --ci
+
+      - name: Set up Node
+        if: hashFiles('package.json') != ''
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          package-manager-cache: false
+
+      - name: Install root JavaScript tooling
+        if: hashFiles('package.json') != ''
+        shell: bash
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            echo "package-lock.json is missing; using npm install temporarily"
+            npm install --ignore-scripts
+          fi
+
+      - name: Verify formatting
+        if: hashFiles('package.json') != ''
+        run: npm run format:check --if-present
+
+      - name: Lint JavaScript and TypeScript
+        if: hashFiles('package.json') != ''
+        run: npm run lint --if-present
+
+      - name: Run Node tests
+        if: hashFiles('package.json') != ''
+        run: npm test --if-present

@@ -1,0 +1,13 @@
+[tool.pytest.ini_options]
+testpaths = ["tests", "Week1Python", "Week2OOP"]
+python_files = ["test_*.py", "*_test.py"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+exclude = [".git", ".venv", "node_modules", "dist", "build"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
