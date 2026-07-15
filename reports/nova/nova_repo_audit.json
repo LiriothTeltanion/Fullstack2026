@@ -3,15 +3,15 @@
     "name": "NOVA Fullstack Repository Studio",
     "version": "1.1.1"
   },
-  "generated_at": "2026-07-15T01:45:47+00:00",
+  "generated_at": "2026-07-15T01:50:57+00:00",
   "repository": {
     "root": "C:\\Users\\kevin\\OneDrive\\Escritorio\\NovaDev\\002_PROJECTS_NEXUS\\040_LEARNING_ACADEMY\\_042_Fullstack2026",
     "name": "_042_Fullstack2026",
     "git_available": true,
     "branch": "main",
-    "head": "3e56366b3f76592b27b8c34df439775a3554818f",
-    "commit_count": 284,
-    "last_commit_date": "2026-07-14T22:43:56+03:00",
+    "head": "0dad94c5e93c70e435e588713fd12693c91a117d",
+    "commit_count": 285,
+    "last_commit_date": "2026-07-15T04:47:51+03:00",
     "last_commit_message": "2",
     "dirty_paths": [],
     "scan_scope": "git-tracked files"
@@ -791,14 +791,14 @@
     ],
     "finding_severities": {
       "low": 98,
-      "high": 18,
+      "high": 19,
       "critical": 8,
       "medium": 7
     },
-    "overall_score": 42.8
+    "overall_score": 43.8
   },
   "score": {
-    "overall": 42.8,
+    "overall": 43.8,
     "grade": "F",
     "categories": {
       "learning_breadth": 100.0,
@@ -807,7 +807,7 @@
       "code_health": 19.1,
       "testing": 10.6,
       "tooling": 80,
-      "automation": 0.0,
+      "automation": 20,
       "portfolio": 100.0
     },
     "weights": {
@@ -838,7 +838,7 @@
     "Strong documentation habit with 133 documentation files.",
     "Substantial hands-on practice with 54 detected mini-project/daily-challenge roots.",
     "Animated README assets create a distinctive and memorable portfolio identity.",
-    "Rich Git history (284 commits) demonstrates sustained iteration.",
+    "Rich Git history (285 commits) demonstrates sustained iteration.",
     "Several stronger projects already separate domain logic from user interaction, which is a good base for testing."
   ],
   "risks": [
@@ -1174,11 +1174,31 @@
       "severity": "high",
       "code": "stale_readme_revision",
       "title": "README snapshot is stale",
-      "detail": "README revision fd10e5e does not match current HEAD 3e56366b3f76.",
+      "detail": "README revision fd10e5e does not match current HEAD 0dad94c5e93c.",
       "path": "README.md",
       "recommendation": "Generate repository statistics during the audit instead of hard-coding them.",
       "auto_fixable": true,
       "evidence": {}
+    },
+    {
+      "severity": "high",
+      "code": "tool_check_failed",
+      "title": "Local check failed: Python compileall",
+      "detail": "OPandModules\\\\DailyChallenge\\\\UserInfo\\\\dailychallengegolduserinfo.py'...\n  File \"Week2OOP\\Day3OOPandModules\\DailyChallenge\\UserInfo\\dailychallengegolduserinfo.py\", line 83\n    print(\"\n          ^\nSyntaxError: unterminated string literal (detected at line 83)\n\n*** Error compiling 'Week2OOP\\\\Day3OOPandModules\\\\Exercises\\\\ExercisesXPNinja\\\\exercisesxpninjadunder.py'...\n  File \"Week2OOP\\Day3OOPandModules\\Exercises\\ExercisesXPNinja\\exercisesxpninjadunder.py\", line 193\n    print(\"\n          ^\nSyntaxError: unterminated string literal (detected at line 193)\n\n*** Error compiling 'Week2OOP\\\\Day4PythonFileIOJSONandAPI\\\\DailyChallenge\\\\TextAnalysis\\\\dailychallengetextanalysis.py'...\n  File \"Week2OOP\\Day4PythonFileIOJSONandAPI\\DailyChallenge\\TextAnalysis\\dailychallengetextanalysis.py\", line 134\n    print(\"\n          ^\nSyntaxError: unterminated string literal (detected at line 134)\n\n*** Error compiling 'Week2OOP\\\\Day5MiniProject\\\\DailyChallenge\\\\Modules\\\\tests\\\\test_timer.py'...\n  File \"Week2OOP\\Day5MiniProject\\DailyChallenge\\Modules\\tests\\test_timer.py\", line 41\n    self.assertTrue(r[\"ok\")\n                          ^\nSyntaxError: closing parenthesis ')' does not match opening parenthesis '['\n\n",
+      "path": null,
+      "recommendation": "Open the generated tool-run section, fix the first actionable error, and run the audit again.",
+      "auto_fixable": false,
+      "evidence": {
+        "command": [
+          "C:\\Python314\\python.exe",
+          "-m",
+          "compileall",
+          "-q",
+          "Week1Python",
+          "Week2OOP"
+        ],
+        "returncode": 1
+      }
     },
     {
       "severity": "medium",
@@ -15676,5 +15696,22 @@
       "effort": "large"
     }
   ],
-  "tool_runs": []
+  "tool_runs": [
+    {
+      "name": "Python compileall",
+      "command": [
+        "C:\\Python314\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "Week1Python",
+        "Week2OOP"
+      ],
+      "status": "failed",
+      "returncode": 1,
+      "duration_seconds": 0.7172175999985484,
+      "stdout": "*** Error compiling 'Week2OOP\\\\Day1IntroductiontoOOP\\\\Exercises\\\\ExercisesXPGold\\\\exercisesxpgold.py'...\n  File \"Week2OOP\\Day1IntroductiontoOOP\\Exercises\\ExercisesXPGold\\exercisesxpgold.py\", line 177\n    print(\"\n          ^\nSyntaxError: unterminated string literal (detected at line 177)\n\n*** Error compiling 'Week2OOP\\\\Day3OOPandModules\\\\DailyChallenge\\\\UserInfo\\\\dailychallengegolduserinfo.py'...\n  File \"Week2OOP\\Day3OOPandModules\\DailyChallenge\\UserInfo\\dailychallengegolduserinfo.py\", line 83\n    print(\"\n          ^\nSyntaxError: unterminated string literal (detected at line 83)\n\n*** Error compiling 'Week2OOP\\\\Day3OOPandModules\\\\Exercises\\\\ExercisesXPNinja\\\\exercisesxpninjadunder.py'...\n  File \"Week2OOP\\Day3OOPandModules\\Exercises\\ExercisesXPNinja\\exercisesxpninjadunder.py\", line 193\n    print(\"\n          ^\nSyntaxError: unterminated string literal (detected at line 193)\n\n*** Error compiling 'Week2OOP\\\\Day4PythonFileIOJSONandAPI\\\\DailyChallenge\\\\TextAnalysis\\\\dailychallengetextanalysis.py'...\n  File \"Week2OOP\\Day4PythonFileIOJSONandAPI\\DailyChallenge\\TextAnalysis\\dailychallengetextanalysis.py\", line 134\n    print(\"\n          ^\nSyntaxError: unterminated string literal (detected at line 134)\n\n*** Error compiling 'Week2OOP\\\\Day5MiniProject\\\\DailyChallenge\\\\Modules\\\\tests\\\\test_timer.py'...\n  File \"Week2OOP\\Day5MiniProject\\DailyChallenge\\Modules\\tests\\test_timer.py\", line 41\n    self.assertTrue(r[\"ok\")\n                          ^\nSyntaxError: closing parenthesis ')' does not match opening parenthesis '['\n\n",
+      "stderr": ""
+    }
+  ]
 }

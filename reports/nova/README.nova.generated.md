@@ -4,11 +4,11 @@
 
 ## Current snapshot
 
-- Repository readiness: **42.8/100** (heuristic)
+- Repository readiness: **43.8/100** (heuristic)
 - Tracked/visible files scanned: **378**
 - Source files: **202**
 - Exercise/project roots: **124**
-- Generated: **2026-07-15T01:45:47+00:00**
+- Generated: **2026-07-15T01:50:57+00:00**
 
 ## Learning path
 
