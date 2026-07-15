@@ -787,7 +787,7 @@ class JSONProcessor:
             transformed = {}
             for key, value in data.items():
                 if key in transformations:
-                    transformed[key] = transformations[key](value)
+                    transformed[key] = transformations`key`
                 else:
                     transformed[key] = self.transform_data(value, transformations)
             return transformed

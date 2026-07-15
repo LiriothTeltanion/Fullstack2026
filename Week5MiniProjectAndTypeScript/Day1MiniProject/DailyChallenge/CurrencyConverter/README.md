@@ -87,7 +87,7 @@ This application allows users to convert between different currencies using live
 ## Project Structure
 
 ```
-DailyChallange/
+DailyChallenge/
 ├── index.html      # HTML structure with form elements
 ├── styles.css      # Modern styling with animations
 ├── script.js       # Logic with async/await and API integration
@@ -104,11 +104,13 @@ DailyChallange/
 
 ### 2. Configure the Application
 
-Open `script.js` and replace `YOUR_API_KEY_HERE` with your actual API key:
+Copy the safe template to a local configuration file:
 
-```javascript
-const API_KEY = 'your_actual_api_key_here';
+```powershell
+Copy-Item .\config.example.js .\config.js
 ```
+
+Open `config.js`, replace the placeholder text with your own local key, and keep `config.js` untracked. The repository already ignores local `config.js` files.
 
 ### 3. Run the Application
 

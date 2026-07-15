@@ -63,7 +63,7 @@ node tools/run_node_tests.mjs .
 
 The original step-by-step exercises for a library system are now **deprecated**. Day 5 focuses solely on the Anagram Checker mini-project that lives in [`../DailyChallenge`](../DailyChallenge). If you would like structured milestones to rebuild the solution from scratch, follow the sequence below.
 
-> 📚 Need the complete write-up? Read [`../DailyChallenge/README_ANAGRAMS.md`](../DailyChallenge/README_ANAGRAMS.md). It contains the official project description, file details, and extension ideas.
+> 📚 Need the complete write-up? Read [`AnagramChecker/README.md`](AnagramChecker/README.md). It contains the official project description, file details, and extension ideas.
 
 ---
 

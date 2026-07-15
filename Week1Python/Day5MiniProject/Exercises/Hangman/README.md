@@ -748,7 +748,7 @@ This project demonstrates professional coding practices:
 ## 🔗 Navigation
 
 **📚 Week 1 Python**
-- [← Day 4 Functions](../../Day4Functions/)
+- [← Day 4 Functions](../../../Day4Functions/)
 - [📖 Week 1 Overview](../../)
 - [🏠 Course Home](../../../)
 

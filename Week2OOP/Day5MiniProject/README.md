@@ -64,7 +64,7 @@ node tools/run_node_tests.mjs .
 
 Welcome to the final project of the Python OOP module! Instead of building a large library system, Day 5 now focuses on a compact but complete **Anagram Checker** that lets you practise object-oriented design, modular thinking, file handling, and simple CLI flows all in one place.
 
-If you prefer a detailed, learner-friendly walkthrough, jump straight to [`DailyChallenge/README_ANAGRAMS.md`](DailyChallenge/README_ANAGRAMS.md). The highlights are summarised below so the whole folder stays in sync.
+If you prefer a detailed, learner-friendly walkthrough, jump straight to [`Exercises/AnagramChecker/README.md`](Exercises/AnagramChecker/README.md). The highlights are summarised below so the whole folder stays in sync.
 
 ---
 
@@ -76,7 +76,7 @@ You will create an `AnagramChecker` class and a lightweight command-line interfa
 - Find all valid anagrams for that word (excluding the word itself).
 - Offer a tiny menu so learners can explore different inputs quickly.
 
-All of this lives in a single script, [`DailyChallenge/anagram_checker_all.py`](DailyChallenge/anagram_checker_all.py), which keeps the mini-project approachable while still demonstrating good design practices.
+All of this lives in a single script, [`Exercises/AnagramChecker/anagramchecker.py`](Exercises/AnagramChecker/anagramchecker.py), which keeps the mini-project approachable while still demonstrating good design practices.
 
 ---
 
@@ -110,7 +110,7 @@ You will see a two-option menu: enter a word or exit. Provide a single alphabeti
 
 ## 📘 Need More Detail?
 
-Head over to [`DailyChallenge/README_ANAGRAMS.md`](DailyChallenge/README_ANAGRAMS.md) for:
+Head over to [`Exercises/AnagramChecker/README.md`](Exercises/AnagramChecker/README.md) for:
 
 - A full description of the helper methods and CLI flow
 - Notes about the bundled `words.txt` (including its auto-generation behaviour)
