@@ -1,0 +1,20 @@
+NOVA Fullstack Repository Studio v1.1.1
+Repository: _042_Fullstack2026
+Generated: 2026-07-15T01:45:47+00:00
+
+OVERALL READINESS: 42.8/100 (F)
+FILES: 378
+SIZE: 2.6 MB
+TEXT LINES: 39,758
+EXERCISE ROOTS: 124
+TEST FILES: 1
+
+FINDINGS
+Critical: 8
+High:     18
+Medium:   7
+Low:      98
+Info:     0
+
+Open nova_repo_dashboard.html for the animated report.
+Review rename_plan.csv before approving any move.
