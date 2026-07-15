@@ -131,8 +131,7 @@ if __name__ == "__main__":
     print("most_common_word() ->", t.most_common_word())                 # 'hello'
     print("unique_words() ->", t.unique_words())                         # sorted unique list
 
-    print("
-=== Demo: TextModification ===")
+    print("\n=== Demo: TextModification ===")
     tm = TextModification(sample)
     print("remove_punctuation() ->", tm.remove_punctuation())
     tm = TextModification(sample)  # reset

@@ -6,13 +6,22 @@ Note: Requires network access. API key provided by the exercise. 🔑
 
 from __future__ import annotations
 
+import os
+
 from typing import Any, Dict, List, Tuple
 import requests
 
 
-API_KEY = "hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My"  # from the prompt 🔑
+API_KEY = os.getenv("GIPHY_API_KEY", "").strip()
 BASE_SEARCH = "https://api.giphy.com/v1/gifs/search"
 BASE_TRENDING = "https://api.giphy.com/v1/gifs/trending"
+
+
+def _require_api_key() -> str:
+    """Return the configured API key or explain how to configure it."""
+    if not API_KEY:
+        raise RuntimeError("Missing GIPHY_API_KEY. Copy .env.example and configure the variable outside Git.")
+    return API_KEY
 
 
 # ---------- Helpers ----------
@@ -39,7 +48,7 @@ def search_hilarious(limit: int = 10, rating: str = "g") -> Tuple[List[Dict[str,
     """Search 'hilarious' gifs; filter height>100; return (first_n, total_length_filtered). 😆"""
     q = "hilarious"
     # Build URL with f-strings as requested 🧱
-    url = f"{BASE_SEARCH}?q={q}&rating={rating}&api_key={API_KEY}&limit=50"
+    url = f"{BASE_SEARCH}?q={q}&rating={rating}&api_key={_require_api_key()}&limit=50"
     resp = requests.get(url, timeout=20)
     if resp.status_code != 200:
         raise RuntimeError(f"Giphy API error: {resp.status_code}")
@@ -60,16 +69,16 @@ def search_or_trending(term: str, limit: int = 25, rating: str = "g") -> Tuple[L
     term = (term or "").strip()
     if not term:
         # Directly fallback to trending 📉➡️📈
-        t_url = f"{BASE_TRENDING}?api_key={API_KEY}&limit={limit}&rating={rating}"
+        t_url = f"{BASE_TRENDING}?api_key={_require_api_key()}&limit={limit}&rating={rating}"
         t_resp = requests.get(t_url, timeout=20)
         t_resp.raise_for_status()
         return t_resp.json().get("data", []), True
 
-    url = f"{BASE_SEARCH}?q={term}&rating={rating}&api_key={API_KEY}&limit={limit}"
+    url = f"{BASE_SEARCH}?q={term}&rating={rating}&api_key={_require_api_key()}&limit={limit}"
     resp = requests.get(url, timeout=20)
     if resp.status_code != 200:
         # On any API error, fallback to trending
-        t_url = f"{BASE_TRENDING}?api_key={API_KEY}&limit={limit}&rating={rating}"
+        t_url = f"{BASE_TRENDING}?api_key={_require_api_key()}&limit={limit}&rating={rating}"
         t_resp = requests.get(t_url, timeout=20)
         t_resp.raise_for_status()
         return t_resp.json().get("data", []), True
@@ -77,7 +86,7 @@ def search_or_trending(term: str, limit: int = 25, rating: str = "g") -> Tuple[L
     data = resp.json().get("data", [])
     if not data:
         # Fallback when empty
-        t_url = f"{BASE_TRENDING}?api_key={API_KEY}&limit={limit}&rating={rating}"
+        t_url = f"{BASE_TRENDING}?api_key={_require_api_key()}&limit={limit}&rating={rating}"
         t_resp = requests.get(t_url, timeout=20)
         t_resp.raise_for_status()
         return t_resp.json().get("data", []), True

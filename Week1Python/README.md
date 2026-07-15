@@ -1,5 +1,66 @@
 # 🐍 Week1Python - Python Foundations
 
+<!-- NOVA:ULTIMATE:START -->
+<div align="center">
+
+<img src="../assets/readme/nova-folder-pulse.svg" width="100%" alt="Animated NOVA learning pulse">
+
+### Week1 Python
+
+<img src="../assets/readme/progress/week1-python-6dd83c5ba0.svg" width="100%" alt="Readiness status for Week1 Python">
+
+**Goal:** Strengthen Python fundamentals through progressive exercises, challenges, and complete console projects.
+
+</div>
+
+## 🧭 NOVA Folder Guide
+
+| Metric | Value |
+|---|---:|
+| Readiness | **80%** |
+| Files | 115 |
+| Source files | 35 |
+| Test files | 0 |
+| Text lines | 15,917 |
+
+### ▶️ Main paths
+
+- `Week1Python/Day5MiniProject/DailyChallenge/AdvancedAlgorithm/main.py`
+- `Week1Python/Day5MiniProject/Exercises/Challenges2/main.py`
+- `Week1Python/Day5MiniProject/Exercises/Hangman/main.py`
+
+### 🚀 Run
+
+```bash
+python Week1Python/Day5MiniProject/DailyChallenge/AdvancedAlgorithm/main.py
+python Week1Python/Day5MiniProject/Exercises/Challenges2/main.py
+python Week1Python/Day5MiniProject/Exercises/Hangman/main.py
+```
+
+### 🟢 What is already strong
+
+- ✅ README documentation is generated and repeatable.
+- ✅ Contains 35 source file(s) across practical exercises or projects.
+- ✅ No Python syntax error was detected in this folder tree.
+- ✅ A likely runnable entry point was detected.
+
+### 🟠 What to improve next
+
+- ⚠️ No local unit test is present yet; repository-wide syntax checks still cover the sources.
+
+### 🧪 Validation
+
+```bash
+python tools/nova_quality_gate.py --repo . --strict
+python -m unittest discover -s tests/python -p "test_*.py" -v
+node tools/run_node_tests.mjs .
+```
+
+> The readiness value is a transparent repository heuristic, not a course grade and not proof that every interactive or external-API exercise was executed.
+
+<sub>Managed by NOVA Ultimate v2.0.0 · 2026-07-15T06:22:47+03:00</sub>
+<!-- NOVA:ULTIMATE:END -->
+
 Master Python fundamentals through progressive daily exercises and exciting mini-projects. This comprehensive week builds from basic syntax to complete applications!
 
 ---

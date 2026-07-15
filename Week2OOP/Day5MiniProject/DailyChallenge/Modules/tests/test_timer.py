@@ -38,7 +38,7 @@ class TestTimer(unittest.TestCase):
     @mock.patch('timer.requests.Session', return_value=MockSession())
     def test_measure_load_time_success(self, _):
         r = timer.measure_load_time("https://example.com")
-        self.assertTrue(r["ok")
+        self.assertTrue(r["ok"])
         self.assertEqual(r["bytes"], 15)
         self.assertEqual(r["status"], 200)
         self.assertIn("elapsed_s", r)

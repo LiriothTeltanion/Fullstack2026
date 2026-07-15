@@ -34,9 +34,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-package-lock.json
-pnpm-lock.yaml
-yarn.lock
 
 # TypeScript build cache
 *.tsbuildinfo
@@ -70,3 +67,14 @@ Thumbs.db
 # Editor folders
 .vscode/
 .idea/
+# NOVA local state (reports are intentionally versionable)
+.nova/
+
+# Local secrets/configuration
+.env
+.env.*
+!.env.example
+**/config.js
+
+# Redundant curriculum archives
+Week*.zip

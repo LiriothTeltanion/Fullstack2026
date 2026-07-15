@@ -1,5 +1,66 @@
 # 📦 Day 3 - OOP and Modules
 
+<!-- NOVA:ULTIMATE:START -->
+<div align="center">
+
+<img src="../../assets/readme/nova-folder-pulse.svg" width="100%" alt="Animated NOVA learning pulse">
+
+### Day3 OOPand Modules
+
+<img src="../../assets/readme/progress/day3-oopand-modules-61faf7cdb6.svg" width="100%" alt="Readiness status for Day3 OOPand Modules">
+
+**Goal:** Apply object-oriented design through classes, inheritance, encapsulation, modules, and reusable models.
+
+</div>
+
+## 🧭 NOVA Folder Guide
+
+| Metric | Value |
+|---|---:|
+| Readiness | **80%** |
+| Files | 23 |
+| Source files | 6 |
+| Test files | 0 |
+| Text lines | 2,032 |
+
+### ▶️ Main paths
+
+- `Week2OOP/Day3OOPandModules/Exercises/ExercisesXP/xp_oop_modules_all.py`
+- `Week2OOP/Day3OOPandModules/Exercises/ExercisesXPGold/exercisesxpgoldmodules.py`
+- `Week2OOP/Day3OOPandModules/Exercises/ExercisesXPNinja/exercisesxpninjadunder.py`
+
+### 🚀 Run
+
+```bash
+python Week2OOP/Day3OOPandModules/Exercises/ExercisesXP/xp_oop_modules_all.py
+python Week2OOP/Day3OOPandModules/Exercises/ExercisesXPGold/exercisesxpgoldmodules.py
+python Week2OOP/Day3OOPandModules/Exercises/ExercisesXPNinja/exercisesxpninjadunder.py
+```
+
+### 🟢 What is already strong
+
+- ✅ README documentation is generated and repeatable.
+- ✅ Contains 6 source file(s) across practical exercises or projects.
+- ✅ No Python syntax error was detected in this folder tree.
+- ✅ A likely runnable entry point was detected.
+
+### 🟠 What to improve next
+
+- ⚠️ No local unit test is present yet; repository-wide syntax checks still cover the sources.
+
+### 🧪 Validation
+
+```bash
+python tools/nova_quality_gate.py --repo . --strict
+python -m unittest discover -s tests/python -p "test_*.py" -v
+node tools/run_node_tests.mjs .
+```
+
+> The readiness value is a transparent repository heuristic, not a course grade and not proof that every interactive or external-API exercise was executed.
+
+<sub>Managed by NOVA Ultimate v2.0.0 · 2026-07-15T06:22:48+03:00</sub>
+<!-- NOVA:ULTIMATE:END -->
+
 ## 🎯 Learning Objectives
 
 By the end of this day, you will be able to:

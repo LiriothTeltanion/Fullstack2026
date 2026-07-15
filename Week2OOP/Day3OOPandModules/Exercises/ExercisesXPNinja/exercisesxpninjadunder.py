@@ -190,8 +190,7 @@ class Fahrenheit(Temperature):
 
 # Demos for Exercise 1
 def _demo_temperature() -> None:
-    print("
->>> Temperature demo")
+    print("\n>>> Temperature demo")
     t_c = Celsius.from_value(25)          # 25 °C
     t_f = t_c.to(Fahrenheit)              # convert
     t_k = t_c.to(Kelvin)
@@ -286,8 +285,7 @@ class QuantumParticle:
 
 # Demos for Exercise 2
 def _demo_quantum() -> None:
-    print("
->>> Quantum demo")
+    print("\n>>> Quantum demo")
     p1 = QuantumParticle(x=1, p=5.0, label="p1")
     p2 = QuantumParticle(x=2, p=5.0, label="p2")
     print(p1.entangle(p2))

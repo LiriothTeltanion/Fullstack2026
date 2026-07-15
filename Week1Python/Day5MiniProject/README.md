@@ -1,5 +1,66 @@
 # 📅 Day 5 - Mini Project Week
 
+<!-- NOVA:ULTIMATE:START -->
+<div align="center">
+
+<img src="../../assets/readme/nova-folder-pulse.svg" width="100%" alt="Animated NOVA learning pulse">
+
+### Day5 Mini Project
+
+<img src="../../assets/readme/progress/day5-mini-project-85eec3f012.svg" width="100%" alt="Readiness status for Day5 Mini Project">
+
+**Goal:** Strengthen Python fundamentals through progressive exercises, challenges, and complete console projects.
+
+</div>
+
+## 🧭 NOVA Folder Guide
+
+| Metric | Value |
+|---|---:|
+| Readiness | **80%** |
+| Files | 29 |
+| Source files | 13 |
+| Test files | 0 |
+| Text lines | 3,843 |
+
+### ▶️ Main paths
+
+- `Week1Python/Day5MiniProject/DailyChallenge/AdvancedAlgorithm/main.py`
+- `Week1Python/Day5MiniProject/Exercises/Challenges2/main.py`
+- `Week1Python/Day5MiniProject/Exercises/Hangman/main.py`
+
+### 🚀 Run
+
+```bash
+python Week1Python/Day5MiniProject/DailyChallenge/AdvancedAlgorithm/main.py
+python Week1Python/Day5MiniProject/Exercises/Challenges2/main.py
+python Week1Python/Day5MiniProject/Exercises/Hangman/main.py
+```
+
+### 🟢 What is already strong
+
+- ✅ README documentation is generated and repeatable.
+- ✅ Contains 13 source file(s) across practical exercises or projects.
+- ✅ No Python syntax error was detected in this folder tree.
+- ✅ A likely runnable entry point was detected.
+
+### 🟠 What to improve next
+
+- ⚠️ No local unit test is present yet; repository-wide syntax checks still cover the sources.
+
+### 🧪 Validation
+
+```bash
+python tools/nova_quality_gate.py --repo . --strict
+python -m unittest discover -s tests/python -p "test_*.py" -v
+node tools/run_node_tests.mjs .
+```
+
+> The readiness value is a transparent repository heuristic, not a course grade and not proof that every interactive or external-API exercise was executed.
+
+<sub>Managed by NOVA Ultimate v2.0.0 · 2026-07-15T06:22:48+03:00</sub>
+<!-- NOVA:ULTIMATE:END -->
+
 **Author:** Kevin Cusnir "Lirioth"  
 **Course:** Fullstack Bootcamp 2026  
 **Last Updated:** October 18, 2025

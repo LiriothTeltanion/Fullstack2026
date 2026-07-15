@@ -8,15 +8,25 @@
     "lint:fix": "eslint \"Week*/**/*.{js,ts}\" --fix",
     "format": "prettier --write \"Week*/**/*.{js,ts}\"",
     "format:check": "prettier --check \"Week*/**/*.{js,ts}\"",
-    "test": "node --test",
-    "dev": "echo 'Development server not configured'",
-    "build": "echo 'Build process not configured'"
+    "test": "npm run test:js && npm run test:python",
+    "dev": "python -m http.server 8000",
+    "build": "python tools/nova_quality_gate.py --repo . --strict",
+    "audit": "python tools/nova_ultimate.py --repo . --audit --no-open",
+    "quality": "python tools/nova_quality_gate.py --repo . --strict",
+    "syntax": "python tools/nova_quality_gate.py --repo . --syntax-only --strict",
+    "test:python": "python -m unittest discover -s tests/python -p \"test_*.py\" -v",
+    "test:js": "node tools/run_node_tests.mjs .",
+    "readme:generate": "python tools/nova_ultimate.py --repo . --readmes all --apply --yes --skip-fixes --skip-npm --no-open"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
-    "prettier": "^3.3.3"
+    "prettier": "^3.3.3",
+    "typescript": "^5.9.0"
+  },
+  "engines": {
+    "node": ">=22"
   }
 }

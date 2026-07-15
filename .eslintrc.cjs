@@ -45,7 +45,7 @@ module.exports = {
     '**/dist/',
     '**/build/',
     '**/.turbo/',
-    'Week5MiniprojectAndTypescript/**/compiled/',
-    'Week5MiniprojectAndTypescript/**/out/'
+    'Week5MiniProjectAndTypeScript/**/compiled/',
+    'Week5MiniProjectAndTypeScript/**/out/'
   ]
 };

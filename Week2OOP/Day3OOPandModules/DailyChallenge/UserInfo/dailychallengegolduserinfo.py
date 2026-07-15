@@ -80,6 +80,5 @@ if __name__ == "__main__":
         sorted_records = app.sort_records(records)
         print("Sorted:", sorted_records)
     except (EOFError, KeyboardInterrupt):
-        print("
-No interactive input. Showing the sample demonstration instead:")
+        print("\nNo interactive input. Showing the sample demonstration instead:")
         _demo_sample()

@@ -174,15 +174,13 @@ if __name__ == "__main__":
     print("Area:", round(c.area(), 2))
     c.describe()
 
-    print("
->>> MyList demo 🔤")
+    print("\n>>> MyList demo 🔤")
     ml = MyList(["b", "A", "c"])
     print("Reversed:", ml.reversed_list())
     print("Sorted:", ml.sorted_list())
     print("Randoms:", ml.random_numbers_like(10, 15))
 
-    print("
->>> MenuManager demo 🍽️")
+    print("\n>>> MenuManager demo 🍽️")
     mm = MenuManager()
     mm.print_menu()
     mm.add_item("Falafel", 12, "A", False)
