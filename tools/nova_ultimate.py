@@ -1239,7 +1239,9 @@ def forge_readmes(root: Path, mode: str, changes: list[Change]) -> list[FolderSt
         directories.extend(p for p in week.rglob("*") if p.is_dir() and not skipped(p, root))
     extras = [
         root / "tools", root / "tests", root / "tests/python", root / "tests/js",
-        root / ".github", root / ".github/workflows", root / "assets", root / "assets/readme",
+        # Do not generate .github/README.md: GitHub can select it instead of the
+        # root README and hide the repository's public portfolio landing page.
+        root / ".github/workflows", root / "assets", root / "assets/readme",
     ]
     directories.extend(path for path in extras if path.exists() and path.is_dir())
     directories = sorted(set(directories), key=lambda p: (len(p.relative_to(root).parts), posix(p.relative_to(root)).lower()))

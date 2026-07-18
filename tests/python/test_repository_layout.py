@@ -7,8 +7,24 @@ ROOT = Path(__file__).resolve().parents[2]
 class RepositoryLayoutTests(unittest.TestCase):
     def test_quality_infrastructure(self):
         self.assertTrue((ROOT / ".github/workflows/quality.yml").exists())
+        self.assertTrue((ROOT / ".github/INTERNAL_GUIDE.md").exists())
+        self.assertFalse(
+            (ROOT / ".github/README.md").exists(),
+            ".github/README.md can mask the root README on GitHub's repository page",
+        )
         self.assertTrue((ROOT / "tools/nova_quality_gate.py").exists())
         package = json.loads((ROOT / "package.json").read_text(encoding="utf-8"))
+        package_lock = json.loads((ROOT / "package-lock.json").read_text(encoding="utf-8"))
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        changelog = (ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+        self.assertRegex(package["version"], r"^\d+\.\d+\.\d+$")
+        self.assertEqual(package_lock["version"], package["version"])
+        self.assertEqual(package_lock["packages"][""]["version"], package["version"])
+        self.assertIn(
+            f"Repository presentation version <strong>{package['version']}</strong>",
+            readme,
+        )
+        self.assertIn(f"## [{package['version']}]", changelog)
         for script in ("quality", "test:python", "test:js", "audit"):
             self.assertIn(script, package["scripts"])
 

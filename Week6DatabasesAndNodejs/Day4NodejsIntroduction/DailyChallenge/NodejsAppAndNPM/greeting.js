@@ -9,7 +9,7 @@
  * @returns {string}
  */
 function greet(name) {
-  const who = (typeof name === "string" && name.trim()) ? name.trim() : "friend";
+  const who = typeof name === "string" && name.trim() ? name.trim() : "friend";
   return `Hello, ${who}! 👋`;
 }
 

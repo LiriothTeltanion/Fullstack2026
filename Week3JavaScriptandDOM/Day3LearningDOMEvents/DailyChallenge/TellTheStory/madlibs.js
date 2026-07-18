@@ -49,7 +49,7 @@ function buildStory(words, forceIdx = null) {
   storyEl.textContent = story;
 }
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", e => {
   e.preventDefault(); // don't reload the page
   const values = readValues();
   const missing = validate(values);

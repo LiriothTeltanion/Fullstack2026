@@ -9,7 +9,7 @@
   const helper = document.getElementById("helper");
 
   // ✅ Primary approach: 'input' event fires after every change (keyboard, paste, drag & drop, autofill)
-  input.addEventListener("input", (e) => {
+  input.addEventListener("input", e => {
     const prev = input.value;
     // Keep only ASCII letters; remove everything else
     const cleaned = prev.replace(/[^a-z]/gi, "");
@@ -41,7 +41,7 @@
   */
 
   // 📨 Simple submit echo (no backend)
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", e => {
     e.preventDefault();
     echo.textContent = input.value ? `Submitted: "${input.value}" ✅` : "Nothing to submit.";
   });

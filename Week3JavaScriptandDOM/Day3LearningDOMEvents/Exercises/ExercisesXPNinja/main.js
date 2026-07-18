@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const input = document.getElementById("emailInput");
   const msg = document.getElementById("emailMsg");
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", e => {
     e.preventDefault();
     const method = new FormData(form).get("method") || "noregex";
     const value = input.value;
@@ -122,11 +122,11 @@ function getGeolocation() {
   }
   out.textContent = "⏳ Requesting location…";
   navigator.geolocation.getCurrentPosition(
-    (pos) => {
+    pos => {
       const { latitude, longitude } = pos.coords;
       out.textContent = `Latitude: ${latitude}\nLongitude: ${longitude}`;
     },
-    (err) => {
+    err => {
       out.textContent = `❌ Error: ${err.message}`;
     },
     { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }

@@ -1,7 +1,7 @@
 /**
  * Daily Challenge: Union Type Validator
  * Last Updated: October 8th, 2025
- * 
+ *
  * What You'll Learn:
  * - How to create a function using union types to validate variable types
  * - How to compare the type of a value against a list of allowed types
@@ -11,7 +11,7 @@
 
 /**
  * Validates if a value's type matches one of the allowed types
- * 
+ *
  * @param value - The value to validate
  * @param allowedTypes - Array of allowed type names (e.g., ['string', 'number', 'boolean'])
  * @returns true if the value type is in allowedTypes, false otherwise
@@ -19,7 +19,7 @@
 function validateUnionType(value: any, allowedTypes: string[]): boolean {
   // Get the actual type of the value using typeof operator
   const valueType = typeof value;
-  
+
   // Iterate through the array of allowed types
   for (const allowedType of allowedTypes) {
     // Check if the value's type matches any of the allowed types
@@ -27,7 +27,7 @@ function validateUnionType(value: any, allowedTypes: string[]): boolean {
       return true;
     }
   }
-  
+
   // If no match found, return false
   return false;
 }
@@ -195,16 +195,16 @@ const formFields: FormField[] = [
   { name: "age", value: 28, allowedTypes: ["number"] },
   { name: "isSubscribed", value: true, allowedTypes: ["boolean"] },
   { name: "userId", value: "12345", allowedTypes: ["string", "number"] },
-  { name: "invalidField", value: null, allowedTypes: ["string", "number"] }
+  { name: "invalidField", value: null, allowedTypes: ["string", "number"] },
 ];
 
 console.log("Validating form fields:");
 console.log();
 
-formFields.forEach((field) => {
+formFields.forEach(field => {
   const isValid = validateUnionType(field.value, field.allowedTypes);
   const status = isValid ? "✅ VALID" : "❌ INVALID";
-  
+
   console.log(`Field: ${field.name}`);
   console.log(`  Value: ${field.value}`);
   console.log(`  Type: ${typeof field.value}`);

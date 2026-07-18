@@ -9,8 +9,8 @@ function readGetParams() {
   for (const [key, value] of params.entries()) {
     obj[key] = value;
   }
-  const out = document.getElementById('getOutput');
-  out.textContent = Object.keys(obj).length ? JSON.stringify(obj, null, 2) : '{}';
+  const out = document.getElementById("getOutput");
+  out.textContent = Object.keys(obj).length ? JSON.stringify(obj, null, 2) : "{}";
 }
 readGetParams();
 
@@ -20,26 +20,26 @@ readGetParams();
 
 // --------- Exercise 3 (JSON Mario) ---------
 const marioGame = {
-  detail : "An amazing game!",
-  characters : {
-      mario : {
-        description:"Small and jumpy. Likes princesses.",
-        height: 10,
-        weight: 3,
-        speed: 12,
-      },
-      bowser : {
-        description: "Big and green, Hates princesses.",
-        height: 16,
-        weight: 6,
-        speed: 4,
-      },
-      princessPeach : {
-        description: "Beautiful princess.",
-        height: 12,
-        weight: 2,
-        speed: 2,
-      }
+  detail: "An amazing game!",
+  characters: {
+    mario: {
+      description: "Small and jumpy. Likes princesses.",
+      height: 10,
+      weight: 3,
+      speed: 12,
+    },
+    bowser: {
+      description: "Big and green, Hates princesses.",
+      height: 16,
+      weight: 6,
+      speed: 4,
+    },
+    princessPeach: {
+      description: "Beautiful princess.",
+      height: 12,
+      weight: 2,
+      speed: 2,
+    },
   },
 };
 
@@ -57,10 +57,10 @@ function makeMarioJSON(withDebugger = false) {
     debugger;
   }
 
-  const out = document.getElementById('marioOutput');
+  const out = document.getElementById("marioOutput");
   out.textContent = pretty; // show the pretty version
 }
 
 // Hook up buttons
-document.getElementById('marioRun').addEventListener('click', () => makeMarioJSON(false));
-document.getElementById('marioDebug').addEventListener('click', () => makeMarioJSON(true));
+document.getElementById("marioRun").addEventListener("click", () => makeMarioJSON(false));
+document.getElementById("marioDebug").addEventListener("click", () => makeMarioJSON(true));

@@ -18,7 +18,7 @@ const products = [
   { name: "Gaming Mouse", price: 49, category: "Peripherals" },
   { name: "USB-C Hub", price: 39, category: "Accessories" },
   { name: "27-inch Monitor", price: 229, category: "Displays" },
-  { name: "Noise-Canceling Headphones", price: 149, category: "Audio" }
+  { name: "Noise-Canceling Headphones", price: 149, category: "Audio" },
 ];
 
 // CommonJS export ✅

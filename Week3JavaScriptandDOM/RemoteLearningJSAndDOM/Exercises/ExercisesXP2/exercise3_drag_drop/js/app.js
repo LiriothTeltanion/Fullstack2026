@@ -11,7 +11,7 @@ let boxStartTop = 0;
 // Remember the original location to snap back if not dropped inside target
 const original = { left: box.offsetLeft, top: box.offsetTop };
 
-box.addEventListener("pointerdown", (e) => {
+box.addEventListener("pointerdown", e => {
   dragging = true;
   box.setPointerCapture(e.pointerId);
   startX = e.clientX;
@@ -21,7 +21,7 @@ box.addEventListener("pointerdown", (e) => {
   boxStartTop = box.offsetTop;
 });
 
-box.addEventListener("pointermove", (e) => {
+box.addEventListener("pointermove", e => {
   if (!dragging) return;
   const dx = e.clientX - startX;
   const dy = e.clientY - startY;
@@ -32,15 +32,10 @@ box.addEventListener("pointermove", (e) => {
 function isInsideTarget(el, tgt) {
   const r1 = el.getBoundingClientRect();
   const r2 = tgt.getBoundingClientRect();
-  return (
-    r1.left >= r2.left &&
-    r1.top >= r2.top &&
-    r1.right <= r2.right &&
-    r1.bottom <= r2.bottom
-  );
+  return r1.left >= r2.left && r1.top >= r2.top && r1.right <= r2.right && r1.bottom <= r2.bottom;
 }
 
-box.addEventListener("pointerup", (e) => {
+box.addEventListener("pointerup", e => {
   if (!dragging) return;
   dragging = false;
   box.releasePointerCapture(e.pointerId);

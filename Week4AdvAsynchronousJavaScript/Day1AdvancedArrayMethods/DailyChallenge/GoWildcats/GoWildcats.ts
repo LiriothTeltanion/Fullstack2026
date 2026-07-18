@@ -11,10 +11,10 @@ type Player = {
 };
 
 export const gameInfo: Player[] = [
-  { username: "john",  team: "red",   score: 5,  items: ["ball", "book", "pen"] },
-  { username: "becky", team: "blue",  score: 10, items: ["tape", "backpack", "pen"] },
-  { username: "susy",  team: "red",   score: 55, items: ["ball", "eraser", "pen"] },
-  { username: "tyson", team: "green", score: 1,  items: ["book", "pen"] },
+  { username: "john", team: "red", score: 5, items: ["ball", "book", "pen"] },
+  { username: "becky", team: "blue", score: 10, items: ["tape", "backpack", "pen"] },
+  { username: "susy", team: "red", score: 55, items: ["ball", "eraser", "pen"] },
+  { username: "tyson", team: "green", score: 1, items: ["book", "pen"] },
 ];
 
 // 1) Using forEach: usernames with "!" appended
@@ -41,7 +41,7 @@ declare const module: any | undefined;
 
 if (typeof require !== "undefined" && typeof module !== "undefined" && require.main === module) {
   console.log("usernames:", usernames); // ["john!", "becky!", "susy!", "tyson!"]
-  console.log("winners:", winners);     // ["becky", "susy"]
+  console.log("winners:", winners); // ["becky", "susy"]
   console.log("totalScore:", totalScore); // 71
 }
 

@@ -16,21 +16,21 @@ function allTruthy(...values) {
 // const allTruthy = (...values) => values.every(Boolean);
 
 // 2) Hook up demo buttons
-const out = document.getElementById('testOutput');
+const out = document.getElementById("testOutput");
 
-document.getElementById('btnA').addEventListener('click', () => {
+document.getElementById("btnA").addEventListener("click", () => {
   const result = allTruthy(true, true, true);
-  out.textContent = 'allTruthy(true, true, true) → ' + result;
+  out.textContent = "allTruthy(true, true, true) → " + result;
 });
 
-document.getElementById('btnB').addEventListener('click', () => {
+document.getElementById("btnB").addEventListener("click", () => {
   const result = allTruthy(true, false, true);
-  out.textContent = 'allTruthy(true, false, true) → ' + result;
+  out.textContent = "allTruthy(true, false, true) → " + result;
 });
 
-document.getElementById('btnC').addEventListener('click', () => {
+document.getElementById("btnC").addEventListener("click", () => {
   const result = allTruthy(5, 4, 3, 2, 1, 0);
-  out.textContent = 'allTruthy(5, 4, 3, 2, 1, 0) → ' + result;
+  out.textContent = "allTruthy(5, 4, 3, 2, 1, 0) → " + result;
 });
 
 // 3) Custom input parser (very basic). I try to convert common literals.
@@ -38,12 +38,12 @@ document.getElementById('btnC').addEventListener('click', () => {
 function parseToken(token) {
   const t = token.trim();
 
-  if (t === 'true') return true;
-  if (t === 'false') return false;
-  if (t === 'null') return null;
-  if (t === 'undefined') return undefined;
-  if (t === 'NaN') return NaN;
-  if (t === '""' || t === "''") return '';
+  if (t === "true") return true;
+  if (t === "false") return false;
+  if (t === "null") return null;
+  if (t === "undefined") return undefined;
+  if (t === "NaN") return NaN;
+  if (t === '""' || t === "''") return "";
 
   // If quoted like "hello" or 'hello', remove quotes
   if ((t.startsWith('"') && t.endsWith('"')) || (t.startsWith("'") && t.endsWith("'"))) {
@@ -58,16 +58,16 @@ function parseToken(token) {
   return t;
 }
 
-const rawInput = document.getElementById('rawInput');
-const customOutput = document.getElementById('customOutput');
-document.getElementById('runCustom').addEventListener('click', () => {
-  const parts = rawInput.value.split(',');
+const rawInput = document.getElementById("rawInput");
+const customOutput = document.getElementById("customOutput");
+document.getElementById("runCustom").addEventListener("click", () => {
+  const parts = rawInput.value.split(",");
   const values = parts.map(parseToken);
 
   const result = allTruthy(...values);
   const show = {
     values,
-    result
+    result,
   };
   customOutput.textContent = JSON.stringify(show, null, 2);
 });
