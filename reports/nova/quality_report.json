@@ -3,11 +3,11 @@
     "name": "NOVA Quality Gate",
     "version": "2.0.0"
   },
-  "generated_at": "2026-07-18T19:20:52+00:00",
+  "generated_at": "2026-07-18T19:23:28+00:00",
   "repository": "C:\\Users\\kevin\\OneDrive\\Escritorio\\NovaDev\\002_PROJECTS_NEXUS\\040_LEARNING_ACADEMY\\_042_Fullstack2026",
   "files_scanned": 1018,
   "source_files_scanned": 226,
-  "elapsed_seconds": 17.562,
+  "elapsed_seconds": 9.453,
   "status": "pass",
   "counts": {
     "error": 0,

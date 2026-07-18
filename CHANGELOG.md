@@ -8,6 +8,20 @@ does not reinterpret early work as production-ready code.
 
 - No unreleased changes are recorded yet.
 
+## [1.1.1] - 2026-07-18
+
+### Security
+
+- Pinned transitive `minimatch` resolution to the patched `9.0.7` or newer
+  line, closing the high-severity development-tool ReDoS alerts reported after
+  the 1.1.0 publication without changing curriculum runtime behavior.
+
+### Validation
+
+- `npm audit` reports zero known vulnerabilities.
+- JavaScript/TypeScript anchor tests, Python tests, Prettier and the NOVA strict
+  quality gate remain green.
+
 ## [1.1.0] - 2026-07-18
 
 ### Fixed

@@ -37,4 +37,4 @@ git diff --check
 - Do not commit credentials, local `.env` files, generated archives or private
   learning data.
 
-**Repository presentation version:** `1.1.0`
+**Repository presentation version:** `1.1.1`

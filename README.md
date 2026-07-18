@@ -17,7 +17,7 @@
 
 **Python · Object-Oriented Programming · JavaScript · DOM · HTTP · Async/Await · TypeScript · SQL · Node.js · Testing · CI**
 
-<sub>Repository presentation version <strong>1.1.0</strong> · root README protected as the public GitHub landing page</sub>
+<sub>Repository presentation version <strong>1.1.1</strong> · root README protected as the public GitHub landing page</sub>
 
 </div>
 
@@ -570,6 +570,6 @@ Distributed under the [MIT License](LICENSE).
 
 ### Build steadily · document honestly · automate responsibly · turn learning into products
 
-**Ultimate root README · NOVA edition · repository presentation v1.1.0 · July 2026**
+**Ultimate root README · NOVA edition · repository presentation v1.1.1 · July 2026**
 
 </div>
