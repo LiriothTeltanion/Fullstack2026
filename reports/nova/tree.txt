@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-08-24
-Base HEAD: ee650f3eacbe00f214919b18d92cd303366c273a
-Source-index SHA-256 (generated outputs excluded): 184258ead5924c1c7f3ed19b96bd4b1748668fb1251062c74b5437f8979a6d49
-Indexed files: 880
+Base HEAD: f16824617ee10743843f0393a9c57a72021f7f97
+Source-index SHA-256 (generated outputs excluded): db3a11215a9138f78411adc68e19f3fc297bfb06acf2bffed51c54bf1830ed47
+Indexed files: 881
 
 .
 ├── .ai
@@ -337,6 +337,7 @@ Indexed files: 880
 │       ├── CURRENT_STAGED_COMMIT_2026-08-24.md
 │       ├── DECISION_LOG.md
 │       ├── DUPLICATE_ANALYSIS.csv
+│       ├── GITHUB_GOVERNANCE_AUDIT_2026-08-24.md
 │       ├── OPEN_WORK_TRIAGE.md
 │       ├── STRUCTURE_MAP.md
 │       ├── TEST_COVERAGE_MAP.md
