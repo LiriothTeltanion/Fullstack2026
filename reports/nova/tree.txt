@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-08-24
-Base HEAD: 44204234b5f02afc404014cd7d507f7fd95c58db
-Source-index SHA-256 (generated outputs excluded): b1687908745b4285c9dfb0be1a036b707204a8be147725caf8017fe81e4347e3
-Indexed files: 879
+Base HEAD: f16824617ee10743843f0393a9c57a72021f7f97
+Source-index SHA-256 (generated outputs excluded): db3a11215a9138f78411adc68e19f3fc297bfb06acf2bffed51c54bf1830ed47
+Indexed files: 881
 
 .
 ├── .ai
@@ -337,6 +337,7 @@ Indexed files: 879
 │       ├── CURRENT_STAGED_COMMIT_2026-08-24.md
 │       ├── DECISION_LOG.md
 │       ├── DUPLICATE_ANALYSIS.csv
+│       ├── GITHUB_GOVERNANCE_AUDIT_2026-08-24.md
 │       ├── OPEN_WORK_TRIAGE.md
 │       ├── STRUCTURE_MAP.md
 │       ├── TEST_COVERAGE_MAP.md
@@ -354,6 +355,7 @@ Indexed files: 879
 │   │   ├── test_display_titles.py
 │   │   ├── test_hangman.py
 │   │   ├── test_learning_intake.py
+│   │   ├── test_nova_generator.py
 │   │   ├── test_readme_visuals.py
 │   │   ├── test_repository_layout.py
 │   │   ├── test_tictactoe.py
@@ -369,7 +371,8 @@ Indexed files: 879
 │   ├── run_node_tests.mjs
 │   ├── validate_display_titles.py
 │   ├── validate_readme_visuals.py
-│   └── validate_repository_structure.py
+│   ├── validate_repository_structure.py
+│   └── verify_eslint_baseline.mjs
 ├── Week10AdvancedTypeScriptAndAuthentication
 │   └── README.md
 ├── Week11FinalProject
@@ -1138,8 +1141,6 @@ Indexed files: 879
 │   └── README.md
 ├── .editorconfig
 ├── .env.example
-├── .eslintignore
-├── .eslintrc.cjs
 ├── .gitattributes
 ├── .gitignore
 ├── .prettierignore
@@ -1147,6 +1148,7 @@ Indexed files: 879
 ├── AGENTS.md
 ├── CHANGELOG.md
 ├── CONTRIBUTING.md
+├── eslint.config.js
 ├── FINAL_README_INSTALL_REPORT.md
 ├── LICENSE
 ├── NOVA_AUDIT.bat

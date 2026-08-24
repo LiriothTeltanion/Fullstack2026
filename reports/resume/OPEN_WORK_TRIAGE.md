@@ -1,5 +1,10 @@
 # Open work triage
 
+> Historical snapshot only. The live governance state and completed conservative
+> cleanup are recorded in
+> [GitHub Governance Audit — 2026-08-24](GITHUB_GOVERNANCE_AUDIT_2026-08-24.md).
+> The original text below is intentionally preserved as pre-cleanup evidence.
+
 > Read-only snapshot: 2026-08-24, using locally visible refs plus `gh pr list`. No branch or PR was merged, closed, deleted, rebased, or pushed.
 
 ## Branch inventory

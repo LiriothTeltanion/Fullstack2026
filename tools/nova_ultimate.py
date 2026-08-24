@@ -426,7 +426,13 @@ def update_text_references(root: Path, replacements: list[tuple[str, str]], chan
 def install_tool_files(root: Path, package_tools: Path, changes: list[Change]) -> None:
     target = root / "tools"
     target.mkdir(parents=True, exist_ok=True)
-    for name in ("nova_ultimate.py", "nova_quality_gate.py", "check_typescript_syntax.mjs", "run_node_tests.mjs"):
+    for name in (
+        "nova_ultimate.py",
+        "nova_quality_gate.py",
+        "check_typescript_syntax.mjs",
+        "run_node_tests.mjs",
+        "verify_eslint_baseline.mjs",
+    ):
         source = package_tools / name
         if source.exists():
             content = source.read_text(encoding="utf-8")
@@ -436,6 +442,18 @@ def install_tool_files(root: Path, package_tools: Path, changes: list[Change]) -
             if old.is_file():
                 old.unlink()
                 changes.append(Change("delete", posix(old.relative_to(root)), "removed superseded NOVA v1 launcher/tool"))
+
+
+def install_eslint_config(root: Path, package_tools: Path, changes: list[Change]) -> None:
+    source = package_tools.parent / "eslint.config.js"
+    if not source.exists():
+        return
+    write_text(
+        root / "eslint.config.js",
+        source.read_text(encoding="utf-8"),
+        changes,
+        "installed the canonical ESLint 10 flat configuration",
+    )
 
 
 def fix_python_syntax(root: Path, changes: list[Change]) -> list[str]:
@@ -591,16 +609,6 @@ def update_gitattributes(root: Path, changes: list[Change]) -> None:
     write_text(path, updated, changes, "make animated SVG assets reviewable as text")
 
 
-def update_eslint(root: Path, changes: list[Change]) -> None:
-    path = root / ".eslintrc.cjs"
-    if not path.exists():
-        return
-    text = read_text(path) or ""
-    updated = text
-    if updated != text:
-        write_text(path, updated, changes, "fixed canonical Week5 ESLint paths")
-
-
 def write_editorconfig(root: Path, changes: list[Change]) -> None:
     content = """root = true\n\n[*]\ncharset = utf-8\nend_of_line = lf\ninsert_final_newline = true\ntrim_trailing_whitespace = true\nindent_style = space\nindent_size = 2\n\n[*.py]\nindent_size = 4\n\n[*.md]\ntrim_trailing_whitespace = false\n\n[Makefile]\nindent_style = tab\n"""
     write_text(root / ".editorconfig", content, changes, "added cross-editor whitespace rules")
@@ -624,7 +632,7 @@ def update_package_json(root: Path, changes: list[Change]) -> None:
     payload.setdefault("version", "1.0.0")
     payload["private"] = True
     payload["type"] = "module"
-    payload["engines"] = {"node": ">=22"}
+    payload["engines"] = {"node": "^22.13.0 || >=24"}
     scripts = payload.setdefault("scripts", {})
     scripts.update({
         "audit": "python tools/nova_ultimate.py --repo . --audit --no-open",
@@ -637,23 +645,85 @@ def update_package_json(root: Path, changes: list[Change]) -> None:
         "dev": "python -m http.server 8000",
         "build": "python tools/nova_quality_gate.py --repo . --strict",
     })
-    # Keep existing lint/format commands if present; the quality gate checks legacy syntax separately.
-    scripts.setdefault("lint", 'eslint "Week*/**/*.{js,ts}"')
-    scripts.setdefault("lint:fix", 'eslint "Week*/**/*.{js,ts}" --fix')
-    scripts.setdefault("format", 'prettier --write "Week*/**/*.{js,ts,html,css,md}"')
-    scripts.setdefault("format:check", 'prettier --check "Week*/**/*.{js,ts,html,css,md}"')
+    uses_flat_eslint = (root / "eslint.config.js").exists()
+    if uses_flat_eslint:
+        scripts["lint"] = "eslint ."
+        scripts["lint:fix"] = "eslint . --fix"
+        scripts["format"] = (
+            'prettier --write "Week*/**/*.{js,ts}" "eslint.config.js" '
+            '"tools/verify_eslint_baseline.mjs"'
+        )
+        scripts["format:check"] = (
+            'prettier --check "Week*/**/*.{js,ts}" "eslint.config.js" '
+            '"tools/verify_eslint_baseline.mjs"'
+        )
+        if (root / "tools/verify_eslint_baseline.mjs").exists():
+            scripts["lint:baseline"] = "node tools/verify_eslint_baseline.mjs"
+    else:
+        scripts.setdefault("format", 'prettier --write "Week*/**/*.{js,ts,html,css,md}"')
+        scripts.setdefault("format:check", 'prettier --check "Week*/**/*.{js,ts,html,css,md}"')
+    typecheck_config = (
+        root
+        / "Week5MiniProjectAndTypeScript/Day2IntroductionToTypeScriptAndKeyConcepts"
+        / "DailyChallenge/UnionTypeValidator/tsconfig.json"
+    )
+    if typecheck_config.exists():
+        scripts["typecheck:anchor"] = (
+            'tsc -p "Week5MiniProjectAndTypeScript/Day2IntroductionToTypeScriptAndKeyConcepts/'
+            'DailyChallenge/UnionTypeValidator/tsconfig.json" --noEmit'
+        )
     deps = payload.setdefault("devDependencies", {})
     deps.setdefault("typescript", "^5.9.0")
-    deps.setdefault("eslint", "^8.57.0")
+    deps.setdefault("@types/node", "^24.0.0")
     deps.setdefault("prettier", "^3.3.3")
-    deps.setdefault("@typescript-eslint/eslint-plugin", "^6.21.0")
-    deps.setdefault("@typescript-eslint/parser", "^6.21.0")
-    deps.setdefault("eslint-config-prettier", "^9.1.0")
+    if uses_flat_eslint:
+        deps["eslint"] = "^10.9.1"
+        deps["@eslint/js"] = "^10.0.1"
+        deps["typescript-eslint"] = "^8.68.0"
+        deps["eslint-config-prettier"] = "^10.1.8"
+        deps["globals"] = "^17.11.0"
+        deps.pop("@typescript-eslint/eslint-plugin", None)
+        deps.pop("@typescript-eslint/parser", None)
     write_text(path, json.dumps(payload, indent=2, ensure_ascii=False) + "\n", changes, "installed reproducible quality/test scripts")
 
 
 def write_ci(root: Path, changes: list[Change]) -> None:
     workflow = """name: NOVA Quality Gate\n\non:\n  push:\n    branches: [main]\n  pull_request:\n  workflow_dispatch:\n\npermissions:\n  contents: read\n\nconcurrency:\n  group: nova-quality-${{ github.workflow }}-${{ github.ref }}\n  cancel-in-progress: true\n\njobs:\n  validate:\n    name: Syntax, security, docs and tests\n    runs-on: ubuntu-latest\n    timeout-minutes: 20\n    steps:\n      - name: Checkout repository\n        uses: actions/checkout@v7\n\n      - name: Set up Python\n        uses: actions/setup-python@v6\n        with:\n          python-version: \"3.13\"\n\n      - name: Set up Node.js\n        uses: actions/setup-node@v6\n        with:\n          node-version: \"24\"\n          cache: npm\n\n      - name: Install JavaScript tooling\n        run: npm ci\n\n      - name: Whole-repository quality gate\n        run: python tools/nova_quality_gate.py --repo . --strict\n\n      - name: Python anchor tests\n        run: python -m unittest discover -s tests/python -p \"test_*.py\" -v\n\n      - name: JavaScript and TypeScript anchor tests\n        run: npm run test:js\n"""
+    install_steps = (
+        "      - name: Install JavaScript tooling\n"
+        "        run: npm ci --ignore-scripts\n\n"
+        "      - name: Dependency vulnerability audit\n"
+        "        run: npm audit --audit-level=high\n\n"
+        "      - name: JavaScript and TypeScript formatting\n"
+        "        run: npm run format:check"
+    )
+    if (root / "eslint.config.js").exists() and (
+        root / "tools/verify_eslint_baseline.mjs"
+    ).exists():
+        install_steps += (
+            "\n\n      - name: Verified ESLint curriculum baseline\n"
+            "        run: npm run lint:baseline"
+        )
+    typecheck_config = (
+        root
+        / "Week5MiniProjectAndTypeScript/Day2IntroductionToTypeScriptAndKeyConcepts"
+        / "DailyChallenge/UnionTypeValidator/tsconfig.json"
+    )
+    if typecheck_config.exists():
+        install_steps += (
+            "\n\n      - name: TypeScript semantic anchor\n"
+            "        run: npm run typecheck:anchor"
+        )
+    workflow = workflow.replace(
+        "      - name: Install JavaScript tooling\n        run: npm ci",
+        install_steps,
+    )
+    workflow = workflow.replace(
+        "\n      - name: Python anchor tests",
+        "\n      - name: Canonical repository structure\n"
+        "        run: npm run verify:structure\n\n"
+        "      - name: Python anchor tests",
+    )
     write_text(root / ".github/workflows/quality.yml", workflow, changes, "added read-only CI quality gate")
     dependabot = """version: 2\nupdates:\n  - package-ecosystem: npm\n    directory: /\n    schedule:\n      interval: monthly\n    open-pull-requests-limit: 5\n  - package-ecosystem: github-actions\n    directory: /\n    schedule:\n      interval: monthly\n    open-pull-requests-limit: 5\n"""
     write_text(root / ".github/dependabot.yml", dependabot, changes, "added monthly dependency updates")
@@ -864,8 +934,17 @@ class RepositoryLayoutTests(unittest.TestCase):
     def test_quality_infrastructure(self):
         self.assertTrue((ROOT / ".github/workflows/quality.yml").exists())
         self.assertTrue((ROOT / "tools/nova_quality_gate.py").exists())
+        self.assertTrue((ROOT / "tools/verify_eslint_baseline.mjs").exists())
+        self.assertTrue((ROOT / "eslint.config.js").exists())
         package = json.loads((ROOT / "package.json").read_text(encoding="utf-8"))
-        for script in ("quality", "test:python", "test:js", "audit"):
+        for script in (
+            "quality",
+            "test:python",
+            "test:js",
+            "audit",
+            "lint:baseline",
+            "typecheck:anchor",
+        ):
             self.assertIn(script, package["scripts"])
 
     def test_no_week_archives(self):
@@ -935,6 +1014,10 @@ test("repository quality infrastructure exists", () => {
   const packageJson = JSON.parse(fs.readFileSync(path.join(ROOT, "package.json"), "utf8"));
   assert.ok(packageJson.scripts.quality);
   assert.ok(packageJson.scripts["test:python"]);
+  assert.ok(packageJson.scripts["lint:baseline"]);
+  assert.ok(packageJson.scripts["typecheck:anchor"]);
+  assert.ok(fs.existsSync(path.join(ROOT, "eslint.config.js")));
+  assert.ok(fs.existsSync(path.join(ROOT, "tools", "verify_eslint_baseline.mjs")));
   assert.ok(fs.existsSync(path.join(ROOT, ".github", "workflows", "quality.yml")));
 });
 
@@ -1737,7 +1820,7 @@ def apply_upgrade(args: argparse.Namespace, console: Console) -> int:
             console.heading("Install repository configuration, CI and tests")
             update_gitignore(root, changes)
             update_gitattributes(root, changes)
-            update_eslint(root, changes)
+            install_eslint_config(root, package_tools, changes)
             write_editorconfig(root, changes)
             write_pyproject(root, changes)
             update_package_json(root, changes)

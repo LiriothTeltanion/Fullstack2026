@@ -429,7 +429,9 @@ psql -d dvdrental -f .\Week6DatabasesAndNodejs\Day3DatabaseConcepts2\Exercises\E
 | Command | Purpose |
 |---|---|
 | `npm run lint` | Lint JavaScript and TypeScript curriculum sources |
+| `npm run lint:baseline` | Verify that ESLint reports exactly the documented 65-finding learning backlog |
 | `npm run lint:fix` | Apply supported ESLint fixes for review |
+| `npm run typecheck:anchor` | Semantically type-check the strict Union Type Validator project without emitting files |
 | `npm run format` | Format JavaScript and TypeScript with Prettier |
 | `npm run format:check` | Verify formatting without changing files |
 | `npm run syntax` | Run repository-wide static syntax validation |
@@ -461,6 +463,8 @@ psql -d dvdrental -f .\Week6DatabasesAndNodejs\Day3DatabaseConcepts2\Exercises\E
 
 ```powershell
 npm run format:check
+npm run lint:baseline
+npm run typecheck:anchor
 npm run lint
 npm run quality
 npm test

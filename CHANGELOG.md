@@ -6,7 +6,42 @@ does not reinterpret early work as production-ready code.
 
 ## [Unreleased]
 
-- No unreleased changes are recorded yet.
+### Changed
+
+- Migrated the root linter from deprecated ESLint 8 configuration to ESLint 10
+  flat config with the supported typescript-eslint 8 toolchain.
+- Replaced the separate TypeScript parser/plugin declarations with the current
+  `typescript-eslint` package and kept the verified 65-finding curriculum
+  baseline stable for a later source-aware learning pass.
+- Aligned the declared Node.js engine range and Node type definitions with the
+  supported ESLint 10 runtime used by the protected Node.js 24 CI job.
+- Added a bounded semantic TypeScript check for the strict Union Type Validator
+  project and aligned the NOVA generator and repository-contract tests with the
+  new toolchain.
+
+### Security
+
+- Resolved `eslint-config-prettier` to the patched 10.1.8 line after reviewing
+  the 2025 supply-chain advisory that affected 10.1.6 and 10.1.7.
+- Removed the legacy global `minimatch` and `brace-expansion` overrides so the
+  ESLint 10 dependency graph receives its declared patched major versions.
+
+### Validation
+
+- ESLint 10.9.1 discovers the same 65 inherited findings as the pre-migration
+  baseline: 39 explicit `any`, 22 unused variables, three constant conditions,
+  and one debugger statement.
+- The protected CI workflow now verifies that exact ESLint baseline, formatting,
+  dependency audit, and the TypeScript semantic anchor on every pull request.
+- A generator regression test keeps the canonical flat config, dependency
+  defaults, Node runtime contract, and protected CI workflow synchronized.
+- TypeScript 5.9.3 with Node.js 24 definitions passes the new strict anchor
+  type-check without emitting files.
+
+### Known limitations
+
+- TypeScript 7 remains deferred because typescript-eslint 8.68.0 currently
+  documents support for TypeScript versions below 6.1.0.
 
 ## [1.2.0] - 2026-08-24
 

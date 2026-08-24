@@ -10,6 +10,12 @@ test("repository quality infrastructure exists", () => {
   const packageJson = JSON.parse(fs.readFileSync(path.join(ROOT, "package.json"), "utf8"));
   assert.ok(packageJson.scripts.quality);
   assert.ok(packageJson.scripts["test:python"]);
+  assert.ok(packageJson.scripts["typecheck:anchor"]);
+  assert.ok(packageJson.scripts["lint:baseline"]);
+  assert.ok(fs.existsSync(path.join(ROOT, "eslint.config.js")));
+  assert.ok(fs.existsSync(path.join(ROOT, "tools", "verify_eslint_baseline.mjs")));
+  assert.ok(!fs.existsSync(path.join(ROOT, ".eslintrc.cjs")));
+  assert.ok(!fs.existsSync(path.join(ROOT, ".eslintignore")));
   assert.ok(fs.existsSync(path.join(ROOT, ".github", "workflows", "quality.yml")));
 });
 
