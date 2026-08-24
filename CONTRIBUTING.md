@@ -154,6 +154,8 @@ Run the checks relevant to the selected change and report failures honestly:
 
 ```powershell
 npm run format:check
+npm run lint:baseline
+npm run typecheck:anchor
 npm run verify:structure
 npm test
 python -B tools/nova_quality_gate.py --repo . --strict --no-write

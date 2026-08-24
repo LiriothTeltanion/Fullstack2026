@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-08-24
-Base HEAD: 44204234b5f02afc404014cd7d507f7fd95c58db
-Source-index SHA-256 (generated outputs excluded): b1687908745b4285c9dfb0be1a036b707204a8be147725caf8017fe81e4347e3
-Indexed files: 879
+Base HEAD: ee650f3eacbe00f214919b18d92cd303366c273a
+Source-index SHA-256 (generated outputs excluded): 184258ead5924c1c7f3ed19b96bd4b1748668fb1251062c74b5437f8979a6d49
+Indexed files: 880
 
 .
 ├── .ai
@@ -354,6 +354,7 @@ Indexed files: 879
 │   │   ├── test_display_titles.py
 │   │   ├── test_hangman.py
 │   │   ├── test_learning_intake.py
+│   │   ├── test_nova_generator.py
 │   │   ├── test_readme_visuals.py
 │   │   ├── test_repository_layout.py
 │   │   ├── test_tictactoe.py
@@ -369,7 +370,8 @@ Indexed files: 879
 │   ├── run_node_tests.mjs
 │   ├── validate_display_titles.py
 │   ├── validate_readme_visuals.py
-│   └── validate_repository_structure.py
+│   ├── validate_repository_structure.py
+│   └── verify_eslint_baseline.mjs
 ├── Week10AdvancedTypeScriptAndAuthentication
 │   └── README.md
 ├── Week11FinalProject
@@ -1138,8 +1140,6 @@ Indexed files: 879
 │   └── README.md
 ├── .editorconfig
 ├── .env.example
-├── .eslintignore
-├── .eslintrc.cjs
 ├── .gitattributes
 ├── .gitignore
 ├── .prettierignore
@@ -1147,6 +1147,7 @@ Indexed files: 879
 ├── AGENTS.md
 ├── CHANGELOG.md
 ├── CONTRIBUTING.md
+├── eslint.config.js
 ├── FINAL_README_INSTALL_REPORT.md
 ├── LICENSE
 ├── NOVA_AUDIT.bat

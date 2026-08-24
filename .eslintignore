@@ -1,7 +1,0 @@
-node_modules/
-**/dist/
-**/build/
-**/.turbo/
-Week5MiniProjectAndTypeScript/**/compiled/
-Week5MiniProjectAndTypeScript/**/out/
-Week5MiniProjectAndTypeScript/**/data/

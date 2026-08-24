@@ -46,6 +46,9 @@ class RepositoryLayoutTests(unittest.TestCase):
         self.assertTrue((ROOT / ".learning/intake/queue.json").exists())
         self.assertTrue((ROOT / ".learning/intake/exercise-intake.schema.json").exists())
         self.assertTrue((ROOT / "tools/learning_intake.py").exists())
+        self.assertTrue((ROOT / "eslint.config.js").exists())
+        self.assertFalse((ROOT / ".eslintrc.cjs").exists())
+        self.assertFalse((ROOT / ".eslintignore").exists())
         for privacy_aware_tool in (
             ROOT / "tools/nova_quality_gate.py",
             ROOT / "tools/nova_ultimate.py",
@@ -61,6 +64,9 @@ class RepositoryLayoutTests(unittest.TestCase):
         changelog = (ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
         self.assertRegex(package["version"], r"^\d+\.\d+\.\d+$")
         self.assertEqual(package_lock["version"], package["version"])
+        lock_root = package_lock["packages"][""]
+        self.assertEqual(lock_root["engines"], package["engines"])
+        self.assertEqual(lock_root["devDependencies"], package["devDependencies"])
         self.assertEqual(package_lock["packages"][""]["version"], package["version"])
         self.assertIn(
             f"Repository presentation version <strong>{package['version']}</strong>",
@@ -79,8 +85,32 @@ class RepositoryLayoutTests(unittest.TestCase):
             "audit",
             "intake",
             "intake:check",
+            "lint:baseline",
+            "typecheck:anchor",
         ):
             self.assertIn(script, package["scripts"])
+        for dependency in (
+            "@eslint/js",
+            "@types/node",
+            "eslint",
+            "eslint-config-prettier",
+            "globals",
+            "typescript",
+            "typescript-eslint",
+        ):
+            self.assertIn(dependency, package["devDependencies"])
+        self.assertNotIn(
+            "@typescript-eslint/eslint-plugin", package["devDependencies"]
+        )
+        self.assertNotIn("@typescript-eslint/parser", package["devDependencies"])
+        workflow = (ROOT / ".github/workflows/quality.yml").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("npm run verify:structure", workflow)
+        self.assertIn("npm ci --ignore-scripts", workflow)
+        self.assertIn("npm audit --audit-level=high", workflow)
+        self.assertIn("npm run lint:baseline", workflow)
+        self.assertIn("npm run typecheck:anchor", workflow)
 
     def test_github_desktop_commit_guidance(self):
         instructions = (ROOT / ".github/copilot-instructions.md").read_text(

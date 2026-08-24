@@ -34,7 +34,19 @@ jobs:
           cache: npm
 
       - name: Install JavaScript tooling
-        run: npm ci
+        run: npm ci --ignore-scripts
+
+      - name: Dependency vulnerability audit
+        run: npm audit --audit-level=high
+
+      - name: JavaScript and TypeScript formatting
+        run: npm run format:check
+
+      - name: Verified ESLint curriculum baseline
+        run: npm run lint:baseline
+
+      - name: TypeScript semantic anchor
+        run: npm run typecheck:anchor
 
       - name: Whole-repository quality gate
         run: python tools/nova_quality_gate.py --repo . --strict
