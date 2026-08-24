@@ -8,6 +8,70 @@ does not reinterpret early work as production-ready code.
 
 - No unreleased changes are recorded yet.
 
+## [1.2.0] - 2026-08-24
+
+### Added
+
+- Extended the canonical learning structure to all twelve course weeks while
+  labeling Weeks 7–12 as scaffolds whose official assignment content remains
+  pending.
+- Added source-of-truth learning maps, progress and review records, AI handoff
+  guidance, contribution instructions, a pull-request template, and personalized
+  GitHub Desktop commit guidance.
+- Added icon-led display titles for infrastructure, Week, and Day/Remote areas
+  without placing emoji in physical Git paths.
+- Added a standard-library own-words exercise-intake CLI, strict public queue and
+  schema, ignored private batch workflow, atomic imports, privacy validation, and
+  ten focused tests.
+- Added deterministic structure catalogs and validators for exact paths, links,
+  private intake exclusion, public-safe queue records, README visuals, and display
+  titles.
+
+### Changed
+
+- Consolidated the conflicting Week 4 and Week 5 casing/path variants without
+  deleting coursework, and normalized the Anagram Checker README filename.
+- Rebuilt the public landing page as the twelve-week NOVA Course Observatory with
+  one reduced-motion-safe animated hero, a static evidence map, and a static
+  source-backed technology constellation.
+- Reordered the learning queue to verify existing work chronologically from Week
+  1 through Week 6 before starting Week 7.
+- Replaced a tracked external API credential pattern with an ignored local
+  configuration boundary and a safe example file.
+
+### Security
+
+- Added compatible transitive overrides for `brace-expansion` `2.1.4` and
+  `js-yaml` `4.3.1` after new high-severity development-tool advisories appeared.
+- Confirmed that Git indexes zero `.private/` files and that the public repository
+  contains no authenticated Octopus prompt, rubric, quiz, score, attempt,
+  submission, credential, or profile data.
+
+### Validation
+
+- `npm ci` installs 127 packages from the committed lockfile.
+- `npm audit` reports zero known vulnerabilities.
+- Structure verification passes for 879 indexed files, 274 indexed directories,
+  32 required foundation files, twelve canonical Week roots, deterministic
+  catalogs, privacy boundaries, source-safe intake, visuals, and display titles.
+- JavaScript tests pass `4/4`; Python tests pass `29/29`.
+- The archive-wide Prettier check passes.
+- The strict NOVA no-write gate passes with zero errors and zero warnings across
+  1,054 scanned files.
+- Desktop, 390-pixel overview, grayscale, and reduced-motion README media renders
+  were inspected locally in Microsoft Edge.
+
+### Known limitations
+
+- Repository-wide ESLint still reports the same 65 inherited exercise errors;
+  these require source-aware chronological review rather than blanket rewrites.
+- The root ESLint 8 toolchain is deprecated and needs a separate reviewed major
+  migration.
+- Weeks 7–12 remain truthful scaffolds, not claims that official assignments,
+  submissions, execution evidence, or learning mastery are present.
+- Remote branch CI, the GitHub-rendered README, merge, tag, and GitHub Release
+  remain release gates until they are verified on GitHub.
+
 ## [1.1.1] - 2026-07-18
 
 ### Security

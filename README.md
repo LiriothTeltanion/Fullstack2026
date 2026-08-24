@@ -17,7 +17,7 @@
 
 **Python · OOP · JavaScript · DOM · Async/Await · TypeScript · SQL · Node.js · React · Redux · Authentication · Final Project**
 
-<sub>Repository presentation version <strong>1.1.1</strong> · root README protected as the public GitHub landing page</sub>
+<sub>Repository presentation version <strong>1.2.0</strong> · root README protected as the public GitHub landing page</sub>
 
 </div>
 
@@ -644,6 +644,6 @@ Distributed under the [MIT License](LICENSE).
 
 ### Build steadily · document honestly · automate responsibly · turn learning into products
 
-**NOVA Course Observatory · repository presentation v1.1.1 · August 2026**
+**NOVA Course Observatory · repository presentation v1.2.0 · August 2026**
 
 </div>

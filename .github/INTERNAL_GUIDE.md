@@ -49,4 +49,4 @@ authoritative commit timestamp and timezone.
 - Do not commit credentials, local `.env` files, generated archives or private
   learning data.
 
-**Repository presentation version:** `1.1.1`
+**Repository presentation version:** `1.2.0`
