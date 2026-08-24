@@ -541,7 +541,7 @@ Fullstack2026/
 |---|---|---|
 | 1 — Truth baseline | ✅ Complete | Preserve the dated baseline; do not convert it into course progress. |
 | 2 — Structural foundation | ✅ Complete | Keep catalogs and exact-case paths deterministic as new work arrives. |
-| 3 — Academy alignment and 12-week presentation | ✅ Implemented and locally validated | Create the authorized local commit; publishing remains a separate decision. |
+| 3 — Academy alignment and 12-week presentation | ✅ Published and remotely verified | Preserve exact paths, evidence boundaries, accessible visuals, and release metadata as coursework evolves. |
 | 4 — Weeks 1–6 chronological verification | 🔄 Next | Recheck each day against Kevin's own Octopus understanding and existing code; add bounded execution, accessibility, and explanation evidence. |
 | 5 — Weeks 7–10 official coursework | 🎯 Remaining | Retrieve each exact assignment, implement it, verify it, explain it, and submit only through the authorized course workflow. |
 | 6 — Weeks 11–12 final project | 🎯 Remaining | Build from the official brief with accessibility, tests, security, documentation, deployment evidence, and a presentation story. |
