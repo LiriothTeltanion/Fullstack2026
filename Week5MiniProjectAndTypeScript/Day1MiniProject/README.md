@@ -1,4 +1,4 @@
-# Day1 Mini Project
+# 🚀 Day 1 — Mini-projects
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">

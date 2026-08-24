@@ -39,6 +39,9 @@ jobs:
       - name: Whole-repository quality gate
         run: python tools/nova_quality_gate.py --repo . --strict
 
+      - name: Canonical repository structure
+        run: npm run verify:structure
+
       - name: Python anchor tests
         run: python -m unittest discover -s tests/python -p "test_*.py" -v
 

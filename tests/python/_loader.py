@@ -10,6 +10,9 @@ def find_one(pattern: str) -> Path:
     matches = sorted(ROOT.glob(pattern))
     if not matches:
         raise FileNotFoundError(pattern)
+    if len(matches) > 1:
+        rendered = ", ".join(str(path.relative_to(ROOT)) for path in matches)
+        raise RuntimeError(f"Expected exactly one match for {pattern!r}; found {len(matches)}: {rendered}")
     return matches[0]
 
 def load_file(name: str, path: Path):

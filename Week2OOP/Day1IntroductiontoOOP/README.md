@@ -1,4 +1,4 @@
-# 📅 Day 1 - Introduction to Object-Oriented Programming
+# 🧱 Day 1 — Introduction to Object-Oriented Programming
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">

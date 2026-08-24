@@ -13,6 +13,10 @@ would hide the six-week learning overview, audited evidence and project links.
   quality gate plus the Python and JavaScript/TypeScript anchor tests.
 - [`dependabot.yml`](dependabot.yml) checks npm and GitHub Actions dependencies
   monthly.
+- [`copilot-instructions.md`](copilot-instructions.md) shapes GitHub Desktop
+  Copilot commit summaries and descriptions in professional English.
+- [`pull_request_template.md`](pull_request_template.md) provides a truthful,
+  evidence-first pull-request handoff.
 - [`workflows/README.md`](workflows/README.md) describes the workflow folder.
 - [`CHANGELOG.md`](../CHANGELOG.md) records reviewed release-candidate changes
   and honest remaining quality debt.
@@ -28,6 +32,14 @@ npm run quality
 npm test
 git diff --check
 ```
+
+## 🪄 GitHub Desktop commit workflow
+
+Use the repository-wide guidance in [`CONTRIBUTING.md`](../CONTRIBUTING.md).
+For each cohesive selection, generate or write both a Summary and Description,
+review every factual claim, and record failed or unavailable validation rather
+than hiding it. GitHub Desktop's History view and Git itself retain the
+authoritative commit timestamp and timezone.
 
 ## 🔒 Public-landing contract
 

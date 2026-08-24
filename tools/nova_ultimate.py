@@ -36,7 +36,7 @@ MANAGED_END = "<!-- NOVA:ULTIMATE:END -->"
 HEALTH_START = "<!-- NOVA:HEALTH-CENTER:START -->"
 HEALTH_END = "<!-- NOVA:HEALTH-CENTER:END -->"
 SKIP_DIRS = {
-    ".git", ".nova", "node_modules", "__pycache__", ".pytest_cache",
+    ".git", ".nova", ".private", "node_modules", "__pycache__", ".pytest_cache",
     ".mypy_cache", ".ruff_cache", ".venv", "venv", "env", "dist",
     "build", "coverage", ".next", ".turbo", "reports",
 }
@@ -54,20 +54,12 @@ LANGUAGE_BY_EXT = {
 TEST_RE = re.compile(r"(^|/)(tests?|__tests__)(/|$)|(^|/)test_[^/]+\.py$|\.(test|spec)\.(js|mjs|cjs|ts|tsx)$", re.I)
 SECRET_ASSIGNMENT_RE = re.compile(r"(?i)\b(api[_-]?key|secret|token|password|passwd)\b\s*[:=]\s*['\"]([^'\"\s]{12,})['\"]")
 
-SAFE_RENAMES = [
-    ("Week1Python/Day3Dictionaries/Exercises/ExercisesXP+", "Week1Python/Day3Dictionaries/Exercises/ExercisesXPPlus"),
-    ("Week6DatabasesAndNodejs/Day1IntroductionToDatabases/Exercises/ExercisesXP+", "Week6DatabasesAndNodejs/Day1IntroductionToDatabases/Exercises/ExercisesXPPlus"),
-    ("Week2OOP/Day5MiniProject/DailyChallenge/OOPQuizz", "Week2OOP/Day5MiniProject/DailyChallenge/OOPQuiz"),
-    ("Week3JavaScriptandDOM/Remote LearningJSAndDOM", "Week3JavaScriptandDOM/RemoteLearningJSAndDOM"),
-    ("Week4AdvAsynchronousJavaScript/Day5Fetch&AsyncAwait", "Week4AdvAsynchronousJavaScript/Day5FetchAndAsyncAwait"),
-    ("Week5MiniProjectAndTypeScript/Day1Miniproject/DailyChallange", "Week5MiniProjectAndTypeScript/Day1MiniProject/DailyChallenge"),
-    ("Week5MiniProjectAndTypeScript/Day1Miniproject", "Week5MiniProjectAndTypeScript/Day1MiniProject"),
-    ("Week6DatabasesAndNodejs/Day3DatabaseConcepts2/Exercises/ExercicesXPGold", "Week6DatabasesAndNodejs/Day3DatabaseConcepts2/Exercises/ExercisesXPGold"),
-]
-MERGE_RENAMES = [
-    ("Week5MiniprojectAndTypeScript", "Week5MiniProjectAndTypeScript"),
-    ("Week4AdvAsynchronousJavaScript/Day3HTTPandFormmethodGETandPOST", "Week4AdvAsynchronousJavaScript/Day3HTTPAndFormMethodGETAndPOST"),
-]
+# All previously approved normalization and case-merge rules were completed in
+# the 2026-08-24 structural recovery. Keeping obsolete rules here can recreate
+# ambiguous paths on a case-insensitive checkout. Future migrations must be
+# evidence-backed additions with their own regression test and decision record.
+SAFE_RENAMES: list[tuple[str, str]] = []
+MERGE_RENAMES: list[tuple[str, str]] = []
 
 
 @dataclass
@@ -142,6 +134,14 @@ def iso_now() -> str:
 
 def posix(value: Path | str) -> str:
     return str(value).replace("\\", "/")
+
+
+def week_sort_key(path: Path) -> tuple[int, str]:
+    """Sort Week roots by number instead of lexical path order."""
+
+    match = re.match(r"^Week(?P<number>\d+)", path.name, re.IGNORECASE)
+    number = int(match.group("number")) if match else sys.maxsize
+    return number, path.name.casefold()
 
 
 def slugify(value: str) -> str:
@@ -228,7 +228,7 @@ def visible_dirs(root: Path) -> list[Path]:
     return sorted((p for p in root.rglob("*") if p.is_dir() and not p.is_symlink() and not skipped(p, root)), key=lambda p: (len(p.relative_to(root).parts), posix(p.relative_to(root)).lower()))
 
 
-SNAPSHOT_SKIP_DIRS = {".git", ".nova", "node_modules", ".venv", "venv", "env"}
+SNAPSHOT_SKIP_DIRS = {".git", ".nova", ".private", "node_modules", ".venv", "venv", "env"}
 
 def snapshot_files(root: Path) -> list[Path]:
     result = []
@@ -340,7 +340,12 @@ class SnapshotBackup:
                     path.unlink(missing_ok=True)
         if not metadata.get("root_node_modules_existed", False):
             shutil.rmtree(root / "node_modules", ignore_errors=True)
-        all_dirs = [d for d in root.rglob("*") if d.is_dir() and ".git" not in d.relative_to(root).parts and ".nova" not in d.relative_to(root).parts]
+        all_dirs = [
+            directory
+            for directory in root.rglob("*")
+            if directory.is_dir()
+            and not {".git", ".nova", ".private"}.intersection(directory.relative_to(root).parts)
+        ]
         for directory in sorted(all_dirs, key=lambda p: len(p.parts), reverse=True):
             try:
                 if not any(directory.iterdir()):
@@ -591,8 +596,7 @@ def update_eslint(root: Path, changes: list[Change]) -> None:
     if not path.exists():
         return
     text = read_text(path) or ""
-    updated = text.replace("Week5MiniprojectAndTypescript", "Week5MiniProjectAndTypeScript")
-    updated = updated.replace("Week5MiniprojectAndTypeScript", "Week5MiniProjectAndTypeScript")
+    updated = text
     if updated != text:
         write_text(path, updated, changes, "fixed canonical Week5 ESLint paths")
 
@@ -683,6 +687,12 @@ pause
 
 
 def write_anchor_tests(root: Path, changes: list[Change]) -> None:
+    def write_test_if_missing(relative: str, content: str, detail: str) -> None:
+        path = root / relative
+        if path.exists():
+            return
+        write_text(path, content, changes, detail)
+
     loader = r'''from __future__ import annotations
 import importlib.util
 import sys
@@ -695,6 +705,9 @@ def find_one(pattern: str) -> Path:
     matches = sorted(ROOT.glob(pattern))
     if not matches:
         raise FileNotFoundError(pattern)
+    if len(matches) > 1:
+        rendered = ", ".join(str(path.relative_to(ROOT)) for path in matches)
+        raise RuntimeError(f"Expected exactly one match for {pattern!r}; found {len(matches)}: {rendered}")
     return matches[0]
 
 def load_file(name: str, path: Path):
@@ -712,7 +725,7 @@ def load_package_module(package_name: str, directory: Path, module_name: str):
     sys.modules[package_name] = package
     return load_file(f"{package_name}.{module_name}", directory / f"{module_name}.py")
 '''
-    write_text(root / "tests/python/_loader.py", loader, changes, "added dynamic test loader")
+    write_test_if_missing("tests/python/_loader.py", loader, "added dynamic test loader")
 
     tictactoe = r'''import unittest
 from _loader import find_one, load_file
@@ -743,7 +756,7 @@ class TicTacToeTests(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main()
 '''
-    write_text(root / "tests/python/test_tictactoe.py", tictactoe, changes, "added Tic-Tac-Toe unit tests")
+    write_test_if_missing("tests/python/test_tictactoe.py", tictactoe, "added Tic-Tac-Toe unit tests")
 
     circle = r'''import math
 import unittest
@@ -773,7 +786,7 @@ class CircleTests(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main()
 '''
-    write_text(root / "tests/python/test_circle.py", circle, changes, "added Circle unit tests")
+    write_test_if_missing("tests/python/test_circle.py", circle, "added Circle unit tests")
 
     hangman = r'''import unittest
 from _loader import find_one, load_package_module
@@ -800,7 +813,7 @@ class HangmanTests(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main()
 '''
-    write_text(root / "tests/python/test_hangman.py", hangman, changes, "added Hangman state tests")
+    write_test_if_missing("tests/python/test_hangman.py", hangman, "added Hangman state tests")
 
     timer = r'''import sys
 import types
@@ -839,7 +852,7 @@ class TimerTests(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main()
 '''
-    write_text(root / "tests/python/test_timer.py", timer, changes, "added isolated Timer tests")
+    write_test_if_missing("tests/python/test_timer.py", timer, "added isolated Timer tests")
 
     layout = r'''import json
 import unittest
@@ -862,7 +875,7 @@ class RepositoryLayoutTests(unittest.TestCase):
         missing = []
         for week in (p for p in ROOT.iterdir() if p.is_dir() and p.name.lower().startswith("week")):
             for directory in [week, *[p for p in week.rglob("*") if p.is_dir()]]:
-                if any(part in {"node_modules", "__pycache__", ".nova"} for part in directory.parts):
+                if any(part in {"node_modules", "__pycache__", ".nova", ".private"} for part in directory.parts):
                     continue
                 if any(directory.iterdir()) and not any(p.is_file() and p.name.lower() == "readme.md" for p in directory.iterdir()):
                     missing.append(str(directory.relative_to(ROOT)))
@@ -871,7 +884,7 @@ class RepositoryLayoutTests(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main()
 '''
-    write_text(root / "tests/python/test_repository_layout.py", layout, changes, "added repository contract tests")
+    write_test_if_missing("tests/python/test_repository_layout.py", layout, "added repository contract tests")
 
     js_math = r'''import test from "node:test";
 import assert from "node:assert/strict";
@@ -881,28 +894,34 @@ import { createRequire } from "node:module";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
-function findMath(dir) {
+function findMathFiles(dir, matches = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    if ([".git", ".nova", "node_modules", "reports"].includes(entry.name)) continue;
+    if ([".git", ".nova", ".private", "node_modules", "reports"].includes(entry.name)) continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) {
-      const found = findMath(full);
-      if (found) return found;
-    } else if (entry.name === "math.js" && full.includes("exercise-5-math-app")) return full;
+      findMathFiles(full, matches);
+    } else if (entry.name === "math.js" && full.includes("exercise-5-math-app")) {
+      matches.push(full);
+    }
   }
-  return null;
+  return matches;
 }
 
 test("CommonJS math helpers", () => {
-  const target = findMath(ROOT);
-  assert.ok(target, "math.js exercise not found");
+  const matches = findMathFiles(ROOT);
+  assert.equal(
+    matches.length,
+    1,
+    `expected exactly one exercise-5-math-app/math.js, found: ${matches.join(", ") || "none"}`,
+  );
+  const [target] = matches;
   const require = createRequire(import.meta.url);
   const { add, multiply } = require(target);
   assert.equal(add(2, 3), 5);
   assert.equal(multiply(4, 5), 20);
 });
 '''
-    write_text(root / "tests/js/math_helpers.test.mjs", js_math, changes, "added Node math tests")
+    write_test_if_missing("tests/js/math_helpers.test.mjs", js_math, "added Node math tests")
 
     js_repo = r'''import test from "node:test";
 import assert from "node:assert/strict";
@@ -924,7 +943,7 @@ test("redundant Week ZIPs are absent", () => {
   assert.deepEqual(archives, []);
 });
 '''
-    write_text(root / "tests/js/repository_health.test.mjs", js_repo, changes, "added Node repository tests")
+    write_test_if_missing("tests/js/repository_health.test.mjs", js_repo, "added Node repository tests")
 
     js_ts = r'''import test from "node:test";
 import assert from "node:assert/strict";
@@ -942,7 +961,7 @@ try {
 }
 function walk(dir, output = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    if ([".git", ".nova", "node_modules", "reports"].includes(entry.name)) continue;
+    if ([".git", ".nova", ".private", "node_modules", "reports"].includes(entry.name)) continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) walk(full, output);
     else if (/\.tsx?$/i.test(entry.name)) output.push(full);
@@ -972,7 +991,7 @@ test("all TypeScript files transpile without syntax diagnostics", (context) => {
   assert.deepEqual(failures, []);
 });
 '''
-    write_text(root / "tests/js/typescript_syntax.test.mjs", js_ts, changes, "added TypeScript syntax tests")
+    write_test_if_missing("tests/js/typescript_syntax.test.mjs", js_ts, "added TypeScript syntax tests")
 
 
 def infer_goal(directory: Path) -> str:
@@ -1232,7 +1251,10 @@ def insert_after_intro(text: str, block: str) -> str:
 
 def forge_readmes(root: Path, mode: str, changes: list[Change]) -> list[FolderStatus]:
     write_shared_assets(root, changes)
-    weeks = sorted(p for p in root.iterdir() if p.is_dir() and re.fullmatch(r"Week\d+.*", p.name, re.I))
+    weeks = sorted(
+        (p for p in root.iterdir() if p.is_dir() and re.fullmatch(r"Week\d+.*", p.name, re.I)),
+        key=week_sort_key,
+    )
     directories: list[Path] = []
     for week in weeks:
         directories.append(week)
@@ -1303,7 +1325,10 @@ def collect_health(root: Path, quality: dict | None = None) -> dict[str, Any]:
     source = [p for p in all_files if p.suffix.lower() in SOURCE_EXTENSIONS]
     docs = [p for p in all_files if p.suffix.lower() in {".md", ".mdx"}]
     tests = [p for p in all_files if TEST_RE.search(posix(p.relative_to(root)))]
-    weeks = sorted(p for p in root.iterdir() if p.is_dir() and re.fullmatch(r"Week\d+.*", p.name, re.I))
+    weeks = sorted(
+        (p for p in root.iterdir() if p.is_dir() and re.fullmatch(r"Week\d+.*", p.name, re.I)),
+        key=week_sort_key,
+    )
     languages = Counter(LANGUAGE_BY_EXT[p.suffix.lower()] for p in source if p.suffix.lower() in LANGUAGE_BY_EXT)
     text_lines = 0
     total_bytes = 0
@@ -1361,7 +1386,16 @@ def collect_health(root: Path, quality: dict | None = None) -> dict[str, Any]:
     readiness = round(sum(categories[name] * weights[name] for name in categories) / 100, 1)
     good: list[str] = []
     bad: list[str] = []
-    if len(weeks) >= 6: good.append(f"Six curriculum weeks are present without counting ZIP archives as modules.")
+    source_backed_weeks = [
+        week
+        for week in weeks
+        if any(path.suffix.lower() in SOURCE_EXTENSIONS for path in week.rglob("*") if path.is_file())
+    ]
+    if weeks:
+        good.append(
+            f"{len(weeks)} tracked Week roots are present; {len(source_backed_weeks)} contain source files. "
+            "Repository presence does not prove assignment completion or learning."
+        )
     if readme_coverage >= 99: good.append(f"README coverage is {readme_coverage:.1f}% across curriculum directories.")
     else: bad.append(f"README coverage is {readme_coverage:.1f}%; {len(dirs) - with_readme} folders remain undocumented.")
     if not python_errors: good.append("All Python files pass static syntax parsing.")

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/LiriothTeltanion/Fullstack2026/blob/main/.learning/intake/exercise-intake.schema.json",
+  "title": "Fullstack2026 public-safe exercise intake queue",
+  "description": "Planning records written independently by Kevin Cusnir. This schema intentionally excludes authenticated LMS content and progress.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "items"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "items": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/item" }
+    }
+  },
+  "$defs": {
+    "item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "week_id",
+        "public_safe_title",
+        "kevin_summary",
+        "done_when",
+        "item_kind",
+        "priority",
+        "queue_state",
+        "planned_repository_path",
+        "source_basis",
+        "requirement_fidelity",
+        "repository_state",
+        "learning_state",
+        "privacy_reviewed",
+        "recorded_at"
+      ],
+      "properties": {
+        "id": { "type": "string", "pattern": "^w(0[1-9]|1[0-2])-[a-z0-9-]+-[a-f0-9]{6}$" },
+        "week_id": { "type": "string", "pattern": "^week-([1-9]|1[0-2])$" },
+        "public_safe_title": { "type": "string", "minLength": 3, "maxLength": 80 },
+        "kevin_summary": { "type": "string", "minLength": 20, "maxLength": 600 },
+        "done_when": {
+          "type": "array",
+          "maxItems": 3,
+          "items": { "type": "string", "minLength": 3, "maxLength": 200 }
+        },
+        "item_kind": { "enum": ["exercise", "daily_challenge", "project", "review", "unknown"] },
+        "priority": { "enum": ["now", "later", "optional"] },
+        "queue_state": { "enum": ["queued", "selected", "deferred", "closed"] },
+        "planned_repository_path": { "type": ["string", "null"] },
+        "source_basis": { "const": "kevin_authored_summary" },
+        "requirement_fidelity": { "const": "unverified" },
+        "repository_state": { "enum": ["missing", "present"] },
+        "learning_state": { "const": "unknown" },
+        "privacy_reviewed": { "const": true },
+        "recorded_at": { "type": "string", "format": "date-time" }
+      }
+    }
+  }
+}

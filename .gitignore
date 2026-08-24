@@ -76,6 +76,9 @@ Thumbs.db
 !.env.example
 **/config.js
 
+# Private authenticated academy intake
+.private/
+
 # Redundant curriculum archives
 Week*.zip
 .nova-readme-backups/

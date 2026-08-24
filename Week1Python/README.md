@@ -1,4 +1,4 @@
-# 🐍 Week1Python - Python Foundations
+# 🐍 Week 1 — Python Fundamentals
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">

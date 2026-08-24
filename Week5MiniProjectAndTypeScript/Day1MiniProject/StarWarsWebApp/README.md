@@ -1,5 +1,7 @@
 # Star Wars Character Finder
 
+> Current evidence (2026-08-24): source present; browser/API behavior, accessibility, explanation, and mastery are unverified.
+
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">
 
@@ -9,7 +11,7 @@
 
 <img src="../../../assets/readme/progress/star-wars-web-app-63b913747f.svg" width="100%" alt="Readiness status for Star Wars Web App">
 
-**Goal:** Use TypeScript types, interfaces, classes, unions, and guards to make domain logic safer.
+**Goal:** Practice the Fetch API, async/await, DOM rendering, and loading/error handling with SWAPI.
 
 </div>
 
@@ -18,7 +20,7 @@
 | Metric | Value |
 |---|---:|
 | Readiness | **80%** |
-| Files | 3 |
+| Files | 2 |
 | Source files | 1 |
 | Test files | 0 |
 | Text lines | 530 |
@@ -86,16 +88,14 @@ This application consumes the Star Wars API (SWAPI) to display random character 
 ## Project Structure
 
 ```
-Day1Miniproject/
-├── index.html      # HTML structure of the application
-├── styles.css      # Styles and animations
-├── script.js       # Application logic with AJAX
+StarWarsWebApp/
+├── index.html      # HTML, CSS, and JavaScript are embedded here
 └── README.md       # This file
 ```
 
 ## Implemented Features
 
-### JavaScript (script.js)
+### JavaScript embedded in `index.html`
 
 1. **DOM Element Retrieval**: References to necessary elements
 2. **Random ID Generation**: Function to get a number between 1-83
@@ -108,7 +108,7 @@ Day1Miniproject/
    - `getHomeworldName()`: Fetches home planet name
    - `findRandomCharacter()`: Main function that coordinates the entire process
 
-### CSS (styles.css)
+### CSS embedded in `index.html`
 
 - Black background with animated stars effect
 - Information card with golden borders characteristic of Star Wars

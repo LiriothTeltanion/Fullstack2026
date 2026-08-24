@@ -1,4 +1,4 @@
-# Day1 Advanced Array Methods
+# 🔁 Day 1 — Advanced Array Methods
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">

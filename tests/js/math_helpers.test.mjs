@@ -6,21 +6,27 @@ import { createRequire } from "node:module";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
-function findMath(dir) {
+function findMathFiles(dir, matches = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    if ([".git", ".nova", "node_modules", "reports"].includes(entry.name)) continue;
+    if ([".git", ".nova", ".private", "node_modules", "reports"].includes(entry.name)) continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) {
-      const found = findMath(full);
-      if (found) return found;
-    } else if (entry.name === "math.js" && full.includes("exercise-5-math-app")) return full;
+      findMathFiles(full, matches);
+    } else if (entry.name === "math.js" && full.includes("exercise-5-math-app")) {
+      matches.push(full);
+    }
   }
-  return null;
+  return matches;
 }
 
 test("CommonJS math helpers", () => {
-  const target = findMath(ROOT);
-  assert.ok(target, "math.js exercise not found");
+  const matches = findMathFiles(ROOT);
+  assert.equal(
+    matches.length,
+    1,
+    `expected exactly one exercise-5-math-app/math.js, found: ${matches.join(", ") || "none"}`,
+  );
+  const [target] = matches;
   const require = createRequire(import.meta.url);
   const { add, multiply } = require(target);
   assert.equal(add(2, 3), 5);

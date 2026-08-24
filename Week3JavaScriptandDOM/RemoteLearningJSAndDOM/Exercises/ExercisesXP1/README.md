@@ -1,3 +1,5 @@
+# 🥉 Exercises XP 1 — Interactive JavaScript Practice
+
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">
 

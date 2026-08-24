@@ -1,631 +1,1160 @@
-_042_Fullstack2026/
-├── assets/
-│   └── readme/
-│       ├── learning-orbit.svg  [4.3 KB]
-│       ├── nova-fullstack-banner.svg  [3.9 KB]
-│       └── stack-pulse.svg  [2.3 KB]
-├── Week1Python/
-│   ├── Day1StartingwithPython/
-│   │   ├── DailyChallenge/
-│   │   │   └── BuildUpAString/
-│   │   │       ├── buildupastring.py  [3.0 KB]
-│   │   │       └── README.md  [5.2 KB]
-│   │   ├── Exercises/
-│   │   │   ├── ExercisesXP/
-│   │   │   │   ├── exercisesxp.py  [5.4 KB]
-│   │   │   │   └── README.md  [7.6 KB]
-│   │   │   ├── ExercisesXPGold/
-│   │   │   │   ├── exercisesxpgold.py  [2.9 KB]
-│   │   │   │   └── README.md  [4.4 KB]
-│   │   │   └── ExercisesXPNinja/
-│   │   │       ├── exercisesxpninja.py  [4.8 KB]
-│   │   │       └── README.md  [5.9 KB]
-│   │   └── README.md  [17.4 KB]
-│   ├── Day2ListsIteratingAndFormattingData/
-│   │   ├── DailyChallenge/
-│   │   │   ├── GoldHappyBirthday/
-│   │   │   │   ├── happybirthday.py  [2.0 KB]
-│   │   │   │   └── README.md  [4.6 KB]
-│   │   │   └── ListAndStrings/
-│   │   │       ├── dailychallengelistandstrings.py  [2.3 KB]
-│   │   │       └── README.md  [4.9 KB]
-│   │   ├── Exercises/
-│   │   │   ├── ExercisesXP/
-│   │   │   │   ├── exercisesxp.py  [7.0 KB]
-│   │   │   │   └── README.md  [6.3 KB]
-│   │   │   ├── ExercisesXPGold/
-│   │   │   │   ├── exercisesxpgold.py  [4.9 KB]
-│   │   │   │   └── README.md  [5.1 KB]
-│   │   │   └── ExercisesXPNinja/
-│   │   │       ├── exercisesxpninja.py  [5.2 KB]
-│   │   │       └── README.md  [8.0 KB]
-│   │   └── README.md  [15.4 KB]
-│   ├── Day3Dictionaries/
-│   │   ├── DailyChallenge/
-│   │   │   ├── CaesarCypher/
-│   │   │   │   ├── caesarcipher.py  [5.1 KB]
-│   │   │   │   └── README.md  [1.3 KB]
-│   │   │   └── Dictionaries/
-│   │   │       ├── dictionaries.py  [1.8 KB]
-│   │   │       └── README.md  [13.0 KB]
-│   │   ├── Exercises/
-│   │   │   ├── ExercisesXP/
-│   │   │   │   ├── exercisesxp.py  [5.1 KB]
-│   │   │   │   └── README.md  [15.9 KB]
-│   │   │   ├── ExercisesXP+/
-│   │   │   │   ├── exercisesxpplus.py  [6.4 KB]
-│   │   │   │   └── README.md  [5.2 KB]
-│   │   │   ├── ExercisesXPGold/
-│   │   │   │   ├── exercisesxpgold.py  [2.3 KB]
-│   │   │   │   └── README.md  [3.3 KB]
-│   │   │   ├── ExercisesXPNinja/
-│   │   │   │   ├── readme.md  [1.9 KB]
-│   │   │   │   └── xpninjacars.py  [2.8 KB]
-│   │   │   ├── TimedChallenge1/
-│   │   │   │   ├── readme.md  [549 B]
-│   │   │   │   └── timedsentence.py  [1011 B]
-│   │   │   └── TimedChallenge2/
-│   │   │       ├── perfectnumber.py  [1.2 KB]
-│   │   │       └── readme.md  [641 B]
-│   │   └── README.md  [24.9 KB]
-│   ├── Day4Functions/
-│   │   ├── DailyChallenge/
-│   │   │   └── SolveTheMatrix/
-│   │   │       ├── README.md  [4.5 KB]
-│   │   │       └── solvethematrix.py  [1.8 KB]
-│   │   ├── Exercises/
-│   │   │   ├── ExercisesXP/
-│   │   │   │   ├── exercisesxp.py  [4.6 KB]
-│   │   │   │   └── README.md  [12.0 KB]
-│   │   │   ├── ExercisesXPGold/
-│   │   │   │   ├── README.md  [15.7 KB]
-│   │   │   │   └── xpgoldfunctions.py  [2.8 KB]
-│   │   │   ├── ExercisesXPNinja/
-│   │   │   │   ├── README.md  [5.0 KB]
-│   │   │   │   └── xpninjafunctionssingle.py  [7.9 KB]
-│   │   │   └── TimedChallenge1/
-│   │   │       ├── countoccurence.py  [995 B]
-│   │   │       └── readme.md  [2.6 KB]
-│   │   └── README.md  [28.4 KB]
-│   ├── Day5MiniProject/
-│   │   ├── DailyChallenge/
-│   │   │   ├── AdvancedAlgorithm/
-│   │   │   │   ├── src/
-│   │   │   │   │   ├── demodata.py  [863 B]
-│   │   │   │   │   └── pairs.py  [2.1 KB]
-│   │   │   │   ├── main.py  [2.4 KB]
-│   │   │   │   └── README.md  [6.3 KB]
-│   │   │   └── Challenges/
-│   │   │       ├── challenges.py  [1.6 KB]
-│   │   │       └── README.md  [6.2 KB]
-│   │   ├── Exercises/
-│   │   │   ├── Challenges1/
-│   │   │   │   ├── challengessolutions.py  [10.7 KB]
-│   │   │   │   └── README.md  [4.9 KB]
-│   │   │   ├── Challenges2/
-│   │   │   │   ├── src/
-│   │   │   │   │   ├── ex2analysis.py  [2.5 KB]
-│   │   │   │   │   └── patterns.py  [1.8 KB]
-│   │   │   │   ├── main.py  [954 B]
-│   │   │   │   └── README.md  [5.4 KB]
-│   │   │   ├── Hangman/
-│   │   │   │   ├── src/
-│   │   │   │   │   ├── art.py  [1015 B]
-│   │   │   │   │   ├── game.py  [3.1 KB]
-│   │   │   │   │   └── words.py  [599 B]
-│   │   │   │   ├── main.py  [2.0 KB]
-│   │   │   │   └── README.md  [20.3 KB]
-│   │   │   └── TicTacToe/
-│   │   │       ├── README.md  [891 B]
-│   │   │       └── tictactoe.py  [3.9 KB]
-│   │   └── README.md  [32.0 KB]
-│   ├── .gitignore  [1.3 KB]
-│   ├── CHEATSHEET.md  [8.8 KB]
-│   └── README.md  [22.7 KB]
-├── Week2OOP/
-│   ├── Day1IntroductiontoOOP/
-│   │   ├── DailyChallenge/
-│   │   │   ├── oldmcdonaldsfarm.py  [1.4 KB]
-│   │   │   └── README.md  [5.9 KB]
-│   │   ├── Exercises/
-│   │   │   ├── ExercisesXP/
-│   │   │   │   └── exercisesxp.py  [20.8 KB]
-│   │   │   ├── ExercisesXPGold/
-│   │   │   │   ├── exercisesxpgold.py  [6.8 KB]
-│   │   │   │   └── readme.md  [1.0 KB]
-│   │   │   ├── ExercisesXPNinja/
-│   │   │   │   ├── exercisesxpninja.py  [4.5 KB]
-│   │   │   │   └── readme.md  [1.1 KB]
-│   │   │   └── README.md  [5.1 KB]
-│   │   └── README.md  [7.6 KB]
-│   ├── Day2OOPInheritanceEncapsulationPolymorphism/
-│   │   ├── DailyChallenge/
-│   │   │   └── Pagination/
-│   │   │       ├── pagination.py  [2.3 KB]
-│   │   │       └── README.md  [1.8 KB]
-│   │   ├── Exercises/
-│   │   │   ├── ExercisesXP/
-│   │   │   │   ├── exercisesxp.py  [4.1 KB]
-│   │   │   │   └── README.md  [2.0 KB]
-│   │   │   ├── ExercisesXPGold/
-│   │   │   │   ├── exercisesxpgoldinheritance.py  [9.4 KB]
-│   │   │   │   └── readme.md  [1.5 KB]
-│   │   │   └── ExercisesXPNinja/
-│   │   │       ├── exercisesxpninjainheritance.py  [8.2 KB]
-│   │   │       └── readme.md  [1.5 KB]
-│   │   └── README.md  [9.3 KB]
-│   ├── Day3OOPandModules/
-│   │   ├── DailyChallenge/
-│   │   │   ├── Circle/
-│   │   │   │   ├── circle.py  [2.6 KB]
-│   │   │   │   └── README.md  [1.5 KB]
-│   │   │   ├── Translator/
-│   │   │   │   ├── dailychallengetranslator.py  [2.4 KB]
-│   │   │   │   └── readme.md  [933 B]
-│   │   │   └── UserInfo/
-│   │   │       ├── dailychallengegolduserinfo.py  [2.9 KB]
-│   │   │       └── readme.md  [868 B]
-│   │   ├── Exercises/
-│   │   │   ├── ExercisesXP/
-│   │   │   │   ├── README.md  [3.2 KB]
-│   │   │   │   └── xp_oop_modules_all.py  [7.5 KB]
-│   │   │   ├── ExercisesXPGold/
-│   │   │   │   ├── exercisesxpgoldmodules.py  [5.9 KB]
-│   │   │   │   └── readme.md  [762 B]
-│   │   │   ├── ExercisesXPNinja/
-│   │   │   │   ├── exercisesxpninjadunder.py  [10.0 KB]
-│   │   │   │   └── readme.md  [1.2 KB]
-│   │   │   └── README.md  [2.0 KB]
-│   │   └── README.md  [20.3 KB]
-│   ├── Day4PythonFileIOJSONandAPI/
-│   │   ├── DailyChallenge/
-│   │   │   └── TextAnalysis/
-│   │   │       ├── dailychallengetextanalysis.py  [5.7 KB]
-│   │   │       └── readme.md  [1.3 KB]
-│   │   ├── Exercises/
-│   │   │   ├── ExercisesXP/
-│   │   │   │   ├── README.md  [1.6 KB]
-│   │   │   │   └── xp_files_json_all.py  [5.4 KB]
-│   │   │   ├── ExercisesXPGold/
-│   │   │   │   ├── giphyexercises.py  [4.0 KB]
-│   │   │   │   ├── menueditor.py  [2.6 KB]
-│   │   │   │   ├── menumanager.py  [3.0 KB]
-│   │   │   │   ├── readme.md  [1.5 KB]
-│   │   │   │   └── restaurantmenu.json  [320 B]
-│   │   │   ├── ExercisesXPNinja/
-│   │   │   │   ├── charactersgame.py  [3.2 KB]
-│   │   │   │   ├── ninjamenueditor.py  [3.0 KB]
-│   │   │   │   ├── ninjamenumanager.py  [5.2 KB]
-│   │   │   │   ├── readme.md  [1.3 KB]
-│   │   │   │   └── restaurantmenu.json  [340 B]
-│   │   │   └── README.md  [2.9 KB]
-│   │   └── README.md  [42.7 KB]
-│   ├── Day5MiniProject/
-│   │   ├── DailyChallenge/
-│   │   │   ├── Modules/
-│   │   │   │   ├── tests/
-│   │   │   │   │   └── test_timer.py  [1.6 KB]
-│   │   │   │   ├── cli.py  [1.9 KB]
-│   │   │   │   ├── README.md  [2.4 KB]
-│   │   │   │   ├── requirements.txt  [18 B]
-│   │   │   │   └── timer.py  [4.5 KB]
-│   │   │   └── OOPQuizz/
-│   │   │       ├── deck.py  [2.9 KB]
-│   │   │       ├── demo.py  [440 B]
-│   │   │       └── README.md  [1.6 KB]
-│   │   ├── Exercises/
-│   │   │   ├── AnagramChecker/
-│   │   │   │   ├── anagramchecker.py  [3.4 KB]
-│   │   │   │   ├── anagrams.py  [1.8 KB]
-│   │   │   │   ├── readme.md  [1021 B]
-│   │   │   │   └── words.txt  [332 B]
-│   │   │   ├── RockPaperScissors/
-│   │   │   │   ├── game.py  [2.6 KB]
-│   │   │   │   ├── readme.md  [730 B]
-│   │   │   │   └── rockpaperscissors.py  [1.6 KB]
-│   │   │   ├── WeatherApp/
-│   │   │   │   ├── readme.md  [2.0 KB]
-│   │   │   │   ├── weatherapp.py  [8.0 KB]
-│   │   │   │   └── weathergui.py  [3.8 KB]
-│   │   │   └── README.md  [2.1 KB]
-│   │   └── README.md  [2.4 KB]
-│   ├── RemoteLearningOOP/
-│   │   ├── DailyChallenge/
-│   │   │   └── AirManagement/
-│   │   │       ├── air_management.py  [6.9 KB]
-│   │   │       └── README.md  [2.4 KB]
-│   │   └── Exercises/
-│   │       └── MiniProjectVaccines/
-│   │           ├── README.md  [2.0 KB]
-│   │           └── vaccines.py  [8.3 KB]
-│   └── README.md  [13.5 KB]
-├── Week3JavaScriptandDOM/
-│   ├── Day1IntroductiontoJavaScript/
-│   │   ├── DailyChallenge/
-│   │   │   ├── BubbleSort/
-│   │   │   │   ├── index.js  [2.4 KB]
-│   │   │   │   └── README.md  [862 B]
-│   │   │   ├── DailyChallengeNotBad/
-│   │   │   │   ├── index.html  [322 B]
-│   │   │   │   ├── README_Not_Bad_JS.md  [2.0 KB]
-│   │   │   │   └── script.js  [803 B]
-│   │   │   └── DailyChallengeStars/
-│   │   │       ├── index.html  [390 B]
-│   │   │       ├── README_Stars_Pattern_JS.md  [1.7 KB]
-│   │   │       └── script.js  [681 B]
-│   │   └── Exercises/
-│   │       ├── ExercisesXP/
-│   │       │   ├── index.html  [1.2 KB]
-│   │       │   ├── README_JS_Exercises_XP.md  [733 B]
-│   │       │   └── script.js  [5.3 KB]
-│   │       ├── ExercisesXPGold/
-│   │       │   ├── index.html  [658 B]
-│   │       │   ├── README_JS_XP_Gold.md  [1.7 KB]
-│   │       │   └── script.js  [2.1 KB]
-│   │       └── ExercisesXPNinja/
-│   │           ├── index.js  [3.6 KB]
-│   │           └── README.md  [1.2 KB]
-│   ├── Day2FunctionsandDOMIntroduction/
-│   │   ├── DailyChallenge/
-│   │   │   ├── DailyChallengePlanets/
-│   │   │   │   ├── planets.html  [915 B]
-│   │   │   │   ├── planets.js  [1.1 KB]
-│   │   │   │   └── README_Solar_System.md  [1.9 KB]
-│   │   │   └── WordsInTheStars/
-│   │   │       ├── index.js  [2.7 KB]
-│   │   │       └── README.md  [1.1 KB]
-│   │   └── Exercises/
-│   │       ├── ExercisesXP/
-│   │       │   ├── index.html  [4.3 KB]
-│   │       │   ├── README.md  [1.7 KB]
-│   │       │   └── script.js  [8.3 KB]
-│   │       ├── ExercisesXPGold/
-│   │       │   ├── index.html  [1.5 KB]
-│   │       │   ├── index.js  [1.8 KB]
-│   │       │   └── README.md  [421 B]
-│   │       └── ExercisesXPNinja/
-│   │           ├── index.html  [762 B]
-│   │           ├── index.js  [6.1 KB]
-│   │           └── README.md  [769 B]
-│   ├── Day3LearningDOMEvents/
-│   │   ├── DailyChallenge/
-│   │   │   ├── Letters/
-│   │   │   │   ├── index.html  [1.3 KB]
-│   │   │   │   ├── main.js  [1.9 KB]
-│   │   │   │   └── README.md  [931 B]
-│   │   │   └── TellTheStory/
-│   │   │       ├── index.html  [2.7 KB]
-│   │   │       ├── madlibs.js  [2.7 KB]
-│   │   │       └── README_MadLibs.md  [1.3 KB]
-│   │   └── Exercises/
-│   │       ├── ExercisesXP/
-│   │       │   ├── dom_exercises.js  [4.2 KB]
-│   │       │   ├── index_dom_exercises.html  [4.2 KB]
-│   │       │   └── README_DOM_XP.md  [1.6 KB]
-│   │       ├── ExercisesXPAnimations/
-│   │       │   ├── index_move.html  [943 B]
-│   │       │   ├── index_timer.html  [897 B]
-│   │       │   ├── move.js  [843 B]
-│   │       │   ├── README_Animations_XP.md  [1.1 KB]
-│   │       │   └── timer.js  [1.1 KB]
-│   │       ├── ExercisesXPGold/
-│   │       │   ├── index.html  [913 B]
-│   │       │   ├── index.js  [3.9 KB]
-│   │       │   └── README.md  [675 B]
-│   │       ├── ExercisesXPNinja/
-│   │       │   ├── index.html  [3.1 KB]
-│   │       │   ├── main.js  [5.4 KB]
-│   │       │   └── README.md  [1.5 KB]
-│   │       └── MiniProjectCreateaSignInForm/
-│   │           ├── css/
-│   │           │   └── styles.css  [4.1 KB]
-│   │           ├── js/
-│   │           │   └── app.js  [1.6 KB]
-│   │           └── index.html  [4.6 KB]
-│   ├── Day4AdvancedJavaScriptFunctions/
-│   │   ├── DailyChallenge/
-│   │   │   └── Groceries/
-│   │   │       ├── groceries.js  [3.0 KB]
-│   │   │       ├── index.html  [1.7 KB]
-│   │   │       └── README_Groceries.md  [1.1 KB]
-│   │   └── Exercises/
-│   │       ├── ExercisesXP/
-│   │       │   ├── advanced_js.js  [5.8 KB]
-│   │       │   ├── index_advanced_js.html  [2.9 KB]
-│   │       │   └── README_Advanced_JS.md  [1.6 KB]
-│   │       ├── ExercisesXPGold/
-│   │       │   ├── index.js  [1.7 KB]
-│   │       │   └── README.md  [504 B]
-│   │       └── ExercisesXPNinja/
-│   │           ├── index.js  [850 B]
-│   │           └── README.md  [602 B]
-│   ├── Day5MiniProject/
-│   │   ├── DailyChallenge/
-│   │   │   └── TodoList/
-│   │   │       └── todo_list.html  [4.4 KB]
-│   │   └── Exercises/
-│   │       ├── drumset-mini/
-│   │       │   ├── css/
-│   │       │   │   └── styles.css  [2.0 KB]
-│   │       │   ├── js/
-│   │       │   │   └── app.js  [2.6 KB]
-│   │       │   ├── sounds/
-│   │       │   │   ├── boom.wav  [129.5 KB]
-│   │       │   │   ├── clap.wav  [63.4 KB]
-│   │       │   │   ├── hihat.wav  [50.9 KB]
-│   │       │   │   ├── kick.wav  [15.2 KB]
-│   │       │   │   ├── openhat.wav  [238.1 KB]
-│   │       │   │   ├── PUT_SOUNDS_HERE.txt  [118 B]
-│   │       │   │   ├── ride.wav  [429.2 KB]
-│   │       │   │   ├── snare.wav  [32.6 KB]
-│   │       │   │   ├── tink.wav  [5.3 KB]
-│   │       │   │   └── tom.wav  [104.6 KB]
-│   │       │   ├── index.html  [2.5 KB]
-│   │       │   └── README.md  [601 B]
-│   │       └── MiniProjectColoringGame/
-│   │           ├── index.html  [1.7 KB]
-│   │           ├── script.js  [1.9 KB]
-│   │           └── styles.css  [1.0 KB]
-│   └── Remote LearningJSAndDOM/
-│       └── Exercises/
-│           ├── ExercisesXP1/
-│           │   ├── exercise1_todo/
-│           │   │   ├── css/
-│           │   │   │   └── styles.css  [2.0 KB]
-│           │   │   ├── js/
-│           │   │   │   └── app.js  [2.3 KB]
-│           │   │   └── index.html  [1.1 KB]
-│           │   ├── exercise2_color_guess/
-│           │   │   ├── css/
-│           │   │   │   └── styles.css  [1.6 KB]
-│           │   │   ├── js/
-│           │   │   │   └── app.js  [2.7 KB]
-│           │   │   └── index.html  [1.5 KB]
-│           │   ├── exercise3_calculator/
-│           │   │   ├── css/
-│           │   │   │   └── styles.css  [1.1 KB]
-│           │   │   ├── js/
-│           │   │   │   └── app.js  [2.2 KB]
-│           │   │   └── index.html  [1.4 KB]
-│           │   ├── exercise4_whack_a_mole/
-│           │   │   ├── css/
-│           │   │   │   └── styles.css  [1.0 KB]
-│           │   │   ├── js/
-│           │   │   │   └── app.js  [2.6 KB]
-│           │   │   └── index.html  [804 B]
-│           │   └── README.md  [66 B]
-│           └── ExercisesXP2/
-│               ├── exercise1_timer/
-│               │   ├── js/
-│               │   │   └── app.js  [915 B]
-│               │   └── index.html  [908 B]
-│               ├── exercise2_move_box/
-│               │   ├── js/
-│               │   │   └── app.js  [711 B]
-│               │   └── index.html  [1.0 KB]
-│               ├── exercise3_drag_drop/
-│               │   ├── js/
-│               │   │   └── app.js  [1.8 KB]
-│               │   └── index.html  [968 B]
-│               └── README.md  [84 B]
-├── Week4AdvAsynchronousJavaScript/
-│   ├── Day1AdvancedArrayMethods/
-│   │   ├── DailyChallenge/
-│   │   │   ├── CarInventory/
-│   │   │   │   ├── js/
-│   │   │   │   │   └── app.js  [2.1 KB]
-│   │   │   │   ├── index.html  [2.1 KB]
-│   │   │   │   └── README.md  [1.7 KB]
-│   │   │   └── GoWildcats/
-│   │   │       ├── GoWildcats.ts  [1.8 KB]
-│   │   │       └── README.md  [813 B]
-│   │   └── Exercises/
-│   │       ├── ExercisesXP/
-│   │       │   └── http_forms_json_exercises.html  [5.6 KB]
-│   │       ├── ExercisesXPGold/
-│   │       │   ├── ArraysDestructuringXPGold.ts  [4.7 KB]
-│   │       │   └── README.md  [1.3 KB]
-│   │       └── ExercisesXPGold2/
-│   │           ├── ArraysMethodsXPGold.ts  [2.9 KB]
-│   │           └── README.md  [1.0 KB]
-│   ├── Day2AdvancedObjectMethods/
-│   │   ├── DailyChallenge/
-│   │   │   ├── README.md  [990 B]
-│   │   │   └── VideoObjects.ts  [1.9 KB]
-│   │   └── Exercises/
-│   │       └── ExercisesXP/
-│   │           ├── ObjectsDestructuringClassesXP.ts  [3.9 KB]
-│   │           └── README.md  [1.4 KB]
-│   ├── Day3HTTPAndFormMethodGETAndPOST/
-│   │   ├── DailyChallenge/
-│   │   │   ├── HTMLForm/
-│   │   │   │   ├── css/
-│   │   │   │   │   └── styles.css  [1.2 KB]
-│   │   │   │   ├── js/
-│   │   │   │   │   └── app.js  [1.6 KB]
-│   │   │   │   └── index.html  [1.3 KB]
-│   │   │   └── TrueOrFalse/
-│   │   │       ├── app.js  [2.2 KB]
-│   │   │       ├── index1.html  [1.6 KB]
-│   │   │       ├── README.md  [709 B]
-│   │   │       └── style.css  [1.4 KB]
-│   │   └── Exercises/
-│   │       ├── ExercisesXP/
-│   │       │   ├── app.js  [2.0 KB]
-│   │       │   ├── index.html  [3.1 KB]
-│   │       │   ├── README.md  [1.6 KB]
-│   │       │   └── style.css  [1.6 KB]
-│   │       ├── ExercisesXPGold/
-│   │       │   ├── index.html  [852 B]
-│   │       │   ├── README.md  [576 B]
-│   │       │   └── result.html  [1.1 KB]
-│   │       └── RandomQuoteGenerator/
-│   │           ├── css/
-│   │           │   └── styles.css  [1.5 KB]
-│   │           ├── js/
-│   │           │   └── app.js  [6.2 KB]
-│   │           ├── index.html  [2.8 KB]
-│   │           └── README.md  [1.4 KB]
-│   ├── Day4AsynchronousJavaScript/
-│   │   ├── DailyChallenge/
-│   │   │   └── PlayWithWords/
-│   │   │       ├── daily_promises_morse.js  [4.7 KB]
-│   │   │       ├── index_daily_challenges.html  [2.2 KB]
-│   │   │       └── README.md  [2.0 KB]
-│   │   └── Exercises/
-│   │       └── ExercisesXP/
-│   │           ├── index_promises.html  [1.6 KB]
-│   │           ├── promises.js  [1.8 KB]
-│   │           └── README.md  [1.3 KB]
-│   └── Day5Fetch&AsyncAwait/
-│       └── Exercises/
-│           └── ExercisesXP/
-│               ├── css/
-│               │   └── styles.css  [928 B]
-│               ├── js/
-│               │   └── app.js  [3.1 KB]
-│               ├── index.html  [1.8 KB]
-│               └── README.md  [1.2 KB]
-├── Week5MiniProjectAndTypeScript/
-│   ├── Day1Miniproject/
-│   │   ├── DailyChallange/
-│   │   │   └── CurrencyConverter/
-│   │   │       ├── index.html  [17.3 KB]
-│   │   │       └── README.md  [6.7 KB]
-│   │   ├── Exercises/
-│   │   │   └── Pokedex/
-│   │   │       ├── index.html  [20.0 KB]
-│   │   │       └── README.md  [6.1 KB]
-│   │   └── StarWarsWebApp/
-│   │       ├── index.html  [12.3 KB]
-│   │       └── README.md  [3.4 KB]
-│   ├── Day2IntroductionToTypeScriptAndKeyConcepts/
-│   │   ├── DailyChallenge/
-│   │   │   └── UnionTypeValidator/
-│   │   │       ├── src/
-│   │   │       │   └── index.ts  [7.8 KB]
-│   │   │       ├── .gitignore  [67 B]
-│   │   │       ├── package.json  [519 B]
-│   │   │       ├── README.md  [8.1 KB]
-│   │   │       └── tsconfig.json  [468 B]
-│   │   └── Exercises/
-│   │       └── ExercisesXP/
-│   │           ├── ExercisesXP_Basics.ts  [4.2 KB]
-│   │           └── README.md  [741 B]
-│   ├── Day3AdvancedTypeScriptConceptsAndApplications/
-│   │   ├── DailyChallenge/
-│   │   │   ├── LibrarySystem.ts  [3.0 KB]
-│   │   │   └── README.md  [722 B]
-│   │   └── Exercises/
-│   │       └── ExercisesXP/
-│   │           ├── ExercisesXP_OOP.ts  [4.0 KB]
-│   │           └── README.md  [674 B]
-│   └── Day4AdvancedTypeScriptConceptsAndApplications/
-│       ├── DailyChallenge/
-│       │   ├── .gitignore  [32 B]
-│       │   ├── README.md  [863 B]
-│       │   └── TypeGuardUnion.ts  [2.2 KB]
-│       └── Exercises/
-│           ├── ExercisesXP/
-│           │   ├── .gitignore  [32 B]
-│           │   ├── ExercisesXP.ts  [3.1 KB]
-│           │   └── README.md  [824 B]
-│           └── ExercisesXPGold/
-│               ├── .gitignore  [32 B]
-│               ├── ExercisesXPGold.ts  [4.3 KB]
-│               └── README.md  [788 B]
-├── Week6DatabasesAndNodejs/
-│   ├── Day1IntroductionToDatabases/
-│   │   └── Exercises/
-│   │       ├── ExercisesXP/
-│   │       │   ├── .gitignore  [65 B]
-│   │       │   ├── items_customers.sql  [2.7 KB]
-│   │       │   ├── README.md  [2.1 KB]
-│   │       │   └── sample_outputs.txt  [830 B]
-│   │       ├── ExercisesXP+/
-│   │       │   ├── .gitignore  [58 B]
-│   │       │   ├── exercisesxpplus.sql  [3.3 KB]
-│   │       │   └── README.md  [1.5 KB]
-│   │       └── ExercisesXPGold/
-│   │           ├── exercisesxpgold.md  [933 B]
-│   │           └── exercisesxpgold.sql  [857 B]
-│   ├── Day2DatabaseConcepts1/
-│   │   └── Exercises/
-│   │       └── ExercisesXP/
-│   │           ├── README.md  [658 B]
-│   │           └── xp_sql_answers.sql  [4.3 KB]
-│   ├── Day3DatabaseConcepts2/
-│   │   └── Exercises/
-│   │       ├── ExercicesXPGold/
-│   │       │   ├── README.md  [475 B]
-│   │       │   └── xp_gold_dvdrental.sql  [6.9 KB]
-│   │       └── ExercisesXP/
-│   │           ├── README.md  [644 B]
-│   │           └── xp_dvdrental_relationships.sql  [6.0 KB]
-│   └── Day4NodejsIntroduction/
-│       ├── DailyChallenge/
-│       │   └── NodejsAppAndNPM/
-│       │       ├── files/
-│       │       │   └── file-data.txt  [103 B]
-│       │       ├── task-1/
-│       │       │   └── app.js  [242 B]
-│       │       ├── task-2/
-│       │       │   └── app.js  [210 B]
-│       │       ├── task-3/
-│       │       │   └── app.js  [235 B]
-│       │       ├── .gitignore  [33 B]
-│       │       ├── challenge.js  [489 B]
-│       │       ├── colorful-message.js  [535 B]
-│       │       ├── greeting.js  [429 B]
-│       │       ├── package.json  [244 B]
-│       │       ├── read-file.js  [764 B]
-│       │       └── README.md  [408 B]
-│       └── Exercises/
-│           └── ExercisesXP/
-│               ├── exercise-1-commonjs-products/
-│               │   ├── package.json  [85 B]
-│               │   ├── products.js  [897 B]
-│               │   └── shop.js  [1.1 KB]
-│               ├── exercise-2-esm-average-age/
-│               │   ├── app.js  [796 B]
-│               │   ├── data.js  [576 B]
-│               │   └── package.json  [103 B]
-│               ├── exercise-3-file-manager-commonjs/
-│               │   ├── app.js  [570 B]
-│               │   ├── Bye World.txt  [14 B]
-│               │   ├── fileManager.js  [1.3 KB]
-│               │   ├── Hello World.txt  [16 B]
-│               │   └── package.json  [89 B]
-│               ├── exercise-4-esm-todo/
-│               │   └── todoApp/
-│               │       ├── app.js  [655 B]
-│               │       ├── package.json  [89 B]
-│               │       └── todo.js  [1.1 KB]
-│               ├── exercise-5-math-app/
-│               │   └── math-app/
-│               │       ├── app.js  [731 B]
-│               │       ├── math.js  [523 B]
-│               │       └── package.json  [224 B]
-│               ├── exercise-6-npm-beginner-chalk/
-│               │   └── npm-beginner/
-│               │       ├── app.js  [733 B]
-│               │       └── package.json  [226 B]
-│               ├── exercise-7-file-explorer/
-│               │   └── file-explorer/
-│               │       ├── copy-file.js  [729 B]
-│               │       ├── package.json  [70 B]
-│               │       ├── read-directory.js  [624 B]
-│               │       └── source.txt  [52 B]
-│               ├── .gitignore  [33 B]
-│               └── README.md  [2.7 KB]
-├── .eslintignore  [171 B]
-├── .eslintrc.cjs  [1.2 KB]
-├── .gitattributes  [698 B]
-├── .gitignore  [1013 B]
-├── .prettierignore  [171 B]
-├── .prettierrc.json  [228 B]
-├── LICENSE  [1.0 KB]
-├── package.json  [677 B]
-├── README.md  [18.8 KB]
-├── Week1Python (2).zip  [206.0 KB]
-└── Week1Python.zip  [205.7 KB]
+Fullstack2026 canonical Git-index tree
+Regenerated: 2026-08-24
+Base HEAD: 20f27a7a5fdd0d68a85f892438849d51d6ff82ba
+Source-index SHA-256 (generated outputs excluded): a06d9d582de13197c14cd09a76d60549d8bfa6bf2898e1d5d680e4779e62abfb
+Indexed files: 879
+
+.
+├── .ai
+│   ├── CONTEXT.md
+│   ├── DECISIONS.md
+│   ├── HANDOFF_PROTOCOL.md
+│   ├── LEARNING_PROTOCOL.md
+│   └── VISUAL_SYSTEM.md
+├── .github
+│   ├── workflows
+│   │   ├── quality.yml
+│   │   └── README.md
+│   ├── copilot-instructions.md
+│   ├── dependabot.yml
+│   ├── INTERNAL_GUIDE.md
+│   └── pull_request_template.md
+├── .learning
+│   ├── evidence
+│   │   └── README.md
+│   ├── intake
+│   │   ├── exercise-intake.schema.json
+│   │   ├── queue.json
+│   │   └── README.md
+│   ├── sessions
+│   │   └── README.md
+│   ├── course-map.yml
+│   ├── display-map.json
+│   ├── OCTOPUS_INTAKE.md
+│   ├── PROGRESS.md
+│   └── REVIEW_QUEUE.md
+├── assets
+│   ├── readme
+│   │   ├── progress
+│   │   │   ├── advanced-algorithm-911e3731b7.svg
+│   │   │   ├── air-management-2c6b6fc9f2.svg
+│   │   │   ├── anagram-checker-8fdcf3b2c3.svg
+│   │   │   ├── assets-3685e330ec.svg
+│   │   │   ├── bubble-sort-dc81cde00f.svg
+│   │   │   ├── build-up-astring-6c50c48a77.svg
+│   │   │   ├── caesar-cypher-c2aae16993.svg
+│   │   │   ├── car-inventory-0e0706421a.svg
+│   │   │   ├── challenges-48c4324ce8.svg
+│   │   │   ├── challenges1-e9520d5915.svg
+│   │   │   ├── challenges2-e9acc2f59e.svg
+│   │   │   ├── circle-97d878cfe4.svg
+│   │   │   ├── css-301984da57.svg
+│   │   │   ├── css-472e2fb5e8.svg
+│   │   │   ├── css-5401dbb63d.svg
+│   │   │   ├── css-5815e2ea50.svg
+│   │   │   ├── css-6f50f81572.svg
+│   │   │   ├── css-8f2369139b.svg
+│   │   │   ├── css-b03f5587c2.svg
+│   │   │   ├── css-b8bc638ed6.svg
+│   │   │   ├── css-f7795260be.svg
+│   │   │   ├── currency-converter-e742522f43.svg
+│   │   │   ├── daily-challenge-018a6493ca.svg
+│   │   │   ├── daily-challenge-0c9d6debb5.svg
+│   │   │   ├── daily-challenge-1775891dbf.svg
+│   │   │   ├── daily-challenge-2a427914d9.svg
+│   │   │   ├── daily-challenge-2cdf180191.svg
+│   │   │   ├── daily-challenge-32ffe40364.svg
+│   │   │   ├── daily-challenge-3f6b359663.svg
+│   │   │   ├── daily-challenge-4333e915e1.svg
+│   │   │   ├── daily-challenge-45144ff1a8.svg
+│   │   │   ├── daily-challenge-49107baa6d.svg
+│   │   │   ├── daily-challenge-4d97c0f342.svg
+│   │   │   ├── daily-challenge-4ec75763d5.svg
+│   │   │   ├── daily-challenge-5e54f7f970.svg
+│   │   │   ├── daily-challenge-615fbaa15b.svg
+│   │   │   ├── daily-challenge-86903944ee.svg
+│   │   │   ├── daily-challenge-949a130b07.svg
+│   │   │   ├── daily-challenge-9f38cccc14.svg
+│   │   │   ├── daily-challenge-9f6ac54201.svg
+│   │   │   ├── daily-challenge-a3a1bc2533.svg
+│   │   │   ├── daily-challenge-b452743c13.svg
+│   │   │   ├── daily-challenge-bb6a88341d.svg
+│   │   │   ├── daily-challenge-c87ad54043.svg
+│   │   │   ├── daily-challenge-dd0d57f83c.svg
+│   │   │   ├── daily-challenge-f96753fac0.svg
+│   │   │   ├── daily-challenge-fd8e7677ef.svg
+│   │   │   ├── daily-challenge-not-bad-d1c834c9ea.svg
+│   │   │   ├── daily-challenge-planets-bcd2f51b89.svg
+│   │   │   ├── daily-challenge-stars-45167b388e.svg
+│   │   │   ├── day1-advanced-array-methods-316a98efce.svg
+│   │   │   ├── day1-introduction-to-databases-31fe17d428.svg
+│   │   │   ├── day1-introductionto-java-script-064c40b384.svg
+│   │   │   ├── day1-introductionto-oop-a75d18f2da.svg
+│   │   │   ├── day1-mini-project-4b1ea8ce2f.svg
+│   │   │   ├── day1-startingwith-python-f31146b1b8.svg
+│   │   │   ├── day2-advanced-object-methods-d570f38596.svg
+│   │   │   ├── day2-database-concepts1-4ca9e45544.svg
+│   │   │   ├── day2-functionsand-domintroduction-9ce7dce0f9.svg
+│   │   │   ├── day2-introduction-to-type-script-and-key-concepts-31f5d2e0cb.svg
+│   │   │   ├── day2-lists-iterating-and-formatting-data-540ca92ecb.svg
+│   │   │   ├── day2-oopinheritance-encapsulation-polymorphism-6270e8dcad.svg
+│   │   │   ├── day3-advanced-type-script-concepts-and-applications-267bd1f677.svg
+│   │   │   ├── day3-database-concepts2-0385ef767f.svg
+│   │   │   ├── day3-dictionaries-47ad664c02.svg
+│   │   │   ├── day3-httpand-form-method-getand-post-2713582506.svg
+│   │   │   ├── day3-learning-domevents-4cb3533c47.svg
+│   │   │   ├── day3-oopand-modules-61faf7cdb6.svg
+│   │   │   ├── day4-advanced-java-script-functions-82540e4dfe.svg
+│   │   │   ├── day4-advanced-type-script-concepts-and-applications-6d05218bc6.svg
+│   │   │   ├── day4-asynchronous-java-script-9c01035c87.svg
+│   │   │   ├── day4-functions-e1dfe1f6c2.svg
+│   │   │   ├── day4-nodejs-introduction-7683b54a25.svg
+│   │   │   ├── day4-python-file-iojsonand-api-f45fc61397.svg
+│   │   │   ├── day5-fetch-and-async-await-8ba3460747.svg
+│   │   │   ├── day5-mini-project-85eec3f012.svg
+│   │   │   ├── day5-mini-project-a3284c88c2.svg
+│   │   │   ├── day5-mini-project-e4f4b5beef.svg
+│   │   │   ├── dictionaries-9a26300e0f.svg
+│   │   │   ├── drumset-mini-613bae1cac.svg
+│   │   │   ├── exercise-1-commonjs-products-8faee08461.svg
+│   │   │   ├── exercise-2-esm-average-age-c4dc30ec36.svg
+│   │   │   ├── exercise-3-file-manager-commonjs-d81ac35c81.svg
+│   │   │   ├── exercise-4-esm-todo-8d35444102.svg
+│   │   │   ├── exercise-5-math-app-f52754e467.svg
+│   │   │   ├── exercise-6-npm-beginner-chalk-0023adb1dd.svg
+│   │   │   ├── exercise-7-file-explorer-cd77af1da3.svg
+│   │   │   ├── exercise1-timer-2c9c28cd61.svg
+│   │   │   ├── exercise1-todo-6cbda756ce.svg
+│   │   │   ├── exercise2-color-guess-373f060e80.svg
+│   │   │   ├── exercise2-move-box-209d23ba9d.svg
+│   │   │   ├── exercise3-calculator-3705d63715.svg
+│   │   │   ├── exercise3-drag-drop-5279c0a41a.svg
+│   │   │   ├── exercise4-whack-a-mole-e543b0681c.svg
+│   │   │   ├── exercises-013efdcf2d.svg
+│   │   │   ├── exercises-10b2fec59d.svg
+│   │   │   ├── exercises-136a7c3350.svg
+│   │   │   ├── exercises-15c36a68b9.svg
+│   │   │   ├── exercises-1e195418da.svg
+│   │   │   ├── exercises-29f935b30a.svg
+│   │   │   ├── exercises-2c52a77d12.svg
+│   │   │   ├── exercises-318fde73fb.svg
+│   │   │   ├── exercises-3cc599f444.svg
+│   │   │   ├── exercises-4b04468b55.svg
+│   │   │   ├── exercises-515cf517b9.svg
+│   │   │   ├── exercises-541abc19d4.svg
+│   │   │   ├── exercises-58c48947a8.svg
+│   │   │   ├── exercises-5f6ca5f0a2.svg
+│   │   │   ├── exercises-6b1d3135e0.svg
+│   │   │   ├── exercises-6fec33e4a2.svg
+│   │   │   ├── exercises-7406e762a7.svg
+│   │   │   ├── exercises-76f38e54e8.svg
+│   │   │   ├── exercises-7dc34bb02f.svg
+│   │   │   ├── exercises-a0afe33b68.svg
+│   │   │   ├── exercises-af23fb8edb.svg
+│   │   │   ├── exercises-b6d01892a3.svg
+│   │   │   ├── exercises-b7e55cb206.svg
+│   │   │   ├── exercises-c5f1b36006.svg
+│   │   │   ├── exercises-d770efceb3.svg
+│   │   │   ├── exercises-d8d907b463.svg
+│   │   │   ├── exercises-dad60e9f33.svg
+│   │   │   ├── exercises-e2ea16a216.svg
+│   │   │   ├── exercises-f88932dca5.svg
+│   │   │   ├── exercises-fa5e90116e.svg
+│   │   │   ├── exercises-xp-01b16c7b23.svg
+│   │   │   ├── exercises-xp-0ff82fe9a6.svg
+│   │   │   ├── exercises-xp-1913cdd331.svg
+│   │   │   ├── exercises-xp-19dd687672.svg
+│   │   │   ├── exercises-xp-200dd1c988.svg
+│   │   │   ├── exercises-xp-20e9111fdc.svg
+│   │   │   ├── exercises-xp-26b89bf1e6.svg
+│   │   │   ├── exercises-xp-285afc1699.svg
+│   │   │   ├── exercises-xp-2d5251840f.svg
+│   │   │   ├── exercises-xp-337d5c9753.svg
+│   │   │   ├── exercises-xp-33f9f32714.svg
+│   │   │   ├── exercises-xp-44a220fa48.svg
+│   │   │   ├── exercises-xp-4b75acb0a5.svg
+│   │   │   ├── exercises-xp-6babf4344d.svg
+│   │   │   ├── exercises-xp-7736123bb3.svg
+│   │   │   ├── exercises-xp-773fa7fe22.svg
+│   │   │   ├── exercises-xp-80340752f0.svg
+│   │   │   ├── exercises-xp-a81d7fbf59.svg
+│   │   │   ├── exercises-xp-ae3b3197a6.svg
+│   │   │   ├── exercises-xp-b86ef38f1a.svg
+│   │   │   ├── exercises-xp-d1fe555080.svg
+│   │   │   ├── exercises-xp-e8ff4d5aaf.svg
+│   │   │   ├── exercises-xp-f1817611e4.svg
+│   │   │   ├── exercises-xp-fbf0813a52.svg
+│   │   │   ├── exercises-xp1-6a9e6acad2.svg
+│   │   │   ├── exercises-xp2-c93a4cd711.svg
+│   │   │   ├── exercises-xpanimations-b19d556380.svg
+│   │   │   ├── exercises-xpgold-02be91889d.svg
+│   │   │   ├── exercises-xpgold-0aa5d263c3.svg
+│   │   │   ├── exercises-xpgold-1439b84fab.svg
+│   │   │   ├── exercises-xpgold-29cf741779.svg
+│   │   │   ├── exercises-xpgold-4e2fb61e02.svg
+│   │   │   ├── exercises-xpgold-58bc95ca32.svg
+│   │   │   ├── exercises-xpgold-84145eca48.svg
+│   │   │   ├── exercises-xpgold-8f60c9c51e.svg
+│   │   │   ├── exercises-xpgold-933866d3e0.svg
+│   │   │   ├── exercises-xpgold-a6b0421da4.svg
+│   │   │   ├── exercises-xpgold-d14a8c80ec.svg
+│   │   │   ├── exercises-xpgold-dd00d1c574.svg
+│   │   │   ├── exercises-xpgold-dfd74631c0.svg
+│   │   │   ├── exercises-xpgold-e35a4208fd.svg
+│   │   │   ├── exercises-xpgold-efcef6b89a.svg
+│   │   │   ├── exercises-xpgold-f1d06e9641.svg
+│   │   │   ├── exercises-xpgold-f50d6cc9c3.svg
+│   │   │   ├── exercises-xpgold2-0a6e7b392d.svg
+│   │   │   ├── exercises-xpninja-0250e546b7.svg
+│   │   │   ├── exercises-xpninja-18b57686e3.svg
+│   │   │   ├── exercises-xpninja-1c47617020.svg
+│   │   │   ├── exercises-xpninja-3644039a9f.svg
+│   │   │   ├── exercises-xpninja-5c88e8c55d.svg
+│   │   │   ├── exercises-xpninja-60b62c5837.svg
+│   │   │   ├── exercises-xpninja-6ee560a90f.svg
+│   │   │   ├── exercises-xpninja-a856c80b40.svg
+│   │   │   ├── exercises-xpninja-c55cdcf506.svg
+│   │   │   ├── exercises-xpninja-c8db0eb93d.svg
+│   │   │   ├── exercises-xpninja-cdf5889bed.svg
+│   │   │   ├── exercises-xpninja-efd1a61847.svg
+│   │   │   ├── exercises-xpplus-677f7b4b10.svg
+│   │   │   ├── exercises-xpplus-a44867596e.svg
+│   │   │   ├── file-explorer-e9539c8176.svg
+│   │   │   ├── files-8fe81ea7e0.svg
+│   │   │   ├── github-4c40eab00f.svg
+│   │   │   ├── go-wildcats-a2d75a34e0.svg
+│   │   │   ├── gold-happy-birthday-051524da32.svg
+│   │   │   ├── groceries-a9b8627c73.svg
+│   │   │   ├── hangman-b986853f16.svg
+│   │   │   ├── htmlform-73d95fe81c.svg
+│   │   │   ├── js-0cd4cb0b37.svg
+│   │   │   ├── js-29ec2b00e3.svg
+│   │   │   ├── js-3cf1d71bde.svg
+│   │   │   ├── js-4b9f758b89.svg
+│   │   │   ├── js-4c5ef18a8f.svg
+│   │   │   ├── js-587a00fdcb.svg
+│   │   │   ├── js-5af95bf71c.svg
+│   │   │   ├── js-6ffd25fbda.svg
+│   │   │   ├── js-94e189645b.svg
+│   │   │   ├── js-976fc457b5.svg
+│   │   │   ├── js-cc32f7f940.svg
+│   │   │   ├── js-dc50386d56.svg
+│   │   │   ├── js-e6227183df.svg
+│   │   │   ├── js-f89a1b20d0.svg
+│   │   │   ├── letters-f1db44c3f7.svg
+│   │   │   ├── list-and-strings-c081f54eec.svg
+│   │   │   ├── math-app-06109cb6e4.svg
+│   │   │   ├── mini-project-coloring-game-5320641e49.svg
+│   │   │   ├── mini-project-createa-sign-in-form-ba63e6bf9c.svg
+│   │   │   ├── mini-project-vaccines-a94241f92f.svg
+│   │   │   ├── modules-e3d1c33ab5.svg
+│   │   │   ├── nodejs-app-and-npm-55f394adf0.svg
+│   │   │   ├── npm-beginner-08778c1dcc.svg
+│   │   │   ├── oopquiz-92469ab711.svg
+│   │   │   ├── pagination-1cf902caf8.svg
+│   │   │   ├── play-with-words-ccce75e27c.svg
+│   │   │   ├── pokedex-0fed258102.svg
+│   │   │   ├── python-4a960de9ce.svg
+│   │   │   ├── random-quote-generator-fdaba25419.svg
+│   │   │   ├── readme-9453d23d46.svg
+│   │   │   ├── remote-learning-jsand-dom-815ac22973.svg
+│   │   │   ├── remote-learning-oop-03b612090b.svg
+│   │   │   ├── rock-paper-scissors-37d39eddc9.svg
+│   │   │   ├── solve-the-matrix-4caca0648d.svg
+│   │   │   ├── sounds-2df62309e0.svg
+│   │   │   ├── src-1961a64603.svg
+│   │   │   ├── src-66a533bc61.svg
+│   │   │   ├── src-a434c98586.svg
+│   │   │   ├── src-a542c6e722.svg
+│   │   │   ├── star-wars-web-app-63b913747f.svg
+│   │   │   ├── task-1-ea89997211.svg
+│   │   │   ├── task-2-fdb5b7dbaa.svg
+│   │   │   ├── task-3-a8f915097a.svg
+│   │   │   ├── tell-the-story-cd3ae5ebb9.svg
+│   │   │   ├── tests-04d13fd0aa.svg
+│   │   │   ├── tests-0c695b6ae8.svg
+│   │   │   ├── text-analysis-721b11fc6e.svg
+│   │   │   ├── tic-tac-toe-ed49f2ef4e.svg
+│   │   │   ├── timed-challenge1-11eb650428.svg
+│   │   │   ├── timed-challenge1-761d03d053.svg
+│   │   │   ├── timed-challenge2-a4265f7705.svg
+│   │   │   ├── todo-app-fd921d256b.svg
+│   │   │   ├── todo-list-1254c9044b.svg
+│   │   │   ├── tools-0284c6ac58.svg
+│   │   │   ├── translator-31054dc2af.svg
+│   │   │   ├── true-or-false-1764d91f98.svg
+│   │   │   ├── union-type-validator-805b55c1bb.svg
+│   │   │   ├── user-info-cc666f7b51.svg
+│   │   │   ├── weather-app-3ec8010478.svg
+│   │   │   ├── week1-python-6dd83c5ba0.svg
+│   │   │   ├── week2-oop-f3122b8ed5.svg
+│   │   │   ├── week3-java-scriptand-dom-6198da8760.svg
+│   │   │   ├── week4-adv-asynchronous-java-script-9e969cfe32.svg
+│   │   │   ├── week5-mini-project-and-type-script-e3ca5bd6e9.svg
+│   │   │   ├── week6-databases-and-nodejs-4095c435e8.svg
+│   │   │   ├── words-in-the-stars-47bf0873fc.svg
+│   │   │   └── workflows-93d7c4b837.svg
+│   │   ├── ultimate
+│   │   │   ├── nova-footer-pulse.svg
+│   │   │   ├── nova-readiness-live.svg
+│   │   │   ├── nova-roadmap-horizon.svg
+│   │   │   ├── nova-root-banner.svg
+│   │   │   ├── nova-six-weeks-journey.svg
+│   │   │   ├── nova-stack-galaxy.svg
+│   │   │   └── nova-twelve-week-journey.svg
+│   │   ├── learning-orbit.svg
+│   │   ├── nova-folder-pulse.svg
+│   │   ├── nova-fullstack-banner.svg
+│   │   ├── nova-readiness-center.svg
+│   │   ├── nova-ultimate-banner.svg
+│   │   ├── README.md
+│   │   ├── stack-pulse.svg
+│   │   └── visual_manifest.json
+│   └── README.md
+├── reports
+│   ├── nova
+│   │   ├── catalog_manifest.json
+│   │   ├── exercise_catalog.csv
+│   │   ├── exercise_catalog.md
+│   │   ├── exercise_catalog_metadata.csv
+│   │   ├── file_inventory.csv
+│   │   ├── next_actions.md
+│   │   ├── nova_repo_audit.json
+│   │   ├── nova_repo_audit.md
+│   │   ├── nova_repo_dashboard.html
+│   │   ├── NOVA_UPDATE_REPORT.md
+│   │   ├── quality_report.json
+│   │   ├── quality_report.md
+│   │   ├── README.md
+│   │   ├── README.nova.generated.md
+│   │   ├── rename_plan.csv
+│   │   ├── SUMMARY.txt
+│   │   └── tree.txt
+│   └── resume
+│       ├── ACADEMY_ALIGNMENT_2026-08-24.md
+│       ├── BASELINE_2026-08-23.md
+│       ├── CONSOLIDATION_RESULT.md
+│       ├── CURRENT_STAGED_COMMIT_2026-08-24.md
+│       ├── DECISION_LOG.md
+│       ├── DUPLICATE_ANALYSIS.csv
+│       ├── OPEN_WORK_TRIAGE.md
+│       ├── STRUCTURE_MAP.md
+│       ├── TEST_COVERAGE_MAP.md
+│       └── WAVE_0_1_COMMIT_PLAN.md
+├── tests
+│   ├── js
+│   │   ├── math_helpers.test.mjs
+│   │   ├── README.md
+│   │   ├── repository_health.test.mjs
+│   │   └── typescript_syntax.test.mjs
+│   ├── python
+│   │   ├── _loader.py
+│   │   ├── README.md
+│   │   ├── test_circle.py
+│   │   ├── test_display_titles.py
+│   │   ├── test_hangman.py
+│   │   ├── test_learning_intake.py
+│   │   ├── test_readme_visuals.py
+│   │   ├── test_repository_layout.py
+│   │   ├── test_tictactoe.py
+│   │   └── test_timer.py
+│   └── README.md
+├── tools
+│   ├── check_typescript_syntax.mjs
+│   ├── learning_intake.py
+│   ├── nova_quality_gate.py
+│   ├── nova_ultimate.py
+│   ├── README.md
+│   ├── refresh_structure_catalogs.py
+│   ├── run_node_tests.mjs
+│   ├── validate_display_titles.py
+│   ├── validate_readme_visuals.py
+│   └── validate_repository_structure.py
+├── Week10AdvancedTypeScriptAndAuthentication
+│   └── README.md
+├── Week11FinalProject
+│   └── README.md
+├── Week12FinalProject
+│   └── README.md
+├── Week1Python
+│   ├── Day1StartingwithPython
+│   │   ├── DailyChallenge
+│   │   │   ├── BuildUpAString
+│   │   │   │   ├── buildupastring.py
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   ├── exercisesxp.py
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   ├── exercisesxpgold.py
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   ├── exercisesxpninja.py
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day2ListsIteratingAndFormattingData
+│   │   ├── DailyChallenge
+│   │   │   ├── GoldHappyBirthday
+│   │   │   │   ├── happybirthday.py
+│   │   │   │   └── README.md
+│   │   │   ├── ListAndStrings
+│   │   │   │   ├── dailychallengelistandstrings.py
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   ├── exercisesxp.py
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   ├── exercisesxpgold.py
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   ├── exercisesxpninja.py
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day3Dictionaries
+│   │   ├── DailyChallenge
+│   │   │   ├── CaesarCypher
+│   │   │   │   ├── caesarcipher.py
+│   │   │   │   └── README.md
+│   │   │   ├── Dictionaries
+│   │   │   │   ├── dictionaries.py
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   ├── exercisesxp.py
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   ├── exercisesxpgold.py
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   ├── readme.md
+│   │   │   │   └── xpninjacars.py
+│   │   │   ├── ExercisesXPPlus
+│   │   │   │   ├── exercisesxpplus.py
+│   │   │   │   └── README.md
+│   │   │   ├── TimedChallenge1
+│   │   │   │   ├── readme.md
+│   │   │   │   └── timedsentence.py
+│   │   │   ├── TimedChallenge2
+│   │   │   │   ├── perfectnumber.py
+│   │   │   │   └── readme.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day4Functions
+│   │   ├── DailyChallenge
+│   │   │   ├── SolveTheMatrix
+│   │   │   │   ├── README.md
+│   │   │   │   └── solvethematrix.py
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   ├── exercisesxp.py
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   ├── README.md
+│   │   │   │   └── xpgoldfunctions.py
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   ├── README.md
+│   │   │   │   └── xpninjafunctionssingle.py
+│   │   │   ├── TimedChallenge1
+│   │   │   │   ├── countoccurence.py
+│   │   │   │   └── readme.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day5MiniProject
+│   │   ├── DailyChallenge
+│   │   │   ├── AdvancedAlgorithm
+│   │   │   │   ├── src
+│   │   │   │   │   ├── demodata.py
+│   │   │   │   │   ├── pairs.py
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── main.py
+│   │   │   │   └── README.md
+│   │   │   ├── Challenges
+│   │   │   │   ├── challenges.py
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── Challenges1
+│   │   │   │   ├── challengessolutions.py
+│   │   │   │   └── README.md
+│   │   │   ├── Challenges2
+│   │   │   │   ├── src
+│   │   │   │   │   ├── ex2analysis.py
+│   │   │   │   │   ├── patterns.py
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── main.py
+│   │   │   │   └── README.md
+│   │   │   ├── Hangman
+│   │   │   │   ├── src
+│   │   │   │   │   ├── art.py
+│   │   │   │   │   ├── game.py
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── words.py
+│   │   │   │   ├── main.py
+│   │   │   │   └── README.md
+│   │   │   ├── TicTacToe
+│   │   │   │   ├── README.md
+│   │   │   │   └── tictactoe.py
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── .gitignore
+│   ├── CHEATSHEET.md
+│   └── README.md
+├── Week2OOP
+│   ├── Day1IntroductiontoOOP
+│   │   ├── DailyChallenge
+│   │   │   ├── oldmcdonaldsfarm.py
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   ├── exercisesxp.py
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   ├── exercisesxpgold.py
+│   │   │   │   └── readme.md
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   ├── exercisesxpninja.py
+│   │   │   │   └── readme.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day2OOPInheritanceEncapsulationPolymorphism
+│   │   ├── DailyChallenge
+│   │   │   ├── Pagination
+│   │   │   │   ├── pagination.py
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   ├── exercisesxp.py
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   ├── exercisesxpgoldinheritance.py
+│   │   │   │   └── readme.md
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   ├── exercisesxpninjainheritance.py
+│   │   │   │   └── readme.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day3OOPandModules
+│   │   ├── DailyChallenge
+│   │   │   ├── Circle
+│   │   │   │   ├── circle.py
+│   │   │   │   └── README.md
+│   │   │   ├── Translator
+│   │   │   │   ├── dailychallengetranslator.py
+│   │   │   │   └── readme.md
+│   │   │   ├── UserInfo
+│   │   │   │   ├── dailychallengegolduserinfo.py
+│   │   │   │   └── readme.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   ├── README.md
+│   │   │   │   └── xp_oop_modules_all.py
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   ├── exercisesxpgoldmodules.py
+│   │   │   │   └── readme.md
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   ├── exercisesxpninjadunder.py
+│   │   │   │   └── readme.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day4PythonFileIOJSONandAPI
+│   │   ├── DailyChallenge
+│   │   │   ├── TextAnalysis
+│   │   │   │   ├── dailychallengetextanalysis.py
+│   │   │   │   └── readme.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   ├── README.md
+│   │   │   │   └── xp_files_json_all.py
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   ├── giphyexercises.py
+│   │   │   │   ├── menueditor.py
+│   │   │   │   ├── menumanager.py
+│   │   │   │   ├── readme.md
+│   │   │   │   └── restaurantmenu.json
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   ├── charactersgame.py
+│   │   │   │   ├── ninjamenueditor.py
+│   │   │   │   ├── ninjamenumanager.py
+│   │   │   │   ├── readme.md
+│   │   │   │   └── restaurantmenu.json
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day5MiniProject
+│   │   ├── DailyChallenge
+│   │   │   ├── Modules
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── test_timer.py
+│   │   │   │   ├── cli.py
+│   │   │   │   ├── README.md
+│   │   │   │   ├── requirements.txt
+│   │   │   │   └── timer.py
+│   │   │   ├── OOPQuiz
+│   │   │   │   ├── deck.py
+│   │   │   │   ├── demo.py
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── AnagramChecker
+│   │   │   │   ├── anagramchecker.py
+│   │   │   │   ├── anagrams.py
+│   │   │   │   ├── README.md
+│   │   │   │   └── words.txt
+│   │   │   ├── RockPaperScissors
+│   │   │   │   ├── game.py
+│   │   │   │   ├── readme.md
+│   │   │   │   └── rockpaperscissors.py
+│   │   │   ├── WeatherApp
+│   │   │   │   ├── readme.md
+│   │   │   │   ├── weatherapp.py
+│   │   │   │   └── weathergui.py
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── RemoteLearningOOP
+│   │   ├── DailyChallenge
+│   │   │   ├── AirManagement
+│   │   │   │   ├── air_management.py
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── MiniProjectVaccines
+│   │   │   │   ├── README.md
+│   │   │   │   └── vaccines.py
+│   │   │   └── README.md
+│   │   └── README.md
+│   └── README.md
+├── Week3JavaScriptandDOM
+│   ├── Day1IntroductiontoJavaScript
+│   │   ├── DailyChallenge
+│   │   │   ├── BubbleSort
+│   │   │   │   ├── index.js
+│   │   │   │   └── README.md
+│   │   │   ├── DailyChallengeNotBad
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   ├── README_Not_Bad_JS.md
+│   │   │   │   └── script.js
+│   │   │   ├── DailyChallengeStars
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   ├── README_Stars_Pattern_JS.md
+│   │   │   │   └── script.js
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   ├── README_JS_Exercises_XP.md
+│   │   │   │   └── script.js
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   ├── README_JS_XP_Gold.md
+│   │   │   │   └── script.js
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   ├── index.js
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day2FunctionsandDOMIntroduction
+│   │   ├── DailyChallenge
+│   │   │   ├── DailyChallengePlanets
+│   │   │   │   ├── planets.html
+│   │   │   │   ├── planets.js
+│   │   │   │   ├── README.md
+│   │   │   │   └── README_Solar_System.md
+│   │   │   ├── WordsInTheStars
+│   │   │   │   ├── index.js
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   └── script.js
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   ├── index.html
+│   │   │   │   ├── index.js
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   ├── index.html
+│   │   │   │   ├── index.js
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day3LearningDOMEvents
+│   │   ├── DailyChallenge
+│   │   │   ├── Letters
+│   │   │   │   ├── index.html
+│   │   │   │   ├── main.js
+│   │   │   │   └── README.md
+│   │   │   ├── TellTheStory
+│   │   │   │   ├── index.html
+│   │   │   │   ├── madlibs.js
+│   │   │   │   ├── README.md
+│   │   │   │   └── README_MadLibs.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   ├── dom_exercises.js
+│   │   │   │   ├── index_dom_exercises.html
+│   │   │   │   ├── README.md
+│   │   │   │   └── README_DOM_XP.md
+│   │   │   ├── ExercisesXPAnimations
+│   │   │   │   ├── index_move.html
+│   │   │   │   ├── index_timer.html
+│   │   │   │   ├── move.js
+│   │   │   │   ├── README.md
+│   │   │   │   ├── README_Animations_XP.md
+│   │   │   │   └── timer.js
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   ├── index.html
+│   │   │   │   ├── index.js
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   ├── index.html
+│   │   │   │   ├── main.js
+│   │   │   │   └── README.md
+│   │   │   ├── MiniProjectCreateaSignInForm
+│   │   │   │   ├── css
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── styles.css
+│   │   │   │   ├── js
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day4AdvancedJavaScriptFunctions
+│   │   ├── DailyChallenge
+│   │   │   ├── Groceries
+│   │   │   │   ├── groceries.js
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   └── README_Groceries.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   ├── advanced_js.js
+│   │   │   │   ├── index_advanced_js.html
+│   │   │   │   ├── README.md
+│   │   │   │   └── README_Advanced_JS.md
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   ├── index.js
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   ├── index.js
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day5MiniProject
+│   │   ├── DailyChallenge
+│   │   │   ├── TodoList
+│   │   │   │   ├── README.md
+│   │   │   │   └── todo_list.html
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── drumset-mini
+│   │   │   │   ├── css
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── styles.css
+│   │   │   │   ├── js
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── sounds
+│   │   │   │   │   ├── boom.wav
+│   │   │   │   │   ├── clap.wav
+│   │   │   │   │   ├── hihat.wav
+│   │   │   │   │   ├── kick.wav
+│   │   │   │   │   ├── openhat.wav
+│   │   │   │   │   ├── PUT_SOUNDS_HERE.txt
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── ride.wav
+│   │   │   │   │   ├── snare.wav
+│   │   │   │   │   ├── tink.wav
+│   │   │   │   │   └── tom.wav
+│   │   │   │   ├── index.html
+│   │   │   │   └── README.md
+│   │   │   ├── MiniProjectColoringGame
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   ├── script.js
+│   │   │   │   └── styles.css
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── RemoteLearningJSAndDOM
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP1
+│   │   │   │   ├── exercise1_todo
+│   │   │   │   │   ├── css
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── styles.css
+│   │   │   │   │   ├── js
+│   │   │   │   │   │   ├── app.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── index.html
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── exercise2_color_guess
+│   │   │   │   │   ├── css
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── styles.css
+│   │   │   │   │   ├── js
+│   │   │   │   │   │   ├── app.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── index.html
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── exercise3_calculator
+│   │   │   │   │   ├── css
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── styles.css
+│   │   │   │   │   ├── js
+│   │   │   │   │   │   ├── app.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── index.html
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── exercise4_whack_a_mole
+│   │   │   │   │   ├── css
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── styles.css
+│   │   │   │   │   ├── js
+│   │   │   │   │   │   ├── app.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── index.html
+│   │   │   │   │   └── README.md
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXP2
+│   │   │   │   ├── exercise1_timer
+│   │   │   │   │   ├── js
+│   │   │   │   │   │   ├── app.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── index.html
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── exercise2_move_box
+│   │   │   │   │   ├── js
+│   │   │   │   │   │   ├── app.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── index.html
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── exercise3_drag_drop
+│   │   │   │   │   ├── js
+│   │   │   │   │   │   ├── app.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── index.html
+│   │   │   │   │   └── README.md
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   └── README.md
+├── Week4AdvAsynchronousJavaScript
+│   ├── Day1AdvancedArrayMethods
+│   │   ├── DailyChallenge
+│   │   │   ├── CarInventory
+│   │   │   │   ├── js
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   └── README.md
+│   │   │   ├── GoWildcats
+│   │   │   │   ├── GoWildcats.ts
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   ├── http_forms_json_exercises.html
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   ├── ArraysDestructuringXPGold.ts
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold2
+│   │   │   │   ├── ArraysMethodsXPGold.ts
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day2AdvancedObjectMethods
+│   │   ├── DailyChallenge
+│   │   │   ├── README.md
+│   │   │   └── VideoObjects.ts
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   ├── ObjectsDestructuringClassesXP.ts
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day3HTTPAndFormMethodGETAndPOST
+│   │   ├── DailyChallenge
+│   │   │   ├── HTMLForm
+│   │   │   │   ├── css
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── styles.css
+│   │   │   │   ├── js
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   └── README.md
+│   │   │   ├── TrueOrFalse
+│   │   │   │   ├── app.js
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   └── style.css
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   ├── app.js
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   └── style.css
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   └── result.html
+│   │   │   ├── RandomQuoteGenerator
+│   │   │   │   ├── css
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── styles.css
+│   │   │   │   ├── js
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day4AsynchronousJavaScript
+│   │   ├── DailyChallenge
+│   │   │   ├── PlayWithWords
+│   │   │   │   ├── daily_promises_morse.js
+│   │   │   │   ├── index_daily_challenges.html
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   ├── index_promises.html
+│   │   │   │   ├── promises.js
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day5FetchAndAsyncAwait
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   ├── css
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── styles.css
+│   │   │   │   ├── js
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   ├── config.example.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   └── README.md
+├── Week5MiniProjectAndTypeScript
+│   ├── Day1MiniProject
+│   │   ├── DailyChallenge
+│   │   │   ├── CurrencyConverter
+│   │   │   │   ├── config.example.js
+│   │   │   │   ├── index.html
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── Pokedex
+│   │   │   │   ├── index.html
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── StarWarsWebApp
+│   │   │   ├── index.html
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day2IntroductionToTypeScriptAndKeyConcepts
+│   │   ├── DailyChallenge
+│   │   │   ├── UnionTypeValidator
+│   │   │   │   ├── src
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── .gitignore
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── tsconfig.json
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   ├── ExercisesXP_Basics.ts
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day3AdvancedTypeScriptConceptsAndApplications
+│   │   ├── DailyChallenge
+│   │   │   ├── LibrarySystem.ts
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   ├── ExercisesXP_OOP.ts
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day4AdvancedTypeScriptConceptsAndApplications
+│   │   ├── DailyChallenge
+│   │   │   ├── .gitignore
+│   │   │   ├── README.md
+│   │   │   └── TypeGuardUnion.ts
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   ├── .gitignore
+│   │   │   │   ├── ExercisesXP.ts
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   ├── .gitignore
+│   │   │   │   ├── ExercisesXPGold.ts
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   └── README.md
+├── Week6DatabasesAndNodejs
+│   ├── Day1IntroductionToDatabases
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   ├── .gitignore
+│   │   │   │   ├── items_customers.sql
+│   │   │   │   ├── README.md
+│   │   │   │   └── sample_outputs.txt
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   ├── exercisesxpgold.md
+│   │   │   │   ├── exercisesxpgold.sql
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPPlus
+│   │   │   │   ├── .gitignore
+│   │   │   │   ├── exercisesxpplus.sql
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day2DatabaseConcepts1
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   ├── README.md
+│   │   │   │   └── xp_sql_answers.sql
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day3DatabaseConcepts2
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   ├── README.md
+│   │   │   │   └── xp_dvdrental_relationships.sql
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   ├── README.md
+│   │   │   │   └── xp_gold_dvdrental.sql
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day4NodejsIntroduction
+│   │   ├── DailyChallenge
+│   │   │   ├── NodejsAppAndNPM
+│   │   │   │   ├── files
+│   │   │   │   │   ├── file-data.txt
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── task-1
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── task-2
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── task-3
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── .gitignore
+│   │   │   │   ├── challenge.js
+│   │   │   │   ├── colorful-message.js
+│   │   │   │   ├── greeting.js
+│   │   │   │   ├── package.json
+│   │   │   │   ├── read-file.js
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   ├── exercise-1-commonjs-products
+│   │   │   │   │   ├── package.json
+│   │   │   │   │   ├── products.js
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── shop.js
+│   │   │   │   ├── exercise-2-esm-average-age
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   ├── data.js
+│   │   │   │   │   ├── package.json
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── exercise-3-file-manager-commonjs
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   ├── Bye World.txt
+│   │   │   │   │   ├── fileManager.js
+│   │   │   │   │   ├── Hello World.txt
+│   │   │   │   │   ├── package.json
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── exercise-4-esm-todo
+│   │   │   │   │   ├── todoApp
+│   │   │   │   │   │   ├── app.js
+│   │   │   │   │   │   ├── package.json
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── todo.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── exercise-5-math-app
+│   │   │   │   │   ├── math-app
+│   │   │   │   │   │   ├── app.js
+│   │   │   │   │   │   ├── math.js
+│   │   │   │   │   │   ├── package.json
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── exercise-6-npm-beginner-chalk
+│   │   │   │   │   ├── npm-beginner
+│   │   │   │   │   │   ├── app.js
+│   │   │   │   │   │   ├── package.json
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── exercise-7-file-explorer
+│   │   │   │   │   ├── file-explorer
+│   │   │   │   │   │   ├── copy-file.js
+│   │   │   │   │   │   ├── package.json
+│   │   │   │   │   │   ├── read-directory.js
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── source.txt
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── .gitignore
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   └── README.md
+├── Week7NodejsAndReact
+│   └── README.md
+├── Week8React
+│   └── README.md
+├── Week9Redux
+│   └── README.md
+├── .editorconfig
+├── .env.example
+├── .eslintignore
+├── .eslintrc.cjs
+├── .gitattributes
+├── .gitignore
+├── .prettierignore
+├── .prettierrc.json
+├── AGENTS.md
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── FINAL_README_INSTALL_REPORT.md
+├── LICENSE
+├── NOVA_AUDIT.bat
+├── NOVA_ROLLBACK.bat
+├── NOVA_UPDATE.bat
+├── package-lock.json
+├── package.json
+├── pyproject.nova.suggested.toml
+├── pyproject.toml
+├── README.md
+└── SECURITY.md

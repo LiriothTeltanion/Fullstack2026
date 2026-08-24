@@ -1,4 +1,4 @@
-# Week4 Adv Asynchronous Java Script
+# ⚡ Week 4 — Advanced and Asynchronous JavaScript
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">

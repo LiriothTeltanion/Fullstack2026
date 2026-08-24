@@ -1,4 +1,4 @@
-# Week5 Mini Project And Type Script
+# 🔷 Week 5 — Mini-projects and TypeScript
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">
