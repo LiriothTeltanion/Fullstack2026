@@ -45,6 +45,14 @@ The machine-readable course map is `.learning/course-map.yml`. Recovery evidence
   authoritative; use explicit `Asia/Jerusalem` timestamps in time-sensitive
   audit and handoff records, not in ordinary inline comments.
 
-## Current dated boundary
+## Current verified boundary
 
-As of the staged Wave 1 working state on 2026-08-24, the Week 4/5 case-conflicting trees are consolidated, active exact-case links and canonical catalogs pass structural validation, and all unique files are accounted for. Root static/anchor tests remain useful but incomplete; semantic TypeScript, SQL, lint, dependency advisories, browser behavior, and broad README truth/visual work retain documented blockers or later-wave scope. Always verify this boundary again; it is not a permanent claim or evidence of learning mastery.
+As of 2026-08-24, pull request `#52` merged the reviewed twelve-week
+course-observatory tree into `main` without a merge-time content change.
+Pull-request CI and the post-merge `main` NOVA Quality Gate passed, the public
+GitHub README was verified on desktop and mobile, and `npm audit` reported zero
+known vulnerabilities. Weeks 7–12 remain source-boundary scaffolds. The 65
+inherited ESLint findings, deprecated ESLint 8 toolchain, and broader semantic
+TypeScript, SQL, browser, accessibility, and exercise-level verification remain
+separate chronological work. Reverify all changing facts before relying on
+them; none establishes course completion or learning mastery.

@@ -70,8 +70,8 @@ does not reinterpret early work as production-ready code.
 - The public GitHub README was inspected on desktop and at a 430-pixel mobile
   viewport; all three primary SVGs loaded from `main`, and the quality badge
   reported `passing`.
-- The annotated `v1.2.0` tag and GitHub Release are published only after the
-  release-finalization commit passes the same `main` quality gate.
+- Release gate: publish the annotated `v1.2.0` tag and GitHub Release only
+  after the release-finalization commit passes the same `main` quality gate.
 
 ### Known limitations
 
