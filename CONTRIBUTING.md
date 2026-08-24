@@ -1,6 +1,7 @@
 # Contributing to Fullstack2026
 
-> Workflow verified: 2026-08-24T11:44:32+03:00 (`Asia/Jerusalem`).
+> Workflow and remote governance verified: 2026-08-24T21:28:26+03:00
+> (`Asia/Jerusalem`).
 
 This repository preserves Kevin Cusnir's course progression while building
 truthful, reproducible portfolio evidence. Use **Kevin Cusnir** as the
@@ -27,21 +28,53 @@ The expected remote is
 `https://github.com/LiriothTeltanion/Fullstack2026.git`. Similar adjacent
 folders are placeholders and must not receive repository work.
 
+## Protected `main` branch
+
+The active
+[`Protect main · PR + NOVA CI`](https://github.com/LiriothTeltanion/Fullstack2026/rules/21315698)
+ruleset makes pull requests the normal path into `main`.
+
+- Every change to `main` must arrive through a pull request.
+- `Syntax, security, docs and tests` must pass from GitHub Actions.
+- Review conversations must be resolved before merging.
+- Force pushes and deletion of `main` are blocked.
+- Required approvals are intentionally `0`: this is currently a
+  solo-maintainer repository, and a pull-request author cannot approve their
+  own work.
+- The administrator recovery path can bypass rules only from a pull request.
+  It exists for a broken required workflow, not for routine merging.
+- G1 does not require the branch to be up to date before merging. This avoids
+  unnecessary repeat CI runs while every proposed commit still has to pass the
+  required check.
+
+The required job name is a governance contract. If the workflow job is renamed,
+update the ruleset in the same controlled change or pull requests will remain
+blocked.
+
 ## Friction-free GitHub Desktop Beta flow
 
 1. Select `Fullstack2026` and confirm the exact underscore path above.
-2. Confirm the intended branch before selecting files.
-3. Select only the files or lines that form one cohesive change.
-4. Click **Generate commit message with Copilot** when available. Repository
+2. Fetch origin, start from current `main`, and create one focused topic branch,
+   such as `learning/week1-day1-checkpoint` or `chore/governance-follow-up`.
+3. Confirm the topic branch before selecting files. Do not commit directly on
+   `main`.
+4. Select only the files or lines that form one cohesive change.
+5. Click **Generate commit message with Copilot** when available. Repository
    instructions in `.github/copilot-instructions.md` shape both fields.
-5. If the selection changes, regenerate the message. Copilot does not update an
+6. If the selection changes, regenerate the message. Copilot does not update an
    existing suggestion automatically.
-6. Review every claim, especially commands and results. Replace unsupported
+7. Review every claim, especially commands and results. Replace unsupported
    claims with `NOT RUN`, `BLOCKED`, or `UNVERIFIED`.
-7. Commit locally. Review the commit in **History** before publishing it.
-8. Use **Publish branch** only for a branch with no upstream; use **Push
-   origin** only after an upstream exists. Automated agents require Kevin's
-   explicit approval before either remote action.
+8. Commit locally and review the commit in **History**.
+9. Use **Publish branch** only when the topic branch has no upstream; otherwise
+   use **Push origin**. Automated agents require Kevin's explicit approval for
+   either remote action.
+10. Open a pull request, complete the evidence template, and wait for
+    `Syntax, security, docs and tests` to pass.
+11. Resolve review conversations and merge on GitHub. Use the documented
+    pull-request-only bypass only to recover from a broken required workflow.
+12. Return to `main`, fetch/pull the merge, verify the post-merge workflow, and
+    create a fresh branch for the next batch.
 
 GitHub Desktop Copilot commit generation requires eligible Copilot access. If
 the button is unavailable, copy the format below into the Summary and
@@ -57,18 +90,18 @@ type(scope): emoji imperative summary
 
 Prefer 50 characters or fewer and never exceed 72. Use one purposeful emoji.
 
-| Type | Purpose | Suggested emoji |
-|---|---|---|
-| `feat` | New assignment-aligned capability | ✨ |
-| `fix` | Behavioral or correctness repair | 🐛 |
-| `docs` | Documentation or evidence | 📚 |
-| `test` | Tests and verification | 🧪 |
-| `refactor` | Behavior-preserving structure change | ♻️ |
-| `perf` | Measured performance improvement | ⚡ |
-| `build` | Dependencies or build tooling | 🏗️ |
-| `ci` | GitHub Actions or automation | 🤖 |
-| `chore` | Repository maintenance | 🧹 |
-| `revert` | Explicit rollback | ↩️ |
+| Type       | Purpose                              | Suggested emoji |
+| ---------- | ------------------------------------ | --------------- |
+| `feat`     | New assignment-aligned capability    | ✨              |
+| `fix`      | Behavioral or correctness repair     | 🐛              |
+| `docs`     | Documentation or evidence            | 📚              |
+| `test`     | Tests and verification               | 🧪              |
+| `refactor` | Behavior-preserving structure change | ♻️              |
+| `perf`     | Measured performance improvement     | ⚡              |
+| `build`    | Dependencies or build tooling        | 🏗️              |
+| `ci`       | GitHub Actions or automation         | 🤖              |
+| `chore`    | Repository maintenance               | 🧹              |
+| `revert`   | Explicit rollback                    | ↩️              |
 
 Example:
 
@@ -136,10 +169,11 @@ recorded; it does not prove course mastery, production readiness, or impact.
 
 ## Remote safety
 
-Review the complete diff before Commit, Publish branch, Push origin, or opening
-a pull request. Automated agents must not commit, push, merge, publish, deploy,
-close a pull request, delete a branch, or rewrite history without Kevin's
-explicit authorization.
+Review the complete diff before Commit, Publish branch, Push origin, opening a
+pull request, or merging. Direct pushes to `main` are not the normal workflow.
+Automated agents must not commit, push, merge, use the administrator bypass,
+publish, deploy, close a pull request, delete a branch, or rewrite history
+without Kevin's explicit authorization.
 
 Official references:
 
