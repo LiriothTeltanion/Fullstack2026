@@ -1,4 +1,4 @@
-# Remote Learning JSAnd DOM
+# 🛰️ Remote Learning — JavaScript and the DOM
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">

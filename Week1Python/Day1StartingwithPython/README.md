@@ -1,4 +1,4 @@
-# 📅 Day 1 - Starting with Python
+# 🐣 Day 1 — Starting with Python
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">

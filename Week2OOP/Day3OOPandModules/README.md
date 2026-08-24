@@ -1,4 +1,4 @@
-# 📦 Day 3 - OOP and Modules
+# 📦 Day 3 — OOP and Modules
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">

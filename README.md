@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/readme/ultimate/nova-root-banner.svg" width="100%" alt="Animated Fullstack2026 portfolio banner">
+<img src="./assets/readme/ultimate/nova-root-banner.svg" width="100%" alt="Fullstack2026 twelve-week course observatory: Weeks 1–6 contain source files; Weeks 7–12 are scaffolds awaiting official coursework">
 
 <br>
 
@@ -9,15 +9,15 @@
 [![Last commit](https://img.shields.io/github/last-commit/LiriothTeltanion/Fullstack2026?style=for-the-badge&logo=git)](https://github.com/LiriothTeltanion/Fullstack2026/commits/main)
 [![Repo size](https://img.shields.io/github/repo-size/LiriothTeltanion/Fullstack2026?style=for-the-badge&logo=github)](https://github.com/LiriothTeltanion/Fullstack2026)
 [![License](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)](LICENSE)
-[![Documentation](https://img.shields.io/badge/README%20coverage-100%25-8b5cf6?style=for-the-badge)](reports/nova/nova_repo_dashboard.html)
+[![Evidence](https://img.shields.io/badge/Evidence-explicit%20states-8b5cf6?style=for-the-badge)](.learning/PROGRESS.md)
 [![Tests](https://img.shields.io/badge/Test%20infrastructure-NOVA-06b6d4?style=for-the-badge)](tests/)
 [![Security](https://img.shields.io/badge/Security-policy-f59e0b?style=for-the-badge)](SECURITY.md)
 
-### A six-week full-stack learning archive transformed into a documented, tested, automated portfolio foundation
+### A twelve-week full-stack course repository with source-backed work, evidence-led scaffolds, and an honest portfolio runway
 
-**Python · Object-Oriented Programming · JavaScript · DOM · HTTP · Async/Await · TypeScript · SQL · Node.js · Testing · CI**
+**Python · OOP · JavaScript · DOM · Async/Await · TypeScript · SQL · Node.js · React · Redux · Authentication · Final Project**
 
-<sub>Repository presentation version <strong>1.1.1</strong> · root README protected as the public GitHub landing page</sub>
+<sub>Repository presentation version <strong>1.2.0</strong> · root README protected as the public GitHub landing page</sub>
 
 </div>
 
@@ -26,9 +26,9 @@
 ## 🧭 Explore the repository
 
 [Overview](#-repository-overview) ·
-[Health](#-live-repository-health) ·
+[Evidence](#-current-course-evidence) ·
 [Transformation](#-from-learning-archive-to-engineering-portfolio) ·
-[Six weeks](#-the-six-week-learning-journey) ·
+[Twelve weeks](#-the-twelve-week-learning-journey) ·
 [Projects](#-portfolio-project-highlights) ·
 [Stack](#-technology-constellation) ·
 [Run](#-quick-start) ·
@@ -41,9 +41,9 @@
 
 ## ✨ Repository overview
 
-`Fullstack2026` documents my progression from programming fundamentals to practical full-stack engineering.
+`Fullstack2026` documents my twelve-week progression from programming fundamentals to practical full-stack engineering.
 
-It contains real exercises, XP extensions, daily challenges, timed challenges, browser applications, object-oriented models, API integrations, TypeScript exercises, PostgreSQL work, Node.js modules, automated tests, repository tooling, continuous integration, and generated documentation.
+Weeks 1–6 contain recovered exercises, XP extensions, daily challenges, timed challenges, browser applications, object-oriented models, API integrations, TypeScript exercises, PostgreSQL work, and Node.js modules. Weeks 7–12 are intentionally limited to source-boundary READMEs until their exact official assignments are reviewed.
 
 This repository is designed to show more than completed assignments. It demonstrates how I:
 
@@ -56,25 +56,27 @@ This repository is designed to show more than completed assignments. It demonstr
 - use GitHub Actions and repeatable quality commands;
 - turn a learning archive into an interview-ready engineering portfolio.
 
-> **Honest scope:** this is a broad curriculum repository, not yet one unified production application. The next major milestone is an integrated full-stack capstone built from the strongest ideas developed here.
+> **Honest scope:** a tracked Week root is not proof of completed coursework or learning. Repository evidence, Octopus progress, and demonstrated understanding remain separate. The next major product milestone is the official final-project brief—not an invented capstone.
 
 ---
 
-## 🩺 Audited repository health
+## 🧭 Current course evidence
+
+| Course segment | Public repository evidence | Learning evidence | Current boundary |
+|---|---|---|---|
+| Weeks 1–6 | Source files and local assignment documentation are present. | `unknown` except for separately recorded bounded exercises. | Runtime, browser, SQL, dependency, and accessibility coverage remains partial. |
+| Weeks 7–10 | Canonical root and source-boundary README are present. | `unknown` | Official days, exercises, challenges, and submission rules are pending. |
+| Weeks 11–12 | Canonical final-project root and source-boundary README are present. | `unknown` | Official brief, rubric, milestones, deployment, and presentation requirements are pending. |
+
+The machine-readable source of truth is [`.learning/course-map.yml`](.learning/course-map.yml). Human-facing icons and readable labels are defined separately in [`.learning/display-map.json`](.learning/display-map.json), so the stable Git paths never need emoji. The sanitized academy review is [`reports/resume/ACADEMY_ALIGNMENT_2026-08-24.md`](reports/resume/ACADEMY_ALIGNMENT_2026-08-24.md).
+
+### Historical audited repository baseline — 2026-07-15 (Weeks 1–6 only)
 
 <!-- NOVA:ROOT-LIVE-SNAPSHOT:START -->
-<div align="center">
-
-<img src="./assets/readme/ultimate/nova-readiness-live.svg" width="100%" alt="Animated NOVA repository readiness center">
-
-</div>
-
-### Audited repository baseline — 2026-07-15
-
 | Metric | Audited baseline |
 |---|---:|
 | Overall readiness | **92.0%** |
-| Curriculum weeks | **6** |
+| Source-backed Week roots in that snapshot | **6** |
 | Files scanned | **1,012** |
 | Repository size | **3.4 MB** |
 | Text lines | **60,948** |
@@ -103,12 +105,12 @@ This repository is designed to show more than completed assignments. It demonstr
 
 <table>
 <tr>
-<td width="50%" valign="top"><h4>🟢 Verified strengths</h4><ul><li>✅ Six curriculum weeks are present without counting ZIP archives as modules.</li><li>✅ README coverage is 100.0% across curriculum directories.</li><li>✅ All Python files pass static syntax parsing.</li><li>✅ GitHub Actions quality workflow is installed with read-only repository access.</li><li>✅ 14 automated test file(s) are discoverable.</li><li>✅ Redundant Week ZIP archives are absent from the repository root.</li></ul></td>
+<td width="50%" valign="top"><h4>🟢 Verified strengths</h4><ul><li>✅ Six source-backed Week roots were present without counting ZIP archives as modules.</li><li>✅ README coverage was 100.0% across the then-audited curriculum directories.</li><li>✅ All Python files passed static syntax parsing.</li><li>✅ GitHub Actions quality workflow was installed with read-only repository access.</li><li>✅ 14 automated test file(s) were discoverable.</li><li>✅ Redundant Week ZIP archives were absent from the repository root.</li></ul></td>
 <td width="50%" valign="top"><h4>🛰️ Release 1.1 validation context</h4><ul><li>✅ <code>package-lock.json</code> is present for reproducible <code>npm ci</code> installs.</li><li>✅ The current no-write quality gate passes with 0 errors and 0 warnings.</li><li>ℹ️ The 2 errors and 68 warnings in the table are preserved historical evidence from the dated audit, not claims about the current validation run.</li></ul></td>
 </tr>
 </table>
 
-> The **92.0%** readiness score and **14 automated test files** are preserved from the dated audit. The score is a transparent repository-maintainability heuristic—not a bootcamp grade—and this release does not retroactively rewrite that evidence or claim that every interactive, SQL, browser, or external-API exercise was manually executed.
+> The **92.0%** readiness score and **14 automated test files** are preserved from the dated six-root audit. They are historical repository-maintainability evidence—not current course progress, a bootcamp grade, or proof that every interactive, SQL, browser, or external-API exercise was executed.
 
 <sub>Snapshot generated by NOVA Ultimate v2.0.0 on 2026-07-15T06:23:15+03:00.</sub>
 <!-- NOVA:ROOT-LIVE-SNAPSHOT:END -->
@@ -134,7 +136,7 @@ The NOVA stabilization pass preserved the original exercises while improving the
 
 ### What the upgrade added
 
-- animated README coverage throughout the curriculum;
+- structured README coverage throughout the recovered curriculum;
 - a central offline health dashboard;
 - Python and Node test infrastructure;
 - tests for Tic-Tac-Toe, Hangman, Circle, Timer, math helpers, and repository contracts;
@@ -148,22 +150,33 @@ The NOVA stabilization pass preserved the original exercises while improving the
 
 ---
 
-## 🪐 The six-week learning journey
+## 🪐 The twelve-week learning journey
 
 <div align="center">
 
-<img src="./assets/readme/ultimate/nova-six-weeks-journey.svg" width="100%" alt="Animated six-week Fullstack2026 learning journey">
+<img src="./assets/readme/ultimate/nova-twelve-week-journey.svg" width="100%" alt="Static evidence map for Weeks 1–12, distinguishing source-present Weeks 1–6 from scaffold-only Weeks 7–12">
 
 </div>
 
-| Week | Primary focus | Files | Source | READMEs | Lines |
-|---|---|---:|---:|---:|---:|
-| [Week 1 — Python](Week1Python/) | Syntax, collections, control flow, functions, algorithms, CLI projects | 128 | 35 | 47 | 18,655 |
-| [Week 2 — OOP](Week2OOP/) | Classes, inheritance, modules, files, JSON, APIs, reusable models | 126 | 35 | 44 | 12,459 |
-| [Week 3 — JavaScript & DOM](Week3JavaScriptandDOM/) | JavaScript fundamentals, events, DOM interfaces, browser mini-projects | 200 | 67 | 68 | 9,926 |
-| [Week 4 — Advanced & Async JavaScript](Week4AdvAsynchronousJavaScript/) | Array/object methods, forms, HTTP, promises, fetch, async/await | 94 | 29 | 36 | 4,772 |
-| [Week 5 — Mini Projects & TypeScript](Week5MiniProjectAndTypeScript/) | API projects, TypeScript types, interfaces, classes, unions, guards | 60 | 11 | 22 | 5,058 |
-| [Week 6 — Databases & Node.js](Week6DatabasesAndNodejs/) | PostgreSQL, relational queries, Node modules, npm, filesystem work | 95 | 26 | 33 | 3,757 |
+| Week | Course title | Repository evidence | Learning state |
+|---|---|---|---|
+| [🐍 Week 1](Week1Python/) | Python Fundamentals | Source present; selected bounded tests exist. | `unknown` |
+| [🏗️ Week 2](Week2OOP/) | Object-Oriented Programming | Source present; selected bounded tests exist. | `unknown` |
+| [🌐 Week 3](Week3JavaScriptandDOM/) | JavaScript & DOM | Source present; browser and accessibility execution is pending. | `unknown` |
+| [⚡ Week 4](Week4AdvAsynchronousJavaScript/) | Advanced & Asynchronous JavaScript | Source present; async/browser behavior remains partially unverified. | `unknown` |
+| [🔷 Week 5](Week5MiniProjectAndTypeScript/) | Mini-project & TypeScript | Source present; live API and strict TypeScript gaps remain. | `unknown` |
+| [🗄️ Week 6](Week6DatabasesAndNodejs/) | Databases & Node.js | Source present; SQL execution and broader Node verification remain. | `unknown` |
+| [🔗 Week 7](Week7NodejsAndReact/) | Node.js & React | Scaffold only; official content pending. | `unknown` |
+| [⚛️ Week 8](Week8React/) | React | Scaffold only; official content pending. | `unknown` |
+| [🔁 Week 9](Week9Redux/) | Redux | Scaffold only; official content pending. | `unknown` |
+| [🛡️ Week 10](Week10AdvancedTypeScriptAndAuthentication/) | Advanced TypeScript and Authentication | Scaffold only; official content pending. | `unknown` |
+| [🛠️ Week 11](Week11FinalProject/) | Final Project | Scaffold only; official brief pending. | `unknown` |
+| [🚀 Week 12](Week12FinalProject/) | Final Project | Scaffold only; official continuation and delivery requirements pending. | `unknown` |
+
+> **Display-title contract:** icons are navigation aids, not folder-name characters.
+> The readable title map covers every top-level repository area, all twelve week
+> roots, and every current Day/Remote root. Physical paths remain portable ASCII
+> so commands, links, imports, Windows tools, CI, and Octopus submissions keep working.
 
 <details>
 <summary><strong>🐍 Week 1 — Python foundations</strong></summary>
@@ -267,6 +280,22 @@ The NOVA stabilization pass preserved the original exercises while improving the
 
 </details>
 
+<details>
+<summary><strong>🛰️ Weeks 7–12 — source-boundary scaffolds</strong></summary>
+
+The remaining week roots are intentionally ready for intake, not populated with invented assignments:
+
+- [🔗 Week 7 — Node.js and React](Week7NodejsAndReact/)
+- [⚛️ Week 8 — React](Week8React/)
+- [🔁 Week 9 — Redux](Week9Redux/)
+- [🛡️ Week 10 — Advanced TypeScript and Authentication](Week10AdvancedTypeScriptAndAuthentication/)
+- [🛠️ Week 11 — Final Project](Week11FinalProject/)
+- [🚀 Week 12 — Final Project](Week12FinalProject/)
+
+Each README records the same safe workflow: retrieve the exact official source, create only proven paths, preserve Kevin's original work, add bounded verification, and keep repository evidence separate from learning evidence.
+
+</details>
+
 ---
 
 ## 🌟 Portfolio project highlights
@@ -292,11 +321,13 @@ The NOVA stabilization pass preserved the original exercises while improving the
 
 ## 🧬 Technology constellation
 
-<div align="center">
+<p align="center">
+  <img src="./assets/readme/ultimate/nova-stack-galaxy.svg" width="100%" alt="Static source-backed technology constellation connecting Python, OOP, HTML and CSS, JavaScript, TypeScript, SQL, Node.js, and quality engineering without claiming learning mastery">
+</p>
 
-<img src="./assets/readme/ultimate/nova-stack-galaxy.svg" width="100%" alt="Animated technology constellation">
-
-</div>
+> This static map restores the strongest editorial visual from the earlier
+> landing page while making its meaning explicit: the nodes are backed by files
+> in this repository; they are not scores, certificates, or mastery claims.
 
 | Layer | Technologies and concepts |
 |---|---|
@@ -307,6 +338,7 @@ The NOVA stabilization pass preserved the original exercises while improving the
 | Type safety | TypeScript, interfaces, unions, classes, access modifiers, type guards |
 | Data | SQL, PostgreSQL, joins, constraints, relationships, aggregation |
 | Server-side JavaScript | Node.js, CommonJS, ES modules, npm, filesystem utilities |
+| Source-confirmed future lanes | React, Redux, advanced TypeScript, authentication, final project; official assignment details pending |
 | Quality | Python unittest, Node test runner, static syntax checks, repository contracts |
 | Tooling | Git, GitHub, GitHub Desktop, ESLint, Prettier, NOVA automation |
 | Delivery foundation | GitHub Actions, Dependabot, repeatable audits, generated reports |
@@ -321,10 +353,37 @@ The NOVA stabilization pass preserved the original exercises while improving the
 New-Item -ItemType Directory -Force C:\Dev | Out-Null
 git clone https://github.com/LiriothTeltanion/Fullstack2026.git C:\Dev\Fullstack2026
 Set-Location C:\Dev\Fullstack2026
-npm install
+npm ci
 ```
 
-The first successful `npm install` creates the root `package-lock.json`. Commit that lockfile so CI and future clones can use reproducible dependency versions.
+The committed root `package-lock.json` makes `npm ci` reproducible for CI and
+future clones. Use `npm install` only when you intentionally update dependencies
+and are prepared to review the resulting lockfile diff.
+
+### Capture the next exercise in your own words
+
+```powershell
+# Fastest path for one exercise.
+npm run intake -- add
+
+# Read-only: show the next public-safe queue item.
+npm run intake -- next
+```
+
+For many current or future exercises, create the ignored local batch template,
+edit it using short summaries written independently by Kevin, preview the exact
+public records, and apply only after every item validates:
+
+```powershell
+npm run intake -- template
+npm run intake -- import .private/intake/kevin-batch.json
+npm run intake -- import .private/intake/kevin-batch.json --apply
+```
+
+The tool never opens Octopus, copies prompts, exposes LMS progress, creates
+exercise folders, or submits work. See the
+[source-safe intake quickstart](.learning/intake/README.md) and the broader
+[Octopus boundary](.learning/OCTOPUS_INTAKE.md).
 
 ### Run the repository quality workflow
 
@@ -379,6 +438,11 @@ psql -d dvdrental -f .\Week6DatabasesAndNodejs\Day3DatabaseConcepts2\Exercises\E
 | `npm test` | Run both JavaScript and Python test suites |
 | `npm run quality` | Execute the strict NOVA quality gate |
 | `npm run audit` | Regenerate repository health reports |
+| `npm run intake -- add` | Preview and add one Kevin-authored, public-safe exercise summary |
+| `npm run intake -- next` | Print the next queued summary without changing state |
+| `npm run intake:check` | Validate the tracked own-words exercise queue |
+| `npm run verify:titles` | Validate icon-led display titles while preserving stable physical paths |
+| `npm run verify:structure` | Validate canonical paths, catalogs, visuals, privacy, and display titles |
 | `npm run readme:generate` | Regenerate managed folder README sections |
 | `npm run dev` | Serve the repository locally on port 8000 |
 | `npm run build` | Treat the strict quality gate as the current repository build |
@@ -408,6 +472,21 @@ git diff
 
 ## 📁 Repository organization
 
+### Human-readable project areas
+
+| Display title | Stable physical path |
+|---|---|
+| [🤖 AI Collaboration Context](.ai/) | `.ai/` |
+| [⚙️ GitHub Automation and Templates](.github/) | `.github/` |
+| [🎓 Learning Evidence and Course State](.learning/) | `.learning/` |
+| [🎨 Visual Assets](assets/) | `assets/` |
+| [📊 Audits and Evidence Reports](reports/) | `reports/` |
+| [🧪 Automated Tests](tests/) | `tests/` |
+| [🛠️ Repository Tools](tools/) | `tools/` |
+
+These icons are display labels only. The exact ASCII paths below remain the
+portable source of truth for Windows, Git, commands, links, and CI.
+
 ```text
 Fullstack2026/
 ├─ .github/
@@ -420,8 +499,17 @@ Fullstack2026/
 ├─ Week4AdvAsynchronousJavaScript/
 ├─ Week5MiniProjectAndTypeScript/
 ├─ Week6DatabasesAndNodejs/
+├─ Week7NodejsAndReact/
+├─ Week8React/
+├─ Week9Redux/
+├─ Week10AdvancedTypeScriptAndAuthentication/
+├─ Week11FinalProject/
+├─ Week12FinalProject/
+├─ .ai/
+├─ .learning/
 ├─ assets/readme/
 ├─ reports/nova/
+├─ reports/resume/
 ├─ tests/python/
 ├─ tests/js/
 ├─ tools/
@@ -437,6 +525,7 @@ Fullstack2026/
 
 ### Conventions
 
+- Display titles may use one topic-led icon; physical paths stay ASCII/PascalCase.
 - Week and Day folders use descriptive PascalCase names.
 - Exercise tiers remain explicit: XP, XP Plus, XP Gold, and XP Ninja.
 - Python source files prefer `snake_case`.
@@ -448,44 +537,25 @@ Fullstack2026/
 
 ## 🛰️ Next horizon
 
-<div align="center">
+| Phase | Status | Highest-value evidence still required |
+|---|---|---|
+| 1 — Truth baseline | ✅ Complete | Preserve the dated baseline; do not convert it into course progress. |
+| 2 — Structural foundation | ✅ Complete | Keep catalogs and exact-case paths deterministic as new work arrives. |
+| 3 — Academy alignment and 12-week presentation | ✅ Implemented and locally validated | Create the authorized local commit; publishing remains a separate decision. |
+| 4 — Weeks 1–6 chronological verification | 🔄 Next | Recheck each day against Kevin's own Octopus understanding and existing code; add bounded execution, accessibility, and explanation evidence. |
+| 5 — Weeks 7–10 official coursework | 🎯 Remaining | Retrieve each exact assignment, implement it, verify it, explain it, and submit only through the authorized course workflow. |
+| 6 — Weeks 11–12 final project | 🎯 Remaining | Build from the official brief with accessibility, tests, security, documentation, deployment evidence, and a presentation story. |
+| 7 — Portfolio release | ⏳ Remaining | Select the strongest work, add real visuals/demos and limitations, then publish only with explicit authorization. |
 
-<img src="./assets/readme/ultimate/nova-roadmap-horizon.svg" width="100%" alt="Animated Fullstack2026 roadmap">
-
-</div>
-
-### Milestone 1 — Stabilized learning archive ✅
-
-Canonical folders, syntax repairs, archive removal, 100% curriculum README coverage, security templates, reports, and rollback tooling.
-
-### Milestone 2 — Quality and automation foundation ✅
-
-Root quality scripts, representative Python and Node tests, GitHub Actions, Dependabot, and an animated readiness dashboard.
-
-### Milestone 3 — Portfolio polish 🔄
-
-- keep the committed package lockfile synchronized and verify it with `npm ci`;
-- reduce remaining quality warnings;
-- add screenshots or short recordings to the strongest browser projects;
-- add accessibility notes and manual test checklists;
-- deepen behavioral tests beyond the first representative anchors;
-- publish selected projects through GitHub Pages or another deployment platform.
-
-### Milestone 4 — Nova Learning Dashboard 🎯
-
-```mermaid
-flowchart LR
-    U[User] --> F[React + TypeScript]
-    F --> A[REST API]
-    A --> S[Service Layer]
-    S --> D[(SQLite / PostgreSQL)]
-    A --> T[Automated API Tests]
-    F --> V[Component Tests]
-    G[GitHub Actions] --> Q[Quality Gates]
-    Q --> B[Build and Deployment]
-```
-
-Planned experience: authentication, persistent progress, searchable exercise catalog, notes, source links, live demos, skills visualization, responsive design, tests, CI, and public deployment.
+A bounded 2026-08-24 Octopus navigation snapshot is frozen only in Git-ignored
+local manifests. Further authenticated automation and copying of course material
+into external AI are paused under the current published Octopus policy unless
+Developers Institute grants written permission. The immediate learning action is
+to use the own-words intake queue for the first Week 1 / Day 1 checkpoint, compare
+it with Kevin's existing source, and then advance chronologically through Weeks
+1–6 before starting Week 7. Written policy clarification remains important, and
+quizzes, submissions, uploads, enrollments, messages, and profile saves remain
+separate approval-gated actions.
 
 ---
 
@@ -497,6 +567,12 @@ Planned experience: authentication, persistent progress, searchable exercise cat
 | [Repository audit](reports/nova/nova_repo_audit.md) | Scores, module metrics, strengths, and remaining risks |
 | [Quality report](reports/nova/quality_report.md) | Current quality-gate errors and warnings |
 | [Update report](reports/nova/NOVA_UPDATE_REPORT.md) | Full manifest of the automated migration |
+| [Academy alignment](reports/resume/ACADEMY_ALIGNMENT_2026-08-24.md) | Sanitized Developers Institute, Octopus, twelve-week, privacy, and phase boundary |
+| [Course map](.learning/course-map.yml) | Machine-readable repository and learning evidence states |
+| [Folder display map](.learning/display-map.json) | Icon-led human labels mapped to stable ASCII paths |
+| [Exercise intake quickstart](.learning/intake/README.md) | One-command own-words queue for current and future exercises |
+| [Octopus intake workflow](.learning/OCTOPUS_INTAKE.md) | Credential-safe private inventory, assignment, quiz, and profile boundaries |
+| [Visual manifest](assets/readme/visual_manifest.json) | Local SVG provenance, hashes, alt text, motion, and privacy review |
 | [Changelog](CHANGELOG.md) | Versioned repository-presentation and quality-maintenance history |
 | [Tests](tests/) | Deterministic representative project and repository tests |
 | [Tools](tools/) | Audit, quality, test, and documentation automation |
@@ -522,11 +598,11 @@ The reports intentionally show both green results and remaining work. The goal i
 <details>
 <summary><strong>🇻🇪 Resumen en español</strong></summary>
 
-`Fullstack2026` es mi archivo principal de aprendizaje práctico y la base técnica de mi portafolio como desarrollador full-stack.
+`Fullstack2026` es mi repositorio principal de aprendizaje práctico y la base técnica de mi portafolio como desarrollador full-stack.
 
-Incluye seis semanas de trabajo progresivo con Python, programación orientada a objetos, JavaScript, DOM, asincronía, TypeScript, SQL y Node.js. También incorpora documentación completa, pruebas representativas, auditorías, automatización, CI y un dashboard visual de calidad.
+Sigue un esquema de doce semanas. Las semanas 1–6 contienen material y código recuperado de Python, programación orientada a objetos, JavaScript, DOM, asincronía, TypeScript, SQL y Node.js. Las semanas 7–12 son estructuras verificables a nivel de título; su contenido oficial todavía no está almacenado y no se inventa.
 
-La siguiente gran etapa es **Nova Learning Dashboard**, con React + TypeScript, backend, base de datos, autenticación, pruebas y despliegue público.
+El estado del repositorio, el progreso de la plataforma y mi comprensión son evidencias distintas. La próxima acción es revisar cronológicamente desde Week 1 / Day 1 usando mis propios resúmenes, mi código existente y evidencia reproducible; Week 7 comienza después de esa revisión.
 
 </details>
 
@@ -535,9 +611,9 @@ La siguiente gran etapa es **Nova Learning Dashboard**, con React + TypeScript, 
 
 `Fullstack2026` הוא מאגר הלמידה המעשי המרכזי שלי והבסיס הטכני לתיק העבודות שלי כמפתח Full-Stack.
 
-המאגר כולל שישה שבועות של Python, תכנות מונחה עצמים, JavaScript, DOM, TypeScript, SQL ו-Node.js, יחד עם תיעוד, בדיקות, אוטומציה ו-CI.
+המאגר עוקב אחר מתווה של שנים-עשר שבועות. שבועות 1–6 כוללים חומר וקוד משוחזר ב-Python, תכנות מונחה עצמים, JavaScript, DOM, TypeScript, SQL ו-Node.js. שבועות 7–12 הם מבני מעקב המבוססים רק על כותרות מאומתות; התוכן הרשמי עדיין לא נשמר ולא מומצא.
 
-השלב הבא הוא **Nova Learning Dashboard** עם React + TypeScript, Backend, מסד נתונים, אימות משתמשים, בדיקות ופריסה ציבורית.
+מצב המאגר, התקדמות בפלטפורמה והבנת החומר הם סוגי ראיות נפרדים. הצעד הבא הוא לבדוק באופן כרונולוגי החל מ-Week 1 / Day 1 בעזרת סיכומים במילים שלי, הקוד הקיים וראיות שניתן לשחזר; Week 7 יתחיל לאחר הבדיקה הזו.
 
 </details>
 
@@ -566,10 +642,8 @@ Distributed under the [MIT License](LICENSE).
 
 <div align="center">
 
-<img src="./assets/readme/ultimate/nova-footer-pulse.svg" width="100%" alt="Animated NOVA footer">
-
 ### Build steadily · document honestly · automate responsibly · turn learning into products
 
-**Ultimate root README · NOVA edition · repository presentation v1.1.1 · July 2026**
+**NOVA Course Observatory · repository presentation v1.2.0 · August 2026**
 
 </div>

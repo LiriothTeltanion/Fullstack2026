@@ -1,5 +1,7 @@
 # Pokédex App
 
+> Current evidence (2026-08-24): source present; browser/API behavior, accessibility, explanation, and mastery are unverified.
+
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">
 
@@ -9,7 +11,7 @@
 
 <img src="../../../../assets/readme/progress/pokedex-0fed258102.svg" width="100%" alt="Readiness status for Pokedex">
 
-**Goal:** Use TypeScript types, interfaces, classes, unions, and guards to make domain logic safer.
+**Goal:** Practice the Fetch API, async/await, DOM state, and loading/error handling with PokeAPI.
 
 </div>
 
@@ -18,7 +20,7 @@
 | Metric | Value |
 |---|---:|
 | Readiness | **80%** |
-| Files | 3 |
+| Files | 2 |
 | Source files | 1 |
 | Test files | 0 |
 | Text lines | 931 |
@@ -88,9 +90,7 @@ This application recreates the classic Pokédex experience, allowing users to br
 
 ```
 Pokedex/
-├── index.html      # HTML structure with Pokedex design
-├── styles.css      # Styles for Pokedex device and animations
-├── script.js       # Logic with async/await and API calls
+├── index.html      # HTML, CSS, and JavaScript are embedded here
 └── README.md       # This file
 ```
 
@@ -108,7 +108,7 @@ Pokedex/
   - Info display panel (tan-colored screen)
   - Green button for random Pokémon
 
-### CSS (styles.css)
+### CSS embedded in `index.html`
 
 - Authentic Pokedex design with red device body
 - Gradient purple background
@@ -121,7 +121,7 @@ Pokedex/
 - Hover and active states for buttons
 - Responsive layout for mobile devices
 
-### JavaScript (script.js)
+### JavaScript embedded in `index.html`
 
 1. **Global State Management**:
    - `currentPokemonId`: Tracks the current Pokémon for navigation

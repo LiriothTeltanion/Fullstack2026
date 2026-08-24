@@ -1,4 +1,4 @@
-# Remote Learning OOP
+# 🛰️ Remote Learning — Object-Oriented Programming
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">

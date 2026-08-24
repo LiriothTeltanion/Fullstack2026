@@ -1,4 +1,4 @@
-# Day1 Introductionto Java Script
+# 🟨 Day 1 — Introduction to JavaScript
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">

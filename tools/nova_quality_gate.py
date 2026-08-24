@@ -23,7 +23,7 @@ from typing import Iterable, Sequence
 
 VERSION = "2.0.0"
 SKIP_DIRS = {
-    ".git", ".nova", "node_modules", "__pycache__", ".pytest_cache",
+    ".git", ".nova", ".private", "node_modules", "__pycache__", ".pytest_cache",
     ".mypy_cache", ".ruff_cache", ".venv", "venv", "env", "dist",
     "build", "coverage", ".next", ".turbo", "reports",
 }

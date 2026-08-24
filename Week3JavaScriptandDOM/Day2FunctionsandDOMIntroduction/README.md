@@ -1,4 +1,4 @@
-# Day2 Functionsand DOMIntroduction
+# 🧩 Day 2 — Functions and DOM Introduction
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">

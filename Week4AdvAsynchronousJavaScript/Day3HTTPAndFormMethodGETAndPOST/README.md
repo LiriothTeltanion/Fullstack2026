@@ -1,4 +1,4 @@
-# Day3 HTTPAnd Form Method GETAnd POST
+# 🌐 Day 3 — HTTP and GET/POST Forms
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">
