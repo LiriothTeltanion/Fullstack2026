@@ -5,7 +5,7 @@ The public portfolio entry point is the root [`README.md`](../README.md).
 
 The filename is intentionally **not** `README.md`. GitHub may select
 `.github/README.md` instead of the root document on the repository page, which
-would hide the six-week learning overview, audited evidence and project links.
+would hide the twelve-week course overview, audited evidence and project links.
 
 ## 🧭 Contents
 

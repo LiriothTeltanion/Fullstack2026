@@ -61,6 +61,18 @@ does not reinterpret early work as production-ready code.
 - Desktop, 390-pixel overview, grayscale, and reduced-motion README media renders
   were inspected locally in Microsoft Edge.
 
+### Release verification
+
+- Pull request `#52` merged the reviewed candidate tree into `main` without a
+  merge-time content change.
+- Pull-request CI and the post-merge `main` NOVA Quality Gate completed
+  successfully on GitHub.
+- The public GitHub README was inspected on desktop and at a 430-pixel mobile
+  viewport; all three primary SVGs loaded from `main`, and the quality badge
+  reported `passing`.
+- Release gate: publish the annotated `v1.2.0` tag and GitHub Release only
+  after the release-finalization commit passes the same `main` quality gate.
+
 ### Known limitations
 
 - Repository-wide ESLint still reports the same 65 inherited exercise errors;
@@ -69,8 +81,6 @@ does not reinterpret early work as production-ready code.
   migration.
 - Weeks 7–12 remain truthful scaffolds, not claims that official assignments,
   submissions, execution evidence, or learning mastery are present.
-- Remote branch CI, the GitHub-rendered README, merge, tag, and GitHub Release
-  remain release gates until they are verified on GitHub.
 
 ## [1.1.1] - 2026-07-18
 
