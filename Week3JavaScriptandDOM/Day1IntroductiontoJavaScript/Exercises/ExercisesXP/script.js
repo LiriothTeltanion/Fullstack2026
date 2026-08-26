@@ -4,7 +4,7 @@ function printOut(id, lines) {
   const pre = document.getElementById(id);
   const text = Array.isArray(lines) ? lines.join("\n") : String(lines);
   pre.textContent = text;
-  (Array.isArray(lines) ? lines : [String(lines)]).forEach((x) => console.log(x));
+  (Array.isArray(lines) ? lines : [String(lines)]).forEach(x => console.log(x));
 }
 
 function clearAll() {
@@ -179,7 +179,7 @@ function ex6() {
 function ex7() {
   const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
   const code = names
-    .map((n) => n[0].toUpperCase())
+    .map(n => n[0].toUpperCase())
     .sort()
     .join("");
   printOut("out7", "Secret society: " + code);

@@ -43,24 +43,24 @@ document.addEventListener("mouseleave", () => {
 });
 
 // delegate painting events from grid container 🧭
-grid.addEventListener("mousedown", (event) => {
+grid.addEventListener("mousedown", event => {
   if (isCell(event.target)) {
     paint(event.target);
   }
 });
 
-grid.addEventListener("mouseover", (event) => {
+grid.addEventListener("mouseover", event => {
   if (drawing && isCell(event.target)) {
     paint(event.target);
   }
 });
 
 // color change 🌈
-picker.addEventListener("input", (event) => {
+picker.addEventListener("input", event => {
   color = event.target.value;
 });
 
-document.querySelectorAll(".swatch").forEach((swatch) => {
+document.querySelectorAll(".swatch").forEach(swatch => {
   swatch.onclick = () => {
     color = swatch.dataset.color;
     picker.value = color;
@@ -74,7 +74,7 @@ sizeSel.onchange = () => {
 
 // clear 🧼
 clearBtn.onclick = () => {
-  grid.querySelectorAll(".cell").forEach((cell) => {
+  grid.querySelectorAll(".cell").forEach(cell => {
     cell.style.background = "";
   });
 };

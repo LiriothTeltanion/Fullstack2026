@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Fullstack2026 twelve-week course observatory</title>
+  <desc id="desc">An accessible Blue Obsidian portfolio banner showing Weeks 1 through 6 as source-backed and Weeks 7 through 12 as structure-ready with official coursework pending.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#040714"/>
+      <stop offset="0.54" stop-color="#0b1740"/>
+      <stop offset="1" stop-color="#071c2d"/>
+    </linearGradient>
+    <linearGradient id="signal-gradient" x1="0" x2="1">
+      <stop stop-color="#38bdf8"/>
+      <stop offset="0.5" stop-color="#818cf8"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#60a5fa" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+    <filter id="soft-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .eyebrow { font: 700 15px "Segoe UI", Arial, sans-serif; letter-spacing: 3px; fill: #7dd3fc; }
+      .title { font: 900 52px "Segoe UI", Arial, sans-serif; letter-spacing: 3px; fill: #f8fafc; }
+      .subtitle { font: 600 19px "Segoe UI", Arial, sans-serif; fill: #cbd5e1; }
+      .panel-title { font: 800 18px "Segoe UI", Arial, sans-serif; letter-spacing: 1px; fill: #f8fafc; }
+      .panel-note { font: 600 13px "Segoe UI", Arial, sans-serif; fill: #a5b4fc; }
+      .week { font: 800 14px "Segoe UI", Arial, sans-serif; fill: #f8fafc; }
+      .week-dark { font: 900 13px "Segoe UI", Arial, sans-serif; fill: #04101e; }
+      .truth { font: 650 14px "Segoe UI", Arial, sans-serif; fill: #bae6fd; }
+      .signature { font: 700 13px "Segoe UI", Arial, sans-serif; letter-spacing: 1px; fill: #94a3b8; }
+      .signal { animation: signal-sweep 12s linear infinite; }
+      @keyframes signal-sweep { to { stroke-dashoffset: -240; } }
+      @media (prefers-reduced-motion: reduce) {
+        .signal { animation: none; stroke-dasharray: none; opacity: 0.42; }
+      }
+    </style>
+  </defs>
+
+  <rect width="1200" height="420" rx="28" fill="url(#background)"/>
+  <rect x="1" y="1" width="1198" height="418" rx="27" fill="url(#grid)" stroke="#25345f" stroke-width="2"/>
+  <path d="M88 198 H1112" stroke="#1e2d52" stroke-width="8" stroke-linecap="round"/>
+  <path class="signal" d="M88 198 H1112" stroke="url(#signal-gradient)" stroke-width="3" stroke-linecap="round" stroke-dasharray="18 22" filter="url(#soft-glow)"/>
+
+  <text x="76" y="55" class="eyebrow">NOVA COURSE OBSERVATORY · EVIDENCE MODE</text>
+  <text x="76" y="112" class="title">FULLSTACK 2026</text>
+  <text x="76" y="151" class="subtitle">A twelve-week learning repository built in public with explicit evidence boundaries.</text>
+  <text x="1124" y="56" text-anchor="end" class="signature">KEVIN CUSNIR · LIRIOTH TELTANION</text>
+
+  <g aria-label="Weeks 1 through 6 contain source files">
+    <rect x="76" y="225" width="512" height="130" rx="22" fill="#071127" stroke="#38bdf8" stroke-width="2"/>
+    <circle cx="105" cy="255" r="8" fill="#38bdf8"/>
+    <text x="124" y="262" class="panel-title">SOURCE-BACKED COURSEWORK</text>
+    <text x="124" y="284" class="panel-note">WEEK ROOTS 1–6 · PRESENCE IS NOT COMPLETION</text>
+    <g transform="translate(116 322)"><circle r="20" fill="#38bdf8"/><text y="5" text-anchor="middle" class="week-dark">W1</text></g>
+    <g transform="translate(198 322)"><circle r="20" fill="#38bdf8"/><text y="5" text-anchor="middle" class="week-dark">W2</text></g>
+    <g transform="translate(280 322)"><circle r="20" fill="#38bdf8"/><text y="5" text-anchor="middle" class="week-dark">W3</text></g>
+    <g transform="translate(362 322)"><circle r="20" fill="#38bdf8"/><text y="5" text-anchor="middle" class="week-dark">W4</text></g>
+    <g transform="translate(444 322)"><circle r="20" fill="#38bdf8"/><text y="5" text-anchor="middle" class="week-dark">W5</text></g>
+    <g transform="translate(526 322)"><circle r="20" fill="#38bdf8"/><text y="5" text-anchor="middle" class="week-dark">W6</text></g>
+  </g>
+
+  <g aria-label="Weeks 7 through 12 are scaffolds awaiting official coursework">
+    <rect x="612" y="225" width="512" height="130" rx="22" fill="#0c1027" stroke="#a78bfa" stroke-width="2"/>
+    <rect x="97" y="247" width="16" height="16" rx="3" fill="none" stroke="#a78bfa" stroke-width="3" transform="translate(536 0)"/>
+    <text x="660" y="262" class="panel-title">STRUCTURE READY · CONTENT PENDING</text>
+    <text x="660" y="284" class="panel-note">WEEK ROOTS 7–12 · OFFICIAL SOURCE REQUIRED</text>
+    <g transform="translate(652 322)"><rect x="-20" y="-20" width="40" height="40" rx="8" fill="none" stroke="#a78bfa" stroke-width="3"/><text y="5" text-anchor="middle" class="week">W7</text></g>
+    <g transform="translate(734 322)"><rect x="-20" y="-20" width="40" height="40" rx="8" fill="none" stroke="#a78bfa" stroke-width="3"/><text y="5" text-anchor="middle" class="week">W8</text></g>
+    <g transform="translate(816 322)"><rect x="-20" y="-20" width="40" height="40" rx="8" fill="none" stroke="#a78bfa" stroke-width="3"/><text y="5" text-anchor="middle" class="week">W9</text></g>
+    <g transform="translate(898 322)"><rect x="-20" y="-20" width="40" height="40" rx="8" fill="none" stroke="#a78bfa" stroke-width="3"/><text y="5" text-anchor="middle" class="week">W10</text></g>
+    <g transform="translate(980 322)"><rect x="-20" y="-20" width="40" height="40" rx="8" fill="none" stroke="#a78bfa" stroke-width="3"/><text y="5" text-anchor="middle" class="week">W11</text></g>
+    <g transform="translate(1062 322)"><rect x="-20" y="-20" width="40" height="40" rx="8" fill="none" stroke="#a78bfa" stroke-width="3"/><text y="5" text-anchor="middle" class="week">W12</text></g>
+  </g>
+
+  <text x="600" y="392" text-anchor="middle" class="truth">Repository evidence only · course progress and learning mastery are never inferred</text>
+</svg>

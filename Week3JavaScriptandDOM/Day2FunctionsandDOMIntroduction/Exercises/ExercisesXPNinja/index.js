@@ -138,7 +138,7 @@ function createCalendar(year, month1to12) {
   const thead = document.createElement("thead");
   const trh = document.createElement("tr");
   const headers = ["MO", "TU", "WE", "TH", "FR", "SA", "SU"];
-  headers.forEach((h) => {
+  headers.forEach(h => {
     const th = document.createElement("th");
     th.textContent = h;
     trh.appendChild(th);

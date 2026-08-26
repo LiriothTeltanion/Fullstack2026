@@ -1,4 +1,4 @@
-# Day5 Fetch And Async Await
+# ⚡ Day 5 — Fetch and Async/Await
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">

@@ -20,7 +20,7 @@ export class Library {
   // Add a new book to the library
   public addBook(book: Book): void {
     // Prevent duplicates by ISBN (replace if exists, else push)
-    const idx = this.books.findIndex((b) => b.isbn === book.isbn);
+    const idx = this.books.findIndex(b => b.isbn === book.isbn);
     if (idx !== -1) {
       this.books[idx] = book;
     } else {
@@ -30,7 +30,7 @@ export class Library {
 
   // Return details of a book (formatted string) based on ISBN
   public getBookDetails(isbn: string): string {
-    const b = this.books.find((book) => book.isbn === isbn);
+    const b = this.books.find(book => book.isbn === isbn);
     if (!b) return "Book not found.";
     const genrePart = b.genre ? ` | Genre: ${b.genre}` : "";
     return `Title: ${b.title} | Author: ${b.author} | ISBN: ${b.isbn} | Year: ${b.publishedYear}${genrePart}`;
@@ -54,7 +54,7 @@ export class DigitalLibrary extends Library {
 
   // Return a list of all book titles
   public listBooks(): string[] {
-    return this.getAllBooks().map((b) => b.title);
+    return this.getAllBooks().map(b => b.title);
   }
 }
 

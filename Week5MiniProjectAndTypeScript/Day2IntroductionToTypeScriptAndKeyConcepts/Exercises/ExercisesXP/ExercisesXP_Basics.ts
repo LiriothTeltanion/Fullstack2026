@@ -21,7 +21,7 @@ export const fullName: string = "Kevin";
 // ==============
 // Exercise 3: Union Types
 // ==============
-export let id: string | number = "ABC-123";
+export const id: string | number = "ABC-123";
 // id = 42; // also valid
 
 // ==============

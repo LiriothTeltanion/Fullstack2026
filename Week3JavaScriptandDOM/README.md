@@ -1,4 +1,4 @@
-# Week3 Java Scriptand DOM
+# 🌐 Week 3 — JavaScript and the DOM
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">

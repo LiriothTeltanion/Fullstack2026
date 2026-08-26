@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v7
 
       - name: Set up Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v7
         with:
           python-version: "3.13"
 
@@ -34,10 +34,25 @@ jobs:
           cache: npm
 
       - name: Install JavaScript tooling
-        run: npm ci
+        run: npm ci --ignore-scripts
+
+      - name: Dependency vulnerability audit
+        run: npm audit --audit-level=high
+
+      - name: JavaScript and TypeScript formatting
+        run: npm run format:check
+
+      - name: Verified ESLint curriculum baseline
+        run: npm run lint:baseline
+
+      - name: TypeScript semantic anchor
+        run: npm run typecheck:anchor
 
       - name: Whole-repository quality gate
         run: python tools/nova_quality_gate.py --repo . --strict
+
+      - name: Canonical repository structure
+        run: npm run verify:structure
 
       - name: Python anchor tests
         run: python -m unittest discover -s tests/python -p "test_*.py" -v

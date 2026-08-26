@@ -116,7 +116,7 @@ function el(tag, props = {}, ...children) {
 
   addBtn.addEventListener("click", window.addItem);
   clearBtn.addEventListener("click", window.clearAll);
-  input.addEventListener("keydown", (e) => {
+  input.addEventListener("keydown", e => {
     if (e.key === "Enter") window.addItem();
   });
 

@@ -1,0 +1,222 @@
+schema_version: 1
+repository: LiriothTeltanion/Fullstack2026
+last_reviewed: 2026-08-24
+timezone: Asia/Jerusalem
+
+evidence_states:
+  - missing
+  - present
+  - runnable
+  - verified
+  - explained
+  - mastered
+  - portfolio
+
+learning_unknown_value: unknown
+rules:
+  repository_and_learning_state_are_separate: true
+  explained_requires_kevin_evidence: true
+  mastered_requires_spaced_reproduction: true
+  absent_official_prompt_must_not_be_invented: true
+
+authenticated_source_review:
+  captured_at: 2026-08-24T13:41:31+03:00
+  scope: visible_course_section_and_activity_navigation_only
+  private_manifest_state: ignored_and_not_indexed
+  legacy_capture_frozen: true
+  automated_expansion_paused_at: 2026-08-24T14:07:13.752+03:00
+  policy_gate: written_permission_required_for_copying_scraping_or_ai_upload_of_course_material
+  item_platform_state: unknown
+  no_activity_opened: true
+  no_submission_or_profile_save: true
+
+weeks:
+  - id: week-1
+    title: Python foundations
+    path: Week1Python
+    repository_state: present
+    learning_state: unknown
+    official_scope: local_material_only
+    days:
+      - path: Week1Python/Day1StartingwithPython
+      - path: Week1Python/Day2ListsIteratingAndFormattingData
+      - path: Week1Python/Day3Dictionaries
+      - path: Week1Python/Day4Functions
+      - path: Week1Python/Day5MiniProject
+    bounded_evidence:
+      - path: Week1Python/Day5MiniProject/Exercises/Hangman
+        repository_state: verified
+        evidence: tests/python/test_hangman.py
+        limitation: domain_logic_only
+      - path: Week1Python/Day5MiniProject/Exercises/TicTacToe
+        repository_state: verified
+        evidence: tests/python/test_tictactoe.py
+        limitation: domain_logic_only
+
+  - id: week-2
+    title: Object-oriented Python
+    path: Week2OOP
+    repository_state: present
+    learning_state: unknown
+    official_scope: local_material_only
+    days:
+      - path: Week2OOP/Day1IntroductiontoOOP
+      - path: Week2OOP/Day2OOPInheritanceEncapsulationPolymorphism
+      - path: Week2OOP/Day3OOPandModules
+      - path: Week2OOP/Day4PythonFileIOJSONandAPI
+      - path: Week2OOP/Day5MiniProject
+      - path: Week2OOP/RemoteLearningOOP
+    bounded_evidence:
+      - path: Week2OOP/Day3OOPandModules/DailyChallenge/Circle
+        repository_state: verified
+        evidence: tests/python/test_circle.py
+        limitation: selected_class_behavior_only
+      - path: Week2OOP/Day5MiniProject/DailyChallenge/Modules
+        repository_state: verified
+        evidence: tests/python/test_timer.py
+        limitation: mocked_http_timer_behavior_only
+
+  - id: week-3
+    title: JavaScript and DOM
+    path: Week3JavaScriptandDOM
+    repository_state: present
+    learning_state: unknown
+    official_scope: local_material_only
+    days:
+      - path: Week3JavaScriptandDOM/Day1IntroductiontoJavaScript
+      - path: Week3JavaScriptandDOM/Day2FunctionsandDOMIntroduction
+      - path: Week3JavaScriptandDOM/Day3LearningDOMEvents
+      - path: Week3JavaScriptandDOM/Day4AdvancedJavaScriptFunctions
+      - path: Week3JavaScriptandDOM/Day5MiniProject
+      - path: Week3JavaScriptandDOM/RemoteLearningJSAndDOM
+    bounded_evidence: []
+
+  - id: week-4
+    title: Advanced and asynchronous JavaScript
+    path: Week4AdvAsynchronousJavaScript
+    repository_state: present
+    learning_state: unknown
+    official_scope: local_material_only
+    days:
+      - path: Week4AdvAsynchronousJavaScript/Day1AdvancedArrayMethods
+      - path: Week4AdvAsynchronousJavaScript/Day2AdvancedObjectMethods
+      - path: Week4AdvAsynchronousJavaScript/Day3HTTPAndFormMethodGETAndPOST
+      - path: Week4AdvAsynchronousJavaScript/Day4AsynchronousJavaScript
+      - path: Week4AdvAsynchronousJavaScript/Day5FetchAndAsyncAwait
+    bounded_evidence: []
+
+  - id: week-5
+    title: Mini projects and TypeScript
+    path: Week5MiniProjectAndTypeScript
+    repository_state: present
+    learning_state: unknown
+    official_scope: local_material_only
+    days:
+      - path: Week5MiniProjectAndTypeScript/Day1MiniProject
+      - path: Week5MiniProjectAndTypeScript/Day2IntroductionToTypeScriptAndKeyConcepts
+      - path: Week5MiniProjectAndTypeScript/Day3AdvancedTypeScriptConceptsAndApplications
+      - path: Week5MiniProjectAndTypeScript/Day4AdvancedTypeScriptConceptsAndApplications
+    bounded_evidence:
+      - path: Week5MiniProjectAndTypeScript/Day1MiniProject/DailyChallenge/CurrencyConverter
+        repository_state: present
+        evidence: source_and_readme
+        limitation: live_api_and_browser_unverified
+      - path: Week5MiniProjectAndTypeScript/Day1MiniProject/Exercises/Pokedex
+        repository_state: present
+        evidence: source_and_readme
+        limitation: live_api_and_browser_unverified
+      - path: Week5MiniProjectAndTypeScript/Day1MiniProject/StarWarsWebApp
+        repository_state: present
+        evidence: source_and_readme
+        limitation: live_api_and_browser_unverified
+      - path: Week5MiniProjectAndTypeScript/Day2IntroductionToTypeScriptAndKeyConcepts/DailyChallenge/UnionTypeValidator
+        repository_state: present
+        evidence: source_package_and_syntax_transpile
+        limitation: strict_tsc_blocked_by_missing_nested_node_types
+
+  - id: week-6
+    title: Databases and Node.js
+    path: Week6DatabasesAndNodejs
+    repository_state: present
+    learning_state: unknown
+    official_scope: local_material_only
+    days:
+      - path: Week6DatabasesAndNodejs/Day1IntroductionToDatabases
+      - path: Week6DatabasesAndNodejs/Day2DatabaseConcepts1
+      - path: Week6DatabasesAndNodejs/Day3DatabaseConcepts2
+      - path: Week6DatabasesAndNodejs/Day4NodejsIntroduction
+    bounded_evidence:
+      - path: Week6DatabasesAndNodejs/Day4NodejsIntroduction/Exercises/ExercisesXP/exercise-5-math-app/math-app
+        repository_state: verified
+        evidence: tests/js/math_helpers.test.mjs
+        limitation: add_and_multiply_helpers_only
+      - path: Week6DatabasesAndNodejs/Day2DatabaseConcepts1/Exercises/ExercisesXP/xp_sql_answers.sql
+        repository_state: present
+        evidence: source_only
+        limitation: official_prompt_and_database_execution_unverified
+
+  - id: week-7
+    title: Node.js and React
+    path: Week7NodejsAndReact
+    repository_state: present
+    learning_state: unknown
+    official_scope: authenticated_octopus_navigation_captured_privately
+    scaffold_only: true
+    limitation: public_repo_has_no_source_prompts_rubrics_submission_evidence_or_item_status
+    days: []
+    bounded_evidence: []
+
+  - id: week-8
+    title: React
+    path: Week8React
+    repository_state: present
+    learning_state: unknown
+    official_scope: authenticated_octopus_navigation_captured_privately
+    scaffold_only: true
+    limitation: public_repo_has_no_source_prompts_rubrics_submission_evidence_or_item_status
+    days: []
+    bounded_evidence: []
+
+  - id: week-9
+    title: Redux
+    path: Week9Redux
+    repository_state: present
+    learning_state: unknown
+    official_scope: authenticated_octopus_navigation_captured_privately
+    scaffold_only: true
+    limitation: public_repo_has_no_source_prompts_rubrics_submission_evidence_or_item_status
+    days: []
+    bounded_evidence: []
+
+  - id: week-10
+    title: Advanced TypeScript and Authentication
+    path: Week10AdvancedTypeScriptAndAuthentication
+    repository_state: present
+    learning_state: unknown
+    official_scope: authenticated_octopus_navigation_captured_privately
+    scaffold_only: true
+    limitation: public_repo_has_no_source_prompts_rubrics_authentication_scope_submission_evidence_or_item_status
+    days: []
+    bounded_evidence: []
+
+  - id: week-11
+    title: Final Project
+    path: Week11FinalProject
+    repository_state: present
+    learning_state: unknown
+    official_scope: authenticated_octopus_navigation_captured_privately
+    scaffold_only: true
+    limitation: public_repo_has_no_project_brief_rubric_milestone_submission_evidence_or_item_status
+    days: []
+    bounded_evidence: []
+
+  - id: week-12
+    title: Final Project
+    path: Week12FinalProject
+    repository_state: present
+    learning_state: unknown
+    official_scope: authenticated_octopus_navigation_captured_privately
+    scaffold_only: true
+    limitation: public_repo_has_no_project_continuation_rubric_submission_evidence_or_item_status
+    days: []
+    bounded_evidence: []

@@ -52,7 +52,7 @@ function castToType<T>(value: unknown, ctor: (arg: any) => T): T {
 
 // ---- Quick test (Ex 2) ----
 const n1 = castToType<number>("123.45", Number);
-const b1 = castToType<boolean>("true", (v) => String(v).toLowerCase() === "true");
+const b1 = castToType<boolean>("true", v => String(v).toLowerCase() === "true");
 console.log("E2 number:", n1);
 console.log("E2 boolean:", b1);
 

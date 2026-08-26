@@ -18,7 +18,7 @@ const groceries = {
 // 1) Arrow function: log all fruits using forEach
 const displayGroceries = () => {
   // Loop the fruits array and print each item
-  groceries.fruits.forEach((fruit) => console.log(fruit));
+  groceries.fruits.forEach(fruit => console.log(fruit));
 };
 
 // 2) Arrow function: demonstrate cloning vs referencing

@@ -22,14 +22,17 @@ export function uniqueArray<T>(arr: T[]): T[] {
 // ==============
 // Remove: null, 0, "", false, undefined and NaN
 export function cleanArray(arr: any[]): any[] {
-  return arr.filter(v => !(
-    v === null ||
-    v === 0 ||
-    v === "" ||
-    v === false ||
-    v === undefined ||
-    (typeof v === 'number' && Number.isNaN(v))
-  ));
+  return arr.filter(
+    v =>
+      !(
+        v === null ||
+        v === 0 ||
+        v === "" ||
+        v === false ||
+        v === undefined ||
+        (typeof v === "number" && Number.isNaN(v))
+      )
+  );
 }
 // Sample: [NaN, 0, 15, false, -22, '', undefined, 47, null] -> [15, -22, 47]
 
@@ -47,10 +50,10 @@ export function repeat(str: string, n: number = 1): string {
 // ==============
 // Exercise 5: Turtle & Rabbit
 // ==============
-export const startLine = '     ||<- Start line';
+export const startLine = "     ||<- Start line";
 export function alignRacers() {
-  let turtle = '🐢';
-  let rabbit = '🐇';
+  const turtle = "🐢";
+  const rabbit = "🐇";
 
   // PadStart to position them under the start area. Using 9 so that with emoji length (2 code units) we get 7 spaces.
   const turtleAligned = turtle.padStart(9);
@@ -59,7 +62,7 @@ export function alignRacers() {
   // What happens when you run: turtle = turtle.trim().padEnd(9, '=') ?
   // - trim() removes leading spaces -> '🐢'
   // - padEnd(9, '=') adds '=' to the right to reach length 9 -> '🐢======='
-  const turtleAfterPad = turtleAligned.trim().padEnd(9, '=');
+  const turtleAfterPad = turtleAligned.trim().padEnd(9, "=");
 
   return { startLine, turtleAligned, rabbitAligned, turtleAfterPad };
 }
@@ -71,14 +74,14 @@ declare const require: any | undefined;
 declare const module: any | undefined;
 
 if (typeof require !== "undefined" && typeof module !== "undefined" && require.main === module) {
-  console.log("E1 sumArray([1,2,3,4]):", sumArray([1,2,3,4])); // 10
+  console.log("E1 sumArray([1,2,3,4]):", sumArray([1, 2, 3, 4])); // 10
 
-  console.log("E2 uniqueArray:", uniqueArray([1,1,2,3,3,4,5,5])); // [1,2,3,4,5]
+  console.log("E2 uniqueArray:", uniqueArray([1, 1, 2, 3, 3, 4, 5, 5])); // [1,2,3,4,5]
 
-  const sample = [NaN, 0, 15, false, -22, '', undefined, 47, null];
+  const sample = [NaN, 0, 15, false, -22, "", undefined, 47, null];
   console.log("E3 cleanArray(sample):", cleanArray(sample)); // [15, -22, 47]
 
-  console.log("E4 repeat('Ha!', 3):", repeat('Ha!', 3)); // "Ha!Ha!Ha!"
+  console.log("E4 repeat('Ha!', 3):", repeat("Ha!", 3)); // "Ha!Ha!Ha!"
 
   const { startLine: s, turtleAligned, rabbitAligned, turtleAfterPad } = alignRacers();
   console.log(s);

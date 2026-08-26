@@ -1,4 +1,4 @@
-# Day4 Advanced Java Script Functions
+# 🧠 Day 4 — Advanced JavaScript Functions
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">

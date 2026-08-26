@@ -15,7 +15,7 @@ space.style.display = "flex";
 space.style.flexWrap = "wrap";
 space.style.gap = "20px";
 
-planets.forEach((p) => {
+planets.forEach(p => {
   const planet = document.createElement("div");
   planet.className = "planet";
   planet.style.background = p.color;

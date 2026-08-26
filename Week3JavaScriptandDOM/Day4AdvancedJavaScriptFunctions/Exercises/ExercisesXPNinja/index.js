@@ -3,9 +3,9 @@
 // Run: node index.js
 
 // Curried function: keeps collecting words until called with no args.
-const mergeWords = (first) => {
+const mergeWords = first => {
   let acc = typeof first === "string" ? first : "";
-  const chain = (next) => {
+  const chain = next => {
     if (next === undefined) {
       return acc;
     }

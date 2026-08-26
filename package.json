@@ -1,32 +1,46 @@
 {
   "name": "fullstack2026",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "lint": "eslint \"Week*/**/*.{js,ts}\"",
-    "lint:fix": "eslint \"Week*/**/*.{js,ts}\" --fix",
-    "format": "prettier --write \"Week*/**/*.{js,ts}\"",
-    "format:check": "prettier --check \"Week*/**/*.{js,ts}\"",
+    "lint": "eslint .",
+    "lint:baseline": "node tools/verify_eslint_baseline.mjs",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write \"Week*/**/*.{js,ts}\" \"eslint.config.js\" \"tools/verify_eslint_baseline.mjs\"",
+    "format:check": "prettier --check \"Week*/**/*.{js,ts}\" \"eslint.config.js\" \"tools/verify_eslint_baseline.mjs\"",
     "test": "npm run test:js && npm run test:python",
     "dev": "python -m http.server 8000",
     "build": "python tools/nova_quality_gate.py --repo . --strict",
     "audit": "python tools/nova_ultimate.py --repo . --audit --no-open",
     "quality": "python tools/nova_quality_gate.py --repo . --strict",
     "syntax": "python tools/nova_quality_gate.py --repo . --syntax-only --strict",
+    "catalogs:refresh": "python tools/refresh_structure_catalogs.py --repo . --write",
+    "catalogs:check": "python tools/refresh_structure_catalogs.py --repo . --check",
+    "intake": "python tools/learning_intake.py",
+    "intake:check": "python tools/learning_intake.py validate",
+    "verify:visuals": "python tools/validate_readme_visuals.py --repo .",
+    "verify:titles": "python tools/validate_display_titles.py --repo .",
+    "verify:structure": "python tools/validate_repository_structure.py --repo . && npm run catalogs:check && npm run verify:visuals && npm run verify:titles",
     "test:python": "python -m unittest discover -s tests/python -p \"test_*.py\" -v",
     "test:js": "node tools/run_node_tests.mjs .",
+    "typecheck:anchor": "tsc -p \"Week5MiniProjectAndTypeScript/Day2IntroductionToTypeScriptAndKeyConcepts/DailyChallenge/UnionTypeValidator/tsconfig.json\" --noEmit",
     "readme:generate": "python tools/nova_ultimate.py --repo . --readmes all --apply --yes --skip-fixes --skip-npm --no-open"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
-    "eslint": "^8.57.0",
-    "eslint-config-prettier": "^9.1.0",
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.0.0",
+    "eslint": "^10.9.1",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.11.0",
     "prettier": "^3.3.3",
-    "typescript": "^5.9.0"
+    "typescript": "^5.9.0",
+    "typescript-eslint": "^8.68.0"
+  },
+  "overrides": {
+    "js-yaml": "^4.3.1"
   },
   "engines": {
-    "node": ">=22"
+    "node": "^22.13.0 || >=24"
   }
 }

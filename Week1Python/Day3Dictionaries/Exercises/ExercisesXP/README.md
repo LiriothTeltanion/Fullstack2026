@@ -658,14 +658,14 @@ After completing these exercises, you should understand:
 ## 🔗 Navigation
 
 **📚 Week 1 Python**
-- [← Day 2 Lists](../../Day2ListsIteratingAndFormattingData/)
+- [← Day 2 Lists](../../../Day2ListsIteratingAndFormattingData/)
 - [Next: Exercises Gold →](../ExercisesXPGold/)
 - [📖 Week 1 Overview](../../)
 
 **📂 Day 3**
 - [Main Concepts](../../README.md)
 - [Exercises XP](../ExercisesXP/) ← You are here
-- [Exercises XP+](../ExercisesXP+/)
+- [Exercises XP+](../ExercisesXPPlus/)
 - [Exercises Gold](../ExercisesXPGold/)
 - [Daily Challenge](../../DailyChallenge/)
 

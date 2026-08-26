@@ -16,11 +16,11 @@
 const landscape = () => {
   let result = "";
 
-  const flat = (x) => {
+  const flat = x => {
     for (let i = 0; i < x; i++) result += "_";
   };
 
-  const mountain = (x) => {
+  const mountain = x => {
     result += "/";
     for (let i = 0; i < x; i++) result += "'";
     result += "\\"; // note backslash escape
@@ -38,7 +38,7 @@ console.log("Exercise 1:", landscape()); // ____/''''\____
 // Exercise 2 — Closure
 // -----------------------
 // Prediction: 13
-const addTo = (x) => (y) => x + y;
+const addTo = x => y => x + y;
 const addToTen = addTo(10);
 console.log("Exercise 2:", addToTen(3)); // 13
 
@@ -46,7 +46,7 @@ console.log("Exercise 2:", addToTen(3)); // 13
 // Exercise 3 — Currying
 // -----------------------
 // Prediction: 31
-const curriedSum = (a) => (b) => a + b;
+const curriedSum = a => b => a + b;
 console.log("Exercise 3:", curriedSum(30)(1)); // 31
 
 // -----------------------
@@ -60,7 +60,7 @@ console.log("Exercise 4:", add5(12)); // 17
 // Exercise 5 — Composing
 // -----------------------
 // Prediction: 16
-const compose = (f, g) => (a) => f(g(a));
-const inc = (n) => n + 1;
-const plus5 = (n) => n + 5;
+const compose = (f, g) => a => f(g(a));
+const inc = n => n + 1;
+const plus5 = n => n + 5;
 console.log("Exercise 5:", compose(inc, plus5)(10)); // 16

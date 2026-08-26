@@ -7,16 +7,23 @@
 // Exercise 1 : Location (destructuring)
 // ==============
 export const person = {
-  name: 'John Doe',
+  name: "John Doe",
   age: 25,
   location: {
-    country: 'Canada',
-    city: 'Vancouver',
+    country: "Canada",
+    city: "Vancouver",
     coordinates: [49.2827, -123.1207] as [number, number],
   },
 };
 
-const { name: pName, location: { country, city, coordinates: [lat, lng] } } = person;
+const {
+  name: pName,
+  location: {
+    country,
+    city,
+    coordinates: [lat, lng],
+  },
+} = person;
 export const locationLine = `I am ${pName} from ${city}, ${country}. Latitude(${lat}), Longitude(${lng})`;
 
 // ==============
@@ -49,7 +56,7 @@ export class Person {
   }
 }
 
-export const member = new Person('John');
+export const member = new Person("John");
 export const typeofMember = typeof member; // -> 'object'
 
 // ==============
@@ -74,8 +81,8 @@ export class Labrador extends Dog {
 // ==============
 // Exercise 6 : Challenges
 // ==============
-export const eqArrays = ([2] === [2]);  // false (different references)
-export const eqObjects = ({} === {});   // false (different references)
+export const eqArrays = [2] === [2]; // false (different references)
+export const eqObjects = {} === {}; // false (different references)
 
 export const object1 = { number: 5 };
 export const object2 = object1;
@@ -107,8 +114,8 @@ export class Mammal extends Animal {
   }
 }
 
-export const farmerCow = new Mammal('Lily', 'cow', 'brown and white');
-export const farmerCowLine = farmerCow.sound('Moooo');
+export const farmerCow = new Mammal("Lily", "cow", "brown and white");
+export const farmerCowLine = farmerCow.sound("Moooo");
 
 // ------------------------
 // Optional demo (guarded):
@@ -118,12 +125,12 @@ declare const module: any | undefined;
 
 if (typeof require !== "undefined" && typeof module !== "undefined" && require.main === module) {
   console.log(locationLine);
-  console.log(displayStudentInfo({ first: 'Elie', last: 'Schoppik' }));
-  console.log('usersAsEntries:', usersAsEntries);
-  console.log('usersIdsTimesTwo:', usersIdsTimesTwo);
-  console.log('typeof member:', typeofMember);
-  console.log('eqArrays ([2] === [2]):', eqArrays);
-  console.log('eqObjects ({} === {}):', eqObjects);
-  console.log('vals:', { val2, val3, val4 });
+  console.log(displayStudentInfo({ first: "Elie", last: "Schoppik" }));
+  console.log("usersAsEntries:", usersAsEntries);
+  console.log("usersIdsTimesTwo:", usersIdsTimesTwo);
+  console.log("typeof member:", typeofMember);
+  console.log("eqArrays ([2] === [2]):", eqArrays);
+  console.log("eqObjects ({} === {}):", eqObjects);
+  console.log("vals:", { val2, val3, val4 });
   console.log(farmerCowLine); // Moooo I'm a cow, named Lily and I'm brown and white
 }

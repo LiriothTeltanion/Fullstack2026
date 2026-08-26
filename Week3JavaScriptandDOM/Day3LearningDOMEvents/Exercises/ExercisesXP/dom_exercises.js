@@ -30,7 +30,7 @@
   // Button -> make all paragraphs bold
   const boldBtn = document.getElementById("boldBtn");
   boldBtn.addEventListener("click", () => {
-    article.querySelectorAll("p").forEach((p) => (p.style.fontWeight = "700"));
+    article.querySelectorAll("p").forEach(p => (p.style.fontWeight = "700"));
   });
 
   // BONUS: hover h1 -> random font size 0..100 px, reset on leave
@@ -65,11 +65,11 @@
   console.log("Exercise 2 — inputs by id:", inputF, inputL);
   console.log(
     "Exercise 2 — inputs by name:",
-    form.querySelector('[name=\"firstname\"]'),
-    form.querySelector('[name=\"lastname\"]')
+    form.querySelector('[name="firstname"]'),
+    form.querySelector('[name="lastname"]')
   );
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", e => {
     e.preventDefault(); // prevent page reload
 
     const first = inputF.value.trim();
@@ -106,12 +106,12 @@
 
   function highlight() {
     // Make all bold text blue
-    allBoldItems.forEach((el) => (el.style.color = "dodgerblue"));
+    allBoldItems.forEach(el => (el.style.color = "dodgerblue"));
   }
 
   function returnItemsToDefault() {
     // Reset color back to black
-    allBoldItems.forEach((el) => (el.style.color = "black"));
+    allBoldItems.forEach(el => (el.style.color = "black"));
   }
 
   // Init and attach events
@@ -129,7 +129,7 @@
   const radiusInput = document.getElementById("radius");
   const volumeInput = document.getElementById("volume");
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", e => {
     e.preventDefault(); // don't submit
     const r = parseFloat(radiusInput.value);
     if (isNaN(r) || r < 0) {

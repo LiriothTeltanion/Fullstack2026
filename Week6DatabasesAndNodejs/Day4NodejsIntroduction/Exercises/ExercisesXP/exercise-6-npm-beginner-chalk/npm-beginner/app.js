@@ -7,22 +7,18 @@
 const chalk = require("chalk");
 
 console.log(
-  chalk.bold("Welcome to the ") +
-  chalk.bgBlue.white(" NPM Beginner ") +
-  chalk.bold(" demo!")
+  chalk.bold("Welcome to the ") + chalk.bgBlue.white(" NPM Beginner ") + chalk.bold(" demo!")
 );
 
-console.log(
-  chalk.green("✅ Success: ") + chalk.reset("You just printed a colorful message.")
-);
+console.log(chalk.green("✅ Success: ") + chalk.reset("You just printed a colorful message."));
 
 console.log(
   chalk.yellow("💡 Tip: ") +
-  chalk.reset("Try different chalk styles like ") +
-  chalk.underline("underline") +
-  chalk.reset(", ") +
-  chalk.italic("italic") +
-  chalk.reset(", or ") +
-  chalk.inverse("inverse") +
-  chalk.reset(".")
+    chalk.reset("Try different chalk styles like ") +
+    chalk.underline("underline") +
+    chalk.reset(", ") +
+    chalk.italic("italic") +
+    chalk.reset(", or ") +
+    chalk.inverse("inverse") +
+    chalk.reset(".")
 );

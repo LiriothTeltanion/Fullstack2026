@@ -82,7 +82,7 @@ const experiencePoints = winBattle() ? 10 : 1;
 // -----------------------------
 // Ex. 3 — Is it a string?
 // -----------------------------
-const isString = (val) => typeof val === "string" || val instanceof String;
+const isString = val => typeof val === "string" || val instanceof String;
 
 // -----------------------------
 // Ex. 4 — Find the sum (one-liner)
@@ -101,7 +101,7 @@ const toGramsExpr = function (kg) {
   return kg * 1000;
 };
 // c) one-line arrow
-const toGramsArrow = (kg) => kg * 1000;
+const toGramsArrow = kg => kg * 1000;
 // Difference (one-line comment):
 // Declaration is hoisted with its body; expression is NOT hoisted (only the const/var is).
 

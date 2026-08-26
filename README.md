@@ -1,38 +1,98 @@
 <div align="center">
 
-<img src="./assets/readme/nova-fullstack-banner.svg" width="100%" alt="Animated Fullstack2026 banner">
+<img src="./assets/readme/ultimate/nova-root-banner.svg" width="100%" alt="Fullstack2026 twelve-week course observatory: Weeks 1–6 contain source files; Weeks 7–12 are scaffolds awaiting official coursework">
 
 <br>
 
 [![Repository](https://img.shields.io/badge/GitHub-Fullstack2026-181717?style=for-the-badge&logo=github)](https://github.com/LiriothTeltanion/Fullstack2026)
+[![Quality workflow](https://github.com/LiriothTeltanion/Fullstack2026/actions/workflows/quality.yml/badge.svg)](https://github.com/LiriothTeltanion/Fullstack2026/actions/workflows/quality.yml)
 [![Last commit](https://img.shields.io/github/last-commit/LiriothTeltanion/Fullstack2026?style=for-the-badge&logo=git)](https://github.com/LiriothTeltanion/Fullstack2026/commits/main)
 [![Repo size](https://img.shields.io/github/repo-size/LiriothTeltanion/Fullstack2026?style=for-the-badge&logo=github)](https://github.com/LiriothTeltanion/Fullstack2026)
 [![License](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)](LICENSE)
-[![Maintainer](https://img.shields.io/badge/Maintainer-Kevin%20Cusnir-7c3aed?style=for-the-badge)](https://github.com/LiriothTeltanion)
+[![Evidence](https://img.shields.io/badge/Evidence-explicit%20states-8b5cf6?style=for-the-badge)](.learning/PROGRESS.md)
+[![Tests](https://img.shields.io/badge/Test%20infrastructure-NOVA-06b6d4?style=for-the-badge)](tests/)
+[![Security](https://img.shields.io/badge/Security-policy-f59e0b?style=for-the-badge)](SECURITY.md)
 
-### A progressive full-stack learning archive evolving into a complete product portfolio
+### A twelve-week full-stack course repository with source-backed work, evidence-led scaffolds, and an honest portfolio runway
 
-**Python · OOP · JavaScript · DOM · HTTP · Async · TypeScript · APIs · React · Databases · Deployment**
+**Python · OOP · JavaScript · DOM · Async/Await · TypeScript · SQL · Node.js · React · Redux · Authentication · Final Project**
 
-</div>
-
-<!-- NOVA:HEALTH-CENTER:START -->
-<div align="center">
-
-<img src="./assets/readme/nova-ultimate-banner.svg" width="100%" alt="Animated NOVA Ultimate banner">
-
-<img src="./assets/readme/nova-readiness-center.svg" width="100%" alt="NOVA repository readiness dashboard">
-
-[![Quality](https://img.shields.io/badge/quality-92.0%25-22c55e?style=for-the-badge)](reports/nova/nova_repo_dashboard.html)
-[![CI](https://img.shields.io/badge/CI-NOVA%20Quality-06b6d4?style=for-the-badge&logo=githubactions)](.github/workflows/quality.yml)
-[![Docs](https://img.shields.io/badge/README%20coverage-100.0%25-8b5cf6?style=for-the-badge)](reports/nova/nova_repo_dashboard.html)
-[![Tests](https://img.shields.io/badge/tests-14-f59e0b?style=for-the-badge)](tests/)
+<sub>Repository presentation version <strong>1.2.0</strong> · root README protected as the public GitHub landing page</sub>
 
 </div>
 
-## 🧭 Live Repository Health
+---
 
-| Category | Readiness | State |
+## 🧭 Explore the repository
+
+[Overview](#-repository-overview) ·
+[Evidence](#-current-course-evidence) ·
+[Transformation](#-from-learning-archive-to-engineering-portfolio) ·
+[Twelve weeks](#-the-twelve-week-learning-journey) ·
+[Projects](#-portfolio-project-highlights) ·
+[Stack](#-technology-constellation) ·
+[Run](#-quick-start) ·
+[Quality](#-quality-testing-and-automation) ·
+[Roadmap](#-next-horizon) ·
+[Reports](#-reports-and-transparency) ·
+[Changelog](CHANGELOG.md)
+
+---
+
+## ✨ Repository overview
+
+`Fullstack2026` documents my twelve-week progression from programming fundamentals to practical full-stack engineering.
+
+Weeks 1–6 contain recovered exercises, XP extensions, daily challenges, timed challenges, browser applications, object-oriented models, API integrations, TypeScript exercises, PostgreSQL work, and Node.js modules. Weeks 7–12 are intentionally limited to source-boundary READMEs until their exact official assignments are reviewed.
+
+This repository is designed to show more than completed assignments. It demonstrates how I:
+
+- break problems into smaller functions and modules;
+- improve early solutions without hiding the learning process;
+- organize code by week, day, exercise type, and project;
+- document goals, execution paths, strengths, and next improvements;
+- protect secrets and generated artifacts;
+- add deterministic tests around representative projects;
+- use GitHub Actions and repeatable quality commands;
+- turn a learning archive into an interview-ready engineering portfolio.
+
+> **Honest scope:** a tracked Week root is not proof of completed coursework or learning. Repository evidence, Octopus progress, and demonstrated understanding remain separate. The next major product milestone is the official final-project brief—not an invented capstone.
+
+---
+
+## 🧭 Current course evidence
+
+| Course segment | Public repository evidence | Learning evidence | Current boundary |
+|---|---|---|---|
+| Weeks 1–6 | Source files and local assignment documentation are present. | `unknown` except for separately recorded bounded exercises. | Runtime, browser, SQL, dependency, and accessibility coverage remains partial. |
+| Weeks 7–10 | Canonical root and source-boundary README are present. | `unknown` | Official days, exercises, challenges, and submission rules are pending. |
+| Weeks 11–12 | Canonical final-project root and source-boundary README are present. | `unknown` | Official brief, rubric, milestones, deployment, and presentation requirements are pending. |
+
+The machine-readable source of truth is [`.learning/course-map.yml`](.learning/course-map.yml). Human-facing icons and readable labels are defined separately in [`.learning/display-map.json`](.learning/display-map.json), so the stable Git paths never need emoji. The sanitized academy review is [`reports/resume/ACADEMY_ALIGNMENT_2026-08-24.md`](reports/resume/ACADEMY_ALIGNMENT_2026-08-24.md).
+
+### Historical audited repository baseline — 2026-07-15 (Weeks 1–6 only)
+
+<!-- NOVA:ROOT-LIVE-SNAPSHOT:START -->
+| Metric | Audited baseline |
+|---|---:|
+| Overall readiness | **92.0%** |
+| Source-backed Week roots in that snapshot | **6** |
+| Files scanned | **1,012** |
+| Repository size | **3.4 MB** |
+| Text lines | **60,948** |
+| Source files | **217** |
+| Documentation files | **276** |
+| Automated test files | **14** |
+| Curriculum directories | **250** |
+| README coverage | **100.0%** |
+| Python syntax errors | **0** |
+| Root source archives | **0** |
+| Last quality-gate errors | **2** |
+| Last quality-gate warnings | **68** |
+
+### Readiness by category
+
+| Category | Score | State |
 |---|---:|---|
 | 🟢 Learning breadth | **100.0%** | Ready |
 | 🟢 Documentation | **100.0%** | Ready |
@@ -43,408 +103,497 @@
 | 🟠 Automation | **60.0%** | Developing |
 | 🟢 Portfolio | **100.0%** | Ready |
 
-| Repository metric | Current value |
-|---|---:|
-| Overall readiness | **92.0%** |
-| Files | 1012 |
-| Source files | 217 |
-| Tests | 14 |
-| Curriculum directories | 250 |
-| README coverage | **100.0%** |
-| Blocking quality errors | 2 |
-| Possible current-tree secrets | 1 |
+<table>
+<tr>
+<td width="50%" valign="top"><h4>🟢 Verified strengths</h4><ul><li>✅ Six source-backed Week roots were present without counting ZIP archives as modules.</li><li>✅ README coverage was 100.0% across the then-audited curriculum directories.</li><li>✅ All Python files passed static syntax parsing.</li><li>✅ GitHub Actions quality workflow was installed with read-only repository access.</li><li>✅ 14 automated test file(s) were discoverable.</li><li>✅ Redundant Week ZIP archives were absent from the repository root.</li></ul></td>
+<td width="50%" valign="top"><h4>🛰️ Release 1.1 validation context</h4><ul><li>✅ <code>package-lock.json</code> is present for reproducible <code>npm ci</code> installs.</li><li>✅ The current no-write quality gate passes with 0 errors and 0 warnings.</li><li>ℹ️ The 2 errors and 68 warnings in the table are preserved historical evidence from the dated audit, not claims about the current validation run.</li></ul></td>
+</tr>
+</table>
 
-### 🟢 Good now
+> The **92.0%** readiness score and **14 automated test files** are preserved from the dated six-root audit. They are historical repository-maintainability evidence—not current course progress, a bootcamp grade, or proof that every interactive, SQL, browser, or external-API exercise was executed.
 
-- ✅ Six curriculum weeks are present without counting ZIP archives as modules.
-- ✅ README coverage is 100.0% across curriculum directories.
-- ✅ All Python files pass static syntax parsing.
-- ✅ GitHub Actions quality workflow is installed with read-only repository access.
-- ✅ 14 automated test file(s) are discoverable.
-- ✅ Redundant Week ZIP archives are absent from the repository root.
-
-### 🔴 / 🟠 Still needs attention
-
-- ⚠️ 1 possible credential assignment(s) remain; rotate and remove them.
-- ⚠️ package-lock.json is still missing; run npm install before pushing.
-- ⚠️ The last whole-repository quality gate reported 2 error(s).
-
-> **Interpretation:** Weighted repository-readiness heuristic; not a course grade and not proof every interactive or external-API program ran.
->
-> Open the colorful offline dashboard at [`reports/nova/nova_repo_dashboard.html`](reports/nova/nova_repo_dashboard.html).
-
-<sub>Generated by NOVA Ultimate v2.0.0 · 2026-07-15T06:23:15+03:00</sub>
-<!-- NOVA:HEALTH-CENTER:END -->
+<sub>Snapshot generated by NOVA Ultimate v2.0.0 on 2026-07-15T06:23:15+03:00.</sub>
+<!-- NOVA:ROOT-LIVE-SNAPSHOT:END -->
 
 ---
 
-## 🧭 Navigation
+## 🚀 From learning archive to engineering portfolio
 
-[About](#-what-fullstack2026-is) ·
-[Snapshot](#-live-repository-snapshot) ·
-[Learning path](#-learning-architecture) ·
-[Projects](#-selected-projects-and-challenges) ·
-[Setup](#-quick-start) ·
-[Quality](#-engineering-quality-workflow) ·
-[Roadmap](#-2026-roadmap) ·
-[Capstone](#-proposed-capstone--nova-learning-dashboard) ·
-[Languages](#-multilingual-summary)
+The NOVA stabilization pass preserved the original exercises while improving the repository around them.
 
----
+| Area | Earlier audit | Post-upgrade baseline (2026-07-15) |
+|---|---:|---:|
+| Overall readiness | **43.8%** | **92.0%** |
+| README coverage | **75%** | **100%** |
+| Discoverable test files | **1** | **14** |
+| Python syntax errors | **5** | **0** |
+| Curriculum modules | ZIP files incorrectly inflated the count | **6 real week modules** |
+| Root source archives | **2 ZIP files** | **0** |
+| CI | Missing | Installed |
+| Portable paths | Multiple inconsistent names | Canonicalized |
+| Security configuration | Hardcoded credential patterns | Local configuration templates and security guidance |
+| Repository tooling | Partial | Audit, quality gate, tests, rollback, updater, and reports |
 
-## ✨ What Fullstack2026 is
+### What the upgrade added
 
-`Fullstack2026` is my practical development-learning repository and the technical foundation of my software portfolio.
-
-It is not a collection of empty demonstrations. It contains progressive exercises, daily challenges, interactive browser work and increasingly structured mini-projects that document the transition from programming fundamentals toward full-stack product engineering.
-
-### What this repository demonstrates
-
-- 🐍 **Programming foundations:** Python syntax, data structures, functions and problem decomposition
-- 🏗️ **Object-oriented design:** classes, inheritance, encapsulation, modularity and reusable models
-- 🌐 **Browser engineering:** JavaScript, DOM manipulation, forms, events and accessible interaction
-- ⚡ **Asynchronous workflows:** HTTP requests, promises, validation and resilient error states
-- 🔷 **Type safety:** TypeScript unions, interfaces, classes, guards and safer domain modeling
-- 🧪 **Engineering discipline:** linting, formatting, tests, documentation and version-control hygiene
-- 🚀 **Product direction:** planned backend, React, database, authentication, CI and deployment layers
-
-> **Honest current status:** the repository is already a strong learning archive with real exercises and mini-projects. It is not yet one unified production application. Building that integrated capstone is the next major milestone.
-
----
-
-## 📊 Live repository snapshot
-
-| Metric | Current local value |
-|---|---:|
-| Working branch | `main` |
-| Current revision | `fd10e5e` |
-| Local commit count | 283 |
-| Tracked files | 375 |
-| Week folders detected | 6 |
-| Project/challenge candidates detected | 40 |
-| Last commit date | 2025-10-21 |
-| Last commit message | Move StarWarsWebApp out of Exercises directory |
-| README generated | 2026-07-14 |
-
-**Most common tracked extensions:** `.md` 125 · `.py` 70 · `.js` 60 · `.html` 42 · `.json` 14 · `.ts` 12 · `.css` 12 · `.gitignore` 10 · `.wav` 9 · `.txt` 8
-
-> Repository statistics above are generated by `NOVA Fullstack2026 README Studio` from the local Git history and tracked files.
+- structured README coverage throughout the recovered curriculum;
+- a central offline health dashboard;
+- Python and Node test infrastructure;
+- tests for Tic-Tac-Toe, Hangman, Circle, Timer, math helpers, and repository contracts;
+- a read-only GitHub Actions quality workflow;
+- Dependabot configuration;
+- repeatable npm commands for quality, tests, audit, development, and documentation;
+- normalized Week, Day, exercise-tier, and challenge paths;
+- removal of redundant source ZIPs;
+- `.env.example`, local browser configuration guidance, and `SECURITY.md`;
+- reversible NOVA backup and rollback tooling.
 
 ---
 
-## 🪐 Learning architecture
+## 🪐 The twelve-week learning journey
 
-<img src="./assets/readme/learning-orbit.svg" width="100%" alt="Animated orbit showing the Fullstack2026 learning path">
+<div align="center">
 
-| Module | Main focus | Status |
+<img src="./assets/readme/ultimate/nova-twelve-week-journey.svg" width="100%" alt="Static evidence map for Weeks 1–12, distinguishing source-present Weeks 1–6 from scaffold-only Weeks 7–12">
+
+</div>
+
+| Week | Course title | Repository evidence | Learning state |
+|---|---|---|---|
+| [🐍 Week 1](Week1Python/) | Python Fundamentals | Source present; selected bounded tests exist. | `unknown` |
+| [🏗️ Week 2](Week2OOP/) | Object-Oriented Programming | Source present; selected bounded tests exist. | `unknown` |
+| [🌐 Week 3](Week3JavaScriptandDOM/) | JavaScript & DOM | Source present; browser and accessibility execution is pending. | `unknown` |
+| [⚡ Week 4](Week4AdvAsynchronousJavaScript/) | Advanced & Asynchronous JavaScript | Source present; async/browser behavior remains partially unverified. | `unknown` |
+| [🔷 Week 5](Week5MiniProjectAndTypeScript/) | Mini-project & TypeScript | Source present; live API and strict TypeScript gaps remain. | `unknown` |
+| [🗄️ Week 6](Week6DatabasesAndNodejs/) | Databases & Node.js | Source present; SQL execution and broader Node verification remain. | `unknown` |
+| [🔗 Week 7](Week7NodejsAndReact/) | Node.js & React | Scaffold only; official content pending. | `unknown` |
+| [⚛️ Week 8](Week8React/) | React | Scaffold only; official content pending. | `unknown` |
+| [🔁 Week 9](Week9Redux/) | Redux | Scaffold only; official content pending. | `unknown` |
+| [🛡️ Week 10](Week10AdvancedTypeScriptAndAuthentication/) | Advanced TypeScript and Authentication | Scaffold only; official content pending. | `unknown` |
+| [🛠️ Week 11](Week11FinalProject/) | Final Project | Scaffold only; official brief pending. | `unknown` |
+| [🚀 Week 12](Week12FinalProject/) | Final Project | Scaffold only; official continuation and delivery requirements pending. | `unknown` |
+
+> **Display-title contract:** icons are navigation aids, not folder-name characters.
+> The readable title map covers every top-level repository area, all twelve week
+> roots, and every current Day/Remote root. Physical paths remain portable ASCII
+> so commands, links, imports, Windows tools, CI, and Octopus submissions keep working.
+
+<details>
+<summary><strong>🐍 Week 1 — Python foundations</strong></summary>
+
+| Day | Focus | Main folder |
 |---|---|---|
-| [Week1Python](Week1Python/) | Python syntax, data structures, control flow, functions and foundational projects. | ✅ Present |
-| [Week2OOP](Week2OOP/) | Object-oriented programming, modules, files, JSON, APIs and reusable design. | ✅ Present |
-| [Week3JavaScriptandDOM](Week3JavaScriptandDOM/) | Modern JavaScript, DOM manipulation, events and interactive browser interfaces. | ✅ Present |
-| [Week4AdvAsynchronousJavaScript](Week4AdvAsynchronousJavaScript/) | Advanced arrays/objects, HTTP forms, promises and asynchronous workflows. | ✅ Present |
-| [Week5MiniProjectAndTypeScript](Week5MiniProjectAndTypeScript/) | Mini-projects and TypeScript: unions, interfaces, classes and type guards. | ✅ Present |
-| [Week6DatabasesAndNodejs](Week6DatabasesAndNodejs/) | Progressive exercises, challenges and practical integration work. | ✅ Present |
-| **Week6 — planned** | Backend fundamentals, routing, REST APIs, validation and service structure. | 🧭 Roadmap |
-| **Week7 — planned** | React + TypeScript frontend, state, reusable components and API integration. | 🧭 Roadmap |
-| **Week8 — planned** | Database persistence, authentication, automated testing and deployment. | 🧭 Roadmap |
+| Day 1 | Variables, data types, operators, input/output, conditionals | [Starting with Python](Week1Python/Day1StartingwithPython/) |
+| Day 2 | Lists, tuples, sets, loops, iteration, formatting | [Lists and iteration](Week1Python/Day2ListsIteratingAndFormattingData/) |
+| Day 3 | Dictionaries, nested structures, transformations, timed challenges | [Dictionaries](Week1Python/Day3Dictionaries/) |
+| Day 4 | Functions, parameters, return values, scope, reusable logic | [Functions](Week1Python/Day4Functions/) |
+| Day 5 | Algorithms and complete command-line mini-projects | [Mini projects](Week1Python/Day5MiniProject/) |
 
-### Target outcomes
+**Representative work:** [Build Up a String](Week1Python/Day1StartingwithPython/DailyChallenge/BuildUpAString/) · [Happy Birthday](Week1Python/Day2ListsIteratingAndFormattingData/DailyChallenge/GoldHappyBirthday/) · [Caesar Cipher](Week1Python/Day3Dictionaries/DailyChallenge/CaesarCypher/) · [Solve the Matrix](Week1Python/Day4Functions/DailyChallenge/SolveTheMatrix/) · [Hangman](Week1Python/Day5MiniProject/Exercises/Hangman/) · [Tic-Tac-Toe](Week1Python/Day5MiniProject/Exercises/TicTacToe/)
 
-By completing the full roadmap, this repository should prove the ability to:
+**Outcome:** problem decomposition, input validation, algorithms, functions, collections, and interactive Python programs.
 
-1. Design and explain clear algorithms.
-2. Build maintainable Python and TypeScript modules.
-3. Create interactive browser interfaces.
-4. consume and expose HTTP APIs.
-5. Model persistent data safely.
-6. Test, document and automate software workflows.
-7. Deploy an integrated full-stack product.
+</details>
+
+<details>
+<summary><strong>🏗️ Week 2 — Object-oriented Python</strong></summary>
+
+| Day | Focus | Main folder |
+|---|---|---|
+| Day 1 | Classes, objects, constructors, instance behavior | [Introduction to OOP](Week2OOP/Day1IntroductiontoOOP/) |
+| Day 2 | Inheritance, encapsulation, polymorphism | [Inheritance and polymorphism](Week2OOP/Day2OOPInheritanceEncapsulationPolymorphism/) |
+| Day 3 | Modules, packages, properties, dunder methods | [OOP and modules](Week2OOP/Day3OOPandModules/) |
+| Day 4 | File I/O, JSON, exceptions, external APIs | [Files, JSON and APIs](Week2OOP/Day4PythonFileIOJSONandAPI/) |
+| Day 5 | Separated domain logic, CLI flows, reusable mini-projects | [OOP mini projects](Week2OOP/Day5MiniProject/) |
+| Remote | Larger simulations and data-model exercises | [Remote OOP work](Week2OOP/RemoteLearningOOP/) |
+
+**Representative work:** [Pagination](Week2OOP/Day2OOPInheritanceEncapsulationPolymorphism/DailyChallenge/Pagination/) · [Circle](Week2OOP/Day3OOPandModules/DailyChallenge/Circle/) · [Text Analysis](Week2OOP/Day4PythonFileIOJSONandAPI/DailyChallenge/TextAnalysis/) · [Anagram Checker](Week2OOP/Day5MiniProject/Exercises/AnagramChecker/) · [Rock Paper Scissors](Week2OOP/Day5MiniProject/Exercises/RockPaperScissors/) · [Weather App](Week2OOP/Day5MiniProject/Exercises/WeatherApp/) · [OOP Quiz](Week2OOP/Day5MiniProject/DailyChallenge/OOPQuiz/) · [Air Management](Week2OOP/RemoteLearningOOP/DailyChallenge/AirManagement/)
+
+**Outcome:** reusable classes, separated responsibilities, domain rules, files, JSON, APIs, and testable models.
+
+</details>
+
+<details>
+<summary><strong>🌐 Week 3 — JavaScript and the DOM</strong></summary>
+
+| Day | Focus | Main folder |
+|---|---|---|
+| Day 1 | JavaScript syntax, arrays, objects, conditions, loops | [Introduction to JavaScript](Week3JavaScriptandDOM/Day1IntroductiontoJavaScript/) |
+| Day 2 | Functions, DOM selection, dynamic rendering | [Functions and DOM](Week3JavaScriptandDOM/Day2FunctionsandDOMIntroduction/) |
+| Day 3 | Events, forms, interaction, timers, movement | [DOM events](Week3JavaScriptandDOM/Day3LearningDOMEvents/) |
+| Day 4 | Advanced functions, object workflows, higher-order patterns | [Advanced JavaScript](Week3JavaScriptandDOM/Day4AdvancedJavaScriptFunctions/) |
+| Day 5 | Interactive browser mini-projects | [Mini projects](Week3JavaScriptandDOM/Day5MiniProject/) |
+| Remote | Focused browser exercises and games | [Remote JavaScript and DOM](Week3JavaScriptandDOM/RemoteLearningJSAndDOM/) |
+
+**Representative work:** [Solar System](Week3JavaScriptandDOM/Day2FunctionsandDOMIntroduction/DailyChallenge/DailyChallengePlanets/) · [Mad Libs](Week3JavaScriptandDOM/Day3LearningDOMEvents/DailyChallenge/TellTheStory/) · [Todo List](Week3JavaScriptandDOM/Day5MiniProject/DailyChallenge/TodoList/) · [Coloring Game](Week3JavaScriptandDOM/Day5MiniProject/Exercises/MiniProjectColoringGame/) · [Drum Set](Week3JavaScriptandDOM/Day5MiniProject/Exercises/drumset-mini/) · [Whack-a-Mole](Week3JavaScriptandDOM/RemoteLearningJSAndDOM/Exercises/ExercisesXP1/exercise4_whack_a_mole/)
+
+**Outcome:** interactive browser experiences through DOM updates, forms, events, state, audio, timers, and responsive feedback.
+
+</details>
+
+<details>
+<summary><strong>⚡ Week 4 — Advanced and asynchronous JavaScript</strong></summary>
+
+| Day | Focus | Main folder |
+|---|---|---|
+| Day 1 | Advanced array methods and transformations | [Advanced array methods](Week4AdvAsynchronousJavaScript/Day1AdvancedArrayMethods/) |
+| Day 2 | Object methods, destructuring, classes | [Advanced object methods](Week4AdvAsynchronousJavaScript/Day2AdvancedObjectMethods/) |
+| Day 3 | GET/POST forms, JSON, HTTP-oriented interfaces | [HTTP and forms](Week4AdvAsynchronousJavaScript/Day3HTTPAndFormMethodGETAndPOST/) |
+| Day 4 | Promises, sequencing, failure handling | [Asynchronous JavaScript](Week4AdvAsynchronousJavaScript/Day4AsynchronousJavaScript/) |
+| Day 5 | Fetch, async/await, external data states | [Fetch and async/await](Week4AdvAsynchronousJavaScript/Day5FetchAndAsyncAwait/) |
+
+**Representative work:** [Car Inventory](Week4AdvAsynchronousJavaScript/Day1AdvancedArrayMethods/DailyChallenge/CarInventory/) · [Go Wildcats](Week4AdvAsynchronousJavaScript/Day1AdvancedArrayMethods/DailyChallenge/GoWildcats/) · [HTML Form](Week4AdvAsynchronousJavaScript/Day3HTTPAndFormMethodGETAndPOST/DailyChallenge/HTMLForm/) · [True or False](Week4AdvAsynchronousJavaScript/Day3HTTPAndFormMethodGETAndPOST/DailyChallenge/TrueOrFalse/) · [Random Quote Generator](Week4AdvAsynchronousJavaScript/Day3HTTPAndFormMethodGETAndPOST/Exercises/RandomQuoteGenerator/) · [Play with Words](Week4AdvAsynchronousJavaScript/Day4AsynchronousJavaScript/DailyChallenge/PlayWithWords/)
+
+**Outcome:** data transformations, HTTP flows, promises, async/await, loading states, validation, and recoverable errors.
+
+</details>
+
+<details>
+<summary><strong>🔷 Week 5 — Mini projects and TypeScript</strong></summary>
+
+| Day | Focus | Main folder |
+|---|---|---|
+| Day 1 | API-powered browser portfolio projects | [Mini projects](Week5MiniProjectAndTypeScript/Day1MiniProject/) |
+| Day 2 | TypeScript primitives, unions, type-safe functions | [TypeScript key concepts](Week5MiniProjectAndTypeScript/Day2IntroductionToTypeScriptAndKeyConcepts/) |
+| Day 3 | Interfaces, classes, access modifiers, domain modeling | [Advanced TypeScript applications](Week5MiniProjectAndTypeScript/Day3AdvancedTypeScriptConceptsAndApplications/) |
+| Day 4 | Type guards, unions, generics, safer branching | [Advanced TypeScript guards](Week5MiniProjectAndTypeScript/Day4AdvancedTypeScriptConceptsAndApplications/) |
+
+**Representative work:** [Currency Converter](Week5MiniProjectAndTypeScript/Day1MiniProject/DailyChallenge/CurrencyConverter/) · [Pokédex](Week5MiniProjectAndTypeScript/Day1MiniProject/Exercises/Pokedex/) · [Star Wars Character Finder](Week5MiniProjectAndTypeScript/Day1MiniProject/StarWarsWebApp/) · [Union Type Validator](Week5MiniProjectAndTypeScript/Day2IntroductionToTypeScriptAndKeyConcepts/DailyChallenge/UnionTypeValidator/) · [Library System](Week5MiniProjectAndTypeScript/Day3AdvancedTypeScriptConceptsAndApplications/DailyChallenge/)
+
+**Outcome:** safer application logic through explicit types, interfaces, classes, unions, narrowing, and API-driven browser projects.
+
+</details>
+
+<details>
+<summary><strong>🗄️ Week 6 — Databases and Node.js</strong></summary>
+
+| Day | Focus | Main folder |
+|---|---|---|
+| Day 1 | Relational concepts, schemas, SQL fundamentals | [Introduction to databases](Week6DatabasesAndNodejs/Day1IntroductionToDatabases/) |
+| Day 2 | Queries, filtering, aggregation, database reasoning | [Database concepts 1](Week6DatabasesAndNodejs/Day2DatabaseConcepts1/) |
+| Day 3 | Relationships, joins, constraints, DVD Rental dataset | [Database concepts 2](Week6DatabasesAndNodejs/Day3DatabaseConcepts2/) |
+| Day 4 | CommonJS, ES modules, npm packages, filesystem workflows | [Node.js introduction](Week6DatabasesAndNodejs/Day4NodejsIntroduction/) |
+
+**Representative work:** [SQL XP](Week6DatabasesAndNodejs/Day1IntroductionToDatabases/Exercises/ExercisesXP/) · [DVD Rental relationships](Week6DatabasesAndNodejs/Day3DatabaseConcepts2/Exercises/ExercisesXP/) · [Node.js and npm challenge](Week6DatabasesAndNodejs/Day4NodejsIntroduction/DailyChallenge/NodejsAppAndNPM/) · [CommonJS products](Week6DatabasesAndNodejs/Day4NodejsIntroduction/Exercises/ExercisesXP/exercise-1-commonjs-products/) · [File manager](Week6DatabasesAndNodejs/Day4NodejsIntroduction/Exercises/ExercisesXP/exercise-3-file-manager-commonjs/) · [Todo module](Week6DatabasesAndNodejs/Day4NodejsIntroduction/Exercises/ExercisesXP/exercise-4-esm-todo/) · [Math app](Week6DatabasesAndNodejs/Day4NodejsIntroduction/Exercises/ExercisesXP/exercise-5-math-app/) · [File explorer](Week6DatabasesAndNodejs/Day4NodejsIntroduction/Exercises/ExercisesXP/exercise-7-file-explorer/)
+
+**Outcome:** relational data, PostgreSQL queries, joins, constraints, server-side JavaScript, modules, packages, and filesystem operations.
+
+</details>
+
+<details>
+<summary><strong>🛰️ Weeks 7–12 — source-boundary scaffolds</strong></summary>
+
+The remaining week roots are intentionally ready for intake, not populated with invented assignments:
+
+- [🔗 Week 7 — Node.js and React](Week7NodejsAndReact/)
+- [⚛️ Week 8 — React](Week8React/)
+- [🔁 Week 9 — Redux](Week9Redux/)
+- [🛡️ Week 10 — Advanced TypeScript and Authentication](Week10AdvancedTypeScriptAndAuthentication/)
+- [🛠️ Week 11 — Final Project](Week11FinalProject/)
+- [🚀 Week 12 — Final Project](Week12FinalProject/)
+
+Each README records the same safe workflow: retrieve the exact official source, create only proven paths, preserve Kevin's original work, add bounded verification, and keep repository evidence separate from learning evidence.
+
+</details>
 
 ---
 
-## 🌟 Selected projects and challenges
+## 🌟 Portfolio project highlights
 
-| Module | Project or challenge | What it practices |
+| Project | Technologies | What it demonstrates |
 |---|---|---|
-| Week1Python | [DailyChallenge](Week1Python/Day1StartingwithPython/DailyChallenge/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
-| Week1Python | [DailyChallenge](Week1Python/Day2ListsIteratingAndFormattingData/DailyChallenge/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
-| Week1Python | [DailyChallenge](Week1Python/Day3Dictionaries/DailyChallenge/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
-| Week1Python | [DailyChallenge](Week1Python/Day4Functions/DailyChallenge/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
-| Week1Python | [Day5MiniProject](Week1Python/Day5MiniProject/) | Integrated mini-project combining the core concepts of its week in a practical browser experience. |
-| Week1Python | [DailyChallenge](Week1Python/Day5MiniProject/DailyChallenge/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
-| Week2OOP | [DailyChallenge](Week2OOP/Day1IntroductiontoOOP/DailyChallenge/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
-| Week2OOP | [DailyChallenge](Week2OOP/Day2OOPInheritanceEncapsulationPolymorphism/DailyChallenge/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
-| Week2OOP | [DailyChallenge](Week2OOP/Day3OOPandModules/DailyChallenge/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
-| Week2OOP | [DailyChallenge](Week2OOP/Day4PythonFileIOJSONandAPI/DailyChallenge/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
-| Week2OOP | [Day5MiniProject](Week2OOP/Day5MiniProject/) | Integrated mini-project combining the core concepts of its week in a practical browser experience. |
-| Week2OOP | [DailyChallenge](Week2OOP/Day5MiniProject/DailyChallenge/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
-| Week2OOP | [DailyChallenge](Week2OOP/RemoteLearningOOP/DailyChallenge/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
-| Week2OOP | [MiniProjectVaccines](Week2OOP/RemoteLearningOOP/Exercises/MiniProjectVaccines/) | Integrated mini-project combining the core concepts of its week in a practical browser experience. |
-| Week3JavaScriptandDOM | [DailyChallenge](Week3JavaScriptandDOM/Day1IntroductiontoJavaScript/DailyChallenge/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
-| Week3JavaScriptandDOM | [DailyChallengeNotBad](Week3JavaScriptandDOM/Day1IntroductiontoJavaScript/DailyChallenge/DailyChallengeNotBad/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
-| Week3JavaScriptandDOM | [DailyChallengeStars](Week3JavaScriptandDOM/Day1IntroductiontoJavaScript/DailyChallenge/DailyChallengeStars/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
-| Week3JavaScriptandDOM | [DailyChallenge](Week3JavaScriptandDOM/Day2FunctionsandDOMIntroduction/DailyChallenge/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
-| Week3JavaScriptandDOM | [DailyChallengePlanets](Week3JavaScriptandDOM/Day2FunctionsandDOMIntroduction/DailyChallenge/DailyChallengePlanets/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
-| Week3JavaScriptandDOM | [DailyChallenge](Week3JavaScriptandDOM/Day3LearningDOMEvents/DailyChallenge/) | Focused daily challenge designed to reinforce the module through independent problem solving. |
-
-The repository also contains XP exercises, Gold/Ninja extensions and focused daily challenges inside the week structure.
+| [Hangman](Week1Python/Day5MiniProject/Exercises/Hangman/) | Python | Modular state management, validation, replayable CLI interaction |
+| [Tic-Tac-Toe](Week1Python/Day5MiniProject/Exercises/TicTacToe/) | Python | Pure helper functions, board logic, win/tie detection, testability |
+| [Circle](Week2OOP/Day3OOPandModules/DailyChallenge/Circle/) | Python OOP | Properties, validation, comparison, arithmetic dunder methods |
+| [Page Load Timer](Week2OOP/Day5MiniProject/DailyChallenge/Modules/) | Python, requests | Networking, measurements, aggregation, mocked deterministic tests |
+| [Coloring Game](Week3JavaScriptandDOM/Day5MiniProject/Exercises/MiniProjectColoringGame/) | HTML, CSS, JavaScript | Event delegation, responsive grid construction, drawing interaction |
+| [Drum Set](Week3JavaScriptandDOM/Day5MiniProject/Exercises/drumset-mini/) | HTML, CSS, JavaScript, audio | Keyboard/mouse interaction, media playback, UI feedback |
+| [Random Quote Generator](Week4AdvAsynchronousJavaScript/Day3HTTPAndFormMethodGETAndPOST/Exercises/RandomQuoteGenerator/) | HTML, CSS, JavaScript | State, forms, filtering, navigation, metrics, dynamic rendering |
+| [Currency Converter](Week5MiniProjectAndTypeScript/Day1MiniProject/DailyChallenge/CurrencyConverter/) | HTML, CSS, JavaScript, API | Async data, configuration separation, loading/error/result states |
+| [Pokédex](Week5MiniProjectAndTypeScript/Day1MiniProject/Exercises/Pokedex/) | HTML, CSS, JavaScript, API | API navigation, visual cards, external data normalization |
+| [Star Wars Character Finder](Week5MiniProjectAndTypeScript/Day1MiniProject/StarWarsWebApp/) | HTML, CSS, JavaScript, API | Fetch, response validation, sanitization, animated loading states |
+| [Union Type Validator](Week5MiniProjectAndTypeScript/Day2IntroductionToTypeScriptAndKeyConcepts/DailyChallenge/UnionTypeValidator/) | TypeScript | Union types, narrowing, reusable validation |
+| [Library System](Week5MiniProjectAndTypeScript/Day3AdvancedTypeScriptConceptsAndApplications/DailyChallenge/) | TypeScript | Interfaces, classes, private/protected fields, inheritance |
+| [DVD Rental SQL](Week6DatabasesAndNodejs/Day3DatabaseConcepts2/Exercises/ExercisesXP/) | PostgreSQL | Joins, foreign keys, constraints, cascading deletion, analytical queries |
+| [Node Math App](Week6DatabasesAndNodejs/Day4NodejsIntroduction/Exercises/ExercisesXP/exercise-5-math-app/) | Node.js, CommonJS | Reusable pure helpers, package use, automated tests |
 
 ---
 
 ## 🧬 Technology constellation
 
-<img src="./assets/readme/stack-pulse.svg" width="100%" alt="Animated progression from learning foundations to product delivery">
+<p align="center">
+  <img src="./assets/readme/ultimate/nova-stack-galaxy.svg" width="100%" alt="Static source-backed technology constellation connecting Python, OOP, HTML and CSS, JavaScript, TypeScript, SQL, Node.js, and quality engineering without claiming learning mastery">
+</p>
 
-| Layer | Current and planned technologies |
+> This static map restores the strongest editorial visual from the earlier
+> landing page while making its meaning explicit: the nodes are backed by files
+> in this repository; they are not scores, certificates, or mastery claims.
+
+| Layer | Technologies and concepts |
 |---|---|
-| Foundations | Python, object-oriented programming, JSON and file workflows |
-| Browser | HTML, CSS, JavaScript, DOM, events, forms and browser DevTools |
-| Typed development | TypeScript, interfaces, unions, classes and type guards |
-| Tooling | Node.js, npm, ESLint, Prettier, Git and GitHub |
-| Planned backend | FastAPI or Express, REST APIs and structured validation |
-| Planned frontend | React + TypeScript |
-| Planned persistence | SQLite first, optional PostgreSQL migration |
-| Planned delivery | Automated tests, GitHub Actions and public deployment |
+| Programming foundations | Python, strings, numbers, collections, conditionals, loops, functions, algorithms |
+| Object-oriented design | Classes, inheritance, encapsulation, polymorphism, properties, dunder methods |
+| Browser engineering | HTML5, CSS3, JavaScript, DOM, events, forms, accessibility, responsive behavior |
+| Asynchronous workflows | HTTP, JSON, promises, fetch, async/await, loading/error/empty states |
+| Type safety | TypeScript, interfaces, unions, classes, access modifiers, type guards |
+| Data | SQL, PostgreSQL, joins, constraints, relationships, aggregation |
+| Server-side JavaScript | Node.js, CommonJS, ES modules, npm, filesystem utilities |
+| Source-confirmed future lanes | React, Redux, advanced TypeScript, authentication, final project; official assignment details pending |
+| Quality | Python unittest, Node test runner, static syntax checks, repository contracts |
+| Tooling | Git, GitHub, GitHub Desktop, ESLint, Prettier, NOVA automation |
+| Delivery foundation | GitHub Actions, Dependabot, repeatable audits, generated reports |
 
 ---
 
 ## ⚡ Quick start
 
-### Clone into a short local development path
+### Clone and install
 
 ```powershell
 New-Item -ItemType Directory -Force C:\Dev | Out-Null
 git clone https://github.com/LiriothTeltanion/Fullstack2026.git C:\Dev\Fullstack2026
 Set-Location C:\Dev\Fullstack2026
+npm ci
 ```
 
-### Install the root JavaScript tooling
+The committed root `package-lock.json` makes `npm ci` reproducible for CI and
+future clones. Use `npm install` only when you intentionally update dependencies
+and are prepared to review the resulting lockfile diff.
+
+### Capture the next exercise in your own words
 
 ```powershell
-npm install
-npm run format:check
-npm run lint
-npm test
+# Fastest path for one exercise.
+npm run intake -- add
+
+# Read-only: show the next public-safe queue item.
+npm run intake -- next
 ```
 
-### Run material by module
+For many current or future exercises, create the ignored local batch template,
+edit it using short summaries written independently by Kevin, preview the exact
+public records, and apply only after every item validates:
+
+```powershell
+npm run intake -- template
+npm run intake -- import .private/intake/kevin-batch.json
+npm run intake -- import .private/intake/kevin-batch.json --apply
+```
+
+The tool never opens Octopus, copies prompts, exposes LMS progress, creates
+exercise folders, or submits work. See the
+[source-safe intake quickstart](.learning/intake/README.md) and the broader
+[Octopus boundary](.learning/OCTOPUS_INTAKE.md).
+
+### Run the repository quality workflow
+
+```powershell
+npm run quality
+npm test
+npm run audit
+```
+
+### Start a local static server
+
+```powershell
+npm run dev
+```
+
+Then open `http://localhost:8000`.
+
+### Run representative material directly
 
 ```powershell
 # Python
-python .\Week1Python\path\to\exercise.py
+python .\Week1Python\Day5MiniProject\Exercises\TicTacToe\tictactoe.py
 
-# Static browser project
-python -m http.server 8000
+# Python tests
+python -m unittest discover -s tests/python -p "test_*.py" -v
 
-# TypeScript through npx
-npx ts-node .\path\to\exercise.ts
+# Node tests
+node .\tools\run_node_tests.mjs .
 
-# Compile TypeScript
-npx tsc
+# TypeScript syntax validation
+node .\tools\check_typescript_syntax.mjs .
+
+# PostgreSQL example
+psql -d dvdrental -f .\Week6DatabasesAndNodejs\Day3DatabaseConcepts2\Exercises\ExercisesXP\xp_dvdrental_relationships.sql
 ```
-
-> Use an active Node.js LTS release for the most predictable dependency compatibility. Use a Python virtual environment whenever a module introduces external packages.
 
 ---
 
-## 🧰 Available npm commands
+## 🧪 Quality, testing, and automation
+
+### Root npm commands
 
 | Command | Purpose |
 |---|---|
-| `npm run lint` | Audit JavaScript and TypeScript sources with ESLint. |
-| `npm run lint:fix` | Apply ESLint autofixes; review the resulting diff. |
-| `npm run format` | Format supported source files with Prettier. |
-| `npm run format:check` | Verify formatting without modifying files. |
-| `npm run test` | Run the built-in Node test runner. |
-| `npm run dev` | Placeholder until a unified development application exists. |
-| `npm run build` | Placeholder until a deployable integrated application exists. |
+| `npm run lint` | Lint JavaScript and TypeScript curriculum sources |
+| `npm run lint:baseline` | Verify that ESLint reports exactly the documented 65-finding learning backlog |
+| `npm run lint:fix` | Apply supported ESLint fixes for review |
+| `npm run typecheck:anchor` | Semantically type-check the strict Union Type Validator project without emitting files |
+| `npm run format` | Format JavaScript and TypeScript with Prettier |
+| `npm run format:check` | Verify formatting without changing files |
+| `npm run syntax` | Run repository-wide static syntax validation |
+| `npm run test:python` | Run the Python unit-test suite |
+| `npm run test:js` | Run Node and TypeScript-oriented tests |
+| `npm test` | Run both JavaScript and Python test suites |
+| `npm run quality` | Execute the strict NOVA quality gate |
+| `npm run audit` | Regenerate repository health reports |
+| `npm run intake -- add` | Preview and add one Kevin-authored, public-safe exercise summary |
+| `npm run intake -- next` | Print the next queued summary without changing state |
+| `npm run intake:check` | Validate the tracked own-words exercise queue |
+| `npm run verify:titles` | Validate icon-led display titles while preserving stable physical paths |
+| `npm run verify:structure` | Validate canonical paths, catalogs, visuals, privacy, and display titles |
+| `npm run readme:generate` | Regenerate managed folder README sections |
+| `npm run dev` | Serve the repository locally on port 8000 |
+| `npm run build` | Treat the strict quality gate as the current repository build |
 
-> `dev` and `build` are currently placeholders. They should become real commands when the repository gains a unified application or capstone workspace.
+### Automated safeguards
+
+- `.github/workflows/quality.yml` validates pushes and pull requests.
+- Python files receive static syntax parsing.
+- JavaScript and TypeScript receive automated syntax/tooling checks.
+- Representative domain logic is covered by deterministic tests.
+- Repository-contract tests verify critical folders, tooling, archives, and documentation.
+- The quality gate reports possible secrets, broken links, missing lockfiles, and structural regressions.
+- Dependabot checks npm and GitHub Actions dependencies.
+
+### Safe pre-commit routine
+
+```powershell
+npm run format:check
+npm run lint:baseline
+npm run typecheck:anchor
+npm run lint
+npm run quality
+npm test
+git status
+git diff
+```
 
 ---
 
 ## 📁 Repository organization
 
+### Human-readable project areas
+
+| Display title | Stable physical path |
+|---|---|
+| [🤖 AI Collaboration Context](.ai/) | `.ai/` |
+| [⚙️ GitHub Automation and Templates](.github/) | `.github/` |
+| [🎓 Learning Evidence and Course State](.learning/) | `.learning/` |
+| [🎨 Visual Assets](assets/) | `assets/` |
+| [📊 Audits and Evidence Reports](reports/) | `reports/` |
+| [🧪 Automated Tests](tests/) | `tests/` |
+| [🛠️ Repository Tools](tools/) | `tools/` |
+
+These icons are display labels only. The exact ASCII paths below remain the
+portable source of truth for Windows, Git, commands, links, and CI.
+
 ```text
 Fullstack2026/
+├─ .github/
+│  ├─ INTERNAL_GUIDE.md
+│  ├─ workflows/
+│  └─ dependabot.yml
 ├─ Week1Python/
 ├─ Week2OOP/
 ├─ Week3JavaScriptandDOM/
 ├─ Week4AdvAsynchronousJavaScript/
 ├─ Week5MiniProjectAndTypeScript/
-├─ assets/
-│  └─ readme/
-│     ├─ nova-fullstack-banner.svg
-│     ├─ learning-orbit.svg
-│     └─ stack-pulse.svg
+├─ Week6DatabasesAndNodejs/
+├─ Week7NodejsAndReact/
+├─ Week8React/
+├─ Week9Redux/
+├─ Week10AdvancedTypeScriptAndAuthentication/
+├─ Week11FinalProject/
+├─ Week12FinalProject/
+├─ .ai/
+├─ .learning/
+├─ assets/readme/
+├─ reports/nova/
+├─ reports/resume/
+├─ tests/python/
+├─ tests/js/
+├─ tools/
+├─ .editorconfig
+├─ .env.example
+├─ CHANGELOG.md
 ├─ package.json
-├─ .gitignore
+├─ pyproject.toml
+├─ SECURITY.md
 ├─ LICENSE
 └─ README.md
 ```
 
 ### Conventions
 
-- Week and topic folders use readable, descriptive names.
-- Python prefers `snake_case`, clear functions and focused modules.
-- JavaScript and TypeScript use consistent project-level naming.
-- Generated dependencies, caches and build output stay outside Git history.
-- The selected package manager should have exactly one tracked lockfile.
-- Exercise-specific documentation should live close to the relevant code.
-- Larger structural changes should use a dedicated branch and pull request.
+- Display titles may use one topic-led icon; physical paths stay ASCII/PascalCase.
+- Week and Day folders use descriptive PascalCase names.
+- Exercise tiers remain explicit: XP, XP Plus, XP Gold, and XP Ninja.
+- Python source files prefer `snake_case`.
+- Dependencies, local configuration, caches, and generated output remain outside Git history.
+- Exactly one package-manager lockfile should be committed at the root.
+- Structural changes belong on focused branches with reviewable commits.
 
 ---
 
-## ✅ Engineering quality workflow
+## 🛰️ Next horizon
 
-### Safe pre-commit review
+| Phase | Status | Highest-value evidence still required |
+|---|---|---|
+| 1 — Truth baseline | ✅ Complete | Preserve the dated baseline; do not convert it into course progress. |
+| 2 — Structural foundation | ✅ Complete | Keep catalogs and exact-case paths deterministic as new work arrives. |
+| 3 — Academy alignment and 12-week presentation | ✅ Published and remotely verified | Preserve exact paths, evidence boundaries, accessible visuals, and release metadata as coursework evolves. |
+| 4 — Weeks 1–6 chronological verification | 🔄 Next | Recheck each day against Kevin's own Octopus understanding and existing code; add bounded execution, accessibility, and explanation evidence. |
+| 5 — Weeks 7–10 official coursework | 🎯 Remaining | Retrieve each exact assignment, implement it, verify it, explain it, and submit only through the authorized course workflow. |
+| 6 — Weeks 11–12 final project | 🎯 Remaining | Build from the official brief with accessibility, tests, security, documentation, deployment evidence, and a presentation story. |
+| 7 — Portfolio release | ⏳ Remaining | Select the strongest work, add real visuals/demos and limitations, then publish only with explicit authorization. |
 
-```powershell
-npm run format:check
-npm run lint
-npm test
-git status
-```
-
-### Deliberate automatic corrections
-
-```powershell
-npm run format
-npm run lint:fix
-git diff
-```
-
-Review every generated diff before committing.
-
-### Recommended CI pipeline
-
-A future `.github/workflows/quality.yml` should run:
-
-1. Dependency installation with the tracked lockfile
-2. Prettier format verification
-3. ESLint
-4. Node tests
-5. Python tests when pytest coverage is added
-6. Build verification once `build` becomes real
+A bounded 2026-08-24 Octopus navigation snapshot is frozen only in Git-ignored
+local manifests. Further authenticated automation and copying of course material
+into external AI are paused under the current published Octopus policy unless
+Developers Institute grants written permission. The immediate learning action is
+to use the own-words intake queue for the first Week 1 / Day 1 checkpoint, compare
+it with Kevin's existing source, and then advance chronologically through Weeks
+1–6 before starting Week 7. Written policy clarification remains important, and
+quizzes, submissions, uploads, enrollments, messages, and profile saves remain
+separate approval-gated actions.
 
 ---
 
-## 🚦 Current strengths and known gaps
+## 📊 Reports and transparency
 
-### Strengths
+| Report | Purpose |
+|---|---|
+| [Readiness dashboard](reports/nova/nova_repo_dashboard.html) | Interactive offline visual summary |
+| [Repository audit](reports/nova/nova_repo_audit.md) | Scores, module metrics, strengths, and remaining risks |
+| [Quality report](reports/nova/quality_report.md) | Current quality-gate errors and warnings |
+| [Update report](reports/nova/NOVA_UPDATE_REPORT.md) | Full manifest of the automated migration |
+| [Academy alignment](reports/resume/ACADEMY_ALIGNMENT_2026-08-24.md) | Sanitized Developers Institute, Octopus, twelve-week, privacy, and phase boundary |
+| [Course map](.learning/course-map.yml) | Machine-readable repository and learning evidence states |
+| [Folder display map](.learning/display-map.json) | Icon-led human labels mapped to stable ASCII paths |
+| [Exercise intake quickstart](.learning/intake/README.md) | One-command own-words queue for current and future exercises |
+| [Octopus intake workflow](.learning/OCTOPUS_INTAKE.md) | Credential-safe private inventory, assignment, quiz, and profile boundaries |
+| [Visual manifest](assets/readme/visual_manifest.json) | Local SVG provenance, hashes, alt text, motion, and privacy review |
+| [Changelog](CHANGELOG.md) | Versioned repository-presentation and quality-maintenance history |
+| [Tests](tests/) | Deterministic representative project and repository tests |
+| [Tools](tools/) | Audit, quality, test, and documentation automation |
+| [GitHub automation guide](.github/INTERNAL_GUIDE.md) | Internal workflow map and root-README protection contract |
 
-- [x] Progressive Python learning material
-- [x] Object-oriented programming exercises
-- [x] JavaScript and DOM applications
-- [x] HTTP and asynchronous JavaScript practice
-- [x] TypeScript challenges and mini-projects
-- [x] Root linting and formatting workflow
-- [x] Multiple interactive browser projects
-- [x] Public Git history preserving the learning progression
-
-### Gaps to address
-
-- [ ] Commit the correct package-manager lockfile
-- [ ] Add GitHub Actions
-- [ ] Remove obsolete imported citation markers from older documentation
-- [ ] Expand automated Python and JavaScript/TypeScript testing
-- [ ] Replace placeholder `dev` and `build` commands
-- [ ] Add backend and database modules
-- [ ] Build an integrated React frontend
-- [ ] Deploy one complete capstone application
-- [ ] Add screenshots, short demos and accessibility notes to the strongest projects
+The reports intentionally show both green results and remaining work. The goal is credible engineering progress, not a false claim of perfection.
 
 ---
 
-## 🚀 2026 roadmap
+## 🔐 Security and version-control hygiene
 
-### Phase 1 — Stabilize Weeks 1–5
-
-- Run all available formatting, linting and tests
-- Repair broken project links and stale documentation
-- Normalize project-level README files
-- Add screenshots to the strongest browser projects
-- Track one lockfile
-- Add CI
-
-### Phase 2 — Week 6: Backend engineering
-
-- Build REST endpoints
-- Add request/response validation
-- Separate routes, services and domain logic
-- Add structured error handling
-- Add automated backend tests
-
-### Phase 3 — Week 7: React + TypeScript
-
-- Build reusable UI components
-- Add routing and state management
-- Connect to the backend API
-- Add loading, empty and error states
-- Apply accessibility and responsive design
-
-### Phase 4 — Week 8: Persistence and delivery
-
-- Add SQLite persistence
-- Introduce authentication
-- Add integration tests
-- Containerize or package the application
-- Deploy frontend and backend
-- Document the complete architecture
-
----
-
-## 🏆 Proposed capstone — Nova Learning Dashboard
-
-A complete portfolio application can transform the learning archive into an interactive product.
-
-### Core experience
-
-- User authentication
-- Progress tracking by week and day
-- Searchable exercise and project catalog
-- Completion status and personal notes
-- Direct links to source code and live demos
-- Skills and technology visualization
-- Responsive dashboard design
-
-### Proposed architecture
-
-```mermaid
-flowchart LR
-    U[User] --> R[React + TypeScript]
-    R --> A[REST API]
-    A --> S[Service Layer]
-    S --> D[(SQLite / PostgreSQL)]
-    A --> T[Automated Tests]
-    R --> V[Vitest]
-    A --> P[pytest / Node Tests]
-    G[GitHub Actions] --> V
-    G --> P
-    G --> B[Build and Deployment]
-```
-
-### Definition of done
-
-- Frontend and backend both run from documented commands
-- Authentication and persistent progress work
-- Automated tests pass
-- CI validates every pull request
-- Public deployment is available
-- README includes architecture, screenshots and live links
-- The project is strong enough to present in a technical interview
-
----
-
-## 🔐 Version-control hygiene
-
-- Never commit `.env`, API keys or credentials.
-- Ignore generated dependencies and caches.
-- Commit one package-manager lockfile.
-- Keep commits focused and descriptive.
-- Use branches for structural work.
-- Review pull-request diffs before merging.
-- Tag stable milestones and releases.
+- Never commit `.env`, `config.js`, API keys, access tokens, or credentials.
+- Use `.env.example` and `config.example.js` only as safe templates.
+- Rotate a credential immediately if it was ever committed.
+- Commit exactly one root package-manager lockfile.
+- Review generated diffs before committing.
+- Read the repository [security policy](SECURITY.md) before reporting a vulnerability.
 
 ---
 
@@ -453,26 +602,22 @@ flowchart LR
 <details>
 <summary><strong>🇻🇪 Resumen en español</strong></summary>
 
-### ¿Qué es Fullstack2026?
+`Fullstack2026` es mi repositorio principal de aprendizaje práctico y la base técnica de mi portafolio como desarrollador full-stack.
 
-Es mi repositorio principal de aprendizaje práctico de desarrollo full-stack. Conserva ejercicios reales, retos diarios y mini proyectos desde Python y programación orientada a objetos hasta JavaScript, DOM, asincronía y TypeScript.
+Sigue un esquema de doce semanas. Las semanas 1–6 contienen material y código recuperado de Python, programación orientada a objetos, JavaScript, DOM, asincronía, TypeScript, SQL y Node.js. Las semanas 7–12 son estructuras verificables a nivel de título; su contenido oficial todavía no está almacenado y no se inventa.
 
-La siguiente etapa consiste en convertir esta base educativa en un producto completo: backend, React, base de datos, autenticación, pruebas, integración continua y despliegue.
-
-**Objetivo final:** demostrar no solo que sé resolver ejercicios, sino también que puedo diseñar, construir, probar, documentar y publicar una aplicación full-stack completa.
+El estado del repositorio, el progreso de la plataforma y mi comprensión son evidencias distintas. La próxima acción es revisar cronológicamente desde Week 1 / Day 1 usando mis propios resúmenes, mi código existente y evidencia reproducible; Week 7 comienza después de esa revisión.
 
 </details>
 
 <details>
 <summary><strong>🇮🇱 סיכום בעברית</strong></summary>
 
-### מהו Fullstack2026?
+`Fullstack2026` הוא מאגר הלמידה המעשי המרכזי שלי והבסיס הטכני לתיק העבודות שלי כמפתח Full-Stack.
 
-זהו מאגר הלמידה המעשי המרכזי שלי לפיתוח Full-Stack. המאגר כולל תרגילים, אתגרים יומיים ומיני־פרויקטים ב-Python, תכנות מונחה עצמים, JavaScript, DOM, עבודה אסינכרונית ו-TypeScript.
+המאגר עוקב אחר מתווה של שנים-עשר שבועות. שבועות 1–6 כוללים חומר וקוד משוחזר ב-Python, תכנות מונחה עצמים, JavaScript, DOM, TypeScript, SQL ו-Node.js. שבועות 7–12 הם מבני מעקב המבוססים רק על כותרות מאומתות; התוכן הרשמי עדיין לא נשמר ולא מומצא.
 
-השלב הבא הוא להפוך את בסיס הלמידה למוצר מלא: Backend, ממשק React, מסד נתונים, אימות משתמשים, בדיקות אוטומטיות, CI ופריסה ציבורית.
-
-**המטרה הסופית:** להראות שאני מסוגל לא רק לפתור תרגילים, אלא גם לתכנן, לבנות, לבדוק, לתעד ולפרסם אפליקציית Full-Stack מלאה.
+מצב המאגר, התקדמות בפלטפורמה והבנת החומר הם סוגי ראיות נפרדים. הצעד הבא הוא לבדוק באופן כרונולוגי החל מ-Week 1 / Day 1 בעזרת סיכומים במילים שלי, הקוד הקיים וראיות שניתן לשחזר; Week 7 יתחיל לאחר הבדיקה הזו.
 
 </details>
 
@@ -480,11 +625,16 @@ La siguiente etapa consiste en convertir esta base educativa en un producto comp
 
 ## 👨‍💻 Maintainer
 
-**Kevin Cusnir** — `LiriothTeltanion`
+<div align="center">
 
-- GitHub: [github.com/LiriothTeltanion](https://github.com/LiriothTeltanion)
-- Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)
-- Focus: full-stack development, AI-assisted engineering, practical automation and creative software
+### Kevin Cusnir · `LiriothTeltanion`
+
+Full-stack development · AI-assisted engineering · automation · creative software
+
+[![GitHub profile](https://img.shields.io/badge/GitHub-LiriothTeltanion-181717?style=for-the-badge&logo=github)](https://github.com/LiriothTeltanion)
+[![Repository](https://img.shields.io/badge/Repository-Fullstack2026-7c3aed?style=for-the-badge&logo=github)](https://github.com/LiriothTeltanion/Fullstack2026)
+
+</div>
 
 ---
 
@@ -496,8 +646,8 @@ Distributed under the [MIT License](LICENSE).
 
 <div align="center">
 
-### Build steadily. Document honestly. Turn learning into products.
+### Build steadily · document honestly · automate responsibly · turn learning into products
 
-**README edition 3.0 · Generated 2026-07-14**
+**NOVA Course Observatory · repository presentation v1.2.0 · August 2026**
 
 </div>

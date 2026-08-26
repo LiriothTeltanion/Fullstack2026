@@ -25,10 +25,10 @@
 function wordsInTheStars(input) {
   // 🧹 Normalize to an array of non-empty, trimmed strings
   const words = Array.isArray(input)
-    ? input.map((w) => String(w).trim()).filter(Boolean)
+    ? input.map(w => String(w).trim()).filter(Boolean)
     : String(input)
         .split(",")
-        .map((w) => w.trim())
+        .map(w => w.trim())
         .filter(Boolean);
 
   if (words.length === 0) {
@@ -76,7 +76,7 @@ if (typeof module !== "undefined" && require.main === module) {
     // Interactive prompt in Node
     const readline = require("readline");
     const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
-    rl.question("📝 Enter words separated by commas: ", (answer) => {
+    rl.question("📝 Enter words separated by commas: ", answer => {
       demo(answer);
       rl.close();
     });

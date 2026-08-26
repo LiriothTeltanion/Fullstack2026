@@ -5,47 +5,51 @@
 // 1st Challenge: Promises
 // ---------------------------
 // makeAllCaps: if all items are strings, resolve with UPPERCASED array; else reject.
-const makeAllCaps = (arr) =>
+const makeAllCaps = arr =>
   new Promise((resolve, reject) => {
-    const allStrings = Array.isArray(arr) && arr.every((x) => typeof x === "string");
+    const allStrings = Array.isArray(arr) && arr.every(x => typeof x === "string");
     if (!allStrings) return reject("All items must be strings.");
-    resolve(arr.map((w) => w.toUpperCase()));
+    resolve(arr.map(w => w.toUpperCase()));
   });
 
 // sortWords: if array length > 4, resolve with sorted array; else reject.
-const sortWords = (arr) =>
+const sortWords = arr =>
   new Promise((resolve, reject) => {
     if (!Array.isArray(arr)) return reject("Expected an array.");
-    if (arr.length > 4) resolve([...arr].sort()); // copy, then sort
+    if (arr.length > 4)
+      resolve([...arr].sort()); // copy, then sort
     else reject("Array must have more than 4 items.");
   });
 
 // Demo buttons for challenge 1
 const out1 = document.getElementById("out1");
-const log1 = (msg) => { console.log(msg); out1.textContent = typeof msg === "string" ? msg : JSON.stringify(msg); };
+const log1 = msg => {
+  console.log(msg);
+  out1.textContent = typeof msg === "string" ? msg : JSON.stringify(msg);
+};
 
 document.getElementById("t1a").addEventListener("click", () => {
   // should REJECT: contains a number
   makeAllCaps([1, "pear", "banana"])
-    .then((arr) => sortWords(arr))
-    .then((result) => log1(result))
-    .catch((error) => log1(error));
+    .then(arr => sortWords(arr))
+    .then(result => log1(result))
+    .catch(error => log1(error));
 });
 
 document.getElementById("t1b").addEventListener("click", () => {
   // should REJECT: length <= 4 after uppercase step
   makeAllCaps(["apple", "pear", "banana"])
-    .then((arr) => sortWords(arr))
-    .then((result) => log1(result))
-    .catch((error) => log1(error));
+    .then(arr => sortWords(arr))
+    .then(result => log1(result))
+    .catch(error => log1(error));
 });
 
 document.getElementById("t1c").addEventListener("click", () => {
   // should RESOLVE and print sorted uppercased array
   makeAllCaps(["apple", "pear", "banana", "melon", "kiwi"])
-    .then((arr) => sortWords(arr))
-    .then((result) => log1(result)) // ["APPLE","BANANA","KIWI","MELON","PEAR"]
-    .catch((error) => log1(error));
+    .then(arr => sortWords(arr))
+    .then(result => log1(result)) // ["APPLE","BANANA","KIWI","MELON","PEAR"]
+    .catch(error => log1(error));
 });
 
 // ---------------------------
@@ -118,7 +122,7 @@ const toJs = () =>
   });
 
 // 2) Ask user for text, validate against morse map, return array of codes
-const toMorse = (morseJS) =>
+const toMorse = morseJS =>
   new Promise((resolve, reject) => {
     const inputEl = document.getElementById("textInput");
     let txt = (inputEl?.value || "").trim();
@@ -139,7 +143,7 @@ const toMorse = (morseJS) =>
   });
 
 // 3) Join with line breaks and display on the page
-const joinWords = (morseArr) => {
+const joinWords = morseArr => {
   const out = document.getElementById("morseOut");
   out.textContent = morseArr.join("\\n");
 };
@@ -148,9 +152,9 @@ const joinWords = (morseArr) => {
 document.getElementById("btnTranslate").addEventListener("click", () => {
   document.getElementById("morseOut").textContent = "Translating…";
   toJs()
-    .then((obj) => toMorse(obj))
-    .then((arr) => joinWords(arr))
-    .catch((err) => {
+    .then(obj => toMorse(obj))
+    .then(arr => joinWords(arr))
+    .catch(err => {
       console.error(err);
       document.getElementById("morseOut").textContent = String(err);
     });
