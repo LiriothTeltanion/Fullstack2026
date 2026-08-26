@@ -1,4 +1,4 @@
-# 🐍 Week 2: Object-Oriented Programming in Python
+# 🏗️ Week 2 — Object-Oriented Programming
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">

@@ -1,4 +1,4 @@
-# Week6 Databases And Nodejs
+# 🗄️ Week 6 — Databases and Node.js
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">

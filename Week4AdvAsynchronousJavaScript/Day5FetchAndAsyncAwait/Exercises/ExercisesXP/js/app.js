@@ -7,8 +7,17 @@ const btn2 = document.getElementById("ex2");
 const btn3 = document.getElementById("ex3");
 const btn4 = document.getElementById("ex4");
 
-// Giphy API key from the prompt
-const GIPHY_KEY = "hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My";
+const GIPHY_KEY = window.NOVA_GIPHY_CONFIG?.apiKey?.trim() ?? "";
+
+function requireGiphyKey() {
+  const isPlaceholder = /^(YOUR|REPLACE|EXAMPLE|PLACEHOLDER)[_-]/i.test(GIPHY_KEY);
+  if (!GIPHY_KEY || isPlaceholder) {
+    throw new Error(
+      "Missing Giphy API key. Copy js/config.example.js to js/config.js and add a restricted development key."
+    );
+  }
+  return GIPHY_KEY;
+}
 
 function logPanel(title, data) {
   const time = new Date().toLocaleTimeString();
@@ -23,8 +32,11 @@ function handleStatus(res) {
 
 // Exercise 1: hilarious
 btn1.addEventListener("click", async () => {
-  const url = `https://api.giphy.com/v1/gifs/search?q=hilarious&rating=g&api_key=${GIPHY_KEY}`;
   try {
+    const url = new URL("https://api.giphy.com/v1/gifs/search");
+    url.searchParams.set("q", "hilarious");
+    url.searchParams.set("rating", "g");
+    url.searchParams.set("api_key", requireGiphyKey());
     const res = await fetch(url);
     handleStatus(res);
     const json = await res.json();
@@ -44,15 +56,15 @@ btn1.addEventListener("click", async () => {
 
 // Exercise 2: sun, limit 10, offset 2
 btn2.addEventListener("click", async () => {
-  const url = new URL("https://api.giphy.com/v1/gifs/search");
-  url.searchParams.set("q", "sun");
-  url.searchParams.set("limit", "10");
-  url.searchParams.set("offset", "2"); // starting position 2
-  url.searchParams.set("rating", "g");
-  url.searchParams.set("api_key", GIPHY_KEY);
-
   try {
-    const res = await fetch(url.toString());
+    const url = new URL("https://api.giphy.com/v1/gifs/search");
+    url.searchParams.set("q", "sun");
+    url.searchParams.set("limit", "10");
+    url.searchParams.set("offset", "2"); // starting position 2
+    url.searchParams.set("rating", "g");
+    url.searchParams.set("api_key", requireGiphyKey());
+
+    const res = await fetch(url);
     handleStatus(res);
     const json = await res.json();
     console.log("Exercise 2 — full JSON:", json); // Console.log the JS object
@@ -91,7 +103,7 @@ function resolveAfter2Seconds() {
 async function asyncCall() {
   console.log("calling");
   logPanel("Exercise 4", "calling");
-  let result = await resolveAfter2Seconds();
+  const result = await resolveAfter2Seconds();
   console.log(result);
   logPanel("Exercise 4", result);
 }

@@ -1,5 +1,7 @@
 # Exercises XP — Fetch API & Async/Await (separate files)
 
+> Current evidence (2026-08-24): source and safe configuration pattern present; live Giphy/SWAPI behavior, browser accessibility, explanation, and mastery are unverified.
+
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">
 
@@ -18,8 +20,8 @@
 | Metric | Value |
 |---|---:|
 | Readiness | **80%** |
-| Files | 5 |
-| Source files | 3 |
+| Files | 7 |
+| Source files | 4 |
 | Test files | 0 |
 | Text lines | 206 |
 
@@ -30,15 +32,15 @@
 
 ### 🚀 Run
 
-```bash
+```powershell
+Copy-Item .\Week4AdvAsynchronousJavaScript\Day5FetchAndAsyncAwait\Exercises\ExercisesXP\js\config.example.js .\Week4AdvAsynchronousJavaScript\Day5FetchAndAsyncAwait\Exercises\ExercisesXP\js\config.js
 python -m http.server 8000
-node Week4AdvAsynchronousJavaScript/Day5FetchAndAsyncAwait/Exercises/ExercisesXP/js/app.js
 ```
 
 ### 🟢 What is already strong
 
 - ✅ README documentation is generated and repeatable.
-- ✅ Contains 3 source file(s) across practical exercises or projects.
+- ✅ Contains 4 source file(s) across practical exercises or projects.
 - ✅ No Python syntax error was detected in this folder tree.
 - ✅ A likely runnable entry point was detected.
 
@@ -71,20 +73,23 @@ exercises-xp-fetch-async/
 ├─ css/
 │  └─ styles.css
 └─ js/
-   └─ app.js          # Implementations for Exercises 1–4
+   ├─ app.js          # Implementations for Exercises 1–4
+   └─ config.example.js # Safe template; local config.js stays ignored
 ```
 
 ## Usage
-1. Open `index.html` in a browser with internet access.
-2. Open DevTools (Console).
-3. Click each button to run the respective exercise:
+1. Copy `js/config.example.js` to `js/config.js` and replace the placeholder with a restricted personal development key. Root `.gitignore` keeps `config.js` untracked.
+2. From the repository root, run `python -m http.server 8000` and open the exercise through that local server.
+3. Open DevTools (Console).
+4. Click each button to run the respective exercise:
    - Exercise 1: Giphy search for “hilarious” — logs full JSON to console and a summary to the panel.
    - Exercise 2: Giphy search for “sun” with `limit=10&offset=2` — logs full JSON and shows titles.
    - Exercise 3: SWAPI starship (async/await only) — logs `objectStarWars.result` to console and the name to the panel.
    - Exercise 4: Shows `calling` immediately, then after ~2 seconds `resolved`.
 
 ## Notes
-- Uses the provided GIPHY API key from the prompt.
+- The earlier hard-coded Giphy credential was removed from the current tree. Treat any key previously committed to Git history as exposed and rotate/revoke it if it belongs to you.
+- Browser API keys remain visible to site visitors; use a restricted development key here, never a production secret.
 - All requests check `response.ok` and throw for non-2xx status codes, caught with `try/catch`.
 - Panel shows a compact summary; the Console displays the full response objects.
 - Emojis are used for clarity; no hearts.

@@ -1,4 +1,4 @@
-# Day1 Introduction To Databases
+# 🗄️ Day 1 — Introduction to Databases
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">

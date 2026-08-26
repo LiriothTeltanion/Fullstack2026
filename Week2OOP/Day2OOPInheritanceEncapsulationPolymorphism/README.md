@@ -1,4 +1,4 @@
-# 🏗️ Day 2 - OOP: Inheritance, Encapsulation, Polymorphism
+# 🏛️ Day 2 — Inheritance, Encapsulation and Polymorphism
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">

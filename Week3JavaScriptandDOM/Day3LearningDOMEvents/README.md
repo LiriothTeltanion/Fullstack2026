@@ -1,4 +1,4 @@
-# Day3 Learning DOMEvents
+# 🖱️ Day 3 — DOM Events
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">

@@ -1,4 +1,4 @@
-# 📅 Day 4 - Functions
+# 🧩 Day 4 — Functions
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">

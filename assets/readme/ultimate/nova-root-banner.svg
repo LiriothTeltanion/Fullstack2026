@@ -1,25 +1,77 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="title desc">
-<title id="title">Fullstack2026 animated portfolio banner</title>
-<desc id="desc">A cosmic six-week learning path from Python to databases and Node.js.</desc>
-<defs>
-  <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#050816"/><stop offset=".48" stop-color="#10184a"/><stop offset="1" stop-color="#071b2e"/></linearGradient>
-  <linearGradient id="tg" x1="0" x2="1"><stop stop-color="#67e8f9"/><stop offset=".42" stop-color="#c4b5fd"/><stop offset=".72" stop-color="#f9a8d4"/><stop offset="1" stop-color="#86efac"/></linearGradient>
-  <filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  <path id="comet" d="M35 72 C250 5 430 145 640 72 S1000 12 1165 92"/>
-  <style>.title{font:900 62px 'Segoe UI',Arial,sans-serif;letter-spacing:5px;fill:url(#tg)}.sub{font:600 20px 'Segoe UI',Arial,sans-serif;fill:#dbeafe;letter-spacing:1.2px}.micro{font:700 11px 'Segoe UI',Arial,sans-serif;fill:#94a3b8;letter-spacing:.8px}.small{font:800 14px 'Segoe UI',Arial,sans-serif;fill:#f8fafc}.tiny{font:900 11px 'Segoe UI',Arial,sans-serif;fill:#07111f}</style>
-</defs>
-<rect width="1200" height="340" rx="28" fill="url(#bg)"/>
-<g opacity=".5"><circle cx="65" cy="48" r="1.8" fill="#fff"><animate attributeName="opacity" values=".15;1;.15" dur="3.1s" repeatCount="indefinite"/></circle><circle cx="175" cy="116" r="1.4" fill="#67e8f9"><animate attributeName="opacity" values="1;.15;1" dur="4.3s" repeatCount="indefinite"/></circle><circle cx="335" cy="43" r="1.5" fill="#fff"><animate attributeName="opacity" values=".2;1;.2" dur="2.8s" repeatCount="indefinite"/></circle><circle cx="515" cy="105" r="2" fill="#c4b5fd"><animate attributeName="opacity" values="1;.2;1" dur="3.7s" repeatCount="indefinite"/></circle><circle cx="765" cy="45" r="1.6" fill="#fff"><animate attributeName="opacity" values=".1;1;.1" dur="3.5s" repeatCount="indefinite"/></circle><circle cx="945" cy="120" r="1.5" fill="#86efac"><animate attributeName="opacity" values="1;.1;1" dur="4.1s" repeatCount="indefinite"/></circle><circle cx="1125" cy="44" r="2" fill="#fff"><animate attributeName="opacity" values=".2;1;.2" dur="3s" repeatCount="indefinite"/></circle></g>
-<use xlink:href="#comet" fill="none" stroke="#67e8f9" stroke-opacity=".18" stroke-width="2" stroke-dasharray="8 13"/>
-<circle r="6" fill="#fff" filter="url(#glow)"><animateMotion dur="8s" repeatCount="indefinite"><mpath xlink:href="#comet"/></animateMotion></circle>
-<text x="600" y="105" text-anchor="middle" class="title" filter="url(#glow)">FULLSTACK 2026</text>
-<text x="600" y="143" text-anchor="middle" class="sub">LEARN · BUILD · TEST · DOCUMENT · AUTOMATE · SHIP</text>
-<text x="600" y="180" text-anchor="middle" class="micro">A PROGRESSIVE ENGINEERING JOURNEY BY KEVIN “LIRIOTH” CUSNIR</text>
-<path d="M85 223 C240 188 370 238 510 209 S770 185 1115 219" fill="none" stroke="url(#tg)" stroke-width="4" stroke-linecap="round" stroke-dasharray="12 12"><animate attributeName="stroke-dashoffset" from="0" to="-96" dur="5s" repeatCount="indefinite"/></path>
-<g transform="translate(120 263)"><rect x="-72" y="-34" width="144" height="68" rx="18" fill="#0b1330" stroke="#38bdf8" stroke-width="2"><animate attributeName="opacity" values=".72;1;.72" dur="3.2s" repeatCount="indefinite"/></rect><circle cx="-49" cy="0" r="12" fill="#38bdf8"><animate attributeName="r" values="10;14;10" dur="3.2s" repeatCount="indefinite"/></circle><text x="-49" y="5" text-anchor="middle" class="tiny">1</text><text x="-25" y="-4" class="small">W1</text><text x="-25" y="17" class="micro">PYTHON</text></g>
-<g transform="translate(300 263)"><rect x="-72" y="-34" width="144" height="68" rx="18" fill="#0b1330" stroke="#a78bfa" stroke-width="2"><animate attributeName="opacity" values=".72;1;.72" dur="3.2s" begin=".22s" repeatCount="indefinite"/></rect><circle cx="-49" cy="0" r="12" fill="#a78bfa"/><text x="-49" y="5" text-anchor="middle" class="tiny">2</text><text x="-25" y="-4" class="small">W2</text><text x="-25" y="17" class="micro">OOP</text></g>
-<g transform="translate(480 263)"><rect x="-72" y="-34" width="144" height="68" rx="18" fill="#0b1330" stroke="#f472b6" stroke-width="2"><animate attributeName="opacity" values=".72;1;.72" dur="3.2s" begin=".44s" repeatCount="indefinite"/></rect><circle cx="-49" cy="0" r="12" fill="#f472b6"/><text x="-49" y="5" text-anchor="middle" class="tiny">3</text><text x="-25" y="-4" class="small">W3</text><text x="-25" y="17" class="micro">DOM</text></g>
-<g transform="translate(660 263)"><rect x="-72" y="-34" width="144" height="68" rx="18" fill="#0b1330" stroke="#f59e0b" stroke-width="2"><animate attributeName="opacity" values=".72;1;.72" dur="3.2s" begin=".66s" repeatCount="indefinite"/></rect><circle cx="-49" cy="0" r="12" fill="#f59e0b"/><text x="-49" y="5" text-anchor="middle" class="tiny">4</text><text x="-25" y="-4" class="small">W4</text><text x="-25" y="17" class="micro">ASYNC</text></g>
-<g transform="translate(840 263)"><rect x="-72" y="-34" width="144" height="68" rx="18" fill="#0b1330" stroke="#22c55e" stroke-width="2"><animate attributeName="opacity" values=".72;1;.72" dur="3.2s" begin=".88s" repeatCount="indefinite"/></rect><circle cx="-49" cy="0" r="12" fill="#22c55e"/><text x="-49" y="5" text-anchor="middle" class="tiny">5</text><text x="-25" y="-4" class="small">W5</text><text x="-25" y="17" class="micro">TYPESCRIPT</text></g>
-<g transform="translate(1020 263)"><rect x="-72" y="-34" width="144" height="68" rx="18" fill="#0b1330" stroke="#06b6d4" stroke-width="2"><animate attributeName="opacity" values=".72;1;.72" dur="3.2s" begin="1.1s" repeatCount="indefinite"/></rect><circle cx="-49" cy="0" r="12" fill="#06b6d4"/><text x="-49" y="5" text-anchor="middle" class="tiny">6</text><text x="-25" y="-4" class="small">W6</text><text x="-25" y="17" class="micro">DATA + NODE</text></g>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Fullstack2026 twelve-week course observatory</title>
+  <desc id="desc">An accessible Blue Obsidian portfolio banner showing Weeks 1 through 6 as source-backed and Weeks 7 through 12 as structure-ready with official coursework pending.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#040714"/>
+      <stop offset="0.54" stop-color="#0b1740"/>
+      <stop offset="1" stop-color="#071c2d"/>
+    </linearGradient>
+    <linearGradient id="signal-gradient" x1="0" x2="1">
+      <stop stop-color="#38bdf8"/>
+      <stop offset="0.5" stop-color="#818cf8"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#60a5fa" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+    <filter id="soft-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .eyebrow { font: 700 15px "Segoe UI", Arial, sans-serif; letter-spacing: 3px; fill: #7dd3fc; }
+      .title { font: 900 52px "Segoe UI", Arial, sans-serif; letter-spacing: 3px; fill: #f8fafc; }
+      .subtitle { font: 600 19px "Segoe UI", Arial, sans-serif; fill: #cbd5e1; }
+      .panel-title { font: 800 18px "Segoe UI", Arial, sans-serif; letter-spacing: 1px; fill: #f8fafc; }
+      .panel-note { font: 600 13px "Segoe UI", Arial, sans-serif; fill: #a5b4fc; }
+      .week { font: 800 14px "Segoe UI", Arial, sans-serif; fill: #f8fafc; }
+      .week-dark { font: 900 13px "Segoe UI", Arial, sans-serif; fill: #04101e; }
+      .truth { font: 650 14px "Segoe UI", Arial, sans-serif; fill: #bae6fd; }
+      .signature { font: 700 13px "Segoe UI", Arial, sans-serif; letter-spacing: 1px; fill: #94a3b8; }
+      .signal { animation: signal-sweep 12s linear infinite; }
+      @keyframes signal-sweep { to { stroke-dashoffset: -240; } }
+      @media (prefers-reduced-motion: reduce) {
+        .signal { animation: none; stroke-dasharray: none; opacity: 0.42; }
+      }
+    </style>
+  </defs>
+
+  <rect width="1200" height="420" rx="28" fill="url(#background)"/>
+  <rect x="1" y="1" width="1198" height="418" rx="27" fill="url(#grid)" stroke="#25345f" stroke-width="2"/>
+  <path d="M88 198 H1112" stroke="#1e2d52" stroke-width="8" stroke-linecap="round"/>
+  <path class="signal" d="M88 198 H1112" stroke="url(#signal-gradient)" stroke-width="3" stroke-linecap="round" stroke-dasharray="18 22" filter="url(#soft-glow)"/>
+
+  <text x="76" y="55" class="eyebrow">NOVA COURSE OBSERVATORY · EVIDENCE MODE</text>
+  <text x="76" y="112" class="title">FULLSTACK 2026</text>
+  <text x="76" y="151" class="subtitle">A twelve-week learning repository built in public with explicit evidence boundaries.</text>
+  <text x="1124" y="56" text-anchor="end" class="signature">KEVIN CUSNIR · LIRIOTH TELTANION</text>
+
+  <g aria-label="Weeks 1 through 6 contain source files">
+    <rect x="76" y="225" width="512" height="130" rx="22" fill="#071127" stroke="#38bdf8" stroke-width="2"/>
+    <circle cx="105" cy="255" r="8" fill="#38bdf8"/>
+    <text x="124" y="262" class="panel-title">SOURCE-BACKED COURSEWORK</text>
+    <text x="124" y="284" class="panel-note">WEEK ROOTS 1–6 · PRESENCE IS NOT COMPLETION</text>
+    <g transform="translate(116 322)"><circle r="20" fill="#38bdf8"/><text y="5" text-anchor="middle" class="week-dark">W1</text></g>
+    <g transform="translate(198 322)"><circle r="20" fill="#38bdf8"/><text y="5" text-anchor="middle" class="week-dark">W2</text></g>
+    <g transform="translate(280 322)"><circle r="20" fill="#38bdf8"/><text y="5" text-anchor="middle" class="week-dark">W3</text></g>
+    <g transform="translate(362 322)"><circle r="20" fill="#38bdf8"/><text y="5" text-anchor="middle" class="week-dark">W4</text></g>
+    <g transform="translate(444 322)"><circle r="20" fill="#38bdf8"/><text y="5" text-anchor="middle" class="week-dark">W5</text></g>
+    <g transform="translate(526 322)"><circle r="20" fill="#38bdf8"/><text y="5" text-anchor="middle" class="week-dark">W6</text></g>
+  </g>
+
+  <g aria-label="Weeks 7 through 12 are scaffolds awaiting official coursework">
+    <rect x="612" y="225" width="512" height="130" rx="22" fill="#0c1027" stroke="#a78bfa" stroke-width="2"/>
+    <rect x="97" y="247" width="16" height="16" rx="3" fill="none" stroke="#a78bfa" stroke-width="3" transform="translate(536 0)"/>
+    <text x="660" y="262" class="panel-title">STRUCTURE READY · CONTENT PENDING</text>
+    <text x="660" y="284" class="panel-note">WEEK ROOTS 7–12 · OFFICIAL SOURCE REQUIRED</text>
+    <g transform="translate(652 322)"><rect x="-20" y="-20" width="40" height="40" rx="8" fill="none" stroke="#a78bfa" stroke-width="3"/><text y="5" text-anchor="middle" class="week">W7</text></g>
+    <g transform="translate(734 322)"><rect x="-20" y="-20" width="40" height="40" rx="8" fill="none" stroke="#a78bfa" stroke-width="3"/><text y="5" text-anchor="middle" class="week">W8</text></g>
+    <g transform="translate(816 322)"><rect x="-20" y="-20" width="40" height="40" rx="8" fill="none" stroke="#a78bfa" stroke-width="3"/><text y="5" text-anchor="middle" class="week">W9</text></g>
+    <g transform="translate(898 322)"><rect x="-20" y="-20" width="40" height="40" rx="8" fill="none" stroke="#a78bfa" stroke-width="3"/><text y="5" text-anchor="middle" class="week">W10</text></g>
+    <g transform="translate(980 322)"><rect x="-20" y="-20" width="40" height="40" rx="8" fill="none" stroke="#a78bfa" stroke-width="3"/><text y="5" text-anchor="middle" class="week">W11</text></g>
+    <g transform="translate(1062 322)"><rect x="-20" y="-20" width="40" height="40" rx="8" fill="none" stroke="#a78bfa" stroke-width="3"/><text y="5" text-anchor="middle" class="week">W12</text></g>
+  </g>
+
+  <text x="600" y="392" text-anchor="middle" class="truth">Repository evidence only · course progress and learning mastery are never inferred</text>
 </svg>

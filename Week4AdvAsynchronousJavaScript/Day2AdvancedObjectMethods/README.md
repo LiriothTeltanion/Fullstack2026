@@ -1,4 +1,4 @@
-# Day2 Advanced Object Methods
+# 🧱 Day 2 — Advanced Object Methods
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">

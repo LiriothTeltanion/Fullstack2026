@@ -1,4 +1,4 @@
-# 📅 Day 2 - Lists, Iterating and Formatting Data
+# 📚 Day 2 — Lists, Iteration and Data Formatting
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">

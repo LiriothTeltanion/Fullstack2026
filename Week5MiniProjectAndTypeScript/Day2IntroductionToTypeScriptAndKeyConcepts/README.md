@@ -1,4 +1,4 @@
-# Day2 Introduction To Type Script And Key Concepts
+# 🔷 Day 2 — TypeScript Fundamentals and Key Concepts
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">

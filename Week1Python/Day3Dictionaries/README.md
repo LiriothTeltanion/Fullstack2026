@@ -1,4 +1,4 @@
-# 📅 Day 3 - Dictionaries
+# 🗂️ Day 3 — Dictionaries
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">
