@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "generated_on": "2026-08-24",
+  "generated_on": "2026-08-26",
   "generator": "tools/refresh_structure_catalogs.py",
-  "base_head": "d34c038c5b495c8cce1195b6c27da5315a990d82",
-  "source_index_sha256": "544957e4fe276012ee9449e58adc3a245582b77e73ecbb55988a5bd9ddc460b7",
+  "base_head": "8bfb4da7827a13f3c697d5637d83529bdad0be78",
+  "source_index_sha256": "b72b8e12c42f3fc4e40e5dccd8d7be77399a0a4e80ef295235fb7e566270053d",
   "source_index_file_count": 874,
   "fingerprint_excludes": [
     "reports/nova/catalog_manifest.json",
