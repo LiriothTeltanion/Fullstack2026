@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "generated_on": "2026-08-24",
+  "generator": "tools/refresh_structure_catalogs.py",
+  "base_head": "d34c038c5b495c8cce1195b6c27da5315a990d82",
+  "source_index_sha256": "544957e4fe276012ee9449e58adc3a245582b77e73ecbb55988a5bd9ddc460b7",
+  "source_index_file_count": 874,
+  "fingerprint_excludes": [
+    "reports/nova/catalog_manifest.json",
+    "reports/nova/exercise_catalog.csv",
+    "reports/nova/exercise_catalog.md",
+    "reports/nova/file_inventory.csv",
+    "reports/nova/tree.txt",
+    "reports/nova/rename_plan.csv",
+    "reports/nova/README.md"
+  ],
+  "catalog_metadata_source": "reports/nova/exercise_catalog_metadata.csv",
+  "evidence_boundary": "Path and indexed-blob evidence only; not runtime, learning, mastery, or portfolio proof."
+}

@@ -1,4 +1,4 @@
-# Day5 Mini Project
+# 🎮 Day 5 — Mini-projects
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">

@@ -1,4 +1,4 @@
-# Day3 Advanced Type Script Concepts And Applications
+# 🏗️ Day 3 — Advanced TypeScript Concepts and Applications
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">

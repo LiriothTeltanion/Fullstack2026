@@ -1,4 +1,4 @@
-# 📄 Day 4 - Python File I/O, JSON and API
+# 📄 Day 4 — File I/O, JSON and APIs
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">

@@ -1,4 +1,4 @@
-# Day2 Database Concepts1
+# 🔎 Day 2 — Database Concepts I
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">

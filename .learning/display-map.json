@@ -1,0 +1,425 @@
+{
+  "schema_version": 1,
+  "repository": "LiriothTeltanion/Fullstack2026",
+  "last_reviewed": "2026-08-24",
+  "timezone": "Asia/Jerusalem",
+  "policy": {
+    "icons_are_display_only": true,
+    "physical_paths_renamed": false,
+    "stable_paths_must_be_ascii": true,
+    "official_assignment_names_must_be_source_backed": true
+  },
+  "root": {
+    "path": ".",
+    "icon": "🌌",
+    "title": "Fullstack2026 Course Observatory",
+    "display_title": "🌌 Fullstack2026 Course Observatory"
+  },
+  "infrastructure": [
+    {
+      "path": ".ai",
+      "icon": "🤖",
+      "title": "AI Collaboration Context",
+      "display_title": "🤖 AI Collaboration Context"
+    },
+    {
+      "path": ".github",
+      "icon": "⚙️",
+      "title": "GitHub Automation and Templates",
+      "display_title": "⚙️ GitHub Automation and Templates"
+    },
+    {
+      "path": ".learning",
+      "icon": "🎓",
+      "title": "Learning Evidence and Course State",
+      "display_title": "🎓 Learning Evidence and Course State"
+    },
+    {
+      "path": "assets",
+      "icon": "🎨",
+      "title": "Visual Assets",
+      "display_title": "🎨 Visual Assets"
+    },
+    {
+      "path": "reports",
+      "icon": "📊",
+      "title": "Audits and Evidence Reports",
+      "display_title": "📊 Audits and Evidence Reports"
+    },
+    {
+      "path": "tests",
+      "icon": "🧪",
+      "title": "Automated Tests",
+      "display_title": "🧪 Automated Tests"
+    },
+    {
+      "path": "tools",
+      "icon": "🛠️",
+      "title": "Repository Tools",
+      "display_title": "🛠️ Repository Tools"
+    }
+  ],
+  "weeks": [
+    {
+      "id": "week-1",
+      "path": "Week1Python",
+      "icon": "🐍",
+      "title": "Week 1 — Python Fundamentals",
+      "display_title": "🐍 Week 1 — Python Fundamentals",
+      "readme": "Week1Python/README.md",
+      "days": [
+        {
+          "path": "Week1Python/Day1StartingwithPython",
+          "icon": "🐣",
+          "title": "Day 1 — Starting with Python",
+          "display_title": "🐣 Day 1 — Starting with Python"
+        },
+        {
+          "path": "Week1Python/Day2ListsIteratingAndFormattingData",
+          "icon": "📚",
+          "title": "Day 2 — Lists, Iteration and Data Formatting",
+          "display_title": "📚 Day 2 — Lists, Iteration and Data Formatting"
+        },
+        {
+          "path": "Week1Python/Day3Dictionaries",
+          "icon": "🗂️",
+          "title": "Day 3 — Dictionaries",
+          "display_title": "🗂️ Day 3 — Dictionaries"
+        },
+        {
+          "path": "Week1Python/Day4Functions",
+          "icon": "🧩",
+          "title": "Day 4 — Functions",
+          "display_title": "🧩 Day 4 — Functions"
+        },
+        {
+          "path": "Week1Python/Day5MiniProject",
+          "icon": "🎮",
+          "title": "Day 5 — Mini-projects",
+          "display_title": "🎮 Day 5 — Mini-projects"
+        }
+      ]
+    },
+    {
+      "id": "week-2",
+      "path": "Week2OOP",
+      "icon": "🏗️",
+      "title": "Week 2 — Object-Oriented Programming",
+      "display_title": "🏗️ Week 2 — Object-Oriented Programming",
+      "readme": "Week2OOP/README.md",
+      "days": [
+        {
+          "path": "Week2OOP/Day1IntroductiontoOOP",
+          "icon": "🧱",
+          "title": "Day 1 — Introduction to Object-Oriented Programming",
+          "display_title": "🧱 Day 1 — Introduction to Object-Oriented Programming"
+        },
+        {
+          "path": "Week2OOP/Day2OOPInheritanceEncapsulationPolymorphism",
+          "icon": "🏛️",
+          "title": "Day 2 — Inheritance, Encapsulation and Polymorphism",
+          "display_title": "🏛️ Day 2 — Inheritance, Encapsulation and Polymorphism"
+        },
+        {
+          "path": "Week2OOP/Day3OOPandModules",
+          "icon": "📦",
+          "title": "Day 3 — OOP and Modules",
+          "display_title": "📦 Day 3 — OOP and Modules"
+        },
+        {
+          "path": "Week2OOP/Day4PythonFileIOJSONandAPI",
+          "icon": "📄",
+          "title": "Day 4 — File I/O, JSON and APIs",
+          "display_title": "📄 Day 4 — File I/O, JSON and APIs"
+        },
+        {
+          "path": "Week2OOP/Day5MiniProject",
+          "icon": "🔤",
+          "title": "Day 5 — Mini-projects",
+          "display_title": "🔤 Day 5 — Mini-projects"
+        },
+        {
+          "path": "Week2OOP/RemoteLearningOOP",
+          "icon": "🛰️",
+          "title": "Remote Learning — Object-Oriented Programming",
+          "display_title": "🛰️ Remote Learning — Object-Oriented Programming"
+        }
+      ]
+    },
+    {
+      "id": "week-3",
+      "path": "Week3JavaScriptandDOM",
+      "icon": "🌐",
+      "title": "Week 3 — JavaScript and the DOM",
+      "display_title": "🌐 Week 3 — JavaScript and the DOM",
+      "readme": "Week3JavaScriptandDOM/README.md",
+      "days": [
+        {
+          "path": "Week3JavaScriptandDOM/Day1IntroductiontoJavaScript",
+          "icon": "🟨",
+          "title": "Day 1 — Introduction to JavaScript",
+          "display_title": "🟨 Day 1 — Introduction to JavaScript"
+        },
+        {
+          "path": "Week3JavaScriptandDOM/Day2FunctionsandDOMIntroduction",
+          "icon": "🧩",
+          "title": "Day 2 — Functions and DOM Introduction",
+          "display_title": "🧩 Day 2 — Functions and DOM Introduction"
+        },
+        {
+          "path": "Week3JavaScriptandDOM/Day3LearningDOMEvents",
+          "icon": "🖱️",
+          "title": "Day 3 — DOM Events",
+          "display_title": "🖱️ Day 3 — DOM Events"
+        },
+        {
+          "path": "Week3JavaScriptandDOM/Day4AdvancedJavaScriptFunctions",
+          "icon": "🧠",
+          "title": "Day 4 — Advanced JavaScript Functions",
+          "display_title": "🧠 Day 4 — Advanced JavaScript Functions"
+        },
+        {
+          "path": "Week3JavaScriptandDOM/Day5MiniProject",
+          "icon": "🎮",
+          "title": "Day 5 — Mini-projects",
+          "display_title": "🎮 Day 5 — Mini-projects"
+        },
+        {
+          "path": "Week3JavaScriptandDOM/RemoteLearningJSAndDOM",
+          "icon": "🛰️",
+          "title": "Remote Learning — JavaScript and the DOM",
+          "display_title": "🛰️ Remote Learning — JavaScript and the DOM"
+        }
+      ]
+    },
+    {
+      "id": "week-4",
+      "path": "Week4AdvAsynchronousJavaScript",
+      "icon": "⚡",
+      "title": "Week 4 — Advanced and Asynchronous JavaScript",
+      "display_title": "⚡ Week 4 — Advanced and Asynchronous JavaScript",
+      "readme": "Week4AdvAsynchronousJavaScript/README.md",
+      "days": [
+        {
+          "path": "Week4AdvAsynchronousJavaScript/Day1AdvancedArrayMethods",
+          "icon": "🔁",
+          "title": "Day 1 — Advanced Array Methods",
+          "display_title": "🔁 Day 1 — Advanced Array Methods"
+        },
+        {
+          "path": "Week4AdvAsynchronousJavaScript/Day2AdvancedObjectMethods",
+          "icon": "🧱",
+          "title": "Day 2 — Advanced Object Methods",
+          "display_title": "🧱 Day 2 — Advanced Object Methods"
+        },
+        {
+          "path": "Week4AdvAsynchronousJavaScript/Day3HTTPAndFormMethodGETAndPOST",
+          "icon": "🌐",
+          "title": "Day 3 — HTTP and GET/POST Forms",
+          "display_title": "🌐 Day 3 — HTTP and GET/POST Forms"
+        },
+        {
+          "path": "Week4AdvAsynchronousJavaScript/Day4AsynchronousJavaScript",
+          "icon": "⏳",
+          "title": "Day 4 — Asynchronous JavaScript",
+          "display_title": "⏳ Day 4 — Asynchronous JavaScript"
+        },
+        {
+          "path": "Week4AdvAsynchronousJavaScript/Day5FetchAndAsyncAwait",
+          "icon": "⚡",
+          "title": "Day 5 — Fetch and Async/Await",
+          "display_title": "⚡ Day 5 — Fetch and Async/Await"
+        }
+      ]
+    },
+    {
+      "id": "week-5",
+      "path": "Week5MiniProjectAndTypeScript",
+      "icon": "🔷",
+      "title": "Week 5 — Mini-projects and TypeScript",
+      "display_title": "🔷 Week 5 — Mini-projects and TypeScript",
+      "readme": "Week5MiniProjectAndTypeScript/README.md",
+      "days": [
+        {
+          "path": "Week5MiniProjectAndTypeScript/Day1MiniProject",
+          "icon": "🚀",
+          "title": "Day 1 — Mini-projects",
+          "display_title": "🚀 Day 1 — Mini-projects"
+        },
+        {
+          "path": "Week5MiniProjectAndTypeScript/Day2IntroductionToTypeScriptAndKeyConcepts",
+          "icon": "🔷",
+          "title": "Day 2 — TypeScript Fundamentals and Key Concepts",
+          "display_title": "🔷 Day 2 — TypeScript Fundamentals and Key Concepts"
+        },
+        {
+          "path": "Week5MiniProjectAndTypeScript/Day3AdvancedTypeScriptConceptsAndApplications",
+          "icon": "🏗️",
+          "title": "Day 3 — Advanced TypeScript Concepts and Applications",
+          "display_title": "🏗️ Day 3 — Advanced TypeScript Concepts and Applications"
+        },
+        {
+          "path": "Week5MiniProjectAndTypeScript/Day4AdvancedTypeScriptConceptsAndApplications",
+          "icon": "🛡️",
+          "title": "Day 4 — Advanced TypeScript Concepts and Applications",
+          "display_title": "🛡️ Day 4 — Advanced TypeScript Concepts and Applications"
+        }
+      ]
+    },
+    {
+      "id": "week-6",
+      "path": "Week6DatabasesAndNodejs",
+      "icon": "🗄️",
+      "title": "Week 6 — Databases and Node.js",
+      "display_title": "🗄️ Week 6 — Databases and Node.js",
+      "readme": "Week6DatabasesAndNodejs/README.md",
+      "days": [
+        {
+          "path": "Week6DatabasesAndNodejs/Day1IntroductionToDatabases",
+          "icon": "🗄️",
+          "title": "Day 1 — Introduction to Databases",
+          "display_title": "🗄️ Day 1 — Introduction to Databases"
+        },
+        {
+          "path": "Week6DatabasesAndNodejs/Day2DatabaseConcepts1",
+          "icon": "🔎",
+          "title": "Day 2 — Database Concepts I",
+          "display_title": "🔎 Day 2 — Database Concepts I"
+        },
+        {
+          "path": "Week6DatabasesAndNodejs/Day3DatabaseConcepts2",
+          "icon": "🔗",
+          "title": "Day 3 — Database Concepts II",
+          "display_title": "🔗 Day 3 — Database Concepts II"
+        },
+        {
+          "path": "Week6DatabasesAndNodejs/Day4NodejsIntroduction",
+          "icon": "🟢",
+          "title": "Day 4 — Introduction to Node.js",
+          "display_title": "🟢 Day 4 — Introduction to Node.js"
+        }
+      ]
+    },
+    {
+      "id": "week-7",
+      "path": "Week7NodejsAndReact",
+      "icon": "🔗",
+      "title": "Week 7 — Node.js and React",
+      "display_title": "🔗 Week 7 — Node.js and React",
+      "readme": "Week7NodejsAndReact/README.md",
+      "days": []
+    },
+    {
+      "id": "week-8",
+      "path": "Week8React",
+      "icon": "⚛️",
+      "title": "Week 8 — React",
+      "display_title": "⚛️ Week 8 — React",
+      "readme": "Week8React/README.md",
+      "days": []
+    },
+    {
+      "id": "week-9",
+      "path": "Week9Redux",
+      "icon": "🔁",
+      "title": "Week 9 — Redux",
+      "display_title": "🔁 Week 9 — Redux",
+      "readme": "Week9Redux/README.md",
+      "days": []
+    },
+    {
+      "id": "week-10",
+      "path": "Week10AdvancedTypeScriptAndAuthentication",
+      "icon": "🛡️",
+      "title": "Week 10 — Advanced TypeScript and Authentication",
+      "display_title": "🛡️ Week 10 — Advanced TypeScript and Authentication",
+      "readme": "Week10AdvancedTypeScriptAndAuthentication/README.md",
+      "days": []
+    },
+    {
+      "id": "week-11",
+      "path": "Week11FinalProject",
+      "icon": "🛠️",
+      "title": "Week 11 — Final Project",
+      "display_title": "🛠️ Week 11 — Final Project",
+      "readme": "Week11FinalProject/README.md",
+      "days": []
+    },
+    {
+      "id": "week-12",
+      "path": "Week12FinalProject",
+      "icon": "🚀",
+      "title": "Week 12 — Final Project",
+      "display_title": "🚀 Week 12 — Final Project",
+      "readme": "Week12FinalProject/README.md",
+      "days": []
+    }
+  ],
+  "folder_types": [
+    {
+      "segment": "DailyChallenge",
+      "icon": "🎯",
+      "title": "Daily Challenge"
+    },
+    {
+      "segment": "Exercises",
+      "icon": "🧪",
+      "title": "Exercises"
+    },
+    {
+      "segment": "ExercisesXP",
+      "icon": "🥉",
+      "title": "XP Exercises"
+    },
+    {
+      "segment": "ExercisesXPPlus",
+      "icon": "📈",
+      "title": "XP Plus Exercises"
+    },
+    {
+      "segment": "ExercisesXPGold",
+      "icon": "🥇",
+      "title": "XP Gold Exercises"
+    },
+    {
+      "segment": "ExercisesXPNinja",
+      "icon": "🥷",
+      "title": "XP Ninja Exercises"
+    },
+    {
+      "segment": "MiniProject",
+      "icon": "🚀",
+      "title": "Mini-project"
+    },
+    {
+      "segment": "tests",
+      "icon": "🧪",
+      "title": "Tests"
+    },
+    {
+      "segment": "src",
+      "icon": "💻",
+      "title": "Source Code"
+    },
+    {
+      "segment": "css",
+      "icon": "🎨",
+      "title": "Styles"
+    },
+    {
+      "segment": "js",
+      "icon": "🟨",
+      "title": "JavaScript"
+    },
+    {
+      "segment": "files",
+      "icon": "📁",
+      "title": "Files"
+    },
+    {
+      "segment": "task-*",
+      "icon": "📌",
+      "title": "Task"
+    }
+  ]
+}
