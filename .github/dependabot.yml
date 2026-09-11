@@ -1,12 +1,25 @@
 version: 2
+
+# Misma filosofia que NovaMusicLab y IvritSheli: las subidas menores y de
+# parche llegan agrupadas en un solo PR, y las de version mayor sueltas,
+# porque son las unicas que pueden romper el build.
+
 updates:
   - package-ecosystem: npm
     directory: /
     schedule:
       interval: monthly
     open-pull-requests-limit: 5
+    groups:
+      npm-minor-patch:
+        patterns: ["*"]
+        update-types: [minor, patch]
+
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: monthly
     open-pull-requests-limit: 5
+    groups:
+      actions-all:
+        patterns: ["*"]
