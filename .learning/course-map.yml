@@ -62,8 +62,8 @@ weeks:
       - path: Week1Python/Day1StartingwithPython/DailyChallenge/BuildUpAString
         repository_state: verified
         evidence: tests/python/test_week1_day1_daily_challenge.py
-        record: .learning/evidence/2026-09-11-week1-day1-daily-challenge-local.md
-        limitation: existing_local_behavior_only_current_official_requirement_learning_and_platform_unverified
+        record: .learning/evidence/2026-09-11-week1-day1-daily-challenge-alignment.md
+        limitation: requirement_aligned_repository_behavior_only_learning_submission_review_and_grade_unverified
       - path: Week1Python/Day5MiniProject/Exercises/Hangman
         repository_state: verified
         evidence: tests/python/test_hangman.py

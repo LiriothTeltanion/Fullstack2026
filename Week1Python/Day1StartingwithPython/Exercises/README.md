@@ -4,7 +4,7 @@
 
 <div align="center">
 
-<img src="../../../assets/readme/days/week1-day1-python-foundations.svg" width="100%" alt="Week 1 Day 1 Python foundations evidence map: Exercises XP 1–9, Gold 1–2, and Ninja 1–5 are repository-verified by 23 focused tests; the Daily Challenge local flow is tested by 5 tests but official requirement alignment is unverified; learning and Octopus submission remain unverified.">
+<img src="../../../assets/readme/days/week1-day1-python-foundations.svg" width="100%" alt="Week 1 Day 1 Python foundations evidence map: XP 1–9, Gold 1–2, and Ninja 1–5 are repository-verified by 23 focused tests; the Daily Challenge matches the reviewed official prompt and passes 5 focused tests; learning and Octopus submission remain unverified.">
 
 </div>
 
@@ -14,7 +14,7 @@
 | [🥇 Exercises XP Gold](ExercisesXPGold/) | `VERIFIED` for 2 supplied behaviors | [6 tests](../../../tests/python/test_week1_day1_exercises_xp_gold.py) · [dated record](../../../.learning/evidence/2026-09-11-week1-day1-exercises-xp-gold.md) |
 | [🥷 Exercises XP Ninja](ExercisesXPNinja/) | `VERIFIED` for 5 supplied behaviors | [7 tests](../../../tests/python/test_week1_day1_exercises_xp_ninja.py) · [dated record](../../../.learning/evidence/2026-09-11-week1-day1-exercises-xp-ninja.md) |
 
-The separate [Daily Challenge](../DailyChallenge/) has five local regression tests, but current official alignment remains `UNVERIFIED`. Learning, Octopus submission, instructor review, and grade remain `UNVERIFIED` and are not inferred from repository tests.
+The separate [Daily Challenge](../DailyChallenge/) matches the current official prompt reviewed read-only on 2026-09-11 and passes five focused tests. Learning, Octopus submission, checker response, instructor review, and grade remain `UNVERIFIED` and are not inferred from repository tests.
 
 <details>
 <summary>Historical repository snapshot — generated 2026-07-15</summary>

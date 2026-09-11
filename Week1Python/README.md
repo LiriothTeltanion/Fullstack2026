@@ -4,7 +4,7 @@
 
 <div align="center">
 
-<img src="../assets/readme/days/week1-day1-python-foundations.svg" width="100%" alt="Week 1 Day 1 Python foundations evidence map: Exercises XP 1–9, Gold 1–2, and Ninja 1–5 are repository-verified by 23 focused tests; the Daily Challenge local flow is tested by 5 tests but official requirement alignment is unverified; learning and Octopus submission remain unverified.">
+<img src="../assets/readme/days/week1-day1-python-foundations.svg" width="100%" alt="Week 1 Day 1 Python foundations evidence map: XP 1–9, Gold 1–2, and Ninja 1–5 are repository-verified by 23 focused tests; the Daily Challenge matches the reviewed official prompt and passes 5 focused tests; learning and Octopus submission remain unverified.">
 
 </div>
 
@@ -13,9 +13,9 @@
 | [Day 1 · Exercises XP 1–9](Day1StartingwithPython/Exercises/ExercisesXP/) | `VERIFIED` by [10 focused tests](../tests/python/test_week1_day1_exercises_xp.py) | `UNVERIFIED` | `UNVERIFIED` | Kevin explanation |
 | [Day 1 · XP Gold 1–2](Day1StartingwithPython/Exercises/ExercisesXPGold/) | `VERIFIED` by [6 focused tests](../tests/python/test_week1_day1_exercises_xp_gold.py) | `UNVERIFIED` | `UNVERIFIED` | Kevin explanation |
 | [Day 1 · XP Ninja 1–5](Day1StartingwithPython/Exercises/ExercisesXPNinja/) | `VERIFIED` by [7 focused tests](../tests/python/test_week1_day1_exercises_xp_ninja.py) and observed launcher commands | `UNVERIFIED` | `UNVERIFIED` | Kevin prediction and explanation |
-| [Day 1 · Daily local artifact](Day1StartingwithPython/DailyChallenge/) | Local behavior `VERIFIED` by [5 tests](../tests/python/test_week1_day1_daily_challenge.py); official alignment `UNVERIFIED` | `UNVERIFIED` | `UNVERIFIED` | Current prompt or instructor confirmation |
+| [Day 1 · Daily Challenge](Day1StartingwithPython/DailyChallenge/) | Official alignment and repository behavior `VERIFIED` by a read-only source comparison plus [5 tests](../tests/python/test_week1_day1_daily_challenge.py) | `UNVERIFIED` | Submission `UNVERIFIED` | Kevin explanation and manual submission |
 
-See the [Day 1 evidence guide](Day1StartingwithPython/), [XP record](../.learning/evidence/2026-09-10-week1-day1-exercises-xp.md), [Gold record](../.learning/evidence/2026-09-11-week1-day1-exercises-xp-gold.md), [Ninja record](../.learning/evidence/2026-09-11-week1-day1-exercises-xp-ninja.md), and [Daily local audit](../.learning/evidence/2026-09-11-week1-day1-daily-challenge-local.md). Twenty-three focused tests verify the supplied XP, Gold, and Ninja behaviors; five additional tests protect only the existing Daily artifact. They do not change Week 1's overall learning state from `unknown`.
+See the [Day 1 evidence guide](Day1StartingwithPython/), [XP record](../.learning/evidence/2026-09-10-week1-day1-exercises-xp.md), [Gold record](../.learning/evidence/2026-09-11-week1-day1-exercises-xp-gold.md), [Ninja record](../.learning/evidence/2026-09-11-week1-day1-exercises-xp-ninja.md), and [Daily alignment record](../.learning/evidence/2026-09-11-week1-day1-daily-challenge-alignment.md). Twenty-three focused tests verify the supplied XP, Gold, and Ninja behaviors; five additional tests protect the requirement-aligned Daily artifact. They do not change Week 1's overall learning state from `unknown`.
 
 <details>
 <summary>Historical repository snapshot — generated 2026-07-15</summary>
@@ -213,7 +213,7 @@ Lives: 2 | Guessed: A,E,I,O,U,R,S,T
   - Height validation and decision making
 - **🥇 ExercisesXPGold**: 2 supplied behaviors `VERIFIED` by 6 focused repository tests
 - **🥷 ExercisesXPNinja**: Five supplied behaviors repository-verified; learning and platform state `UNVERIFIED`
-- **💪 DailyChallenge**: Source present; current requirement alignment `UNVERIFIED`
+- **💪 DailyChallenge**: Official requirement alignment and repository behavior `VERIFIED` by a read-only comparison plus 5 focused tests; learning and platform outcomes `UNVERIFIED`
 
 **⚡ Key Skills Developed:**
 - Type conversion and input validation

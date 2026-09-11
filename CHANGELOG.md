@@ -66,6 +66,9 @@ does not reinterpret early work as production-ready code.
   output that failed under a Windows CP1252 stream.
 - Repaired the Daily Challenge's nondeterministic shuffle doctest so it verifies
   preserved length and characters instead of one random permutation.
+- Matched the Daily Challenge boundary test to the documented 9, 10, and 11
+  character cases, normalized its authorship metadata, and recorded a sanitized
+  read-only comparison confirming alignment with the current official prompt.
 
 ### Security
 

@@ -4,7 +4,7 @@
 
 <div align="center">
 
-<img src="../../../../assets/readme/days/week1-day1-python-foundations.svg" width="100%" alt="Week 1 Day 1 Python foundations evidence map: Exercises XP 1–9, Gold 1–2, and Ninja 1–5 are repository-verified by 23 focused tests; the Daily Challenge local flow is tested by 5 tests but official requirement alignment is unverified; learning and Octopus submission remain unverified.">
+<img src="../../../../assets/readme/days/week1-day1-python-foundations.svg" width="100%" alt="Week 1 Day 1 Python foundations evidence map: XP 1–9, Gold 1–2, and Ninja 1–5 are repository-verified by 23 focused tests; the Daily Challenge matches the reviewed official prompt and passes 5 focused tests; learning and Octopus submission remain unverified.">
 
 </div>
 
@@ -12,11 +12,11 @@
 |---|---|---|
 | XP Gold 1–2 repository behavior | `VERIFIED` | [Six focused tests](../../../../tests/python/test_week1_day1_exercises_xp_gold.py) cover exact repeated output, all 12 month mappings, seasonal transitions, invalid values, and interactive retries. |
 | XP Ninja 1–5 repository behavior | `VERIFIED` | The [Ninja guide](../ExercisesXPNinja/) and [seven-test suite](../../../../tests/python/test_week1_day1_exercises_xp_ninja.py) cover the newly reviewed tier. |
-| Daily local artifact | Local `VERIFIED`; official alignment `UNVERIFIED` | [Five tests](../../../../tests/python/test_week1_day1_daily_challenge.py) protect only existing repository behavior. |
+| Daily Challenge | `VERIFIED` requirement alignment and repository behavior | A read-only source comparison plus [five tests](../../../../tests/python/test_week1_day1_daily_challenge.py) cover the official behavior. |
 | Kevin's understanding | `UNVERIFIED` | Requires Kevin's own explanation, a changed example, independent recreation, and an edge case. |
 | Octopus submission or grade | `UNVERIFIED` | No submission, instructor review, completion, or grade is asserted here. |
 
-Full commands and evidence boundary: [Gold record](../../../../.learning/evidence/2026-09-11-week1-day1-exercises-xp-gold.md) · [Ninja record](../../../../.learning/evidence/2026-09-11-week1-day1-exercises-xp-ninja.md) · [Daily local audit](../../../../.learning/evidence/2026-09-11-week1-day1-daily-challenge-local.md).
+Full commands and evidence boundary: [Gold record](../../../../.learning/evidence/2026-09-11-week1-day1-exercises-xp-gold.md) · [Ninja record](../../../../.learning/evidence/2026-09-11-week1-day1-exercises-xp-ninja.md) · [Daily alignment record](../../../../.learning/evidence/2026-09-11-week1-day1-daily-challenge-alignment.md).
 
 <details>
 <summary>Historical repository snapshot — generated 2026-07-15</summary>
