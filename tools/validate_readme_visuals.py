@@ -41,6 +41,117 @@ def root_image_references(readme: str) -> list[tuple[str, str]]:
     return references
 
 
+def html_image_references(markdown: str) -> list[tuple[str, str]]:
+    """Return HTML image sources and alt text from one Markdown document."""
+
+    references: list[tuple[str, str]] = []
+    for tag in IMG_TAG_RE.findall(markdown):
+        attributes = {match.group("name").lower(): match.group("value") for match in ATTRIBUTE_RE.finditer(tag)}
+        source = attributes.get("src", "").strip()
+        if source:
+            references.append((source, attributes.get("alt", "")))
+    return references
+
+
+def validate_manifest_consumers(
+    repo: Path,
+    manifest_assets: dict[str, dict[str, object]],
+    problems: list[str],
+) -> None:
+    """Keep nested README alt text synchronized with manifested visual truth."""
+
+    excluded_parts = {".git", ".nova", "node_modules", "dist", "build", ".venv"}
+    resolved_repo = repo.resolve()
+    for markdown_path in repo.rglob("*.md"):
+        if any(part in excluded_parts for part in markdown_path.relative_to(repo).parts):
+            continue
+        markdown_relative = markdown_path.relative_to(repo).as_posix()
+        local_references: list[tuple[str, str]] = []
+        for source, alt_text in html_image_references(markdown_path.read_text(encoding="utf-8")):
+            if source.startswith(("http://", "https://", "data:", "#")):
+                continue
+            source_path = PurePosixPath(source.replace("\\", "/"))
+            if source_path.is_absolute():
+                continue
+            resolved_asset = markdown_path.parent.joinpath(*source_path.parts).resolve()
+            try:
+                relative_asset = resolved_asset.relative_to(resolved_repo).as_posix()
+            except ValueError:
+                continue
+            local_references.append((relative_asset, alt_text))
+
+        has_manifested_visual = any(relative in manifest_assets for relative, _ in local_references)
+        for relative_asset, alt_text in local_references:
+            entry = manifest_assets.get(relative_asset)
+            if entry is None:
+                if has_manifested_visual and relative_asset.lower().endswith(".svg"):
+                    problems.append(
+                        "manifested visual consumer references unmanifested SVG: "
+                        f"{markdown_relative}: {relative_asset}"
+                    )
+                continue
+            expected_alt = str(entry.get("alt_text", "")).strip()
+            actual_alt = alt_text.strip()
+            if not actual_alt:
+                problems.append(
+                    f"manifested visual has empty consumer alt text: {markdown_relative}: {relative_asset}"
+                )
+            elif expected_alt and actual_alt != expected_alt:
+                problems.append(
+                    f"manifested visual alt text drift: {markdown_relative}: {relative_asset}"
+                )
+
+
+def validate_svg(
+    relative: str,
+    path: Path,
+    problems: list[str],
+    manifest_entry: dict[str, object] | None = None,
+) -> bool:
+    """Validate one local SVG and return whether it contains animation."""
+
+    text = path.read_text(encoding="utf-8")
+    try:
+        root = ET.fromstring(text)
+    except ET.ParseError as exc:
+        problems.append(f"invalid SVG XML: {relative}: {exc}")
+        return False
+
+    if root.find(f"{SVG_NAMESPACE}title") is None or root.find(f"{SVG_NAMESPACE}desc") is None:
+        problems.append(f"SVG needs title and desc elements: {relative}")
+
+    active_content_text = text.replace("http://www.w3.org/2000/svg", "")
+    if UNSAFE_RE.search(active_content_text):
+        problems.append(f"SVG contains unsafe or remote active content: {relative}")
+    if PRIVATE_VISUAL_RE.search(text):
+        problems.append(f"SVG contains private academy dashboard data: {relative}")
+
+    animated = ANIMATION_RE.search(text) is not None
+    if animated and "prefers-reduced-motion" not in text:
+        problems.append(f"animated SVG lacks reduced-motion behavior: {relative}")
+
+    if manifest_entry is not None:
+        width = root.get("width", "").strip()
+        height = root.get("height", "").strip()
+        actual_dimensions = f"{width}x{height}"
+        expected_dimensions = str(manifest_entry.get("dimensions", "")).strip()
+        if expected_dimensions != actual_dimensions:
+            problems.append(
+                f"visual manifest dimensions drift: {relative}: "
+                f"expected {expected_dimensions!r}, found {actual_dimensions!r}"
+            )
+
+        actual_view_box = " ".join(root.get("viewBox", "").split())
+        expected_view_box = " ".join(str(manifest_entry.get("view_box", "")).split())
+        if expected_view_box != actual_view_box:
+            problems.append(
+                f"visual manifest viewBox drift: {relative}: "
+                f"expected {expected_view_box!r}, found {actual_view_box!r}"
+            )
+
+    return animated
+
+
 def validate(repo: Path) -> list[str]:
     problems: list[str] = []
     readme_path = repo / "README.md"
@@ -54,6 +165,8 @@ def validate(repo: Path) -> list[str]:
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     manifest_assets = {entry["path"]: entry for entry in manifest.get("assets", [])}
     animated: list[str] = []
+
+    validate_manifest_consumers(repo, manifest_assets, problems)
 
     for relative, alt_text in references:
         pure = PurePosixPath(relative)
@@ -69,25 +182,10 @@ def validate(repo: Path) -> list[str]:
         if path.suffix.lower() != ".svg":
             continue
 
-        text = path.read_text(encoding="utf-8")
-        try:
-            root = ET.fromstring(text)
-        except ET.ParseError as exc:
-            problems.append(f"invalid SVG XML: {relative}: {exc}")
-            continue
-        if root.find(f"{SVG_NAMESPACE}title") is None or root.find(f"{SVG_NAMESPACE}desc") is None:
-            problems.append(f"SVG needs title and desc elements: {relative}")
-        active_content_text = text.replace("http://www.w3.org/2000/svg", "")
-        if UNSAFE_RE.search(active_content_text):
-            problems.append(f"SVG contains unsafe or remote active content: {relative}")
-        if PRIVATE_VISUAL_RE.search(text):
-            problems.append(f"SVG contains private academy dashboard data: {relative}")
-        if ANIMATION_RE.search(text):
-            animated.append(relative)
-            if "prefers-reduced-motion" not in text:
-                problems.append(f"animated SVG lacks reduced-motion behavior: {relative}")
-
         entry = manifest_assets.get(relative)
+        if validate_svg(relative, path, problems, entry):
+            animated.append(relative)
+
         if entry is None:
             problems.append(f"README SVG is missing from the visual manifest: {relative}")
         elif entry.get("sha256") != sha256(path):
@@ -97,13 +195,20 @@ def validate(repo: Path) -> list[str]:
         problems.append(f"root README references {len(animated)} animated SVGs; maximum is 1: {animated}")
 
     for relative, entry in manifest_assets.items():
-        path = repo.joinpath(*PurePosixPath(relative).parts)
+        pure = PurePosixPath(relative)
+        if pure.is_absolute() or ".." in pure.parts:
+            problems.append(f"visual manifest path escapes the repository: {relative}")
+            continue
+        path = repo.joinpath(*pure.parts)
         if not path.is_file():
             problems.append(f"manifest asset is missing: {relative}")
-        elif entry.get("sha256") != sha256(path):
+            continue
+        if entry.get("sha256") != sha256(path):
             problems.append(f"visual manifest hash drift: {relative}")
         if entry.get("privacy_review") != "passed_no_private_dashboard_data":
             problems.append(f"manifest privacy review is incomplete: {relative}")
+        if path.suffix.lower() == ".svg":
+            validate_svg(relative, path, problems, entry)
 
     return sorted(set(problems))
 

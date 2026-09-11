@@ -2,7 +2,7 @@
 Purpose: Solutions for Day 1 XP exercises covering Python fundamentals.
 Author: Kevin Cusnir "Lirioth"
 Created: 2025-10-18
-Last Updated: 2025-10-19
+Last Updated: 2026-09-10
 
 Overview:
     - Variables and data types
@@ -16,7 +16,7 @@ Overview:
 from __future__ import annotations
 
 # 🎯 Constants
-HEIGHT_REQUIREMENT_CM = 145  # Minimum height to ride in centimeters
+HEIGHT_REQUIREMENT_CM = 145  # Rider must be taller than this threshold.
 MY_NAME = "Kevin"  # Used in exercise 8 for name comparison
 
 
@@ -42,7 +42,7 @@ def exercise_2() -> None:
     Demonstrates operator precedence: exponentiation (**) before multiplication (*).
     
     Example Output:
-        768032
+        7762392
     """
     print((99**3) * 8)
 
@@ -186,7 +186,7 @@ def exercise_8() -> None:
 
 def exercise_9() -> None:
     """
-    Check whether the user meets height requirement (>= 145cm).
+    Check whether the user's height is strictly over 145cm.
     
     Validates height input and provides helpful feedback.
     
@@ -195,10 +195,10 @@ def exercise_9() -> None:
         ✅ You are tall enough to ride! (150cm)
     """
     height = read_int("Enter your height in cm: ", min_val=0, max_val=300)
-    if height >= HEIGHT_REQUIREMENT_CM:
+    if height > HEIGHT_REQUIREMENT_CM:
         print(f"✅ You are tall enough to ride! ({height}cm)")
     else:
-        needed = HEIGHT_REQUIREMENT_CM - height
+        needed = HEIGHT_REQUIREMENT_CM + 1 - height
         print(f"❌ You need to grow {needed}cm more to ride.")
 
 

@@ -6,7 +6,36 @@ does not reinterpret early work as production-ready code.
 
 ## [Unreleased]
 
+### Added
+
+- Added source-safe Week 1 Day 1 evidence records and focused regression suites
+  for Exercises XP 1–9, XP Gold 1–2, and XP Ninja 1–5.
+- Added a separate local-behavior audit and five regression tests for the
+  existing Daily Challenge without claiming current official DI alignment.
+- Added one accessible, reduced-motion Day 1 evidence map that distinguishes
+  verified repository behavior from unverified learning and Octopus state.
+
 ### Changed
+
+- Synchronized the root, Week 1, Day 1, Exercises, XP, Gold, Ninja, and Daily
+  guides around the same dated evidence boundary while preserving the July 2026
+  readiness metrics, explanatory text, and underlying generated assets as
+  explicitly historical material.
+- Simplified the Ninja implementation to beginner-readable functions, separated
+  the terminal and launcher exercises, retained predictions as comments, and
+  replaced the fixed attempt cap with a documented blank-line exit.
+- Revised the living Day 1 evidence map in place so eight README consumers show
+  Ninja as repository-verified and Daily as locally tested but officially
+  unverified; learning and Octopus states remain unverified.
+- Removed the ten legacy animated-SVG placements from the five current Day 1
+  guides because those older assets do not implement the current accessibility
+  and reduced-motion contract; the files and historical text remain preserved.
+- Replaced six additional legacy Ninja and Daily image placements with preserved
+  asset links inside historical sections, preventing stale heuristic graphics
+  from competing with the current evidence map.
+- Extended the visual contract to validate manifested nested SVGs, including
+  their XML, dimensions, view box, privacy, reduced-motion behavior, and freedom
+  from unmanifested SVG companions in the same current consumer guide.
 
 - Migrated the root linter from deprecated ESLint 8 configuration to ESLint 10
   flat config with the supported typescript-eslint 8 toolchain.
@@ -19,6 +48,19 @@ does not reinterpret early work as production-ready code.
   project and aligned the NOVA generator and repository-contract tests with the
   new toolchain.
 
+### Fixed
+
+- Corrected the Day 1 XP arithmetic explanation to `(99**3) * 8 = 7762392` and
+  enforced the supplied strict roller-coaster boundary where 145 cm is not over
+  145 cm.
+- Made the Day 1 XP Gold season helper reject months outside 1–12 and return the
+  exact plain-text season names expected by the supplied exercise behavior.
+- Corrected the Ninja text count from 452 formatting-dependent characters to
+  445 characters in one continuous logical string and removed decorative console
+  output that failed under a Windows CP1252 stream.
+- Repaired the Daily Challenge's nondeterministic shuffle doctest so it verifies
+  preserved length and characters instead of one random permutation.
+
 ### Security
 
 - Resolved `eslint-config-prettier` to the patched 10.1.8 line after reviewing
@@ -28,6 +70,26 @@ does not reinterpret early work as production-ready code.
 
 ### Validation
 
+- Six focused XP Gold tests verify exact repeated output, all twelve month
+  mappings, seasonal boundaries, invalid direct values, interactive retries,
+  and exact plain-text season output.
+- The XP and XP Gold subtotal passes 16 focused tests: ten for Exercises XP and
+  six for XP Gold.
+- Seven Ninja tests verify PATH and launcher explanations, ten predicted boolean
+  outputs, the normalized text count, case-insensitive A rejection, and strict
+  longest-record behavior.
+- Five additional tests and six doctest examples protect the existing Daily
+  artifact while its official source alignment remains unverified.
+- The Day 1 focused checkpoint now contains 23 requirement-aligned XP, Gold, and
+  Ninja tests plus 5 local-only Daily regression tests.
+- Repository structure passes for 890 indexed files and 275 indexed directories,
+  including exact-case links, deterministic catalogs, source-safe intake,
+  display titles, privacy, and the expanded visual contract.
+- The complete local suite passes 4 JavaScript tests and 62 Python tests (66
+  total); `npm audit` reports zero known vulnerabilities; and the strict
+  no-write NOVA Quality Gate reports zero errors and zero warnings across 863
+  scanned files.
+
 - ESLint 10.9.1 discovers the same 65 inherited findings as the pre-migration
   baseline: 39 explicit `any`, 22 unused variables, three constant conditions,
   and one debugger statement.
@@ -35,13 +97,15 @@ does not reinterpret early work as production-ready code.
   dependency audit, and the TypeScript semantic anchor on every pull request.
 - A generator regression test keeps the canonical flat config, dependency
   defaults, Node runtime contract, and protected CI workflow synchronized.
-- TypeScript 5.9.3 with Node.js 24 definitions passes the new strict anchor
-  type-check without emitting files.
+- The native TypeScript 7.0.2 CLI with Node.js 24 definitions passes the strict
+  semantic anchor without emitting files; ESLint remains isolated on the
+  separately pinned TypeScript 6.0.2 compatibility package.
 
 ### Known limitations
 
-- TypeScript 7 remains deferred because typescript-eslint 8.68.0 currently
-  documents support for TypeScript versions below 6.1.0.
+- TypeScript 7 lint parsing remains deferred because typescript-eslint 8.68.0
+  currently documents support for TypeScript versions below 6.1.0; only the
+  bounded semantic anchor uses the native TypeScript 7 CLI.
 
 ## [1.2.0] - 2026-08-24
 

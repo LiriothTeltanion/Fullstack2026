@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "LiriothTeltanion/Fullstack2026",
-  "generated_at": "2026-08-24T15:04:34+03:00",
+  "generated_at": "2026-09-11T16:14:51+03:00",
   "timezone": "Asia/Jerusalem",
   "policy": {
     "root_animation_limit": 1,
@@ -74,6 +74,28 @@
       "grayscale_review": "passed_text_shapes_and_connections_remain_distinguishable",
       "responsive_review": "passed_390_css_pixel_overview_with_alt_text_and_readme_table_fallback",
       "last_reviewed": "2026-08-24T15:04:34+03:00"
+    },
+    {
+      "asset_id": "week1-day1-python-foundations-evidence-map",
+      "path": "assets/readme/days/week1-day1-python-foundations.svg",
+      "sha256": "560fca538fcdbf143ee02600fb20772d81bfd440ee31fe4723a78ee19e494ec8",
+      "source_kind": "original_repository_svg_with_ai_assistance",
+      "provenance": "Created from Kevin-supplied Week 1 Day 1 Exercises XP, XP Gold, and XP Ninja behavioral summaries plus local repository test evidence. The Daily card reports only tested local behavior and keeps official alignment unverified; no authenticated screenshot, private Octopus URL, platform percentage, or dashboard data is embedded.",
+      "new_or_reused": "materially_revised",
+      "dimensions": "1200x440",
+      "view_box": "0 0 1200 440",
+      "placement": "Week 1, Day 1, Day 1 Exercises, Exercises XP, Exercises XP Gold, Exercises XP Ninja, Daily Challenge, and Build Up a String README evidence checkpoints",
+      "caption": "Week 1 Day 1 concept path showing XP 1–9, Gold 1–2, and Ninja 1–5 as repository-verified while the Daily local artifact, learning, and Octopus states retain explicit boundaries.",
+      "credit": "Kevin Cusnir / Lirioth Teltanion, with AI-assisted implementation",
+      "alt_text": "Week 1 Day 1 Python foundations evidence map: Exercises XP 1–9, Gold 1–2, and Ninja 1–5 are repository-verified by 23 focused tests; the Daily Challenge local flow is tested by 5 tests but official requirement alignment is unverified; learning and Octopus submission remain unverified.",
+      "crop_safety": "full_canvas_required",
+      "privacy_review": "passed_no_private_dashboard_data",
+      "motion": "one_slow_css_concept_trace_14s_linear_infinite",
+      "reduced_motion": "passed_css_media_query_and_headless_edge_forced_reduced_motion_render",
+      "color_review": "passed_headless_edge_dark_and_light_background_renders_after_ninja_revision",
+      "grayscale_review": "passed_headless_edge_text_shapes_checks_and_status_labels_remain_distinguishable_after_ninja_revision",
+      "responsive_review": "passed_390_css_pixel_headless_edge_render_with_complete_canvas_and_markdown_status_table_fallback_after_ninja_revision",
+      "last_reviewed": "2026-09-11T16:14:51+03:00"
     }
   ]
 }

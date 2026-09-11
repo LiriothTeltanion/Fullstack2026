@@ -1,13 +1,29 @@
 # 🐍 Week 1 — Python Fundamentals
 
+## 🛰️ Current Day 1 evidence — 2026-09-11
+
+<div align="center">
+
+<img src="../assets/readme/days/week1-day1-python-foundations.svg" width="100%" alt="Week 1 Day 1 Python foundations evidence map: Exercises XP 1–9, Gold 1–2, and Ninja 1–5 are repository-verified by 23 focused tests; the Daily Challenge local flow is tested by 5 tests but official requirement alignment is unverified; learning and Octopus submission remain unverified.">
+
+</div>
+
+| Checkpoint | Repository | Learning | Octopus | Next review |
+|---|---|---|---|---|
+| [Day 1 · Exercises XP 1–9](Day1StartingwithPython/Exercises/ExercisesXP/) | `VERIFIED` by [10 focused tests](../tests/python/test_week1_day1_exercises_xp.py) | `UNVERIFIED` | `UNVERIFIED` | Kevin explanation |
+| [Day 1 · XP Gold 1–2](Day1StartingwithPython/Exercises/ExercisesXPGold/) | `VERIFIED` by [6 focused tests](../tests/python/test_week1_day1_exercises_xp_gold.py) | `UNVERIFIED` | `UNVERIFIED` | Kevin explanation |
+| [Day 1 · XP Ninja 1–5](Day1StartingwithPython/Exercises/ExercisesXPNinja/) | `VERIFIED` by [7 focused tests](../tests/python/test_week1_day1_exercises_xp_ninja.py) and observed launcher commands | `UNVERIFIED` | `UNVERIFIED` | Kevin prediction and explanation |
+| [Day 1 · Daily local artifact](Day1StartingwithPython/DailyChallenge/) | Local behavior `VERIFIED` by [5 tests](../tests/python/test_week1_day1_daily_challenge.py); official alignment `UNVERIFIED` | `UNVERIFIED` | `UNVERIFIED` | Current prompt or instructor confirmation |
+
+See the [Day 1 evidence guide](Day1StartingwithPython/), [XP record](../.learning/evidence/2026-09-10-week1-day1-exercises-xp.md), [Gold record](../.learning/evidence/2026-09-11-week1-day1-exercises-xp-gold.md), [Ninja record](../.learning/evidence/2026-09-11-week1-day1-exercises-xp-ninja.md), and [Daily local audit](../.learning/evidence/2026-09-11-week1-day1-daily-challenge-local.md). Twenty-three focused tests verify the supplied XP, Gold, and Ninja behaviors; five additional tests protect only the existing Daily artifact. They do not change Week 1's overall learning state from `unknown`.
+
+<details>
+<summary>Historical repository snapshot — generated 2026-07-15</summary>
+
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">
 
-<img src="../assets/readme/nova-folder-pulse.svg" width="100%" alt="Animated NOVA learning pulse">
-
 ### Week1 Python
-
-<img src="../assets/readme/progress/week1-python-6dd83c5ba0.svg" width="100%" alt="Readiness status for Week1 Python">
 
 **Goal:** Strengthen Python fundamentals through progressive exercises, challenges, and complete console projects.
 
@@ -17,10 +33,10 @@
 
 | Metric | Value |
 |---|---:|
-| Readiness | **80%** |
+| Historical readiness heuristic | **80% · generated 2026-07-15** |
 | Files | 115 |
 | Source files | 35 |
-| Test files | 0 |
+| Colocated test files | 0; four bounded Week 1 suites now live under `tests/python/` |
 | Text lines | 15,917 |
 
 ### ▶️ Main paths
@@ -43,10 +59,11 @@ python Week1Python/Day5MiniProject/Exercises/Hangman/main.py
 - ✅ Contains 35 source file(s) across practical exercises or projects.
 - ✅ No Python syntax error was detected in this folder tree.
 - ✅ A likely runnable entry point was detected.
+- ✅ Centralized bounded tests now cover Day 1 Exercises XP, XP Gold, Hangman, and Tic-Tac-Toe behavior.
 
 ### 🟠 What to improve next
 
-- ⚠️ No local unit test is present yet; repository-wide syntax checks still cover the sources.
+- ⚠️ Most Week 1 exercises and interactive flows still lack requirement-specific runtime tests.
 
 ### 🧪 Validation
 
@@ -61,7 +78,9 @@ node tools/run_node_tests.mjs .
 <sub>Managed by NOVA Ultimate v2.0.0 · 2026-07-15T06:22:47+03:00</sub>
 <!-- NOVA:ULTIMATE:END -->
 
-Master Python fundamentals through progressive daily exercises and exciting mini-projects. This comprehensive week builds from basic syntax to complete applications!
+</details>
+
+Practice Python fundamentals through progressive daily exercises and mini-projects. This week builds from basic syntax to complete applications while keeping repository evidence separate from learning evidence.
 
 ---
 
@@ -72,11 +91,11 @@ Master Python fundamentals through progressive daily exercises and exciting mini
 cd Week1Python
 
 # Start with Day 1 - Basic Exercises
-cd Day1StartingWithPython/Exercises/ExercisesXP
+cd Day1StartingwithPython/Exercises/ExercisesXP
 python exercisesxp.py
 
 # Continue with Day 2 - Lists and Iteration
-cd ../../Day2ListsIteratingAndFormattingData/Exercises/ExercisesXP
+cd ../../../Day2ListsIteratingAndFormattingData/Exercises/ExercisesXP
 python exercisesxp.py
 ```
 
@@ -168,11 +187,11 @@ Lives: 2 | Guessed: A,E,I,O,U,R,S,T
 ---
 ## 📅 Daily Breakdown
 
-### 📚 Day1StartingWithPython - Foundations
+### 📚 Day1StartingwithPython - Foundations
 **Duration**: ⏱️ 4-6 hours | **Difficulty**: 🟢 Beginner
 
 **🎯 Learning Goals:**
-- Master Python syntax and fundamental data types
+- Practice Python syntax and fundamental data types
 - Handle user input/output with proper validation
 - Apply conditional logic for decision-making
 - Create interactive console programs
@@ -192,9 +211,9 @@ Lives: 2 | Guessed: A,E,I,O,U,R,S,T
   - Boolean comparisons and conditional logic
   - Interactive user input programs
   - Height validation and decision making
-- **🥈 ExercisesXPGold**: Enhanced practice with real-world scenarios
-- **🥇 ExercisesXPNinja**: Advanced challenges requiring creative solutions
-- **💪 DailyChallenge**: String manipulation with validation and visualization
+- **🥇 ExercisesXPGold**: 2 supplied behaviors `VERIFIED` by 6 focused repository tests
+- **🥷 ExercisesXPNinja**: Five supplied behaviors repository-verified; learning and platform state `UNVERIFIED`
+- **💪 DailyChallenge**: Source present; current requirement alignment `UNVERIFIED`
 
 **⚡ Key Skills Developed:**
 - Type conversion and input validation
@@ -230,7 +249,7 @@ Lives: 2 | Guessed: A,E,I,O,U,R,S,T
   - Pizza topping calculator with pricing
   - Cinema ticket pricing system
   - Sandwich order processing system
-- **🥈 ExercisesXPGold**: Advanced list comprehensions and data processing
+- **🥇 ExercisesXPGold**: Advanced list comprehensions and data processing
 - **💪 DailyChallenge**: 
   - **ListAndStrings**: Complex string and list manipulation
   - **GoldHappyBirthday**: Interactive birthday greeting system
@@ -311,8 +330,8 @@ Lives: 2 | Guessed: A,E,I,O,U,R,S,T
   - **make_shirt()**: Multiple default parameters and customization
   - **show_magicians() & make_great()**: List manipulation with functions
   - **Weather System**: Temperature reporting with conditional responses
-- **🥈 ExercisesXPGold**: Advanced function patterns and algorithms
-- **🥇 ExercisesXPNinja**: Complex function composition and optimization
+- **🥇 ExercisesXPGold**: Advanced function patterns and algorithms
+- **🥷 ExercisesXPNinja**: Complex function composition and optimization
 - **💪 DailyChallenge**: **SolveTheMatrix** - Multi-dimensional data processing
 - **⚡ TimedChallenge**: **Count Occurrence** - Efficient string analysis
 
@@ -385,7 +404,7 @@ Lives: 2 | Guessed: A,E,I,O,U,R,S,T
 - **Expectation**: Complete all XP exercises before moving to next day
 - **Support**: Detailed explanations and examples provided
 
-### 🥈 XP Gold - Enhanced Practice
+### 🥇 XP Gold - Enhanced Practice
 - **Purpose**: Reinforce concepts with additional scenarios
 - **Expectation**: Recommended for solid understanding
 - **Benefits**: Better preparation for real-world applications
@@ -466,7 +485,7 @@ python tictactoe.py
 ---
 ## ⚠️ Common Challenges & Solutions
 
-### � Error Guide: "If you see this, do this"
+### 🚨 Error Guide: "If you see this, do this"
 
 | Error Message | What It Means | Solution |
 |---------------|---------------|----------|
@@ -478,7 +497,7 @@ python tictactoe.py
 | `ValueError: invalid literal for int()` | Converting non-number to int | Validate input first or use try/except |
 | `IndentationError` | Inconsistent spaces/tabs | Use 4 spaces (not tabs) everywhere |
 
-### �🔧 Detailed Solutions
+### 🔧 Detailed Solutions
 
 #### Problem 1: Input Handling Issues
 **Symptom**: Scripts hang waiting for user input during automated testing
@@ -737,7 +756,7 @@ Before starting Week2 (OOP), ensure you:
 ## 👤 Author
 
 **Kevin Cusnir 'Lirioth'**  
-Repository: [Fullstack2026](https://github.com/Lirioth/Fullstack2026)  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)<br>
 Week 1 Python - Fullstack Bootcamp 2026
 
 ---

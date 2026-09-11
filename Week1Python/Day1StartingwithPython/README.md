@@ -1,13 +1,39 @@
 # 🐣 Day 1 — Starting with Python
 
+## 🛰️ Evidence checkpoint — 2026-09-11
+
+<div align="center">
+
+<img src="../../assets/readme/days/week1-day1-python-foundations.svg" width="100%" alt="Week 1 Day 1 Python foundations evidence map: Exercises XP 1–9, Gold 1–2, and Ninja 1–5 are repository-verified by 23 focused tests; the Daily Challenge local flow is tested by 5 tests but official requirement alignment is unverified; learning and Octopus submission remain unverified.">
+
+</div>
+
+| Evidence layer | State | What the evidence supports |
+|---|---|---|
+| Exercises XP 1–9 | `VERIFIED` | [Ten focused tests](../../tests/python/test_week1_day1_exercises_xp.py) pass against the nine bounded behaviors reviewed from Kevin's supplied requirements. |
+| XP Gold 1–2 | `VERIFIED` | [Six focused tests](../../tests/python/test_week1_day1_exercises_xp_gold.py) cover exact repeated output, all month mappings, boundaries, and input validation. |
+| XP Ninja 1–5 | `VERIFIED` | [Seven focused tests](../../tests/python/test_week1_day1_exercises_xp_ninja.py) plus observed Windows launcher commands cover the supplied Ninja summary. |
+| Daily Challenge local artifact | Local `VERIFIED`; official alignment `UNVERIFIED` | [Five tests](../../tests/python/test_week1_day1_daily_challenge.py) protect the existing flow; the current official prompt or waiver is unavailable. |
+| Kevin's understanding | `UNVERIFIED` | Repository tests do not prove independent explanation, recreation, or transfer. |
+| Octopus submission or grade | `UNVERIFIED` | No platform submission, instructor review, or grade is claimed by this repository. |
+
+**Direct evidence:** [XP guide](Exercises/ExercisesXP/) · [Gold guide](Exercises/ExercisesXPGold/) · [Ninja guide](Exercises/ExercisesXPNinja/) · [Daily source boundary](DailyChallenge/) · [XP record](../../.learning/evidence/2026-09-10-week1-day1-exercises-xp.md) · [Gold record](../../.learning/evidence/2026-09-11-week1-day1-exercises-xp-gold.md) · [Ninja record](../../.learning/evidence/2026-09-11-week1-day1-exercises-xp-ninja.md) · [Daily local audit](../../.learning/evidence/2026-09-11-week1-day1-daily-challenge-local.md)
+
+> `VERIFIED` is deliberately narrow: it describes repository behavior only. It does not mean that the complete day is mastered, submitted, or graded.
+
+**Author:** Kevin Cusnir<br>
+**Creative signature:** Lirioth Teltanion<br>
+**Course:** Fullstack Bootcamp 2026<br>
+**Local README originally updated:** October 18, 2025<br>
+**Evidence checkpoint reviewed:** September 11, 2026
+
+<details>
+<summary>Historical repository snapshot — generated 2026-07-15</summary>
+
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">
 
-<img src="../../assets/readme/nova-folder-pulse.svg" width="100%" alt="Animated NOVA learning pulse">
-
 ### Day1 Startingwith Python
-
-<img src="../../assets/readme/progress/day1-startingwith-python-f31146b1b8.svg" width="100%" alt="Readiness status for Day1 Startingwith Python">
 
 **Goal:** Strengthen Python fundamentals through progressive exercises, challenges, and complete console projects.
 
@@ -17,10 +43,10 @@
 
 | Metric | Value |
 |---|---:|
-| Readiness | **80%** |
+| Historical readiness heuristic | **80% · generated 2026-07-15** |
 | Files | 16 |
 | Source files | 4 |
-| Test files | 0 |
+| Colocated test files | 0; two focused Day 1 suites now live under `tests/python/` |
 | Text lines | 2,056 |
 
 ### ▶️ Main paths
@@ -43,10 +69,11 @@ python Week1Python/Day1StartingwithPython/Exercises/ExercisesXPNinja/exercisesxp
 - ✅ Contains 4 source file(s) across practical exercises or projects.
 - ✅ No Python syntax error was detected in this folder tree.
 - ✅ A likely runnable entry point was detected.
+- ✅ Two centralized focused suites now cover the nine supplied XP behaviors and two supplied Gold behaviors.
 
 ### 🟠 What to improve next
 
-- ⚠️ No local unit test is present yet; repository-wide syntax checks still cover the sources.
+- ⚠️ XP Ninja, Daily Challenge, and Kevin's independent learning evidence remain unverified.
 
 ### 🧪 Validation
 
@@ -61,15 +88,16 @@ node tools/run_node_tests.mjs .
 <sub>Managed by NOVA Ultimate v2.0.0 · 2026-07-15T06:22:48+03:00</sub>
 <!-- NOVA:ULTIMATE:END -->
 
-**Author:** Kevin Cusnir "Lirioth"  
-**Course:** Fullstack Bootcamp 2026  
-**Last Updated:** October 18, 2025
+</details>
+
+<details>
+<summary>Historical learning guide — retained for provenance, not current evidence</summary>
 
 Welcome to your Python programming journey! 🐍 This day covers the fundamental building blocks that form the foundation of all Python programming.
 
 ## Overview
 
-Day 1 establishes the baseline Python skills used throughout the bootcamp. You will practice variables, input/output, conditionals, and string manipulation while exploring progressively harder XP, Gold, and Ninja challenges plus a daily project.
+Day 1 establishes the baseline Python skills used throughout the bootcamp. The repository contains XP, Gold, Ninja, and Daily Challenge source files. This guide predates the current evidence checkpoint above and is preserved as historical learning material.
 
 ## Features
 
@@ -80,8 +108,7 @@ Day 1 establishes the baseline Python skills used throughout the bootcamp. You w
 ## Quick Start
 
 ```bash
-cd Day1StartingWithPython/Exercises/ExercisesXP
-python exercisesxp.py
+python Week1Python/Day1StartingwithPython/Exercises/ExercisesXP/exercisesxp.py
 ```
 
 Run the Gold, Ninja, and Daily Challenge programs from their respective directories using the same pattern.
@@ -92,7 +119,7 @@ Run the Gold, Ninja, and Daily Challenge programs from their respective director
 |--------|-------|
 | **⏰ Duration** | 5-7 hours |
 | **🎯 Difficulty** | 🟢 Beginner |
-| **📝 Exercises** | 9 (XP) + 6 (Gold) + 5 (Ninja) + 1 (Daily Challenge) |
+| **📝 Source inventory** | 9 XP behaviors and 2 Gold behaviors repository-verified; Ninja and Daily Challenge source files await requirement review |
 | **✅ Prerequisites** | None - perfect for absolute beginners! |
 | **🐍 Python Version** | 3.8+ |
 | **📚 Key Topics** | Variables, Data Types, Conditionals, Strings |
@@ -116,7 +143,7 @@ Run the Gold, Ninja, and Daily Challenge programs from their respective director
 
 ## 🎯 Learning Objectives
 
-By the end of this day, you will confidently:
+This day is designed to help you practice how to:
 - ✅ Write Python programs using proper syntax and data types
 - 🔢 Perform arithmetic operations and handle type conversions
 - 💬 Create interactive programs with user input and formatted output
@@ -145,20 +172,20 @@ By the end of this day, you will confidently:
 ## 📁 Directory Structure
 
 ```
-Day1StartingWithPython/
+Day1StartingwithPython/
 ├── 📄 README.md                    # This comprehensive guide
 ├── 🏋️ Exercises/
 │   ├── 🥉 ExercisesXP/             # 9 fundamental exercises
 │   │   ├── exercisesxp.py          # Complete implementation
 │   │   └── README.md               # Exercise descriptions
-│   ├── 🥈 ExercisesXPGold/         # Enhanced practice
+│   ├── 🥇 ExercisesXPGold/         # Additional foundational practice
 │   │   ├── exercisesxpgold.py      # Intermediate challenges
 │   │   └── README.md               # Challenge descriptions
-│   └── 🥇 ExercisesXPNinja/        # Advanced problem-solving
+│   └── 🥷 ExercisesXPNinja/        # Advanced problem-solving
 │       ├── exercisesxpninja.py     # Expert-level challenges
 │       └── README.md               # Advanced concepts
 └── 💪 DailyChallenge/
-    └── BuildUpAString/             # String manipulation mastery
+    └── BuildUpAString/             # String manipulation practice
         ├── buildupastring.py       # Interactive string builder
         └── README.md               # Challenge specifications
 ```
@@ -196,8 +223,8 @@ Plan your learning journey:
 | Activity | Duration | Difficulty |
 |----------|----------|------------|
 | 🥉 **ExercisesXP** | 45-60 minutes | 🟢 Beginner |
-| 🥈 **ExercisesXPGold** | 30-45 minutes | 🟡 Intermediate |
-| 🥇 **ExercisesXPNinja** | 45-60 minutes | 🔴 Advanced |
+| 🥇 **ExercisesXPGold** | 30-45 minutes | 🟢 Beginner |
+| 🥷 **ExercisesXPNinja** | 45-60 minutes | 🔴 Advanced |
 | 💪 **Daily Challenge** | 20-30 minutes | 🟡 Intermediate |
 | **Total Day 1** | 2.5-4 hours | 🟢 Beginner |
 
@@ -212,13 +239,13 @@ Follow this progression for optimal learning:
   ↓
 🥉 ExercisesXP (Required)
   ↓
-🥈 ExercisesXPGold (Recommended)
+🥇 ExercisesXPGold (Recommended)
   ↓
-🥇 ExercisesXPNinja (Optional)
+🥷 ExercisesXPNinja (Optional)
   ↓
-💪 Daily Challenge (Skill Test)
+💪 Daily Challenge (Practice Challenge)
   ↓
-✅ COMPLETE - Ready for Day 2!
+🛰️ REVIEW GATE - verify requirements and explain the solution before Day 2
 ```
 
 ---
@@ -401,9 +428,9 @@ if not is_weekend:
 
 ## 🚀 Getting Started
 
-### 1. 🥉 **ExercisesXP - Foundation Mastery** (Required)
+### 1. 🥉 **ExercisesXP - Foundation Exercises** (Required)
 **⏰ Time: 45-60 minutes | 🎯 Difficulty: 🟢 Beginner**
-Master the core concepts with these 9 essential exercises:
+Practice the core concepts with these nine exercises:
 
 ```bash
 cd Exercises/ExercisesXP
@@ -411,7 +438,7 @@ python exercisesxp.py
 ```
 
 **📋 Exercise Breakdown:**
-- **Exercise 1**: 🌍 **Hello World Variations** - Master print() formatting
+- **Exercise 1**: 🌍 **Hello World Variations** - Practice `print()` formatting
 - **Exercise 2**: 🔢 **Arithmetic Power** - Exponentiation and large number calculations
 - **Exercise 3**: 🧩 **Boolean Comparisons** - Truth evaluation and type comparison
 - **Exercise 4**: 💻 **Variable Assignment** - String concatenation and variable usage
@@ -421,8 +448,8 @@ python exercisesxp.py
 - **Exercise 8**: 🤝 **Name Matching** - String comparison and case handling
 - **Exercise 9**: 🎢 **Height Validator** - Practical decision-making application
 
-### 2. 🥈 **ExercisesXPGold - Enhanced Practice** (Recommended)
-**⏰ Time: 30-45 minutes | 🎯 Difficulty: 🟡 Intermediate**
+### 2. 🥇 **ExercisesXPGold — Additional Foundations** (Recommended)
+**⏰ Time: 30-45 minutes | 🎯 Difficulty: 🟢 Beginner**
 
 Reinforce concepts with real-world scenarios:
 ```bash
@@ -430,7 +457,7 @@ cd Exercises/ExercisesXPGold
 python exercisesxpgold.py
 ```
 
-### 3. 🥇 **ExercisesXPNinja - Advanced Challenges** (Optional)
+### 3. 🥷 **ExercisesXPNinja — Advanced Challenges** (Optional)
 **⏰ Time: 45-60 minutes | 🎯 Difficulty: 🔴 Advanced**
 
 Push your problem-solving boundaries:
@@ -439,10 +466,10 @@ cd Exercises/ExercisesXPNinja
 python exercisesxpninja.py
 ```
 
-### 4. 💪 **Daily Challenge - BuildUpAString** (Skill Test)
+### 4. 💪 **Daily Challenge - BuildUpAString** (Practice Challenge)
 **⏰ Time: 20-30 minutes | 🎯 Difficulty: 🟡 Intermediate**
 
-Test mastery with interactive string manipulation:
+Practice interactive string manipulation after its current requirements are reviewed:
 ```bash
 cd DailyChallenge/BuildUpAString
 python buildupastring.py
@@ -457,32 +484,32 @@ python buildupastring.py
 
 ## 📊 Assessment Checklist
 
-Track your progress and ensure mastery before advancing:
+Track repository evidence and your own understanding separately before advancing:
 
 ### 🥉 **Essential Skills** (Required for Day 2)
 - [ ] ✅ Complete all 9 exercises in ExercisesXP
 - [ ] 📝 Understand variable assignment and naming conventions
-- [ ] 🔢 Master basic arithmetic and type conversion operations
+- [ ] 🔢 Recreate basic arithmetic and type conversion operations without assistance
 - [ ] 💬 Write clean input/output operations with proper formatting
 - [ ] 🔀 Implement conditional statements with correct logic
 - [ ] 🔤 Perform string concatenation and basic manipulation
 - [ ] 🛡️ Handle basic error scenarios gracefully
 
-### 🥈 **Intermediate Skills** (Recommended)
+### 🥇 **Gold Practice** (Recommended)
 - [ ] 🏆 Complete ExercisesXPGold challenges successfully
 - [ ] 🎨 Apply advanced string formatting techniques (f-strings)
 - [ ] 🧩 Handle edge cases in conditional statements
 - [ ] 🔍 Implement input validation with multiple conditions
 - [ ] 📊 Understand boolean logic and complex comparisons
 
-### 🥇 **Advanced Skills** (Optional)
+### 🥷 **Advanced Skills** (Optional)
 - [ ] 🚀 Complete ExercisesXPNinja challenges
 - [ ] ⚡ Optimize code for efficiency and readability
 - [ ] 🛠️ Add comprehensive error handling
 - [ ] 🎯 Create reusable code patterns and functions
 - [ ] 📈 Analyze and improve algorithm performance
 
-### 💪 **Challenge Mastery** (Bonus)
+### 💪 **Challenge Self-Review** (Bonus)
 - [ ] 🎪 Complete BuildUpAString daily challenge
 - [ ] 🔧 Understand string methods and advanced manipulation
 - [ ] 🧠 Apply creative problem-solving approaches
@@ -538,18 +565,18 @@ After completing Day 1:
 
 ---
 
-## � License
+## 📄 License
 
 This day’s exercises and notes are distributed under the repository’s [MIT License](../../LICENSE).
 
 ---
 
-## �👤 About the Author
+## 👤 About the Author
 
-**Kevin Cusnir "Lirioth"**  
+**Kevin Cusnir · Lirioth Teltanion**
 - 🎓 Fullstack Developer Student  
-- 💻 GitHub: [@Lirioth](https://github.com/Lirioth)  
-- 📧 Repository: [Fullstack2026](https://github.com/Lirioth/Fullstack2026)
+- 💻 GitHub: [@LiriothTeltanion](https://github.com/LiriothTeltanion)<br>
+- 📧 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)
 
 ---
 
@@ -651,3 +678,5 @@ print("Adult")  # IndentationError: expected an indented block
 **📋 Prerequisites**: Basic computer literacy
 
 Good luck with your first day of Python programming! 🚀
+
+</details>

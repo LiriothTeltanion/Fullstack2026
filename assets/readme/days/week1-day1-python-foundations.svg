@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-labelledby="title desc">
+  <title id="title">Week 1 Day 1 Python foundations evidence map</title>
+  <desc id="desc">Exercises XP 1 through 9, Gold 1 through 2, and Ninja 1 through 5 are repository-verified by twenty-three focused tests. The Daily Challenge local flow is tested by five tests, but official requirement alignment is unverified. Learning and Octopus submission remain unverified.</desc>
+  <defs>
+    <linearGradient id="day1-background" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#030712"/>
+      <stop offset="0.52" stop-color="#0a1738"/>
+      <stop offset="1" stop-color="#071d2b"/>
+    </linearGradient>
+    <linearGradient id="day1-trace" x1="0" x2="1">
+      <stop stop-color="#38bdf8"/>
+      <stop offset="0.5" stop-color="#818cf8"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <pattern id="day1-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#60a5fa" stroke-opacity="0.07"/>
+    </pattern>
+    <filter id="day1-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .eyebrow { font: 700 18px "Segoe UI", Arial, sans-serif; letter-spacing: 3px; fill: #7dd3fc; }
+      .hero { font: 900 48px "Segoe UI", Arial, sans-serif; letter-spacing: 2px; fill: #f8fafc; }
+      .signature { font: 700 18px "Segoe UI", Arial, sans-serif; letter-spacing: 1px; fill: #94a3b8; }
+      .concept { font: 800 18px "Segoe UI", Arial, sans-serif; letter-spacing: 1px; fill: #e0f2fe; }
+      .card-kicker { font: 800 18px "Segoe UI", Arial, sans-serif; letter-spacing: 2px; fill: #bae6fd; }
+      .card-title { font: 900 25px "Segoe UI", Arial, sans-serif; fill: #f8fafc; }
+      .card-note { font: 650 18px "Segoe UI", Arial, sans-serif; fill: #cbd5e1; }
+      .card-micro { font: 800 14px "Segoe UI", Arial, sans-serif; letter-spacing: 0.4px; }
+      .verified { fill: #34d399; }
+      .pending { fill: #fbbf24; }
+      .truth { font: 800 18px "Segoe UI", Arial, sans-serif; letter-spacing: 0.7px; fill: #ddd6fe; }
+      .concept-trace { animation: concept-trace 14s linear infinite; }
+      @keyframes concept-trace { to { stroke-dashoffset: -240; } }
+      @media (prefers-reduced-motion: reduce) {
+        .concept-trace { animation: none; stroke-dasharray: none; opacity: 0.55; }
+      }
+    </style>
+  </defs>
+
+  <rect width="1200" height="440" rx="28" fill="url(#day1-background)"/>
+  <rect x="1" y="1" width="1198" height="438" rx="27" fill="url(#day1-grid)" stroke="#25345f" stroke-width="2"/>
+
+  <g aria-label="Week 1 Day 1 heading">
+    <text x="64" y="49" class="eyebrow">WEEK 1 · DAY 1 · EVIDENCE CHECKPOINT</text>
+    <text x="64" y="101" class="hero">PYTHON FOUNDATIONS</text>
+    <text x="1136" y="49" text-anchor="end" class="signature">KEVIN CUSNIR · LIRIOTH TELTANION</text>
+  </g>
+
+  <g aria-label="Concept path from printing through conditions">
+    <path d="M86 158H1114" stroke="#1e2d52" stroke-width="8" stroke-linecap="round"/>
+    <path class="concept-trace" d="M86 158H1114" stroke="url(#day1-trace)" stroke-width="3" stroke-linecap="round" stroke-dasharray="20 24" filter="url(#day1-glow)"/>
+    <g transform="translate(112 158)"><circle r="13" fill="#38bdf8"/><text y="-24" text-anchor="middle" class="concept">PRINT</text></g>
+    <g transform="translate(306 158)"><circle r="13" fill="#38bdf8"/><text y="-24" text-anchor="middle" class="concept">VARIABLES</text></g>
+    <g transform="translate(500 158)"><circle r="13" fill="#38bdf8"/><text y="-24" text-anchor="middle" class="concept">MATH</text></g>
+    <g transform="translate(694 158)"><circle r="13" fill="#818cf8"/><text y="-24" text-anchor="middle" class="concept">COMPARE</text></g>
+    <g transform="translate(888 158)"><circle r="13" fill="#22d3ee"/><text y="-24" text-anchor="middle" class="concept">INPUT</text></g>
+    <g transform="translate(1082 158)"><circle r="13" fill="#22d3ee"/><text y="-24" text-anchor="middle" class="concept">IF</text></g>
+  </g>
+
+  <g aria-label="Exercises XP repository verification">
+    <rect x="64" y="205" width="318" height="152" rx="22" fill="#071127" stroke="#34d399" stroke-width="2"/>
+    <circle cx="94" cy="236" r="8" class="verified"/>
+    <text x="115" y="243" class="card-kicker">XP 1–9</text>
+    <text x="92" y="286" class="card-title">REPOSITORY VERIFIED</text>
+    <text x="92" y="321" class="card-note">10 focused tests passing</text>
+    <path d="M326 238l10 10 21-25" fill="none" stroke="#34d399" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g aria-label="XP Gold repository verification">
+    <rect x="398" y="205" width="318" height="152" rx="22" fill="#0c1329" stroke="#fbbf24" stroke-width="2"/>
+    <circle cx="428" cy="236" r="8" class="verified"/>
+    <text x="449" y="243" class="card-kicker">GOLD 1–2</text>
+    <text x="426" y="282" class="card-title">REPOSITORY VERIFIED</text>
+    <text x="426" y="321" class="card-note">6 tests · repeat + seasons</text>
+    <path d="M659 238l10 10 21-25" fill="none" stroke="#34d399" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g aria-label="XP Ninja repository verification">
+    <rect x="732" y="205" width="194" height="152" rx="22" fill="#071127" stroke="#34d399" stroke-width="2"/>
+    <text x="756" y="241" class="card-kicker">XP NINJA</text>
+    <text x="756" y="282" class="card-title">VERIFIED</text>
+    <text x="756" y="316" class="card-note">7 focused tests</text>
+    <path d="M884 238l8 8 16-19" fill="none" stroke="#34d399" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g aria-label="Daily Challenge local behavior tested, official source unverified">
+    <rect x="942" y="205" width="194" height="152" rx="22" fill="#0c1329" stroke="#fbbf24" stroke-width="2"/>
+    <text x="966" y="241" class="card-kicker">DAILY</text>
+    <text x="966" y="278" class="card-title">LOCAL</text>
+    <text x="966" y="307" class="card-title">TESTED</text>
+    <text x="966" y="338" class="card-micro pending">SOURCE · UNVERIFIED</text>
+  </g>
+
+  <g aria-label="Truth boundary">
+    <rect x="64" y="382" width="252" height="38" rx="19" fill="#161533" stroke="#a78bfa"/>
+    <text x="190" y="407" text-anchor="middle" class="truth">LEARNING · UNVERIFIED</text>
+    <rect x="332" y="382" width="334" height="38" rx="19" fill="#161533" stroke="#a78bfa"/>
+    <text x="499" y="407" text-anchor="middle" class="truth">OCTOPUS SUBMISSION · UNVERIFIED</text>
+    <text x="1136" y="407" text-anchor="end" class="card-note">NEXT · Kevin explains, then submits manually</text>
+  </g>
+</svg>
