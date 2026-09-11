@@ -1,10 +1,11 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "repository": "LiriothTeltanion/Fullstack2026",
-  "generated_at": "2026-09-11T16:14:51+03:00",
+  "generated_at": "2026-09-11T17:25:22+03:00",
   "timezone": "Asia/Jerusalem",
   "policy": {
     "root_animation_limit": 1,
+    "narrative_motion_contract": "purposeful_sequence_with_static_fallback_and_reduced_motion",
     "private_octopus_screenshots_committed": false,
     "repository_evidence_is_not_learning_mastery": true
   },
@@ -24,7 +25,10 @@
       "alt_text": "Fullstack2026 twelve-week course observatory: Weeks 1–6 contain source files; Weeks 7–12 are scaffolds awaiting official coursework.",
       "crop_safety": "full_canvas_required",
       "privacy_review": "passed_no_private_dashboard_data",
+      "motion_required": true,
       "motion": "one_slow_css_signal_sweep",
+      "motion_story": "A slow signal sweep gives the course observatory a clear forward direction while all week-level evidence remains static and readable.",
+      "motion_qa": "passed_headless_edge_motion_and_forced_reduced_motion_review_on_2026_08_24",
       "reduced_motion": "css_media_query_disables_signal_animation",
       "color_review": "passed_headless_edge_render",
       "grayscale_review": "passed_shapes_and_text_remain_distinguishable",
@@ -46,6 +50,7 @@
       "alt_text": "Static evidence map for Weeks 1–12, distinguishing source-present Weeks 1–6 from scaffold-only Weeks 7–12.",
       "crop_safety": "full_canvas_required",
       "privacy_review": "passed_no_private_dashboard_data",
+      "motion_required": false,
       "motion": "none",
       "reduced_motion": "not_applicable_static_asset",
       "color_review": "passed_headless_edge_render",
@@ -68,6 +73,7 @@
       "alt_text": "Static source-backed technology constellation connecting Python, OOP, HTML and CSS, JavaScript, TypeScript, SQL, Node.js, and quality engineering without claiming learning mastery.",
       "crop_safety": "full_canvas_required",
       "privacy_review": "passed_no_private_dashboard_data",
+      "motion_required": false,
       "motion": "none",
       "reduced_motion": "not_applicable_static_asset",
       "color_review": "passed_headless_edge_render",
@@ -78,7 +84,7 @@
     {
       "asset_id": "week1-day1-python-foundations-evidence-map",
       "path": "assets/readme/days/week1-day1-python-foundations.svg",
-      "sha256": "560fca538fcdbf143ee02600fb20772d81bfd440ee31fe4723a78ee19e494ec8",
+      "sha256": "57e83d73938caa3e017f2f28edc61b66a40e0fba71d19b806672438d8191b8ae",
       "source_kind": "original_repository_svg_with_ai_assistance",
       "provenance": "Created from Kevin-supplied Week 1 Day 1 Exercises XP, XP Gold, and XP Ninja behavioral summaries plus local repository test evidence. The Daily card reports only tested local behavior and keeps official alignment unverified; no authenticated screenshot, private Octopus URL, platform percentage, or dashboard data is embedded.",
       "new_or_reused": "materially_revised",
@@ -90,12 +96,15 @@
       "alt_text": "Week 1 Day 1 Python foundations evidence map: Exercises XP 1–9, Gold 1–2, and Ninja 1–5 are repository-verified by 23 focused tests; the Daily Challenge local flow is tested by 5 tests but official requirement alignment is unverified; learning and Octopus submission remain unverified.",
       "crop_safety": "full_canvas_required",
       "privacy_review": "passed_no_private_dashboard_data",
-      "motion": "one_slow_css_concept_trace_14s_linear_infinite",
-      "reduced_motion": "passed_css_media_query_and_headless_edge_forced_reduced_motion_render",
-      "color_review": "passed_headless_edge_dark_and_light_background_renders_after_ninja_revision",
-      "grayscale_review": "passed_headless_edge_text_shapes_checks_and_status_labels_remain_distinguishable_after_ninja_revision",
-      "responsive_review": "passed_390_css_pixel_headless_edge_render_with_complete_canvas_and_markdown_status_table_fallback_after_ninja_revision",
-      "last_reviewed": "2026-09-11T16:14:51+03:00"
+      "motion_required": true,
+      "motion": "one_coordinated_12s_learning_signal_sequence",
+      "motion_story": "A luminous traveler and six waypoint halos explain the concept order, four card highlights distinguish verified evidence from the amber Daily boundary, and a final cue points to Kevin's manual next action.",
+      "motion_qa": "passed_seven_timed_playwright_frames_with_1_2712_to_8_6598_percent_pixel_change_between_consecutive_checkpoints",
+      "reduced_motion": "passed_forced_reduced_motion_with_all_three_motion_layers_hidden_and_static_truth_render_inspected",
+      "color_review": "passed_playwright_dark_and_light_background_renders_after_motion_revision",
+      "grayscale_review": "passed_grayscale_text_shape_and_status_label_inspection_after_motion_revision",
+      "responsive_review": "passed_390_css_pixel_playwright_render_with_complete_canvas_and_markdown_status_table_fallback_after_motion_revision",
+      "last_reviewed": "2026-09-11T17:25:22+03:00"
     }
   ]
 }
