@@ -76,8 +76,9 @@ def jumble_text(text: str) -> str:
         Shuffled string with same characters in random order
         
     Example:
-        >>> jumble_text("abc")  # Output varies
-        'bca'  # or 'cab', 'acb', etc.
+        >>> result = jumble_text("abc")
+        >>> len(result) == 3 and sorted(result) == ["a", "b", "c"]
+        True
     """
     chars = list(text)
     # ✅ Shuffle a copy so the original text stays unchanged for later steps.

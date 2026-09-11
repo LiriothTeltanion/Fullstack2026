@@ -1,13 +1,57 @@
+# 💪 Build Up a String — Local Artifact Under Review
+
+## 🛰️ Current evidence checkpoint — 2026-09-11
+
+<div align="center">
+
+<img src="../../../../assets/readme/days/week1-day1-python-foundations.svg" width="100%" alt="Week 1 Day 1 Python foundations evidence map: Exercises XP 1–9, Gold 1–2, and Ninja 1–5 are repository-verified by 23 focused tests; the Daily Challenge local flow is tested by 5 tests but official requirement alignment is unverified; learning and Octopus submission remain unverified.">
+
+</div>
+
+> **Truth boundary:** this program has verified local behavior, but the current Developers Institute Daily Challenge requirements and Octopus submission target are unavailable. It must not be presented as official completion yet.
+
+## Observed local behavior
+
+The current script:
+
+1. accepts a string from the terminal;
+2. stops with a clear message when its length is not exactly ten characters;
+3. prints the first and last characters for a valid input;
+4. prints each progressive prefix of the string; and
+5. prints a randomized permutation containing the same characters.
+
+| Check | State |
+|---|---|
+| Length boundaries 9, 10, and 11 | `VERIFIED` by local tests |
+| Progressive output | `VERIFIED` by local tests |
+| Shuffle length and character preservation | `VERIFIED` by local tests and deterministic doctest properties |
+| Full valid and invalid console paths | `VERIFIED` by local tests |
+| Current official prompt match | `UNVERIFIED` |
+| Learning and platform state | `UNVERIFIED` |
+
+## Run and test
+
+```powershell
+py -3.12 -B Week1Python/Day1StartingwithPython/DailyChallenge/BuildUpAString/buildupastring.py
+py -3.12 -B -m unittest discover -s tests/python -p "test_week1_day1_daily_challenge.py" -v
+py -3.12 -B -m doctest -v Week1Python/Day1StartingwithPython/DailyChallenge/BuildUpAString/buildupastring.py
+```
+
+Full evidence and limitations: [2026-09-11 local Daily Challenge audit](../../../../.learning/evidence/2026-09-11-week1-day1-daily-challenge-local.md).
+
+<details>
+<summary>Historical learning guide — retained for provenance, not current evidence</summary>
+
 # 💪 Daily Challenge — Build up a string
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">
 
-<img src="../../../../assets/readme/nova-folder-pulse.svg" width="100%" alt="Animated NOVA learning pulse">
+[Preserved legacy folder pulse asset](../../../../assets/readme/nova-folder-pulse.svg)
 
 ### Build Up AString
 
-<img src="../../../../assets/readme/progress/build-up-astring-6c50c48a77.svg" width="100%" alt="Readiness status for Build Up AString">
+[Preserved legacy heuristic asset](../../../../assets/readme/progress/build-up-astring-6c50c48a77.svg)
 
 **Goal:** Solve an independent daily challenge that reinforces the current lesson through focused problem solving.
 
@@ -269,3 +313,5 @@ print(f"Most common: {freq.most_common(3)}")
 ---
 
 **Created with ❤️ for mastering string manipulation in Python**
+
+</details>

@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
-Regenerated: 2026-08-27
-Base HEAD: 89d74c0829f29b5c57991930036d630a17cbbabc
-Source-index SHA-256 (generated outputs excluded): 0f4dbd225dbcfcbe03007b5d8a0bd4e42796f15d8076dc8b706139bd026452c6
-Indexed files: 881
+Regenerated: 2026-09-11
+Base HEAD: 167c00835673e559dbdd5eed16c86101f4e562b0
+Source-index SHA-256 (generated outputs excluded): 4f577b0e58ebc2f6babd20d8c36cfc939e02432a67da02bd25ea37d123b73302
+Indexed files: 890
 
 .
 ├── .ai
@@ -21,6 +21,10 @@ Indexed files: 881
 │   └── pull_request_template.md
 ├── .learning
 │   ├── evidence
+│   │   ├── 2026-09-10-week1-day1-exercises-xp.md
+│   │   ├── 2026-09-11-week1-day1-daily-challenge-local.md
+│   │   ├── 2026-09-11-week1-day1-exercises-xp-gold.md
+│   │   ├── 2026-09-11-week1-day1-exercises-xp-ninja.md
 │   │   └── README.md
 │   ├── intake
 │   │   ├── exercise-intake.schema.json
@@ -35,6 +39,8 @@ Indexed files: 881
 │   └── REVIEW_QUEUE.md
 ├── assets
 │   ├── readme
+│   │   ├── days
+│   │   │   └── week1-day1-python-foundations.svg
 │   │   ├── progress
 │   │   │   ├── advanced-algorithm-911e3731b7.svg
 │   │   │   ├── air-management-2c6b6fc9f2.svg
@@ -359,7 +365,11 @@ Indexed files: 881
 │   │   ├── test_readme_visuals.py
 │   │   ├── test_repository_layout.py
 │   │   ├── test_tictactoe.py
-│   │   └── test_timer.py
+│   │   ├── test_timer.py
+│   │   ├── test_week1_day1_daily_challenge.py
+│   │   ├── test_week1_day1_exercises_xp.py
+│   │   ├── test_week1_day1_exercises_xp_gold.py
+│   │   └── test_week1_day1_exercises_xp_ninja.py
 │   └── README.md
 ├── tools
 │   ├── check_typescript_syntax.mjs

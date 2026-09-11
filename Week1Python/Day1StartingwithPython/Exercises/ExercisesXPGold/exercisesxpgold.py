@@ -1,15 +1,16 @@
-"""Module: exercisesxpgold
-Purpose: Enhanced Day 1 exercises focusing on string operations and seasons.
-Author: Kevin Cusnir "Lirioth"
+"""Exercises XP Gold for Week 1, Day 1.
+
+Author: Kevin Cusnir
+Creative signature: Lirioth Teltanion
 Created: 2025-10-18
-Last Updated: 2025-10-19
+Requirements reviewed: 2026-09-11
 
 Overview:
     1. String multiplication techniques
     2. Month-to-season mapping with membership testing
 """
 
-# 🌸 Season mappings
+# Month groups keep the beginner-level conditionals readable.
 SPRING_MONTHS = (3, 4, 5)
 SUMMER_MONTHS = (6, 7, 8)
 AUTUMN_MONTHS = (9, 10, 11)
@@ -17,12 +18,11 @@ WINTER_MONTHS = (12, 1, 2)
 
 
 def exercise_1_hello_world() -> None:
-    """
-    Print Hello World and I love Python using string multiplication.
-    
+    """Print the required eight lines with one ``print(...)`` statement.
+
     Demonstrates the power of string repetition with the * operator
     and newline character placement.
-    
+
     Example Output:
         Hello world
         Hello world
@@ -37,20 +37,19 @@ def exercise_1_hello_world() -> None:
 
 
 def get_valid_month() -> int:
-    """
-    Get valid month input (1-12) from user with robust validation.
-    
+    """Read and return a whole-number month from 1 through 12.
+
     Continuously prompts until valid input is received.
     Handles non-numeric input and out-of-range values.
-    
+
     Returns:
         int: Month number between 1 and 12 (inclusive)
-        
+
     Example Interaction:
         Enter month (1-12): abc
-        ⚠️ Please enter a valid number
+        Please enter a whole number.
         Enter month (1-12): 15
-        ⚠️ Month must be between 1 and 12
+        Month must be between 1 and 12.
         Enter month (1-12): 4
         (returns 4)
     """
@@ -59,46 +58,48 @@ def get_valid_month() -> int:
             month = int(input("Enter month (1-12): "))
             if 1 <= month <= 12:
                 return month
-            # ⚠️ Notify the learner when the month is outside the accepted range.
-            print("⚠️ Month must be between 1 and 12")
+            print("Month must be between 1 and 12.")
         except ValueError:
-            print("⚠️ Please enter a valid number")
+            print("Please enter a whole number.")
 
 
 def get_season(month: int) -> str:
-    """
-    Return season name for given month number.
-    
+    """Return the season for a valid month number.
+
     Args:
         month: Month number (1-12)
-        
+
     Returns:
-        Season name string with emoji
-        
+        One of ``Spring``, ``Summer``, ``Autumn``, or ``Winter``.
+
+    Raises:
+        ValueError: If ``month`` is outside 1 through 12.
+
     Example:
         >>> get_season(4)
-        'Spring 🌸'
+        'Spring'
     """
+    if not 1 <= month <= 12:
+        raise ValueError("month must be between 1 and 12")
+
     if month in SPRING_MONTHS:
-        return "Spring 🌸"
+        return "Spring"
     elif month in SUMMER_MONTHS:
-        return "Summer ☀️"
+        return "Summer"
     elif month in AUTUMN_MONTHS:
-        return "Autumn 🍂"
-    else:  # WINTER_MONTHS
-        return "Winter ❄️"
+        return "Autumn"
+    return "Winter"
 
 
 def exercise_2_season() -> None:
-    """
-    Interactive season finder based on month with input validation.
-    
+    """Ask for a valid month and print its season.
+
     Prompts user for a month number (1-12) and displays the corresponding
-    season with emoji decoration.
-    
+    season.
+
     Example Interaction:
         Enter month (1-12): 7
-        Summer ☀️
+        Summer
     """
     month = get_valid_month()
     season = get_season(month)
@@ -107,9 +108,7 @@ def exercise_2_season() -> None:
 
 def main() -> None:
     """Run all Gold exercises in sequence."""
-    print("🥈 Exercise 1: Hello World Variations")
     exercise_1_hello_world()
-    print("\n🥈 Exercise 2: Season Finder")
     exercise_2_season()
 
 

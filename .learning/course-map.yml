@@ -1,6 +1,6 @@
 schema_version: 1
 repository: LiriothTeltanion/Fullstack2026
-last_reviewed: 2026-08-24
+last_reviewed: 2026-09-11
 timezone: Asia/Jerusalem
 
 evidence_states:
@@ -44,6 +44,26 @@ weeks:
       - path: Week1Python/Day4Functions
       - path: Week1Python/Day5MiniProject
     bounded_evidence:
+      - path: Week1Python/Day1StartingwithPython/Exercises/ExercisesXP
+        repository_state: verified
+        evidence: tests/python/test_week1_day1_exercises_xp.py
+        record: .learning/evidence/2026-09-10-week1-day1-exercises-xp.md
+        limitation: repository_behavior_only_learning_platform_ninja_and_daily_unverified
+      - path: Week1Python/Day1StartingwithPython/Exercises/ExercisesXPGold
+        repository_state: verified
+        evidence: tests/python/test_week1_day1_exercises_xp_gold.py
+        record: .learning/evidence/2026-09-11-week1-day1-exercises-xp-gold.md
+        limitation: repository_behavior_only_learning_and_platform_unverified
+      - path: Week1Python/Day1StartingwithPython/Exercises/ExercisesXPNinja
+        repository_state: verified
+        evidence: tests/python/test_week1_day1_exercises_xp_ninja.py
+        record: .learning/evidence/2026-09-11-week1-day1-exercises-xp-ninja.md
+        limitation: bounded_repository_behavior_only_learning_platform_daily_and_cross_platform_shell_behavior_unverified
+      - path: Week1Python/Day1StartingwithPython/DailyChallenge/BuildUpAString
+        repository_state: verified
+        evidence: tests/python/test_week1_day1_daily_challenge.py
+        record: .learning/evidence/2026-09-11-week1-day1-daily-challenge-local.md
+        limitation: existing_local_behavior_only_current_official_requirement_learning_and_platform_unverified
       - path: Week1Python/Day5MiniProject/Exercises/Hangman
         repository_state: verified
         evidence: tests/python/test_hangman.py
