@@ -27,11 +27,11 @@ def capture_output(function: Callable[[], None]) -> list[str]:
 
 
 class Week1Day1DailyChallengeLocalTests(unittest.TestCase):
-    """Protect local behavior without claiming current Octopus alignment."""
+    """Protect prompt-aligned behavior without claiming learning or submission."""
 
     def test_validate_length_covers_short_exact_and_long_inputs(self) -> None:
         self.assertEqual(
-            MODULE.validate_length("short"),
+            MODULE.validate_length("123456789"),
             (False, "String not long enough."),
         )
         self.assertEqual(
@@ -39,7 +39,7 @@ class Week1Day1DailyChallengeLocalTests(unittest.TestCase):
             (True, "Perfect string"),
         )
         self.assertEqual(
-            MODULE.validate_length("eleven chars"),
+            MODULE.validate_length("01234567890"),
             (False, "String too long."),
         )
 

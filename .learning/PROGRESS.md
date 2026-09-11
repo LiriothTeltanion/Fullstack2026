@@ -12,7 +12,7 @@
 
 | Week | Repository state | Learning state | Verified bounded anchors | Current blocker |
 |---|---|---|---|---|
-| Week 1 — Python | `present` | `unknown` | Day 1 Exercises XP 1–9, XP Gold 1–2, XP Ninja 1–5, Daily local behavior, Hangman domain logic, and Tic-Tac-Toe domain logic | Daily official alignment, most remaining CLI flows, and Kevin's independent learning evidence remain unverified. |
+| Week 1 — Python | `present` | `unknown` | Day 1 Exercises XP 1–9, XP Gold 1–2, XP Ninja 1–5, requirement-aligned Daily behavior, Hangman domain logic, and Tic-Tac-Toe domain logic | Most remaining CLI flows, Kevin's independent learning evidence, and Octopus submission outcomes remain unverified. |
 | Week 2 — OOP | `present` | `unknown` | Circle behavior; mocked Timer behavior | Most projects/dependencies and interactive flows are unverified. |
 | Week 3 — JS/DOM | `present` | `unknown` | None recorded | No browser, keyboard, responsive, or accessibility execution. |
 | Week 4 — async JS | `present` | `unknown` | None recorded | Canonical Day 3 structure is recovered; fetch/form behavior remains untested. |
@@ -28,7 +28,7 @@
 ## Latest bounded checkpoint
 
 - **2026-09-11 · Week 1 / Day 1 / Exercises XP Ninja:** repository behavior `verified` by [`tests/python/test_week1_day1_exercises_xp_ninja.py`](../tests/python/test_week1_day1_exercises_xp_ninja.py) and observed Windows launcher commands, with limitations recorded in [`.learning/evidence/2026-09-11-week1-day1-exercises-xp-ninja.md`](evidence/2026-09-11-week1-day1-exercises-xp-ninja.md).
-- **2026-09-11 · Week 1 / Day 1 / Daily Challenge local artifact:** existing local behavior `verified` by [`tests/python/test_week1_day1_daily_challenge.py`](../tests/python/test_week1_day1_daily_challenge.py), while current official requirement alignment remains `UNVERIFIED`; see the [dated local audit](evidence/2026-09-11-week1-day1-daily-challenge-local.md).
+- **2026-09-11 · Week 1 / Day 1 / Daily Challenge:** official requirement alignment and repository behavior are `verified` by a read-only source comparison plus [`tests/python/test_week1_day1_daily_challenge.py`](../tests/python/test_week1_day1_daily_challenge.py); see the [dated alignment record](evidence/2026-09-11-week1-day1-daily-challenge-alignment.md). Learning and submission outcomes remain `UNVERIFIED`.
 - **2026-09-11 · Week 1 / Day 1 / Exercises XP Gold:** repository behavior `verified` by [`tests/python/test_week1_day1_exercises_xp_gold.py`](../tests/python/test_week1_day1_exercises_xp_gold.py), with commands and limitations recorded in [`.learning/evidence/2026-09-11-week1-day1-exercises-xp-gold.md`](evidence/2026-09-11-week1-day1-exercises-xp-gold.md).
 - **2026-09-10 · Week 1 / Day 1 / Exercises XP:** repository behavior `verified` by [`tests/python/test_week1_day1_exercises_xp.py`](../tests/python/test_week1_day1_exercises_xp.py), with commands and limitations recorded in [`.learning/evidence/2026-09-10-week1-day1-exercises-xp.md`](evidence/2026-09-10-week1-day1-exercises-xp.md).
 - **Learning state:** `unknown`; automated tests do not establish Kevin's independent explanation or reproduction.

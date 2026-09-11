@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-labelledby="title desc">
   <title id="title">Week 1 Day 1 Python foundations evidence map</title>
-  <desc id="desc">Exercises XP 1 through 9, Gold 1 through 2, and Ninja 1 through 5 are repository-verified by twenty-three focused tests. The Daily Challenge local flow is tested by five tests, but official requirement alignment is unverified. Learning and Octopus submission remain unverified.</desc>
+  <desc id="desc">Exercises XP 1 through 9, Gold 1 through 2, and Ninja 1 through 5 are repository-verified by twenty-three focused tests. The Daily Challenge matches the reviewed official prompt and passes five focused tests. Learning and Octopus submission remain unverified.</desc>
   <defs>
     <linearGradient id="day1-background" x1="0" x2="1" y1="0" y2="1">
       <stop stop-color="#030712"/>
@@ -133,12 +133,12 @@
     <path d="M884 238l8 8 16-19" fill="none" stroke="#34d399" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 
-  <g aria-label="Daily Challenge local behavior tested, official source unverified">
-    <rect x="942" y="205" width="194" height="152" rx="22" fill="#0c1329" stroke="#fbbf24" stroke-width="2"/>
+  <g aria-label="Daily Challenge official prompt aligned and repository-verified">
+    <rect x="942" y="205" width="194" height="152" rx="22" fill="#0c1329" stroke="#34d399" stroke-width="2"/>
     <text x="966" y="241" class="card-kicker">DAILY</text>
-    <text x="966" y="278" class="card-title">LOCAL</text>
-    <text x="966" y="307" class="card-title">TESTED</text>
-    <text x="966" y="338" class="card-micro pending">SOURCE · UNVERIFIED</text>
+    <text x="966" y="278" class="card-title">PROMPT</text>
+    <text x="966" y="307" class="card-title">ALIGNED</text>
+    <text x="966" y="338" class="card-micro verified">5 TESTS · VERIFIED</text>
   </g>
 
   <g class="motion-layer" aria-hidden="true" fill="none" filter="url(#day1-glow)">
@@ -151,7 +151,7 @@
     <rect x="732" y="205" width="194" height="152" rx="22" stroke="#6ee7b7" stroke-width="5" opacity="0">
       <animate attributeName="opacity" values="0;0;0.9;0;0" keyTimes="0;0.78;0.82;0.86;1" dur="12s" repeatCount="indefinite"/>
     </rect>
-    <rect x="942" y="205" width="194" height="152" rx="22" stroke="#fbbf24" stroke-width="5" stroke-dasharray="14 10" opacity="0">
+    <rect x="942" y="205" width="194" height="152" rx="22" stroke="#6ee7b7" stroke-width="5" stroke-dasharray="14 10" opacity="0">
       <animate attributeName="stroke-dashoffset" values="0;-192" dur="12s" repeatCount="indefinite"/>
       <animate attributeName="opacity" values="0;0;0.95;0.35;0" keyTimes="0;0.86;0.90;0.95;1" dur="12s" repeatCount="indefinite"/>
     </rect>

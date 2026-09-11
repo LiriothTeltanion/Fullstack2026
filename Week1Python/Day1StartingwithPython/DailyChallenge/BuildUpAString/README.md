@@ -1,14 +1,26 @@
-# 💪 Build Up a String — Local Artifact Under Review
+# 💪 Build Up a String — Requirement-Aligned Exercise
 
 ## 🛰️ Current evidence checkpoint — 2026-09-11
 
 <div align="center">
 
-<img src="../../../../assets/readme/days/week1-day1-python-foundations.svg" width="100%" alt="Week 1 Day 1 Python foundations evidence map: Exercises XP 1–9, Gold 1–2, and Ninja 1–5 are repository-verified by 23 focused tests; the Daily Challenge local flow is tested by 5 tests but official requirement alignment is unverified; learning and Octopus submission remain unverified.">
+<img src="../../../../assets/readme/days/week1-day1-python-foundations.svg" width="100%" alt="Week 1 Day 1 Python foundations evidence map: XP 1–9, Gold 1–2, and Ninja 1–5 are repository-verified by 23 focused tests; the Daily Challenge matches the reviewed official prompt and passes 5 focused tests; learning and Octopus submission remain unverified.">
 
 </div>
 
-> **Truth boundary:** this program has verified local behavior, but the current Developers Institute Daily Challenge requirements and Octopus submission target are unavailable. It must not be presented as official completion yet.
+> **Truth boundary:** the current Developers Institute Daily Challenge was reviewed read-only on 2026-09-11. This program matches its observable requirements and has verified repository behavior. Kevin's independent understanding, submission, checker response, instructor review, and grade remain `UNVERIFIED`.
+
+## Sanitized requirement map
+
+The official item is titled **Build up a string**, carries a 2025-10-30 update label, and requires the following behavior without prescribing a larger architecture:
+
+1. accept one string and distinguish lengths below, above, and exactly ten;
+2. print the specified short, long, or perfect-length feedback;
+3. for a valid string, print its first and last characters;
+4. build and print every progressive prefix using a `for` loop; and
+5. optionally shuffle the characters while preserving the same multiset.
+
+This is a public-safe behavioral summary, not a copy of the authenticated course page.
 
 ## Observed local behavior
 
@@ -26,8 +38,9 @@ The current script:
 | Progressive output | `VERIFIED` by local tests |
 | Shuffle length and character preservation | `VERIFIED` by local tests and deterministic doctest properties |
 | Full valid and invalid console paths | `VERIFIED` by local tests |
-| Current official prompt match | `UNVERIFIED` |
-| Learning and platform state | `UNVERIFIED` |
+| Current official prompt match | `VERIFIED` by read-only comparison on 2026-09-11 |
+| Octopus item visibility | `VERIFIED`; no submission action was performed |
+| Learning, submission, review, and grade | `UNVERIFIED` |
 
 ## Run and test
 
@@ -37,7 +50,7 @@ py -3.12 -B -m unittest discover -s tests/python -p "test_week1_day1_daily_chall
 py -3.12 -B -m doctest -v Week1Python/Day1StartingwithPython/DailyChallenge/BuildUpAString/buildupastring.py
 ```
 
-Full evidence and limitations: [2026-09-11 local Daily Challenge audit](../../../../.learning/evidence/2026-09-11-week1-day1-daily-challenge-local.md).
+Current evidence and limitations: [2026-09-11 official-alignment record](../../../../.learning/evidence/2026-09-11-week1-day1-daily-challenge-alignment.md). The earlier [local-only audit](../../../../.learning/evidence/2026-09-11-week1-day1-daily-challenge-local.md) is preserved as historical provenance.
 
 <details>
 <summary>Historical learning guide — retained for provenance, not current evidence</summary>

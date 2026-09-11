@@ -4,7 +4,7 @@
 
 <div align="center">
 
-<img src="../../assets/readme/days/week1-day1-python-foundations.svg" width="100%" alt="Week 1 Day 1 Python foundations evidence map: Exercises XP 1–9, Gold 1–2, and Ninja 1–5 are repository-verified by 23 focused tests; the Daily Challenge local flow is tested by 5 tests but official requirement alignment is unverified; learning and Octopus submission remain unverified.">
+<img src="../../assets/readme/days/week1-day1-python-foundations.svg" width="100%" alt="Week 1 Day 1 Python foundations evidence map: XP 1–9, Gold 1–2, and Ninja 1–5 are repository-verified by 23 focused tests; the Daily Challenge matches the reviewed official prompt and passes 5 focused tests; learning and Octopus submission remain unverified.">
 
 </div>
 
@@ -13,11 +13,11 @@
 | Exercises XP 1–9 | `VERIFIED` | [Ten focused tests](../../tests/python/test_week1_day1_exercises_xp.py) pass against the nine bounded behaviors reviewed from Kevin's supplied requirements. |
 | XP Gold 1–2 | `VERIFIED` | [Six focused tests](../../tests/python/test_week1_day1_exercises_xp_gold.py) cover exact repeated output, all month mappings, boundaries, and input validation. |
 | XP Ninja 1–5 | `VERIFIED` | [Seven focused tests](../../tests/python/test_week1_day1_exercises_xp_ninja.py) plus observed Windows launcher commands cover the supplied Ninja summary. |
-| Daily Challenge local artifact | Local `VERIFIED`; official alignment `UNVERIFIED` | [Five tests](../../tests/python/test_week1_day1_daily_challenge.py) protect the existing flow; the current official prompt or waiver is unavailable. |
+| Daily Challenge | `VERIFIED` requirement alignment and repository behavior | A read-only source comparison plus [five tests](../../tests/python/test_week1_day1_daily_challenge.py) confirm the complete official flow and optional shuffle bonus. |
 | Kevin's understanding | `UNVERIFIED` | Repository tests do not prove independent explanation, recreation, or transfer. |
 | Octopus submission or grade | `UNVERIFIED` | No platform submission, instructor review, or grade is claimed by this repository. |
 
-**Direct evidence:** [XP guide](Exercises/ExercisesXP/) · [Gold guide](Exercises/ExercisesXPGold/) · [Ninja guide](Exercises/ExercisesXPNinja/) · [Daily source boundary](DailyChallenge/) · [XP record](../../.learning/evidence/2026-09-10-week1-day1-exercises-xp.md) · [Gold record](../../.learning/evidence/2026-09-11-week1-day1-exercises-xp-gold.md) · [Ninja record](../../.learning/evidence/2026-09-11-week1-day1-exercises-xp-ninja.md) · [Daily local audit](../../.learning/evidence/2026-09-11-week1-day1-daily-challenge-local.md)
+**Direct evidence:** [XP guide](Exercises/ExercisesXP/) · [Gold guide](Exercises/ExercisesXPGold/) · [Ninja guide](Exercises/ExercisesXPNinja/) · [Daily guide](DailyChallenge/) · [XP record](../../.learning/evidence/2026-09-10-week1-day1-exercises-xp.md) · [Gold record](../../.learning/evidence/2026-09-11-week1-day1-exercises-xp-gold.md) · [Ninja record](../../.learning/evidence/2026-09-11-week1-day1-exercises-xp-ninja.md) · [Daily alignment record](../../.learning/evidence/2026-09-11-week1-day1-daily-challenge-alignment.md)
 
 > `VERIFIED` is deliberately narrow: it describes repository behavior only. It does not mean that the complete day is mastered, submitted, or graded.
 
@@ -469,7 +469,7 @@ python exercisesxpninja.py
 ### 4. 💪 **Daily Challenge - BuildUpAString** (Practice Challenge)
 **⏰ Time: 20-30 minutes | 🎯 Difficulty: 🟡 Intermediate**
 
-Practice interactive string manipulation after its current requirements are reviewed:
+Practice interactive string manipulation against the reviewed official requirements:
 ```bash
 cd DailyChallenge/BuildUpAString
 python buildupastring.py

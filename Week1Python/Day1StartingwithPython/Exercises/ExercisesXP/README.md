@@ -4,7 +4,7 @@
 
 <div align="center">
 
-<img src="../../../../assets/readme/days/week1-day1-python-foundations.svg" width="100%" alt="Week 1 Day 1 Python foundations evidence map: Exercises XP 1–9, Gold 1–2, and Ninja 1–5 are repository-verified by 23 focused tests; the Daily Challenge local flow is tested by 5 tests but official requirement alignment is unverified; learning and Octopus submission remain unverified.">
+<img src="../../../../assets/readme/days/week1-day1-python-foundations.svg" width="100%" alt="Week 1 Day 1 Python foundations evidence map: XP 1–9, Gold 1–2, and Ninja 1–5 are repository-verified by 23 focused tests; the Daily Challenge matches the reviewed official prompt and passes 5 focused tests; learning and Octopus submission remain unverified.">
 
 </div>
 
@@ -13,11 +13,11 @@
 | XP repository behavior | `VERIFIED` | [Ten focused tests](../../../../tests/python/test_week1_day1_exercises_xp.py) cover the nine supplied XP behaviors, including invalid numeric input and the strict 145/146 cm boundary. |
 | Gold repository behavior | `VERIFIED` | The separate [Gold guide](../ExercisesXPGold/) and [six-test suite](../../../../tests/python/test_week1_day1_exercises_xp_gold.py) cover Gold 1–2. |
 | Ninja repository behavior | `VERIFIED` | The separate [Ninja guide](../ExercisesXPNinja/) and [seven-test suite](../../../../tests/python/test_week1_day1_exercises_xp_ninja.py) cover Ninja 1–5. |
-| Daily local artifact | Local `VERIFIED`; official alignment `UNVERIFIED` | [Five tests](../../../../tests/python/test_week1_day1_daily_challenge.py) protect only existing repository behavior. |
+| Daily Challenge | `VERIFIED` requirement alignment and repository behavior | A read-only source comparison plus [five tests](../../../../tests/python/test_week1_day1_daily_challenge.py) cover the official behavior. |
 | Kevin's understanding | `UNVERIFIED` | Requires Kevin's own explanation, a changed example, independent recreation, and an edge case. |
 | Octopus submission | `UNVERIFIED` | No submission, instructor review, or grade is asserted here. |
 
-Full evidence and commands: [XP record](../../../../.learning/evidence/2026-09-10-week1-day1-exercises-xp.md) · [Gold record](../../../../.learning/evidence/2026-09-11-week1-day1-exercises-xp-gold.md) · [Ninja record](../../../../.learning/evidence/2026-09-11-week1-day1-exercises-xp-ninja.md) · [Daily local audit](../../../../.learning/evidence/2026-09-11-week1-day1-daily-challenge-local.md)
+Full evidence and commands: [XP record](../../../../.learning/evidence/2026-09-10-week1-day1-exercises-xp.md) · [Gold record](../../../../.learning/evidence/2026-09-11-week1-day1-exercises-xp-gold.md) · [Ninja record](../../../../.learning/evidence/2026-09-11-week1-day1-exercises-xp-ninja.md) · [Daily alignment record](../../../../.learning/evidence/2026-09-11-week1-day1-daily-challenge-alignment.md)
 
 <details>
 <summary>Historical repository snapshot — generated 2026-07-15</summary>

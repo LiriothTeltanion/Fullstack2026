@@ -1,6 +1,6 @@
 # Learning review queue
 
-> Updated `2026-09-11T16:03:47+03:00` (`Asia/Jerusalem`). The queue follows
+> Updated `2026-09-11T20:19:21+03:00` (`Asia/Jerusalem`). The queue follows
 > Kevin's decision to verify existing work chronologically from Week 1 before
 > beginning Week 7. Finish one checkpoint and record evidence before expanding it.
 
@@ -16,22 +16,24 @@
 - **Boundary:** do not bulk-extract or copy authenticated course material into
   external AI without written Developers Institute authorization.
 
-## 1. Week 1 / Day 1 learning and Daily source boundary
+## 1. Week 1 / Day 1 learning and submission boundary
 
 - **Repository state:** XP 1–9, Gold 1–2, and Ninja 1–5 have bounded requirement
-  comparisons and 23 focused passing tests. The existing Daily artifact has five
-  local tests, but current official alignment is still `UNVERIFIED`.
+  comparisons and 23 focused passing tests. The Daily Challenge matches the
+  official item reviewed read-only on 2026-09-11 and has five focused passing
+  tests. Repository behavior and requirement alignment are `VERIFIED`.
 - **Kevin task:** predict and explain the key Day 1 behaviors in his own words,
-  then submit XP, Gold, and Ninja manually only through their matching Octopus
-  items. Do not force the Daily artifact into another item.
-- **Daily task:** if the Daily item appears, record a source-safe behavioral
-  summary and compare it with the existing artifact. If it remains unavailable,
-  ask DI whether a requirement, replacement, or waiver applies.
-- **Done when:** Kevin's explanation is recorded separately from the 23 passing
-  repository tests, matching Octopus submissions are manually confirmed, and the
-  Daily platform boundary is documented without guessing.
-- **Low-energy fallback:** answer the four Ninja review questions and record the
-  Daily item as platform-pending; do not start Day 2 tonight.
+  recreate the Daily Challenge core loop without reading the solution, handle one
+  edge case, and submit each packet manually only through its matching Octopus
+  item.
+- **Daily task:** use the [dated source-safe alignment record](evidence/2026-09-11-week1-day1-daily-challenge-alignment.md)
+  as repository evidence; do not treat it as submission or learning evidence.
+- **Done when:** Kevin's explanation and independent recreation are recorded
+  separately from the 28 passing Day 1 repository tests, matching Octopus
+  submissions are manually confirmed, and actual checker or instructor outcomes
+  are recorded without inference.
+- **Low-energy fallback:** explain the three length branches and one progressive
+  prefix example; leave every Octopus item unsubmitted until Kevin is ready.
 
 ## 2. Week 1 / Day 2, then Weeks 1–6 chronological verification
 
