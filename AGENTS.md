@@ -72,6 +72,9 @@ git diff --check
 - Support EN/ES/HE and RTL/LTR when an app's scope requires it.
 - Respect `prefers-reduced-motion`; avoid flashing, decorative motion spam, fake screenshots, and nondeterministic generated assets.
 - Inspect real browser output for visual changes. README-only motion must remain GitHub-safe.
+- New or materially revised narrative README SVGs use purposeful motion by default to explain sequence, state, or next action; logos, icons, and reference-only maps may remain static.
+- Keep the complete meaning visible without animation, isolate moving overlays in a removable motion layer, and record the motion story and QA status in `assets/readme/visual_manifest.json`.
+- Motion must never animate evidence text, imply unverified progress, flash rapidly, or remain active when the reader requests reduced motion.
 
 ## Documentation
 

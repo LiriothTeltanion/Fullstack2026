@@ -51,6 +51,25 @@ The required job name is a governance contract. If the workflow job is renamed,
 update the ruleset in the same controlled change or pull requests will remain
 blocked.
 
+## Narrative README motion contract
+
+New or materially revised narrative/evidence SVGs should feel alive when motion
+helps a reader understand order, state, or the next action. Small icons, logos,
+and reference-only maps may remain static.
+
+- Keep every fact, label, status, and boundary readable in the static base layer.
+- Animate only a dedicated overlay such as a route signal, waypoint halo, status
+  confirmation, or next-action cue; do not move evidence text.
+- Use repository-safe SVG primitives (`animate`, `animateMotion`, or
+  `animateTransform`) without scripts, remote assets, or `foreignObject`.
+- Hide the complete motion overlay under `prefers-reduced-motion: reduce` and
+  avoid rapid flashes, decorative motion spam, and status-color ambiguity.
+- Give every visual-manifest entry an explicit boolean `motion_required`
+  classification. When it is `true`, also record `motion_story` and `motion_qa`;
+  never rely on an omitted field to mean that motion is optional.
+- Run `npm run verify:visuals`, then inspect multiple timed browser frames plus
+  a forced-reduced-motion render before reporting the visual as verified.
+
 ## Friction-free GitHub Desktop Beta flow
 
 1. Select `Fullstack2026` and confirm the exact underscore path above.

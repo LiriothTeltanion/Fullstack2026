@@ -131,6 +131,21 @@ def validate_svg(
         problems.append(f"animated SVG lacks reduced-motion behavior: {relative}")
 
     if manifest_entry is not None:
+        if "motion_required" not in manifest_entry:
+            problems.append(f"visual manifest must classify motion_required: {relative}")
+            motion_required = False
+        else:
+            motion_required = manifest_entry["motion_required"]
+
+        if not isinstance(motion_required, bool):
+            problems.append(f"visual manifest motion_required must be boolean: {relative}")
+        elif motion_required:
+            if not animated:
+                problems.append(f"narrative SVG requires purposeful motion: {relative}")
+            for field in ("motion_story", "motion_qa"):
+                if not str(manifest_entry.get(field, "")).strip():
+                    problems.append(f"narrative SVG is missing {field}: {relative}")
+
         width = root.get("width", "").strip()
         height = root.get("height", "").strip()
         actual_dimensions = f"{width}x{height}"

@@ -27,6 +27,9 @@ does not reinterpret early work as production-ready code.
 - Revised the living Day 1 evidence map in place so eight README consumers show
   Ninja as repository-verified and Daily as locally tested but officially
   unverified; learning and Octopus states remain unverified.
+- Reworked that shared Day 1 map into a visible twelve-second learning-signal
+  sequence with concept waypoints, evidence-card confirmations, and a manual
+  next-action cue while preserving a complete reduced-motion static view.
 - Removed the ten legacy animated-SVG placements from the five current Day 1
   guides because those older assets do not implement the current accessibility
   and reduced-motion contract; the files and historical text remain preserved.
@@ -36,6 +39,9 @@ does not reinterpret early work as production-ready code.
 - Extended the visual contract to validate manifested nested SVGs, including
   their XML, dimensions, view box, privacy, reduced-motion behavior, and freedom
   from unmanifested SVG companions in the same current consumer guide.
+- Added a forward narrative-motion contract so every manifested graphic carries
+  an explicit motion classification and narrative assets declare their purpose
+  and browser QA instead of regressing to barely perceptible or decorative motion.
 
 - Migrated the root linter from deprecated ESLint 8 configuration to ESLint 10
   flat config with the supported typescript-eslint 8 toolchain.
@@ -82,10 +88,13 @@ does not reinterpret early work as production-ready code.
   artifact while its official source alignment remains unverified.
 - The Day 1 focused checkpoint now contains 23 requirement-aligned XP, Gold, and
   Ninja tests plus 5 local-only Daily regression tests.
+- Seven timed browser frames show 1.2712% to 8.6598% pixel change between
+  consecutive motion checkpoints; desktop, 390-CSS-pixel mobile, light, dark,
+  grayscale, and forced reduced-motion renders remain complete and legible.
 - Repository structure passes for 890 indexed files and 275 indexed directories,
   including exact-case links, deterministic catalogs, source-safe intake,
   display titles, privacy, and the expanded visual contract.
-- The complete local suite passes 4 JavaScript tests and 62 Python tests (66
+- The complete local suite passes 4 JavaScript tests and 65 Python tests (69
   total); `npm audit` reports zero known vulnerabilities; and the strict
   no-write NOVA Quality Gate reports zero errors and zero warnings across 863
   scanned files.
