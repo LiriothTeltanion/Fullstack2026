@@ -52,7 +52,17 @@ jobs:
         run: python tools/nova_quality_gate.py --repo . --strict
 
       - name: Canonical repository structure
-        run: npm run verify:structure
+        run: npm run verify:structure:core
+
+      # Los catalogos de reports/nova son documentacion derivada: indexan el
+      # arbol entero, asi que cualquier fichero que cambie los deja obsoletos.
+      # Eso hacia que todo PR naciera fallando, Dependabot incluido, y ninguna
+      # herramienta sabe regenerarlos por su cuenta. En una rama sale como
+      # aviso; en push a main sigue siendo fallo, que es donde importa porque
+      # es lo que se publica. Regenerar: npm run catalogs:refresh
+      - name: Generated catalogs are current
+        continue-on-error: ${{ github.event_name == 'pull_request' }}
+        run: npm run catalogs:check
 
       - name: Python anchor tests
         run: python -m unittest discover -s tests/python -p "test_*.py" -v
