@@ -1,15 +1,32 @@
-# 🥈 Exercises XP Gold - Enhanced Practice
+# 🥇 Exercises XP Gold — String Repetition and Seasons
+
+## 🛰️ Bounded evidence checkpoint — 2026-09-11
+
+<div align="center">
+
+<img src="../../../../assets/readme/days/week1-day1-python-foundations.svg" width="100%" alt="Week 1 Day 1 Python foundations evidence map: XP 1–9, Gold 1–2, and Ninja 1–5 are repository-verified by 23 focused tests; the Daily Challenge matches the reviewed official prompt and passes 5 focused tests; learning and Octopus submission remain unverified.">
+
+</div>
+
+| Evidence layer | State | What is supported |
+|---|---|---|
+| XP Gold 1–2 repository behavior | `VERIFIED` | [Six focused tests](../../../../tests/python/test_week1_day1_exercises_xp_gold.py) cover exact repeated output, all 12 month mappings, seasonal transitions, invalid values, and interactive retries. |
+| XP Ninja 1–5 repository behavior | `VERIFIED` | The [Ninja guide](../ExercisesXPNinja/) and [seven-test suite](../../../../tests/python/test_week1_day1_exercises_xp_ninja.py) cover the newly reviewed tier. |
+| Daily Challenge | `VERIFIED` requirement alignment and repository behavior | A read-only source comparison plus [five tests](../../../../tests/python/test_week1_day1_daily_challenge.py) cover the official behavior. |
+| Kevin's understanding | `UNVERIFIED` | Requires Kevin's own explanation, a changed example, independent recreation, and an edge case. |
+| Octopus submission or grade | `UNVERIFIED` | No submission, instructor review, completion, or grade is asserted here. |
+
+Full commands and evidence boundary: [Gold record](../../../../.learning/evidence/2026-09-11-week1-day1-exercises-xp-gold.md) · [Ninja record](../../../../.learning/evidence/2026-09-11-week1-day1-exercises-xp-ninja.md) · [Daily alignment record](../../../../.learning/evidence/2026-09-11-week1-day1-daily-challenge-alignment.md).
+
+<details>
+<summary>Historical repository snapshot — generated 2026-07-15</summary>
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">
 
-<img src="../../../../assets/readme/nova-folder-pulse.svg" width="100%" alt="Animated NOVA learning pulse">
-
 ### Exercises XPGold
 
-<img src="../../../../assets/readme/progress/exercises-xpgold-d14a8c80ec.svg" width="100%" alt="Readiness status for Exercises XPGold">
-
-**Goal:** Reinforce the lesson with intermediate scenarios, validation, and stronger edge-case handling.
+**Goal:** Practice Python basics, string repetition, numeric input, and conditional season mapping.
 
 </div>
 
@@ -17,10 +34,10 @@
 
 | Metric | Value |
 |---|---:|
-| Readiness | **80%** |
+| Historical readiness heuristic | **80% · generated 2026-07-15** |
 | Files | 3 |
 | Source files | 1 |
-| Test files | 0 |
+| Colocated test files | 0; one focused Gold suite now lives under `tests/python/` |
 | Text lines | 272 |
 
 ### ▶️ Main paths
@@ -39,10 +56,11 @@ python Week1Python/Day1StartingwithPython/Exercises/ExercisesXPGold/exercisesxpg
 - ✅ Contains 1 source file(s) across practical exercises or projects.
 - ✅ No Python syntax error was detected in this folder tree.
 - ✅ A likely runnable entry point was detected.
+- ✅ Six centralized tests now cover the two supplied XP Gold behaviors.
 
 ### 🟠 What to improve next
 
-- ⚠️ No local unit test is present yet; repository-wide syntax checks still cover the sources.
+- ⚠️ Kevin's independent explanation and Octopus submission state remain unverified.
 
 ### 🧪 Validation
 
@@ -57,22 +75,27 @@ node tools/run_node_tests.mjs .
 <sub>Managed by NOVA Ultimate v2.0.0 · 2026-07-15T06:22:49+03:00</sub>
 <!-- NOVA:ULTIMATE:END -->
 
-**Author:** Kevin Cusnir "Lirioth"  
-**Course:** Fullstack Bootcamp 2026  
-**Last Updated:** October 18, 2025
+</details>
 
-**Reinforce Python fundamentals with real-world scenarios and advanced string techniques.**
+**Author:** Kevin Cusnir<br>
+**Creative signature:** Lirioth Teltanion<br>
+**Course:** Fullstack Bootcamp 2026<br>
+**Local README originally updated:** October 18, 2025<br>
+**Source requirements last updated:** February 5, 2026<br>
+**Repository alignment reviewed:** September 11, 2026
+
+**Practice two focused Python fundamentals with exact output and a tested input boundary.**
 
 ## 📊 Quick Stats
 - **⏰ Duration**: 30-45 minutes
-- **🎯 Difficulty**: 🟡 Intermediate
+- **🎯 Difficulty**: 🟢 Beginner
 - **📝 Exercises**: 2
-- **✅ Prerequisites**: Completed ExercisesXP
+- **✅ Suggested preparation**: Review ExercisesXP
 
 ## 🎯 Learning Objectives
 
-By completing these exercises, you will:
-- ✅ Master string multiplication for efficient output
+These exercises are designed to help you practice how to:
+- ✅ Use string multiplication for concise repeated output
 - ✅ Apply tuple membership testing for categorization
 - ✅ Implement month-to-season mapping logic
 - ✅ Create robust input validation systems
@@ -103,12 +126,16 @@ What happens:
 
 How it works (simple membership checks):
 ```python
-if m in (3, 4, 5):      # 🌸 Spring
-elif m in (6, 7, 8):    # ☀️ Summer
-elif m in (9, 10, 11):  # 🍂 Autumn
-elif m in (12, 1, 2):   # ❄️ Winter
-else:                   # Anything not 1..12
-    print("Invalid month")
+if m in (3, 4, 5):
+    return "Spring"
+elif m in (6, 7, 8):
+    return "Summer"
+elif m in (9, 10, 11):
+    return "Autumn"
+elif m in (12, 1, 2):
+    return "Winter"
+else:                   # Outside the helper's 1..12 contract
+    raise ValueError("month must be between 1 and 12")
 ```
 
 ### 📸 Examples
@@ -123,7 +150,9 @@ Enter month (1-12): 12
 Winter
 
 Enter month (1-12): 0
-Invalid month
+Month must be between 1 and 12.
+Enter month (1-12): 4
+Spring
 ```
 
 ---
@@ -134,7 +163,7 @@ The `exercisesxpgold.py` file contains:
 - **Constants**: Season month tuples for cleaner logic
 - **2 exercise functions**: String multiplication and season detection
 - **Helper function**: `get_valid_month()` for validated input (1-12)
-- **Season mapper**: `get_season()` returns emoji-enhanced season names
+- **Season mapper**: `get_season()` returns exact plain-text season names and rejects values outside 1–12
 
 ### 🔍 **Function Map**
 ```python
@@ -164,12 +193,13 @@ py exercisesxpgold.py
 ---
 
 ## 📁 Files
-- `exercisesxpgold.py` — Complete implementation
+- `exercisesxpgold.py` — Requirement-aligned implementation
 - `README.md` — This documentation
+- `../../../../tests/python/test_week1_day1_exercises_xp_gold.py` — Central focused regression suite
 
 ---
 
-## � Troubleshooting
+## 🐛 Troubleshooting
 
 ### Common Issues & Solutions
 
@@ -200,13 +230,14 @@ py exercisesxpgold.py
 
 ---
 
-## �👤 About the Author
+## 👤 About the Author
 
-**Kevin Cusnir "Lirioth"**  
-- 🎓 Fullstack Developer Student  
-- 💻 GitHub: [@Lirioth](https://github.com/Lirioth)  
-- 📧 Repository: [Fullstack2026](https://github.com/Lirioth/Fullstack2026)
+**Kevin Cusnir · Lirioth Teltanion**
+
+- 🎓 Fullstack Developer Student
+- 💻 GitHub: [@LiriothTeltanion](https://github.com/LiriothTeltanion)
+- 📦 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)
 
 ---
 
-**Created with ❤️ for intermediate Python practice**
+**Created for careful, beginner-friendly Python practice with transparent evidence boundaries.**

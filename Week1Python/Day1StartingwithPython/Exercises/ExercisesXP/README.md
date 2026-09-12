@@ -1,15 +1,33 @@
-# 🥉 Exercises XP - Foundation Mastery
+# 🥉 Exercises XP — Verified Repository Behavior
+
+## 🛰️ Bounded evidence checkpoint — 2026-09-11
+
+<div align="center">
+
+<img src="../../../../assets/readme/days/week1-day1-python-foundations.svg" width="100%" alt="Week 1 Day 1 Python foundations evidence map: XP 1–9, Gold 1–2, and Ninja 1–5 are repository-verified by 23 focused tests; the Daily Challenge matches the reviewed official prompt and passes 5 focused tests; learning and Octopus submission remain unverified.">
+
+</div>
+
+| Layer | State | Evidence boundary |
+|---|---|---|
+| XP repository behavior | `VERIFIED` | [Ten focused tests](../../../../tests/python/test_week1_day1_exercises_xp.py) cover the nine supplied XP behaviors, including invalid numeric input and the strict 145/146 cm boundary. |
+| Gold repository behavior | `VERIFIED` | The separate [Gold guide](../ExercisesXPGold/) and [six-test suite](../../../../tests/python/test_week1_day1_exercises_xp_gold.py) cover Gold 1–2. |
+| Ninja repository behavior | `VERIFIED` | The separate [Ninja guide](../ExercisesXPNinja/) and [seven-test suite](../../../../tests/python/test_week1_day1_exercises_xp_ninja.py) cover Ninja 1–5. |
+| Daily Challenge | `VERIFIED` requirement alignment and repository behavior | A read-only source comparison plus [five tests](../../../../tests/python/test_week1_day1_daily_challenge.py) cover the official behavior. |
+| Kevin's understanding | `UNVERIFIED` | Requires Kevin's own explanation, a changed example, independent recreation, and an edge case. |
+| Octopus submission | `UNVERIFIED` | No submission, instructor review, or grade is asserted here. |
+
+Full evidence and commands: [XP record](../../../../.learning/evidence/2026-09-10-week1-day1-exercises-xp.md) · [Gold record](../../../../.learning/evidence/2026-09-11-week1-day1-exercises-xp-gold.md) · [Ninja record](../../../../.learning/evidence/2026-09-11-week1-day1-exercises-xp-ninja.md) · [Daily alignment record](../../../../.learning/evidence/2026-09-11-week1-day1-daily-challenge-alignment.md)
+
+<details>
+<summary>Historical repository snapshot — generated 2026-07-15</summary>
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">
 
-<img src="../../../../assets/readme/nova-folder-pulse.svg" width="100%" alt="Animated NOVA learning pulse">
-
 ### Exercises XP
 
-<img src="../../../../assets/readme/progress/exercises-xp-a81d7fbf59.svg" width="100%" alt="Readiness status for Exercises XP">
-
-**Goal:** Complete the standard exercises required to master the lesson's core concepts.
+**Goal:** Practice the standard exercises that introduce the lesson's core concepts.
 
 </div>
 
@@ -17,10 +35,10 @@
 
 | Metric | Value |
 |---|---:|
-| Readiness | **80%** |
+| Historical readiness heuristic | **80% · generated 2026-07-15** |
 | Files | 3 |
 | Source files | 1 |
-| Test files | 0 |
+| Colocated test files | 0; one focused suite now lives under `tests/python/` |
 | Text lines | 524 |
 
 ### ▶️ Main paths
@@ -39,10 +57,11 @@ python Week1Python/Day1StartingwithPython/Exercises/ExercisesXP/exercisesxp.py
 - ✅ Contains 1 source file(s) across practical exercises or projects.
 - ✅ No Python syntax error was detected in this folder tree.
 - ✅ A likely runnable entry point was detected.
+- ✅ Ten centralized tests now cover the nine supplied Exercises XP behaviors.
 
 ### 🟠 What to improve next
 
-- ⚠️ No local unit test is present yet; repository-wide syntax checks still cover the sources.
+- ⚠️ Kevin's independent explanation and Octopus submission state remain unverified.
 
 ### 🧪 Validation
 
@@ -57,11 +76,15 @@ node tools/run_node_tests.mjs .
 <sub>Managed by NOVA Ultimate v2.0.0 · 2026-07-15T06:22:49+03:00</sub>
 <!-- NOVA:ULTIMATE:END -->
 
-**Author:** Kevin Cusnir "Lirioth"  
-**Course:** Fullstack Bootcamp 2026  
-**Last Updated:** October 18, 2025
+</details>
 
-**Master Python fundamentals through 9 essential beginner-friendly exercises.**
+**Author:** Kevin Cusnir<br>
+**Creative signature:** Lirioth Teltanion<br>
+**Course:** Fullstack Bootcamp 2026  
+**Local README originally updated:** October 18, 2025<br>
+**Evidence checkpoint reviewed:** September 11, 2026
+
+**Practice Python fundamentals through nine beginner-friendly exercises with a bounded automated safety net.**
 
 ## 📊 Quick Stats
 - **⏰ Duration**: 45-60 minutes
@@ -71,8 +94,8 @@ node tools/run_node_tests.mjs .
 
 ## 🎯 Learning Objectives
 
-By completing these exercises, you will:
-- ✅ Master basic print() formatting and escape sequences
+These exercises are designed to help you practice how to:
+- ✅ Practice basic `print()` formatting and escape sequences
 - ✅ Perform arithmetic operations with various operators
 - ✅ Understand type comparisons and boolean logic
 - ✅ Handle string concatenation and variable assignment
@@ -98,7 +121,7 @@ By completing these exercises, you will:
 
 ---
 
-## � What this script covers
+## 🧭 What this script covers
 
 1) **👋 Hello World (strings + newlines)**  
    Prints "Hello world" four times, using `\n` for new lines.
@@ -130,7 +153,7 @@ By completing these exercises, you will:
 
 9) **🎢 Tall enough to ride? (input + numeric compare)**  
    Asks for height in cm and prints if you’re tall enough.  
-   > ⚠️ Note: This code uses `height > 145`. If you want `145` to count as tall enough, change to `>=`.
+   > Requirement boundary: “over 145 cm” is strict. The code uses `height > 145`, so 145 cm does not qualify and 146 cm is the first qualifying whole-centimeter height.
 
 ---
 
@@ -162,7 +185,7 @@ Hello world
 Hello world
 Hello world
 Hello world
-768032
+7762392
 False
 True
 False
@@ -198,7 +221,7 @@ Hello world
 
 ### Exercise 2 - Arithmetic
 ```
-768032
+7762392
 ```
 (Result of `(99³) × 8`)
 
@@ -266,7 +289,7 @@ You need to grow some more to ride.
 
 ---
 
-## � **Code Structure**
+## 🧱 **Code Structure**
 
 The `exercisesxp.py` file contains:
 - **9 exercise functions**: `exercise_1()` through `exercise_9()`
@@ -288,7 +311,7 @@ exercise_9()  → Height validation (interactive)
 
 ---
 
-## �🐛 Troubleshooting
+## 🐛 Troubleshooting
 
 ### Common Issues & Solutions
 
@@ -313,8 +336,9 @@ except ValueError:
     print("❌ Please enter a valid number")
 ```
 
-**❌ Problem:** Height of 145cm not accepted  
-**✅ Solution:** Code uses `>=` for inclusive comparison (145 is tall enough)
+**❌ Problem:** A height of exactly 145 cm is accepted
+
+**✅ Solution:** Use `>` for the strict “over 145 cm” requirement. At 145 cm, the rider still needs 1 cm; 146 cm qualifies.
 
 **❌ Problem:** Exercise 3 crashes on `"3" > 3`  
 **✅ Solution:** The code includes `try/except` to catch this TypeError safely
@@ -350,12 +374,12 @@ if user_input.strip().lower() == my_name.lower():
 
 ---
 
-## � About the Author
+## 👤 About the Author
 
-**Kevin Cusnir "Lirioth"**  
+**Kevin Cusnir · Lirioth Teltanion**
 - 🎓 Fullstack Developer Student  
-- 💻 GitHub: [@Lirioth](https://github.com/Lirioth)  
-- 📧 Repository: [Fullstack2026](https://github.com/Lirioth/Fullstack2026)
+- 💻 GitHub: [@LiriothTeltanion](https://github.com/LiriothTeltanion)<br>
+- 📧 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)
 
 ---
 

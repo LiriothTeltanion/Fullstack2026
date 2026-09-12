@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/readme/ultimate/nova-root-banner.svg" width="100%" alt="Fullstack2026 twelve-week course observatory: Weeks 1–6 contain source files; Weeks 7–12 are scaffolds awaiting official coursework">
+<img src="./assets/readme/ultimate/nova-root-banner.svg" width="100%" alt="Fullstack2026 twelve-week course observatory: Weeks 1–6 contain source files; Weeks 7–12 are scaffolds awaiting official coursework.">
 
 <br>
 
@@ -67,6 +67,8 @@ This repository is designed to show more than completed assignments. It demonstr
 | Weeks 1–6 | Source files and local assignment documentation are present. | `unknown` except for separately recorded bounded exercises. | Runtime, browser, SQL, dependency, and accessibility coverage remains partial. |
 | Weeks 7–10 | Canonical root and source-boundary README are present. | `unknown` | Official days, exercises, challenges, and submission rules are pending. |
 | Weeks 11–12 | Canonical final-project root and source-boundary README are present. | `unknown` | Official brief, rubric, milestones, deployment, and presentation requirements are pending. |
+
+> **Latest bounded checkpoint:** [Week 1 · Day 1](Week1Python/Day1StartingwithPython/) repository behavior is verified for [Exercises XP 1–9](Week1Python/Day1StartingwithPython/Exercises/ExercisesXP/), [XP Gold 1–2](Week1Python/Day1StartingwithPython/Exercises/ExercisesXPGold/), and [XP Ninja 1–5](Week1Python/Day1StartingwithPython/Exercises/ExercisesXPNinja/) by 23 focused tests. The [Daily Challenge](Week1Python/Day1StartingwithPython/DailyChallenge/) matches the official prompt reviewed read-only on 2026-09-11 and passes 5 additional tests. Kevin's learning, Octopus submission, checker response, instructor review, and grade remain `UNVERIFIED`.
 
 The machine-readable source of truth is [`.learning/course-map.yml`](.learning/course-map.yml). Human-facing icons and readable labels are defined separately in [`.learning/display-map.json`](.learning/display-map.json), so the stable Git paths never need emoji. The sanitized academy review is [`reports/resume/ACADEMY_ALIGNMENT_2026-08-24.md`](reports/resume/ACADEMY_ALIGNMENT_2026-08-24.md).
 
@@ -154,7 +156,7 @@ The NOVA stabilization pass preserved the original exercises while improving the
 
 <div align="center">
 
-<img src="./assets/readme/ultimate/nova-twelve-week-journey.svg" width="100%" alt="Static evidence map for Weeks 1–12, distinguishing source-present Weeks 1–6 from scaffold-only Weeks 7–12">
+<img src="./assets/readme/ultimate/nova-twelve-week-journey.svg" width="100%" alt="Static evidence map for Weeks 1–12, distinguishing source-present Weeks 1–6 from scaffold-only Weeks 7–12.">
 
 </div>
 
@@ -322,7 +324,7 @@ Each README records the same safe workflow: retrieve the exact official source, 
 ## 🧬 Technology constellation
 
 <p align="center">
-  <img src="./assets/readme/ultimate/nova-stack-galaxy.svg" width="100%" alt="Static source-backed technology constellation connecting Python, OOP, HTML and CSS, JavaScript, TypeScript, SQL, Node.js, and quality engineering without claiming learning mastery">
+  <img src="./assets/readme/ultimate/nova-stack-galaxy.svg" width="100%" alt="Static source-backed technology constellation connecting Python, OOP, HTML and CSS, JavaScript, TypeScript, SQL, Node.js, and quality engineering without claiming learning mastery.">
 </p>
 
 > This static map restores the strongest editorial visual from the earlier

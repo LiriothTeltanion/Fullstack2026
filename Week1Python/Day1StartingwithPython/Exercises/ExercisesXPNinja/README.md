@@ -1,13 +1,64 @@
+# 🥷 Exercises XP Ninja — Boolean Logic and Text Constraints
+
+## 🛰️ Current evidence checkpoint — 2026-09-11
+
+<div align="center">
+
+<img src="../../../../assets/readme/days/week1-day1-python-foundations.svg" width="100%" alt="Week 1 Day 1 Python foundations evidence map: XP 1–9, Gold 1–2, and Ninja 1–5 are repository-verified by 23 focused tests; the Daily Challenge matches the reviewed official prompt and passes 5 focused tests; learning and Octopus submission remain unverified.">
+
+</div>
+
+| Evidence layer | State | Reproducible evidence |
+|---|---|---|
+| Current Ninja requirement summary | `VERIFIED` | Compared with Kevin's source-safe summary supplied on 2026-09-11; the source carried a 2026-02-05 update label. |
+| Repository behavior | `VERIFIED` | [Seven focused tests](../../../../tests/python/test_week1_day1_exercises_xp_ninja.py) plus observed Windows launcher commands. |
+| Kevin's independent understanding | `UNVERIFIED` | Requires prediction, explanation, recreation, and an edge-case variation. |
+| Octopus submission, review, and grade | `UNVERIFIED` | No platform action is inferred from local files or tests. |
+
+Full commands and limitations are recorded in the [dated Ninja evidence record](../../../../.learning/evidence/2026-09-11-week1-day1-exercises-xp-ninja.md).
+
+## Exercise map
+
+| Exercise | Repository result | Important learning point |
+|---|---|---|
+| 1 — Terminal and PATH | `VERIFIED` | The operating system searches the directories listed in `PATH` for executable programs. |
+| 2 — `py` command | `VERIFIED` | On Kevin's Windows machine, `py.exe` is the Python Launcher; it is not a PowerShell alias. |
+| 3 — Boolean outputs | `VERIFIED` | Guesses are written as comments before all six expressions and four derived values. |
+| 4 — Character count | `VERIFIED` | The continuous supplied prose contains 445 characters; visual webpage wrapping is not counted as data. |
+| 5 — Longest sentence without A | `VERIFIED` | The loop rejects uppercase or lowercase A and congratulates only a strictly longer valid sentence. |
+
+The blank line used to finish Exercise 5 is a documented local console affordance; it does not change the record-selection rule.
+
+## Run and test
+
+```powershell
+py -3.12 -B Week1Python/Day1StartingwithPython/Exercises/ExercisesXPNinja/exercisesxpninja.py
+py -3.12 -B -m unittest discover -s tests/python -p "test_week1_day1_exercises_xp_ninja.py" -v
+```
+
+## Kevin learning gate
+
+Before this moves from repository `VERIFIED` to learning `explained`, Kevin should be able to:
+
+1. predict all ten Exercise 3 outputs before running the file;
+2. explain chained comparisons and why booleans participate in integer arithmetic;
+3. explain why `python` and `py` work outside their executable directories;
+4. recreate the Exercise 5 loop without reading the solution; and
+5. change the forbidden character and add one boundary example.
+
+<details>
+<summary>Historical repository guide — generated before the 2026-09-11 requirement review</summary>
+
 # 🥇 Exercises XP Ninja - Advanced Challenges
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">
 
-<img src="../../../../assets/readme/nova-folder-pulse.svg" width="100%" alt="Animated NOVA learning pulse">
+[Preserved legacy folder pulse asset](../../../../assets/readme/nova-folder-pulse.svg)
 
 ### Exercises XPNinja
 
-<img src="../../../../assets/readme/progress/exercises-xpninja-0250e546b7.svg" width="100%" alt="Readiness status for Exercises XPNinja">
+[Preserved legacy heuristic asset](../../../../assets/readme/progress/exercises-xpninja-0250e546b7.svg)
 
 **Goal:** Extend the lesson with advanced algorithmic and creative problem-solving challenges.
 
@@ -232,3 +283,5 @@ Try these to level up your skills:
 ---
 
 **Created with ❤️ for advanced Python mastery**
+
+</details>

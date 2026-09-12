@@ -1,13 +1,70 @@
+# 💪 Build Up a String — Requirement-Aligned Exercise
+
+## 🛰️ Current evidence checkpoint — 2026-09-11
+
+<div align="center">
+
+<img src="../../../../assets/readme/days/week1-day1-python-foundations.svg" width="100%" alt="Week 1 Day 1 Python foundations evidence map: XP 1–9, Gold 1–2, and Ninja 1–5 are repository-verified by 23 focused tests; the Daily Challenge matches the reviewed official prompt and passes 5 focused tests; learning and Octopus submission remain unverified.">
+
+</div>
+
+> **Truth boundary:** the current Developers Institute Daily Challenge was reviewed read-only on 2026-09-11. This program matches its observable requirements and has verified repository behavior. Kevin's independent understanding, submission, checker response, instructor review, and grade remain `UNVERIFIED`.
+
+## Sanitized requirement map
+
+The official item is titled **Build up a string**, carries a 2025-10-30 update label, and requires the following behavior without prescribing a larger architecture:
+
+1. accept one string and distinguish lengths below, above, and exactly ten;
+2. print the specified short, long, or perfect-length feedback;
+3. for a valid string, print its first and last characters;
+4. build and print every progressive prefix using a `for` loop; and
+5. optionally shuffle the characters while preserving the same multiset.
+
+This is a public-safe behavioral summary, not a copy of the authenticated course page.
+
+## Observed local behavior
+
+The current script:
+
+1. accepts a string from the terminal;
+2. stops with a clear message when its length is not exactly ten characters;
+3. prints the first and last characters for a valid input;
+4. prints each progressive prefix of the string; and
+5. prints a randomized permutation containing the same characters.
+
+| Check | State |
+|---|---|
+| Length boundaries 9, 10, and 11 | `VERIFIED` by local tests |
+| Progressive output | `VERIFIED` by local tests |
+| Shuffle length and character preservation | `VERIFIED` by local tests and deterministic doctest properties |
+| Full valid and invalid console paths | `VERIFIED` by local tests |
+| Current official prompt match | `VERIFIED` by read-only comparison on 2026-09-11 |
+| Octopus item visibility | `VERIFIED`; no submission action was performed |
+| Learning, submission, review, and grade | `UNVERIFIED` |
+
+## Run and test
+
+```powershell
+py -3.12 -B Week1Python/Day1StartingwithPython/DailyChallenge/BuildUpAString/buildupastring.py
+py -3.12 -B -m unittest discover -s tests/python -p "test_week1_day1_daily_challenge.py" -v
+py -3.12 -B -m doctest -v Week1Python/Day1StartingwithPython/DailyChallenge/BuildUpAString/buildupastring.py
+```
+
+Current evidence and limitations: [2026-09-11 official-alignment record](../../../../.learning/evidence/2026-09-11-week1-day1-daily-challenge-alignment.md). The earlier [local-only audit](../../../../.learning/evidence/2026-09-11-week1-day1-daily-challenge-local.md) is preserved as historical provenance.
+
+<details>
+<summary>Historical learning guide — retained for provenance, not current evidence</summary>
+
 # 💪 Daily Challenge — Build up a string
 
 <!-- NOVA:ULTIMATE:START -->
 <div align="center">
 
-<img src="../../../../assets/readme/nova-folder-pulse.svg" width="100%" alt="Animated NOVA learning pulse">
+[Preserved legacy folder pulse asset](../../../../assets/readme/nova-folder-pulse.svg)
 
 ### Build Up AString
 
-<img src="../../../../assets/readme/progress/build-up-astring-6c50c48a77.svg" width="100%" alt="Readiness status for Build Up AString">
+[Preserved legacy heuristic asset](../../../../assets/readme/progress/build-up-astring-6c50c48a77.svg)
 
 **Goal:** Solve an independent daily challenge that reinforces the current lesson through focused problem solving.
 
@@ -269,3 +326,5 @@ print(f"Most common: {freq.most_common(3)}")
 ---
 
 **Created with ❤️ for mastering string manipulation in Python**
+
+</details>
