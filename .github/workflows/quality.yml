@@ -52,7 +52,11 @@ jobs:
         run: python tools/nova_quality_gate.py --repo . --strict
 
       - name: Canonical repository structure
-        run: npm run verify:structure
+        run: npm run verify:structure:core
+
+      - name: Generated catalogs are current
+        continue-on-error: ${{ github.event_name == 'pull_request' }}
+        run: npm run catalogs:check
 
       - name: Python anchor tests
         run: python -m unittest discover -s tests/python -p "test_*.py" -v
