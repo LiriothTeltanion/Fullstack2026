@@ -718,10 +718,17 @@ def write_ci(root: Path, changes: list[Change]) -> None:
         "      - name: Install JavaScript tooling\n        run: npm ci",
         install_steps,
     )
+    # Los catalogos de reports/nova indexan el arbol entero, asi que cualquier
+    # fichero que cambie los deja obsoletos y todo PR nacia fallando, Dependabot
+    # incluido. Van en su propio paso: aviso en una rama, fallo en push a main,
+    # que es lo que se publica. El resto de la estructura no se ablanda.
     workflow = workflow.replace(
         "\n      - name: Python anchor tests",
         "\n      - name: Canonical repository structure\n"
-        "        run: npm run verify:structure\n\n"
+        "        run: npm run verify:structure:core\n\n"
+        "      - name: Generated catalogs are current\n"
+        "        continue-on-error: ${{ github.event_name == 'pull_request' }}\n"
+        "        run: npm run catalogs:check\n\n"
         "      - name: Python anchor tests",
     )
     write_text(root / ".github/workflows/quality.yml", workflow, changes, "added read-only CI quality gate")
