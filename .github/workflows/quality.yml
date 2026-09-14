@@ -3,6 +3,7 @@ name: NOVA Quality Gate
 on:
   push:
     branches: [main]
+    tags: ['v*']
   pull_request:
   workflow_dispatch:
 
@@ -55,7 +56,7 @@ jobs:
         run: npm run verify:structure:core
 
       - name: Generated catalogs are current
-        continue-on-error: ${{ github.event_name == 'pull_request' }}
+        continue-on-error: ${{ github.ref_type != 'tag' && github.event_name != 'workflow_dispatch' }}
         run: npm run catalogs:check
 
       - name: Python anchor tests
