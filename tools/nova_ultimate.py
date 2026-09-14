@@ -688,7 +688,7 @@ def update_package_json(root: Path, changes: list[Change]) -> None:
 
 
 def write_ci(root: Path, changes: list[Change]) -> None:
-    workflow = """name: NOVA Quality Gate\n\non:\n  push:\n    branches: [main]\n  pull_request:\n  workflow_dispatch:\n\npermissions:\n  contents: read\n\nconcurrency:\n  group: nova-quality-${{ github.workflow }}-${{ github.ref }}\n  cancel-in-progress: true\n\njobs:\n  validate:\n    name: Syntax, security, docs and tests\n    runs-on: ubuntu-latest\n    timeout-minutes: 20\n    steps:\n      - name: Checkout repository\n        uses: actions/checkout@v7\n\n      - name: Set up Python\n        uses: actions/setup-python@v7\n        with:\n          python-version: \"3.13\"\n\n      - name: Set up Node.js\n        uses: actions/setup-node@v7\n        with:\n          node-version: \"24\"\n          cache: npm\n\n      - name: Install JavaScript tooling\n        run: npm ci\n\n      - name: Whole-repository quality gate\n        run: python tools/nova_quality_gate.py --repo . --strict\n\n      - name: Python anchor tests\n        run: python -m unittest discover -s tests/python -p \"test_*.py\" -v\n\n      - name: JavaScript and TypeScript anchor tests\n        run: npm run test:js\n"""
+    workflow = """name: NOVA Quality Gate\n\non:\n  push:\n    branches: [main]\n    tags: ['v*']\n  pull_request:\n  workflow_dispatch:\n\npermissions:\n  contents: read\n\nconcurrency:\n  group: nova-quality-${{ github.workflow }}-${{ github.ref }}\n  cancel-in-progress: true\n\njobs:\n  validate:\n    name: Syntax, security, docs and tests\n    runs-on: ubuntu-latest\n    timeout-minutes: 20\n    steps:\n      - name: Checkout repository\n        uses: actions/checkout@v7\n\n      - name: Set up Python\n        uses: actions/setup-python@v7\n        with:\n          python-version: \"3.13\"\n\n      - name: Set up Node.js\n        uses: actions/setup-node@v7\n        with:\n          node-version: \"24\"\n          cache: npm\n\n      - name: Install JavaScript tooling\n        run: npm ci\n\n      - name: Whole-repository quality gate\n        run: python tools/nova_quality_gate.py --repo . --strict\n\n      - name: Python anchor tests\n        run: python -m unittest discover -s tests/python -p \"test_*.py\" -v\n\n      - name: JavaScript and TypeScript anchor tests\n        run: npm run test:js\n"""
     install_steps = (
         "      - name: Install JavaScript tooling\n"
         "        run: npm ci --ignore-scripts\n\n"
@@ -720,19 +720,22 @@ def write_ci(root: Path, changes: list[Change]) -> None:
     )
     # Los catalogos de reports/nova indexan el arbol entero, asi que cualquier
     # fichero que cambie los deja obsoletos y todo PR nacia fallando, Dependabot
-    # incluido. Van en su propio paso: aviso en una rama, fallo en push a main,
-    # que es lo que se publica. El resto de la estructura no se ablanda.
+    # incluido. Van en su propio paso. Desde el 14 sep 2026 son aviso en una rama
+    # y en push a main, y fallo en una etiqueta v* o en una ejecucion manual: cada
+    # fusion de Dependabot ponia main en rojo sin nada roto, y lo que se publica es
+    # la etiqueta. Antes de etiquetar: git add, npm run catalogs:refresh y fusionar.
+    # El resto de la estructura no se ablanda.
     workflow = workflow.replace(
         "\n      - name: Python anchor tests",
         "\n      - name: Canonical repository structure\n"
         "        run: npm run verify:structure:core\n\n"
         "      - name: Generated catalogs are current\n"
-        "        continue-on-error: ${{ github.event_name == 'pull_request' }}\n"
+        "        continue-on-error: ${{ github.ref_type != 'tag' && github.event_name != 'workflow_dispatch' }}\n"
         "        run: npm run catalogs:check\n\n"
         "      - name: Python anchor tests",
     )
     write_text(root / ".github/workflows/quality.yml", workflow, changes, "added read-only CI quality gate")
-    dependabot = """version: 2\nupdates:\n  - package-ecosystem: npm\n    directory: /\n    schedule:\n      interval: monthly\n    open-pull-requests-limit: 5\n  - package-ecosystem: github-actions\n    directory: /\n    schedule:\n      interval: monthly\n    open-pull-requests-limit: 5\n"""
+    dependabot = 'version: 2\n\n# Misma filosofia que NovaMusicLab y IvritSheli: las subidas menores y de\n# parche llegan agrupadas en un solo PR, y las de version mayor sueltas,\n# porque son las unicas que pueden romper el build.\n#\n# cooldown desde el 14 sep 2026: una version recien publicada espera antes de\n# proponerse, y una mayor espera un mes. Las alertas de seguridad no siguen este\n# calendario. Menores y parches se fusionan solos al pasar las comprobaciones\n# (.github/workflows/dependabot-auto-merge.yml); las mayores esperan a Kevin.\n\nupdates:\n  - package-ecosystem: npm\n    directory: /\n    schedule:\n      interval: monthly\n      time: "06:40"\n      timezone: Asia/Jerusalem\n    cooldown:\n      semver-major-days: 30\n      semver-minor-days: 7\n      semver-patch-days: 3\n    open-pull-requests-limit: 5\n    groups:\n      npm-minor-patch:\n        patterns: ["*"]\n        update-types: [minor, patch]\n\n  - package-ecosystem: github-actions\n    directory: /\n    schedule:\n      interval: monthly\n      time: "06:50"\n      timezone: Asia/Jerusalem\n    cooldown:\n      default-days: 7\n    open-pull-requests-limit: 5\n    groups:\n      actions-all:\n        patterns: ["*"]\n'
     write_text(root / ".github/dependabot.yml", dependabot, changes, "added monthly dependency updates")
 
 

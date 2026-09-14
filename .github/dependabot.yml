@@ -3,12 +3,23 @@ version: 2
 # Misma filosofia que NovaMusicLab y IvritSheli: las subidas menores y de
 # parche llegan agrupadas en un solo PR, y las de version mayor sueltas,
 # porque son las unicas que pueden romper el build.
+#
+# cooldown desde el 14 sep 2026: una version recien publicada espera antes de
+# proponerse, y una mayor espera un mes. Las alertas de seguridad no siguen este
+# calendario. Menores y parches se fusionan solos al pasar las comprobaciones
+# (.github/workflows/dependabot-auto-merge.yml); las mayores esperan a Kevin.
 
 updates:
   - package-ecosystem: npm
     directory: /
     schedule:
       interval: monthly
+      time: "06:40"
+      timezone: Asia/Jerusalem
+    cooldown:
+      semver-major-days: 30
+      semver-minor-days: 7
+      semver-patch-days: 3
     open-pull-requests-limit: 5
     groups:
       npm-minor-patch:
@@ -19,6 +30,10 @@ updates:
     directory: /
     schedule:
       interval: monthly
+      time: "06:50"
+      timezone: Asia/Jerusalem
+    cooldown:
+      default-days: 7
     open-pull-requests-limit: 5
     groups:
       actions-all:
