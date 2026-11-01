@@ -23,7 +23,10 @@ permissions:
 jobs:
   arm-auto-merge:
     name: Arm auto-merge for safe Dependabot updates
-    if: github.event.pull_request.user.login == 'dependabot[bot]' && github.repository_owner == 'LiriothTeltanion'
+    if: >-
+      github.event.pull_request.user.login == 'dependabot[bot]'
+      && github.repository_owner == 'LiriothTeltanion'
+      && !github.event.pull_request.draft
     runs-on: ubuntu-latest
     timeout-minutes: 5
 

@@ -1,7 +1,7 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-01
-Base HEAD: e92be58bd1fa4d9bb1ef1854af9625e8893bfc9e
-Source-index SHA-256 (generated outputs excluded): 325fe3954f78fcfc8e0f0bf3ecb1b55ad90b235b8193cc1e74aff26415aaa5e0
+Base HEAD: 51d0909e64561d9a1821ababe0db77b3a55c6886
+Source-index SHA-256 (generated outputs excluded): 7c3d0ef727de260ca93a6a0778d78a6ae4325346fa8942d20739262c832305f9
 Indexed files: 892
 
 .
