@@ -11,7 +11,7 @@
 - `catalog_manifest.json` — generation date, base HEAD, and stable source-index fingerprint.
 - [`../resume/`](../resume/) — Wave 0 baseline, duplicate accounting, decisions, test map, and open-work triage.
 
-Generation basis: HEAD `2c908e26eea216d117a365776b09cb2d5f763a71` plus the staged source index fingerprint `sha256:c7bc39e72af891615dac0b56b8e508a046d9f33f1ab856173128c96c027a5dfc`. The versioned metadata source is included; generated catalog outputs are excluded to avoid self-reference.
+Generation basis: HEAD `c8b5126960bf1cf515a86e909700367f29651527` plus the staged source index fingerprint `sha256:35f9f985a92e9e51a0a78ff4cda66b4c3406b2c266d2cda12492e323ac6ed021`. The versioned metadata source is included; generated catalog outputs are excluded to avoid self-reference.
 
 Regenerate with `python tools/refresh_structure_catalogs.py --repo . --write`; verify drift with `python tools/refresh_structure_catalogs.py --repo . --check`.
 
