@@ -335,7 +335,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     counts = {kind: sum(1 for f in findings if f.severity == kind) for kind in ("error", "warning", "info")}
     report = {
         "tool": {"name": "NOVA Quality Gate", "version": VERSION},
-        "generated_at": iso_now(), "repository": str(root),
+        "generated_at": iso_now(), "repository": ".",
         "files_scanned": len(all_files),
         "source_files_scanned": sum(1 for p in all_files if p.suffix.lower() in SOURCE_EXTENSIONS),
         "elapsed_seconds": round(dt.datetime.now().timestamp() - started, 3),

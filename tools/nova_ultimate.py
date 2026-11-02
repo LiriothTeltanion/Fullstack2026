@@ -136,6 +136,20 @@ def posix(value: Path | str) -> str:
     return str(value).replace("\\", "/")
 
 
+# Repository root for public reports, set by the command entry points.
+_REPORT_ROOT: Path | None = None
+
+
+def report_path(path: Path) -> str:
+    """Return a repository-relative path so public reports never carry the local user path."""
+    if _REPORT_ROOT is not None:
+        try:
+            return posix(path.resolve().relative_to(_REPORT_ROOT))
+        except ValueError:
+            pass
+    return posix(path)
+
+
 def week_sort_key(path: Path) -> tuple[int, str]:
     """Sort Week roots by number instead of lexical path order."""
 
@@ -195,7 +209,7 @@ def write_text(path: Path, content: str, changes: list[Change], detail: str) -> 
         return False
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(normalized, encoding="utf-8", newline="\n")
-    changes.append(Change("create" if previous is None else "modify", posix(path), detail))
+    changes.append(Change("create" if previous is None else "modify", report_path(path), detail))
     return True
 
 
@@ -1784,7 +1798,9 @@ def write_conflict_report(root: Path, conflicts: list[str], changes: list[Change
 
 
 def apply_upgrade(args: argparse.Namespace, console: Console) -> int:
+    global _REPORT_ROOT
     root = Path(args.repo).expanduser().resolve()
+    _REPORT_ROOT = root
     if not is_repo_root(root):
         console.error(f"Not a Fullstack2026 repository root: {root}")
         return 2
@@ -1889,7 +1905,9 @@ def apply_upgrade(args: argparse.Namespace, console: Console) -> int:
 
 
 def audit_repo(args: argparse.Namespace, console: Console) -> int:
+    global _REPORT_ROOT
     root = Path(args.repo).expanduser().resolve()
+    _REPORT_ROOT = root
     if not is_repo_root(root):
         console.error(f"Not a Fullstack2026 repository root: {root}")
         return 2

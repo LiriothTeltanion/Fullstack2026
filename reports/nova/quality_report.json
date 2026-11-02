@@ -3,11 +3,11 @@
     "name": "NOVA Quality Gate",
     "version": "2.0.0"
   },
-  "generated_at": "2026-11-02T07:00:06+00:00",
-  "repository": "/home/user/fullstack2026",
+  "generated_at": "2026-11-02T07:13:26+00:00",
+  "repository": ".",
   "files_scanned": 864,
   "source_files_scanned": 245,
-  "elapsed_seconds": 4.156,
+  "elapsed_seconds": 4.488,
   "status": "pass",
   "counts": {
     "error": 0,
