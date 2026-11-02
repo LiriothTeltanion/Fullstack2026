@@ -17,12 +17,6 @@
   },
   "infrastructure": [
     {
-      "path": ".ai",
-      "icon": "🤖",
-      "title": "AI Collaboration Context",
-      "display_title": "🤖 AI Collaboration Context"
-    },
-    {
       "path": ".github",
       "icon": "⚙️",
       "title": "GitHub Automation and Templates",

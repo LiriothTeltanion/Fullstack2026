@@ -64,15 +64,8 @@ def week_sort_key(value: str) -> tuple[int, str]:
     return number, value.casefold()
 
 REQUIRED_PATHS = (
-    "AGENTS.md",
     "CONTRIBUTING.md",
-    ".github/copilot-instructions.md",
     ".github/pull_request_template.md",
-    ".ai/CONTEXT.md",
-    ".ai/VISUAL_SYSTEM.md",
-    ".ai/LEARNING_PROTOCOL.md",
-    ".ai/HANDOFF_PROTOCOL.md",
-    ".ai/DECISIONS.md",
     ".learning/course-map.yml",
     ".learning/display-map.json",
     ".learning/OCTOPUS_INTAKE.md",

@@ -482,7 +482,6 @@ git diff
 
 | Display title | Stable physical path |
 |---|---|
-| [🤖 AI Collaboration Context](.ai/) | `.ai/` |
 | [⚙️ GitHub Automation and Templates](.github/) | `.github/` |
 | [🎓 Learning Evidence and Course State](.learning/) | `.learning/` |
 | [🎨 Visual Assets](assets/) | `assets/` |
@@ -511,7 +510,6 @@ Fullstack2026/
 ├─ Week10AdvancedTypeScriptAndAuthentication/
 ├─ Week11FinalProject/
 ├─ Week12FinalProject/
-├─ .ai/
 ├─ .learning/
 ├─ assets/readme/
 ├─ reports/nova/

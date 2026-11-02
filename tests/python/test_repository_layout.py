@@ -31,7 +31,6 @@ class RepositoryLayoutTests(unittest.TestCase):
     def test_quality_infrastructure(self):
         self.assertTrue((ROOT / ".github/workflows/quality.yml").exists())
         self.assertTrue((ROOT / ".github/INTERNAL_GUIDE.md").exists())
-        self.assertTrue((ROOT / ".github/copilot-instructions.md").exists())
         self.assertTrue((ROOT / ".github/pull_request_template.md").exists())
         self.assertTrue((ROOT / "CONTRIBUTING.md").exists())
         self.assertFalse(
@@ -113,10 +112,17 @@ class RepositoryLayoutTests(unittest.TestCase):
         self.assertIn("npm run typecheck:anchor", workflow)
 
     def test_github_desktop_commit_guidance(self):
-        instructions = (ROOT / ".github/copilot-instructions.md").read_text(
-            encoding="utf-8"
-        )
         contributing = (ROOT / "CONTRIBUTING.md").read_text(encoding="utf-8")
+        self.assertIn("GitHub Desktop", contributing)
+        self.assertIn("Publish branch", contributing)
+        self.assertIn("Asia/Jerusalem", contributing)
+
+    def test_local_copilot_instructions_when_present(self):
+        """The Copilot commit guidance is local-only; check it where it exists."""
+        path = ROOT / ".github/copilot-instructions.md"
+        if not path.exists():
+            self.skipTest("local-only file, not published")
+        instructions = path.read_text(encoding="utf-8")
         for required_text in (
             "Kevin Cusnir",
             "Lirioth Teltanion",
@@ -128,9 +134,6 @@ class RepositoryLayoutTests(unittest.TestCase):
             "Creative-Signature: Lirioth Teltanion",
         ):
             self.assertIn(required_text, instructions)
-        self.assertIn("GitHub Desktop", contributing)
-        self.assertIn("Publish branch", contributing)
-        self.assertIn("Asia/Jerusalem", contributing)
 
     def test_canonical_repository_structure(self):
         result = subprocess.run(

@@ -16,8 +16,6 @@ would hide the twelve-week course overview, audited evidence and project links.
   quality gate plus the Python and JavaScript/TypeScript anchor tests.
 - [`dependabot.yml`](dependabot.yml) checks npm and GitHub Actions dependencies
   monthly.
-- [`copilot-instructions.md`](copilot-instructions.md) shapes GitHub Desktop
-  Copilot commit summaries and descriptions in professional English.
 - [`pull_request_template.md`](pull_request_template.md) provides a truthful,
   evidence-first pull-request handoff.
 - The active

@@ -82,3 +82,9 @@ Thumbs.db
 # Redundant curriculum archives
 Week*.zip
 .nova-readme-backups/
+
+# Local-only notes for coding assistants. They stay on Kevin's machines and are
+# not published.
+/AGENTS.md
+/.ai/
+/.github/copilot-instructions.md
