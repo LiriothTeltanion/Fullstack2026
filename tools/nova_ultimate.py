@@ -732,13 +732,13 @@ def write_ci(root: Path, changes: list[Change]) -> None:
         "      - name: Install JavaScript tooling\n        run: npm ci",
         install_steps,
     )
-    # Los catalogos de reports/nova indexan el arbol entero, asi que cualquier
-    # fichero que cambie los deja obsoletos y todo PR nacia fallando, Dependabot
-    # incluido. Van en su propio paso. Desde el 14 sep 2026 son aviso en una rama
-    # y en push a main, y fallo en una etiqueta v* o en una ejecucion manual: cada
-    # fusion de Dependabot ponia main en rojo sin nada roto, y lo que se publica es
-    # la etiqueta. Antes de etiquetar: git add, npm run catalogs:refresh y fusionar.
-    # El resto de la estructura no se ablanda.
+    # The reports/nova catalogs index the whole tree, so any changed file makes
+    # them stale and every PR, Dependabot included, started out failing. They run
+    # as their own step. Since 2026-09-14 they warn on branches and on pushes to
+    # main, and fail on a v* tag or a manual run: every Dependabot merge turned
+    # main red with nothing broken, and what gets published is the tag. Before
+    # tagging: git add, npm run catalogs:refresh, then merge.
+    # The rest of the structure checks stay strict.
     workflow = workflow.replace(
         "\n      - name: Python anchor tests",
         "\n      - name: Canonical repository structure\n"
