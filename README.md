@@ -482,7 +482,6 @@ git diff
 
 | Display title | Stable physical path |
 |---|---|
-| [🤖 AI Collaboration Context](.ai/) | `.ai/` |
 | [⚙️ GitHub Automation and Templates](.github/) | `.github/` |
 | [🎓 Learning Evidence and Course State](.learning/) | `.learning/` |
 | [🎨 Visual Assets](assets/) | `assets/` |
@@ -511,7 +510,6 @@ Fullstack2026/
 ├─ Week10AdvancedTypeScriptAndAuthentication/
 ├─ Week11FinalProject/
 ├─ Week12FinalProject/
-├─ .ai/
 ├─ .learning/
 ├─ assets/readme/
 ├─ reports/nova/
@@ -632,6 +630,8 @@ El estado del repositorio, el progreso de la plataforma y mi comprensión son ev
 ### Kevin Cusnir · `LiriothTeltanion`
 
 Full-stack development · AI-assisted engineering · automation · creative software
+
+Built with AI-assisted tooling; I reviewed, tested and can explain every change.
 
 [![GitHub profile](https://img.shields.io/badge/GitHub-LiriothTeltanion-181717?style=for-the-badge&logo=github)](https://github.com/LiriothTeltanion)
 [![Repository](https://img.shields.io/badge/Repository-Fullstack2026-7c3aed?style=for-the-badge&logo=github)](https://github.com/LiriothTeltanion/Fullstack2026)

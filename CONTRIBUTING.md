@@ -78,8 +78,7 @@ and reference-only maps may remain static.
 3. Confirm the topic branch before selecting files. Do not commit directly on
    `main`.
 4. Select only the files or lines that form one cohesive change.
-5. Click **Generate commit message with Copilot** when available. Repository
-   instructions in `.github/copilot-instructions.md` shape both fields.
+5. Click **Generate commit message with Copilot** when available.
 6. If the selection changes, regenerate the message. Copilot does not update an
    existing suggestion automatically.
 7. Review every claim, especially commands and results. Replace unsupported
