@@ -19,7 +19,9 @@ Preserve Kevin Cusnir's Developers Institute work and Git history while making e
 ## Canonical local checkout
 
 - On Kevin's current Windows workstation, the only canonical working clone is
-  `C:\Users\kevin\OneDrive\Escritorio\NovaDev\002_PROJECTS_NEXUS\040_LEARNING_ACADEMY\_042_Fullstack2026`.
+  `<NovaDev>\002_PROJECTS_NEXUS\040_LEARNING_ACADEMY\_042_Fullstack2026`.
+  `<NovaDev>` is the NovaDev workspace folder on Kevin's Windows desktop; the
+  absolute path stays out of this public repository on purpose.
 - The adjacent non-underscore folder and any empty placeholder folders are not
   repository sources. Never redirect work there because a path looks similar.
 - Before any mutation, confirm both `git rev-parse --show-toplevel` and
