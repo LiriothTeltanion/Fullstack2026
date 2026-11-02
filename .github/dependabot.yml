@@ -1,13 +1,13 @@
 version: 2
 
-# Misma filosofia que NovaMusicLab y IvritSheli: las subidas menores y de
-# parche llegan agrupadas en un solo PR, y las de version mayor sueltas,
-# porque son las unicas que pueden romper el build.
+# Same policy as NovaMusicLab and IvritSheli: minor and patch bumps arrive
+# grouped in one PR, and major bumps arrive one by one, because they are the
+# only ones that can break the build.
 #
-# cooldown desde el 14 sep 2026: una version recien publicada espera antes de
-# proponerse, y una mayor espera un mes. Las alertas de seguridad no siguen este
-# calendario. Menores y parches se fusionan solos al pasar las comprobaciones
-# (.github/workflows/dependabot-auto-merge.yml); las mayores esperan a Kevin.
+# Cooldown since 2026-09-14: a freshly published version waits before it is
+# proposed, and a major waits a month. Security alerts do not follow this
+# schedule. Minor and patch updates merge on their own once the checks pass
+# (.github/workflows/dependabot-auto-merge.yml); majors wait for Kevin.
 
 updates:
   - package-ecosystem: npm

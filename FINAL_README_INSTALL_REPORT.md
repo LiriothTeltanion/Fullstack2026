@@ -11,15 +11,15 @@
 - Installed the ultimate root `README.md`
 - Moved historical `.nova-readme-backups` into ignored timestamped NOVA storage
 - Added `.nova-readme-backups/` to `.gitignore`
-- Updated `C:/Users/kevin/OneDrive/Escritorio/NovaDev/002_PROJECTS_NEXUS/040_LEARNING_ACADEMY/_042_Fullstack2026/Week5MiniProjectAndTypeScript/Day1MiniProject/DailyChallenge/CurrencyConverter/README.md` with 1 targeted replacement(s)
-- Updated `C:/Users/kevin/OneDrive/Escritorio/NovaDev/002_PROJECTS_NEXUS/040_LEARNING_ACADEMY/_042_Fullstack2026/Week5MiniProjectAndTypeScript/Day1MiniProject/DailyChallenge/CurrencyConverter/README.md`: `DailyChallange/` → `DailyChallenge/`
-- Updated `C:/Users/kevin/OneDrive/Escritorio/NovaDev/002_PROJECTS_NEXUS/040_LEARNING_ACADEMY/_042_Fullstack2026/Week1Python/Day3Dictionaries/Exercises/ExercisesXP/README.md`: `../../Day2ListsIteratingAndFormattingData/` → `../../../Day2ListsIteratingAndFormattingData/`
-- Updated `C:/Users/kevin/OneDrive/Escritorio/NovaDev/002_PROJECTS_NEXUS/040_LEARNING_ACADEMY/_042_Fullstack2026/Week1Python/Day3Dictionaries/Exercises/ExercisesXP/README.md`: `../ExercisesXP+/` → `../ExercisesXPPlus/`
-- Updated `C:/Users/kevin/OneDrive/Escritorio/NovaDev/002_PROJECTS_NEXUS/040_LEARNING_ACADEMY/_042_Fullstack2026/Week1Python/Day5MiniProject/Exercises/Hangman/README.md`: `../../Day4Functions/` → `../../../Day4Functions/`
-- Updated `C:/Users/kevin/OneDrive/Escritorio/NovaDev/002_PROJECTS_NEXUS/040_LEARNING_ACADEMY/_042_Fullstack2026/Week2OOP/Day5MiniProject/Exercises/README.md`: `../DailyChallenge/README_ANAGRAMS.md` → `AnagramChecker/README.md`
-- Updated `C:/Users/kevin/OneDrive/Escritorio/NovaDev/002_PROJECTS_NEXUS/040_LEARNING_ACADEMY/_042_Fullstack2026/Week2OOP/Day5MiniProject/README.md`: `DailyChallenge/README_ANAGRAMS.md` → `Exercises/AnagramChecker/README.md`
-- Updated `C:/Users/kevin/OneDrive/Escritorio/NovaDev/002_PROJECTS_NEXUS/040_LEARNING_ACADEMY/_042_Fullstack2026/Week2OOP/Day5MiniProject/README.md`: `DailyChallenge/anagram_checker_all.py` → `Exercises/AnagramChecker/anagramchecker.py`
-- Updated `C:/Users/kevin/OneDrive/Escritorio/NovaDev/002_PROJECTS_NEXUS/040_LEARNING_ACADEMY/_042_Fullstack2026/Week2OOP/Day4PythonFileIOJSONandAPI/README.md` with 1 targeted replacement(s)
+- Updated `Week5MiniProjectAndTypeScript/Day1MiniProject/DailyChallenge/CurrencyConverter/README.md` with 1 targeted replacement(s)
+- Updated `Week5MiniProjectAndTypeScript/Day1MiniProject/DailyChallenge/CurrencyConverter/README.md`: `DailyChallange/` → `DailyChallenge/`
+- Updated `Week1Python/Day3Dictionaries/Exercises/ExercisesXP/README.md`: `../../Day2ListsIteratingAndFormattingData/` → `../../../Day2ListsIteratingAndFormattingData/`
+- Updated `Week1Python/Day3Dictionaries/Exercises/ExercisesXP/README.md`: `../ExercisesXP+/` → `../ExercisesXPPlus/`
+- Updated `Week1Python/Day5MiniProject/Exercises/Hangman/README.md`: `../../Day4Functions/` → `../../../Day4Functions/`
+- Updated `Week2OOP/Day5MiniProject/Exercises/README.md`: `../DailyChallenge/README_ANAGRAMS.md` → `AnagramChecker/README.md`
+- Updated `Week2OOP/Day5MiniProject/README.md`: `DailyChallenge/README_ANAGRAMS.md` → `Exercises/AnagramChecker/README.md`
+- Updated `Week2OOP/Day5MiniProject/README.md`: `DailyChallenge/anagram_checker_all.py` → `Exercises/AnagramChecker/anagramchecker.py`
+- Updated `Week2OOP/Day4PythonFileIOJSONandAPI/README.md` with 1 targeted replacement(s)
 - Ran `npm install` to create or update `package-lock.json`
 - Rendered the root README last from the newest available NOVA health report
 
@@ -47,8 +47,8 @@ Exit code: `0`
 > fullstack2026@1.0.0 quality
 > python tools/nova_quality_gate.py --repo . --strict
 
-Report: C:\Users\kevin\OneDrive\Escritorio\NovaDev\002_PROJECTS_NEXUS\040_LEARNING_ACADEMY\_042_Fullstack2026\reports\nova\quality_report.md
-JSON:   C:\Users\kevin\OneDrive\Escritorio\NovaDev\002_PROJECTS_NEXUS\040_LEARNING_ACADEMY\_042_Fullstack2026\reports\nova\quality_report.json
+Report: reports\nova\quality_report.md
+JSON:   reports\nova\quality_report.json
 NOVA QUALITY: PASS | errors=0 warnings=0 files=1016
 ```
 
@@ -108,13 +108,13 @@ Exit code: `1`
 > python tools/nova_ultimate.py --repo . --audit --no-open
 
 Traceback (most recent call last):
-  File "C:\Users\kevin\OneDrive\Escritorio\NovaDev\002_PROJECTS_NEXUS\040_LEARNING_ACADEMY\_042_Fullstack2026\tools\nova_ultimate.py", line 1826, in <module>
+  File "tools\nova_ultimate.py", line 1826, in <module>
     raise SystemExit(main())
                      ~~~~^^
-  File "C:\Users\kevin\OneDrive\Escritorio\NovaDev\002_PROJECTS_NEXUS\040_LEARNING_ACADEMY\_042_Fullstack2026\tools\nova_ultimate.py", line 1813, in main
+  File "tools\nova_ultimate.py", line 1813, in main
     console.banner()
     ~~~~~~~~~~~~~~^^
-  File "C:\Users\kevin\OneDrive\Escritorio\NovaDev\002_PROJECTS_NEXUS\040_LEARNING_ACADEMY\_042_Fullstack2026\tools\nova_ultimate.py", line 120, in banner
+  File "tools\nova_ultimate.py", line 120, in banner
     print(self.s("\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557", "p", "b"))
     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
@@ -131,8 +131,8 @@ Exit code: `0`
 > fullstack2026@1.0.0 quality
 > python tools/nova_quality_gate.py --repo . --strict
 
-Report: C:\Users\kevin\OneDrive\Escritorio\NovaDev\002_PROJECTS_NEXUS\040_LEARNING_ACADEMY\_042_Fullstack2026\reports\nova\quality_report.md
-JSON:   C:\Users\kevin\OneDrive\Escritorio\NovaDev\002_PROJECTS_NEXUS\040_LEARNING_ACADEMY\_042_Fullstack2026\reports\nova\quality_report.json
+Report: reports\nova\quality_report.md
+JSON:   reports\nova\quality_report.json
 NOVA QUALITY: PASS | errors=0 warnings=0 files=1016
 ```
 
@@ -145,13 +145,13 @@ Exit code: `1`
 > python tools/nova_ultimate.py --repo . --audit --no-open
 
 Traceback (most recent call last):
-  File "C:\Users\kevin\OneDrive\Escritorio\NovaDev\002_PROJECTS_NEXUS\040_LEARNING_ACADEMY\_042_Fullstack2026\tools\nova_ultimate.py", line 1826, in <module>
+  File "tools\nova_ultimate.py", line 1826, in <module>
     raise SystemExit(main())
                      ~~~~^^
-  File "C:\Users\kevin\OneDrive\Escritorio\NovaDev\002_PROJECTS_NEXUS\040_LEARNING_ACADEMY\_042_Fullstack2026\tools\nova_ultimate.py", line 1813, in main
+  File "tools\nova_ultimate.py", line 1813, in main
     console.banner()
     ~~~~~~~~~~~~~~^^
-  File "C:\Users\kevin\OneDrive\Escritorio\NovaDev\002_PROJECTS_NEXUS\040_LEARNING_ACADEMY\_042_Fullstack2026\tools\nova_ultimate.py", line 120, in banner
+  File "tools\nova_ultimate.py", line 120, in banner
     print(self.s("\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557", "p", "b"))
     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode

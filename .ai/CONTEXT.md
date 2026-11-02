@@ -8,7 +8,7 @@
 - Purpose: preserve and understand Developers Institute full-stack course work, then promote selected verified projects into a truthful portfolio.
 - Public repository: `LiriothTeltanion/Fullstack2026`.
 - Canonical Windows checkout:
-  `C:\Users\kevin\OneDrive\Escritorio\NovaDev\002_PROJECTS_NEXUS\040_LEARNING_ACADEMY\_042_Fullstack2026`.
+  `<NovaDev>\002_PROJECTS_NEXUS\040_LEARNING_ACADEMY\_042_Fullstack2026`.
   Similar adjacent folders are placeholders, not working repositories.
 - The enrolled main-course outline has twelve week-level titles. Weeks 1–6 contain recovered local coursework covering Python, OOP, JavaScript/DOM, asynchronous JavaScript, TypeScript/mini-projects, SQL, and Node.js.
 - Weeks 7–12 are title-only, trackable scaffolds for Node.js/React, React, Redux, advanced TypeScript/authentication, and the final project. Their official day, lesson, assignment, rubric, deadline, and submission content is not stored locally and must not be invented.

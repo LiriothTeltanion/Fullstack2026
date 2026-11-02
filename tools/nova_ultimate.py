@@ -136,6 +136,20 @@ def posix(value: Path | str) -> str:
     return str(value).replace("\\", "/")
 
 
+# Repository root for public reports, set by the command entry points.
+_REPORT_ROOT: Path | None = None
+
+
+def report_path(path: Path) -> str:
+    """Return a repository-relative path so public reports never carry the local user path."""
+    if _REPORT_ROOT is not None:
+        try:
+            return posix(path.resolve().relative_to(_REPORT_ROOT))
+        except ValueError:
+            pass
+    return posix(path)
+
+
 def week_sort_key(path: Path) -> tuple[int, str]:
     """Sort Week roots by number instead of lexical path order."""
 
@@ -195,7 +209,7 @@ def write_text(path: Path, content: str, changes: list[Change], detail: str) -> 
         return False
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(normalized, encoding="utf-8", newline="\n")
-    changes.append(Change("create" if previous is None else "modify", posix(path), detail))
+    changes.append(Change("create" if previous is None else "modify", report_path(path), detail))
     return True
 
 
@@ -718,13 +732,13 @@ def write_ci(root: Path, changes: list[Change]) -> None:
         "      - name: Install JavaScript tooling\n        run: npm ci",
         install_steps,
     )
-    # Los catalogos de reports/nova indexan el arbol entero, asi que cualquier
-    # fichero que cambie los deja obsoletos y todo PR nacia fallando, Dependabot
-    # incluido. Van en su propio paso. Desde el 14 sep 2026 son aviso en una rama
-    # y en push a main, y fallo en una etiqueta v* o en una ejecucion manual: cada
-    # fusion de Dependabot ponia main en rojo sin nada roto, y lo que se publica es
-    # la etiqueta. Antes de etiquetar: git add, npm run catalogs:refresh y fusionar.
-    # El resto de la estructura no se ablanda.
+    # The reports/nova catalogs index the whole tree, so any changed file makes
+    # them stale and every PR, Dependabot included, started out failing. They run
+    # as their own step. Since 2026-09-14 they warn on branches and on pushes to
+    # main, and fail on a v* tag or a manual run: every Dependabot merge turned
+    # main red with nothing broken, and what gets published is the tag. Before
+    # tagging: git add, npm run catalogs:refresh, then merge.
+    # The rest of the structure checks stay strict.
     workflow = workflow.replace(
         "\n      - name: Python anchor tests",
         "\n      - name: Canonical repository structure\n"
@@ -1784,7 +1798,9 @@ def write_conflict_report(root: Path, conflicts: list[str], changes: list[Change
 
 
 def apply_upgrade(args: argparse.Namespace, console: Console) -> int:
+    global _REPORT_ROOT
     root = Path(args.repo).expanduser().resolve()
+    _REPORT_ROOT = root
     if not is_repo_root(root):
         console.error(f"Not a Fullstack2026 repository root: {root}")
         return 2
@@ -1889,7 +1905,9 @@ def apply_upgrade(args: argparse.Namespace, console: Console) -> int:
 
 
 def audit_repo(args: argparse.Namespace, console: Console) -> int:
+    global _REPORT_ROOT
     root = Path(args.repo).expanduser().resolve()
+    _REPORT_ROOT = root
     if not is_repo_root(root):
         console.error(f"Not a Fullstack2026 repository root: {root}")
         return 2

@@ -3,7 +3,7 @@
 - Owner: **Kevin Cusnir**
 - Creative signature: **Lirioth Teltanion**
 - Repository: [LiriothTeltanion/Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)
-- Canonical checkout: `C:\Users\kevin\OneDrive\Escritorio\NovaDev\002_PROJECTS_NEXUS\040_LEARNING_ACADEMY\_042_Fullstack2026`
+- Canonical checkout: `<NovaDev>\002_PROJECTS_NEXUS\040_LEARNING_ACADEMY\_042_Fullstack2026`
 - Initial evidence timestamp: `2026-08-24T21:45:12+03:00` (`Asia/Jerusalem`)
 - Final evidence timestamp: `2026-08-24T22:24:11+03:00` (`Asia/Jerusalem`)
 

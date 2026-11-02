@@ -13,7 +13,7 @@ creative and portfolio identity.
 Kevin's canonical local clone is:
 
 ```text
-C:\Users\kevin\OneDrive\Escritorio\NovaDev\002_PROJECTS_NEXUS\040_LEARNING_ACADEMY\_042_Fullstack2026
+<NovaDev>\002_PROJECTS_NEXUS\040_LEARNING_ACADEMY\_042_Fullstack2026
 ```
 
 Before changing files, verify:
