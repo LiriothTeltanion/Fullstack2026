@@ -84,7 +84,7 @@ Week*.zip
 .nova-readme-backups/
 
 # Local-only notes for coding assistants. They stay on Kevin's machines and are
-# not published.
-/AGENTS.md
+# not published. AGENTS.md and CLAUDE.md are the exception since 2026-11-03:
+# they are published with technical guidance only.
 /.ai/
 /.github/copilot-instructions.md

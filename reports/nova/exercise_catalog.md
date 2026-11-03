@@ -1,9 +1,9 @@
 # Canonical Exercise Catalog
 
-> Regenerated from the exact Git index on `2026-11-02` by `tools/refresh_structure_catalogs.py`.
+> Regenerated from the exact Git index on `2026-11-03` by `tools/refresh_structure_catalogs.py`.
 
-- Base HEAD: `de5cf161a13c94e6b355e62328818f0592c619c9`
-- Source-index fingerprint: `sha256:8d99f06b4db24fcc172479a441175472e3c74cf85c274a46eb35242a2b62fbfa` (generated outputs excluded)
+- Base HEAD: `1c5709ae3b2579f938900c35e16afc8e2a72d1f7`
+- Source-index fingerprint: `sha256:22aab9a2c23728169f82aa0f088b95bbb704206b6a430b5269c245e506603a7a` (generated outputs excluded)
 
 This catalog proves repository presence and path integrity only. It does not prove that an exercise runs, that Kevin can explain it, or that it is mastered or portfolio-ready.
 
