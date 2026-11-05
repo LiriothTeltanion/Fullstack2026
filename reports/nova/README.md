@@ -1,6 +1,6 @@
 # NOVA Reports — Status and Lineage
 
-## Current structural evidence (2026-11-02)
+## Current structural evidence (2026-11-05)
 
 - [Canonical exercise catalog](exercise_catalog.md) — 124 indexed exercise families; runtime and mastery remain unverified.
 - `exercise_catalog_metadata.csv` — versioned structural labels and review-entry hints; semantic titles/goals/technologies are derived conservatively and do not prove runtime or assignment correctness.
@@ -11,7 +11,7 @@
 - `catalog_manifest.json` — generation date, base HEAD, and stable source-index fingerprint.
 - [`../resume/`](../resume/) — Wave 0 baseline, duplicate accounting, decisions, test map, and open-work triage.
 
-Generation basis: HEAD `de5cf161a13c94e6b355e62328818f0592c619c9` plus the staged source index fingerprint `sha256:8d99f06b4db24fcc172479a441175472e3c74cf85c274a46eb35242a2b62fbfa`. The versioned metadata source is included; generated catalog outputs are excluded to avoid self-reference.
+Generation basis: HEAD `1c5709ae3b2579f938900c35e16afc8e2a72d1f7` plus the staged source index fingerprint `sha256:9e9cc8bda4313e1fbb277e623eb67cf4151a1d9e60c2d0b30c2f36b356c95db9`. The versioned metadata source is included; generated catalog outputs are excluded to avoid self-reference.
 
 Regenerate with `python tools/refresh_structure_catalogs.py --repo . --write`; verify drift with `python tools/refresh_structure_catalogs.py --repo . --check`.
 
