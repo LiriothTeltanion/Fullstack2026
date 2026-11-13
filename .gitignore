@@ -88,3 +88,9 @@ Week*.zip
 /AGENTS.md
 /.ai/
 /.github/copilot-instructions.md
+
+# Local private agent context (never committed)
+AGENTS.local.md
+CLAUDE.local.md
+*.local.md
+.claude/settings.local.json
