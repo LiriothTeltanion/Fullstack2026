@@ -1,17 +1,17 @@
 # NOVA Reports — Status and Lineage
 
-## Current structural evidence (2026-11-14)
+## Current structural evidence (2026-11-22)
 
-- [Canonical exercise catalog](exercise_catalog.md) — 124 indexed exercise families; runtime and mastery remain unverified.
+- [Canonical exercise catalog](exercise_catalog.md) — 125 indexed exercise families; runtime and mastery remain unverified.
 - `exercise_catalog_metadata.csv` — versioned structural labels and review-entry hints; semantic titles/goals/technologies are derived conservatively and do not prove runtime or assignment correctness.
 - `exercise_catalog.csv` — machine-readable canonical path catalog.
 - `file_inventory.csv` — indexed-blob inventory (self-entry intentionally excluded to avoid a recursive hash).
-- `tree.txt` — exact-case tree for 886 Git-indexed files.
+- `tree.txt` — exact-case tree for 889 Git-indexed files.
 - `rename_plan.csv` — unapproved later-wave proposals only.
 - `catalog_manifest.json` — generation date, base HEAD, and stable source-index fingerprint.
 - [`../resume/`](../resume/) — Wave 0 baseline, duplicate accounting, decisions, test map, and open-work triage.
 
-Generation basis: HEAD `91ca7e19dae98d455ffbe24027cdc263239796f7` plus the staged source index fingerprint `sha256:10ecf3a0edd99cf706a085581c99c631a040fb5157b9d29a3d83cfb5d4e97d39`. The versioned metadata source is included; generated catalog outputs are excluded to avoid self-reference.
+Generation basis: HEAD `1820f77c31122523438755be951213f37ba6a5f7` plus the staged source index fingerprint `sha256:2975c907bbe8bfbad68b4a3c1c3d7101936157d964a05d8029262e1364acad0d`. The versioned metadata source is included; generated catalog outputs are excluded to avoid self-reference.
 
 Regenerate with `python tools/refresh_structure_catalogs.py --repo . --write`; verify drift with `python tools/refresh_structure_catalogs.py --repo . --check`.
 
