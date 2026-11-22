@@ -1,13 +1,13 @@
 # Canonical Exercise Catalog
 
-> Regenerated from the exact Git index on `2026-11-14` by `tools/refresh_structure_catalogs.py`.
+> Regenerated from the exact Git index on `2026-11-22` by `tools/refresh_structure_catalogs.py`.
 
-- Base HEAD: `91ca7e19dae98d455ffbe24027cdc263239796f7`
-- Source-index fingerprint: `sha256:10ecf3a0edd99cf706a085581c99c631a040fb5157b9d29a3d83cfb5d4e97d39` (generated outputs excluded)
+- Base HEAD: `1820f77c31122523438755be951213f37ba6a5f7`
+- Source-index fingerprint: `sha256:2975c907bbe8bfbad68b4a3c1c3d7101936157d964a05d8029262e1364acad0d` (generated outputs excluded)
 
 This catalog proves repository presence and path integrity only. It does not prove that an exercise runs, that Kevin can explain it, or that it is mastered or portfolio-ready.
 
-- Indexed exercise families: **124**
+- Indexed exercise families: **125**
 - Completion and quality scores: **unverified** pending exercise-level review
 - Regenerate: `python tools/refresh_structure_catalogs.py --repo . --write`
 - Check drift: `python tools/refresh_structure_catalogs.py --repo . --check`
@@ -31,6 +31,7 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week1Python/Day3Dictionaries/Exercises/ExercisesXPPlus` | Exercise | Python | 2 | present (canonical) | [source](<../../Week1Python/Day3Dictionaries/Exercises/ExercisesXPPlus>); runtime unverified |
 | `Week1Python/Day3Dictionaries/Exercises/TimedChallenge1` | Timed Challenge | Python | 2 | present (noncanonical case: readme.md) | [source](<../../Week1Python/Day3Dictionaries/Exercises/TimedChallenge1>); runtime unverified |
 | `Week1Python/Day3Dictionaries/Exercises/TimedChallenge2` | Timed Challenge | Python | 2 | present (noncanonical case: readme.md) | [source](<../../Week1Python/Day3Dictionaries/Exercises/TimedChallenge2>); runtime unverified |
+| `Week1Python/Day4Functions/DailyChallenge/CoffeeShopMenuManager` | Daily Challenge | Python | 2 | present (canonical) | [source](<../../Week1Python/Day4Functions/DailyChallenge/CoffeeShopMenuManager>); runtime unverified |
 | `Week1Python/Day4Functions/DailyChallenge/SolveTheMatrix` | Daily Challenge | Python | 2 | present (canonical) | [source](<../../Week1Python/Day4Functions/DailyChallenge/SolveTheMatrix>); runtime unverified |
 | `Week1Python/Day4Functions/Exercises/ExercisesXP` | Exercise | Python | 2 | present (canonical) | [source](<../../Week1Python/Day4Functions/Exercises/ExercisesXP>); runtime unverified |
 | `Week1Python/Day4Functions/Exercises/ExercisesXPGold` | Exercise | Python | 2 | present (canonical) | [source](<../../Week1Python/Day4Functions/Exercises/ExercisesXPGold>); runtime unverified |

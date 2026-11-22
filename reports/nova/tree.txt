@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
-Regenerated: 2026-11-14
-Base HEAD: 91ca7e19dae98d455ffbe24027cdc263239796f7
-Source-index SHA-256 (generated outputs excluded): 10ecf3a0edd99cf706a085581c99c631a040fb5157b9d29a3d83cfb5d4e97d39
-Indexed files: 886
+Regenerated: 2026-11-22
+Base HEAD: 1820f77c31122523438755be951213f37ba6a5f7
+Source-index SHA-256 (generated outputs excluded): 2975c907bbe8bfbad68b4a3c1c3d7101936157d964a05d8029262e1364acad0d
+Indexed files: 889
 
 .
 ├── .github
@@ -365,7 +365,8 @@ Indexed files: 886
 │   │   ├── test_week1_day1_daily_challenge.py
 │   │   ├── test_week1_day1_exercises_xp.py
 │   │   ├── test_week1_day1_exercises_xp_gold.py
-│   │   └── test_week1_day1_exercises_xp_ninja.py
+│   │   ├── test_week1_day1_exercises_xp_ninja.py
+│   │   └── test_week1_day4_coffee_shop_menu_manager.py
 │   └── README.md
 ├── tools
 │   ├── check_typescript_syntax.mjs
@@ -457,6 +458,9 @@ Indexed files: 886
 │   │   └── README.md
 │   ├── Day4Functions
 │   │   ├── DailyChallenge
+│   │   │   ├── CoffeeShopMenuManager
+│   │   │   │   ├── coffeeshopmenumanager.py
+│   │   │   │   └── README.md
 │   │   │   ├── SolveTheMatrix
 │   │   │   │   ├── README.md
 │   │   │   │   └── solvethematrix.py
