@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Kevin Cusnir's portfolio: projects from the Developers Institute full-stack bootcamp."
+    />
+    <title>Kevin Cusnir · Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="logo" href="#top" aria-label="Back to top">KC<span>✦</span>LT</a>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <p class="eyebrow">Full-stack developer in training</p>
+        <h1>Hi, I'm <span class="glow">Kevin Cusnir</span>.</h1>
+        <p class="hero-text">
+          I build small, finished web projects and I can explain every line of them. Right now I'm
+          working through the Developers Institute full-stack bootcamp.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">See my projects</a>
+          <a
+            class="btn btn-ghost"
+            href="https://github.com/LiriothTeltanion"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+        </div>
+      </section>
+
+      <section class="about" id="about" aria-labelledby="about-title">
+        <h2 id="about-title">About</h2>
+        <div class="about-grid">
+          <p>
+            I started the course with Python, then moved to JavaScript, TypeScript, SQL and Node.js,
+            and now React. I like music production and guitar, so a few of my projects make sound.
+            Outside the screen I'm usually watching history documentaries.
+          </p>
+          <ul class="skills" aria-label="Skills">
+            <li>HTML &amp; CSS</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>React</li>
+            <li>Git</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="projects" id="projects" aria-labelledby="projects-title">
+        <div class="projects-head">
+          <h2 id="projects-title">Projects</h2>
+          <div class="filters" role="group" aria-label="Filter projects">
+            <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">
+              All
+            </button>
+            <button type="button" class="filter" data-filter="js" aria-pressed="false">
+              JavaScript
+            </button>
+            <button type="button" class="filter" data-filter="python" aria-pressed="false">
+              Python
+            </button>
+          </div>
+        </div>
+
+        <ul class="project-grid">
+          <li class="project" data-tags="js">
+            <p class="project-icon" aria-hidden="true">🥁</p>
+            <h3>Drum Set</h3>
+            <p>Nine drum pads that play when I press a key or click.</p>
+            <p class="stack">JavaScript · DOM · Audio</p>
+            <a
+              href="https://github.com/LiriothTeltanion/Fullstack2026/tree/main/Week3JavaScriptandDOM/Day5MiniProject/Exercises/drumset-mini"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View code</a
+            >
+          </li>
+          <li class="project" data-tags="js">
+            <p class="project-icon" aria-hidden="true">🌌</p>
+            <h3>Star Wars Web App</h3>
+            <p>A random character from the Star Wars API on every click.</p>
+            <p class="stack">JavaScript · fetch · async/await</p>
+            <a
+              href="https://github.com/LiriothTeltanion/Fullstack2026/tree/main/Week5MiniProjectAndTypeScript/Day1MiniProject/StarWarsWebApp"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View code</a
+            >
+          </li>
+          <li class="project" data-tags="js">
+            <p class="project-icon" aria-hidden="true">💱</p>
+            <h3>Currency Converter</h3>
+            <p>Converts between currencies with live rates and a swap button.</p>
+            <p class="stack">JavaScript · REST API</p>
+            <a
+              href="https://github.com/LiriothTeltanion/Fullstack2026/tree/main/Week5MiniProjectAndTypeScript/Day1MiniProject/DailyChallenge/CurrencyConverter"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View code</a
+            >
+          </li>
+          <li class="project" data-tags="python">
+            <p class="project-icon" aria-hidden="true">☕</p>
+            <h3>Coffee Shop Menu Manager</h3>
+            <p>A console menu manager with add, update and delete, plus unit tests.</p>
+            <p class="stack">Python · functions · unittest</p>
+            <a
+              href="https://github.com/LiriothTeltanion/Fullstack2026/tree/main/Week1Python/Day4Functions/DailyChallenge/CoffeeShopMenuManager"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View code</a
+            >
+          </li>
+          <li class="project" data-tags="python">
+            <p class="project-icon" aria-hidden="true">🌦️</p>
+            <h3>Weather App</h3>
+            <p>Current weather, forecasts and a humidity chart from OpenWeatherMap.</p>
+            <p class="stack">Python · PyOWM · matplotlib</p>
+            <a
+              href="https://github.com/LiriothTeltanion/Fullstack2026/tree/main/Week2OOP/Day5MiniProject/Exercises/WeatherApp"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View code</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <p>
+          The best way to see what I'm doing is my GitHub. All the course code is in one repository.
+        </p>
+        <a
+          class="btn btn-primary"
+          href="https://github.com/LiriothTeltanion/Fullstack2026"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Open Fullstack2026</a
+        >
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Kevin Cusnir · KC ✦ LT</p>
+    </footer>
+  </body>
+</html>

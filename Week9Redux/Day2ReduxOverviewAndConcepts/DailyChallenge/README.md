@@ -8,11 +8,11 @@
 
 </div>
 
-The daily challenges for this day. None of them are done yet.
+The daily challenges for this day.
 
 ## Contents
 
-- [`PlannerApplication/`](PlannerApplication/): Planner Application: to do (required)
+- [`PlannerApplication/`](PlannerApplication/): Planner Application: day planner with tasks kept per date
 
 ---
 

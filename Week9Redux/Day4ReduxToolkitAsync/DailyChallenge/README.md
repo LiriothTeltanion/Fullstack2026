@@ -8,11 +8,11 @@
 
 </div>
 
-The daily challenges for this day. None of them are done yet.
+The daily challenges for this day.
 
 ## Contents
 
-- [`AgeTracker/`](AgeTracker/): Age Tracker: to do (required)
+- [`AgeTracker/`](AgeTracker/): Age Tracker: age up and down through one-second async thunks
 
 ---
 

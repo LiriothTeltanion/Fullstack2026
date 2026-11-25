@@ -8,7 +8,7 @@
 
 </div>
 
-Routes, Controllers and Middleware. Nothing is done here yet; each folder below is ready for my code.
+Routes, Controllers and Middleware. Express routers, controller files and middleware in every position.
 
 ## Contents
 

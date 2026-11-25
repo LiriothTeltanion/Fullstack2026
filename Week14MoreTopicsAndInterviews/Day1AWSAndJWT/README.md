@@ -8,7 +8,7 @@
 
 </div>
 
-AWS S3 and JWT. Nothing is done here yet; each folder below is ready for my code.
+AWS S3 and JWT. These are the exercises and challenges for this day.
 
 ## Contents
 

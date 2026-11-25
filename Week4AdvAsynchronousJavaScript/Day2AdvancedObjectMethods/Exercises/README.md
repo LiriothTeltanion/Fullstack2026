@@ -13,8 +13,8 @@ Only one set on Day 2.
 ## Contents
 
 - [`ExercisesXP/`](ExercisesXP/): nested destructuring, `Object.entries`, a subclass with `super()` and object references
-- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: to do (optional)
-- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: to do (optional)
+- [`ExercisesXPGold/`](ExercisesXPGold/): query strings, inverted maps, shallow vs deep copies and `Object.freeze`
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): a `Temperature` class, `deepEqual`, `pick`/`omit` and hidden properties
 
 ---
 

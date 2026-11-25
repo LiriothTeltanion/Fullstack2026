@@ -22,7 +22,7 @@ Dictionary day. I practised key-value pairs, `.get()` for keys that might be mis
 | [`Exercises/TimedChallenge2/`](Exercises/TimedChallenge2/) | Is this a perfect number? |
 | [`DailyChallenge/Dictionaries/`](DailyChallenge/Dictionaries/) | Where each letter appears in a word, and what I can buy with my wallet |
 | [`DailyChallenge/CaesarCypher/`](DailyChallenge/CaesarCypher/) | A Caesar cipher that encrypts, decrypts and tries every shift |
-| [`Exercises/RemoteExerciseListComprehension/`](Exercises/RemoteExerciseListComprehension/) | List Comprehension: to do (optional) |
+| [`Exercises/RemoteExerciseListComprehension/`](Exercises/RemoteExerciseListComprehension/) | six tasks solved with list, dict and set comprehensions |
 
 ---
 

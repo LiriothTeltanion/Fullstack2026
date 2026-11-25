@@ -4,19 +4,33 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for Exercises XP">
+<img src="../../../../assets/readme/progress/exercises-xp-06df44602a.svg" width="100%" alt="Progress card for Exercises XP">
 
 </div>
 
-I haven't started this one yet. The code and my notes will go here when I do it.
+My first React app, made with Vite. Three short exercises about JSX: expressions inside `{ }`, reading an object, and writing normal HTML tags (with styles) the React way.
 
-**Status:** to do · Required for the course · 20 XP
+## ▶️ How to run
 
-## 📝 Plan
+```bash
+npm install
+npm run dev
+```
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+Vite prints the address, usually http://localhost:5173. `npm run build` makes the production version in `dist/`.
+
+## 🎯 The challenge
+
+1. **JSX** (`components/HelloJsx.jsx`): shows `Hello World!`, a JSX element kept in the `myElement` variable, and `React is {sum} times better with JSX`, where `sum = 5 + 5` renders as 10.
+2. **Objects** (`App.jsx` + `components/UserFavoriteAnimals.jsx`): prints `user.firstName` and `user.lastName`, then passes `user.favAnimals` as a prop and turns it into a list with `map()`.
+3. **HTML in React** (`components/Exercise.jsx`): a header styled with the `styleHeader` object, a paragraph styled by the `.para` class from `Exercise.css`, a link, a form, an image (`public/atom.svg`) and a list.
+
+## 🧠 What I learned
+
+- A JSX element is a value, so it can sit in a variable and be dropped into the page with `{myElement}`
+- In JSX `class` becomes `className` and `for` becomes `htmlFor`
+- Inline styles are objects with camelCase keys, like `backgroundColor`
+- Every item made by `map()` needs a `key`, and the animal names are unique enough for that
 
 ---
 

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Harder CSS patterns: a Mondrian grid, a checkerboard and a wave, with no images."
+    />
+    <title>CSS Pattern Ninja</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="top">
+      <h1>CSS Pattern Ninja</h1>
+      <p>Three patterns, no images and almost no HTML. Everything is grid lines and gradients.</p>
+    </header>
+
+    <main class="gallery">
+      <figure class="piece">
+        <!-- Named grid areas place the nine blocks -->
+        <div
+          class="mondrian"
+          role="img"
+          aria-label="A Mondrian style painting of red, blue and yellow blocks separated by thick black lines"
+        >
+          <div class="m-red"></div>
+          <div class="m-white-1"></div>
+          <div class="m-white-2"></div>
+          <div class="m-blue"></div>
+          <div class="m-white-3"></div>
+          <div class="m-yellow"></div>
+          <div class="m-white-4"></div>
+          <div class="m-black"></div>
+          <div class="m-white-5"></div>
+        </div>
+        <figcaption>
+          <strong>1. Mondrian.</strong> <code>grid-template-areas</code> with uneven tracks.
+        </figcaption>
+      </figure>
+
+      <figure class="piece">
+        <div class="checker" role="img" aria-label="A tilted black and white checkerboard"></div>
+        <figcaption>
+          <strong>2. Checkerboard.</strong> One <code>conic-gradient</code> repeated with
+          <code>background-size</code>.
+        </figcaption>
+      </figure>
+
+      <figure class="piece">
+        <div class="waves" role="img" aria-label="Rows of blue scallop waves"></div>
+        <figcaption>
+          <strong>3. Scallop waves.</strong> Two <code>radial-gradient</code> layers, offset by half
+          a tile.
+        </figcaption>
+      </figure>
+
+      <figure class="piece">
+        <!-- 36 cells, placed by the auto grid; nth-child picks the diagonals -->
+        <div
+          class="diagonal"
+          role="img"
+          aria-label="A six by six grid with a coral diagonal and a blue diagonal crossing it"
+        >
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <figcaption>
+          <strong>4. Diagonals.</strong> <code>:nth-child(7n + 1)</code> and
+          <code>:nth-child(5n + 6)</code> pick the two diagonals.
+        </figcaption>
+      </figure>
+    </main>
+  </body>
+</html>

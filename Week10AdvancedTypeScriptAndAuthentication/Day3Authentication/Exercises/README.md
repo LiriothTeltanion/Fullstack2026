@@ -8,11 +8,11 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+The exercises for this day.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/): Exercises XP: to do (required)
+- [`ExercisesXP/`](ExercisesXP/): Exercises XP: Express register, login and protected routes with JWT and bcrypt
 
 ---
 

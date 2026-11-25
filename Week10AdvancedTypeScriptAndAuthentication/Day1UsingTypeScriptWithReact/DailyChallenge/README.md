@@ -8,11 +8,11 @@
 
 </div>
 
-The daily challenges for this day. None of them are done yet.
+The daily challenges for this day.
 
 ## Contents
 
-- [`TypeScriptReactTodo/`](TypeScriptReactTodo/): TypeScript and React Todo: to do (required)
+- [`TypeScriptReactTodo/`](TypeScriptReactTodo/): TypeScript and React Todo: typed todo list with priorities and filters
 
 ---
 

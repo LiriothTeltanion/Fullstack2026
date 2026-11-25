@@ -1,0 +1,24 @@
+# 📁 Age - Age Tracker
+
+<div align="center">
+
+<img src="../../../../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../../../../assets/readme/progress/age-tracker-449779a6f6.svg" width="100%" alt="Progress card for Age Tracker">
+
+</div>
+
+Part of the project for Age Tracker.
+
+## Contents
+
+- [`AgeTracker.jsx`](AgeTracker.jsx)
+- [`ageSlice.js`](ageSlice.js)
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 9 Day 4 - Redux Toolkit and Async Logic - Daily Challenge

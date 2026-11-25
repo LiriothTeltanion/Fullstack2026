@@ -1,0 +1,112 @@
+:root {
+  --bg: #f5f3ff;
+  --card: #ffffff;
+  --text: #1e1b4b;
+  --muted: #6b7280;
+  --accent: #4f46e5;
+  --ok: #16a34a;
+  --bad: #dc2626;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  width: min(560px, 100% - 2rem);
+  margin: 3rem auto;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+h1 {
+  margin: 0.25rem 0 1.5rem;
+  font-size: 2.4rem;
+}
+
+.card {
+  padding: 1.75rem;
+  border-radius: 18px;
+  background: var(--card);
+  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.12);
+}
+
+blockquote {
+  margin: 0 0 1.25rem;
+}
+
+blockquote p {
+  margin: 0.4rem 0 0;
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+.tip-number {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+button {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+}
+
+button:focus-visible {
+  outline: 3px solid #a5b4fc;
+  outline-offset: 2px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.error {
+  color: var(--bad);
+}
+
+.status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  color: var(--muted);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--muted);
+}
+
+.status-online .dot {
+  background: var(--ok);
+}
+
+.status-offline .dot {
+  background: var(--bad);
+}
+
+.api-url {
+  width: 100%;
+  font-family: Consolas, monospace;
+  font-size: 0.8rem;
+}

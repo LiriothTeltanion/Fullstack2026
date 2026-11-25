@@ -8,11 +8,11 @@
 
 </div>
 
-The daily challenges for this day. None of them are done yet.
+The Wild and Wacky Vegetables page, built with Bootstrap 5.
 
 ## Contents
 
-- [`WildAndWackyVegetables/`](WildAndWackyVegetables/): Wild and Wacky Vegetables: to do (required)
+- [`WildAndWackyVegetables/`](WildAndWackyVegetables/): Wild and Wacky Vegetables: a Bootstrap page of strange vegetables with cards and an accordion
 
 ---
 

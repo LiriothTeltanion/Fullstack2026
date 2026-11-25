@@ -1,0 +1,26 @@
+<%- include("../partials/header", { title: "Search" }) %>
+<h1>Search the feed</h1>
+
+<form action="/search/title" method="POST" class="search">
+  <label for="title">By title</label>
+  <input id="title" name="title" placeholder="e.g. ocean" required />
+  <button type="submit">Search</button>
+</form>
+
+<form action="/search/category" method="POST" class="search">
+  <label for="category">By category</label>
+  <select id="category" name="category">
+    <% categories.forEach((category) => { %>
+      <option value="<%= category %>" <%= category === query ? "selected" : "" %>><%= category %></option>
+    <% }) %>
+  </select>
+  <button type="submit">Search</button>
+</form>
+
+<% if (posts) { %>
+  <h2><%= posts.length %> result(s) for "<%= query %>"</h2>
+  <% posts.forEach((post) => { %>
+    <%- include("../partials/post", { post }) %>
+  <% }) %>
+<% } %>
+<%- include("../partials/footer") %>

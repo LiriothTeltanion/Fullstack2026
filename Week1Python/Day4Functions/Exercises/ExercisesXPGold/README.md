@@ -33,6 +33,8 @@ Average throws to reach doubles: 6.58
 
 The dice results are random. There is a commented `random.seed(0)` line in the script for when I want the same numbers every run.
 
+A wrong answer doesn't crash the demo. A gender other than `m`/`f` or a date that isn't `yyyy/mm/dd` prints `Please type m or f, and the date as yyyy/mm/dd.` and asks both again; a letter for X prints `Please enter a number.`
+
 ## 🎯 The challenge
 
 | Function | What it does |
@@ -50,7 +52,7 @@ The exercise had a fixed "today" date written in. I used `datetime.date.today()`
 - Turning a digit into text and repeating it (`str(3) * 4` is `"3333"`) is easier than doing the math with powers of 10
 - `(today.month, today.day) < (month, day)` answers "has the birthday passed?" in one comparison
 - `while True` with a `return` inside fits a loop where I can't know the number of rounds
-- The input parts have no checks, so a typo in the date or a letter for X still crashes the script
+- A `while True` loop with `try`/`except ValueError` and a `break` keeps asking until the input can be converted
 
 ---
 

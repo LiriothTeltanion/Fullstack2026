@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Practice Pulse: a landing page for a practice timer for musicians."
+    />
+    <title>Practice Pulse · Landing Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="nav">
+      <a class="logo" href="#top" aria-label="Practice Pulse home">
+        <span class="logo-dot" aria-hidden="true"></span> Practice Pulse
+      </a>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#plans">Plans</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-text">
+          <p class="eyebrow">For guitar, piano and voice</p>
+          <h1>Practice a little every day, and see it add up.</h1>
+          <p>
+            Practice Pulse splits your session into short focused blocks, keeps a streak and shows
+            how many minutes you put into each skill this week.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#plans">Start free</a>
+            <a class="btn btn-ghost" href="#how">See how it works</a>
+          </div>
+        </div>
+        <div class="hero-card" aria-hidden="true">
+          <p class="timer">12:00</p>
+          <p class="timer-label">Scales · block 2 of 4</p>
+          <div class="bars">
+            <span style="--h: 40%"></span>
+            <span style="--h: 65%"></span>
+            <span style="--h: 50%"></span>
+            <span style="--h: 80%"></span>
+            <span style="--h: 70%"></span>
+            <span style="--h: 95%"></span>
+            <span style="--h: 60%"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="features" id="features" aria-labelledby="features-title">
+        <h2 id="features-title">Everything a short session needs</h2>
+        <div class="feature-list">
+          <article class="feature">
+            <h3>Focus blocks</h3>
+            <p>Pick 10, 15 or 25 minutes per block. A soft bell tells you when to switch.</p>
+          </article>
+          <article class="feature">
+            <h3>Skill tags</h3>
+            <p>Tag a block as scales, chords, songs or ear training and the week sorts itself.</p>
+          </article>
+          <article class="feature">
+            <h3>Streaks</h3>
+            <p>One block a day keeps the streak alive. Missing a day doesn't wipe your history.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="how" id="how" aria-labelledby="how-title">
+        <h2 id="how-title">How it works</h2>
+        <ol class="steps">
+          <li><strong>Plan.</strong> Choose what you want to practice today.</li>
+          <li><strong>Play.</strong> Follow the timer block by block.</li>
+          <li><strong>Review.</strong> Check the weekly chart and adjust.</li>
+        </ol>
+      </section>
+
+      <section class="plans" id="plans" aria-labelledby="plans-title">
+        <h2 id="plans-title">Plans</h2>
+        <div class="plan-list">
+          <article class="plan">
+            <h3>Free</h3>
+            <p class="price">0 ₪</p>
+            <ul>
+              <li>3 skill tags</li>
+              <li>7-day history</li>
+            </ul>
+            <a class="btn btn-ghost" href="#top">Choose Free</a>
+          </article>
+          <article class="plan plan-featured">
+            <h3>Studio</h3>
+            <p class="price">15 ₪ <span>/ month</span></p>
+            <ul>
+              <li>Unlimited tags</li>
+              <li>Full history and export</li>
+            </ul>
+            <a class="btn btn-primary" href="#top">Choose Studio</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Practice Pulse is a made-up product for a landing page exercise.</p>
+    </footer>
+  </body>
+</html>

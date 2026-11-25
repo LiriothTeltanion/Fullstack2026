@@ -46,7 +46,7 @@ def find_value_pairs_two_pointer(nums: Iterable[int], target: int) -> list[tuple
     i, j = 0, len(arr) - 1
     pairs: list[tuple[int, int]] = []
     last = None
-    while i <= j:
+    while i < j:  # two different positions: one number can't pair with itself
         s = arr[i] + arr[j]
         if s == target:
             a, b = arr[i], arr[j]

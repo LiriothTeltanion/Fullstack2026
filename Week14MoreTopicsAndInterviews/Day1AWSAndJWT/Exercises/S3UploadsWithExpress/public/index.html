@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>S3 Uploads</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="card">
+      <h1>S3 Uploads</h1>
+      <p class="muted">
+        Images or PDFs up to 5 MB. Files go to a private bucket, and links last 5 minutes.
+      </p>
+
+      <form id="upload-form" class="upload">
+        <label for="file">Choose a file</label>
+        <input id="file" name="file" type="file" accept="image/*,application/pdf" required />
+        <button type="submit">Upload</button>
+      </form>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+
+      <h2>Files in the bucket</h2>
+      <ul id="file-list" class="file-list"></ul>
+    </main>
+  </body>
+</html>

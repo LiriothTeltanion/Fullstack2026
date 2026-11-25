@@ -27,7 +27,7 @@ allTruthy(5, 4, 3, 2, 1, 0) → false
 | `allTruthy(...values)` | A `for...of` loop that returns `false` at the first falsy value, otherwise `true` |
 | `parseToken(token)` | Turns typed text like `true`, `null`, `""` or `42` into the real value |
 
-The custom box splits the input on commas, parses each part and prints `{ values, result }` as JSON. One quirk: an empty part (like the end of `1, 2,`) becomes `0`, because `Number("")` is 0.
+The custom box splits the input on commas, parses each part and prints `{ values, result }` as JSON. Empty parts (like the end of `1, 2,`) are skipped, because `Number("")` would turn them into `0`. To test a real empty string I type `""`.
 
 ## 🧠 What I learned
 

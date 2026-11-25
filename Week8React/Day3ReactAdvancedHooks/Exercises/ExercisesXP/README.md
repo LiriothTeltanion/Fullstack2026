@@ -4,19 +4,33 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for Exercises XP">
+<img src="../../../../assets/readme/progress/week8-day3-exercises-xp-c4d151861f.svg" width="100%" alt="Progress card for Exercises XP">
 
 </div>
 
-I haven't started this one yet. The code and my notes will go here when I do it.
+Three hooks beyond `useState`, one exercise each: `useContext` for a theme, `useRef` for a text box and `useReducer` for a todo list.
 
-**Status:** to do · Required for the course · 20 XP
+## ▶️ How to run
 
-## 📝 Plan
+```bash
+npm install
+npm run dev
+```
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+Vite prints a local address (usually `http://localhost:5173`); I open it in the browser.
+
+## 🎯 The challenge
+
+1. **Theme switcher**: `ThemeProvider` keeps `theme` and `toggleTheme` in a context and puts the theme name on `<body>`. `ThemeSwitcher` reads them with my `useTheme()` helper, and the CSS turns the page dark.
+2. **Character counter**: `CharacterCounter` reads the textarea through `inputRef.current.value.length` on every input, and a button focuses the box through the same ref.
+3. **Todo list**: `todoReducer` handles `add` and `remove` actions; the form dispatches `add` and each item has a Remove button that dispatches `remove`.
+
+## 🧠 What I learned
+
+- Context saves me from passing `theme` through components that do not use it
+- A ref gives direct access to a DOM element without causing a re-render
+- With `useReducer` every change to the list is described by an action, all in one function
+- Wrapping `useContext` in a small `useTheme()` hook keeps the imports short
 
 ---
 

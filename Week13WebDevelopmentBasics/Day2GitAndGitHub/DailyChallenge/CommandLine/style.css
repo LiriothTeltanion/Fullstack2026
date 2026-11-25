@@ -1,0 +1,125 @@
+/* Terminal theme: dark background, green prompt, monospace headings */
+:root {
+  --bg: #0c0f0a;
+  --panel: #141a12;
+  --text: #d7e4d2;
+  --muted: #8fa48a;
+  --green: #5af78e;
+  --amber: #f3c969;
+  --mono: "Cascadia Code", Consolas, "Courier New", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.top,
+main,
+.bottom {
+  width: min(1000px, 100% - 2rem);
+  margin-inline: auto;
+}
+
+.top {
+  padding: 2.5rem 0 1rem;
+}
+
+.prompt {
+  margin: 0;
+  font-family: var(--mono);
+  color: var(--green);
+}
+
+.cursor {
+  display: inline-block;
+  width: 0.6em;
+  height: 1.1em;
+  vertical-align: text-bottom;
+  background: var(--green);
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+h1 {
+  margin: 0.5rem 0;
+  font-family: var(--mono);
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+}
+
+h2 {
+  margin-top: 0;
+  font-family: var(--mono);
+  font-size: 1.15rem;
+  color: var(--amber);
+}
+
+h2::before {
+  content: "# ";
+  color: var(--muted);
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  padding-bottom: 2rem;
+}
+
+section {
+  padding: 1.25rem;
+  background: var(--panel);
+  border: 1px solid #233021;
+  border-radius: 10px;
+}
+
+dl {
+  margin: 0;
+}
+
+dt {
+  margin-top: 0.75rem;
+}
+
+dt:first-child {
+  margin-top: 0;
+}
+
+dd {
+  margin: 0.15rem 0 0;
+  color: var(--muted);
+}
+
+code {
+  font-family: var(--mono);
+  color: var(--green);
+}
+
+.top code {
+  color: var(--amber);
+}
+
+.bottom {
+  padding: 1rem 0 2rem;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.85rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor {
+    animation: none;
+  }
+}

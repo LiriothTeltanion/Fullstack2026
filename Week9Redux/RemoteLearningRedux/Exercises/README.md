@@ -8,13 +8,13 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+The exercises for this day.
 
 ## Contents
 
-- [`TodoListManager/`](TodoListManager/): Todo List Manager: to do (optional)
-- [`MovieCollectionOrganizer/`](MovieCollectionOrganizer/): Movie Collection Organizer: to do (optional)
-- [`EcommerceProductFilter/`](EcommerceProductFilter/): E-commerce Product Filter: to do (optional)
+- [`TodoListManager/`](TodoListManager/): Todo List Manager: todos with filters, inline edit and bulk actions
+- [`MovieCollectionOrganizer/`](MovieCollectionOrganizer/): Movie Collection Organizer: add, rate, filter and sort movies
+- [`EcommerceProductFilter/`](EcommerceProductFilter/): E-commerce Product Filter: search, category, price and stock filters
 
 ---
 

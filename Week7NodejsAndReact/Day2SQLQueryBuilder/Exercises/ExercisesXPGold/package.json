@@ -1,0 +1,15 @@
+{
+  "name": "w7d2-exercises-xp-gold",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node queries.js",
+    "sql": "node queries.js --dry"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.0",
+    "knex": "^3.1.0",
+    "pg": "^8.13.0"
+  }
+}

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="My first HTML page: a short page about me and what I'm learning."
+    />
+    <title>My First HTML Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <p class="eyebrow">Week 13 · Day 1</p>
+      <h1>Hi, I'm Kevin</h1>
+      <p class="lead">This is my first page written by hand, from the doctype to the footer.</p>
+    </header>
+
+    <main id="main">
+      <section aria-labelledby="about-title">
+        <h2 id="about-title">About me</h2>
+        <figure class="avatar">
+          <!-- Inline SVG, so the page works without any image file -->
+          <svg viewBox="0 0 120 120" role="img" aria-labelledby="avatar-title">
+            <title id="avatar-title">A round badge with my initials, KC</title>
+            <circle cx="60" cy="60" r="56" fill="#1d4ed8" />
+            <text
+              x="60"
+              y="74"
+              text-anchor="middle"
+              font-size="40"
+              font-family="Georgia, serif"
+              fill="#fff"
+            >
+              KC
+            </text>
+          </svg>
+          <figcaption>My initials stand in for a photo.</figcaption>
+        </figure>
+        <p>
+          I'm a student in the <strong>Developers Institute</strong> full-stack bootcamp. I started
+          with Python, moved on to JavaScript and the DOM, and now I'm going back to the basics of
+          <em>HTML</em> and <em>CSS</em>.
+        </p>
+        <p>
+          I speak Spanish, English and Hebrew, so I care about pages that work in more than one
+          language.
+        </p>
+      </section>
+
+      <section aria-labelledby="learned-title">
+        <h2 id="learned-title">What I've learned so far</h2>
+        <ol>
+          <li>Python: functions, classes and files</li>
+          <li>JavaScript: the DOM, events and <code>fetch</code></li>
+          <li>Databases with SQL and a first Node.js server</li>
+          <li>React components and state</li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="music-title">
+        <h2 id="music-title">Music I code to</h2>
+        <ul>
+          <li>Synthwave</li>
+          <li>Post-hardcore</li>
+          <li>Blackgaze</li>
+        </ul>
+        <blockquote>
+          <p>Good structure first, then style.</p>
+          <footer>My own rule for this week</footer>
+        </blockquote>
+      </section>
+
+      <section aria-labelledby="tags-title">
+        <h2 id="tags-title">HTML tags on this page</h2>
+        <table>
+          <caption>
+            A few of the tags I used and why
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Tag</th>
+              <th scope="col">What it is for</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>&lt;header&gt;</code></td>
+              <td>The title area at the top</td>
+            </tr>
+            <tr>
+              <td><code>&lt;section&gt;</code></td>
+              <td>A group of content with its own heading</td>
+            </tr>
+            <tr>
+              <td><code>&lt;figure&gt;</code></td>
+              <td>An image with a caption</td>
+            </tr>
+            <tr>
+              <td><code>&lt;table&gt;</code></td>
+              <td>Data in rows and columns, like this one</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section aria-labelledby="links-title">
+        <h2 id="links-title">Find me</h2>
+        <p>
+          All my bootcamp code lives in my
+          <a
+            href="https://github.com/LiriothTeltanion/Fullstack2026"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Fullstack2026 repository</a
+          >.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Kevin Cusnir</p>
+    </footer>
+  </body>
+</html>

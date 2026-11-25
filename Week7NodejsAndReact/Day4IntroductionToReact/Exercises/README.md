@@ -8,13 +8,13 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+My first React components, built with Vite: JSX, props and a full landing page.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/): Exercises XP: to do (required)
-- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: to do (optional)
-- [`LandingPageUsingReact/`](LandingPageUsingReact/): Landing Page Using React: to do (optional)
+- [`ExercisesXP/`](ExercisesXP/): Exercises XP: JSX expressions, an object, a mapped list and styled tags
+- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: reusable cards with props, planets and social links
+- [`LandingPageUsingReact/`](LandingPageUsingReact/): Landing Page Using React: six-component landing page for a made-up notes app
 
 ---
 

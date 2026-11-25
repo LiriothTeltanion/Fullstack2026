@@ -1,0 +1,150 @@
+/* Dark navy page; the pattern uses three colors */
+:root {
+  --bg: #0f1b2d;
+  --tile: #16263f;
+  --coral: #ff6b5b;
+  --gold: #ffc857;
+  --sky: #4cc9f0;
+  --text: #e9eef6;
+  --muted: #9fb0c8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+}
+
+main {
+  width: min(640px, 100% - 2rem);
+  margin: 0 auto;
+  padding: 2.5rem 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 2.8rem);
+}
+
+.intro {
+  color: var(--muted);
+}
+
+code {
+  color: var(--gold);
+}
+
+/* The grid: 4 equal columns, square tiles thanks to aspect-ratio */
+.pattern {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 8px;
+  margin: 1.5rem 0;
+  border-radius: 16px;
+  background: #0a1322;
+}
+
+.tile {
+  position: relative;
+  aspect-ratio: 1;
+  background: var(--tile);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Every tile gets an inner shape through ::before */
+.tile::before {
+  content: "";
+  position: absolute;
+  inset: 15%;
+}
+
+/* Type 1: circles (tiles 1, 5, 9, 13 ... every 4th starting at 1) */
+.tile:nth-child(4n + 1)::before {
+  border-radius: 50%;
+  background: var(--coral);
+}
+
+/* Type 2: half circles */
+.tile:nth-child(4n + 2)::before {
+  inset: auto 15% 15%;
+  height: 35%;
+  border-radius: 999px 999px 0 0;
+  background: var(--gold);
+}
+
+/* Type 3: quarter circles */
+.tile:nth-child(4n + 3)::before {
+  inset: 0 0 auto auto;
+  width: 85%;
+  height: 85%;
+  border-radius: 0 0 0 100%;
+  background: var(--sky);
+}
+
+/* Type 4: diamonds */
+.tile:nth-child(4n)::before {
+  inset: 25%;
+  transform: rotate(45deg);
+  background: var(--coral);
+}
+
+/* Shift the colors on every second row so the columns don't repeat exactly */
+.tile:nth-child(n + 5):nth-child(-n + 8)::before,
+.tile:nth-child(n + 13)::before {
+  filter: hue-rotate(160deg);
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.6rem;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.swatch {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  flex: none;
+}
+
+.swatch.circle {
+  border-radius: 50%;
+  background: var(--coral);
+}
+
+.swatch.half {
+  height: 11px;
+  margin-top: 11px;
+  border-radius: 11px 11px 0 0;
+  background: var(--gold);
+}
+
+.swatch.quarter {
+  border-radius: 0 0 0 100%;
+  background: var(--sky);
+}
+
+.swatch.diamond {
+  width: 16px;
+  height: 16px;
+  margin: 3px;
+  transform: rotate(45deg);
+  background: var(--coral);
+}

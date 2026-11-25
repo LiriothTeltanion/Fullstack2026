@@ -1,0 +1,43 @@
+/* A few custom touches on top of Bootstrap */
+.bg-forest {
+  background-color: #1b4332;
+}
+
+.hero {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 213, 79, 0.35), transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(186, 104, 200, 0.4), transparent 45%),
+    linear-gradient(135deg, #1b4332, #2d6a4f);
+}
+
+/* The "photo" on each card is a big emoji on a colored block */
+.veg-art {
+  display: grid;
+  place-items: center;
+  height: 160px;
+  font-size: 4.5rem;
+  background: var(--veg);
+  border-radius: var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius) 0 0;
+}
+
+.card {
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.facts {
+  max-width: 720px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+}

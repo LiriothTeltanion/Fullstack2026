@@ -8,7 +8,7 @@
 
 </div>
 
-The start of my final project: the scope comes first. I haven't reached this week yet, so every folder is ready but empty.
+The scope of my final project: the plan, the data model and the milestones. 1 exercises in total.
 
 ## Contents
 

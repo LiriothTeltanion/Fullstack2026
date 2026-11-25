@@ -52,7 +52,7 @@ The goal is the list of different value pairs `(a, b)` with `a + b = target` and
 ```python
 arr = sorted(nums)
 i, j = 0, len(arr) - 1
-while i <= j:
+while i < j:
     s = arr[i] + arr[j]
     if s == target:
         ...  # save the pair and skip duplicates
@@ -62,13 +62,13 @@ while i <= j:
         j -= 1
 ```
 
-One difference I found: with `--seed 42` the two-pointer version reports 1370 pairs and the hash version 1369. The loop runs while `i <= j`, so a single 1864 meets itself and becomes `(1864, 1864)`. Changing it to `i < j` would make the two agree.
+The loop stops when the pointers meet, so a single 1864 can't pair with itself. With `--seed 42` both versions find the same 1369 pairs.
 
 ## 🧠 What I learned
 
 - A `Counter` lookup replaces the inner loop of the O(n²) "check every pair" idea
 - Two pointers only work on a sorted list, and the sort is where the n log n comes from
-- One `<=` instead of `<` was enough to produce a wrong extra pair
+- The loop condition matters: `i <= j` would let one number pair with itself, `i < j` needs two different positions
 - Duplicates change the count: 3 copies of the same half-target value make 3 pairs, not 9
 
 ---

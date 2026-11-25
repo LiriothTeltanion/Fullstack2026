@@ -8,12 +8,12 @@
 
 </div>
 
-The daily challenges for this day. None of them are done yet.
+A React client with an Express API, and a validated sign-up form.
 
 ## Contents
 
-- [`DataAndServer/`](DataAndServer/): Data and Server: to do (required)
-- [`Form/`](Form/): Form: to do (optional)
+- [`DataAndServer/`](DataAndServer/): Data and Server: React client calling GET and POST routes in Express
+- [`Form/`](Form/): Form: sign-up form with live validation
 
 ---
 

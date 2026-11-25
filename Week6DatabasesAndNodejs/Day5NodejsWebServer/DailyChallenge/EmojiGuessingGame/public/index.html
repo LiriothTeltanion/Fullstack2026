@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Emoji Guessing Game</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>Emoji Guessing Game</h1>
+
+      <label for="player">Your name</label>
+      <input id="player" type="text" maxlength="20" placeholder="Player name" autocomplete="off" />
+
+      <section class="card" aria-labelledby="round-title">
+        <h2 id="round-title" class="sr-only">Current round</h2>
+        <p id="emoji" class="emoji" aria-live="polite">…</p>
+        <div id="options" class="options"></div>
+        <p id="feedback" class="feedback" aria-live="polite"></p>
+        <p>Score: <strong id="score">0</strong> · Streak: <strong id="streak">0</strong></p>
+        <button id="next" type="button">Next emoji</button>
+      </section>
+
+      <section class="card">
+        <h2>Leaderboard</h2>
+        <ol id="leaderboard"></ol>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

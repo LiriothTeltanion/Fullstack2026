@@ -8,11 +8,11 @@
 
 </div>
 
-The daily challenges for this day. None of them are done yet.
+A carousel written from scratch with one index in state.
 
 ## Contents
 
-- [`ReactCarousel/`](ReactCarousel/): React Carousel: to do (required)
+- [`ReactCarousel/`](ReactCarousel/): React Carousel: four slides with arrows, dots, thumbnails and autoplay
 
 ---
 

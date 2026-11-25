@@ -8,12 +8,12 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+Two mini-projects: a quote machine and a photo gallery.
 
 ## Contents
 
-- [`RandomQuoteGenerator/`](RandomQuoteGenerator/): Random Quote Generator: to do (required)
-- [`SnapShot/`](SnapShot/): Snap Shot: to do (optional)
+- [`RandomQuoteGenerator/`](RandomQuoteGenerator/): Random Quote Generator: random quote with a new color each time
+- [`SnapShot/`](SnapShot/): Snap Shot: Pexels photo gallery with search and categories
 
 ---
 

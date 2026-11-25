@@ -8,12 +8,12 @@
 
 </div>
 
-The daily challenges for this day. None of them are done yet.
+Two pattern challenges: Grid tiles, and four harder pieces with no images.
 
 ## Contents
 
-- [`CSSPattern/`](CSSPattern/): CSS Pattern: to do (required)
-- [`CSSPatternNinja/`](CSSPatternNinja/): CSS Pattern: to do (optional)
+- [`CSSPattern/`](CSSPattern/): CSS Pattern: a 4 × 4 tile pattern drawn with Grid and ::before
+- [`CSSPatternNinja/`](CSSPatternNinja/): CSS Pattern: Mondrian, checkerboard, waves and diagonals in pure CSS
 
 ---
 

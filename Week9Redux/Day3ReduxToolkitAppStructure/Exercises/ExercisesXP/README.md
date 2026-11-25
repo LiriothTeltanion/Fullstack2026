@@ -4,19 +4,40 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for Exercises XP">
+<img src="../../../../assets/readme/progress/exercises-xp-886dc2f5bf.svg" width="100%" alt="Progress card for Exercises XP">
 
 </div>
 
-I haven't started this one yet. The code and my notes will go here when I do it.
+The Day 2 counter and todo list again, rewritten with Redux Toolkit. Each feature gets its own folder with its slice and its component, and the store only imports the reducers.
 
-**Status:** to do · Required for the course · 20 XP
+## ▶️ How to run
 
-## 📝 Plan
+```bash
+npm install
+npm run dev
+```
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+## 🎯 The challenge
+
+1. **Counter slice.** `counterSlice` has `increment`, `decrement`, `incrementByAmount` (the amount comes from an input) and `reset`.
+2. **Todos slice.** `addTodo` uses a `prepare` callback with `nanoid()` to build `{ id, text, completed }`, `toggleTodo` flips `completed`, `removeTodo` filters the list.
+3. **Store.** `src/app/store.js` registers both reducers with `configureStore`.
+4. **Selectors in the slice files.** `selectCount`, `selectTodos` and `selectRemaining` sit next to the reducers that own that data.
+
+```
+src/
+├── app/store.js
+└── features/
+    ├── counter/  counterSlice.js, Counter.jsx
+    └── todos/    todosSlice.js, Todos.jsx
+```
+
+## 🧠 What I learned
+
+- `createSlice` writes the action types and action creators for me, so `actionTypes.js` from Day 2 is gone
+- Inside a slice reducer I can write `state.value += 1` because Immer turns it into an immutable update
+- A reducer can also return a brand new value, which is what `removeTodo` does with `filter`
+- `prepare` is the right place for random ids, so the reducer itself stays pure
 
 ---
 

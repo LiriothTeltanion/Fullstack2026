@@ -8,12 +8,12 @@
 
 </div>
 
-The daily challenges for this day. None of them are done yet.
+Two Day 3 challenges about how tables point at each other.
 
 ## Contents
 
-- [`TablesRelationships/`](TablesRelationships/): Tables Relationships: to do (required)
-- [`ItemsAndOrders/`](ItemsAndOrders/): Items and Orders: to do (optional)
+- [`TablesRelationships/`](TablesRelationships/): a one-to-one customer profile and a many-to-many library
+- [`ItemsAndOrders/`](ItemsAndOrders/): PL/pgSQL functions that total an order, and only for its owner
 
 ---
 

@@ -8,7 +8,7 @@
 
 </div>
 
-CSS Grid and Layout. Nothing is done here yet; each folder below is ready for my code.
+CSS Grid and Layout. These are the exercises and challenges for this day.
 
 ## Contents
 

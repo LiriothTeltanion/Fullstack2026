@@ -8,7 +8,7 @@
 
 </div>
 
-Git and GitHub. Nothing is done here yet; each folder below is ready for my code.
+Git and GitHub. These are the exercises and challenges for this day.
 
 ## Contents
 

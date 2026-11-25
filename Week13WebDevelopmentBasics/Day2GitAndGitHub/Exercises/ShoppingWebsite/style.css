@@ -1,0 +1,270 @@
+/* Light shop theme: warm background, white product cards, a slide-in cart */
+:root {
+  --bg: #fdf8f3;
+  --card: #ffffff;
+  --text: #2b2118;
+  --muted: #6f6257;
+  --accent: #b4441a;
+  --accent-soft: #fbe4d8;
+  --line: #eadfd4;
+  --radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem clamp(1rem, 4vw, 2.5rem);
+  background: rgba(253, 248, 243, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.cart-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--text);
+  border-radius: 999px;
+  background: transparent;
+  font-weight: 600;
+}
+
+.badge {
+  min-width: 1.6em;
+  padding: 0 0.4em;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+main {
+  width: min(1150px, 100% - 2rem);
+  margin: 0 auto;
+}
+
+.hero {
+  margin: 2rem 0;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  border-radius: var(--radius);
+  background: linear-gradient(120deg, #2b2118, #5a2d17);
+  color: #fff;
+}
+
+.hero h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+}
+
+.hero p {
+  margin: 0;
+  color: #f2d9c9;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter {
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--card);
+}
+
+.filter.is-active {
+  background: var(--text);
+  border-color: var(--text);
+  color: #fff;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 1.25rem;
+  margin: 1.25rem 0 3rem;
+  padding: 0;
+  list-style: none;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.product-image {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 3;
+  font-size: 3rem;
+  border-radius: 10px;
+  background: var(--accent-soft);
+}
+
+.product h3 {
+  margin: 0.75rem 0 0.25rem;
+  font-size: 1.05rem;
+}
+
+.tag {
+  margin: 0;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  color: var(--muted);
+}
+
+.price {
+  flex: 1;
+  margin: 0.5rem 0 0.75rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.add,
+.checkout {
+  padding: 0.6rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.add:hover,
+.checkout:hover {
+  background: #8f3413;
+}
+
+/* Cart panel */
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  width: min(380px, 100%);
+  height: 100vh;
+  padding: 1.25rem;
+  background: var(--card);
+  box-shadow: -10px 0 30px rgba(43, 33, 24, 0.2);
+  overflow-y: auto;
+}
+
+.cart[hidden] {
+  display: none;
+}
+
+.cart-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-head h2 {
+  margin: 0;
+}
+
+.close {
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.cart-lines {
+  margin: 1rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cart-lines li {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.remove {
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--bg);
+}
+
+.empty,
+.note {
+  color: var(--muted);
+}
+
+.total {
+  margin-top: auto;
+  font-size: 1.15rem;
+}
+
+.site-footer {
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+}

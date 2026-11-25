@@ -1,0 +1,97 @@
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --ink: #e5e7eb;
+  --accent: #22d3ee;
+  --good: #86efac;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.wrap {
+  max-width: 520px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+
+input,
+button {
+  font: inherit;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background: #0b1220;
+  color: var(--ink);
+}
+
+input {
+  width: 100%;
+  margin: 6px 0 16px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.card {
+  margin-bottom: 16px;
+  padding: 16px;
+  background: var(--panel);
+  border: 1px solid #1f2937;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.emoji {
+  margin: 8px 0;
+  font-size: 5rem;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.feedback {
+  min-height: 1.5em;
+  color: var(--good);
+}
+
+#next {
+  background: var(--accent);
+  color: #0b1220;
+  font-weight: 700;
+}
+
+#leaderboard {
+  text-align: left;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}

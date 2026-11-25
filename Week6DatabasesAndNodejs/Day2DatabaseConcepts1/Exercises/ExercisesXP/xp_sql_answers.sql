@@ -25,8 +25,8 @@ ORDER BY price DESC;
 
 -- A.3 First 3 customers in alphabetical order of first name (A–Z),
 --     exclude the primary key column from the results.
---     (Assuming columns: first_name, last_name, email)
-SELECT first_name, last_name, email
+--     (Day 1 columns: id, first_name, last_name)
+SELECT first_name, last_name
 FROM customers
 ORDER BY first_name ASC
 LIMIT 3;

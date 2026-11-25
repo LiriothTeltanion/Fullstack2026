@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-labelledby="title desc">
-  <title id="title">Week 1 Day 1 Python foundations evidence map</title>
-  <desc id="desc">Exercises XP 1 through 9, Gold 1 through 2, and Ninja 1 through 5 are repository-verified by twenty-three focused tests. The Daily Challenge matches the reviewed official prompt and passes five focused tests. Learning and Octopus submission remain unverified.</desc>
+  <title id="title">Week 1 Day 1 Python foundations map</title>
+  <desc id="desc">Exercises XP 1 through 9, Gold 1 through 2 and Ninja 1 through 5 are covered by twenty-three tests, and the Daily Challenge by five more.</desc>
   <defs>
     <linearGradient id="day1-background" x1="0" x2="1" y1="0" y2="1">
       <stop stop-color="#030712"/>
@@ -46,7 +46,7 @@
   <rect x="1" y="1" width="1198" height="438" rx="27" fill="url(#day1-grid)" stroke="#25345f" stroke-width="2"/>
 
   <g aria-label="Week 1 Day 1 heading">
-    <text x="64" y="49" class="eyebrow">WEEK 1 · DAY 1 · EVIDENCE CHECKPOINT</text>
+    <text x="64" y="49" class="eyebrow">WEEK 1 · DAY 1 · MY FIRST PYTHON DAY</text>
     <text x="64" y="101" class="hero">PYTHON FOUNDATIONS</text>
     <text x="1136" y="49" text-anchor="end" class="signature">KEVIN CUSNIR · LIRIOTH TELTANION</text>
   </g>
@@ -111,7 +111,7 @@
     <rect x="64" y="205" width="318" height="152" rx="22" fill="#071127" stroke="#34d399" stroke-width="2"/>
     <circle cx="94" cy="236" r="8" class="verified"/>
     <text x="115" y="243" class="card-kicker">XP 1–9</text>
-    <text x="92" y="286" class="card-title">REPOSITORY VERIFIED</text>
+    <text x="92" y="286" class="card-title">DONE · TESTED</text>
     <text x="92" y="321" class="card-note">10 focused tests passing</text>
     <path d="M326 238l10 10 21-25" fill="none" stroke="#34d399" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
@@ -120,7 +120,7 @@
     <rect x="398" y="205" width="318" height="152" rx="22" fill="#0c1329" stroke="#fbbf24" stroke-width="2"/>
     <circle cx="428" cy="236" r="8" class="verified"/>
     <text x="449" y="243" class="card-kicker">GOLD 1–2</text>
-    <text x="426" y="282" class="card-title">REPOSITORY VERIFIED</text>
+    <text x="426" y="282" class="card-title">DONE · TESTED</text>
     <text x="426" y="321" class="card-note">6 tests · repeat + seasons</text>
     <path d="M659 238l10 10 21-25" fill="none" stroke="#34d399" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
@@ -128,7 +128,7 @@
   <g aria-label="XP Ninja repository verification">
     <rect x="732" y="205" width="194" height="152" rx="22" fill="#071127" stroke="#34d399" stroke-width="2"/>
     <text x="756" y="241" class="card-kicker">XP NINJA</text>
-    <text x="756" y="282" class="card-title">VERIFIED</text>
+    <text x="756" y="282" class="card-title">DONE</text>
     <text x="756" y="316" class="card-note">7 focused tests</text>
     <path d="M884 238l8 8 16-19" fill="none" stroke="#34d399" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
@@ -136,9 +136,9 @@
   <g aria-label="Daily Challenge official prompt aligned and repository-verified">
     <rect x="942" y="205" width="194" height="152" rx="22" fill="#0c1329" stroke="#34d399" stroke-width="2"/>
     <text x="966" y="241" class="card-kicker">DAILY</text>
-    <text x="966" y="278" class="card-title">PROMPT</text>
-    <text x="966" y="307" class="card-title">ALIGNED</text>
-    <text x="966" y="338" class="card-micro verified">5 TESTS · VERIFIED</text>
+    <text x="966" y="278" class="card-title">CHALLENGE</text>
+    <text x="966" y="307" class="card-title">SOLVED</text>
+    <text x="966" y="338" class="card-micro verified">5 TESTS · PASSING</text>
   </g>
 
   <g class="motion-layer" aria-hidden="true" fill="none" filter="url(#day1-glow)">
@@ -159,10 +159,10 @@
 
   <g aria-label="Truth boundary">
     <rect x="64" y="382" width="252" height="38" rx="19" fill="#161533" stroke="#a78bfa"/>
-    <text x="190" y="407" text-anchor="middle" class="truth">LEARNING · UNVERIFIED</text>
+    <text x="190" y="407" text-anchor="middle" class="truth">CONCEPTS · PRACTICED</text>
     <rect x="332" y="382" width="334" height="38" rx="19" fill="#161533" stroke="#a78bfa"/>
-    <text x="499" y="407" text-anchor="middle" class="truth">OCTOPUS SUBMISSION · UNVERIFIED</text>
-    <text x="1136" y="407" text-anchor="end" class="card-note">NEXT · Kevin explains, then submits manually</text>
+    <text x="499" y="407" text-anchor="middle" class="truth">COURSE SUBMISSION · PASSED</text>
+    <text x="1136" y="407" text-anchor="end" class="card-note">NEXT · Day 2: lists, loops and formatting</text>
     <g class="motion-layer" aria-hidden="true" fill="none" stroke="#67e8f9" stroke-linecap="round" stroke-linejoin="round" filter="url(#day1-glow)">
       <path d="M704 385H1116" stroke-width="2" stroke-dasharray="5 18" opacity="0">
         <animate attributeName="stroke-dashoffset" values="0;-138" dur="12s" repeatCount="indefinite"/>

@@ -1,0 +1,76 @@
+/* Brand color "tempo" added as a few helper classes, Bootstrap does the rest */
+:root {
+  --tempo: #6d28d9;
+  --tempo-dark: #5b21b6;
+}
+
+.text-tempo {
+  color: var(--tempo) !important;
+}
+
+.bg-tempo {
+  background-color: var(--tempo) !important;
+}
+
+.border-tempo {
+  border-color: var(--tempo) !important;
+}
+
+.btn-tempo {
+  --bs-btn-bg: var(--tempo);
+  --bs-btn-border-color: var(--tempo);
+  --bs-btn-color: #fff;
+  --bs-btn-hover-bg: var(--tempo-dark);
+  --bs-btn-hover-border-color: var(--tempo-dark);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-active-bg: var(--tempo-dark);
+}
+
+.btn-outline-tempo {
+  --bs-btn-color: var(--tempo);
+  --bs-btn-border-color: var(--tempo);
+  --bs-btn-hover-bg: var(--tempo);
+  --bs-btn-hover-border-color: var(--tempo);
+  --bs-btn-hover-color: #fff;
+}
+
+/* A phone mockup made from one rounded box */
+.phone {
+  width: min(300px, 100%);
+  padding: 2.5rem 1rem;
+  border: 10px solid #1f1f2e;
+  border-radius: 36px;
+  background: linear-gradient(180deg, #f5f3ff, #ede9fe);
+  box-shadow: 0 25px 50px rgba(109, 40, 217, 0.25);
+}
+
+.habit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 14px;
+  background: #fff;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.dots {
+  color: var(--tempo);
+  letter-spacing: 0.1em;
+}
+
+.feature-icon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  font-size: 1.8rem;
+  border-radius: 18px;
+  background: #ede9fe;
+}
+
+.faq {
+  max-width: 720px;
+}

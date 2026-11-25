@@ -8,11 +8,11 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+A meme generator in React.
 
 ## Contents
 
-- [`MemeGenerator/`](MemeGenerator/): Meme Generator: to do (optional)
+- [`MemeGenerator/`](MemeGenerator/): Meme Generator: a React meme maker using the Imgflip templates
 
 ---
 

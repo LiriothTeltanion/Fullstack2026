@@ -4,19 +4,36 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for E-commerce Product Filter">
+<img src="../../../../assets/readme/progress/ecommerce-product-filter-1ca4a441b2.svg" width="100%" alt="Progress card for E-commerce Product Filter">
 
 </div>
 
-Not done yet. This folder is ready for the code, and the README will grow once it works.
+A shop page with a filter sidebar. Twelve products can be narrowed down by text, category, maximum price and stock, then sorted, and every filter lives in a Redux slice.
 
-**Status:** to do · Optional extra · 20 XP
+## ▶️ How to run
 
-## 📝 Plan
+```bash
+npm install
+npm run dev
+```
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+## 🎯 The challenge
+
+| Piece | What it does |
+|---|---|
+| `data/products.js` | The catalog, plus `CATEGORIES` and `MAX_PRICE` worked out from it |
+| `productsSlice` | Holds the catalog (no reducers, the list doesn't change) |
+| `filtersSlice` | `searchChanged`, `categoryToggled` (several categories at once), `maxPriceChanged`, `inStockToggled`, `sortChanged`, `filtersCleared` |
+| `selectVisibleProducts` | Runs the four filters in a row, then sorts with the chosen comparer |
+| `FilterPanel` | Search box, category checkboxes, a price slider, the stock checkbox, the sort menu and Clear |
+| `ProductGrid` | "Showing X of Y" and one card per product, faded when out of stock |
+
+## 🧠 What I learned
+
+- An empty `categories` array meaning "every category" kept the toggle logic simple
+- Chaining small `.filter()` calls, one per rule, is easier to read and debug than one big condition
+- The range input gives a string, so `Number(event.target.value)` goes in before dispatching
+- Deriving `MAX_PRICE` from the data means the slider still fits if I add a more expensive product
 
 ---
 

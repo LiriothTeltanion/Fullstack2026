@@ -27,6 +27,7 @@ If the package is missing or there's no internet, it prints a warning and an ins
 
 - `translate_words(words, src="fr", dest="en")` imports `Translator` inside the function, sends the whole list in one request and returns `{original: translated}`
 - `main()` tries the live version first. On any error it switches to a hard-coded mapping of the four words and keeps the order of `french_words`
+- At the top, `sys.stdout.reconfigure(encoding="utf-8")` runs when it's available, so the `⚠️` warning doesn't crash a Windows console that uses cp1252
 
 ## 🧠 What I learned
 

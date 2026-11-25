@@ -27,11 +27,9 @@ That's a quick check with the `kevin` and `maya` accounts. The ATM is commented 
 
 ## 🎯 The challenge
 
-1. **BankAccount** - `authenticate(username, password)` sets `authenticated`. Before that, `deposit()` and `withdraw()` raise `PermissionError`, and the amount has to be a positive `int`
+1. **BankAccount** - `authenticate(username, password)` sets `authenticated`. Before that, `deposit()` and `withdraw()` raise `PermissionError`, and the amount has to be a positive `int`. Taking out more than the balance raises `ValueError`, so the balance never goes negative
 2. **MinimumBalanceAccount** - inherits from `BankAccount`, adds `minimum_balance` and overrides `withdraw()`. Taking 900 out of 1000 with a minimum of 200 raises `ValueError`, taking 700 works
 3. **ATM** - checks the account list and `try_limit` (a bad value falls back to 2), then loops through a main menu, a login with limited tries and an account menu
-
-The plain `BankAccount.withdraw()` has no balance check, so it can go negative.
 
 ## 🧠 What I learned
 

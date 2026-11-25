@@ -8,11 +8,11 @@
 
 </div>
 
-The daily challenges for this day. None of them are done yet.
+The second version of my task API, with filters and safer file writes.
 
 ## Contents
 
-- [`TaskAPI2/`](TaskAPI2/): Task API 2: to do (required)
+- [`TaskAPI2/`](TaskAPI2/): Task API 2: priorities, filters, sorting, paging, stats and queued writes
 
 ---
 

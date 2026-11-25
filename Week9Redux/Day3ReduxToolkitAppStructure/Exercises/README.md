@@ -8,13 +8,13 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+The exercises for this day.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/): Exercises XP: to do (required)
-- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: to do (optional)
-- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: to do (optional)
+- [`ExercisesXP/`](ExercisesXP/): Exercises XP: createSlice counter and todos in feature folders
+- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: book inventory with createSelector
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: normalized users and posts with an entity adapter
 
 ---
 

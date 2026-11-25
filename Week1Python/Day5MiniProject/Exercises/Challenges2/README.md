@@ -44,7 +44,7 @@ for i in range(1, h + 1):
     lines.append(spaces + stars)
 ```
 
-`pattern_c()` prints the five-star line twice, once at the end of the growing part and once at the start of the shrinking part. I left it like that.
+`pattern_c()` repeats the five-star row on purpose: it closes the growing part and opens the shrinking one.
 
 **Exercise 2: Code analysis.** The given code:
 

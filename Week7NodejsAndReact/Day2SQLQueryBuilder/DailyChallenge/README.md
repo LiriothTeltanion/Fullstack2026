@@ -8,11 +8,11 @@
 
 </div>
 
-The daily challenges for this day. None of them are done yet.
+A login system on Knex, with password hashes kept in their own table.
 
 ## Contents
 
-- [`RegistrationAndLogin/`](RegistrationAndLogin/): Registration and Login: to do (required)
+- [`RegistrationAndLogin/`](RegistrationAndLogin/): Registration and Login: register and log in with bcrypt hashes in a separate table
 
 ---
 

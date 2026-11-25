@@ -72,10 +72,12 @@ class BankAccount:
         print(f"Deposited {amount}. New balance: {self.balance}")
 
     def withdraw(self, amount: Number) -> None:
-        """Withdraw a positive int from the balance. Requires authentication."""
+        """Withdraw a positive int from the balance (never below 0). Requires authentication."""
         if not self.authenticated:
             raise PermissionError("Not authenticated. Call authenticate() first.")
         self._ensure_int(amount, name="amount", allow_zero=False)
+        if amount > self.balance:
+            raise ValueError(f"Withdrawal denied: not enough money (balance {self.balance}).")
         self.balance -= amount
         print(f"Withdrew {amount}. New balance: {self.balance}")
 

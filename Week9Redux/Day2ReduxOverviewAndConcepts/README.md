@@ -8,7 +8,7 @@
 
 </div>
 
-Redux Overview and Concepts. Nothing is done here yet; each folder below is ready for my code.
+Redux Overview and Concepts. These are the exercises and challenges for this day.
 
 ## Contents
 

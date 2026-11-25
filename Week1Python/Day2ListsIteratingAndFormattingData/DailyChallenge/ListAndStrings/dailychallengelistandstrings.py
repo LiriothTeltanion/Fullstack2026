@@ -83,10 +83,9 @@ def _cli() -> None:
     try:
         number = int(input("Enter a number: "))
         length = int(input("Enter length: "))
+        print(multiples(number, length))  # inside the try: a negative length raises ValueError too
     except ValueError:
-        print("Please enter valid integers for number and length.")
-    else:
-        print(multiples(number, length))
+        print("Please enter valid integers for number and length (length can't be negative).")
 
     word = input("Enter a word: ")
     print(collapse_duplicates(word))

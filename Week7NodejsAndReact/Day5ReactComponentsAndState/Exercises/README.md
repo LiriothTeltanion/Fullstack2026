@@ -8,14 +8,14 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+Four sets on useState, events, forms and useEffect.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/): Exercises XP: to do (required)
-- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: to do (optional)
-- [`ExercisesXPGold2/`](ExercisesXPGold2/): Exercises XP Gold 2: to do (optional)
-- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: to do (optional)
+- [`ExercisesXP/`](ExercisesXP/): Exercises XP: Car props, events, a phone state object and useEffect
+- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: limited counter, controlled form and a mount/unmount log
+- [`ExercisesXPGold2/`](ExercisesXPGold2/): Exercises XP Gold 2: calculator, shopping list and a lifted theme toggle
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: random quotes and colors that never repeat in a row
 
 ---
 

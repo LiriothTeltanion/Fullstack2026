@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Territory</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Territory</h1>
+      <p id="role"></p>
+      <p id="status" aria-live="polite"></p>
+      <div id="board" role="grid" aria-label="Game board"></div>
+      <div class="controls">
+        <button data-dir="up" aria-label="Move up">↑</button>
+        <button data-dir="left" aria-label="Move left">←</button>
+        <button data-dir="down" aria-label="Move down">↓</button>
+        <button data-dir="right" aria-label="Move right">→</button>
+      </div>
+      <p class="hint">Arrow keys work too. Claim more cells than your rival before the turns run out.</p>
+      <button id="restart" type="button">New game</button>
+    </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

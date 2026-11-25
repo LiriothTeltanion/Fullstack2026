@@ -8,11 +8,11 @@
 
 </div>
 
-Final Project Scope. Nothing is done here yet; each folder below is ready for my code.
+The scope of my final project, written as a plan I fill in before coding.
 
 ## Contents
 
-- [`ProjectScope/`](ProjectScope/): Final Project Scope: to do (required)
+- [`ProjectScope/`](ProjectScope/): Final Project Scope: fill-in scope plan for the PERN final project
 
 ---
 

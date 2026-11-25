@@ -8,11 +8,11 @@
 
 </div>
 
-The daily challenges for this day. None of them are done yet.
+The Day 2 challenge, a short puzzle about `NULL` inside `NOT IN`.
 
 ## Contents
 
-- [`SQLPuzzle/`](SQLPuzzle/): SQL Puzzle: to do (required)
+- [`SQLPuzzle/`](SQLPuzzle/): four `NOT IN` counts that `NULL` turns upside down
 
 ---
 

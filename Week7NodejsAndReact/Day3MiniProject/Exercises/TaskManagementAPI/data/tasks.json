@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Set up the Express server",
+    "description": "server.js, express.json() and the /tasks router",
+    "completed": true
+  },
+  {
+    "id": 2,
+    "title": "Save tasks in a JSON file",
+    "description": "Read and write data/tasks.json with fs/promises",
+    "completed": false
+  }
+]

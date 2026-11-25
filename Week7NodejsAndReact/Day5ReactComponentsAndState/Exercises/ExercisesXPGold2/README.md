@@ -4,19 +4,33 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for Exercises XP Gold 2">
+<img src="../../../../assets/readme/progress/exercises-xp-gold-2-b20c74ca42.svg" width="100%" alt="Progress card for Exercises XP Gold 2">
 
 </div>
 
-Still on my list. When I solve it, the solution and how to run it go in this folder.
+A second Gold set: a calculator, a shopping list and a light/dark switch where the state lives in the parent.
 
-**Status:** to do · Optional extra · 8 XP
+## ▶️ How to run
 
-## 📝 Plan
+```bash
+npm install
+npm run dev
+```
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+Open the address Vite prints (usually http://localhost:5173).
+
+## 🎯 The challenge
+
+1. **Calculator** (`Calculator.jsx`): two number inputs, an operation `<select>` (+, −, ×, ÷) and an `=` button. The operations live in an object of small functions, dividing by 0 shows "Cannot divide by 0", and an empty field asks to fill in both numbers.
+2. **Shopping list** (`ShoppingList.jsx`): add items, tick them as bought (they get crossed out), remove them with ✕, and read how many are left.
+3. **Theme toggle** (`ThemeToggle.jsx` + `App.jsx`): `App` owns the `theme` state and passes `theme` and `onToggle` down. The button only asks for the change, and the `<main>` class switches between `light` and `dark`.
+
+## 🧠 What I learned
+
+- Inputs give strings, so I keep strings in state and call `Number()` only when calculating
+- An object of operations (`operations[operator]` called with `a` and `b`) replaces a `switch` with four cases
+- `filter()` for removing and `map()` for toggling keep the list immutable
+- Lifting state up means the child stays simple and the parent decides what the theme does to the page
 
 ---
 

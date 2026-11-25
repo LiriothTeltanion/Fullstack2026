@@ -18,7 +18,7 @@ Child classes that reuse a parent, data that only changes through methods, and d
 | [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | A bank account with login, a minimum-balance child account and an ATM menu |
 | [`Exercises/ExercisesXPNinja/`](Exercises/ExercisesXPNinja/) | Conway's Game of Life, plus a subclass whose grid grows |
 | [`DailyChallenge/Pagination/`](DailyChallenge/Pagination/) | A `Pagination` class that cuts a list into pages |
-| [`DailyChallenge/DNA/`](DailyChallenge/DNA/) | DNA: to do (optional) |
+| [`DailyChallenge/DNA/`](DailyChallenge/DNA/) | genes, chromosomes and organisms that evolve to an all-1s DNA |
 
 ---
 

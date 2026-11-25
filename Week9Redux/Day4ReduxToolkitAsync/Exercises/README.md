@@ -8,13 +8,13 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+The exercises for this day.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/): Exercises XP: to do (required)
-- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: to do (optional)
-- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: to do (optional)
+- [`ExercisesXP/`](ExercisesXP/): Exercises XP: posts and users fetched with async thunks
+- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: cached, cancellable per-user requests
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: RTK Query todos with optimistic updates
 
 ---
 

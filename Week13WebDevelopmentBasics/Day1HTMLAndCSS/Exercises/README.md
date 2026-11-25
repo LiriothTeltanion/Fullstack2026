@@ -8,12 +8,12 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+Two HTML and CSS pages: my first hand-written page and a Flexbox landing page.
 
 ## Contents
 
-- [`FirstHTMLPage/`](FirstHTMLPage/): First HTML Page: to do (optional)
-- [`LandingPage/`](LandingPage/): Landing Page: to do (optional)
+- [`FirstHTMLPage/`](FirstHTMLPage/): First HTML Page: an about-me page with lists, a quote and a table
+- [`LandingPage/`](LandingPage/): Landing Page: a Flexbox landing page for a practice timer
 
 ---
 

@@ -4,19 +4,39 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for Meme Generator">
+<img src="../../../../assets/readme/progress/meme-generator-58dea808d6.svg" width="100%" alt="Progress card for Meme Generator">
 
 </div>
 
-Not done yet. This folder is ready for the code, and the README will grow once it works.
+A React meme maker. It loads about a hundred popular templates from the free Imgflip API, and I can type top and bottom text, change the size and color, and jump to a random template. The text updates on the image as I type.
 
-**Status:** to do · Optional extra · 50 XP
+## ▶️ How to run
 
-## 📝 Plan
+```bash
+npm install
+npm run dev
+```
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+Then open `http://localhost:5173`. `npm run build` makes a static `dist/` folder that can go on Netlify or Render.
+
+## 🎯 The challenge
+
+| Component | What it does |
+|---|---|
+| `App` | Fetches `https://api.imgflip.com/get_memes` once in `useEffect`, keeps the templates and the `meme` state (text, size, color, image) |
+| `Header` | Title bar |
+| `MemeForm` | Controlled inputs: two text fields, a range slider (20 to 72 px) and a color picker. One `handleChange` updates any field by its `name` |
+| `MemePreview` | The image with both texts placed on top with `position: absolute` |
+
+`pickRandomImage()` chooses a random template from the list. The meme text uses Impact in capitals with a four-way black `text-shadow`, the classic meme look.
+
+## 🧠 What I learned
+
+- One change handler can serve every input when each input's `name` matches a key in the state object
+- `setMeme((current) => ({ ...current, ... }))` keeps the other fields when one changes
+- The range input gives a string, so `fontSize` goes through `Number()` before it reaches the style
+- I wrapped the image and texts in their own `.meme-frame` so the caption under the image doesn't push the bottom text up
+- Downloading the finished meme would need a canvas, and the Imgflip images may block that, so this version only previews it
 
 ---
 

@@ -1,0 +1,10 @@
+[
+  { "code": "IL", "name": "Israel", "population": 9900000, "continent": "Asia" },
+  { "code": "AR", "name": "Argentina", "population": 46000000, "continent": "Americas" },
+  { "code": "JP", "name": "Japan", "population": 124000000, "continent": "Asia" },
+  { "code": "NO", "name": "Norway", "population": 5500000, "continent": "Europe" },
+  { "code": "KE", "name": "Kenya", "population": 55000000, "continent": "Africa" },
+  { "code": "NZ", "name": "New Zealand", "population": 5200000, "continent": "Oceania" },
+  { "code": "XX", "name": "Broken row", "population": "lots", "continent": "Asia" },
+  { "code": "ES", "name": "Spain", "population": 48000000, "continent": "Europe" }
+]

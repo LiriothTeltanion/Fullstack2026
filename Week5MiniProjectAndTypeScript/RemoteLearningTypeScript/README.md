@@ -8,7 +8,7 @@
 
 </div>
 
-TypeScript. Nothing is done here yet; each folder below is ready for my code.
+Extra TypeScript practice from the remote-learning material.
 
 ## Contents
 

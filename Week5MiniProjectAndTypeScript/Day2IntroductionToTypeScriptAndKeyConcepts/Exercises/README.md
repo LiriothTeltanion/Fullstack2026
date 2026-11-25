@@ -13,8 +13,8 @@ One exercise set for this day.
 ## Contents
 
 - [`ExercisesXP/`](ExercisesXP/): nine exercises, from Hello World up to function overloading
-- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: to do (optional)
-- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: to do (optional)
+- [`ExercisesXPGold/`](ExercisesXPGold/): parameters, unions, tuples, `readonly` and an exhaustive `switch`
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): generics, a discriminated union, overloads and a type guard for JSON
 
 ---
 

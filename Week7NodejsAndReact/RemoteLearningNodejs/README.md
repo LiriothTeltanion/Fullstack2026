@@ -8,7 +8,7 @@
 
 </div>
 
-Node.js. Nothing is done here yet; each folder below is ready for my code.
+Node.js. An Express and EJS app that reads and searches an RSS feed.
 
 ## Contents
 

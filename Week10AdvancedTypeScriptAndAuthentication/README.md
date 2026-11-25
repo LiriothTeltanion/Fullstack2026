@@ -8,7 +8,7 @@
 
 </div>
 
-TypeScript with React, authentication and a bigger TypeScript project. I haven't reached this week yet, so every folder is ready but empty.
+TypeScript with React, JWT authentication and a bigger TypeScript project. 11 exercises in total.
 
 ## Contents
 

@@ -1,0 +1,13 @@
+{
+  "name": "day4-node-xp-gold",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "system": "node system-info.js",
+    "paths": "node path-explorer.js",
+    "events": "node events-demo.js",
+    "store": "node json-store.js",
+    "calc": "node calculator.js 12 x 3.5"
+  }
+}

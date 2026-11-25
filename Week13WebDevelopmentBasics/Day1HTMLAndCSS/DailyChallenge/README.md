@@ -8,11 +8,11 @@
 
 </div>
 
-The daily challenges for this day. None of them are done yet.
+The Avengers fan page, built with Flexbox.
 
 ## Contents
 
-- [`Avengers/`](Avengers/): Avengers: to do (optional)
+- [`Avengers/`](Avengers/): Avengers: six hero cards laid out with Flexbox
 
 ---
 

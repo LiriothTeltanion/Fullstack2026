@@ -16,7 +16,7 @@ The last TypeScript day of the week: intersection types, type guards, assertions
 |---|---|
 | [`Exercises/`](Exercises/) | Exercises XP and Exercises XP Gold |
 | [`DailyChallenge/`](DailyChallenge/) | Type Guard with Union Types, sorting a mixed list |
-| [`Exercises/ExercisesXPNinja/`](Exercises/ExercisesXPNinja/) | Exercises XP Ninja: to do (optional) |
+| [`Exercises/ExercisesXPNinja/`](Exercises/ExercisesXPNinja/) | conditional types, class type guards, `ReturnType` and template literal types |
 
 ---
 

@@ -17,6 +17,10 @@ does not reinterpret early work as production-ready code.
 
 ### Added
 
+- Added solutions, READMEs and progress cards for every remaining course
+  exercise in Weeks 1-14, optional ones included (133 exercises), plus index
+  READMEs for every project subfolder. The showcase now lists 261 exercises
+  and 50 live demos.
 - Added Weeks 13 and 14 and a ready-to-fill folder for every course exercise I
   haven't done yet, optional Gold, Ninja and remote ones included (133
   folders, 35 new days). The showcase counts what is still to do.
@@ -89,6 +93,11 @@ does not reinterpret early work as production-ready code.
 
 ### Fixed
 
+- Fixed known bugs in Weeks 1-6: the Morse translator JSON, the two-pointer pair
+  search, list hiding in Week 3 Day 2, the moving box, literal 
+ in two pages,
+  input validation in several Python exercises, Windows console encoding, and
+  exercises that wrote files into tracked paths.
 - Corrected the Day 1 XP arithmetic explanation to `(99**3) * 8 = 7762392` and
   enforced the supplied strict roller-coaster boundary where 145 cm is not over
   145 cm.

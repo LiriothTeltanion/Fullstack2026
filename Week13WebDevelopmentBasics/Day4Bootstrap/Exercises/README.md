@@ -8,13 +8,13 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+Three Bootstrap 5 pages: a component tour and two recreated landing pages.
 
 ## Contents
 
-- [`Components/`](Components/): Components: to do (required)
-- [`RecreateLandingPage/`](RecreateLandingPage/): Recreate a Landing Page: to do (optional)
-- [`RecreateLandingPage2/`](RecreateLandingPage2/): Recreate a Landing Page 2: to do (optional)
+- [`Components/`](Components/): Components: a dark page with a dozen Bootstrap components
+- [`RecreateLandingPage/`](RecreateLandingPage/): Recreate a Landing Page: a habit tracker landing page rebuilt with Bootstrap
+- [`RecreateLandingPage2/`](RecreateLandingPage2/): Recreate a Landing Page 2: a dark synthwave festival page in the Bootstrap cover style
 
 ---
 

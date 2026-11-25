@@ -1,0 +1,196 @@
+:root {
+  font-family: "Segoe UI", system-ui, Arial, sans-serif;
+  line-height: 1.5;
+  color: #1f2933;
+  background-color: #f4f6fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid #3b5bdb;
+  border-radius: 6px;
+  padding: 0.4rem 0.9rem;
+  background: #3b5bdb;
+  color: #fff;
+}
+
+button:hover {
+  background: #364fc7;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+input,
+select,
+textarea {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #b8c1d1;
+  border-radius: 6px;
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #dde3ee;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.muted {
+  color: #6b7280;
+}
+
+.error {
+  color: #c92a2a;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+body.dark {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+body.dark .card {
+  background: #1e293b;
+  border-color: #334155;
+  color: inherit;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+  background: #3b5bdb;
+  color: #fff;
+}
+
+.header nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.header a {
+  color: #dbe4ff;
+  text-decoration: none;
+}
+
+.header a.active {
+  color: #fff;
+  font-weight: 700;
+}
+
+.toggles {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.toggles button {
+  background: #fff;
+  color: #3b5bdb;
+}
+
+.search {
+  position: relative;
+  max-width: 360px;
+  margin-bottom: 1rem;
+}
+
+.search input {
+  width: 100%;
+}
+
+.options {
+  list-style: none;
+  margin: 0.25rem 0 0;
+  padding: 0;
+}
+
+.options button {
+  width: 100%;
+  text-align: left;
+  background: #e7ebf5;
+  color: #1f2933;
+  border-radius: 0;
+}
+
+.current {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.big {
+  font-size: 2rem;
+  margin: 0.25rem 0;
+}
+
+.forecast,
+.favorites {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 0.75rem;
+}
+
+.day,
+.favorite {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 0;
+}
+
+.favorite {
+  color: inherit;
+  background: #fff;
+}
+
+.favorite:hover {
+  border-color: #3b5bdb;
+  background: #f1f3ff;
+}
+
+.icon {
+  font-size: 1.8rem;
+}

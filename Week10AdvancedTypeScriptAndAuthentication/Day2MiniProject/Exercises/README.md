@@ -8,12 +8,12 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+The exercises for this day.
 
 ## Contents
 
-- [`RecipeBookApp/`](RecipeBookApp/): Recipe Book App: to do (required)
-- [`PersonalBook/`](PersonalBook/): Personal Book: to do (optional)
+- [`RecipeBookApp/`](RecipeBookApp/): Recipe Book App: recipes with search and favorites, saved locally
+- [`PersonalBook/`](PersonalBook/): Personal Book: reading list built on a generic List<T>
 
 ---
 

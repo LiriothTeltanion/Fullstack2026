@@ -8,12 +8,12 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+File uploads to S3 and JWT login on the PERN stack, both on Express 5.
 
 ## Contents
 
-- [`S3UploadsWithExpress/`](S3UploadsWithExpress/): S3 Uploads with Express and Multer: to do (optional)
-- [`JWTWithPERN/`](JWTWithPERN/): JWT with the PERN Stack: to do (optional)
+- [`S3UploadsWithExpress/`](S3UploadsWithExpress/): S3 Uploads with Express and Multer: Express + Multer uploads to a private S3 bucket with signed links
+- [`JWTWithPERN/`](JWTWithPERN/): JWT with the PERN Stack: register and login with bcrypt, JWT in an httpOnly cookie and a React client
 
 ---
 

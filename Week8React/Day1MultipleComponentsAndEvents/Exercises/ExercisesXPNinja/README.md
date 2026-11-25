@@ -4,19 +4,33 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for Exercises XP Ninja">
+<img src="../../../../assets/readme/progress/week8-day1-exercises-xp-ninja-75eb3622ea.svg" width="100%" alt="Progress card for Exercises XP Ninja">
 
 </div>
 
-Still on my list. When I solve it, the solution and how to run it go in this folder.
+Three interactive widgets built only with `useState` and event handlers: tabs, a hover star rating and a box that follows the mouse.
 
-**Status:** to do · Optional extra · 4 XP
+## ▶️ How to run
 
-## 📝 Plan
+```bash
+npm install
+npm run dev
+```
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+Vite prints a local address (usually `http://localhost:5173`); I open it in the browser.
+
+## 🎯 The challenge
+
+1. **Tabs**: `Tabs` gets an array of `{ label, content }` and remembers the active index. The buttons use `role="tab"` and `aria-selected`.
+2. **Star rating**: `StarRating` keeps two numbers, the saved `rating` and the `hovered` star. While the mouse is over the stars the hovered value wins, and leaving the row resets it.
+3. **Mouse tracker**: `MouseTracker` reads `clientX` and `clientY`, subtracts the box position from `getBoundingClientRect()` and shows coordinates relative to the box.
+
+## 🧠 What I learned
+
+- `hovered || rating` was all I needed to preview a rating before clicking
+- `Array.from({ length: max })` builds the stars without writing five buttons by hand
+- `event.currentTarget` is the element with the handler, so its rectangle gives local coordinates
+- `onMouseEnter` and `onMouseLeave` are enough to show a hint when the pointer is outside
 
 ---
 

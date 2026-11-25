@@ -1,4 +1,6 @@
 class Farm:
+    SAME_PLURAL = {"sheep", "fish", "deer"}  # animals whose plural doesn't take an "s"
+
     def __init__(self, farm_name):
         self.name = farm_name
         self.animals = {}
@@ -19,7 +21,10 @@ class Farm:
 
     def get_short_info(self):
         types = self.get_animal_types()
-        words = [t + ("s" if self.animals[t] > 1 else "") for t in types]
+        words = [
+            t + ("s" if self.animals[t] > 1 and t not in self.SAME_PLURAL else "")
+            for t in types
+        ]
         if not words:
             return f"{self.name}'s farm has no animals."
         if len(words) == 1:

@@ -1,0 +1,41 @@
+{
+  "SocialMedias": [
+    "https://github.com",
+    "https://www.linkedin.com",
+    "https://www.youtube.com"
+  ],
+  "Skills": [
+    {
+      "Area": "Front End",
+      "SkillSet": [
+        { "Name": "HTML", "Hot": false },
+        { "Name": "CSS", "Hot": false },
+        { "Name": "React", "Hot": true }
+      ]
+    },
+    {
+      "Area": "Back End",
+      "SkillSet": [
+        { "Name": "Node.js", "Hot": true },
+        { "Name": "Express", "Hot": true },
+        { "Name": "PostgreSQL", "Hot": false }
+      ]
+    }
+  ],
+  "Experiences": [
+    {
+      "companyName": "Developers Institute",
+      "logo": "https://placehold.co/60x60?text=DI",
+      "url": "https://developers.institute",
+      "roles": [
+        {
+          "title": "Full-stack student",
+          "description": "Python, JavaScript, Node.js and React projects.",
+          "startDate": "2025",
+          "endDate": "2026",
+          "location": "Israel"
+        }
+      ]
+    }
+  ]
+}

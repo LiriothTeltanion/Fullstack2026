@@ -15,8 +15,8 @@ Three exercise sets. The XP one is about forms and JSON, the two Gold ones are a
 - [`ExercisesXP/`](ExercisesXP/): one page with a GET form, a POST form and a JSON demo
 - [`ExercisesXPGold/`](ExercisesXPGold/): reading `map` and `reduce` output, nested arrays and destructuring
 - [`ExercisesXPGold2/`](ExercisesXPGold2/): sum, duplicates, falsy values, a custom `repeat` and `padStart`
-- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: to do (optional)
-- [`ExercisesXPNinja2/`](ExercisesXPNinja2/): Exercises XP Ninja 2: to do (optional)
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): grouping, deep flatten, chained filter/map/reduce and zip
+- [`ExercisesXPNinja2/`](ExercisesXPNinja2/): `toSorted`, `findLast`, counting per genre and a matrix transpose
 
 ---
 

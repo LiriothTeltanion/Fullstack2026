@@ -4,19 +4,38 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for Exercises XP Ninja">
+<img src="../../../../assets/readme/progress/week8-day2-exercises-xp-ninja-baf3b194e5.svg" width="100%" alt="Progress card for Exercises XP Ninja">
 
 </div>
 
-Not done yet. This folder is ready for the code, and the README will grow once it works.
+I wrote a small `useFetch` hook and used it three times against JSONPlaceholder: one todo at a time, a searchable user list and paginated posts.
 
-**Status:** to do · Optional extra · 4 XP
+## ▶️ How to run
 
-## 📝 Plan
+```bash
+npm install
+npm run dev
+```
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+Vite prints a local address (usually `http://localhost:5173`); I open it in the browser.
+
+It needs an internet connection for `jsonplaceholder.typicode.com`.
+
+## 🎯 The challenge
+
+| Part | What it does |
+|---|---|
+| `useFetch(url)` | Returns `{ data, loading, error }`. It refetches when `url` changes and uses an `ignore` flag so a slow old answer cannot overwrite a newer one |
+| `TodoPreview` | Previous and Next buttons change the todo id, which changes the URL, which triggers a new request |
+| `UserSearch` | Fetches the users once and filters them by name on every keystroke, with a "3 of 10 users" counter |
+| `PagedPosts` | Shows 5 of the 100 posts per page, with `slice()` and disabled buttons on the first and last page |
+
+## 🧠 What I learned
+
+- A custom hook is just a function that starts with `use` and calls other hooks
+- Putting `url` in the dependency array is what makes the hook refetch
+- The cleanup function of an effect is the right place to cancel interest in a late response
+- Filtering and paging fetched data are plain array work, no extra requests
 
 ---
 

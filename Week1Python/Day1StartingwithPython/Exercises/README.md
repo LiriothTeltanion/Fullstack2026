@@ -13,7 +13,7 @@ Day 1 came in three levels, and I wrote a test file for each one.
 - [`ExercisesXP/`](ExercisesXP/): the nine main exercises, [10 tests](../../../tests/python/test_week1_day1_exercises_xp.py)
 - [`ExercisesXPGold/`](ExercisesXPGold/): two extras on repeated output and seasons, [6 tests](../../../tests/python/test_week1_day1_exercises_xp_gold.py)
 - [`ExercisesXPNinja/`](ExercisesXPNinja/): five harder ones, [7 tests](../../../tests/python/test_week1_day1_exercises_xp_ninja.py)
-- [`RemoteExercisePasswordChecker/`](RemoteExercisePasswordChecker/): Password Checker: to do (optional)
+- [`RemoteExercisePasswordChecker/`](RemoteExercisePasswordChecker/): asks until a password passes six rules, then rates it
 
 ---
 

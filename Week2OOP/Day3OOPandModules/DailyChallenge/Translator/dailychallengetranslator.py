@@ -12,7 +12,12 @@ Notes:
 
 from __future__ import annotations
 
+import sys
 from typing import Dict, Iterable, List
+
+# A Windows console can use cp1252, which can't print emojis. Switch stdout to UTF-8 when possible. 🛡️
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
 
 
 # Demo input (exact list from the prompt) 📋

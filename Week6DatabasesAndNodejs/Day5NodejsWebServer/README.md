@@ -8,12 +8,12 @@
 
 </div>
 
-Node.js Web Server. Nothing is done here yet; each folder below is ready for my code.
+Web servers with the built-in `http` module: routes, JSON, static files, request bodies, and a guessing game on top.
 
 ## Contents
 
-- [`Exercises/`](Exercises/)
-- [`DailyChallenge/`](DailyChallenge/)
+- [`Exercises/`](Exercises/): Exercises XP, Gold and Ninja, from a hello server to a static file server
+- [`DailyChallenge/`](DailyChallenge/): the Emoji Guessing Game
 
 ---
 

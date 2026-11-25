@@ -8,14 +8,14 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+Routing, fetching and lifecycle practice for the advanced React day.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/): Exercises XP: to do (required)
-- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: to do (optional)
-- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: to do (optional)
-- [`UsersAndPosts/`](UsersAndPosts/): Users and Posts: to do (optional)
+- [`ExercisesXP/`](ExercisesXP/): Exercises XP: React Router, JSON data and a POST with fetch
+- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: class lifecycle methods and the hooks version
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: a useFetch hook with search and pagination
+- [`UsersAndPosts/`](UsersAndPosts/): Users and Posts: users and their posts on routed pages
 
 ---
 

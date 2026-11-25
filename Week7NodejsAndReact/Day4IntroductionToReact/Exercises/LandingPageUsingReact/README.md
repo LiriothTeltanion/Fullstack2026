@@ -4,19 +4,40 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for Landing Page Using React">
+<img src="../../../../assets/readme/progress/landing-page-using-react-2d98e17ad5.svg" width="100%" alt="Progress card for Landing Page Using React">
 
 </div>
 
-I haven't started this one yet. The code and my notes will go here when I do it.
+A one-page landing site for "Neon Notes", a made-up study notes app. I built it from six small components so each section of the page is its own file.
 
-**Status:** to do · Optional extra · 4 XP
+## ▶️ How to run
 
-## 📝 Plan
+```bash
+npm install
+npm run dev
+```
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+Open the address Vite prints (usually http://localhost:5173).
+
+## 🎯 The challenge
+
+| Component | What it shows |
+|---|---|
+| `Navbar` | Sticky top bar with the brand and anchor links to the sections |
+| `Hero` | Big headline with a glowing word and a call to action |
+| `Features` | Three feature cards built from an array |
+| `Pricing` | Three plans; the `highlight` flag outlines the middle one |
+| `Contact` | Name, email and message form; on submit it reads the fields with `FormData` and shows a thank-you alert |
+| `Footer` | The year from `new Date().getFullYear()` |
+
+The colors are CSS variables in `index.css`, and smooth scrolling is switched off for people who ask for reduced motion.
+
+## 🧠 What I learned
+
+- Splitting a page into components feels like splitting a long HTML file into named parts
+- Keeping the cards and plans in arrays means a new plan is one more object, not more JSX
+- `FormData` reads a form without any state, which was enough before learning `useState`
+- Anchor links (`href="#pricing"`) still work in React because the sections are real ids on the page
 
 ---
 

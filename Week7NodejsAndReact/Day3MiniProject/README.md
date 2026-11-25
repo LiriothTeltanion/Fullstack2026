@@ -8,7 +8,7 @@
 
 </div>
 
-Mini-project Day. Nothing is done here yet; each folder below is ready for my code.
+Mini-project Day. Two task APIs on JSON files, a notes app, a real-time chat and a multiplayer grid game.
 
 ## Contents
 

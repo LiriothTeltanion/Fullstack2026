@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/readme/hero/root-banner.svg" width="100%" alt="Fullstack2026 fourteen-week course map: Weeks 1–6 hold my exercises and projects; Weeks 7–14 are ready for the next lessons.">
+<img src="./assets/readme/hero/root-banner.svg" width="100%" alt="Fullstack2026 fourteen-week course map: Weeks 1–6 hold my Python, JavaScript, TypeScript, SQL and Node.js work; Weeks 7–14 hold the React, Redux, TypeScript and web projects.">
 
 <br>
 
@@ -41,7 +41,7 @@
 
 This is the code I write during the Developers Institute full-stack bootcamp. It goes from Python fundamentals to TypeScript, SQL and Node.js, one week and one day at a time.
 
-Weeks 1–6 hold my exercises, XP extensions, daily challenges, timed challenges and mini-projects. Weeks 7–14 already have a folder for every exercise and fill up as the course reaches them. The optional Gold, Ninja and remote exercises have folders too; the ones I haven't done yet say so in their README.
+Weeks 1–6 hold my exercises, XP extensions, daily challenges, timed challenges and mini-projects. Weeks 7–14 cover Node.js, React, Redux, TypeScript, authentication, the final project, web basics and deployment. The optional Gold, Ninja and remote exercises are here too.
 
 Working through the course, I practice how to:
 
@@ -60,7 +60,7 @@ The [course map](.learning/course-map.yml) lists every week and day, and the [di
 
 <div align="center">
 
-<img src="./assets/readme/hero/twelve-week-journey.svg" width="100%" alt="Map of Weeks 1–12: Weeks 1–6 hold source code, Weeks 7–12 are ready for upcoming lessons.">
+<img src="./assets/readme/hero/course-journey.svg" width="100%" alt="Map of the fourteen course weeks with the topic and number of exercises for each week.">
 
 </div>
 
@@ -72,14 +72,14 @@ The [course map](.learning/course-map.yml) lists every week and day, and the [di
 | [⚡ Week 4](Week4AdvAsynchronousJavaScript/) | Advanced & Asynchronous JavaScript | Array methods, forms, promises, fetch |
 | [🔷 Week 5](Week5MiniProjectAndTypeScript/) | Mini-project & TypeScript | API projects and TypeScript exercises |
 | [🗄️ Week 6](Week6DatabasesAndNodejs/) | Databases & Node.js | PostgreSQL queries and Node.js modules |
-| [🔗 Week 7](Week7NodejsAndReact/) | Node.js & React | Folders ready |
-| [⚛️ Week 8](Week8React/) | React | Folders ready |
-| [🔁 Week 9](Week9Redux/) | Redux | Folders ready |
-| [🛡️ Week 10](Week10AdvancedTypeScriptAndAuthentication/) | Advanced TypeScript and Authentication | Folders ready |
-| [🛠️ Week 11](Week11FinalProject/) | Final Project | Folders ready |
-| [🚀 Week 12](Week12FinalProject/) | Final Project | Folders ready |
-| [🎨 Week 13](Week13WebDevelopmentBasics/) | Web Development Basics (self-learning) | Folders ready |
-| [🎓 Week 14](Week14MoreTopicsAndInterviews/) | More Topics and Interview Prep | Folders ready |
+| [🔗 Week 7](Week7NodejsAndReact/) | Node.js & React | Express APIs, Knex, first React apps |
+| [⚛️ Week 8](Week8React/) | React | React components, hooks and mini projects |
+| [🔁 Week 9](Week9Redux/) | Redux | Redux Toolkit apps |
+| [🛡️ Week 10](Week10AdvancedTypeScriptAndAuthentication/) | Advanced TypeScript and Authentication | TypeScript + React, JWT auth, projects |
+| [🛠️ Week 11](Week11FinalProject/) | Final Project | Final project scope |
+| [🚀 Week 12](Week12FinalProject/) | Final Project | Capstone starter and Demo Day |
+| [🎨 Week 13](Week13WebDevelopmentBasics/) | Web Development Basics (self-learning) | HTML, CSS, Bootstrap pages |
+| [🎓 Week 14](Week14MoreTopicsAndInterviews/) | More Topics and Interview Prep | S3 uploads, JWT, Render deploys, meme generator |
 
 <details>
 <summary><strong>🐍 Week 1 — Python foundations</strong></summary>
@@ -211,7 +211,7 @@ Every exercise is also on the [live showcase](https://kevincusnir.netlify.app), 
 | Type safety | TypeScript, interfaces, unions, classes, type guards |
 | Data | SQL, PostgreSQL, joins, constraints, aggregation |
 | Server-side JavaScript | Node.js, CommonJS, ES modules, npm |
-| Coming next | React, Redux, advanced TypeScript, authentication, final project, HTML/CSS basics, deployment |
+| Front end and beyond | React, Redux Toolkit, TypeScript with React, JWT authentication, HTML/CSS, Bootstrap, Render deployment |
 | Quality and tooling | unittest, Node test runner, ESLint, Prettier, GitHub Actions, Dependabot |
 
 ---
@@ -248,7 +248,7 @@ To log the next exercise in my own words, I use the small intake tool (`npm run 
 | `npm test` | Runs the Python and JavaScript test suites |
 | `npm run quality` | Whole-repository check: syntax, JSON, HTML, CSS, links, likely secrets |
 | `npm run verify:structure` | Folder structure, catalogs, README visuals and display titles |
-| `npm run lint` / `npm run lint:baseline` | ESLint, and a check that the known 65 findings do not grow |
+| `npm run lint` / `npm run lint:baseline` | ESLint, and a check that the known 64 findings do not grow |
 | `npm run typecheck:anchor` | Strict type check of the Union Type Validator project |
 | `npm run format` / `npm run format:check` | Prettier for JavaScript and TypeScript |
 | `npm run intake:check` | Validates the exercise intake queue |
@@ -307,14 +307,14 @@ Conventions: folder names stay ASCII PascalCase (icons live only in display titl
 <details>
 <summary><strong>🇻🇪 Resumen en español</strong></summary>
 
-`Fullstack2026` es mi repositorio del bootcamp full-stack de Developers Institute y la base de mi portafolio. Las semanas 1–6 tienen mis ejercicios y proyectos de Python, programación orientada a objetos, JavaScript, DOM, asincronía, TypeScript, SQL y Node.js. Las semanas 7–14 ya tienen una carpeta para cada ejercicio, opcionales incluidos, y se van llenando a medida que avanza el curso.
+`Fullstack2026` es mi repositorio del bootcamp full-stack de Developers Institute y la base de mi portafolio. Las semanas 1–6 tienen mis ejercicios y proyectos de Python, programación orientada a objetos, JavaScript, DOM, asincronía, TypeScript, SQL y Node.js. Las semanas 7–14 cubren Node.js, React, Redux, TypeScript, autenticación, el proyecto final, HTML/CSS y despliegue, con los ejercicios opcionales incluidos.
 
 </details>
 
 <details>
 <summary><strong>🇮🇱 סיכום בעברית</strong></summary>
 
-`Fullstack2026` הוא המאגר שלי מהבוטקמפ Full-Stack של Developers Institute והבסיס לתיק העבודות שלי. שבועות 1–6 כוללים את התרגילים והפרויקטים שלי ב-Python, תכנות מונחה עצמים, JavaScript, DOM, TypeScript, SQL ו-Node.js. לשבועות 7–14 כבר יש תיקייה לכל תרגיל, וגם לתרגילי הרשות, והן יתמלאו ככל שהקורס מתקדם.
+`Fullstack2026` הוא המאגר שלי מהבוטקמפ Full-Stack של Developers Institute והבסיס לתיק העבודות שלי. שבועות 1–6 כוללים את התרגילים והפרויקטים שלי ב-Python, תכנות מונחה עצמים, JavaScript, DOM, TypeScript, SQL ו-Node.js. שבועות 7–14 כוללים Node.js, ‏React, ‏Redux, ‏TypeScript, אימות משתמשים, פרויקט הגמר, HTML/CSS ופריסה, כולל תרגילי הרשות.
 
 </details>
 

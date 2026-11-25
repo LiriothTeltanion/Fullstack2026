@@ -16,8 +16,8 @@ Classes in TypeScript: access modifiers, `readonly`, inheritance, static methods
 |---|---|
 | [`Exercises/`](Exercises/) | Exercises XP: five small object-oriented exercises |
 | [`DailyChallenge/`](DailyChallenge/) | Library System with a `Book` interface and two classes |
-| [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | Exercises XP Gold: to do (optional) |
-| [`Exercises/ExercisesXPNinja/`](Exercises/ExercisesXPNinja/) | Exercises XP Ninja: to do (optional) |
+| [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | an abstract `Employee`, `Comparable` versions and a generic `Stack` |
+| [`Exercises/ExercisesXPNinja/`](Exercises/ExercisesXPNinja/) | a generic repository, `keyof`, mapped types and a typed event emitter |
 
 ---
 

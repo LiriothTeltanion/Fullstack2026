@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: system-ui, sans-serif;
+  background: #0b1029;
+  color: #f8fafc;
+  text-align: center;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(6, 48px);
+  gap: 4px;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.cell {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: #1e293b;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+}
+
+.cell.a {
+  background: #0e7490;
+}
+
+.cell.b {
+  background: #9d174d;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(4, 56px);
+  gap: 6px;
+  justify-content: center;
+}
+
+button {
+  padding: 0.5rem 0.75rem;
+  border: 0;
+  border-radius: 8px;
+  background: #06b6d4;
+  color: #0b1029;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#restart {
+  margin-top: 0.5rem;
+}
+
+.hint {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}

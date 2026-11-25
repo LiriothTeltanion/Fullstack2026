@@ -8,11 +8,11 @@
 
 </div>
 
-The daily challenges for this day. None of them are done yet.
+The Day 5 challenge: a small game served by my own Node.js server.
 
 ## Contents
 
-- [`EmojiGuessingGame/`](EmojiGuessingGame/): Emoji Guessing Game: to do (required)
+- [`EmojiGuessingGame/`](EmojiGuessingGame/): an `http` server with rounds, scoring, a leaderboard and a browser page
 
 ---
 

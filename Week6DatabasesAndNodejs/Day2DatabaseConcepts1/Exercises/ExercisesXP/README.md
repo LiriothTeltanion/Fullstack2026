@@ -27,7 +27,7 @@ psql doesn't stop at an error, so in each run the other part's queries just fail
 
 1. All items, cheapest first.
 2. Items with `price >= 80`, most expensive first.
-3. The first three customers by first name, without the id. My query also selects `email`, but the Day 1 `customers` table has no such column, so on that table `email` has to come out of the `SELECT` before it runs.
+3. The first three customers by first name, without the id: only `first_name` and `last_name`, the two other columns of the Day 1 `customers` table (Greg Jones, Melanie Johnson, Sandra Jones).
 4. Only the last names, Z to A.
 
 **Part B: `dvdrental`**

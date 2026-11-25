@@ -24,7 +24,7 @@ then open `http://localhost:8000/Week4AdvAsynchronousJavaScript/Day3HTTPAndFormM
 
 1. **GET form**: `name` and `message` land in the URL after `?`. On load, `readGetParams()` copies them from `URLSearchParams` into an object and prints it as JSON.
 2. **POST form**: no JavaScript on purpose. The data is in DevTools → Network → Payload, not in the URL.
-3. **JSON Mario**: `makeMarioJSON()` shows `marioGame` as pretty JSON. **Make JSON (with debugger)** passes `true`, so it stops on `debugger;` first. The compact `jsonText` it builds is never used.
+3. **JSON Mario**: `makeMarioJSON()` shows `marioGame` as pretty JSON on the page and logs the compact one-line `jsonText` to the console. **Make JSON (with debugger)** passes `true`, so it stops on `debugger;` first.
 
 ## 🧠 What I learned
 

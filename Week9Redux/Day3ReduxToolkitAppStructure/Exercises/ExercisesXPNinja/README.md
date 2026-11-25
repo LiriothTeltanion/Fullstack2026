@@ -4,19 +4,32 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for Exercises XP Ninja">
+<img src="../../../../assets/readme/progress/exercises-xp-ninja-7e4172b922.svg" width="100%" alt="Progress card for Exercises XP Ninja">
 
 </div>
 
-Not done yet. This folder is ready for the code, and the README will grow once it works.
+Users and their posts stored the normalized way, with `createEntityAdapter`. Posts only keep a `userId`, and the author's name is looked up by id when a post is shown.
 
-**Status:** to do · Optional extra · 3 XP
+## ▶️ How to run
 
-## 📝 Plan
+```bash
+npm install
+npm run dev
+```
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+## 🎯 The challenge
+
+1. **Users adapter.** `usersSlice` starts from `setAll` with three users and exposes `selectAllUsers` and `selectUserById`.
+2. **Posts adapter.** `postsSlice` sorts newest first (`sortComparer`) and uses `addOne`, `updateOne` and `removeOne` for `postAdded`, `postUpdated` and `postRemoved`.
+3. **Selector with an argument.** `selectPostsByUser(state, userId)` is a `createSelector` that filters by author, or returns every post for `"all"`.
+4. **Reacting to another slice.** `extraReducers` in the posts slice listens for `userRemoved`, so deleting a user also deletes all of their posts.
+
+## 🧠 What I learned
+
+- Normalized state is `ids` plus an `entities` lookup object, which makes "find by id" instant instead of a loop
+- Adapter methods like `postsAdapter.removeOne` can be used directly as case reducers
+- `extraReducers` is how one slice answers an action created by a different slice
+- The second argument of a selector arrives through `(state, userId) => userId` as an extra input selector
 
 ---
 

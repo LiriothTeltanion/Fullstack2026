@@ -8,13 +8,13 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+Three sets of web servers built with Node's `http` module, without Express.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/): Exercises XP: to do (required)
-- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: to do (optional)
-- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: to do (optional)
+- [`ExercisesXP/`](ExercisesXP/): five servers: text, HTML, JSON routes, a file from disk and my own module
+- [`ExercisesXPGold/`](ExercisesXPGold/): query strings, JSON bodies and an in-memory todo API
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): a static file server with path checks, request logs and a rate limit
 
 ---
 

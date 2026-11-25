@@ -1,0 +1,16 @@
+{
+  "name": "multiplayer-strategy",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "demo": "node game/demo.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "express-rate-limit": "^8.7.5",
+    "socket.io": "^4.8.1"
+  }
+}

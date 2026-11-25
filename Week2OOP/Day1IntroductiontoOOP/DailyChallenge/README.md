@@ -27,7 +27,7 @@ goat  : 12
 
     E-I-E-I-0!
 
-McDonald's farm has cows, goats and sheeps.
+McDonald's farm has cows, goats and sheep.
 ```
 
 ## 🎯 The challenge
@@ -37,7 +37,7 @@ McDonald's farm has cows, goats and sheeps.
 | `add_animal(animal_type, count=1)` | Adds to the count in a dictionary, so two calls with `'sheep'` give 2 sheep |
 | `get_info()` | Pads every name to the length of the longest one, so the colons line up |
 | `get_animal_types()` | Returns the animal types sorted A to Z |
-| `get_short_info()` | Builds the summary sentence, with an `s` for counts above 1 and "and" before the last type |
+| `get_short_info()` | Builds the summary sentence, with an `s` for counts above 1 (except words like `sheep` in `SAME_PLURAL`) and "and" before the last type |
 
 ```python
 macdonald = Farm("McDonald")
@@ -48,13 +48,12 @@ macdonald.add_animal('goat', 12)
 print(macdonald.get_info())
 ```
 
-The plural rule only adds an `s`, which is why the summary says "sheeps". A word list of irregular plurals would fix that.
-
 ## 🧠 What I learned
 
 - `self.animals.get(animal_type, 0) + count` adds to a count even when the key doesn't exist yet
 - A nested format spec, `{a:<{w}}`, pads text to a width I calculate at runtime
 - A readable "a, b and c" list needs three cases: one item, two items, and more than two
+- Adding an `s` isn't always the plural: a small set like `SAME_PLURAL` keeps "sheep" as "sheep"
 
 ---
 

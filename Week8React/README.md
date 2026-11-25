@@ -8,7 +8,7 @@
 
 </div>
 
-React components, events, hooks and a mini-project day. I haven't reached this week yet, so every folder is ready but empty.
+React components, events, data fetching, hooks and a mini-project day. 19 exercises in total.
 
 ## Contents
 

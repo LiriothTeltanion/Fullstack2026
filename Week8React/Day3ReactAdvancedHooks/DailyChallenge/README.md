@@ -8,11 +8,11 @@
 
 </div>
 
-The daily challenges for this day. None of them are done yet.
+A task manager driven by useReducer and context.
 
 ## Contents
 
-- [`EnhancedTaskManager/`](EnhancedTaskManager/): Enhanced Task Manager: to do (required)
+- [`EnhancedTaskManager/`](EnhancedTaskManager/): Enhanced Task Manager: reducer task manager with edit, filters and saved tasks
 
 ---
 

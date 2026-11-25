@@ -1,0 +1,46 @@
+### For the VS Code "REST Client" extension. Paste the accessToken from login into @token.
+@base = http://localhost:5000/api
+@token = paste-the-access-token-here
+@csrf = {{csrfToken.response.body.csrfToken}}
+
+### Run this first: the CSRF token for this session (every POST and PATCH sends it back)
+# @name csrfToken
+GET {{base}}/csrf-token
+
+### Register (the first account becomes admin)
+POST {{base}}/auth/register
+Content-Type: application/json
+x-csrf-token: {{csrf}}
+
+{ "username": "kevin", "password": "longPassword1" }
+
+### Login: returns an access token, sets the refresh cookie
+POST {{base}}/auth/login
+Content-Type: application/json
+x-csrf-token: {{csrf}}
+
+{ "username": "kevin", "password": "longPassword1" }
+
+### New token pair from the refresh cookie
+POST {{base}}/auth/refresh
+x-csrf-token: {{csrf}}
+
+### Any logged-in user
+GET {{base}}/dashboard
+Authorization: Bearer {{token}}
+
+### Admin only
+GET {{base}}/admin/users
+Authorization: Bearer {{token}}
+
+### Admin only: change a role
+PATCH {{base}}/admin/users/2/role
+Authorization: Bearer {{token}}
+Content-Type: application/json
+x-csrf-token: {{csrf}}
+
+{ "role": "admin" }
+
+### Logout (revokes the refresh token)
+POST {{base}}/auth/logout
+x-csrf-token: {{csrf}}

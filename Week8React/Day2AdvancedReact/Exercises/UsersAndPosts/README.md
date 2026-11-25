@@ -4,19 +4,36 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for Users and Posts">
+<img src="../../../../assets/readme/progress/users-and-posts-ebd02a6d9b.svg" width="100%" alt="Progress card for Users and Posts">
 
 </div>
 
-Still on my list. When I solve it, the solution and how to run it go in this folder.
+A two-page React Router app on top of JSONPlaceholder: the home page lists the users as cards, and clicking one opens `/users/:userId` with that person's details and posts.
 
-**Status:** to do · Optional extra · 8 XP
+## ▶️ How to run
 
-## 📝 Plan
+```bash
+npm install
+npm run dev
+```
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+Vite prints a local address (usually `http://localhost:5173`); I open it in the browser.
+
+## 🎯 The challenge
+
+| File | What it does |
+|---|---|
+| `src/api.js` | `getUsers`, `getUser(id)` and `getPostsByUser(id)` share one `getJson` helper that throws on a bad status |
+| `UserList` | Loads the users in `useEffect` and shows loading, error or a grid of linked cards |
+| `UserPosts` | Reads `userId` with `useParams`, loads the user and the posts together with `Promise.all`, and lists every post |
+| `App` | Routes `/`, `/users/:userId` and a `*` "Page not found." fallback |
+
+## 🧠 What I learned
+
+- `useParams` turns part of the URL into a variable my component can use
+- `Promise.all` starts both requests at the same time instead of one after the other
+- Keeping the fetch calls in `api.js` made the components shorter and the URLs easy to change
+- Adding `userId` to the dependency array reloads the page data when I go to another user
 
 ---
 

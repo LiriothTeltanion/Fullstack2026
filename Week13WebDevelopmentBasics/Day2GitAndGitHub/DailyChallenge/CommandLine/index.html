@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="My command line and Git cheat sheet." />
+    <title>Command Line Cheat Sheet</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="top">
+      <p class="prompt" aria-hidden="true">kevin@laptop:~$ <span class="cursor"></span></p>
+      <h1>Command Line Cheat Sheet</h1>
+      <p>The commands I practiced in <code>commands.sh</code>, grouped by what they do.</p>
+    </header>
+
+    <main>
+      <section aria-labelledby="nav-title">
+        <h2 id="nav-title">Moving around</h2>
+        <dl>
+          <dt><code>pwd</code></dt>
+          <dd>Print the folder I'm in.</dd>
+          <dt><code>ls -la</code></dt>
+          <dd>List files, hidden ones too, with details.</dd>
+          <dt><code>cd folder</code> / <code>cd ..</code></dt>
+          <dd>Go into a folder, or one level up.</dd>
+        </dl>
+      </section>
+
+      <section aria-labelledby="files-title">
+        <h2 id="files-title">Files and folders</h2>
+        <dl>
+          <dt><code>mkdir -p a/b/c</code></dt>
+          <dd>Make folders, parents included.</dd>
+          <dt><code>touch file.txt</code></dt>
+          <dd>Create an empty file.</dd>
+          <dt><code>cp a.txt b.txt</code></dt>
+          <dd>Copy a file.</dd>
+          <dt><code>mv old.txt new.txt</code></dt>
+          <dd>Move or rename.</dd>
+          <dt><code>rm file.txt</code> / <code>rmdir folder</code></dt>
+          <dd>Delete a file, or an empty folder. There is no recycle bin.</dd>
+        </dl>
+      </section>
+
+      <section aria-labelledby="text-title">
+        <h2 id="text-title">Reading and writing text</h2>
+        <dl>
+          <dt><code>echo "hi" &gt; file</code></dt>
+          <dd>Write to a file, replacing what was there.</dd>
+          <dt><code>echo "hi" &gt;&gt; file</code></dt>
+          <dd>Add a line at the end.</dd>
+          <dt><code>cat file</code></dt>
+          <dd>Print the whole file.</dd>
+          <dt><code>wc -l &lt; file</code></dt>
+          <dd>Count the lines.</dd>
+          <dt><code>find . -name "*.js"</code></dt>
+          <dd>Search for files by name.</dd>
+        </dl>
+      </section>
+
+      <section aria-labelledby="git-title">
+        <h2 id="git-title">Git basics</h2>
+        <dl>
+          <dt><code>git init</code></dt>
+          <dd>Start a repository in this folder.</dd>
+          <dt><code>git status</code></dt>
+          <dd>See what changed and what is staged.</dd>
+          <dt><code>git add .</code></dt>
+          <dd>Stage every change.</dd>
+          <dt><code>git commit -m "message"</code></dt>
+          <dd>Save a snapshot with a message.</dd>
+          <dt><code>git log --oneline</code></dt>
+          <dd>Short history, one commit per line.</dd>
+          <dt><code>git push origin main</code></dt>
+          <dd>Send my commits to GitHub.</dd>
+        </dl>
+      </section>
+    </main>
+
+    <footer class="bottom">
+      <p>Week 13 · Day 2 · Git and GitHub</p>
+    </footer>
+  </body>
+</html>

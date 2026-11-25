@@ -8,11 +8,11 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+The remote-learning exercise for Week 1, written in plain Python.
 
 ## Contents
 
-- [`Fibonacci/`](Fibonacci/): Fibonacci: to do (optional)
+- [`Fibonacci/`](Fibonacci/): the sequence with a loop, memo recursion and a membership check
 
 ---
 

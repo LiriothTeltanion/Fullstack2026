@@ -4,19 +4,32 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for Exercises XP Ninja">
+<img src="../../../../assets/readme/progress/exercises-xp-ninja-cf3fee40c2.svg" width="100%" alt="Progress card for Exercises XP Ninja">
 
 </div>
 
-I haven't started this one yet. The code and my notes will go here when I do it.
+A three-column Kanban board (To do, Doing, Done). Cards move between columns with arrow buttons, and a custom middleware saves the board to `localStorage` after every board action.
 
-**Status:** to do · Optional extra · 4 XP
+## ▶️ How to run
 
-## 📝 Plan
+```bash
+npm install
+npm run dev
+```
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+## 🎯 The challenge
+
+1. **Board shape.** `cards` is a lookup by id and `columns` keeps only ordered id lists, so a card is stored once.
+2. **Reducers.** `cardAdded` (to "To do"), `cardRenamed`, `cardDeleted` (removes the id from every column), `cardMoved` with `direction: -1 | 1`, and `boardReset`.
+3. **Persistence middleware.** `persistBoard` runs `next(action)` first, then saves the board when the action type starts with `board/`. `loadBoard` fills `preloadedState`.
+4. **Fewer re-renders.** `Column` passes `shallowEqual` from `react-redux` to `useSelector`, because `selectColumnCards` builds a new array every time.
+
+## 🧠 What I learned
+
+- With ids in the columns, moving a card is just "remove the id here, push it there", and the card object never moves
+- Running `next(action)` before saving means the middleware stores the new board, not the old one
+- `useSelector` accepts an equality function as its second argument, which fixed columns re-rendering when another column changed
+- `cardMoved` ignores moves past the first or last column, so the reducer stays safe even without the disabled buttons
 
 ---
 

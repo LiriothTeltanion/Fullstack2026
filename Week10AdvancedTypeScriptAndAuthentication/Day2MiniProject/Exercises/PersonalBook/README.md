@@ -4,19 +4,34 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for Personal Book">
+<img src="../../../../assets/readme/progress/personal-book-b27d96629a.svg" width="100%" alt="Progress card for Personal Book">
 
 </div>
 
-I haven't started this one yet. The code and my notes will go here when I do it.
+My reading list, built around one generic component. `List<T>` renders any array through a `renderItem` function, and the app uses it twice: once for `Book` objects and once for plain author names.
 
-**Status:** to do · Optional extra · 50 XP
+## ▶️ How to run
 
-## 📝 Plan
+```bash
+npm install
+npm run dev
+```
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+## 🎯 The challenge
+
+| Piece | What it does |
+|---|---|
+| `List<T>` | Props `items: T[]`, `renderItem(item: T)`, `getKey(item: T)` and an optional `emptyText` |
+| `Book` / `ReadingStatus` | The book interface and the union `"to read" \| "reading" \| "finished"` |
+| `BookForm` | Adds a book through `onAdd(book: Omit<Book, "id" \| "status">)`; genre defaults to "Other" |
+| `App` | Status button that cycles with `NEXT_STATUS`, Remove, and the sorted author list |
+
+## 🧠 What I learned
+
+- A generic component is a normal function component with `<T>` after its name, and TypeScript infers `T` from the props
+- Inside `renderItem`, `book` is already typed as `Book`, so autocomplete works without any annotation
+- Using the same `List` for strings and for objects showed me why `getKey` is a prop and not hard-coded `item.id`
+- A `Record<ReadingStatus, ReadingStatus>` map is a tidy way to write "what comes next"
 
 ---
 

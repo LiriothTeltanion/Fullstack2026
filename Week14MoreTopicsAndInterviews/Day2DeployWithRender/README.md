@@ -8,7 +8,7 @@
 
 </div>
 
-Deploying with Render. Nothing is done here yet; each folder below is ready for my code.
+Deploying with Render. These are the exercises and challenges for this day.
 
 ## Contents
 

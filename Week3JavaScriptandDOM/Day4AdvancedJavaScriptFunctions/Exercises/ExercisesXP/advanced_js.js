@@ -70,7 +70,7 @@ function scopeSummary() {
     "#3 -> 'hello' after funcFour sets window.a3",
     "#4 -> 'test' due to shadowing (const same here)",
     "#5 -> in-block 5, outside 2 (const same scoping)",
-  ].join("\\n");
+  ].join("\n");
 }
 
 // -----------------------------
@@ -161,7 +161,7 @@ function makeJuice(size) {
 // -----------------------------
 document.getElementById("btnScope").addEventListener("click", () => {
   document.getElementById("scopeOut").textContent = scopeSummary();
-  console.log("Scope predictions:\\n" + scopeSummary());
+  console.log("Scope predictions:\n" + scopeSummary());
 });
 
 document.getElementById("btnRunSmall").addEventListener("click", () => {
@@ -175,7 +175,7 @@ document.getElementById("btnRunSmall").addEventListener("click", () => {
   lines.push(`toGramsExpr(2) -> ${toGramsExpr(2)}`);
   lines.push(`toGramsArrow(2) -> ${toGramsArrow(2)}`);
   document.getElementById("smallOut").textContent = lines.join(" | ");
-  console.log(lines.join("\\n"));
+  console.log(lines.join("\n"));
 });
 
 document.getElementById("btnJuice").addEventListener("click", () => {

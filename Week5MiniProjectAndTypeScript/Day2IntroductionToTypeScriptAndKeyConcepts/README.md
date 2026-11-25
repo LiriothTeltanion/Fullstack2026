@@ -16,8 +16,8 @@ My first TypeScript day: annotations, unions, tuples, object types and function 
 |---|---|
 | [`Exercises/`](Exercises/) | Exercises XP: nine small TypeScript exercises in one file |
 | [`DailyChallenge/`](DailyChallenge/) | Union Type Validator, a `typeof` check against a list of types |
-| [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | Exercises XP Gold: to do (optional) |
-| [`Exercises/ExercisesXPNinja/`](Exercises/ExercisesXPNinja/) | Exercises XP Ninja: to do (optional) |
+| [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | parameters, unions, tuples, `readonly` and an exhaustive `switch` |
+| [`Exercises/ExercisesXPNinja/`](Exercises/ExercisesXPNinja/) | generics, a discriminated union, overloads and a type guard for JSON |
 
 ---
 

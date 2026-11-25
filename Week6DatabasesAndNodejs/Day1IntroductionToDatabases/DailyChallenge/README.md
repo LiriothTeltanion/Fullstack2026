@@ -8,11 +8,11 @@
 
 </div>
 
-The daily challenges for this day. None of them are done yet.
+The Day 1 challenge: one table of actors and what its constraints refuse.
 
 ## Contents
 
-- [`Actors/`](Actors/): Actors: to do (required)
+- [`Actors/`](Actors/): an `actors` table, a count, and what `NOT NULL` and `CHECK` refuse
 
 ---
 

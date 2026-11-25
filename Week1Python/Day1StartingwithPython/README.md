@@ -16,7 +16,7 @@ My first day of Python: variables and types, arithmetic, comparisons, `input()` 
 | [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | Repeating lines with string multiplication and turning a month into a season. |
 | [`Exercises/ExercisesXPNinja/`](Exercises/ExercisesXPNinja/) | How `PATH` and `py` work, boolean puzzles, a character count and the "no letter A" sentence game. |
 | [`DailyChallenge/BuildUpAString/`](DailyChallenge/BuildUpAString/) | Check that a string is 10 characters long, print it growing, then shuffle it. |
-| [`Exercises/RemoteExercisePasswordChecker/`](Exercises/RemoteExercisePasswordChecker/) | Password Checker: to do (optional) |
+| [`Exercises/RemoteExercisePasswordChecker/`](Exercises/RemoteExercisePasswordChecker/) | asks until a password passes six rules, then rates it |
 
 ---
 

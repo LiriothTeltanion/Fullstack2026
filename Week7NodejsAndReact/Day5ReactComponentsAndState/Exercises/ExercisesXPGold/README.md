@@ -4,19 +4,33 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for Exercises XP Gold">
+<img src="../../../../assets/readme/progress/exercises-xp-gold-9f2a65a52f.svg" width="100%" alt="Progress card for Exercises XP Gold">
 
 </div>
 
-I haven't started this one yet. The code and my notes will go here when I do it.
+A counter with limits, a fully controlled form and a component that logs when it appears and disappears. Each one practises a different side of state.
 
-**Status:** to do · Optional extra · 8 XP
+## ▶️ How to run
 
-## 📝 Plan
+```bash
+npm install
+npm run dev
+```
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+Open the address Vite prints (usually http://localhost:5173).
+
+## 🎯 The challenge
+
+1. **Counter** (`Counter.jsx`): `min` and `max` arrive as props (0 and 10). The minus and plus buttons are disabled at the limits, and a note appears when the count reaches the maximum.
+2. **Controlled form** (`SignupForm.jsx`): name, email, a language `<select>` and a newsletter checkbox, all in one `form` state object. A live preview line updates on every keystroke, and submitting shows a thank-you line and clears the form.
+3. **Mount and unmount** (`ShowHide.jsx`): a button adds or removes the `Child` component. The child's `useEffect` writes "Child mounted", and its cleanup writes "Child unmounted" into a numbered log.
+
+## 🧠 What I learned
+
+- Disabling a button at the limit is simpler than checking the limit inside the click handler
+- One `handleChange` can serve every input thanks to `[name]` and `type === "checkbox" ? checked : value`
+- The function returned from `useEffect` runs when the component leaves the page
+- `useCallback` keeps `addLog` the same between renders, so the child's effect does not fire again every time the log grows
 
 ---
 

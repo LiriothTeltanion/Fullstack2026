@@ -8,11 +8,11 @@
 
 </div>
 
-Capstone Submission. Nothing is done here yet; each folder below is ready for my code.
+The starter code for my capstone: an Express API and a React client.
 
 ## Contents
 
-- [`CapstoneProject/`](CapstoneProject/): Capstone Project: to do (required)
+- [`CapstoneProject/`](CapstoneProject/): Capstone Project: PERN starter with an Express API and a React client
 
 ---
 

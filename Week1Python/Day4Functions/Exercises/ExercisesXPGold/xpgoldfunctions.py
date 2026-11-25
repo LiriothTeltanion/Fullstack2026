@@ -82,13 +82,24 @@ def main():
 
 if __name__ == "__main__":
     # Small interactive demo
+    # Each question repeats until the answer is valid, instead of crashing 🔁
     print("=== Exercise 1 ===")
-    g = input("Gender (m/f): ")
-    dob = input("DOB (yyyy/mm/dd): ")
-    print("You can retire." if can_retire(g, dob) else "You cannot retire yet.")
+    while True:
+        g = input("Gender (m/f): ")
+        dob = input("DOB (yyyy/mm/dd): ")
+        try:
+            print("You can retire." if can_retire(g, dob) else "You cannot retire yet.")
+            break
+        except ValueError:
+            print("Please type m or f, and the date as yyyy/mm/dd.")
 
     print("\n=== Exercise 2 ===")
-    x = int(input("Enter a digit X: "))
+    while True:
+        try:
+            x = int(input("Enter a digit X: "))
+            break
+        except ValueError:
+            print("Please enter a number.")
     print("Result:", series_sum(x))
 
     print("\n=== Exercise 3 ===")

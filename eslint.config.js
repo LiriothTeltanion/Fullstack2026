@@ -13,6 +13,10 @@ const browserExerciseFiles = [
   "Week3JavaScriptandDOM/**/*.js",
   "Week4AdvAsynchronousJavaScript/**/*.js",
   "Week5MiniProjectAndTypeScript/**/config.example.js",
+  "Week6DatabasesAndNodejs/**/public/**/*.js",
+  "Week7NodejsAndReact/**/public/**/*.js",
+  "Week13WebDevelopmentBasics/**/*.js",
+  "Week14MoreTopicsAndInterviews/**/public/**/*.js",
 ];
 
 export default defineConfig([

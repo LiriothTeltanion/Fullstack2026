@@ -8,11 +8,11 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+My portfolio page, linking to projects from earlier weeks.
 
 ## Contents
 
-- [`PortfolioProject/`](PortfolioProject/): Portfolio Project: to do (optional)
+- [`PortfolioProject/`](PortfolioProject/): Portfolio Project: my portfolio page with real projects from this repository
 
 ---
 

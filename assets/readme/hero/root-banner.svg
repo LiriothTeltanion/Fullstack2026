@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
   <title id="title">Fullstack2026 fourteen-week course observatory</title>
-  <desc id="desc">Banner for my fourteen-week full-stack bootcamp: Weeks 1 to 6 hold my exercises and projects, Weeks 7 to 14 are the lessons still ahead.</desc>
+  <desc id="desc">Banner for my fourteen-week full-stack bootcamp: Weeks 1 to 6 hold my exercises and projects, Weeks 7 to 14 hold the Node.js, React, Redux, TypeScript and web projects.</desc>
   <defs>
     <linearGradient id="background" x1="0" x2="1" y1="0" y2="1">
       <stop stop-color="#040714"/>
@@ -47,7 +47,7 @@
   <text x="76" y="151" class="subtitle">My full-stack bootcamp, built in public one exercise at a time.</text>
   <text x="1124" y="56" text-anchor="end" class="signature">KEVIN CUSNIR · LIRIOTH TELTANION</text>
 
-  <g aria-label="Weeks 1 through 6 contain source files">
+  <g aria-label="Weeks 1 through 6: Python, JavaScript, TypeScript, SQL and Node.js">
     <rect x="76" y="225" width="512" height="130" rx="22" fill="#071127" stroke="#38bdf8" stroke-width="2"/>
     <circle cx="105" cy="255" r="8" fill="#38bdf8"/>
     <text x="124" y="262" class="panel-title">WEEKS WITH MY CODE</text>
@@ -60,11 +60,11 @@
     <g transform="translate(526 322)"><circle r="20" fill="#38bdf8"/><text y="5" text-anchor="middle" class="week-dark">W6</text></g>
   </g>
 
-  <g aria-label="Weeks 7 through 12 are scaffolds awaiting official coursework">
+  <g aria-label="Weeks 7 through 14: Node.js, React, Redux, TypeScript and web projects">
     <rect x="612" y="225" width="512" height="130" rx="22" fill="#0c1027" stroke="#a78bfa" stroke-width="2"/>
     <rect x="97" y="247" width="16" height="16" rx="3" fill="none" stroke="#a78bfa" stroke-width="3" transform="translate(536 0)"/>
-    <text x="660" y="262" class="panel-title">COMING UP</text>
-    <text x="660" y="284" class="panel-note">WEEKS 7–14 · NEXT LESSONS</text>
+    <text x="660" y="262" class="panel-title">REACT, REDUX AND BEYOND</text>
+    <text x="660" y="284" class="panel-note">WEEKS 7–14 · NODE, REACT, REDUX, TS, WEB</text>
     <g transform="translate(652 322)"><rect x="-20" y="-20" width="40" height="40" rx="8" fill="none" stroke="#a78bfa" stroke-width="3"/><text y="5" text-anchor="middle" class="week">W7</text></g>
     <g transform="translate(711 322)"><rect x="-20" y="-20" width="40" height="40" rx="8" fill="none" stroke="#a78bfa" stroke-width="3"/><text y="5" text-anchor="middle" class="week">W8</text></g>
     <g transform="translate(769 322)"><rect x="-20" y="-20" width="40" height="40" rx="8" fill="none" stroke="#a78bfa" stroke-width="3"/><text y="5" text-anchor="middle" class="week">W9</text></g>

@@ -4,19 +4,33 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for Exercises XP Gold">
+<img src="../../../../assets/readme/progress/week8-day1-exercises-xp-gold-9b977f725f.svg" width="100%" alt="Progress card for Exercises XP Gold">
 
 </div>
 
-I haven't started this one yet. The code and my notes will go here when I do it.
+Three exercises about lifting state up: the parent keeps the data and the children only report events back with callback props.
 
-**Status:** to do · Optional extra · 8 XP
+## ▶️ How to run
 
-## 📝 Plan
+```bash
+npm install
+npm run dev
+```
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+Vite prints a local address (usually `http://localhost:5173`); I open it in the browser.
+
+## 🎯 The challenge
+
+1. **Like counter**: `LikeCounter` holds one object with a count per fruit. Each `LikeButton` receives `count` and `onLike`, and the parent adds up the total.
+2. **Accordion**: `Accordion` stores `openIndex`, so only one `Panel` is open at a time. Clicking the open panel again closes it (`-1`).
+3. **Temperature converter**: two `TemperatureInput` fields for Celsius and Fahrenheit share one value plus its scale. Typing in either one updates the other, and from 100 °C the page says the water would boil.
+
+## 🧠 What I learned
+
+- When two siblings need the same data, the state moves to their closest parent
+- A child can change the parent's state only through a function the parent passes down
+- Storing the last typed value and its scale is simpler than keeping two temperatures in sync
+- `children` let me write the panel text between `<Panel>` tags instead of passing another prop
 
 ---
 
