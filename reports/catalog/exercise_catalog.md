@@ -2,8 +2,8 @@
 
 > Regenerated from the exact Git index on `2026-11-25` by `tools/refresh_structure_catalogs.py`.
 
-- Base HEAD: `3f1d4909b8bd04c36fae18c70e1491d38aaadbfe`
-- Source-index fingerprint: `sha256:81044857d69ec38cb23e09513ebd6299df072a1268d7e4b619250e562505976b` (generated outputs excluded)
+- Base HEAD: `3abcedfc6f31b54a76e4d77c95fc9e9c3c9278cd`
+- Source-index fingerprint: `sha256:eff367df38ad4a4c5b3947e2d12d7ef7ca536b2d00f73e5609172f08713cf933` (generated outputs excluded)
 
 This catalog proves repository presence and path integrity only. It does not prove that an exercise runs, that Kevin can explain it, or that it is mastered or portfolio-ready.
 
@@ -248,7 +248,7 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week7NodejsAndReact/Day4IntroductionToReact/Exercises/LandingPageUsingReact` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 15 | present (canonical) | [source](<../../Week7NodejsAndReact/Day4IntroductionToReact/Exercises/LandingPageUsingReact>); runtime unverified |
 | `Week7NodejsAndReact/Day5ReactComponentsAndState/DailyChallenge/VotingApp` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript | 10 | present (canonical) | [source](<../../Week7NodejsAndReact/Day5ReactComponentsAndState/DailyChallenge/VotingApp>); runtime unverified |
 | `Week7NodejsAndReact/Day5ReactComponentsAndState/Exercises/ExercisesXP` | Exercise | CSS \| HTML \| JSON \| JavaScript | 14 | present (canonical) | [source](<../../Week7NodejsAndReact/Day5ReactComponentsAndState/Exercises/ExercisesXP>); runtime unverified |
-| `Week7NodejsAndReact/Day5ReactComponentsAndState/Exercises/ExercisesXPGold` | Exercise | CSS \| HTML \| JSON \| JavaScript | 12 | present (canonical) | [source](<../../Week7NodejsAndReact/Day5ReactComponentsAndState/Exercises/ExercisesXPGold>); runtime unverified |
+| `Week7NodejsAndReact/Day5ReactComponentsAndState/Exercises/ExercisesXPGold` | Exercise | CSS \| HTML \| JSON \| JavaScript | 13 | present (canonical) | [source](<../../Week7NodejsAndReact/Day5ReactComponentsAndState/Exercises/ExercisesXPGold>); runtime unverified |
 | `Week7NodejsAndReact/Day5ReactComponentsAndState/Exercises/ExercisesXPGold2` | Exercise | CSS \| HTML \| JSON \| JavaScript | 12 | present (canonical) | [source](<../../Week7NodejsAndReact/Day5ReactComponentsAndState/Exercises/ExercisesXPGold2>); runtime unverified |
 | `Week7NodejsAndReact/Day5ReactComponentsAndState/Exercises/ExercisesXPNinja` | Exercise | CSS \| HTML \| JSON \| JavaScript | 12 | present (canonical) | [source](<../../Week7NodejsAndReact/Day5ReactComponentsAndState/Exercises/ExercisesXPNinja>); runtime unverified |
 | `Week7NodejsAndReact/RemoteLearningNodejs/Exercises/RSSFactsFeed` | Mini Project | CSS \| JSON \| JavaScript | 22 | present (canonical) | [source](<../../Week7NodejsAndReact/RemoteLearningNodejs/Exercises/RSSFactsFeed>); runtime unverified |

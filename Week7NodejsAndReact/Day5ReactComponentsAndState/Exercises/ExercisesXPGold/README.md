@@ -39,3 +39,8 @@ Open the address Vite prints (usually http://localhost:5173).
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 Week 7 Day 5 - React Components and State - Exercises XP Gold
+
+
+## Reproducible dependency setup
+
+Use `npm ci` to install the checked-in lockfile, then `npm run build` to create the production bundle. Node.js 22.13 or newer within v22, or Node.js 24 or newer, is required. Vite 7.3.8 and the React plugin 4.7.0 match the tested Calculator toolchain; the React exercise components are unchanged.
