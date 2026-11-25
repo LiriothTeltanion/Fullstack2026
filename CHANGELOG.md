@@ -31,6 +31,9 @@ does not reinterpret early work as production-ready code.
 
 ### Changed
 
+- The showcase now lists all fourteen weeks day by day, with finished
+  exercises and dashed cards for the ones still to do, plus Done and To do
+  filters. The root banner shows Weeks 1-14.
 - Rewrote the Week 1–6 READMEs in my own voice: what I built, how it works and
   what I learned, taken from the code, with real sample outputs.
 - Moved the generated catalogs to `reports/catalog/`, renamed the README
