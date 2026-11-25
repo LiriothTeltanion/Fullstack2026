@@ -8,7 +8,7 @@
 
 </div>
 
-Deliverables (lowercase, no underscores), with **emoji-rich comments**:
+Files in this folder:
 - `menumanager.py` — data layer for the Restaurant Menu Manager (JSON I/O + add/remove).
 - `menueditor.py` — UI loop that only calls `MenuManager` methods (encapsulation honored).
 - `restaurantmenu.json` — seeded with the provided menu.
@@ -39,8 +39,4 @@ python giphyexercises.py
 ## Exercise 3 — Giphy API #2
 From the same `giphyexercises.py`, it will ask for a search term:
 - If empty, or if the search yields no results / API error, it returns **trending** GIFs and notes the fallback.
-- Uses the provided API key.
-
----
-
-> All code comments include emojis as requested. Enjoy! ✅
+- Reads the API key from the `GIPHY_API_KEY` environment variable (see `.env.example` at the repo root), so the key never goes into Git.

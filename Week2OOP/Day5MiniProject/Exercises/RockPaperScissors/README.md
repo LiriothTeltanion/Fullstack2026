@@ -8,8 +8,7 @@
 
 </div>
 
-Lowercase filenames, no underscores, and emoji-rich comments.  
-Two modules:
+I split the game into two modules so the rules stay separate from the menu:
 - `game.py` — core game logic (`Game` class: user/computer item, result, play).
 - `rockpaperscissors.py` — UI/menu, score tracking, and summary.
 
@@ -25,4 +24,4 @@ Menu options:
 ## Notes
 - Input accepted as `r/p/s` or full words `rock/paper/scissors` (case-insensitive).
 - Results dictionary uses keys `win`, `loss`, `draw`.
-- `Game` injects a `random.Random` instance for easy testing (seed if needed).
+- `Game` takes a `random.Random` instance, so I can pass a seeded one to get repeatable rounds.

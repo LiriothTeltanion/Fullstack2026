@@ -8,8 +8,7 @@
 
 </div>
 
-Everything is in **one Python file**: `exercisesxpninja.py` + this `readme.md`.  
-Comments and docstrings are in **English**. Emojis included where useful. ✨
+The Ninja exercise lives in one file, `exercisesxpninja.py`: a `Phone` class that can call other phones and send them messages.
 
 ## What’s inside
 - ☎️ **Phone** — call history and simple messaging
@@ -39,4 +38,3 @@ b.send_message(a, "Hello back!")
 a.show_incoming_messages()
 b.show_messages_from(a)
 ```
-Enjoy! 💙

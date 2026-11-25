@@ -8,8 +8,7 @@
 
 </div>
 
-All code is in **one Python file**: `exercisesxpgoldinheritance.py` + this `readme.md`.  
-Docstrings and comments in **English**. Emojis included. ✨
+All the Gold inheritance exercises are in `exercisesxpgoldinheritance.py`.
 
 ## Contents
 - 🏦 **BankAccount**
@@ -44,4 +43,3 @@ b = MinimumBalanceAccount(1000, "nova", "blue", minimum_balance=200)
 a.authenticate("kevin", "1234"); a.deposit(100); a.withdraw(50)
 b.authenticate("nova", "blue"); b.withdraw(700)
 ```
-Enjoy! 💙

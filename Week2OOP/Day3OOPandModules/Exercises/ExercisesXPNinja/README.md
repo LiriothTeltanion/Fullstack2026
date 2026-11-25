@@ -8,8 +8,7 @@
 
 </div>
 
-Everything in **one Python file**: `exercisesxpninjadunder.py` + this `readme.md`.  
-Comments and docstrings in **English**. Emojis included. ✨
+Both Ninja exercises are in `exercisesxpninjadunder.py`.
 
 ## Exercise 1 — Temperature
 - Canonical storage in Kelvin for a **single source of truth**.
@@ -19,7 +18,7 @@ Comments and docstrings in **English**. Emojis included. ✨
   - `__add__/__sub__` with numeric deltas (Kelvin)
   - `t1 - t2` returns delta (Kelvin, float)
   - `__str__/__repr__` give readable forms
-- Design maps well to **SOLID** guidelines and is open for new scales.
+- Adding a new scale only needs a new subclass.
 
 ## Exercise 2 — Quantum Realm
 - `QuantumParticle(x, p, label=None)` with measurement methods:

@@ -8,7 +8,7 @@
 
 </div>
 
-Deliverables (lowercase, no underscores), with **emoji-rich comments**:
+Files in this folder:
 - `ninjamenumanager.py` — data layer for the Valentine Menu rules (regex validation + heart ASCII).
 - `ninjamenueditor.py` — UI that calls only the manager’s methods (encapsulation).
 - `restaurantmenu.json` — seeded menu with an empty `valentines` list.
@@ -37,5 +37,3 @@ python charactersgame.py
 - Exports:
   - `characters.json` — structured data
   - `characters.txt` — nicely formatted sheet
-
-Enjoy, and may the dice be ever in your favor. 🎲❤️

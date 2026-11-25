@@ -8,117 +8,57 @@
 
 </div>
 
-Advanced exercises focusing on ASCII pattern generation and algorithm understanding through detailed code analysis.
+Two exercises: drawing star patterns with loops, and reading a short sorting snippet line by line to understand what it does.
 
-## 📊 Quick Stats
-
-| Metric | Value |
-|--------|-------|
-| **Difficulty** | ⭐⭐⭐ Intermediate |
-| **Python Version** | 3.8+ |
-| **Topics** | Nested Loops, Algorithm Analysis, Pattern Generation |
-| **Exercises** | 2 Major Challenges |
-| **Concepts** | Loop Design, Code Tracing, Algorithmic Thinking |
-
-## 🎯 Learning Objectives
-
-By completing these challenges, you will:
-
-- ✅ **Master nested loops** for 2D pattern generation
-- ✅ **Understand loop mechanics** controlling rows and columns
-- ✅ **Analyze complex algorithms** by tracing execution step-by-step
-- ✅ **Recognize sorting patterns** (selection sort implementation)
-- ✅ **Practice code annotation** adding explanatory comments
-- ✅ **Develop debugging skills** through manual execution tracing
-
-## 📂 Project Structure
+## Files
 
 ```
 Challenges2/
-├── main.py                  # Exercise runner
-├── README.md               # This file
+├── main.py              # Runs both exercises
 └── src/
-    ├── patterns.py         # Pattern drawing functions
-    └── ex2analysis.py      # Algorithm analysis documentation
+    ├── patterns.py      # pattern_a(), pattern_b(), pattern_c()
+    └── ex2analysis.py   # Annotated code + step-by-step trace
 ```
 
-## 🚀 How to Run
+## How to run
+
+From this folder:
 
 ```bash
-# Navigate to the Challenges2 directory
-cd Exercises/Challenges2
-
-# Run all pattern demonstrations
 python main.py
 ```
 
-## 📝 Exercise Details
+## Exercise 1: Patterns
 
-### Exercise 1: Pattern Drawing
+Each function builds the lines with string multiplication (`" " * n`, `"*" * n`), prints the pattern and also returns it as a string.
 
-Generate various ASCII patterns using nested for-loops. All patterns demonstrate different loop control techniques.
+```
+Pattern A      Pattern B      Pattern C
+  *                *          *
+ ***              **          **
+*****            ***          ***
+                ****          ****
+               *****          *****
+                              *****
+                               ****
+                                ***
+                                 **
+                                  *
+```
 
-#### Pattern A - Pyramid
-```
-  *
- ***
-*****
-```
-**Concepts**: Centered alignment, odd-number sequences
+The pyramid uses `h - i` spaces and `2 * i - 1` stars per row:
 
-#### Pattern B - Inverted Pyramid
+```python
+for i in range(1, h + 1):
+    spaces = " " * (h - i)
+    stars = "*" * (2 * i - 1)
+    lines.append(spaces + stars)
 ```
-*****
- ***
-  *
-```
-**Concepts**: Reverse iteration, decreasing stars
 
-#### Pattern C - Right Triangle
-```
-*
-**
-***
-****
-*****
-```
-**Concepts**: Simple incremental growth
+## Exercise 2: Code analysis
 
-#### Pattern D - Left Triangle
-```
-    *
-   **
-  ***
- ****
-*****
-```
-**Concepts**: Right alignment with spaces
+The exercise gave this code and asked what it does:
 
-#### Pattern E - Diamond
-```
-  *
- ***
-*****
- ***
-  *
-```
-**Concepts**: Combined pyramid + inverted pyramid
-
-#### Pattern F - Number Pyramid
-```
-1
-22
-333
-4444
-55555
-```
-**Concepts**: Digit repetition, character variation
-
-### Exercise 2: Algorithm Analysis
-
-Detailed analysis of a selection sort implementation.
-
-#### Provided Code
 ```python
 my_list = [2, 24, 12, 354, 233]
 for i in range(len(my_list) - 1):
@@ -131,96 +71,16 @@ for i in range(len(my_list) - 1):
 print(my_list)
 ```
 
-#### Analysis Tasks
-1. **Line-by-line annotation** with comments explaining each operation
-2. **Step-by-step trace** showing variable values and list state after each iteration
-3. **Algorithm identification** recognizing the sorting pattern
-4. **Complexity analysis** understanding nested loop behavior
+It's a variant of selection sort that swaps as soon as it finds a smaller value, instead of once at the end of the inner loop. `ex2analysis.py` holds my commented version of the code and a function that records `i`, `j`, `minimum` and the list after every check or swap. The trace shows only two swaps are needed, and the final output is `[2, 12, 24, 233, 354]`.
 
-## 💡 Pattern Generation Techniques
+## What I learned
 
-### Nested Loop Structure
-```python
-for row in range(height):
-    # Calculate spaces for current row
-    spaces = " " * (height - row - 1)
-    
-    # Calculate stars for current row
-    stars = "*" * (2 * row + 1)
-    
-    # Combine and print
-    print(spaces + stars)
-```
-
-### Key Concepts
-- **Outer loop**: Controls rows (vertical)
-- **Inner calculations**: Determine spaces and characters per row
-- **Mathematical formulas**: 
-  - Odd numbers: `2*i + 1`
-  - Even spacing: `height - i`
-  - Centered alignment: `spaces + content + spaces`
-
-## 🔧 Troubleshooting
-
-| Issue | Solution |
-|-------|----------|
-| **Patterns misaligned** | Check space calculations, ensure terminal has monospace font |
-| **Extra/missing rows** | Verify loop range (inclusive/exclusive endpoints) |
-| **Wrong character count** | Review mathematical formula for stars/digits |
-| **Analysis confusion** | Trace one iteration at a time with paper and pencil |
-
-## 🎓 Concepts Demonstrated
-
-### 1. Nested Loop Control
-```python
-for i in range(outer_iterations):
-    for j in range(inner_iterations):
-        # Inner work depends on both i and j
-```
-
-### 2. Mathematical Sequences
-- Arithmetic progression: `1, 2, 3, 4, 5`
-- Odd numbers: `1, 3, 5, 7, 9`
-- Reverse sequences: `5, 4, 3, 2, 1`
-
-### 3. String Multiplication
-```python
-"*" * 5  # → "*****"
-" " * 3  # → "   "
-str(4) * 4  # → "4444"
-```
-
-### 4. Algorithm Tracing
-- Variable state tracking
-- Loop iteration counting
-- Swap operation visualization
-- Invariant identification
-
-## 📝 Code Quality Notes
-
-- ✅ **Modular architecture** separating patterns and analysis
-- ✅ **Type hints** on all functions
-- ✅ **Comprehensive docstrings** explaining pattern logic
-- ✅ **Return and print** for flexibility (can use patterns programmatically)
-- ✅ **Detailed annotations** in algorithm analysis
-
-## 🎯 Extension Ideas
-
-Want more challenges? Try:
-
-1. **Custom patterns**: Create hollow diamonds, zigzags, spirals
-2. **Parameterization**: Accept height/width as function parameters
-3. **Color output**: Use ANSI escape codes for colored patterns
-4. **Pattern validation**: Write tests verifying correct output
-5. **Algorithm variations**: Implement bubble sort, quick sort with same analysis
-6. **Interactive patterns**: User selects pattern type and dimensions
+- Controlling rows and spacing with loops and simple formulas
+- Returning values instead of only printing, so functions can be reused
+- Tracing code by hand (and in code) to understand an algorithm before trusting it
 
 ## 👤 Author
 
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 Week 1 Day 5 - Mini Project
-
----
-
-*Think algorithmically!* 🎨🔍

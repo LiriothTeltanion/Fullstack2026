@@ -8,8 +8,7 @@
 
 </div>
 
-Single-file solution: `dailychallengetextanalysis.py` (lowercase, no underscores).  
-Comments/docstrings in **English** with emojis. ✨
+My solution is in `dailychallengetextanalysis.py`: a `Text` class for analysis and a `TextModification` subclass for cleaning text.
 
 ## Classes
 - **Text**
@@ -36,5 +35,3 @@ txt = TextModification.from_file("novel.txt")
 clean = txt.remove_punctuation()
 print(txt.most_common_word())
 ```
-
-Happy analyzing! 🧪🔎

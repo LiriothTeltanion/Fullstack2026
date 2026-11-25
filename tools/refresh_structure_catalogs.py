@@ -532,9 +532,9 @@ def build_reports_readme(
 ) -> str:
     return f"""# Structure Reports
 
-## Current structural evidence ({generated_on})
+## Current catalog ({generated_on})
 
-- [Canonical exercise catalog](exercise_catalog.md) — {exercise_count} indexed exercise families; runtime and mastery remain unverified.
+- [Canonical exercise catalog](exercise_catalog.md) — {exercise_count} exercise folders indexed from Git; a map of the code, not a test result.
 - `exercise_catalog_metadata.csv` — versioned structural labels and review-entry hints; semantic titles/goals/technologies are derived conservatively and do not prove runtime or assignment correctness.
 - `exercise_catalog.csv` — machine-readable canonical path catalog.
 - `file_inventory.csv` — indexed-blob inventory (self-entry intentionally excluded to avoid a recursive hash).
@@ -542,7 +542,7 @@ def build_reports_readme(
 - `rename_plan.csv` — unapproved later-wave proposals only.
 - `catalog_manifest.json` — generation date, base HEAD, and stable source-index fingerprint.
 
-Generation basis: HEAD `{head_commit}` plus the staged source index fingerprint `sha256:{source_fingerprint}`. The versioned metadata source is included; generated catalog outputs are excluded to avoid self-reference.
+Generation basis: HEAD `{head_commit}` plus the staged source index fingerprint `sha256:{source_fingerprint}`.
 
 Regenerate with `python tools/refresh_structure_catalogs.py --repo . --write`; verify drift with `python tools/refresh_structure_catalogs.py --repo . --check`.
 

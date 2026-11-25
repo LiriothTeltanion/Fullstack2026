@@ -1,4 +1,4 @@
-# timed challenge #2 — perfect number ✅🔢
+# Timed Challenge 2 — Perfect Number ✅🔢
 
 <div align="center">
 
@@ -13,13 +13,13 @@ A tiny Python script that prints **True** if the given number is a *perfect numb
 - A perfect number equals the sum of its proper divisors (excluding itself).
 - Examples: 6 is perfect (1 + 2 + 3 = 6); 10 is not.
 
-## ▶️ run
+## ▶️ How to run
 ```bash
 python perfectnumber.py
 ```
 Then type an integer and press **Enter**.
 
-## 🧪 examples
+## 🧪 Examples
 ```
 Enter the Number:6
 True

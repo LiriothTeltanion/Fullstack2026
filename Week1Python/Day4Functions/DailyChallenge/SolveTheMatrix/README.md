@@ -8,33 +8,17 @@
 
 </div>
 
-Decode a matrix by reading column-by-column and extracting letters to reconstruct a hidden message.
+A hidden message is spread over a grid of characters. Reading it column by column and keeping only the letters reveals the sentence.
 
-## 📊 Quick Stats
-
-- **Difficulty**: 🥈 Intermediate  
-- **Time Required**: 45-60 minutes  
-- **Concepts**: Matrix traversal, string processing, character filtering  
-- **Prerequisites**: Understanding of 2D data structures and loops
-
-## 🎓 Learning Objectives
-
-- ✅ Traverse matrices column-wise instead of row-wise
-- ✅ Handle jagged arrays (rows of different lengths)
-- ✅ Filter characters based on type (letters vs non-letters)
-- ✅ Implement state machines for text cleaning
-- ✅ Optimize string concatenation
-
-## 🚀 Quick Start
+## ▶️ How to run
 
 ```bash
-cd DailyChallenge/SolveTheMatrix
 python solvethematrix.py
 ```
 
-## 🎯 Challenge Description
+It prints `This is Matrix`.
 
-### Input Matrix
+## 🎯 The challenge
 
 ```
 7ir
@@ -46,154 +30,31 @@ $a
 #t%
 ```
 
-### Algorithm Steps
+`decode_matrix()` does it in two steps:
 
-1. **Read Column-Wise**: Top → Bottom, Left → Right
-2. **Extract Letters**: Keep only alphabetic characters
-3. **Clean Noise**: Replace non-letter sequences between words with single spaces
-4. **Output**: `This is Matrix`
+1. **Read column by column**, top to bottom, left to right. Some rows are shorter than others, so I check `c < len(r)` before reading a character.
+2. **Clean the text**: keep the letters, skip any symbols before the first letter, and turn each group of symbols between letters into one space. Symbols at the very end are dropped.
 
-### How It Works
-
-```python
-def decode_matrix(matrix_str: str) -> str:
-    """
-    Decode matrix by column-wise reading and letter extraction.
-    
-    Process:
-    1. Split into rows and find max column count
-    2. Read each column top to bottom
-    3. Filter: keep letters, replace non-letter runs with spaces
-    4. Trim leading/trailing non-letters
-    """
-```
-
-**Example**:
-- Column 0: `7`, `T`, `h`, `i`, `s`, `$`, `#` → Extract `This`
-- Column 1: `i`, `s`, `%`, ` `, `M`, `a`, `t` → Extract `is Mat`
-- Column 2: `r`, `i`, `x`, `?`, `#`, ` `, `%` → Extract `rix`
-
-Result: `This is Matrix`
-
----
-
-## 💡 Key Concepts
-
-### Column-Wise Traversal
-```python
-rows = matrix_str.split("\n")
-cols = max(len(r) for r in rows)
-
-for c in range(cols):          # Iterate columns
-    for r in rows:             # Iterate rows
-        if c < len(r):         # Check bounds
-            process(r[c])
-```
-
-### Character Filtering
-```python
-if ch.isalpha():
-    # It's a letter - keep it
-else:
-    # Non-letter - handle as separator
-```
-
-### State Machine
-```python
-seen_letter = False
-
-if ch.isalpha():
-    result += ch
-    seen_letter = True
-else:
-    if seen_letter:
-        # Add space between words
-        if result and result[-1] != " ":
-            result += " "
-```
-
----
-
-## 🔧 Implementation Details
-
-### Handling Jagged Arrays
-
-**Problem**: Rows may have different lengths
-
-**Solution**: Check bounds before accessing
 ```python
 for c in range(cols):
     for r in rows:
-        if c < len(r):  # Safe access
-            char = r[c]
+        if c < len(r):
+            col_read += r[c]
 ```
 
-### Complexity Analysis
+Column 1 gives `This`, column 2 gives `is Mat` and column 3 gives `rix`, so the result is `This is Matrix`.
 
-- **Time**: O(R × C) where R = rows, C = columns
-- **Space**: O(R × C) for intermediate concatenation
-- **Can be optimized**: Stream processing instead of full concatenation
+## 🧠 What I learned
 
-### Edge Cases
-
-1. **Empty matrix**: Returns empty string
-2. **All non-letters**: Returns empty string
-3. **Single column**: Works normally
-4. **Single row**: Works normally
+- Swapping the loop order (columns outside, rows inside) reads a grid by columns
+- Checking the row length avoids an `IndexError` when rows have different lengths
+- A simple flag like `seen_letter` helps decide when a symbol should become a space
+- `str.isalpha()` is an easy filter for letters
 
 ---
 
-## 🔧 Troubleshooting
+## 👤 Author
 
-| Issue | Solution |
-|-------|----------|
-| Extra spaces in output | Check space insertion logic |
-| Missing characters | Verify column bounds checking |
-| Wrong order | Confirm column-wise (not row-wise) traversal |
-| IndexError | Add bounds check: `if c < len(r)` |
-
-### Testing Strategy
-
-```python
-# Test with simple matrix
-test_matrix = """
-Abc
-Def
-"""
-# Expected: "ADef" (column 0: A,D; column 1: b,e; column 2: c,f)
-# Actual output: "AD be cf" or "ADbecf" depending on spacing logic
-```
-
----
-
-## 🎯 Extension Ideas
-
-1. **Keep Digits**: Modify to include numbers as valid characters
-2. **Preserve Punctuation**: Keep certain punctuation marks
-3. **Multiple Matrices**: Decode several matrices in one run
-4. **Reverse Operation**: Encode a message into a matrix
-5. **Visualization**: Print the column-reading process step-by-step
-
----
-
-## 🚀 Success Criteria
-
-- [ ] Correctly reads matrix column-by-column
-- [ ] Handles jagged rows without errors
-- [ ] Extracts only letters from the sequence
-- [ ] Inserts spaces appropriately between words
-- [ ] Returns clean, properly formatted message
-
----
-
-## 📚 Additional Resources
-
-- [2D Array Traversal Patterns](https://www.geeksforgeeks.org/print-2-d-array-matrix/)
-- [String Processing in Python](https://realpython.com/python-strings/)
-- [State Machines Explained](https://brilliant.org/wiki/finite-state-machines/)
-
----
-
-**Author**: Kevin Cusnir 'Lirioth'  
-**Repository**: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
-**Week 1 Day 4** - Functions - Daily Challenge
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 1 Day 4 - Functions - Daily Challenge

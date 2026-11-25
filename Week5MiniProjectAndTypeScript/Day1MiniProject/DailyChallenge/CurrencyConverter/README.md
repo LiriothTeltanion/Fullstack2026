@@ -8,139 +8,35 @@
 
 </div>
 
-A modern currency converter web application that uses the ExchangeRate API to provide real-time currency conversion rates.
+A currency converter I built for the Week 5 Day 1 daily challenge. It uses the [ExchangeRate-API](https://www.exchangerate-api.com/) to load every supported currency into two dropdowns and convert an amount with live rates. A switch button (⇅) swaps the two currencies.
 
-## Description
-
-This application allows users to convert between different currencies using live exchange rates. It features a clean, modern interface with dropdown selectors for currencies, an amount input field, and a convenient switch button to swap currencies instantly.
-
-## Features
-
-- 💱 Real-time currency conversion using ExchangeRate API
-- 🌍 Support for 160+ currencies worldwide
-- 🔄 Switch button to swap "From" and "To" currencies instantly
-- 📊 Display of conversion result and exchange rate
-- ⏳ Loading indicator during API calls
-- ⚠️ Error handling with user-friendly messages
-- 📱 Responsive design for all devices
-- ⌨️ Enter key support for quick conversion
-- 🎨 Modern gradient UI with smooth animations
-
-## Technologies Used
-
-- HTML5
-- CSS3 (Animations, Flexbox, Gradients)
-- JavaScript (ES6+)
-- Fetch API
-- Async/Await
-- ExchangeRate API: https://www.exchangerate-api.com/
-
-## Project Structure
+## Files
 
 ```
-DailyChallenge/
-├── index.html      # HTML structure with form elements
-├── styles.css      # Modern styling with animations
-├── script.js       # Logic with async/await and API integration
-└── README.md       # This file
+CurrencyConverter/
+├── index.html          # Page, styles and script
+└── config.example.js   # Template for your local config.js
 ```
 
-## Setup Instructions
+## Setup and run
 
-### 1. Get Your API Key
-
-1. Visit [ExchangeRate-API](https://www.exchangerate-api.com/)
-2. Sign up for a free account
-3. Copy your API key from the dashboard
-
-### 2. Configure the Application
-
-Copy the safe template to a local configuration file:
+1. Create a free account at ExchangeRate-API and copy your key.
+2. Copy the template and put your key in `config.js` instead of the placeholder. Local `config.js` files are ignored by Git, so the key stays on your machine.
 
 ```powershell
 Copy-Item .\config.example.js .\config.js
 ```
 
-Open `config.js`, replace the placeholder text with your own local key, and keep `config.js` untracked. The repository already ignores local `config.js` files.
+3. Open `index.html` in your browser. No server needed.
 
-### 3. Run the Application
+Pick the "From" and "To" currencies, type an amount and click **Convert** or press Enter. The defaults are 1 USD to ILS.
 
-Simply open `index.html` in your web browser. No server required!
+## How it works
 
-## How to Use
+Two endpoints:
 
-1. **Select Source Currency**: Choose the currency you want to convert from in the "From" dropdown
-2. **Select Target Currency**: Choose the currency you want to convert to in the "To" dropdown
-3. **Enter Amount**: Input the amount you want to convert
-4. **Convert**: Click the "Convert" button or press Enter
-5. **View Result**: See the converted amount and exchange rate
-6. **Switch Currencies** (Bonus): Click the switch button (⇅) to swap the currencies
-
-## API Integration
-
-### Endpoints Used
-
-1. **Supported Codes Endpoint**
-   - URL: `https://v6.exchangerate-api.com/v6/{API_KEY}/codes`
-   - Purpose: Fetch all supported currency codes and names
-   - Used to populate the dropdown selectors
-
-2. **Pair Conversion Endpoint**
-   - URL: `https://v6.exchangerate-api.com/v6/{API_KEY}/pair/{FROM}/{TO}/{AMOUNT}`
-   - Purpose: Get conversion rate and converted amount
-   - Used when user clicks "Convert" button
-
-### API Response Structure
-
-**Codes Endpoint Response:**
-```json
-{
-  "result": "success",
-  "supported_codes": [
-    ["USD", "United States Dollar"],
-    ["EUR", "Euro"],
-    ...
-  ]
-}
-```
-
-**Pair Conversion Response:**
-```json
-{
-  "result": "success",
-  "base_code": "USD",
-  "target_code": "EUR",
-  "conversion_rate": 0.85,
-  "conversion_result": 85.00
-}
-```
-
-## Features Implemented
-
-### Core Features
-
-- ✅ Fetch all supported currencies on page load
-- ✅ Populate dropdown menus with currency options
-- ✅ Convert between any two currencies
-- ✅ Display converted amount
-- ✅ Show exchange rate (1 FROM = X TO)
-- ✅ Loading indicator during API calls
-- ✅ Error handling and user feedback
-
-### Bonus Features
-
-- ✅ Switch button to swap currencies
-- ✅ Automatic conversion after switching
-- ✅ Enter key support
-- ✅ Form validation
-- ✅ Smooth animations
-- ✅ Modern gradient design
-
-## Code Highlights
-
-### Async/Await Pattern
-
-All API calls use async/await for clean, readable asynchronous code:
+- `GET /v6/{API_KEY}/codes` on page load, to fill the dropdowns
+- `GET /v6/{API_KEY}/pair/{FROM}/{TO}/{AMOUNT}` when you convert. The amount goes straight in the URL and the response has `conversion_rate` and `conversion_result`.
 
 ```javascript
 async function loadSupportedCurrencies() {
@@ -148,121 +44,26 @@ async function loadSupportedCurrencies() {
     const data = await response.json();
     populateCurrencySelects(data.supported_codes);
 }
-```
 
-### Switch Functionality
-
-The bonus feature allows instant currency swapping:
-
-```javascript
 function switchCurrencies() {
     const fromValue = fromCurrencySelect.value;
     const toValue = toCurrencySelect.value;
-    
+
     fromCurrencySelect.value = toValue;
     toCurrencySelect.value = fromValue;
-    
+
     convertCurrency();
 }
 ```
 
-### Amount in URL
+The page shows a spinner during requests, checks that the amount is a positive number and both currencies are selected, and shows a message for a bad key, network errors or API errors. If the currencies don't load, check the key in `config.js` and the browser console.
 
-The API supports passing the amount directly in the URL:
+## What I learned
 
-```javascript
-const response = await fetch(
-    `${BASE_URL}/${API_KEY}/pair/${fromCurrency}/${toCurrency}/${amount}`
-);
-```
-
-## Error Handling
-
-The application handles various error scenarios:
-- Invalid API key
-- Network errors
-- Invalid amount input
-- Missing currency selection
-- API response errors
-
-## Design Features
-
-- **Modern Card Layout**: Glassmorphism effect with backdrop blur
-- **Gradient Background**: Purple gradient with subtle pattern overlay
-- **Smooth Animations**: Fade-in, slide-in, and rotation effects
-- **Interactive Elements**: Hover effects on buttons and inputs
-- **Loading Spinner**: Animated circular spinner during API calls
-- **Color-coded Results**: Gradient background for conversion results
-- **SVG Icons**: Custom switch arrow icon
-
-## Responsive Design
-
-The converter adapts to different screen sizes:
-- Desktop: Full-width card with optimal spacing
-- Tablet: Adjusted padding and font sizes
-- Mobile: Compact layout with touch-friendly controls
-
-## Browser Compatibility
-
-Works on all modern browsers supporting:
-- ES6+ JavaScript features
-- Fetch API
-- CSS Grid and Flexbox
-- CSS animations and transforms
-
-## Validation
-
-Input validation includes:
-- Amount must be a positive number
-- Both currencies must be selected
-- Real-time error messages for invalid inputs
-
-## Default Values
-
-- **From Currency**: USD (United States Dollar)
-- **To Currency**: ILS (Israeli New Sheqel)
-- **Amount**: 1
-
-## API Limits
-
-Free tier includes:
-- 1,500 requests per month
-- All currency pairs supported
-- No credit card required
-
-For more requests, consider upgrading your plan at ExchangeRate-API.com
-
-## Future Enhancements
-
-Possible improvements:
-- Historical exchange rate charts
-- Favorite currency pairs
-- Recent conversions history
-- Offline mode with cached rates
-- Multiple currency comparison
-- Currency trend indicators
-- Auto-refresh rates
-
-## Troubleshooting
-
-**Problem**: Currencies not loading
-- **Solution**: Check your API key is correctly set in `script.js`
-
-**Problem**: Conversion fails
-- **Solution**: Ensure you have active internet connection and valid API key
-
-**Problem**: "Error loading currencies" message
-- **Solution**: Verify API key and check browser console for errors
-
-## Author
-
-Project developed as part of the Daily Challenge for Day 1, Week 5 of the Fullstack 2026 bootcamp.
-
-## License
-
-This project is open source and available for educational purposes.
+- Using async/await with a real API that needs a key
+- Keeping the key out of Git with a local config file
+- Building dropdowns from API data and showing loading and error states
 
 ## Credits
 
-- Exchange rates provided by [ExchangeRate-API](https://www.exchangerate-api.com/)
-- Icons: Custom SVG icons
+Exchange rates come from [ExchangeRate-API](https://www.exchangerate-api.com/).

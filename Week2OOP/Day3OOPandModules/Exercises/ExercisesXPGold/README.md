@@ -8,8 +8,7 @@
 
 </div>
 
-Single-file solutions in `exercisesxpgoldmodules.py` + this `readme.md`.  
-Docstrings and comments in **English**. Emojis included. ✨
+All five Gold exercises are in `exercisesxpgoldmodules.py`.
 
 ## Contents
 1. **Upcoming Holiday** — shows today's date and time left until the next holiday (uses `holidays` if available, otherwise a fixed-date fallback).  

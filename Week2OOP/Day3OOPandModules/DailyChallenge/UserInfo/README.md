@@ -8,8 +8,7 @@
 
 </div>
 
-Single-file OOP solution in `dailychallengegolduserinfo.py`.  
-Comments/docstrings in **English** with emojis. ✅
+My solution is in `dailychallengegolduserinfo.py`, built around a small `UserInfoApp` class.
 
 ## What it does
 - Prompts **5 times** for `Name,Age,Score` (example: `John,20,90`).

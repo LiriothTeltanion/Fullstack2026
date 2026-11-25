@@ -8,8 +8,7 @@
 
 </div>
 
-Everything is in **one Python file**: `exercisesxpgold.py` + this `readme.md`.  
-Comments and docstrings are in **English**. Emojis included where useful. ✨
+I put all the Gold exercises in one file, `exercisesxpgold.py`.
 
 ## What’s inside
 - ⭕ **Circle** — `perimeter()`, `area()`, `describe()`
@@ -41,4 +40,3 @@ mm.add_item("Falafel", 12, "A", False)
 mm.update_item("Soup", 11, "B", False)
 mm.remove_item("Hamburger")
 ```
-Enjoy! 💙

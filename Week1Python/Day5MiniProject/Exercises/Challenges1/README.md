@@ -8,158 +8,58 @@
 
 </div>
 
-Comprehensive collection of 20 programming challenges covering fundamental Python concepts from Week 1.
+Twenty small functions I wrote to practice Week 1 Python: lists, strings, loops, conditionals and a bit of math. They are all in `challengessolutions.py`, with type hints and a short docstring each.
 
-## 📊 Quick Stats
-
-| Metric | Value |
-|--------|-------|
-| **Difficulty** | ⭐⭐ Beginner-Intermediate |
-| **Python Version** | 3.8+ |
-| **Topics** | Strings, Lists, Functions, Algorithms |
-| **Exercises** | 20 Complete Solutions |
-| **Concepts** | Data Structures, Iteration, String Manipulation |
-
-## 🎯 Learning Objectives
-
-By completing these challenges, you will:
-
-- ✅ **Master string operations** (reversal, manipulation, formatting)
-- ✅ **Practice list algorithms** (filtering, mapping, reduction)
-- ✅ **Build utility functions** for common programming tasks
-- ✅ **Implement mathematical algorithms** (factorials, series, GCD/LCM)
-- ✅ **Work with data structures** (sets, dictionaries, lists)
-- ✅ **Develop problem-solving skills** across varied scenarios
-
-## 📂 Project Structure
-
-```
-Challenges1/
-├── challengessolutions.py    # All 20 solutions with docstrings
-└── README.md                 # This file
-```
-
-## 🚀 How to Run
+## How to run
 
 ```bash
-# Navigate to the Challenges1 directory
-cd Exercises/Challenges1
-
-# Run all exercises
 python challengessolutions.py
 ```
 
-## 📝 Complete Exercise List
+No extra packages needed. It runs a quick demo that calls every function once:
 
-### String Manipulation (1-7)
-1. **Display Name**: Print greeting with your name
-2. **Favorite Number**: Calculate age in 10 years
-3. **Favorite Food**: Conditional message based on food input
-4. **Average Purchase**: Calculate average of 3 input numbers
-5. **Concatenate Strings**: Print concatenated result
-6. **Long String**: Print multi-line string with triple quotes
-7. **Five Operations**: Demonstrate arithmetic operators
-
-### Lists & Sequences (8-12)
-8. **Print List**: Display list of favorite fruits
-9. **List Operations**: Add, modify, remove elements
-10. **Loop Through List**: Print each item with f-strings
-11. **Print Range**: Display numbers 1-20
-12. **Even Range**: Print even numbers 1-20
-
-### Advanced List Operations (13-16)
-13. **Odd Removal**: Remove odd numbers from list
-14. **Sorted Names**: Sort names by length
-15. **List Operations**: Calculate sum, min, max of list
-16. **Challenge Question**: Print numbers 1-100, special for multiples
-
-### Functions & Algorithms (17-20)
-17. **Magician Names**: Modify list with comprehensions
-18. **Cinemax Ticket**: Calculate ticket price by age
-19. **Teenager Check**: List comprehension for teen ages
-20. **Sandwich Orders**: Process sandwich list (fulfilled/pending)
-
-## 💡 Key Concepts Demonstrated
-
-### String Operations
-```python
-# String reversal, formatting, multi-line strings
-name = "Kevin"
-print(f"Hello, {name}!")
+```
+=== Quick Demo ===
+1) insert_at: [1, 99, 2, 3]
+2) count_spaces: 6
+3) count_case: {'upper': 2, 'lower': 4}
+...
+20) mask_password: **********
 ```
 
-### List Comprehensions
-```python
-# Filtering and transforming data
-teens = [age for age in ages if 13 <= age <= 19]
-even_nums = [n for n in range(1, 21) if n % 2 == 0]
-```
+## The exercises
 
-### Mathematical Functions
-```python
-# Calculating averages, sums, min/max
-avg = sum(numbers) / len(numbers)
-total = sum(prices)
-```
+| # | Function | What it does |
+|---|----------|--------------|
+| 1 | `insert_at` | Insert an item at an index |
+| 2 | `count_spaces` | Count the spaces in a string |
+| 3 | `count_case` | Count upper and lower case letters |
+| 4 | `my_sum` | Sum a list without `sum()` |
+| 5 | `find_max` | Find the largest number |
+| 6 | `factorial` | Factorial of n |
+| 7 | `list_count` | Count how many times an element appears |
+| 8 | `norm` | Square root of the sum of squares |
+| 9 | `is_mono` | Check if a list is monotonic |
+| 10 | `longest_word` | Longest word in a list |
+| 11 | `split_ints_and_strs` | Separate integers from strings (booleans and floats are skipped) |
+| 12 | `is_palindrome` | Palindrome check (case-insensitive) |
+| 13 | `sum_over_k` | Count the words longer than k |
+| 14 | `dict_avg` | Average of a dictionary's values |
+| 15 | `common_div` | Common divisors of two numbers, using a GCD helper |
+| 16 | `is_prime` | Prime check |
+| 17 | `weird_print` | Keep elements where both the index and the value are even |
+| 18 | `type_count` | Count the types of keyword arguments |
+| 19 | `split_like` | My own version of `str.split()` |
+| 20 | `mask_password` | Replace every character with `*` |
 
-### Conditional Logic
-```python
-# Age-based pricing, value checking
-if age < 3:
-    price = 0
-elif age <= 12:
-    price = 10
-else:
-    price = 15
-```
+## What I learned
 
-## 🔧 Troubleshooting
-
-| Issue | Solution |
-|-------|----------|
-| **Import errors** | File is self-contained, no external dependencies needed |
-| **f-string syntax errors** | Ensure Python 3.6+ is being used |
-| **List modification errors** | Remember lists are mutable, use `.copy()` if needed |
-| **Division by zero** | Verify input validation before calculations |
-
-## 🎓 Skills Practiced
-
-1. **Input/Output**: Reading user input, formatting output
-2. **Variables**: Assignment, types, naming conventions
-3. **Operators**: Arithmetic, comparison, logical
-4. **Control Flow**: if/elif/else, loops (for, while)
-5. **Data Structures**: Lists, sets, dictionaries
-6. **Functions**: Definition, parameters, return values
-7. **String Methods**: `.split()`, `.join()`, `.format()`
-8. **List Methods**: `.append()`, `.remove()`, `.sort()`
-9. **Built-in Functions**: `len()`, `sum()`, `min()`, `max()`
-10. **List Comprehensions**: Filtering, mapping, transforming
-
-## 📝 Code Quality Notes
-
-- ✅ **All 20 exercises completed** with detailed solutions
-- ✅ **Comprehensive docstrings** explaining each exercise
-- ✅ **Type hints** on function signatures
-- ✅ **Clean code style** following PEP 8
-- ✅ **Emoji markers** for easy navigation (`# 🤖 Exercise X`)
-
-## 🎯 Extension Ideas
-
-Want more practice? Try:
-
-1. **Add unit tests**: Write pytest tests for each function
-2. **Error handling**: Add try/except for robust input validation
-3. **User interface**: Create menu system to select exercises
-4. **Data persistence**: Save results to JSON file
-5. **Performance testing**: Measure execution time of algorithms
-6. **Alternative solutions**: Implement same exercise multiple ways
+- Writing small functions with clear inputs and outputs
+- Rebuilding built-ins like `sum`, `max` and `split` by hand to see how they work
+- Edge cases such as `bool` being a subclass of `int` in Python
 
 ## 👤 Author
 
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 Week 1 Day 5 - Mini Project
-
----
-
-*Master the fundamentals!* 💪✨

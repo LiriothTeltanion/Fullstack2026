@@ -8,8 +8,7 @@
 
 </div>
 
-Conway's Game of Life implemented with **inheritance** in a **single Python file**: `exercisesxpninjainheritance.py` + this `readme.md`.  
-Docstrings and comments in **English**. Emojis included. ✨
+I built Conway's Game of Life with inheritance, all in `exercisesxpninjainheritance.py`.
 
 ## Classes
 - **GameOfLife** (fixed borders) — base class
@@ -47,4 +46,3 @@ from exercisesxpninjainheritance import GameOfLife, ExpandingGameOfLife, seed_gl
 game = GameOfLife(20, 20, seed=[(r+5, c+5) for (r,c) in seed_glider()])
 game.run(50, show=True)
 ```
-Have fun experimenting! 💙

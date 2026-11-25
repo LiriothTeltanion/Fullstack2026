@@ -8,8 +8,7 @@
 
 </div>
 
-Single-file solution in `dailychallengetranslator.py`.  
-Comments/docstrings in **English** with emojis. ✨
+My solution is in `dailychallengetranslator.py`.
 
 ## What it does
 - Translates a list of French words to English using **googletrans** (Google Translate API wrapper).

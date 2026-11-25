@@ -8,179 +8,54 @@
 
 </div>
 
-Two small exercises: one for computing grade summaries and letter grades, and one for basic data analysis over a list of sales transactions. The code stays clean with tiny comments.
+Two extra exercises from Day 3: grade summaries with letter grades, and some basic analysis over a list of sales transactions. Everything uses plain dictionaries and lists, no external packages.
 
-> ▶️ Run with **Python 3.10+**. No external packages needed.
-
----
-
-## 🚀 How to run
+## ▶️ How to run
 
 ```bash
-python3 exercisesxpplus.py
+python exercisesxpplus.py
 ```
-Run the bundled script `exercisesxpplus.py`.
 
----
+I used Python 3.10+.
 
 ## 📚 Exercise 1 — Student Grade Summary
 
-**🎯 Goal:** for each student, compute the **average** and assign a **letter grade**. Also compute the **class average**.
+For each student I compute the average and a letter grade, then the class average.
 
-**📊 Letter rule:**  
-- `avg >= 90 → "🅰️ A"`  
-- `avg >= 80 → "🅱️ B"`  
-- `avg >= 70 → "🇨 C"`  
-- `avg >= 60 → "D"`  
-- otherwise `"F"`
+- `avg >= 90` → A, `>= 80` → B, `>= 70` → C, `>= 60` → D, otherwise F
+- The thresholds live in `GRADE_THRESHOLDS` and `letter_grade()` walks through them.
+- `calculate_student_grades()` returns the averages, the letters and the class average. A student with no scores gets `0.0` and `"N/A"`, so there is no division by zero.
 
-**How it works (step by step):**
-1. Loop through `student_grades` (`name → [scores]`).
-2. Compute the average with `sum(grades) / len(grades)`.
-3. Decide letter based on the thresholds above.
-4. Store results in two dicts: `student_averages` and `student_letter_grades`.
-5. Compute `class_average` by averaging all student averages.
-6. Print the class average (rounded) and each student with their numbers.
-
-**Tiny code peek:**
 ```python
-student_averages = {}
-student_letter_grades = {}
-
-for name, grades in student_grades.items():
-    avg = sum(grades) / len(grades)       # mean
-    student_averages[name] = avg
-
-    if avg >= 90:       letter = "A"
-    elif avg >= 80:     letter = "B"
-    elif avg >= 70:     letter = "C"
-    elif avg >= 60:     letter = "D"
-    else:               letter = "F"
-
-    student_letter_grades[name] = letter
-
-class_average = sum(student_averages.values()) / len(student_averages)
-print("class average:", round(class_average, 2))
-for name in student_grades:
-    print(name, "-", round(student_averages[name], 2), student_letter_grades[name])
+report = calculate_student_grades({"Alice": [88, 92, 100], "Bob": [75, 78, 80]})
+print(round(report.class_average, 2))
+print(report.letter_grades)  # {'Alice': 'A', 'Bob': 'C'}
 ```
 
-**Notes:**
-- `round(x, 2)` formats to 2 decimals for readability.
-- If a student list is empty (not in this data), guard `len(grades) > 0` to avoid division by zero.
-- Time: **O(n·m)** where `n` = students, `m` = grades per student. Space: **O(n)**.
+## 🛒 Exercise 2 — Sales Data Analysis
 
----
+Each transaction is a dict with `customer_id`, `product`, `price`, `quantity` and `date`. `analyse_sales_data()` does five things:
 
-## Exercise 2 — Advanced Data Manipulation and Analysis
+1. Adds `total_price = price * quantity` and sums totals per product and per customer.
+2. Keeps transactions with `total_price > 500`, sorted from highest to lowest.
+3. Finds loyal customers (more than one purchase).
+4. Computes the average transaction value per product.
+5. Finds the most popular product by quantity sold. It returns a list, so ties are kept.
 
-**Goal:** work over a list of transaction dicts and compute basic analytics.
-
-**Dataset shape:**
 ```python
-sales_data = [
-    {"customer_id": 1, "product": "Smartphone", "price": 600, "quantity": 1, "date": "2023-04-03"},
-    # ...
-]
-```
-Each transaction has `customer_id`, `product`, `price`, `quantity`, `date`.
-
-### 2.1 Add `total_price` and compute totals
-- For each transaction, add `t["total_price"] = t["price"] * t["quantity"]`.
-- Build `product_totals[product] += total_price`.
-- Build `customer_totals[cid] += total_price`.
-
-**Tiny code peek:**
-```python
-product_totals = {}
-customer_totals = {}
-
-for t in sales_data:
-    t["total_price"] = t["price"] * t["quantity"]
-    product_totals[t["product"]] = product_totals.get(t["product"], 0) + t["total_price"]
-    customer_totals[t["customer_id"]] = customer_totals.get(t["customer_id"], 0) + t["total_price"]
-
-print("product totals:", product_totals)
-print("customer totals:", customer_totals)
+product_totals[record["product"]] = product_totals.get(record["product"], 0.0) + total_price
 ```
 
-### 2.2 High‑value transactions (> 500), sorted desc
-- Filter transactions by `total_price > 500`.
-- Sort by `total_price` descending.
+The `.get(key, 0)` pattern is what I used for every counter here.
 
-**Tiny code peek:**
-```python
-high_value = [t for t in sales_data if t["total_price"] > 500]
-high_value.sort(key=lambda x: x["total_price"], reverse=True)
-print("high value:", high_value)
-```
+## 🧠 What I learned
 
-### 2.3 Loyalty — customers with more than one purchase
-- Count transactions per `customer_id`.
-- Pick those with count > 1.
+- Building summaries with dictionaries and `.get()` defaults
+- Sorting a list of dicts with `key=lambda ...` and `reverse=True`
+- Returning a list when there can be a tie instead of picking one value
 
-**Tiny code peek:**
-```python
-counts = {}
-for t in sales_data:
-    cid = t["customer_id"]
-    counts[cid] = counts.get(cid, 0) + 1
+Next time I'd like to try `collections.Counter` for the counting parts.
 
-loyal = [cid for cid, c in counts.items() if c > 1]
-print("loyal customers:", loyal)
-```
-
-### 2.4 Average transaction value per product
-- Track sum and count per `product`, then divide.
-
-**Tiny code peek:**
-```python
-prod_sum = {}
-prod_cnt = {}
-for t in sales_data:
-    p = t["product"]
-    prod_sum[p] = prod_sum.get(p, 0) + t["total_price"]
-    prod_cnt[p] = prod_cnt.get(p, 0) + 1
-
-prod_avg = {}
-for p in prod_sum:
-    prod_avg[p] = prod_sum[p] / prod_cnt[p]
-
-print("avg transaction by product:", prod_avg)
-```
-
-### 2.5 Most popular product by **quantity** sold
-- Sum `quantity` per `product`.
-- Find the max and list all products that reach it (in case of ties).
-
-**Tiny code peek:**
-```python
-qty_sum = {}
-for t in sales_data:
-    p = t["product"]
-    qty_sum[p] = qty_sum.get(p, 0) + t["quantity"]
-
-max_qty = max(qty_sum.values())
-popular = [p for p, q in qty_sum.items() if q == max_qty]
-print("most popular:", popular)
-```
-
-**Notes:**
-- When value ties are possible (e.g., popularity), returning a **list** keeps it fair.
-- To sort by date later, parse `date` with `datetime.strptime` first.
-- Time: each pass is **O(n)**; sorting high‑value list costs **O(k log k)**.
-
----
-
-## Ideas for future me
-- Wrap each step into a function for easier unit testing.
-- Use `collections.Counter` or `defaultdict` to simplify counting.
-- Consider reading from a CSV using `csv.DictReader` if data grows.
-
----
-
-## License
-MIT — free to use, copy, and modify.
 ---
 
 ## 👤 Author
@@ -188,7 +63,3 @@ MIT — free to use, copy, and modify.
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 Week 1 Day 3 - Exercises XP+
-
----
-
-*Happy coding!* 🐍✨

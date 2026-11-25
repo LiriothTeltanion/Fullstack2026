@@ -2,8 +2,8 @@
 
 > Regenerated from the exact Git index on `2026-11-25` by `tools/refresh_structure_catalogs.py`.
 
-- Base HEAD: `ca3dc6a474f5d550df2147ba2219b4dc3f6ecaa6`
-- Source-index fingerprint: `sha256:464e249ead1dc1d5deb63ecc4bbdd69bd6157a72f53d7c759908d0eb1831e794` (generated outputs excluded)
+- Base HEAD: `e4450f3458d305639ea1b152c35237fbfe58a81e`
+- Source-index fingerprint: `sha256:24a23be41c93fc7596f05b173fb18b18500f1d3134816df7efae362c62ad27d2` (generated outputs excluded)
 
 This catalog proves repository presence and path integrity only. It does not prove that an exercise runs, that Kevin can explain it, or that it is mastered or portfolio-ready.
 
@@ -27,16 +27,16 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week1Python/Day3Dictionaries/DailyChallenge/Dictionaries` | Daily Challenge | Python | 2 | present (canonical) | [source](<../../Week1Python/Day3Dictionaries/DailyChallenge/Dictionaries>); runtime unverified |
 | `Week1Python/Day3Dictionaries/Exercises/ExercisesXP` | Exercise | Python | 2 | present (canonical) | [source](<../../Week1Python/Day3Dictionaries/Exercises/ExercisesXP>); runtime unverified |
 | `Week1Python/Day3Dictionaries/Exercises/ExercisesXPGold` | Exercise | Python | 2 | present (canonical) | [source](<../../Week1Python/Day3Dictionaries/Exercises/ExercisesXPGold>); runtime unverified |
-| `Week1Python/Day3Dictionaries/Exercises/ExercisesXPNinja` | Exercise | Python | 2 | present (noncanonical case: readme.md) | [source](<../../Week1Python/Day3Dictionaries/Exercises/ExercisesXPNinja>); runtime unverified |
+| `Week1Python/Day3Dictionaries/Exercises/ExercisesXPNinja` | Exercise | Python | 2 | present (canonical) | [source](<../../Week1Python/Day3Dictionaries/Exercises/ExercisesXPNinja>); runtime unverified |
 | `Week1Python/Day3Dictionaries/Exercises/ExercisesXPPlus` | Exercise | Python | 2 | present (canonical) | [source](<../../Week1Python/Day3Dictionaries/Exercises/ExercisesXPPlus>); runtime unverified |
-| `Week1Python/Day3Dictionaries/Exercises/TimedChallenge1` | Timed Challenge | Python | 2 | present (noncanonical case: readme.md) | [source](<../../Week1Python/Day3Dictionaries/Exercises/TimedChallenge1>); runtime unverified |
-| `Week1Python/Day3Dictionaries/Exercises/TimedChallenge2` | Timed Challenge | Python | 2 | present (noncanonical case: readme.md) | [source](<../../Week1Python/Day3Dictionaries/Exercises/TimedChallenge2>); runtime unverified |
+| `Week1Python/Day3Dictionaries/Exercises/TimedChallenge1` | Timed Challenge | Python | 2 | present (canonical) | [source](<../../Week1Python/Day3Dictionaries/Exercises/TimedChallenge1>); runtime unverified |
+| `Week1Python/Day3Dictionaries/Exercises/TimedChallenge2` | Timed Challenge | Python | 2 | present (canonical) | [source](<../../Week1Python/Day3Dictionaries/Exercises/TimedChallenge2>); runtime unverified |
 | `Week1Python/Day4Functions/DailyChallenge/CoffeeShopMenuManager` | Daily Challenge | Python | 2 | present (canonical) | [source](<../../Week1Python/Day4Functions/DailyChallenge/CoffeeShopMenuManager>); runtime unverified |
 | `Week1Python/Day4Functions/DailyChallenge/SolveTheMatrix` | Daily Challenge | Python | 2 | present (canonical) | [source](<../../Week1Python/Day4Functions/DailyChallenge/SolveTheMatrix>); runtime unverified |
 | `Week1Python/Day4Functions/Exercises/ExercisesXP` | Exercise | Python | 2 | present (canonical) | [source](<../../Week1Python/Day4Functions/Exercises/ExercisesXP>); runtime unverified |
 | `Week1Python/Day4Functions/Exercises/ExercisesXPGold` | Exercise | Python | 2 | present (canonical) | [source](<../../Week1Python/Day4Functions/Exercises/ExercisesXPGold>); runtime unverified |
 | `Week1Python/Day4Functions/Exercises/ExercisesXPNinja` | Exercise | Python | 2 | present (canonical) | [source](<../../Week1Python/Day4Functions/Exercises/ExercisesXPNinja>); runtime unverified |
-| `Week1Python/Day4Functions/Exercises/TimedChallenge1` | Timed Challenge | Python | 2 | present (noncanonical case: readme.md) | [source](<../../Week1Python/Day4Functions/Exercises/TimedChallenge1>); runtime unverified |
+| `Week1Python/Day4Functions/Exercises/TimedChallenge1` | Timed Challenge | Python | 2 | present (canonical) | [source](<../../Week1Python/Day4Functions/Exercises/TimedChallenge1>); runtime unverified |
 | `Week1Python/Day5MiniProject/DailyChallenge/AdvancedAlgorithm` | Daily Challenge | Python | 5 | present (canonical) | [source](<../../Week1Python/Day5MiniProject/DailyChallenge/AdvancedAlgorithm>); runtime unverified |
 | `Week1Python/Day5MiniProject/DailyChallenge/Challenges` | Daily Challenge | Python | 2 | present (canonical) | [source](<../../Week1Python/Day5MiniProject/DailyChallenge/Challenges>); runtime unverified |
 | `Week1Python/Day5MiniProject/Exercises/Challenges1` | Exercise | Python | 2 | present (canonical) | [source](<../../Week1Python/Day5MiniProject/Exercises/Challenges1>); runtime unverified |
@@ -45,27 +45,27 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week1Python/Day5MiniProject/Exercises/TicTacToe` | Mini Project | Python | 2 | present (canonical) | [source](<../../Week1Python/Day5MiniProject/Exercises/TicTacToe>); runtime unverified |
 | `Week2OOP/Day1IntroductiontoOOP/DailyChallenge` | Daily Challenge | Python | 2 | present (canonical) | [source](<../../Week2OOP/Day1IntroductiontoOOP/DailyChallenge>); runtime unverified |
 | `Week2OOP/Day1IntroductiontoOOP/Exercises/ExercisesXP` | Exercise | Python | 2 | present (canonical) | [source](<../../Week2OOP/Day1IntroductiontoOOP/Exercises/ExercisesXP>); runtime unverified |
-| `Week2OOP/Day1IntroductiontoOOP/Exercises/ExercisesXPGold` | Exercise | Python | 2 | present (noncanonical case: readme.md) | [source](<../../Week2OOP/Day1IntroductiontoOOP/Exercises/ExercisesXPGold>); runtime unverified |
-| `Week2OOP/Day1IntroductiontoOOP/Exercises/ExercisesXPNinja` | Exercise | Python | 2 | present (noncanonical case: readme.md) | [source](<../../Week2OOP/Day1IntroductiontoOOP/Exercises/ExercisesXPNinja>); runtime unverified |
+| `Week2OOP/Day1IntroductiontoOOP/Exercises/ExercisesXPGold` | Exercise | Python | 2 | present (canonical) | [source](<../../Week2OOP/Day1IntroductiontoOOP/Exercises/ExercisesXPGold>); runtime unverified |
+| `Week2OOP/Day1IntroductiontoOOP/Exercises/ExercisesXPNinja` | Exercise | Python | 2 | present (canonical) | [source](<../../Week2OOP/Day1IntroductiontoOOP/Exercises/ExercisesXPNinja>); runtime unverified |
 | `Week2OOP/Day2OOPInheritanceEncapsulationPolymorphism/DailyChallenge/Pagination` | Daily Challenge | Python | 2 | present (canonical) | [source](<../../Week2OOP/Day2OOPInheritanceEncapsulationPolymorphism/DailyChallenge/Pagination>); runtime unverified |
 | `Week2OOP/Day2OOPInheritanceEncapsulationPolymorphism/Exercises/ExercisesXP` | Exercise | Python | 2 | present (canonical) | [source](<../../Week2OOP/Day2OOPInheritanceEncapsulationPolymorphism/Exercises/ExercisesXP>); runtime unverified |
-| `Week2OOP/Day2OOPInheritanceEncapsulationPolymorphism/Exercises/ExercisesXPGold` | Exercise | Python | 2 | present (noncanonical case: readme.md) | [source](<../../Week2OOP/Day2OOPInheritanceEncapsulationPolymorphism/Exercises/ExercisesXPGold>); runtime unverified |
-| `Week2OOP/Day2OOPInheritanceEncapsulationPolymorphism/Exercises/ExercisesXPNinja` | Exercise | Python | 2 | present (noncanonical case: readme.md) | [source](<../../Week2OOP/Day2OOPInheritanceEncapsulationPolymorphism/Exercises/ExercisesXPNinja>); runtime unverified |
+| `Week2OOP/Day2OOPInheritanceEncapsulationPolymorphism/Exercises/ExercisesXPGold` | Exercise | Python | 2 | present (canonical) | [source](<../../Week2OOP/Day2OOPInheritanceEncapsulationPolymorphism/Exercises/ExercisesXPGold>); runtime unverified |
+| `Week2OOP/Day2OOPInheritanceEncapsulationPolymorphism/Exercises/ExercisesXPNinja` | Exercise | Python | 2 | present (canonical) | [source](<../../Week2OOP/Day2OOPInheritanceEncapsulationPolymorphism/Exercises/ExercisesXPNinja>); runtime unverified |
 | `Week2OOP/Day3OOPandModules/DailyChallenge/Circle` | Daily Challenge | Python | 2 | present (canonical) | [source](<../../Week2OOP/Day3OOPandModules/DailyChallenge/Circle>); runtime unverified |
-| `Week2OOP/Day3OOPandModules/DailyChallenge/Translator` | Daily Challenge | Python | 2 | present (noncanonical case: readme.md) | [source](<../../Week2OOP/Day3OOPandModules/DailyChallenge/Translator>); runtime unverified |
-| `Week2OOP/Day3OOPandModules/DailyChallenge/UserInfo` | Daily Challenge | Python | 2 | present (noncanonical case: readme.md) | [source](<../../Week2OOP/Day3OOPandModules/DailyChallenge/UserInfo>); runtime unverified |
+| `Week2OOP/Day3OOPandModules/DailyChallenge/Translator` | Daily Challenge | Python | 2 | present (canonical) | [source](<../../Week2OOP/Day3OOPandModules/DailyChallenge/Translator>); runtime unverified |
+| `Week2OOP/Day3OOPandModules/DailyChallenge/UserInfo` | Daily Challenge | Python | 2 | present (canonical) | [source](<../../Week2OOP/Day3OOPandModules/DailyChallenge/UserInfo>); runtime unverified |
 | `Week2OOP/Day3OOPandModules/Exercises/ExercisesXP` | Exercise | Python | 2 | present (canonical) | [source](<../../Week2OOP/Day3OOPandModules/Exercises/ExercisesXP>); runtime unverified |
-| `Week2OOP/Day3OOPandModules/Exercises/ExercisesXPGold` | Exercise | Python | 2 | present (noncanonical case: readme.md) | [source](<../../Week2OOP/Day3OOPandModules/Exercises/ExercisesXPGold>); runtime unverified |
-| `Week2OOP/Day3OOPandModules/Exercises/ExercisesXPNinja` | Exercise | Python | 2 | present (noncanonical case: readme.md) | [source](<../../Week2OOP/Day3OOPandModules/Exercises/ExercisesXPNinja>); runtime unverified |
-| `Week2OOP/Day4PythonFileIOJSONandAPI/DailyChallenge/TextAnalysis` | Daily Challenge | Python | 2 | present (noncanonical case: readme.md) | [source](<../../Week2OOP/Day4PythonFileIOJSONandAPI/DailyChallenge/TextAnalysis>); runtime unverified |
+| `Week2OOP/Day3OOPandModules/Exercises/ExercisesXPGold` | Exercise | Python | 2 | present (canonical) | [source](<../../Week2OOP/Day3OOPandModules/Exercises/ExercisesXPGold>); runtime unverified |
+| `Week2OOP/Day3OOPandModules/Exercises/ExercisesXPNinja` | Exercise | Python | 2 | present (canonical) | [source](<../../Week2OOP/Day3OOPandModules/Exercises/ExercisesXPNinja>); runtime unverified |
+| `Week2OOP/Day4PythonFileIOJSONandAPI/DailyChallenge/TextAnalysis` | Daily Challenge | Python | 2 | present (canonical) | [source](<../../Week2OOP/Day4PythonFileIOJSONandAPI/DailyChallenge/TextAnalysis>); runtime unverified |
 | `Week2OOP/Day4PythonFileIOJSONandAPI/Exercises/ExercisesXP` | Exercise | Python | 2 | present (canonical) | [source](<../../Week2OOP/Day4PythonFileIOJSONandAPI/Exercises/ExercisesXP>); runtime unverified |
-| `Week2OOP/Day4PythonFileIOJSONandAPI/Exercises/ExercisesXPGold` | Exercise | JSON \| Python | 5 | present (noncanonical case: readme.md) | [source](<../../Week2OOP/Day4PythonFileIOJSONandAPI/Exercises/ExercisesXPGold>); runtime unverified |
-| `Week2OOP/Day4PythonFileIOJSONandAPI/Exercises/ExercisesXPNinja` | Exercise | JSON \| Python | 5 | present (noncanonical case: readme.md) | [source](<../../Week2OOP/Day4PythonFileIOJSONandAPI/Exercises/ExercisesXPNinja>); runtime unverified |
+| `Week2OOP/Day4PythonFileIOJSONandAPI/Exercises/ExercisesXPGold` | Exercise | JSON \| Python | 5 | present (canonical) | [source](<../../Week2OOP/Day4PythonFileIOJSONandAPI/Exercises/ExercisesXPGold>); runtime unverified |
+| `Week2OOP/Day4PythonFileIOJSONandAPI/Exercises/ExercisesXPNinja` | Exercise | JSON \| Python | 5 | present (canonical) | [source](<../../Week2OOP/Day4PythonFileIOJSONandAPI/Exercises/ExercisesXPNinja>); runtime unverified |
 | `Week2OOP/Day5MiniProject/DailyChallenge/Modules` | Daily Challenge | Python | 6 | present (canonical) | [source](<../../Week2OOP/Day5MiniProject/DailyChallenge/Modules>); runtime unverified |
 | `Week2OOP/Day5MiniProject/DailyChallenge/OOPQuiz` | Daily Challenge | Python | 3 | present (canonical) | [source](<../../Week2OOP/Day5MiniProject/DailyChallenge/OOPQuiz>); runtime unverified |
 | `Week2OOP/Day5MiniProject/Exercises/AnagramChecker` | Mini Project | Python | 4 | present (canonical) | [source](<../../Week2OOP/Day5MiniProject/Exercises/AnagramChecker>); runtime unverified |
-| `Week2OOP/Day5MiniProject/Exercises/RockPaperScissors` | Mini Project | Python | 3 | present (noncanonical case: readme.md) | [source](<../../Week2OOP/Day5MiniProject/Exercises/RockPaperScissors>); runtime unverified |
-| `Week2OOP/Day5MiniProject/Exercises/WeatherApp` | Mini Project | Python | 3 | present (noncanonical case: readme.md) | [source](<../../Week2OOP/Day5MiniProject/Exercises/WeatherApp>); runtime unverified |
+| `Week2OOP/Day5MiniProject/Exercises/RockPaperScissors` | Mini Project | Python | 3 | present (canonical) | [source](<../../Week2OOP/Day5MiniProject/Exercises/RockPaperScissors>); runtime unverified |
+| `Week2OOP/Day5MiniProject/Exercises/WeatherApp` | Mini Project | Python | 3 | present (canonical) | [source](<../../Week2OOP/Day5MiniProject/Exercises/WeatherApp>); runtime unverified |
 | `Week2OOP/RemoteLearningOOP/DailyChallenge/AirManagement` | Daily Challenge | Python | 2 | present (canonical) | [source](<../../Week2OOP/RemoteLearningOOP/DailyChallenge/AirManagement>); runtime unverified |
 | `Week2OOP/RemoteLearningOOP/Exercises/MiniProjectVaccines` | Mini Project | Python | 2 | present (canonical) | [source](<../../Week2OOP/RemoteLearningOOP/Exercises/MiniProjectVaccines>); runtime unverified |
 | `Week3JavaScriptandDOM/Day1IntroductiontoJavaScript/DailyChallenge/BubbleSort` | Daily Challenge | JavaScript | 2 | present (canonical) | [source](<../../Week3JavaScriptandDOM/Day1IntroductiontoJavaScript/DailyChallenge/BubbleSort>); runtime unverified |
