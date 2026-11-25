@@ -23,7 +23,7 @@ Categories now support add, rename and delete. Deleting a category keeps its tas
 
 - [CategorySelector](src/features/categories/CategorySelector.jsx) reads Redux categories and the selected ID with useSelector.
 - [selectCategoryById](src/features/categories/categoriesSlice.js) memoizes category lookup.
-- [selectTasksByCategory and selectCompletedTasks](src/features/tasks/tasksSlice.js) memoize the selected or explicitly requested category's tasks and completed tasks.
+- [selectTasksByCategory and selectCompletedTasks](src/features/tasks/tasksSlice.js) memoize the selected or explicitly requested category's task list and numeric completed count. `selectCompletedTaskItems` preserves access to the completed records, and `selectCompletedCount` remains an alias for the count.
 - [TaskList](src/features/tasks/TaskList.jsx) uses those selectors and stable useCallback handlers for add, edit, delete and completion.
 - Progress includes Uncategorized, so task counts remain consistent after category deletion.
 
@@ -36,6 +36,10 @@ Categories now support add, rename and delete. Deleting a category keeps its tas
 | `selectProgressByCategory` | `{ name, total, done, percent }` for every category                                                |
 | `TaskList` + `TaskItem`    | The add form (with a category menu when "All" is selected) and memoized rows                       |
 | `ProgressPanel`            | One `role="progressbar"` bar per category                                                          |
+
+## Verification
+
+Run `npm test` for numeric completed counts, explicit and selected category filters, memoized completed records, category/task CRUD, immutable prior state and the Uncategorized fallback. `npm run build` compiles the normal UI. The existing `selectCompletedCount` component API remains supported.
 
 ## 🧠 What I learned
 
