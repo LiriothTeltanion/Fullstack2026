@@ -8,61 +8,23 @@
 
 </div>
 
-Week 2 of the Developers Institute full-stack bootcamp was all about object-oriented Python: classes, inheritance, modules, dunder methods, files, JSON and a first taste of APIs. Each day folder has its own README with the details.
+Week 2 of the Developers Institute full-stack bootcamp was all about object-oriented Python: classes, inheritance, dunder methods, modules, files, JSON and a first taste of APIs.
 
-## 📅 Days
+## Contents
 
-| Day | Topic | What I built |
-|-----|-------|--------------|
-| [Day 1](Day1IntroductiontoOOP/) | Intro to OOP | Cats, dogs, a song printer, a zoo and Old MacDonald's farm |
-| [Day 2](Day2OOPInheritanceEncapsulationPolymorphism/) | Inheritance, encapsulation, polymorphism | Pet hierarchy, dog fights, family tree, a pagination class |
-| [Day 3](Day3OOPandModules/) | OOP and modules | Currency with operators, Circle class, translator, user info |
-| [Day 4](Day4PythonFileIOJSONandAPI/) | File I/O, JSON and APIs | Sentence generator, menu manager, Giphy calls, text analysis |
-| [Day 5](Day5MiniProject/) | Mini projects | Anagram checker, rock-paper-scissors, weather app, card deck, timer module |
-| [Remote learning](RemoteLearningOOP/) | Extra practice | Vaccines mini project, air management challenge |
+| Day | What I built |
+|---|---|
+| [`Day1IntroductiontoOOP/`](Day1IntroductiontoOOP/) | Cats, dogs, a song printer, a zoo and Old MacDonald's farm |
+| [`Day2OOPInheritanceEncapsulationPolymorphism/`](Day2OOPInheritanceEncapsulationPolymorphism/) | Pet classes, dog fights, a family roster, bank accounts, Game of Life and a pagination class |
+| [`Day3OOPandModules/`](Day3OOPandModules/) | Currency with operators, temperature classes, a `Circle` class, a translator and user info sorting |
+| [`Day4PythonFileIOJSONandAPI/`](Day4PythonFileIOJSONandAPI/) | Sentence generator, JSON menu managers, Giphy calls and text analysis |
+| [`Day5MiniProject/`](Day5MiniProject/) | Anagram checker, rock-paper-scissors, weather app, deck of cards and a page load timer |
+| [`RemoteLearningOOP/`](RemoteLearningOOP/) | Vaccines queue mini project and the air management challenge |
 
-## 🚀 How to run
-
-Every exercise is a standalone script. From the `Week2OOP` folder, for example:
-
-```bash
-python Day1IntroductiontoOOP/Exercises/ExercisesXP/exercisesxp.py
-python Day5MiniProject/Exercises/AnagramChecker/anagrams.py
-python Day5MiniProject/Exercises/RockPaperScissors/rockpaperscissors.py
-```
-
-The timer module in Day 5 has tests (it needs `requests`):
-
-```bash
-cd Day5MiniProject/DailyChallenge/Modules
-pip install -r requirements.txt
-python -m unittest discover -s tests
-```
-
-## 💡 Key ideas
-
-```python
-class Animal:
-    def __init__(self, name: str):
-        self.name = name
-
-class Dog(Animal):
-    def bark(self) -> str:
-        return f"{self.name} says woof!"
-```
-
-- Classes, `__init__` and instance methods
-- Inheritance with `super()` and method overriding
-- Properties and setters (the Circle class uses them for radius and diameter)
-- Dunder methods like `__str__`, `__add__` and `__lt__`
-- Reading and writing files with `with`, and loading/saving JSON
-
-## 🎓 What I learned
-
-OOP finally clicked for me this week. Splitting a program into small classes made the Day 5 projects much easier to keep organized, and writing my own `__add__` and `__lt__` showed me how Python's built-in operators actually work under the hood.
+---
 
 ## 👤 Author
 
-**Kevin "Lirioth" Cusnir**
-Full-Stack Development Bootcamp, Developers Institute
-https://github.com/LiriothTeltanion/Fullstack2026
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 2 - Object-Oriented Programming

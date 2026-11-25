@@ -1,4 +1,4 @@
-# Exercise3 Drag Drop
+# 🧪 Exercise 3 - Drag and Drop
 
 <div align="center">
 
@@ -8,34 +8,32 @@
 
 </div>
 
-> Create accessible browser interactions using DOM selection, events, forms, and state updates.
+Drag a red box into a yellow target. Dropped fully inside, it centers itself; dropped outside, it jumps back to where it started.
 
-## Learning goals
+## ▶️ How to run
 
-- Practice: HTML, JavaScript.
-- Validate normal inputs, edge cases, and failure states.
-- Be able to explain the solution without reading the code line-by-line.
+Open `index.html` in a browser (or use `npm run dev` from the repo root and open this folder), then drag the red box with the mouse or a finger.
 
-## How to run
+## 🎯 The challenge
 
-```text
-# Open index.html in a browser or serve the repository locally
-node js/app.js
-```
+| Handler / function | What it does |
+|---|---|
+| `pointerdown` | Starts dragging, captures the pointer and remembers where the pointer and the box started. |
+| `pointermove` | Moves the box by the distance the pointer has travelled. |
+| `isInsideTarget(el, tgt)` | Compares the two `getBoundingClientRect()` boxes to see if the box is fully inside the target. |
+| `pointerup` | Centers the box in the target, or sends it back to its original place. |
 
-## Files
+## 🧠 What I learned
 
-- `index.html`
-- `js/app.js`
+- Pointer events work for both mouse and touch with the same code
+- `setPointerCapture` keeps the drag going even if the pointer leaves the box
+- `getBoundingClientRect()` gives the position and size I need to check overlaps
+- Saving the starting `offsetLeft` and `offsetTop` makes "snap back" easy
 
-## Verification checklist
+---
 
-- [ ] Main flow works
-- [ ] Invalid input is handled
-- [ ] Code is formatted
-- [ ] Tests or repeatable manual checks exist
-- [ ] README matches the current implementation
+## 👤 Author
 
-## Next improvement
-
-Describe one concrete refactor, test, accessibility improvement, or product enhancement.
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Remote Learning - JavaScript and the DOM - Exercise 3

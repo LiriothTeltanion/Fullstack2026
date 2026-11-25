@@ -1,4 +1,4 @@
-# 🧪 Day 1 Exercises
+# 📚 Exercises
 
 <div align="center">
 
@@ -6,15 +6,18 @@
 
 </div>
 
-The Day 1 exercises come in three levels:
+The Day 1 exercises in three levels, each with its own unit tests.
 
-- [🥉 Exercises XP](ExercisesXP/) — nine core exercises, covered by [10 tests](../../../tests/python/test_week1_day1_exercises_xp.py).
-- [🥇 Exercises XP Gold](ExercisesXPGold/) — two extra exercises, covered by [6 tests](../../../tests/python/test_week1_day1_exercises_xp_gold.py).
-- [🥷 Exercises XP Ninja](ExercisesXPNinja/) — five harder ones, covered by [7 tests](../../../tests/python/test_week1_day1_exercises_xp_ninja.py).
+## Contents
 
-The [Daily Challenge](../DailyChallenge/) has its own folder.
+- [`ExercisesXP/`](ExercisesXP/) — nine core exercises, covered by [10 tests](../../../tests/python/test_week1_day1_exercises_xp.py)
+- [`ExercisesXPGold/`](ExercisesXPGold/) — two extra exercises, covered by [6 tests](../../../tests/python/test_week1_day1_exercises_xp_gold.py)
+- [`ExercisesXPNinja/`](ExercisesXPNinja/) — five harder ones, covered by [7 tests](../../../tests/python/test_week1_day1_exercises_xp_ninja.py)
+
+---
 
 ## 👤 Author
 
 **Kevin Cusnir 'Lirioth'**  
-Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 1 Day 1 - Starting with Python - Exercises

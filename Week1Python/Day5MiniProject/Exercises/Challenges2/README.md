@@ -1,4 +1,4 @@
-# 🎨 Challenges Set 2 - Pattern Drawing & Algorithm Analysis
+# 🧩 Challenges 2
 
 <div align="center">
 
@@ -8,19 +8,9 @@
 
 </div>
 
-Two exercises: drawing star patterns with loops, and reading a short sorting snippet line by line to understand what it does.
+Two exercises: drawing star patterns with loops, and reading a short sorting snippet line by line to understand what it does. [main.py](main.py) runs both; the code lives in [src/patterns.py](src/patterns.py) and [src/ex2analysis.py](src/ex2analysis.py).
 
-## Files
-
-```
-Challenges2/
-├── main.py              # Runs both exercises
-└── src/
-    ├── patterns.py      # pattern_a(), pattern_b(), pattern_c()
-    └── ex2analysis.py   # Annotated code + step-by-step trace
-```
-
-## How to run
+## ▶️ How to run
 
 From this folder:
 
@@ -28,25 +18,25 @@ From this folder:
 python main.py
 ```
 
-## Exercise 1: Patterns
-
-Each function builds the lines with string multiplication (`" " * n`, `"*" * n`), prints the pattern and also returns it as a string.
-
 ```
-Pattern A      Pattern B      Pattern C
-  *                *          *
- ***              **          **
-*****            ***          ***
-                ****          ****
-               *****          *****
-                              *****
-                               ****
-                                ***
-                                 **
-                                  *
+-> Pattern A
+  *
+ ***
+*****
+
+-> Pattern B
+    *
+   **
+  ***
+ ****
+*****
+...
+Final Output: [2, 12, 24, 233, 354]
 ```
 
-The pyramid uses `h - i` spaces and `2 * i - 1` stars per row:
+## 🎯 The challenge
+
+**Exercise 1: Patterns.** `pattern_a()` draws a pyramid, `pattern_b()` a right-aligned triangle and `pattern_c()` a triangle that grows to five stars and then shrinks back to the right. Each function builds the lines with string multiplication (`" " * n`, `"*" * n`), prints the pattern and also returns it as a string. The pyramid uses `h - i` spaces and `2 * i - 1` stars per row:
 
 ```python
 for i in range(1, h + 1):
@@ -55,9 +45,7 @@ for i in range(1, h + 1):
     lines.append(spaces + stars)
 ```
 
-## Exercise 2: Code analysis
-
-The exercise gave this code and asked what it does:
+**Exercise 2: Code analysis.** The exercise gave this code and asked what it does:
 
 ```python
 my_list = [2, 24, 12, 354, 233]
@@ -73,14 +61,16 @@ print(my_list)
 
 It's a variant of selection sort that swaps as soon as it finds a smaller value, instead of once at the end of the inner loop. `ex2analysis.py` holds my commented version of the code and a function that records `i`, `j`, `minimum` and the list after every check or swap. The trace shows only two swaps are needed, and the final output is `[2, 12, 24, 233, 354]`.
 
-## What I learned
+## 🧠 What I learned
 
 - Controlling rows and spacing with loops and simple formulas
 - Returning values instead of only printing, so functions can be reused
 - Tracing code by hand (and in code) to understand an algorithm before trusting it
 
+---
+
 ## 👤 Author
 
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
-Week 1 Day 5 - Mini Project
+Week 1 Day 5 - Mini-projects - Challenges 2

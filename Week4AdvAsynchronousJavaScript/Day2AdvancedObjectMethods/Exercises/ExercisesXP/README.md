@@ -1,4 +1,4 @@
-# Objects, Destructuring & Classes — Exercises XP (TypeScript) 🧠🧩
+# 🥉 Exercises XP
 
 <div align="center">
 
@@ -8,30 +8,19 @@
 
 </div>
 
-Practice **object destructuring**, **object/array methods**, and **classes with inheritance**.
+Six exercises in one TypeScript file about object destructuring, object methods, classes and object references.
 
-## ✅ What’s inside
-- 1️⃣ Location destructuring → formatted string with lat/lng
-- 2️⃣ `displayStudentInfo({first,last})` → "Your full name is ..."
-- 3️⃣ Users to entries (and IDs ×2) using `Object.entries` + `map`
-- 4️⃣ `Person` class; `typeof new Person('John')` → `"object"`
-- 5️⃣ `Dog` → `Labrador` (correct constructor uses `super(name)` then sets fields)
-- 6️⃣ Equality & references + `Animal`/`Mammal` with `sound()` → “Moooo I'm a cow, named Lily and I'm brown and white”
+## ▶️ How to run
 
-## 📂 Files
-- `ObjectsDestructuringClassesXP.ts` — all solutions with a small demo block (guarded).
+From this folder:
 
-## ▶️ Run locally
 ```bash
-# Using ts-node
-npx ts-node ObjectsDestructuringClassesXP.ts
-
-# Or compile to JS and run
-npx tsc ObjectsDestructuringClassesXP.ts
-node ObjectsDestructuringClassesXP.js
+npx tsc ObjectsDestructuringClassesXP.ts --module commonjs --outDir ~/tmp-ts
+node ~/tmp-ts/ObjectsDestructuringClassesXP.js
 ```
 
-## 🧪 Expected snippets
+The demo block only runs as CommonJS (`require.main === module`), and inside this repository `.js` files are ES modules, so I compile it to a folder outside the repo first. `tsc` also warns (TS2839) that `[2] === [2]` and `{} === {}` are always false, which is the point of exercise 6, and still writes the file.
+
 ```
 I am John Doe from Vancouver, Canada. Latitude(49.2827), Longitude(-123.1207)
 Your full name is Elie Schoppik
@@ -43,3 +32,26 @@ eqObjects ({} === {}): false
 vals: { val2: 4, val3: 4, val4: 5 }
 Moooo I'm a cow, named Lily and I'm brown and white
 ```
+
+## 🎯 The challenge
+
+1. **Location** — nested destructuring pulls the name, city, country and coordinates out of `person`.
+2. **`displayStudentInfo({ first, last })`** — destructures its parameter and returns `Your full name is ...`.
+3. **Users** — `Object.entries(users)` turns the object into pairs, then `map` doubles every ID.
+4. **`Person`** — `typeof new Person("John")` is `"object"`.
+5. **`Labrador extends Dog`** — the right constructor calls `super(name)` before setting `size`.
+6. **References** — two arrays or objects that look the same are not equal; `object2` and `object3` point to `object1`, so changing it changes them. `Mammal.sound()` builds the cow sentence.
+
+## 🧠 What I learned
+
+- Destructuring can rename (`name: pName`) and go several levels deep
+- `===` on objects compares references, not contents
+- A subclass constructor must call `super()` before using `this`
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 4 Day 2 - Advanced Object Methods - Exercises XP

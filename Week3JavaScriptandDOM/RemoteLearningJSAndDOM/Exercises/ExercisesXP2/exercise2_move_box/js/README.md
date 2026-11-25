@@ -1,4 +1,4 @@
-# Js
+# 📜 Scripts - Move the Box
 
 <div align="center">
 
@@ -8,16 +8,16 @@
 
 </div>
 
-JavaScript modules for this exercise.
+The browser script for Move the Box. It needs the page, so open `../index.html` instead of running it with `node`.
 
 ## Contents
 
-- [`app.js`](app.js)
+- [`app.js`](app.js) — `myMove()` slides the red box 1px per millisecond until the right edge
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-node Week3JavaScriptandDOM/RemoteLearningJSAndDOM/Exercises/ExercisesXP2/exercise2_move_box/js/app.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Remote Learning - JavaScript and the DOM - Move the Box

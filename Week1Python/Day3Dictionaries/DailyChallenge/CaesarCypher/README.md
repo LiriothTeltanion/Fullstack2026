@@ -1,4 +1,4 @@
-# Daily Challenge GOLD — Caesar Cipher 🔐🧠
+# 🌟 Daily Challenge Gold - Caesar Cipher
 
 <div align="center">
 
@@ -8,39 +8,44 @@
 
 </div>
 
-A clean Python implementation of the **Caesar cipher** with **encrypt**, **decrypt**, and **brute-force** modes.
+A Caesar cipher in [caesarcipher.py](caesarcipher.py) with encrypt, decrypt and brute-force modes. It works with an interactive menu or with command-line flags.
 
-## ✅ Features
-- Shifts letters with wrap‑around (A↔Z, a↔z), preserves case.
-- Leaves non‑letters (spaces, punctuation, digits) unchanged.
-- Works **interactively** or with **CLI flags**.
-- Accepts positive or negative shifts.
+## ▶️ How to run
 
-## ▶️ Run (interactive)
+Interactive menu (choose `E`ncrypt, `D`ecrypt, `B`rute-force or `Q`uit):
+
 ```bash
 python caesarcipher.py
 ```
-Then choose: **E**ncrypt / **D**ecrypt / **B**rute‑force / **Q**uit.
 
-## ▶️ Run (CLI)
+With flags:
+
 ```bash
-# Encrypt
 python caesarcipher.py --mode encrypt --shift 3 --text "Hello, World!"
-# -> Khoor, Zruog!
-
-# Decrypt
+# Khoor, Zruog!
 python caesarcipher.py --mode decrypt --shift 3 --text "Khoor, Zruog!"
-# -> Hello, World!
-
-# Brute-force (unknown shift)
+# Hello, World!
 python caesarcipher.py --mode brute --text "Khoor, Zruog!"
+# shift= 0: Khoor, Zruog!
+# ...
+# shift= 3: Hello, World!
 ```
 
-## 🧪 How it works
-For each letter: convert to a 0–25 index, add the shift, wrap modulo 26, and convert back. Non‑letters pass through untouched.
+## 🎯 The challenge
 
-## 📝 File
-- `caesarcipher.py` — single‑file solution (no external deps).
+| Function | What it does |
+|---|---|
+| `_shift_char(ch, shift)` | Turns a letter into a 0-25 index, adds the shift, wraps with `% 26` and turns it back. Case is kept, and spaces, digits and punctuation pass through unchanged. |
+| `encrypt(text, shift)` | Shifts every letter forward. Negative shifts work too. |
+| `decrypt(text, shift)` | Shifts every letter back. |
+| `brute_force(text)` | Tries all 26 shifts, so an unknown shift can be read by eye. |
+| `interactive_main()` / `cli_main()` | The menu loop, and the `argparse` version used when flags are given. |
+
+## 🧠 What I learned
+
+- `ord()` and `chr()` turn letters into numbers and back
+- The modulo `% 26` makes Z wrap around to A
+- `argparse` gives a script real command-line flags with very little code
 
 ---
 
@@ -48,8 +53,4 @@ For each letter: convert to a 0–25 index, add the shift, wrap modulo 26, and c
 
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
-Week 1 Day 3 - Daily Challenge
-
----
-
-Have fun encrypting like Julius Caesar! 🏺✨
+Week 1 Day 3 - Dictionaries - Daily Challenge Gold

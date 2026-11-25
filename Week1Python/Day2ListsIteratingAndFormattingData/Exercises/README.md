@@ -1,4 +1,4 @@
-# Exercises
+# 📚 Exercises
 
 <div align="center">
 
@@ -8,20 +8,18 @@
 
 </div>
 
-Organize practical exercises with clear goals, execution paths, validation, and improvement guidance.
+The Day 2 exercises in three levels, all plain Python scripts that run from the terminal.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/)
-- [`ExercisesXPGold/`](ExercisesXPGold/)
-- [`ExercisesXPNinja/`](ExercisesXPNinja/)
+- [`ExercisesXP/`](ExercisesXP/) — 10 exercises on sets, tuples, list methods, loops and interactive pricing
+- [`ExercisesXPGold/`](ExercisesXPGold/) — 9 exercises: list concatenation, ranges, `index()`, `max()` and a guessing game
+- [`ExercisesXPNinja/`](ExercisesXPNinja/) — 4 exercises: a formula, list statistics, paragraph analysis and word frequency
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python Week1Python/Day2ListsIteratingAndFormattingData/Exercises/ExercisesXP/exercisesxp.py
-python Week1Python/Day2ListsIteratingAndFormattingData/Exercises/ExercisesXPGold/exercisesxpgold.py
-python Week1Python/Day2ListsIteratingAndFormattingData/Exercises/ExercisesXPNinja/exercisesxpninja.py
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 1 Day 2 - Lists, Iteration and Data Formatting - Exercises

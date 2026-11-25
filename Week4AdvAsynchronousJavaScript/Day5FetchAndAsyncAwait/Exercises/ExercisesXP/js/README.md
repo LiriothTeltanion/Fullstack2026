@@ -1,4 +1,4 @@
-# Js
+# 📜 Scripts - Exercises XP
 
 <div align="center">
 
@@ -8,17 +8,17 @@
 
 </div>
 
-JavaScript modules for this exercise.
+The scripts for the Day 5 Exercises XP page. They run in the browser through `../index.html`, not with Node.
 
 ## Contents
 
-- [`app.js`](app.js)
-- [`config.example.js`](config.example.js)
+- [`app.js`](app.js) — exercises 1 to 4, `handleStatus()` and the output panel
+- [`config.example.js`](config.example.js) — template to copy to `config.js` (git-ignored) with your own Giphy key
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-node Week4AdvAsynchronousJavaScript/Day5FetchAndAsyncAwait/Exercises/ExercisesXP/js/app.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 4 Day 5 - Fetch and Async/Await - Exercises XP

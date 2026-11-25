@@ -1,4 +1,4 @@
-# Mini Project Coloring Game
+# 🎮 Mini Project - Coloring Game
 
 <div align="center">
 
@@ -8,34 +8,37 @@
 
 </div>
 
-> Create accessible browser interactions using DOM selection, events, forms, and state updates.
+A pixel drawing board: pick a color, then click and drag over the grid to paint the squares.
 
-## Learning goals
+## ▶️ How to run
 
-- Practice: CSS, HTML, JavaScript.
-- Validate normal inputs, edge cases, and failure states.
-- Be able to explain the solution without reading the code line-by-line.
+Open `index.html` in a browser (or run `npm run dev` from the repo root and open this folder at `http://localhost:8000/`).
 
-## How to run
+## 🎯 The challenge
 
-```text
-# Open index.html in a browser or serve the repository locally
-```
+| Function / handler | What it does |
+|---|---|
+| `build(size)` | Empties the grid and fills it with `size × size` cells, using a document fragment. |
+| `paint(target)` | Sets the cell background to the current color. |
+| `isCell(element)` | Checks that the mouse is over a grid cell. |
+| `mousedown` / `mouseup` on the page | Turn the `drawing` flag on and off, so dragging paints only while the button is held. |
+| `mouseover` on the grid | Paints each cell the mouse passes while `drawing` is on. |
 
-## Files
+- The color input and 7 quick swatches change the color.
+- The size menu rebuilds the grid at 8, 16, 24 or 32 squares per side (16 by default).
+- **Clear** removes the color from every cell.
 
-- `index.html`
-- `script.js`
-- `styles.css`
+## 🧠 What I learned
 
-## Verification checklist
+- One listener on the grid can handle every cell (event delegation)
+- A simple `true` / `false` flag turns a click into click-and-drag drawing
+- `createDocumentFragment()` adds hundreds of cells to the page in one step
+- CSS Grid with `repeat(size, minmax(0, 1fr))` keeps the squares even
 
-- [ ] Main flow works
-- [ ] Invalid input is handled
-- [ ] Code is formatted
-- [ ] Tests or repeatable manual checks exist
-- [ ] README matches the current implementation
+---
 
-## Next improvement
+## 👤 Author
 
-Describe one concrete refactor, test, accessibility improvement, or product enhancement.
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Day 5 - Mini-projects - Mini Project

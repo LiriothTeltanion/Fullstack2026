@@ -1,4 +1,4 @@
-# Exercises XP Gold — Classes/Objects + Files + Giphy API 🤹‍♀️
+# 🥇 Exercises XP Gold
 
 <div align="center">
 
@@ -8,35 +8,49 @@
 
 </div>
 
-Files in this folder:
-- `menumanager.py` — data layer for the Restaurant Menu Manager (JSON I/O + add/remove).
-- `menueditor.py` — UI loop that only calls `MenuManager` methods (encapsulation honored).
-- `restaurantmenu.json` — seeded with the provided menu.
-- `giphyexercises.py` — solutions for Giphy API #1 and #2 (requests + f-strings + filters).
+A restaurant menu manager saved in JSON, and two exercises with the Giphy API.
 
-## Exercise 1 — Restaurant Menu Manager
-Run the UI:
+## ▶️ How to run
+
+Run both from this folder, because the menu file path is relative:
+
 ```bash
 python menueditor.py
 ```
-- Shows a small menu, lets you **show**, **add**, **remove**, then **save & exit**.
-- The UI knows nothing about the JSON path; `MenuManager` encapsulates file I/O.
-- Changes persist to `restaurantmenu.json` when you choose **Save & Exit**.
 
-## Exercise 2 — Giphy API #1
-What it does:
-- Builds the URL with **f-strings** and variables.
-- Fetches `q=hilarious` with `rating=g`.
-- Returns JSON when status code = 200.
-- Filters GIFs to **height > 100**, returns **length** of that filtered set, and only the **first 10** items.
+```text
+=== Exercise Menu Manager ===
+1) Show restaurant menu 🍽️
+2) Add an item ➕
+3) Remove an item ➖
+4) Save & Exit 💾🚪
+Choose an option (1-4):
+```
 
-Try it from the helper demo:
+The Giphy exercises need `requests` and your own key in the `GIPHY_API_KEY` environment variable (see [`.env.example`](../../../../.env.example)):
+
 ```bash
+pip install requests
 python giphyexercises.py
 ```
-(The script prints the total filtered count and the first 10 IDs.)
 
-## Exercise 3 — Giphy API #2
-From the same `giphyexercises.py`, it will ask for a search term:
-- If empty, or if the search yields no results / API error, it returns **trending** GIFs and notes the fallback.
-- Reads the API key from the `GIPHY_API_KEY` environment variable (see `.env.example` at the repo root), so the key never goes into Git.
+## 🎯 The challenge
+
+1. **Restaurant menu manager** - [`menumanager.py`](menumanager.py) owns the JSON file: it loads [`restaurantmenu.json`](restaurantmenu.json), adds items (an existing name just gets a new price), removes items with `del` and saves. [`menueditor.py`](menueditor.py) is only the menu loop and never touches the file path; changes are written when you pick Save & Exit
+2. **Giphy API #1** - `search_hilarious()` builds the URL with f-strings, searches "hilarious" with rating `g`, keeps only GIFs taller than 100 px and returns the first 10 plus the filtered count
+3. **Giphy API #2** - `search_or_trending(term)` searches the term you type, and falls back to trending GIFs when the term is empty, the API fails or there are no results
+
+## 🧠 What I learned
+
+- Splitting data code and menu code into two files means each one has a single job
+- `with open(...)` together with `json.load` and `json.dump` is all the file handling a menu needs
+- Checking `status_code` before calling `.json()` avoids crashes on a bad response
+- API keys belong in environment variables, never in the code
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 2 Day 4 - File I/O, JSON and APIs - Exercises XP Gold

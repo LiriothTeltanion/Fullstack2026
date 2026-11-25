@@ -1,4 +1,4 @@
-# Js
+# 📜 Scripts - Car Inventory
 
 <div align="center">
 
@@ -8,16 +8,16 @@
 
 </div>
 
-JavaScript modules for this exercise.
+The script for the Car Inventory page. It uses `document`, so it runs in the browser through `../index.html`, not with Node.
 
 ## Contents
 
-- [`app.js`](app.js)
+- [`app.js`](app.js) — the inventory data, `getCarHonda()`, `sortCarInventoryByYear()` and the button handlers
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-node Week4AdvAsynchronousJavaScript/Day1AdvancedArrayMethods/DailyChallenge/CarInventory/js/app.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 4 Day 1 - Advanced Array Methods - Car Inventory

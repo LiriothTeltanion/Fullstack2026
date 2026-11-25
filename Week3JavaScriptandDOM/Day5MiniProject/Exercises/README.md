@@ -1,4 +1,4 @@
-# Exercises
+# 📚 Exercises
 
 <div align="center">
 
@@ -8,18 +8,17 @@
 
 </div>
 
-Create interactive browser experiences with JavaScript, DOM events, accessibility, and responsive behavior.
+The two mini projects of Day 5.
 
 ## Contents
 
-- [`drumset-mini/`](drumset-mini/)
-- [`MiniProjectColoringGame/`](MiniProjectColoringGame/)
+- [`MiniProjectColoringGame/`](MiniProjectColoringGame/) — click and drag to paint a pixel grid
+- [`drumset-mini/`](drumset-mini/) — nine drum pads played with the keyboard or the mouse
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python -m http.server 8000
-node Week3JavaScriptandDOM/Day5MiniProject/Exercises/MiniProjectColoringGame/script.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Day 5 - Mini-projects - Exercises

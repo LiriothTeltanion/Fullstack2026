@@ -1,4 +1,4 @@
-# Exercises
+# 📚 Exercises
 
 <div align="center">
 
@@ -8,18 +8,17 @@
 
 </div>
 
-Practice relational modeling, safe queries, joins, constraints, and persistent data workflows.
+The Day 3 SQL exercises, both written for the `dvdrental` sample database.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/)
-- [`ExercisesXPGold/`](ExercisesXPGold/)
+- [`ExercisesXP/`](ExercisesXP/) — languages, `new_film` and `customer_review` with `ON DELETE CASCADE`, outstanding rentals
+- [`ExercisesXPGold/`](ExercisesXPGold/) — unreturned rentals, a view, and viewing time per store
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-psql -f Week6DatabasesAndNodejs/Day3DatabaseConcepts2/Exercises/ExercisesXP/xp_dvdrental_relationships.sql
-psql -f Week6DatabasesAndNodejs/Day3DatabaseConcepts2/Exercises/ExercisesXPGold/xp_gold_dvdrental.sql
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 6 Day 3 - Database Concepts II - Exercises

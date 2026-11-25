@@ -1,4 +1,4 @@
-# Daily Challenge
+# 💪 Daily Challenges
 
 <div align="center">
 
@@ -8,16 +8,16 @@
 
 </div>
 
-Solve an independent daily challenge that reinforces the current lesson through focused problem solving.
+The remote learning daily challenge for the OOP week.
 
 ## Contents
 
-- [`AirManagement/`](AirManagement/)
+- [`AirManagement/`](AirManagement/) — airlines, airplanes, flights and airports with date-based schedules
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python Week2OOP/RemoteLearningOOP/DailyChallenge/AirManagement/air_management.py
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 2 Remote Learning - Object-Oriented Programming - Daily Challenges

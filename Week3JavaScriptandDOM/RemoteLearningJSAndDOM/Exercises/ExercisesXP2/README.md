@@ -1,4 +1,4 @@
-# 🥉 Exercises XP 2 — Timers, Movement and Drag-and-Drop
+# 🥉 Exercises XP 2
 
 <div align="center">
 
@@ -8,21 +8,18 @@
 
 </div>
 
-Create interactive browser experiences with JavaScript, DOM events, accessibility, and responsive behavior.
+Three exercises on timers, movement and drag and drop. Each folder has its own `index.html` and `js/`.
 
 ## Contents
 
-- [`exercise1_timer/`](exercise1_timer/)
-- [`exercise2_move_box/`](exercise2_move_box/)
-- [`exercise3_drag_drop/`](exercise3_drag_drop/)
+- [`exercise1_timer/`](exercise1_timer/) — `setTimeout` and a paragraph interval that stops at 5
+- [`exercise2_move_box/`](exercise2_move_box/) — slide a box 1px per millisecond
+- [`exercise3_drag_drop/`](exercise3_drag_drop/) — drag a box into a target with pointer events
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python -m http.server 8000
-node Week3JavaScriptandDOM/RemoteLearningJSAndDOM/Exercises/ExercisesXP2/exercise1_timer/js/app.js
-```
-
-Exercises XP 2 — Timer, Move the Box, Drag & Drop. Open each folder's index.html.
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Remote Learning - JavaScript and the DOM - Exercises XP 2

@@ -1,4 +1,4 @@
-# Daily Challenge
+# 💪 Daily Challenges
 
 <div align="center">
 
@@ -8,17 +8,17 @@
 
 </div>
 
-Solve an independent daily challenge that reinforces the current lesson through focused problem solving.
+The two Day 5 daily challenges.
 
 ## Contents
 
-- [`AdvancedAlgorithm/`](AdvancedAlgorithm/)
-- [`Challenges/`](Challenges/)
+- [`Challenges/`](Challenges/) — sort comma-separated words and find the longest word in a sentence
+- [`AdvancedAlgorithm/`](AdvancedAlgorithm/) — two-sum on 20,000 random numbers, hash table vs two pointers
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python Week1Python/Day5MiniProject/DailyChallenge/AdvancedAlgorithm/main.py
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 1 Day 5 - Mini-projects - Daily Challenges

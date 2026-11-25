@@ -1,4 +1,4 @@
-# Exercises
+# 📚 Exercises
 
 <div align="center">
 
@@ -8,21 +8,19 @@
 
 </div>
 
-Organize practical exercises with clear goals, execution paths, validation, and improvement guidance.
+The Day 4 function exercises: three XP levels and one timed challenge.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/)
-- [`ExercisesXPGold/`](ExercisesXPGold/)
-- [`ExercisesXPNinja/`](ExercisesXPNinja/)
-- [`TimedChallenge1/`](TimedChallenge1/)
+- [`ExercisesXP/`](ExercisesXP/) — seven warm-ups: defaults, keyword arguments, `random`, list mutation, a weather report
+- [`ExercisesXPGold/`](ExercisesXPGold/) — retirement check with dates, X + XX + XXX + XXXX, a dice simulation
+- [`ExercisesXPNinja/`](ExercisesXPNinja/) — name capitalization, Morse code, a star box with `*args`, insertion sort
+- [`TimedChallenge1/`](TimedChallenge1/) — counting how many times a character appears in a string
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python Week1Python/Day4Functions/Exercises/ExercisesXP/exercisesxp.py
-python Week1Python/Day4Functions/Exercises/ExercisesXPGold/xpgoldfunctions.py
-python Week1Python/Day4Functions/Exercises/ExercisesXPNinja/xpninjafunctionssingle.py
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 1 Day 4 - Functions - Exercises

@@ -1,4 +1,4 @@
-# 🥇 Exercises XP Gold — String Repetition and Seasons
+# 🥇 Exercises XP Gold
 
 <div align="center">
 
@@ -6,63 +6,67 @@
 
 </div>
 
-Two extra Day 1 exercises in [exercisesxpgold.py](exercisesxpgold.py).
+Two extra Day 1 exercises in [exercisesxpgold.py](exercisesxpgold.py): printing repeated lines with one `print()`, and turning a month number into a season.
 
-## 1️⃣ Hello World — I love Python
+## ▶️ How to run
 
-One single `print()` builds all eight lines with string multiplication:
-
-```python
-print("Hello world\n" * 4 + "I love python\n" * 3 + "I love python")
-```
-
-The last "I love python" is added without `\n`, so the output ends cleanly.
-
-## 2️⃣ What is the season?
-
-The program asks for a month number (1–12) and prints the season. `get_valid_month()` keeps asking until the input is a whole number in range, and `get_season()` maps the month with tuple membership:
-
-```python
-if m in (3, 4, 5):
-    return "Spring"
-elif m in (6, 7, 8):
-    return "Summer"
-elif m in (9, 10, 11):
-    return "Autumn"
-elif m in (12, 1, 2):
-    return "Winter"
-else:
-    raise ValueError("month must be between 1 and 12")
+```bash
+python exercisesxpgold.py
 ```
 
 ```
+Hello world
+...
+I love python
 Enter month (1-12): 0
 Month must be between 1 and 12.
 Enter month (1-12): 4
 Spring
 ```
 
-## ▶️ Run
+## 🎯 The challenge
 
-```bash
-python exercisesxpgold.py
-```
+1. **Hello World - I love Python** - one single `print()` builds all eight lines with string multiplication:
+
+   ```python
+   print("Hello world\n" * 4 + "I love python\n" * 3 + "I love python")
+   ```
+
+   The last "I love python" is added without `\n`, so the output ends cleanly.
+
+2. **What is the season?** - `get_valid_month()` keeps asking until the input is a whole number from 1 to 12, and `get_season()` maps the month with tuple membership:
+
+   ```python
+   if m in (3, 4, 5):
+       return "Spring"
+   elif m in (6, 7, 8):
+       return "Summer"
+   elif m in (9, 10, 11):
+       return "Autumn"
+   elif m in (12, 1, 2):
+       return "Winter"
+   ```
 
 ## 🧪 Tests
 
-6 tests in [tests/python/test_week1_day1_exercises_xp_gold.py](../../../../tests/python/test_week1_day1_exercises_xp_gold.py) check the exact repeated output, all 12 months, invalid values and the retry loop. From the repository root:
+From the repository root:
 
 ```bash
 python -m unittest discover -s tests/python -p "test_week1_day1_exercises_xp_gold.py" -v
 ```
 
-## 💡 What I learned
+6 tests in [test_week1_day1_exercises_xp_gold.py](../../../../tests/python/test_week1_day1_exercises_xp_gold.py) check the exact repeated output, all 12 months, invalid values and the retry loop.
 
-- `"text\n" * n` replaces a pile of `print()` calls.
-- `if m in (3, 4, 5)` reads better than chaining `or`.
-- Keeping validation in its own function makes it easy to reuse and test.
+## 🧠 What I learned
+
+- `"text\n" * n` replaces a pile of `print()` calls
+- `if m in (3, 4, 5)` reads better than chaining `or`
+- Keeping validation in its own function makes it easy to reuse and test
+
+---
 
 ## 👤 Author
 
 **Kevin Cusnir 'Lirioth'**  
-Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 1 Day 1 - Starting with Python - Exercises XP Gold

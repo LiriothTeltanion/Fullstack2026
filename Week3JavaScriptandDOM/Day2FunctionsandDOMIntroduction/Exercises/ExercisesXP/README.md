@@ -1,4 +1,4 @@
-# Exercises XP — JavaScript (Functions, DOM, Loops)
+# 🥉 Exercises XP
 
 <div align="center">
 
@@ -8,30 +8,39 @@
 
 </div>
 
-Short & simple solutions (commented in English) for 7 exercises. One HTML runner with buttons prints results to `<pre>` blocks and the console.
+Seven exercises on functions and the DOM, with one page that runs each exercise and prints the result in a card and in the console.
 
-## Files
-- `index.html` — UI to run each exercise and display outputs; includes required DOM scaffolds for Exercises 5–7.
-- `script.js` — implementations for Exercises 1–7, plus helpers (`printOut`, `clearAll`, `runAll`).
+## ▶️ How to run
 
-## How to run
-1. Open `index.html` in your browser.
-2. Click **Run 1..7** or **Run ALL**. Check DevTools → Console too.
-3. Some tasks (E4) ask for input via `prompt()`.
+Open `index.html` in a browser (or use `npm run dev` from the repo root). Click **Run 1** … **Run 7**, **Run ALL** or **Clear**. Exercise 4 asks questions with `prompt()`.
 
-## Overview
-- **E1 Divisible by 23** — `displayNumbersDivisible(divisor=23)` loops 0..500, prints numbers & sum.
-- **E2 Shopping List** — builds total with `stock` & `prices`; decreases stock by 1 when purchased.
-- **E3 What's in my wallet?** — `changeEnough(price, [q,d,n,p])` computes total and returns boolean.
-- **E4 Vacations Costs** — prompts for hotel nights, destination, car days; prints itemized + total.
-- **E5 Users (DOM)** — manipulates lists (rename, remove, classes, styles, hide “Dan”, border “Richard”), and bonus “Hello x and y” when bg is light blue.
-- **E6 Change the navbar (DOM)** — renames id, appends “Logout”, prints first/last link text.
-- **E7 My Book List (DOM)** — renders 2 books with 100px images; details in red if already read.
+```
+Numbers:
+0 23 46 69 ... 483
+Sum: 5313
+```
 
-## Notes
-- Code favors clarity over micro-optimizations.
-- For E4, the “bonus” pattern is used: input prompts are only in `totalVacationCost()`.
-- For E5/E6, the exact given HTML is present in `index.html` under each exercise card.
+## 🎯 The challenge
 
-## License
-Educational use. © 2025 Developers Institute prompt.
+1. **Divisible by 23** – `displayNumbersDivisible(divisor = 23)` collects the numbers from 0 to 500 and their sum (5313).
+2. **Shopping List** – `myBill()` adds the price of each item that is in stock (`$5.5`, because apples are out) and lowers the stock by 1.
+3. **What's in my wallet?** – `changeEnough(price, [quarters, dimes, nickels, pennies])` returns `true`, `false`, `true` for the three samples.
+4. **Vacations Costs** – `hotelCost`, `planeRideCost` (London 183, Paris 220, other 300) and `rentalCarCost` (40 a day, 5% off after 10 days); `totalVacationCost()` asks for every input and keeps asking until it is valid.
+5. **Users** – rename `Pete` to `Richard`, remove `Sarah`, rename the first item of each list to `Kevin`, add classes and styles, then alert `Hello Kevin and Kevin`. The "hide Dan" step looks in the first list, so Dan stays visible.
+6. **Change the navbar** – rename the id to `socialNetworkNavigation`, add a `Logout` item and print the first and last link text.
+7. **My Book List** – render two books with a 100px cover; a book I already read gets red text.
+
+## 🧠 What I learned
+
+- Default parameters (`divisor = 23`) make a function easy to reuse
+- Small functions like `hotelCost()` keep the vacation total simple to read
+- `querySelectorAll`, `classList` and `style` cover most DOM changes
+- `createElement` + `appendChild` build new content from an array of objects
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Day 2 - Functions and DOM Introduction - Exercises XP

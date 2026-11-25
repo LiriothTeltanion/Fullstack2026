@@ -1,4 +1,4 @@
-# Daily Challenge
+# 💪 Daily Challenges
 
 <div align="center">
 
@@ -8,19 +8,17 @@
 
 </div>
 
-Solve an independent daily challenge that reinforces the current lesson through focused problem solving.
+The Day 5 daily challenges.
 
 ## Contents
 
-- [`Modules/`](Modules/)
-- [`OOPQuiz/`](OOPQuiz/)
+- [`Modules/`](Modules/) — a page load timer with `requests` and `time`, a small command-line tool and tests
+- [`OOPQuiz/`](OOPQuiz/) — short OOP quiz answers and a deck of cards with `Card` and `Deck` classes
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python Week2OOP/Day5MiniProject/DailyChallenge/Modules/cli.py
-python Week2OOP/Day5MiniProject/DailyChallenge/Modules/timer.py
-python Week2OOP/Day5MiniProject/DailyChallenge/OOPQuiz/deck.py
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 2 Day 5 - Mini-projects - Daily Challenges

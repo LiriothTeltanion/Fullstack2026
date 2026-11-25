@@ -1,4 +1,4 @@
-# Exercises XP Ninja — Inheritance 🧠🧬
+# 🥷 Exercises XP Ninja
 
 <div align="center">
 
@@ -8,41 +8,50 @@
 
 </div>
 
-I built Conway's Game of Life with inheritance, all in `exercisesxpninjainheritance.py`.
+Conway's Game of Life built with inheritance in `exercisesxpninjainheritance.py`: a fixed grid and a child class whose grid grows.
 
-## Classes
-- **GameOfLife** (fixed borders) — base class
-- **ExpandingGameOfLife** (ever-expandable) — subclass, grows the grid when activity reaches borders (up to `max_size`, default 10,000)
+## ▶️ How to run
 
-## Rules (recap)
-- Live cell with <2 neighbors → dies (underpopulation)  
-- Live cell with 2–3 neighbors → survives  
-- Live cell with >3 neighbors → dies (overpopulation)  
-- Dead cell with exactly 3 neighbors → becomes alive (reproduction)
-
-## Display
-- The grid is printed after each generation using `█` for live and `.` for dead.
-
-## Run
 ```bash
 python exercisesxpninjainheritance.py
 ```
-The `__main__` block runs three demos:
-1) Fixed borders + blinker (oscillator)  
-2) Fixed borders + glider (eventually collides and ends)  
-3) Expanding borders + glider (keeps traveling as the grid grows)  
 
-The engine detects extinction, stability, and loops, or stops at a generation cap.
+It prints every generation with `█` for live cells and `.` for dead ones:
 
-## Seeds
-- `seed_block()` still life  
-- `seed_blinker()` oscillator (period 2)  
-- `seed_glider()` classic glider  
-
-## Quick import
-```python
-from exercisesxpninjainheritance import GameOfLife, ExpandingGameOfLife, seed_glider
-
-game = GameOfLife(20, 20, seed=[(r+5, c+5) for (r,c) in seed_glider()])
-game.run(50, show=True)
+```text
+=== Fixed borders demo (blinker) ===
+Generation 0
+.....
+.....
+.███.
+.....
+.....
+...
+Status: Loop detected 🔁
 ```
+
+The other two demos (a glider on a fixed 10×10 grid and a glider on a growing grid) stop at their generation limit.
+
+## 🎯 The challenge
+
+The rules: a live cell with 2 or 3 neighbours survives, any other live cell dies, and a dead cell with exactly 3 neighbours comes alive.
+
+| Part | What it does |
+|---|---|
+| `GameOfLife` | Fixed borders; `step()` builds the next grid, `run()` stops on extinction, a stable grid, a loop or the generation limit |
+| `ExpandingGameOfLife` | Overrides `step()` to pad the grid on every side when a live cell reaches the edge, up to `max_size` |
+| `seed_block()`, `seed_blinker()`, `seed_glider()` | Starting patterns: a still life, a period-2 oscillator and a glider |
+
+## 🧠 What I learned
+
+- A subclass can change one step of an algorithm and call `super().step()` for the rest
+- The next generation must be built in a new grid, or early updates spoil the neighbour counts
+- Saving each grid as a tuple of tuples makes it hashable, so loops can be found with a set
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 2 Day 2 - Inheritance, Encapsulation and Polymorphism - Exercises XP Ninja

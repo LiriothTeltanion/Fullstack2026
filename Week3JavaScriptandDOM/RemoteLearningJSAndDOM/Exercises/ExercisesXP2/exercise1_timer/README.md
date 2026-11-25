@@ -1,4 +1,4 @@
-# Exercise1 Timer
+# 🧪 Exercise 1 - Timer
 
 <div align="center">
 
@@ -8,34 +8,31 @@
 
 </div>
 
-> Create accessible browser interactions using DOM selection, events, forms, and state updates.
+A timer exercise in three parts: an alert after 2 seconds, a paragraph after 2 seconds, and a new paragraph every 2 seconds until I stop it.
 
-## Learning goals
+## ▶️ How to run
 
-- Practice: HTML, JavaScript.
-- Validate normal inputs, edge cases, and failure states.
-- Be able to explain the solution without reading the code line-by-line.
+Open `index.html` in a browser (or run `npm run dev` from the repo root and open this folder at `http://localhost:8000/`). The timers start on load. `js/app.js` needs the page, so it does not run with `node`.
 
-## How to run
+## 🎯 The challenge
 
-```text
-# Open index.html in a browser or serve the repository locally
-node js/app.js
-```
+1. **Part I** – `setTimeout` shows `alert("Hello World")` after 2 seconds.
+2. **Part II** – another `setTimeout` adds `<p>Hello World</p>` to `#container` after 2 seconds.
+3. **Part III** – `setInterval` adds a paragraph every 2 seconds and stops when there are 5 paragraphs, or when I click **Clear Interval**.
 
-## Files
+`addParagraph(text)` creates and appends each paragraph, so Parts II and III share the same code.
 
-- `index.html`
-- `js/app.js`
+## 🧠 What I learned
 
-## Verification checklist
+- `setTimeout` runs once after a delay, `setInterval` keeps going
+- `clearInterval(id)` needs the id that `setInterval` returned
+- Setting the id to `null` after clearing makes the button safe to click twice
+- Counting the `<p>` elements is an easy way to know when to stop
 
-- [ ] Main flow works
-- [ ] Invalid input is handled
-- [ ] Code is formatted
-- [ ] Tests or repeatable manual checks exist
-- [ ] README matches the current implementation
+---
 
-## Next improvement
+## 👤 Author
 
-Describe one concrete refactor, test, accessibility improvement, or product enhancement.
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Remote Learning - JavaScript and the DOM - Exercise 1

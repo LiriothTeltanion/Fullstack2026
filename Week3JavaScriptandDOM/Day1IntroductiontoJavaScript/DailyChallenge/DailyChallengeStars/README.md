@@ -1,4 +1,4 @@
-# Daily Challenge Stars
+# 💪 Daily Challenge - Stars
 
 <div align="center">
 
@@ -8,33 +8,43 @@
 
 </div>
 
-> Create accessible browser interactions using DOM selection, events, forms, and state updates.
+Print a triangle of stars in two ways: with one loop and with two nested loops.
 
-## Learning goals
+## ▶️ How to run
 
-- Practice: HTML, JavaScript.
-- Validate normal inputs, edge cases, and failure states.
-- Be able to explain the solution without reading the code line-by-line.
+Open `index.html` in a browser (or use `npm run dev` from the repo root) and click **One loop** or **Two nested loops**. The pattern appears on the page and in the console.
 
-## How to run
-
-```text
-# Open index.html in a browser or serve the repository locally
+```
+*
+* *
+* * *
+* * * *
+* * * * *
+* * * * * *
 ```
 
-## Files
+## 🎯 The challenge
 
-- `index.html`
-- `script.js`
+| Function | What it does |
+|---|---|
+| `oneLoop()` | Keeps one `line` string and adds `"* "` to it on each of the 6 rows. |
+| `twoLoops()` | The outer loop counts the rows; the inner loop adds one `"* "` per column up to the row number. |
 
-## Verification checklist
+Both call `.trim()` on each line, so there are no trailing spaces, and both write the result into `<pre id="out">`.
 
-- [ ] Main flow works
-- [ ] Invalid input is handled
-- [ ] Code is formatted
-- [ ] Tests or repeatable manual checks exist
-- [ ] README matches the current implementation
+More notes are in [README_Stars_Pattern_JS.md](README_Stars_Pattern_JS.md).
 
-## Next improvement
+## 🧠 What I learned
 
-Describe one concrete refactor, test, accessibility improvement, or product enhancement.
+- One loop is enough when each line is the previous line plus one star
+- Nested loops are the general way to build rows and columns
+- `.trim()` removes the extra space left by `"* "` at the end of the line
+- `textContent` on a `<pre>` keeps the line breaks
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Day 1 - Introduction to JavaScript - Daily Challenge

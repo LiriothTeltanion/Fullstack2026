@@ -1,4 +1,4 @@
-# Css
+# 🎨 Styles - HTML Form
 
 <div align="center">
 
@@ -8,8 +8,16 @@
 
 </div>
 
-Stylesheets for this exercise.
+The stylesheet for the HTML Form page.
 
 ## Contents
 
-- [`styles.css`](styles.css)
+- [`styles.css`](styles.css) — the card layout, inputs, buttons and the output list
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 4 Day 3 - HTTP and GET/POST Forms - HTML Form

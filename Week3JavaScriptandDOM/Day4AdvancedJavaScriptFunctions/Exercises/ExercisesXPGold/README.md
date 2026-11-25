@@ -1,4 +1,4 @@
-# Exercises XP Gold — Advanced Functions
+# 🥇 Exercises XP Gold
 
 <div align="center">
 
@@ -8,21 +8,14 @@
 
 </div>
 
-**Last Updated:** October 7th, 2025
+Five short exercises on nested arrow functions, closures, currying and function composition.
 
-## What’s inside
-- Exercise 1: Nested functions → arrow functions (`landscape()`)
-- Exercise 2: Closure (`addTo`)
-- Exercise 3: Currying (`curriedSum(30)(1)`)
-- Exercise 4: Currying with partial (`add5(12)`)
-- Exercise 5: Composition (`compose(inc, plus5)(10)`)
+## ▶️ How to run
 
-## Run
 ```bash
 node index.js
 ```
 
-## Expected console output
 ```
 Exercise 1: ____/''''\____
 Exercise 2: 13
@@ -30,3 +23,26 @@ Exercise 3: 31
 Exercise 4: 17
 Exercise 5: 16
 ```
+
+## 🎯 The challenge
+
+1. **Nested functions** – `landscape()` rewritten with arrow functions: `flat(4)`, `mountain(4)`, `flat(4)` build `____/''''\____`.
+2. **Closure** – `addTo(10)` returns a function that remembers 10, so `addToTen(3)` is 13.
+3. **Currying** – `curriedSum(30)(1)` is 31.
+4. **Currying again** – `add5 = curriedSum(5)`, so `add5(12)` is 17.
+5. **Composing** – `compose(inc, plus5)(10)` runs `plus5` first, then `inc`: 16.
+
+## 🧠 What I learned
+
+- An inner arrow function can change a variable of the outer function
+- A closure keeps the value it was created with
+- Currying turns `f(a, b)` into `f(a)(b)`, which makes partial functions like `add5` easy
+- `compose(f, g)` reads right to left: `g` runs first
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Day 4 - Advanced JavaScript Functions - Exercises XP Gold

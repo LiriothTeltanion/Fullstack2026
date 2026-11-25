@@ -1,4 +1,4 @@
-# Tell The Story
+# 💪 Daily Challenge - Tell the Story
 
 <div align="center">
 
@@ -8,33 +8,39 @@
 
 </div>
 
-> Create accessible browser interactions using DOM selection, events, forms, and state updates.
+A Mad Libs page: I fill in a noun, an adjective, a name, a verb and a place, and the page writes a short story with my words.
 
-## Learning goals
+## ▶️ How to run
 
-- Practice: HTML, JavaScript.
-- Validate normal inputs, edge cases, and failure states.
-- Be able to explain the solution without reading the code line-by-line.
+Open `index.html` in a browser (or use `npm run dev` from the repo root). Fill every field and click **Lib it!**; **Shuffle story** picks another template with the same words, and **Reset** clears everything.
 
-## How to run
-
-```text
-# Open index.html in a browser or serve the repository locally
+```
+Kevin dances a shiny dragon in Ramat Gan. Everyone cheered!
 ```
 
-## Files
+## 🎯 The challenge
 
-- `index.html`
-- `madlibs.js`
+| Function | What it does |
+|---|---|
+| `readValues()` | Reads the five inputs and trims them. |
+| `validate(values)` | Returns the first empty field, or `null`. |
+| `buildStory(words)` | Picks one of 4 template functions at random, avoids repeating the last one, and writes the story into `#story`. |
 
-## Verification checklist
+The `submit` listener calls `preventDefault()`, alerts `Please fill the noun.` (or another field) and focuses it, then enables the Shuffle button.
 
-- [ ] Main flow works
-- [ ] Invalid input is handled
-- [ ] Code is formatted
-- [ ] Tests or repeatable manual checks exist
-- [ ] README matches the current implementation
+More notes are in [README_MadLibs.md](README_MadLibs.md).
 
-## Next improvement
+## 🧠 What I learned
 
-Describe one concrete refactor, test, accessibility improvement, or product enhancement.
+- `preventDefault()` stops the form from reloading the page
+- Template literals make it easy to drop variables into a sentence
+- An array of small functions works well as a list of story templates
+- Moving the focus to the missing field helps the user fix the form quickly
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Day 3 - DOM Events - Daily Challenge

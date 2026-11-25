@@ -1,4 +1,4 @@
-# Daily Challenge
+# 💪 Daily Challenges
 
 <div align="center">
 
@@ -8,16 +8,16 @@
 
 </div>
 
-Create interactive browser experiences with JavaScript, DOM events, accessibility, and responsive behavior.
+The daily challenge of Day 4.
 
 ## Contents
 
-- [`Groceries/`](Groceries/)
+- [`Groceries/`](Groceries/) — value vs reference with a `client` string and a `groceries` object
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python -m http.server 8000
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Day 4 - Advanced JavaScript Functions - Daily Challenges

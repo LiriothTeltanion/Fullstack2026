@@ -26,6 +26,11 @@ does not reinterpret early work as production-ready code.
 
 ### Changed
 
+- Gave every README one shared layout, modeled on the Coffee Shop Menu Manager:
+  exercise READMEs use a kind title, the folder pulse and progress card, How to run,
+  The challenge, Tests (when they exist), What I learned and the same author block;
+  index READMEs list their contents. Examples were checked against the code.
+- Added progress cards for Weeks 7–12.
 - Renamed `tools/nova_quality_gate.py` to `tools/quality_gate.py`.
 - Rewrote the READMEs in plain, shorter English (about a quarter shorter or
   more), fixed examples that no longer matched the code, and renamed

@@ -1,4 +1,4 @@
-# 🥈 Exercises XP Gold - Advanced Function Techniques
+# 🥇 Exercises XP Gold
 
 <div align="center">
 
@@ -8,7 +8,7 @@
 
 </div>
 
-Three function exercises in one script: checking if someone can retire, a small number series, and a dice simulation.
+Three function exercises in [xpgoldfunctions.py](xpgoldfunctions.py): checking if someone can retire, a small number series, and a dice simulation.
 
 ## ▶️ How to run
 
@@ -16,52 +16,12 @@ Three function exercises in one script: checking if someone can retire, a small 
 python xpgoldfunctions.py
 ```
 
-The script asks for a gender and a date of birth (exercise 1), then a digit (exercise 2), and finally runs the dice experiment (exercise 3).
-
-## 📋 The exercises
-
-### 1. When will I retire? ⏰
-
-`get_age(year, month, day)` returns the age in whole years and subtracts one if the birthday hasn't happened yet this year. `can_retire()` parses the date and compares the age with the retirement age (men 67, women 62):
-
-```python
-def can_retire(gender, date_of_birth):
-    """Return True if person can retire (men:67, women:62), else False.
-    - gender: 'm' or 'f' (case-insensitive)
-    - date_of_birth: 'yyyy/mm/dd'
-    - Raises ValueError for invalid gender inputs.
-    """
-    gender = gender.strip().lower()
-    if gender not in {"m", "f"}:
-        raise ValueError("Invalid gender 🚫: expected 'm' or 'f'.")
-    y, m, d = map(int, date_of_birth.strip().split("/"))
-    age = get_age(y, m, d)
-    retirement_age = 67 if gender == "m" else 62
-    return age >= retirement_age
-```
-
-The exercise asked for a hard-coded "today". I used `datetime.date.today()` instead, with a `TODAY_OVERRIDE` constant so a fixed date can be set for testing.
-
-### 2. Series sum 🧮
-
-`series_sum(x)` builds X + XX + XXX + XXXX with string repetition:
-
-```python
-sum(int(str(x) * k) for k in range(1, 5))
-```
-
-For example, `series_sum(3)` is 3 + 33 + 333 + 3333 = 3702.
-
-### 3. Double dice 🎲
-
-`throw_dice()` returns 1 to 6. `throw_until_doubles()` throws two dice until they match and returns how many throws it took. `main()` repeats that 100 times and prints the total and the average with two decimals. The numbers change every run; uncomment `random.seed(0)` in the script to get the same result each time.
-
-## Example session
+The script asks for a gender and a date of birth (exercise 1), then a digit (exercise 2), and finally runs the dice experiment (exercise 3):
 
 ```
 === Exercise 1 ===
 Gender (m/f): m
-DOB (yyyy/mm/dd): 1960/05/03
+DOB (yyyy/mm/dd): 1955/05/03
 You can retire.
 
 === Exercise 2 ===
@@ -69,9 +29,23 @@ Enter a digit X: 3
 Result: 3702
 
 === Exercise 3 ===
-Total throws: ...
-Average throws to reach doubles: ...
+Total throws: 658
+Average throws to reach doubles: 6.58
 ```
+
+The dice numbers change every run; uncomment `random.seed(0)` in the script to get the same result each time.
+
+## 🎯 The challenge
+
+| Function | What it does |
+|---|---|
+| `get_age(year, month, day)` | Returns the age in whole years and subtracts one if the birthday hasn't happened yet this year. |
+| `can_retire(gender, date_of_birth)` | Parses a `yyyy/mm/dd` date and compares the age with the retirement age (men 67, women 62). Any gender other than `m` or `f` raises a `ValueError`. |
+| `series_sum(x)` | Builds X + XX + XXX + XXXX with string repetition: `sum(int(str(x) * k) for k in range(1, 5))`, so `series_sum(3)` is 3 + 33 + 333 + 3333 = 3702. |
+| `throw_dice()` | Returns a number from 1 to 6. |
+| `throw_until_doubles()` | Throws two dice until they match and returns how many throws it took. `main()` repeats it 100 times and prints the total and the average with two decimals. |
+
+The exercise asked for a hard-coded "today". I used `datetime.date.today()` instead, with a `TODAY_OVERRIDE` constant so a fixed date can be set for testing.
 
 ## 🧠 What I learned
 

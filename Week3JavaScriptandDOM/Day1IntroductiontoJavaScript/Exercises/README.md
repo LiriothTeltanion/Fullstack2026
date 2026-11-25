@@ -1,4 +1,4 @@
-# Exercises
+# 📚 Exercises
 
 <div align="center">
 
@@ -8,19 +8,18 @@
 
 </div>
 
-Create interactive browser experiences with JavaScript, DOM events, accessibility, and responsive behavior.
+The three exercise tiers of Day 1.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/)
-- [`ExercisesXPGold/`](ExercisesXPGold/)
-- [`ExercisesXPNinja/`](ExercisesXPNinja/)
+- [`ExercisesXP/`](ExercisesXP/) — seven array, loop and object exercises with a run page
+- [`ExercisesXPGold/`](ExercisesXPGold/) — divisible by three, attendance and sum / max by hand
+- [`ExercisesXPNinja/`](ExercisesXPNinja/) — BMI comparison and grade average in Node
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python -m http.server 8000
-node Week3JavaScriptandDOM/Day1IntroductiontoJavaScript/Exercises/ExercisesXP/script.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Day 1 - Introduction to JavaScript - Exercises

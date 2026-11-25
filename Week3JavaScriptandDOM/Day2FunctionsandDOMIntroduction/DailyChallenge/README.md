@@ -1,4 +1,4 @@
-# Daily Challenge
+# 💪 Daily Challenges
 
 <div align="center">
 
@@ -8,19 +8,17 @@
 
 </div>
 
-Create interactive browser experiences with JavaScript, DOM events, accessibility, and responsive behavior.
+The daily challenges of Day 2.
 
 ## Contents
 
-- [`DailyChallengePlanets/`](DailyChallengePlanets/)
-- [`WordsInTheStars/`](WordsInTheStars/)
+- [`DailyChallengePlanets/`](DailyChallengePlanets/) — planets and moons drawn with the DOM
+- [`WordsInTheStars/`](WordsInTheStars/) — words printed inside a star frame
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python -m http.server 8000
-node Week3JavaScriptandDOM/Day2FunctionsandDOMIntroduction/DailyChallenge/DailyChallengePlanets/planets.js
-node Week3JavaScriptandDOM/Day2FunctionsandDOMIntroduction/DailyChallenge/WordsInTheStars/index.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Day 2 - Functions and DOM Introduction - Daily Challenges

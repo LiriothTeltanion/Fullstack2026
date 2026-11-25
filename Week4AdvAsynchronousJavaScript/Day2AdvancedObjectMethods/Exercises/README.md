@@ -1,4 +1,4 @@
-# Exercises
+# 📚 Exercises
 
 <div align="center">
 
@@ -8,16 +8,16 @@
 
 </div>
 
-Build resilient asynchronous flows with HTTP requests, loading states, validation, and error handling.
+The Day 2 exercise set.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/)
+- [`ExercisesXP/`](ExercisesXP/) — destructuring, `Object.entries`, classes, inheritance and references
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-npx tsx Week4AdvAsynchronousJavaScript/Day2AdvancedObjectMethods/Exercises/ExercisesXP/ObjectsDestructuringClassesXP.ts
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 4 Day 2 - Advanced Object Methods - Exercises

@@ -1,4 +1,4 @@
-# Math app
+# 🧪 Exercise 5 - Math App
 
 <div align="center">
 
@@ -8,18 +8,51 @@
 
 </div>
 
-Practice relational modeling, safe queries, joins, constraints, and persistent data workflows.
+My own CommonJS module with `add` and `multiply`, used together with the `lodash` package.
 
-## Contents
+## ▶️ How to run
 
-- [`app.js`](app.js)
-- [`math.js`](math.js)
-- [`package.json`](package.json)
+```bash
+npm install
+node app.js
+```
 
-## Run
+```
+🧠 Unique numbers: 2, 3, 6
+✅ Sum: 11
+⚙️  Product: 36
+```
+
+## 🎯 The challenge
+
+| Function | What it does |
+|---|---|
+| `add(a, b)` | Converts both values with `Number()` and adds them |
+| `multiply(a, b)` | Converts both values with `Number()` and multiplies them |
+
+`app.js` takes `[2, 2, 3, 3, 3, 6]`, removes the repeats with `_.uniq`, sorts them with `_.sortBy`, then uses `reduce` with my two helpers for the sum and the product.
+
+## 🧪 Tests
 
 From the repository root:
 
 ```bash
-node Week6DatabasesAndNodejs/Day4NodejsIntroduction/Exercises/ExercisesXP/exercise-5-math-app/math-app/app.js
+node --test tests/js/math_helpers.test.mjs
 ```
+
+1 test loads `math.js` and checks that `add(2, 3)` is 5 and `multiply(4, 5)` is 20.
+
+## 🧠 What I learned
+
+- `npm install` reads `package.json` and downloads `lodash` into `node_modules`
+- A local module is required with `./`, a package just by its name
+- `_.uniq` removes duplicates and `_.sortBy` returns a sorted copy
+- Small pure functions are easy to test
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 6 Day 4 - Introduction to Node.js - Exercise 5

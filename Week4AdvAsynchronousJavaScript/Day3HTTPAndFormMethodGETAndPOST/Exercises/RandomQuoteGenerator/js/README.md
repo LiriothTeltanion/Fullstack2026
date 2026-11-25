@@ -1,4 +1,4 @@
-# Js
+# 📜 Scripts - Random Quote Generator
 
 <div align="center">
 
@@ -8,16 +8,16 @@
 
 </div>
 
-JavaScript modules for this exercise.
+The script for the Random Quote Generator. It uses `document`, so it runs in the browser through `../index.html`, not with Node.
 
 ## Contents
 
-- [`app.js`](app.js)
+- [`app.js`](app.js) — the quotes array, the helper functions and every button and form handler
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-node Week4AdvAsynchronousJavaScript/Day3HTTPAndFormMethodGETAndPOST/Exercises/RandomQuoteGenerator/js/app.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 4 Day 3 - HTTP and GET/POST Forms - Random Quote Generator

@@ -1,4 +1,4 @@
-# Daily Challenge
+# 💪 Daily Challenges
 
 <div align="center">
 
@@ -8,16 +8,16 @@
 
 </div>
 
-Solve an independent daily challenge that reinforces the current lesson through focused problem solving.
+The Day 2 daily challenge.
 
 ## Contents
 
-- [`Pagination/`](Pagination/)
+- [`Pagination/`](Pagination/) — a class that splits a list into pages and moves between them
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python Week2OOP/Day2OOPInheritanceEncapsulationPolymorphism/DailyChallenge/Pagination/pagination.py
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 2 Day 2 - Inheritance, Encapsulation and Polymorphism - Daily Challenges

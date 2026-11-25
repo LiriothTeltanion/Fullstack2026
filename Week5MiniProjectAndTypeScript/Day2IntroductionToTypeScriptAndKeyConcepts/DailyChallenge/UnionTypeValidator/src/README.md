@@ -1,4 +1,4 @@
-# Src
+# 📦 Source - Union Type Validator
 
 <div align="center">
 
@@ -8,16 +8,16 @@
 
 </div>
 
-Source modules for this project.
+The TypeScript source of the Union Type Validator. `tsc` compiles it to `../dist/` with the settings in `../tsconfig.json`.
 
 ## Contents
 
-- [`index.ts`](index.ts)
+- [`index.ts`](index.ts) — `validateUnionType()`, `validateUnionTypeAlt()`, the ten test cases and the form example
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-npx tsx Week5MiniProjectAndTypeScript/Day2IntroductionToTypeScriptAndKeyConcepts/DailyChallenge/UnionTypeValidator/src/index.ts
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 5 Day 2 - TypeScript Fundamentals and Key Concepts - Union Type Validator

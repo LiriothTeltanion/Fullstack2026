@@ -1,4 +1,4 @@
-# Exercises
+# 📚 Exercises
 
 <div align="center">
 
@@ -8,21 +8,20 @@
 
 </div>
 
-Create interactive browser experiences with JavaScript, DOM events, accessibility, and responsive behavior.
+The exercise tiers and the mini project of Day 3.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/)
-- [`ExercisesXPAnimations/`](ExercisesXPAnimations/)
-- [`ExercisesXPGold/`](ExercisesXPGold/)
-- [`ExercisesXPNinja/`](ExercisesXPNinja/)
-- [`MiniProjectCreateaSignInForm/`](MiniProjectCreateaSignInForm/)
+- [`ExercisesXP/`](ExercisesXP/) — change an article, read a form, highlight words, sphere volume
+- [`ExercisesXPAnimations/`](ExercisesXPAnimations/) — `setTimeout` / `setInterval` timer and a moving box
+- [`ExercisesXPGold/`](ExercisesXPGold/) — music select, delete colors and a shopping list built from JavaScript
+- [`ExercisesXPNinja/`](ExercisesXPNinja/) — tip calculator, email validation and geolocation
+- [`MiniProjectCreateaSignInForm/`](MiniProjectCreateaSignInForm/) — Sign In / Sign Up double slider
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python -m http.server 8000
-node Week3JavaScriptandDOM/Day3LearningDOMEvents/Exercises/ExercisesXPNinja/main.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Day 3 - DOM Events - Exercises

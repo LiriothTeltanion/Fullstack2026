@@ -1,4 +1,4 @@
-# Daily Challenge
+# 💪 Daily Challenges
 
 <div align="center">
 
@@ -8,18 +8,17 @@
 
 </div>
 
-Create interactive browser experiences with JavaScript, DOM events, accessibility, and responsive behavior.
+The daily challenges of Day 3.
 
 ## Contents
 
-- [`Letters/`](Letters/)
-- [`TellTheStory/`](TellTheStory/)
+- [`Letters/`](Letters/) — a text field that keeps only letters
+- [`TellTheStory/`](TellTheStory/) — a Mad Libs story generator with a shuffle button
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python -m http.server 8000
-node Week3JavaScriptandDOM/Day3LearningDOMEvents/DailyChallenge/Letters/main.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Day 3 - DOM Events - Daily Challenges

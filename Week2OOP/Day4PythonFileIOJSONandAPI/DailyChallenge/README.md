@@ -1,4 +1,4 @@
-# Daily Challenge
+# 💪 Daily Challenges
 
 <div align="center">
 
@@ -8,16 +8,16 @@
 
 </div>
 
-Build resilient asynchronous flows with HTTP requests, loading states, validation, and error handling.
+The Day 4 daily challenge.
 
 ## Contents
 
-- [`TextAnalysis/`](TextAnalysis/)
+- [`TextAnalysis/`](TextAnalysis/) — word counts and text cleanup with a `Text` class and a subclass
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python Week2OOP/Day4PythonFileIOJSONandAPI/DailyChallenge/TextAnalysis/dailychallengetextanalysis.py
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 2 Day 4 - File I/O, JSON and APIs - Daily Challenges

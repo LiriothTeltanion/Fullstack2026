@@ -1,4 +1,4 @@
-# DI — Databases XP+ : Students (PostgreSQL)
+# ➕ Exercises XP Plus
 
 <div align="center">
 
@@ -8,39 +8,46 @@
 
 </div>
 
-This package contains a single SQL script to create the `students` table, insert the required rows, and run all the queries requested in the XP+ exercise.
+One SQL script that creates a `students` table in the `bootcamp` database, inserts the exercise rows plus one row of my own, and runs the required queries.
 
-## Files
-- `exercisesxpplus.sql` — full script (create, insert, select). Safe to re-run; it drops the table if it exists.
-- `.gitignore` — ignores generated artifacts.
+## ▶️ How to run
 
-## Notes
-- In PostgreSQL, `public` is a schema, not a database. The exercise asks to create a database named `bootcamp` and then work in schema `public`.
-- Dates are provided in the exercise as `dd/mm/yyyy`. PostgreSQL expects `yyyy-mm-dd`. The script converts them to ISO format.
-
-## How to run
-
-### Option A — pgAdmin (GUI)
-1. Create a database named `bootcamp` (Right-click **Databases** → **Create** → **Database…** → Name: `bootcamp` → Save).
-2. Open **Query Tool** on the `bootcamp` database.
-3. Open `exercisesxpplus.sql` from this package, paste into the query editor, and execute.
-4. You will see result grids for each `SELECT` at the end of the script.
-
-### Option B — psql (terminal)
 ```bash
-# 1) Create the database (adjust user/host/port as needed)
-psql -U postgres -h localhost -p 5432 -c "CREATE DATABASE bootcamp"
-
-# 2) Run the script against that database
-psql -U postgres -h localhost -p 5432 -d bootcamp -f exercisesxpplus.sql
+psql -c "CREATE DATABASE bootcamp"
+psql -d bootcamp -f exercisesxpplus.sql
 ```
 
-## Push to GitHub
-```bash
-git init
-git add .
-git commit -m "feat: Solve DI Databases XP+ — students"
-git branch -M main
-git remote add origin <YOUR_GITHUB_REMOTE_URL>
-git push -u origin main
-```
+The table is dropped and created again on every run. In pgAdmin I create `bootcamp`, open the Query Tool on it and run the file; each `SELECT` shows its own result grid.
+
+## 🎯 The challenge
+
+| Query | Condition | Returns |
+|---|---|---|
+| 1 | All columns | Every student |
+| 2 | Only first and last names | Every student |
+| a | `id = 2` | Yoan Cohen |
+| b | `last_name = 'Benichou' AND first_name = 'Marc'` | Marc Benichou |
+| c | `last_name = 'Benichou' OR first_name = 'Marc'` | Lea and Marc Benichou |
+| d | First name contains `a` (`ILIKE '%a%'`) | Amelia, David, Lea, Marc, Yoan |
+| e | First name starts with `a` (`ILIKE 'a%'`) | Amelia |
+| f | First name ends with `a` (`ILIKE '%a'`) | Amelia, Lea |
+| g | Second-to-last letter is `a` (`ILIKE '%a_'`) | Marc, Yoan |
+| h | `id IN (1, 3)` | Marc and Lea Benichou |
+| i | Born on or after 2000-01-01 (all columns) | David Grez and Yoan Cohen |
+
+The exercise gives the dates as `dd/mm/yyyy`; I wrote them as ISO `yyyy-mm-dd` so PostgreSQL reads them the same way whatever its `DateStyle` setting is.
+
+## 🧠 What I learned
+
+- `GENERATED ALWAYS AS IDENTITY` gives each row an id without me typing it
+- `ILIKE` is a case-insensitive `LIKE`: `%` matches any text and `_` exactly one character
+- `AND` narrows a result, while `OR` widens it
+- `IN (1, 3)` is a short way to write `id = 1 OR id = 3`
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 6 Day 1 - Introduction to Databases - Exercises XP Plus

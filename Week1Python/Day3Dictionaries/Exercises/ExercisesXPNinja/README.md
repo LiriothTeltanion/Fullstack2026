@@ -1,4 +1,4 @@
-# Exercises XP Ninja — Cars 🚗🧠
+# 🥷 Exercises XP Ninja
 
 <div align="center">
 
@@ -8,21 +8,14 @@
 
 </div>
 
-Import-safe module with reusable helpers for the manufacturers exercise (lists, counting, and sorting).
-
-## ✅ What it does
-- Converts the canonical string of manufacturers into a clean list via `parse_manufacturers`.
-- Reports totals, Z‑A ordering, and letter-based counts with pure functions (`sort_descending`, `count_with_letter`, `count_without_letter`).
-- **Bonus**: removes duplicates while preserving order (`deduplicate_preserve_order`) and prints the list plus the new total.
-- **Bonus**: prints the list in **ascending order (A‑Z)** with each name reversed using `ascending_reversed`.
+The car manufacturers exercise in [xpninjacars.py](xpninjacars.py): turning a string into a list, then counting, sorting and removing duplicates with small reusable functions. Running the script calls `_cli()`, so importing the module elsewhere stays quiet.
 
 ## ▶️ How to run
+
 ```bash
 python xpninjacars.py
 ```
-Running the script calls a `_cli()` wrapper so importing the module elsewhere leaves the helpers quiet.
 
-## 🧪 Expected output (summary)
 ```
 Total manufacturers: 5
 Descending (Z-A): ['Volkswagen', 'Toyota', 'Honda', 'Ford Motor', 'Chevrolet']
@@ -30,37 +23,30 @@ Manufacturers with letter 'o': 5
 Manufacturers without letter 'i': 5
 No-duplicate list: Honda, Volkswagen, Toyota, Ford Motor, Chevrolet
 New total (no duplicates): 5
-Ascending A-Z with reversed names: ['elegorhC', 'droM droF', 'adnoH', 'atoyoT', 'negaswolksoV']
-
-## 🔍 Helper usage example
-
-```python
-from xpninjacars import (
-	parse_manufacturers,
-	sort_descending,
-	count_with_letter,
-	deduplicate_preserve_order,
-)
-
-manufacturers = parse_manufacturers("Volkswagen, Toyota, Ford Motor, Honda, Chevrolet")
-sort_descending(manufacturers)
-# -> ['Volkswagen', 'Toyota', 'Honda', 'Ford Motor', 'Chevrolet']
-count_with_letter(manufacturers, "o")
-# -> 5
-deduplicate_preserve_order([
-	"Honda", "Volkswagen", "Toyota", "Ford Motor", "Honda", "Chevrolet", "Toyota"
-])
-# -> ['Honda', 'Volkswagen', 'Toyota', 'Ford Motor', 'Chevrolet']
+Ascending A-Z with reversed names: ['telorvehC', 'rotoM droF', 'adnoH', 'atoyoT', 'negawskloV']
 ```
-```
+
+## 🎯 The challenge
+
+| Function | What it does |
+|---|---|
+| `parse_manufacturers(names)` | Splits the comma-separated string into a clean list. |
+| `sort_descending(names)` | Returns the list in Z-A order, ignoring case. |
+| `count_with_letter(names, letter)` | Counts the names that contain a letter (upper or lower case). |
+| `count_without_letter(names, letter)` | Counts the names that do not contain a letter. |
+| `deduplicate_preserve_order(names)` | Bonus: removes duplicates but keeps the first-seen order. |
+| `ascending_reversed(names)` | Bonus: sorts A-Z and reverses each name's letters. |
+
+## 🧠 What I learned
+
+- `sorted(names, key=lambda value: value.lower(), reverse=True)` gives Z-A without changing the original list or caring about case
+- A `set` of seen names plus a list keeps the order while dropping duplicates
+- `name[::-1]` reverses a string
+
 ---
 
 ## 👤 Author
 
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
-Week 1 Day 3 - Exercises XP Ninja
-
----
-
-*Happy coding!* 🐍✨
+Week 1 Day 3 - Dictionaries - Exercises XP Ninja

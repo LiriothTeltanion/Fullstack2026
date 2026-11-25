@@ -1,4 +1,4 @@
-# Js
+# 📜 Scripts - HTML Form
 
 <div align="center">
 
@@ -8,16 +8,16 @@
 
 </div>
 
-JavaScript modules for this exercise.
+The script for the HTML Form page. It uses `document`, so it runs in the browser through `../index.html`, not with Node.
 
 ## Contents
 
-- [`app.js`](app.js)
+- [`app.js`](app.js) — the submit handler, `appendJsonEntry()` and the clear button
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-node Week4AdvAsynchronousJavaScript/Day3HTTPAndFormMethodGETAndPOST/DailyChallenge/HTMLForm/js/app.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 4 Day 3 - HTTP and GET/POST Forms - HTML Form

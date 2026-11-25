@@ -1,4 +1,4 @@
-# ⚡ Timed Challenge #1 - Count Character Occurrence
+# ⏱️ Timed Challenge 1 - Count Character Occurrence
 
 <div align="center">
 
@@ -8,133 +8,48 @@
 
 </div>
 
-Count how many times a specific character appears in a string (case-sensitive).
+A short script in [countoccurence.py](countoccurence.py) that counts how many times a character appears in a string. The count is case-sensitive.
 
-## 📊 Quick Stats
-
-- **Difficulty**: 🥉 Beginner  
-- **Time Limit**: 5-10 minutes  
-- **Concepts**: String iteration, counting, input handling  
-- **Prerequisites**: Basic Python syntax
-
-## 🎓 Learning Objectives
-
-- ✅ Iterate through strings efficiently
-- ✅ Count occurrences with accumulator pattern
-- ✅ Handle edge cases (empty input, EOF)
-- ✅ Work under time pressure
-
-## 🚀 Quick Start
+## ▶️ How to run
 
 ```bash
-cd Exercises/TimedChallenge1
 python countoccurence.py
 ```
 
-## 📋 Challenge Description
+Line 1 is the string, line 2 is the character to count:
 
-### Input Format
 ```
-Line 1: The string to search
-Line 2: The character to count (uses first char if multiple provided)
-```
-
-### Examples
-
-**Example 1**:
-```
-Input:
 Programming is cool!
 o
-
-Output:
 3
 ```
 
-**Example 2**:
-```
-Input:
-This is a great example
-y
+`This is a great example` with `y` prints `0`, and `Hello World` with `l` prints `3`.
 
-Output:
-0
-```
+## 🎯 The challenge
 
-**Example 3**:
-```
-Input:
-Hello World
-l
-
-Output:
-3
-```
-
----
-
-## 💡 Solution Approach
-
-### Efficient Implementation
 ```python
 def count_char(s: str, ch: str) -> int:
-    """Count occurrences of character in string."""
     target = ch[0] if ch else ''
     return sum(1 for c in s if c == target) if target else 0
 ```
 
-### Key Points
+- Case-sensitive: `'A'` is not `'a'`
+- If more than one character is typed, only the first one is used
+- An empty character gives `0`, and `main()` catches `EOFError` when there is no input
 
-- **Case-sensitive**: 'A' ≠ 'a'
-- **First character only**: If user inputs multiple chars, use first
-- **Edge case handling**: Empty string returns 0
-- **Efficient**: Uses generator expression with `sum()`
+`s.count(ch[0])` would give the same result in one call.
 
----
+## 🧠 What I learned
 
-## 🔧 Alternative Solutions
-
-### Using count() method
-```python
-def count_char(s: str, ch: str) -> int:
-    return s.count(ch[0]) if ch else 0
-```
-
-### Explicit loop (more readable for beginners)
-```python
-def count_char(s: str, ch: str) -> int:
-    if not ch:
-        return 0
-    target = ch[0]
-    count = 0
-    for c in s:
-        if c == target:
-            count += 1
-    return count
-```
+- `sum()` over a generator is a short way to count matches
+- Checking `ch` before reading `ch[0]` avoids an `IndexError`
+- Under time pressure, getting a simple working version first is the right order
 
 ---
 
-## 🎯 Time Challenge Tips
+## 👤 Author
 
-1. ⏱️ **Read carefully**: Understand input format first
-2. 🎯 **Simple solution first**: Get it working, then optimize
-3. ✅ **Test with examples**: Verify before submitting
-4. 🚀 **Use built-ins**: `str.count()` is your friend
-5. 🐛 **Handle edge cases**: Empty strings, EOF, etc.
-
----
-
-## 🔧 Troubleshooting
-
-| Issue | Solution |
-|-------|----------|
-| Wrong count | Check if case-sensitive comparison is correct |
-| Index error | Check if `ch` is empty before accessing `ch[0]` |
-| EOF error | Wrap `input()` in try-except for EOFError |
-
----
-
-**Author**: Kevin Cusnir 'Lirioth'  
-**Repository**: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
-**Week 1 Day 4** - Functions - Timed Challenge #1
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 1 Day 4 - Functions - Timed Challenge 1

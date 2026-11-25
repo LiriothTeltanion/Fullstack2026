@@ -8,19 +8,21 @@
 
 </div>
 
-Use TypeScript types, interfaces, classes, unions, and guards to make domain logic safer.
+Week 5 of the bootcamp: three browser apps built on public APIs, then TypeScript from basic types to classes, generics and type guards.
 
 ## Contents
 
-- [`Day1MiniProject/`](Day1MiniProject/)
-- [`Day2IntroductionToTypeScriptAndKeyConcepts/`](Day2IntroductionToTypeScriptAndKeyConcepts/)
-- [`Day3AdvancedTypeScriptConceptsAndApplications/`](Day3AdvancedTypeScriptConceptsAndApplications/)
-- [`Day4AdvancedTypeScriptConceptsAndApplications/`](Day4AdvancedTypeScriptConceptsAndApplications/)
+| Folder | What it is |
+|---|---|
+| [`Day1MiniProject/`](Day1MiniProject/) | Star Wars Character Finder, Pokédex and Currency Converter |
+| [`Day2IntroductionToTypeScriptAndKeyConcepts/`](Day2IntroductionToTypeScriptAndKeyConcepts/) | Types, unions, tuples, overloads and a union type validator |
+| [`Day3AdvancedTypeScriptConceptsAndApplications/`](Day3AdvancedTypeScriptConceptsAndApplications/) | Classes, access modifiers, interfaces and a library system |
+| [`Day4AdvancedTypeScriptConceptsAndApplications/`](Day4AdvancedTypeScriptConceptsAndApplications/) | Intersection types, generics and type guards |
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python -m http.server 8000
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 5 - Mini-projects and TypeScript

@@ -1,4 +1,4 @@
-# Css
+# 🎨 Styles - Calculator
 
 <div align="center">
 
@@ -8,8 +8,16 @@
 
 </div>
 
-Stylesheets for this exercise.
+The stylesheet for the Calculator exercise.
 
 ## Contents
 
-- [`styles.css`](styles.css)
+- [`styles.css`](styles.css) — the dark panel, the right-aligned display and a 4-column keypad with a wide `0` and a green `=`
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Remote Learning - JavaScript and the DOM - Calculator

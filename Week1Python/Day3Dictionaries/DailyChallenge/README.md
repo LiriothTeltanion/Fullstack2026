@@ -1,4 +1,4 @@
-# Daily Challenge
+# 💪 Daily Challenges
 
 <div align="center">
 
@@ -8,18 +8,17 @@
 
 </div>
 
-Solve an independent daily challenge that reinforces the current lesson through focused problem solving.
+The two Day 3 daily challenges: the regular one and the Gold one.
 
 ## Contents
 
-- [`CaesarCypher/`](CaesarCypher/)
-- [`Dictionaries/`](Dictionaries/)
+- [`Dictionaries/`](Dictionaries/) — a letter index map and the items I can afford with a wallet
+- [`CaesarCypher/`](CaesarCypher/) — Caesar cipher with encrypt, decrypt and brute-force modes
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python Week1Python/Day3Dictionaries/DailyChallenge/CaesarCypher/caesarcipher.py
-python Week1Python/Day3Dictionaries/DailyChallenge/Dictionaries/dictionaries.py
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 1 Day 3 - Dictionaries - Daily Challenges

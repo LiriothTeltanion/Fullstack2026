@@ -8,18 +8,19 @@
 
 </div>
 
-Use TypeScript types, interfaces, classes, unions, and guards to make domain logic safer.
+Day 3 of Week 5: classes in TypeScript with access modifiers, `readonly`, inheritance, static methods and interfaces.
 
 ## Contents
 
-- [`DailyChallenge/`](DailyChallenge/)
-- [`Exercises/`](Exercises/)
+| Folder | What it is |
+|---|---|
+| [`Exercises/`](Exercises/) | Exercises XP: five object-oriented exercises |
+| [`DailyChallenge/`](DailyChallenge/) | Library System |
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-npx tsx Week5MiniProjectAndTypeScript/Day3AdvancedTypeScriptConceptsAndApplications/DailyChallenge/LibrarySystem.ts
-npx tsx Week5MiniProjectAndTypeScript/Day3AdvancedTypeScriptConceptsAndApplications/Exercises/ExercisesXP/ExercisesXP_OOP.ts
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 5 Day 3 - Advanced TypeScript Concepts and Applications

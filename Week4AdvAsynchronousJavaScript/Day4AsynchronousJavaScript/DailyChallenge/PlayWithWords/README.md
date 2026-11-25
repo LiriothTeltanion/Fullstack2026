@@ -1,4 +1,4 @@
-# Daily Challenges — Promises & Morse
+# 💪 Daily Challenge - Play With Words
 
 <div align="center">
 
@@ -8,57 +8,42 @@
 
 </div>
 
-Short, commented solutions in vanilla JavaScript. Includes a minimal UI and the exact chains requested.
+Two promise challenges on one page: upper-case and sort a list of words, then translate text to Morse code with a chain of promises.
 
-## Files
-- `index_daily_challenges.html` — Minimal UI to try both challenges.
-- `daily_promises_morse.js` — All exercises implemented (short & simple).
-- `README` — This file.
+## ▶️ How to run
 
-## 1) makeAllCaps & sortWords
-```js
-const makeAllCaps = (arr) => new Promise((resolve, reject) => {
-  const allStrings = Array.isArray(arr) && arr.every(x => typeof x === "string");
-  if (!allStrings) return reject("All items must be strings.");
-  resolve(arr.map(w => w.toUpperCase()));
-});
+Open `index_daily_challenges.html` in a browser. The script uses `document` and `prompt`, so it does not run with Node.
 
-const sortWords = (arr) => new Promise((resolve, reject) => {
-  if (!Array.isArray(arr)) return reject("Expected an array.");
-  if (arr.length > 4) resolve([...arr].sort());
-  else reject("Array must have more than 4 items.");
-});
+Example 3 resolves with:
+
+```
+["APPLE","BANANA","KIWI","MELON","PEAR"]
 ```
 
-### Tests included (UI buttons)
-- `[1]` `makeAllCaps([1, "pear", "banana"])` → **reject**
-- `[2]` `makeAllCaps(["apple","pear","banana"]) → sortWords(...)` → **reject**
-- `[3]` `makeAllCaps(["apple","pear","banana","melon","kiwi"]) → sortWords(...)` → **resolve & sort**
+## 🎯 The challenge
 
-## 2) Morse Translator (Promises chain)
-- `toJs()` → parses the given JSON string to a JS object (reject if empty/invalid).
-- `toMorse(morseJS)` → requests input (from the text box, or `prompt` if empty), validates characters and returns an array of codes (reject on unsupported char).
-- `joinWords(array)` → joins with line breaks and writes to the DOM.
+| Function | What it does |
+|---|---|
+| `makeAllCaps(arr)` | Resolves with every word in capitals, or rejects if an item is not a string |
+| `sortWords(arr)` | Resolves with a sorted copy if there are more than 4 words, otherwise rejects |
+| `toJs()` | Parses the `morse` JSON string into an object |
+| `toMorse(morseJS)` | Reads the text box (or asks with `prompt`) and resolves with the Morse code of each character, or rejects on an unknown one |
+| `joinWords(morseArr)` | Joins the codes and writes them on the page |
 
-### Example (input “Hello”)
-```
-....
-.
-.-..
-.-..
+Example 1 rejects (a number in the list), example 2 rejects (only 3 words), example 3 resolves.
+
+Known bugs in the Morse part: a `//` comment inside the `morse` string makes `JSON.parse` fail, so **Translate** shows `Invalid Morse JSON.`, and `joinWords` joins with the text `\n` instead of a line break.
+
+## 🧠 What I learned
+
+- Returning a promise from `.then()` lets me chain the next step
+- One `.catch()` at the end handles a rejection from any step
+- JSON does not allow comments, even inside a JavaScript template string
+
 ---
-```
 
-## How to run
-### Browser
-1. Open `index_daily_challenges.html`.
-2. Use the three buttons for Challenge 1.
-3. For Morse: type text or leave it empty to use the prompt, then click **Translate**.
-4. Check the Console for logs if needed.
+## 👤 Author
 
-### Node (optional)
-You can import the functions from `daily_promises_morse.js` if you want to test in Node.
-
-## Notes
-- Code is intentionally concise and commented in English.
-- Morse mapping also supports a space (`" "`) → `/` so you can separate words visually.
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 4 Day 4 - Asynchronous JavaScript - Daily Challenge

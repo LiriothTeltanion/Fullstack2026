@@ -1,4 +1,4 @@
-# Exercises
+# 📚 Exercises
 
 <div align="center">
 
@@ -8,16 +8,16 @@
 
 </div>
 
-Organize practical exercises with clear goals, execution paths, validation, and improvement guidance.
+The remote learning exercise for the OOP week.
 
 ## Contents
 
-- [`MiniProjectVaccines/`](MiniProjectVaccines/)
+- [`MiniProjectVaccines/`](MiniProjectVaccines/) — a vaccination queue with priority, age and family rules
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python Week2OOP/RemoteLearningOOP/Exercises/MiniProjectVaccines/vaccines.py
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 2 Remote Learning - Object-Oriented Programming - Exercises

@@ -1,4 +1,4 @@
-# 🧠 Daily Challenge: OOP Quizz + 🃏 Deck of Cards (Minimal Solution)
+# 💪 Daily Challenge - OOP Quiz
 
 <div align="center">
 
@@ -8,60 +8,60 @@
 
 </div>
 
-This package includes:
-- **Exercise 1:** concise OOP answers ✅
-- **Exercise 2:** working `Card` + `Deck` implementation with `shuffle()` and `deal()` / `deal_many()` ✅
+Two parts: short answers to the OOP quiz questions, and a deck of cards built with a `Card` and a `Deck` class.
 
----
-
-## 📚 Exercise 1 — OOP Answers (concise)
-
-- **Class** 🏗️ A blueprint defining attributes and methods for objects.
-- **Instance** 🧩 A concrete object created from a class.
-- **Encapsulation** 🔒 Bundle data + methods; control access (public / _protected / __name-mangled by convention).
-- **Abstraction** 🎭 Expose essentials; hide implementation details.
-- **Inheritance** 🧬 Create new classes from existing ones (is‑a relationship).
-- **Multiple inheritance** 🧵 Inherit from multiple bases; requires clear lookup rules.
-- **Polymorphism** 🦎 Same interface, different behaviors (overriding, duck typing).
-- **MRO** 🧭 Method Resolution Order (C3 linearization). Inspect with `Class.__mro__` / `Class.mro()`.
-
----
-
-## 🚀 Quickstart
+## ▶️ How to run
 
 ```bash
-# Run the demo
 python demo.py
-
-# Or run the module directly
-python deck.py
 ```
 
-**Expected output (example):**
-```
+```text
 🃏 Shuffled deck of 52 cards!
 🖐️ Your hand:
- - 7 of Hearts
- - K of Clubs
- - A of Spades
- - 10 of Diamonds
- - 3 of Clubs
+ - Q of Clubs
+ - 4 of Spades
+ - 3 of Hearts
+ - 5 of Spades
+ - 4 of Hearts
 📦 Cards left: 47
 ```
 
+The hand is random on every run. `python deck.py` prints a shorter one-line version.
+
+## 🎯 The challenge
+
+**Part 1 - OOP answers**
+
+- **Class**: a blueprint that defines the attributes and methods of its objects
+- **Instance**: one concrete object created from a class
+- **Encapsulation**: keeping data and the methods that use it together, and controlling access (`_protected`, `__name_mangled`)
+- **Abstraction**: showing what an object does and hiding how it does it
+- **Inheritance**: building a new class from an existing one (an "is a" relationship)
+- **Multiple inheritance**: a class with more than one parent, which needs clear lookup rules
+- **Polymorphism**: the same method call doing different things on different classes
+- **MRO**: the Method Resolution Order Python follows to find a method; see it with `Class.mro()`
+
+**Part 2 - Deck of cards** ([`deck.py`](deck.py))
+
+| Part | What it does |
+|---|---|
+| `Card` | A frozen dataclass with `suit` and `value` that rejects invalid ones and prints like `A of Spades` |
+| `Deck.shuffle()` | Rebuilds all 52 cards and shuffles them |
+| `Deck.deal()` | Takes one card, or raises `IndexError` when the deck is empty |
+| `Deck.deal_many(n)` | Takes `n` cards, checking that `n` is not negative or bigger than what is left |
+| `len(deck)` / `iter(deck)` | Count and loop over the remaining cards |
+
+## 🧠 What I learned
+
+- `@dataclass(frozen=True)` makes a card that cannot be changed after it is created
+- Building the deck with a list comprehension over suits and values gives all 52 cards in one line
+- `__len__` and `__iter__` make my own class work with `len()` and `for` loops
+
 ---
 
-## 🗂️ Files
+## 👤 Author
 
-```text
-deck.py   # Card + Deck classes with shuffle(), deal(), deal_many() ✨
-demo.py   # Simple usage example 🎬
-README.md # Theory + usage 📘
-```
-
----
-
-## ✅ Notes
-
-- Neutral tone; no external references. 🤝
-- Helpful emojis in comments and README for readability. ✨
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 2 Day 5 - Mini-projects - Daily Challenge

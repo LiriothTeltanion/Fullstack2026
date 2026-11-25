@@ -1,4 +1,4 @@
-# Exercises XP Gold — Inheritance 🧠🧬
+# 🥇 Exercises XP Gold
 
 <div align="center">
 
@@ -8,38 +8,40 @@
 
 </div>
 
-All the Gold inheritance exercises are in `exercisesxpgoldinheritance.py`.
+A bank account, a stricter child account and a small ATM menu, all in `exercisesxpgoldinheritance.py`.
 
-## Contents
-- 🏦 **BankAccount**
-  - `authenticate(username, password)` sets `authenticated=True` on match
-  - `deposit(amount:int)` / `withdraw(amount:int)` require `authenticated=True`
-- 📉 **MinimumBalanceAccount (inherits BankAccount)**
-  - `minimum_balance` in `__init__`
-  - `withdraw` only allowed if `balance - amount >= minimum_balance`
-- 🏧 **ATM**
-  - Validates `account_list` and `try_limit` (falls back to 2 on invalid input)
-  - `show_main_menu()` → Login / Exit
-  - `log_in(username, password)` loops until success or `try_limit`
-  - `show_account_menu(account)` → Deposit / Withdraw / Exit
+## ▶️ How to run
 
-## Run
 ```bash
 python exercisesxpgoldinheritance.py
 ```
-By default, the ATM demo is **commented out** to avoid blocking.  
-Uncomment the `ATM([a, b], try_limit=3)` line at the bottom to try the interactive menu.
 
-## Example accounts (for ATM)
-- `username=kevin`, `password=1234`, balance=500
-- `username=nova`,  `password=blue`, balance=1000, minimum_balance=200
-
-## Quick import
-```python
-from exercisesxpgoldinheritance import BankAccount, MinimumBalanceAccount, ATM
-
-a = BankAccount(500, "kevin", "1234")
-b = MinimumBalanceAccount(1000, "nova", "blue", minimum_balance=200)
-a.authenticate("kevin", "1234"); a.deposit(100); a.withdraw(50)
-b.authenticate("nova", "blue"); b.withdraw(700)
+```text
+Deposited 100. New balance: 600
+Withdrew 50. New balance: 550
+Expected error: Withdrawal denied: balance would drop below minimum (200).
+Withdrew 700. New balance: 300
 ```
+
+The interactive ATM is commented out so the script does not wait for input. Uncomment `ATM([a, b], try_limit=3)` at the bottom to try it.
+
+## 🎯 The challenge
+
+1. **BankAccount** - `authenticate(username, password)` sets `authenticated`; `deposit()` and `withdraw()` raise `PermissionError` before login and only accept positive whole numbers
+2. **MinimumBalanceAccount** - inherits `BankAccount`, adds `minimum_balance` and overrides `withdraw()` so the balance never drops below it
+3. **ATM** - checks the account list and `try_limit` (an invalid limit falls back to 2), then shows a menu: log in, deposit, withdraw, exit
+
+## 🧠 What I learned
+
+- Overriding one method in a child class is enough to change its rules
+- Keeping the balance check inside the account class keeps the menu code simple
+- Raising an error is better than printing a warning when an action is not allowed
+- A `try / except` around `int(input())` stops a typo from crashing the ATM
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 2 Day 2 - Inheritance, Encapsulation and Polymorphism - Exercises XP Gold

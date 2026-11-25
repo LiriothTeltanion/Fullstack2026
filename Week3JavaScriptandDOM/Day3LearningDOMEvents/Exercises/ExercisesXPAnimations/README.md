@@ -1,4 +1,4 @@
-# Exercises XP Animations
+# 🥉 Exercises XP Animations
 
 <div align="center">
 
@@ -8,36 +8,36 @@
 
 </div>
 
-> Create accessible browser interactions using DOM selection, events, forms, and state updates.
+Two timer exercises: add "Hello World" paragraphs on a schedule, and slide a red box across a yellow square.
 
-## Learning goals
+## ▶️ How to run
 
-- Practice: HTML, JavaScript.
-- Validate normal inputs, edge cases, and failure states.
-- Be able to explain the solution without reading the code line-by-line.
+Open either page in a browser (or use `npm run dev` from the repo root):
 
-## How to run
+- `index_timer.html` – the timer starts on load.
+- `index_move.html` – click **Click Me** to move the box.
 
-```text
-# Open index_move.html in a browser or serve the repository locally
-# Open index_timer.html in a browser or serve the repository locally
-```
+## 🎯 The challenge
 
-## Files
+1. **Timer** (`timer.js`)
+   - Part I: after 2 seconds, `alert("Hello World")`.
+   - Part II: after 2 seconds, add `<p>Hello World</p>` to `#container`.
+   - Part III: every 2 seconds, add another paragraph; `clearInterval` stops it when I click **Clear Interval** or when there are 5 paragraphs.
+2. **Move the box** (`move.js`) – `myMove()` moves `#animate` 1px every millisecond with `setInterval` until it reaches the right edge (container width minus box width). Clicking again clears the old interval and starts from the left.
 
-- `index_move.html`
-- `index_timer.html`
-- `move.js`
-- `timer.js`
+More notes are in [README_Animations_XP.md](README_Animations_XP.md).
 
-## Verification checklist
+## 🧠 What I learned
 
-- [ ] Main flow works
-- [ ] Invalid input is handled
-- [ ] Code is formatted
-- [ ] Tests or repeatable manual checks exist
-- [ ] README matches the current implementation
+- `setTimeout` runs once, `setInterval` repeats until `clearInterval`
+- Keeping the interval id in a variable lets me stop it from anywhere
+- Clearing the old interval first stops two animations from running at once
+- `clientWidth` gives the real size I need to find the edge
 
-## Next improvement
+---
 
-Describe one concrete refactor, test, accessibility improvement, or product enhancement.
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Day 3 - DOM Events - Exercises XP Animations

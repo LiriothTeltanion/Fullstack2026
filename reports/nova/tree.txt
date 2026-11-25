@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-25
-Base HEAD: 48191344584a765832a8878226e774bbe99617fc
-Source-index SHA-256 (generated outputs excluded): b3577db06c11864702f7c496748f9b135af9c1b3e75f7db6c793558b9e8b5d7c
-Indexed files: 852
+Base HEAD: e4f703e0513021142bc3ba898992a6a68fa6a69a
+Source-index SHA-256 (generated outputs excluded): d97ed622ccf04bd45fccfc9fc7fc76d82b863150b4f45935a8d9ea0f2b8cd934
+Indexed files: 858
 
 .
 ├── .github
@@ -277,11 +277,17 @@ Indexed files: 852
 │   │   │   ├── user-info-cc666f7b51.svg
 │   │   │   ├── weather-app-3ec8010478.svg
 │   │   │   ├── week1-python-6dd83c5ba0.svg
+│   │   │   ├── week10-advanced-typescript-and-authentication-62a9a9e0bd.svg
+│   │   │   ├── week11-final-project-887d3ee45a.svg
+│   │   │   ├── week12-final-project-ef4be5404c.svg
 │   │   │   ├── week2-oop-f3122b8ed5.svg
 │   │   │   ├── week3-java-scriptand-dom-6198da8760.svg
 │   │   │   ├── week4-adv-asynchronous-java-script-9e969cfe32.svg
 │   │   │   ├── week5-mini-project-and-type-script-e3ca5bd6e9.svg
 │   │   │   ├── week6-databases-and-nodejs-4095c435e8.svg
+│   │   │   ├── week7-node-js-and-react-dd2882c4f4.svg
+│   │   │   ├── week8-react-1b6380f990.svg
+│   │   │   ├── week9-redux-f6ec485707.svg
 │   │   │   ├── words-in-the-stars-47bf0873fc.svg
 │   │   │   └── workflows-93d7c4b837.svg
 │   │   ├── ultimate

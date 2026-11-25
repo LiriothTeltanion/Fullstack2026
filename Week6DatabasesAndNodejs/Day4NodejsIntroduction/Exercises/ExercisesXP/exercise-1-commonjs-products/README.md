@@ -1,4 +1,4 @@
-# Exercise 1 Commonjs Products
+# 🧪 Exercise 1 - CommonJS Products
 
 <div align="center">
 
@@ -8,33 +8,38 @@
 
 </div>
 
-> Practice relational modeling, joins, constraints, CRUD operations, and PostgreSQL queries.
+A small product catalog exported with CommonJS, and a function that finds a product by its name.
 
-## Learning goals
+## ▶️ How to run
 
-- Practice: JSON, JavaScript.
-- Validate normal inputs, edge cases, and failure states.
-- Be able to explain the solution without reading the code line-by-line.
-
-## How to run
-
-```text
-Add the exact run command after verifying the entry point.
+```bash
+node shop.js
 ```
 
-## Files
+```
+✅ Found: Mechanical Keyboard — $99 [Peripherals]
+✅ Found: USB-C Hub — $39 [Accessories]
+❌ Not found: Unknown
+```
 
-- `products.js`
-- `shop.js`
+## 🎯 The challenge
 
-## Verification checklist
+| File | What it does |
+|---|---|
+| `products.js` | Exports an array of five products (`name`, `price`, `category`) with `module.exports` |
+| `shop.js` | Loads it with `require("./products")`. `findProductByName(name)` trims the name, compares it without caring about upper or lower case and returns the product or `null`; an empty name prints a warning. The file searches for three names as a demo. |
 
-- [ ] Main flow works
-- [ ] Invalid input is handled
-- [ ] Code is formatted
-- [ ] Tests or repeatable manual checks exist
-- [ ] README matches the current implementation
+## 🧠 What I learned
 
-## Next improvement
+- `module.exports` decides what another file gets back from `require()`
+- `Array.prototype.find()` returns the first match, or `undefined` when there is none
+- Comparing with `toLowerCase()` makes the search case-insensitive
+- A guard clause handles empty input before the real work
 
-Describe one concrete refactor, test, accessibility improvement, or product enhancement.
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 6 Day 4 - Introduction to Node.js - Exercise 1

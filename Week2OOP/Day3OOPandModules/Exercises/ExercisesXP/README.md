@@ -1,4 +1,4 @@
-# Full-Stack Coding Bootcamp – OOP & Modules XP (All-In-One) ✨
+# 🥉 Exercises XP
 
 <div align="center">
 
@@ -8,103 +8,55 @@
 
 </div>
 
-This repository (or folder) contains a **single Python file** that solves all the XP exercises for **Object Oriented Programming & Modules** in one place, plus this README for quick instructions. Simple, clean, and commented in English (with some friendly emojis).
+All seven XP exercises on dunder methods and modules in one script, `xp_oop_modules_all.py`.
 
----
-
-## 📂 Files
-
-- `xp_oop_modules_all.py` — All exercises combined in one script.  
-  Exercises included:
-  1. **Currencies** (dunder methods: `__str__`, `__repr__`, `__int__`, `__add__`, `__iadd__`, `__radd__`)
-  2. **Import** (inlined here as a function `sum_two_numbers`; originally meant to be in `func.py`)
-  3. **String module** (random 5-letter string using `string` + `random`)
-  4. **Current date** (using `datetime.date`)
-  5. **Time until Jan 1st** (using `datetime.datetime`)
-  6. **Birthday → minutes lived** (parsing with `datetime.strptime`, `.total_seconds()`)
-  7. **Faker module** (fake users list; optional dependency)
-
-> ℹ️ Exercise 2 originally asked to create two files (`func.py` and `exercise_one.py`). Because **everything is combined into ONE file** for this request, we simply keep the function inside the same script and call it in the demo section. The logic is the same.
-
----
-
-## ✅ Requirements
-
-- Python **3.10+** recommended
-- Optional: `Faker` module for Exercise 7  
-  Install with:
-  ```bash
-  pip install faker
-  ```
-
----
-
-## ▶️ How to Run
-
-From the folder that contains the files:
+## ▶️ How to run
 
 ```bash
+pip install faker   # optional, only for exercise 7
 python xp_oop_modules_all.py
 ```
 
-This will run a **demo for each exercise** in order and print the outputs to the console.
+```text
+===== Exercise 1: Currency dunder methods =====
+5 dollars
+5
+5 dollars
+10
+15
+5 dollars
+10 dollars
+20 dollars
+TypeError: Cannot add between Currency type <dollar> and <shekel>
 
----
-
-## 🔎 What You’ll See
-
-- **Exercise 1**: Currency class demo with the exact behaviors described (string rep, `int()`, add, iadd, and error for different currencies).  
-- **Exercise 2**: A function `sum_two_numbers(7, 13)` prints `20`.  
-- **Exercise 3**: Random 5-letter string (letters only).  
-- **Exercise 4**: Today’s date in ISO format.  
-- **Exercise 5**: Time left until **January 1st of next year** (days/hours/minutes/seconds).  
-- **Exercise 6**: Minutes lived since a given birthdate (example uses `1994-06-16`).  
-- **Exercise 7**: A list of **5 fake users** (name, language code, address) printed to one line each. If `Faker` is **not installed**, the script will tell you how to install it and skip the output.
-
----
-
-## 🧪 Modifying the Demo
-
-If you want to change the example values (e.g., your birthdate or the number of fake users), open `xp_oop_modules_all.py` and edit the calls in the `run_all_demos()` function near the bottom of the file.
-
-For example:
-```python
-# Change the birthdate:
-minutes_lived("1994-06-16")
-
-# Change how many fake users to generate:
-users = generate_users(10)
+===== Exercise 2: 'Import' (inline function call) =====
+Sum is: 20 ✅
+...
 ```
 
----
+The random string, the dates and the minutes change on every run. Without Faker, exercise 7 prints how to install it.
 
-## 🚀 Pushing to GitHub
+## 🎯 The challenge
 
-```bash
-git add -A
-git commit -m "Add all-in-one OOP & Modules XP solutions + README ✨"
-git push
-```
+1. **Currencies** - a `Currency` class with `__str__`, `__repr__`, `__int__`, `__add__`, `__iadd__` and `__radd__`; adding two different currencies raises `TypeError`
+2. **Import** - `sum_two_numbers(a, b)`; the task asked for a separate `func.py`, but I kept the function in the same script
+3. **String module** - a random 5-letter string from `string.ascii_letters` and `random.choice`
+4. **Current date** - today's date with `date.today()`
+5. **Time until January 1st** - days, hours, minutes and seconds left, from a `datetime` subtraction
+6. **Minutes lived** - parses a birthdate with `strptime` and divides `total_seconds()` by 60
+7. **Faker** - `generate_users(n)` builds a list of fake users with a name, an address and a language code
 
----
+## 🧠 What I learned
 
-## 🧠 Tip
-
-If your instructor wants **Exercise 2** in **separate files**, you can still extract it easily:
-- Create `func.py` and move `sum_two_numbers` there.
-- Create `exercise_one.py` and import from `func.py`:
-  ```python
-  from func import sum_two_numbers
-
-  if __name__ == "__main__":
-      sum_two_numbers(7, 13)
-  ```
-
-Then run:
-```bash
-python exercise_one.py
-```
+- `a + b`, `a += b` and `5 + a` call three different dunder methods
+- `__radd__` is what makes a number on the left side of `+` work
+- Subtracting two `datetime` objects gives a `timedelta` I can split into units
+- Importing an optional package inside a function keeps the script running without it
 
 ---
 
-**Have fun and keep it simple.** 🐍💙
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 2 Day 3 - OOP and Modules - Exercises XP

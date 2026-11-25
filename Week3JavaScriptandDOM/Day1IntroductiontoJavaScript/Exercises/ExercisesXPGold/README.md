@@ -1,4 +1,4 @@
-# Day1 Introductionto Java Script — Exercises XP Gold
+# 🥇 Exercises XP Gold
 
 <div align="center">
 
@@ -8,33 +8,44 @@
 
 </div>
 
-> Create accessible browser interactions using DOM selection, events, forms, and state updates.
+Three short exercises with variables, conditionals, loops and objects. The script runs as soon as the page loads.
 
-## Learning goals
+## ▶️ How to run
 
-- Practice: HTML, JavaScript.
-- Validate normal inputs, edge cases, and failure states.
-- Be able to explain the solution without reading the code line-by-line.
+Open `index.html` in a browser (or use `npm run dev` from the repo root) and open DevTools → Console. Exercise 2 shows a `prompt()`, so it only works in a browser.
 
-## How to run
+```
+Exercise 1: Divisible by 3?
+true
+true
+true
+true
+false
 
-```text
-# Open index.html in a browser or serve the repository locally
+Exercise 3: Playing with numbers
+Sum: 233
+Highest age: 98
 ```
 
-## Files
+## 🎯 The challenge
 
-- `index.html`
-- `script.js`
+1. **Divisible by three** – loop over `[123, 8409, 100053, 333333333, 7]` and log `n % 3 === 0`.
+2. **Attendance** – ask for a name; if it is in `guestList` (checked with `in`, after `trim()` and `toLowerCase()`) it logs and alerts `Hi! I'm randy, and I'm from Germany.`, otherwise `Hi! I'm a guest.`
+3. **Playing with numbers** – sum the `age` array and find the highest value with plain `for` loops, without `Math.max` or `reduce`.
 
-## Verification checklist
+More notes are in [README_JS_XP_Gold.md](README_JS_XP_Gold.md).
 
-- [ ] Main flow works
-- [ ] Invalid input is handled
-- [ ] Code is formatted
-- [ ] Tests or repeatable manual checks exist
-- [ ] README matches the current implementation
+## 🧠 What I learned
 
-## Next improvement
+- The `%` operator tells me if a number divides evenly
+- The `in` operator checks if an object has a key
+- Finding the maximum by hand means starting with the first item and comparing the rest
+- Wrapping each exercise in `{ }` keeps its `const` names from clashing
 
-Describe one concrete refactor, test, accessibility improvement, or product enhancement.
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Day 1 - Introduction to JavaScript - Exercises XP Gold

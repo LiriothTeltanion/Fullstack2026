@@ -1,4 +1,4 @@
-# Exercises
+# 📚 Exercises
 
 <div align="center">
 
@@ -8,20 +8,18 @@
 
 </div>
 
-Create interactive browser experiences with JavaScript, DOM events, accessibility, and responsive behavior.
+The three exercise tiers of Day 4.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/)
-- [`ExercisesXPGold/`](ExercisesXPGold/)
-- [`ExercisesXPNinja/`](ExercisesXPNinja/)
+- [`ExercisesXP/`](ExercisesXP/) — scope, ternary, arrow and self-invoking functions, the juice bar
+- [`ExercisesXPGold/`](ExercisesXPGold/) — closures, currying and composition in Node
+- [`ExercisesXPNinja/`](ExercisesXPNinja/) — the curried `mergeWords` sentence builder
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-node Week3JavaScriptandDOM/Day4AdvancedJavaScriptFunctions/Exercises/ExercisesXP/advanced_js.js
-python -m http.server 8000
-node Week3JavaScriptandDOM/Day4AdvancedJavaScriptFunctions/Exercises/ExercisesXPGold/index.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Day 4 - Advanced JavaScript Functions - Exercises

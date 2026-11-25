@@ -1,4 +1,4 @@
-# Mini‑project — Anagram checker 🧠🔤
+# 🎮 Mini Project - Anagram Checker
 
 <div align="center">
 
@@ -8,26 +8,53 @@
 
 </div>
 
-Files (lowercase, no underscores):
-- `anagramchecker.py` — class **AnagramChecker** (loads word list, validates words, finds anagrams). No printing.
-- `anagrams.py` — UI/CLI that handles input validation and pretty output.
-- `words.txt` — small built‑in word list for offline use (you can replace it with a larger list).
+A command-line tool that checks if a word is in a word list and shows its anagrams. The logic and the menu live in two separate files.
 
-## Run
+## ▶️ How to run
+
+From this folder:
+
 ```bash
-python anagrams.py              # uses words.txt in the same folder
-python anagrams.py /path/words.txt   # use a custom word list
+python anagrams.py                  # uses words.txt here
+python anagrams.py path/to/words.txt
 ```
 
-## Class API (no prints)
-```python
-from anagramchecker import AnagramChecker
-ac = AnagramChecker("words.txt")
-ac.is_valid_word("meat")     # -> True/False
-ac.get_anagrams("meat")      # -> ["MATE", "TAME", "TEAM"] (order deterministic)
-ac.is_anagram("listen", "silent")  # -> True
+```text
+   ★ ANAGRAM CHECKER ★
+Type a word to see its anagrams, or 'q' to quit.
+
+Enter a word (or 'q' to quit): meat
+
+YOUR WORD: "MEAT"
+This is a valid English word.
+Anagrams for your word: mate, meta, tame, team
 ```
 
-## Notes
-- Words are normalized to **UPPERCASE** internally; UI displays uppercase and anagrams in lowercase for readability.
-- The code uses emoji‑rich comments and clean OOP separation, as requested. ✨
+## 🎯 The challenge
+
+- [`anagramchecker.py`](anagramchecker.py) - the `AnagramChecker` class, which prints nothing:
+
+  | Method | What it does |
+  |---|---|
+  | `is_valid_word(word)` | `True` if the word is in the list (case-insensitive) |
+  | `get_anagrams(word)` | The other words with the same letters, sorted, without the word itself |
+  | `is_anagram(word1, word2)` | `True` if two different words use the same letters |
+
+  It loads the words in uppercase and builds an index from each word's sorted letters (`MEAT` → `AEMT`) to its bucket of words, so a lookup is a single dictionary access.
+- [`anagrams.py`](anagrams.py) - the menu: it only accepts one word made of letters, and `q` quits
+- [`words.txt`](words.txt) - a small list of 49 words; it can be swapped for a bigger one
+
+## 🧠 What I learned
+
+- Two words are anagrams when their sorted letters are the same
+- Precomputing an index once makes every later search fast
+- Keeping `print` out of the class means the same logic could power a different interface
+- Normalizing input (letters only, uppercase) before comparing avoids many small bugs
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 2 Day 5 - Mini-projects - Mini Project

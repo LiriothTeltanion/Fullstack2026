@@ -1,4 +1,4 @@
-# Todo List
+# 💪 Daily Challenge - Todo List
 
 <div align="center">
 
@@ -8,32 +8,34 @@
 
 </div>
 
-> Create accessible browser interactions using DOM selection, events, forms, and state updates.
+A to-do list in a single HTML file: add a task, tick it as done, or delete it.
 
-## Learning goals
+## ▶️ How to run
 
-- Practice: HTML.
-- Validate normal inputs, edge cases, and failure states.
-- Be able to explain the solution without reading the code line-by-line.
+Open `todo_list.html` in a browser (or run `npm run dev` from the repo root and open it at `http://localhost:8000/`). The delete icon comes from Font Awesome on a CDN, so it needs internet.
 
-## How to run
+## 🎯 The challenge
 
-```text
-# Open todo_list.html in a browser or serve the repository locally
-```
+| Function | What it does |
+|---|---|
+| `addTask(text)` | Trims the text, alerts `Please enter a task.` when it is empty, otherwise stores `{ task_id, text, done: false }` in the `tasks` array and shows it. |
+| `renderTask(task)` | Builds a row with a checkbox, a label and a delete button, and puts it at the top of the list. |
+| `doneTask(taskId, checked)` | Updates `done` and toggles the `done` class, which crosses the task out in red. |
+| `deleteTask(taskId)` | Removes the task from the array and its row from the page. |
 
-## Files
+The list uses one `click` and one `change` listener for every row (event delegation), and `Escape` clears the input.
 
-- `todo_list.html`
+## 🧠 What I learned
 
-## Verification checklist
+- Keeping each task as an object with an id makes it easy to find it again
+- `data-task-id` links a row on the page to its object in the array
+- Event delegation means new rows work without adding new listeners
+- `prepend()` puts the newest task first
 
-- [ ] Main flow works
-- [ ] Invalid input is handled
-- [ ] Code is formatted
-- [ ] Tests or repeatable manual checks exist
-- [ ] README matches the current implementation
+---
 
-## Next improvement
+## 👤 Author
 
-Describe one concrete refactor, test, accessibility improvement, or product enhancement.
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Day 5 - Mini-projects - Daily Challenge

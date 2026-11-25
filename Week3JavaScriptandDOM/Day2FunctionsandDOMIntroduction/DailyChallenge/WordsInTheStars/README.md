@@ -1,4 +1,4 @@
-# ⭐ Daily Challenge: Words in the Stars
+# 💪 Daily Challenge - Words in the Stars
 
 <div align="center">
 
@@ -8,25 +8,22 @@
 
 </div>
 
-**Last Updated:** October 7th, 2025
+Ask for words separated by commas and print them one per line inside a rectangle of stars. The frame width depends on the longest word.
 
-## 🎯 What you will learn
-- Functions
-- String methods
-- Array methods
-- Loops
+## ▶️ How to run
 
----
+`index.js` uses `require` and `module.exports`, but the repo root `package.json` has `"type": "module"`, so `node index.js` fails (`window is not defined`). Run a `.cjs` copy instead:
 
-## 📝 Instructions
-- Prompt the user for several words (separated by commas).
-- Put the words into an array.
-- Print the words **one per line**, inside a rectangular **star frame**. ⭐
+```powershell
+Copy-Item index.js $env:TEMP\stars.cjs; node $env:TEMP\stars.cjs "Hello, World, in, a, frame"
+```
 
-**Example**  
-Input: `Hello, World, in, a, frame`  
-Transformed array: `["Hello", "World", "in", "a", "frame"]`  
-Output:
+```bash
+cp index.js /tmp/stars.cjs
+node /tmp/stars.cjs "Hello, World, in, a, frame"   # words as an argument
+node /tmp/stars.cjs                                # asks for the words
+```
+
 ```
 *********
 * Hello *
@@ -37,28 +34,26 @@ Output:
 *********
 ```
 
-> 💡 The number of stars must depend on the **longest word**.
+## 🎯 The challenge
 
-**Requirement:** Only JavaScript (no HTML, no CSS).
+| Function | What it does |
+|---|---|
+| `wordsInTheStars(input)` | Takes a comma-separated string or an array, trims the words, drops empty ones, finds the longest word and returns the framed text (`*` border of `maxLen + 4`). |
+| `demo(input)` | Prints the frame, or `⚠️ No words were provided.` when there are no words. |
 
----
+With no arguments the script asks for the words with `readline`.
 
-## 🚀 Run (Node.js)
-```bash
-# Option 1: interactive prompt
-node index.js
+## 🧠 What I learned
 
-# Option 2: pass input as args
-node index.js "Hello, World, in, a, frame"
-```
-
-You can also use it in a browser console (no HTML needed):
-```js
-// Paste the function into the console or load the file via DevTools, then:
-console.log(wordsInTheStars("Hello, World, in, a, frame"));
-```
+- `split(",")`, `map(trim)` and `filter(Boolean)` turn messy input into a clean array
+- `"*".repeat(n)` and padding with spaces line up every row of the frame
+- The longest word decides the width, so I measure before I print
+- `require.main === module` only works when Node reads the file as CommonJS
 
 ---
 
-## 📦 Files
-- `index.js` — implementation with emoji-guided comments.
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Day 2 - Functions and DOM Introduction - Daily Challenge
