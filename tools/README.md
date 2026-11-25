@@ -14,7 +14,7 @@ Scripts that keep the repository consistent. CI runs them on every pull request 
 |---|---|
 | [`quality_gate.py`](quality_gate.py) | Syntax, JSON, HTML, CSS, links and likely secrets across the repo (`npm run quality`) |
 | [`validate_repository_structure.py`](validate_repository_structure.py) | Folder paths, link casing, catalogs and secret checks |
-| [`refresh_structure_catalogs.py`](refresh_structure_catalogs.py) | Rebuilds the catalogs in `reports/nova/` (`npm run catalogs:refresh`) |
+| [`refresh_structure_catalogs.py`](refresh_structure_catalogs.py) | Rebuilds the catalogs in `reports/catalog/` (`npm run catalogs:refresh`) |
 | [`validate_readme_visuals.py`](validate_readme_visuals.py) | README images, manifest hashes and alt text |
 | [`validate_display_titles.py`](validate_display_titles.py) | Display titles for weeks and days |
 | [`learning_intake.py`](learning_intake.py) | Exercise intake queue (`npm run intake`) |

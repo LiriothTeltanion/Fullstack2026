@@ -1,7 +1,7 @@
 import unittest
 from _loader import find_one, load_file
 
-mod = load_file("nova_tictactoe", find_one("Week*/**/TicTacToe/tictactoe.py"))
+mod = load_file("fullstack_tictactoe", find_one("Week*/**/TicTacToe/tictactoe.py"))
 
 class TicTacToeTests(unittest.TestCase):
     def test_new_board_and_move_parsing(self):

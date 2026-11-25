@@ -8,7 +8,7 @@ from _loader import find_one, load_file
 
 
 MODULE = load_file(
-    "nova_week1_day4_coffee_shop_menu_manager",
+    "fullstack_week1_day4_coffee_shop_menu_manager",
     find_one(
         "Week1Python/Day4Functions/DailyChallenge/CoffeeShopMenuManager/"
         "coffeeshopmenumanager.py"

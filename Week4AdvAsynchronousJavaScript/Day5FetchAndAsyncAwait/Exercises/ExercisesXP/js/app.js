@@ -7,7 +7,7 @@ const btn2 = document.getElementById("ex2");
 const btn3 = document.getElementById("ex3");
 const btn4 = document.getElementById("ex4");
 
-const GIPHY_KEY = window.NOVA_GIPHY_CONFIG?.apiKey?.trim() ?? "";
+const GIPHY_KEY = window.GIPHY_CONFIG?.apiKey?.trim() ?? "";
 
 function requireGiphyKey() {
   const isPlaceholder = /^(YOUR|REPLACE|EXAMPLE|PLACEHOLDER)[_-]/i.test(GIPHY_KEY);

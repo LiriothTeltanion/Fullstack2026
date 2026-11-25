@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "generated_on": "2026-11-25",
+  "generator": "tools/refresh_structure_catalogs.py",
+  "base_head": "a33e8875e1c9e33362b2c02fff76fd084bbe3e85",
+  "source_index_sha256": "6b1682485a7edbee4d98832e77c1ef65896cda252570b7dc399286bc3f0621d7",
+  "source_index_file_count": 851,
+  "fingerprint_excludes": [
+    "reports/catalog/catalog_manifest.json",
+    "reports/catalog/exercise_catalog.csv",
+    "reports/catalog/exercise_catalog.md",
+    "reports/catalog/file_inventory.csv",
+    "reports/catalog/tree.txt",
+    "reports/catalog/rename_plan.csv",
+    "reports/catalog/README.md"
+  ],
+  "catalog_metadata_source": "reports/catalog/exercise_catalog_metadata.csv",
+  "evidence_boundary": "Path and indexed-blob evidence only; not runtime, learning, mastery, or portfolio proof."
+}

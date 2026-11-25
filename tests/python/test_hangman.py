@@ -2,7 +2,7 @@ import unittest
 from _loader import find_one, load_package_module
 
 source = find_one("Week*/**/Hangman/src/game.py").parent
-mod = load_package_module("nova_hangman", source, "game")
+mod = load_package_module("fullstack_hangman", source, "game")
 
 class HangmanTests(unittest.TestCase):
     def test_hit_repeat_and_win(self):

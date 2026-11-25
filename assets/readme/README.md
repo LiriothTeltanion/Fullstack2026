@@ -15,5 +15,5 @@ alt text, motion behavior and privacy review; `npm run verify:visuals` checks th
 ## Contents
 
 - [`days/`](days/) — per-day overview maps, starting with Week 1 Day 1.
-- [`ultimate/`](ultimate/) — the root README banner, twelve-week journey map and technology constellation.
+- [`hero/`](hero/) — the root README banner, twelve-week journey map and technology constellation.
 - [`visual_manifest.json`](visual_manifest.json) — source and review data for each visual.

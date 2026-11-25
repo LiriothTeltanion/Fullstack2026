@@ -251,7 +251,7 @@ def repository_findings(root: Path) -> list[Finding]:
 
 
 def write_reports(root: Path, report: dict) -> tuple[Path, Path]:
-    output = root / "reports" / "nova"
+    output = root / "reports" / "catalog"
     output.mkdir(parents=True, exist_ok=True)
     json_path = output / "quality_report.json"
     md_path = output / "quality_report.md"

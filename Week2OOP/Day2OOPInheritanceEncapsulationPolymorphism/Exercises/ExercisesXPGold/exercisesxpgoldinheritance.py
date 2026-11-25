@@ -217,7 +217,7 @@ class ATM:
 if __name__ == "__main__":
     # Example accounts
     a = BankAccount(balance=500, username="kevin", password="1234")
-    b = MinimumBalanceAccount(balance=1000, username="nova", password="blue", minimum_balance=200)
+    b = MinimumBalanceAccount(balance=1000, username="maya", password="blue", minimum_balance=200)
 
     # Uncomment to run the ATM interactive CLI.
     # This will start the menu immediately (per spec) and block until exit.
@@ -231,7 +231,7 @@ if __name__ == "__main__":
         a.deposit(100)
         a.withdraw(50)
         a.authenticated = False
-    if b.authenticate("nova", "blue"):
+    if b.authenticate("maya", "blue"):
         try:
             b.withdraw(900)  # would drop below 200 -> should raise
         except Exception as e:

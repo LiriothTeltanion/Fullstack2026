@@ -22,16 +22,16 @@ from pathlib import Path, PurePosixPath
 
 
 GENERATED_OUTPUT_PATHS = (
-    "reports/nova/catalog_manifest.json",
-    "reports/nova/exercise_catalog.csv",
-    "reports/nova/exercise_catalog.md",
-    "reports/nova/file_inventory.csv",
-    "reports/nova/tree.txt",
-    "reports/nova/rename_plan.csv",
-    "reports/nova/README.md",
+    "reports/catalog/catalog_manifest.json",
+    "reports/catalog/exercise_catalog.csv",
+    "reports/catalog/exercise_catalog.md",
+    "reports/catalog/file_inventory.csv",
+    "reports/catalog/tree.txt",
+    "reports/catalog/rename_plan.csv",
+    "reports/catalog/README.md",
 )
 
-CATALOG_METADATA_PATH = "reports/nova/exercise_catalog_metadata.csv"
+CATALOG_METADATA_PATH = "reports/catalog/exercise_catalog_metadata.csv"
 
 EXERCISE_CATALOG_FIELDS = (
     "path",
@@ -426,7 +426,7 @@ def file_category(path: str, suffix: str, is_test: bool) -> str:
 def build_file_inventory(blobs: dict[str, bytes]) -> str:
     rows: list[dict[str, object]] = []
     for path, content in sorted(blobs.items()):
-        if path == "reports/nova/file_inventory.csv":
+        if path == "reports/catalog/file_inventory.csv":
             continue  # Avoid a self-referential hash while retaining complete coverage of every other blob.
         pure = PurePosixPath(path)
         suffix = pure.suffix.lower()
@@ -555,7 +555,7 @@ Earlier versions of the regenerated catalogs remain available through Git histor
 
 
 def existing_provenance(root: Path) -> tuple[str, str]:
-    relative = "reports/nova/catalog_manifest.json"
+    relative = "reports/catalog/catalog_manifest.json"
     try:
         manifest = json.loads(run_git(root, "show", f":{relative}").decode("utf-8-sig"))
         generated_on = str(manifest["generated_on"])
@@ -597,12 +597,12 @@ def build_outputs(root: Path, generated_on: str, head_commit: str) -> dict[str, 
         "evidence_boundary": "Path and indexed-blob evidence only; not runtime, learning, mastery, or portfolio proof.",
     }
     outputs = {
-        "reports/nova/catalog_manifest.json": json.dumps(manifest, indent=2, ensure_ascii=False) + "\n",
-        "reports/nova/exercise_catalog.csv": exercise_csv,
-        "reports/nova/exercise_catalog.md": exercise_markdown,
-        "reports/nova/tree.txt": build_tree(list(entries), generated_on, head_commit, source_fingerprint),
-        "reports/nova/rename_plan.csv": build_rename_plan(),
-        "reports/nova/README.md": build_reports_readme(
+        "reports/catalog/catalog_manifest.json": json.dumps(manifest, indent=2, ensure_ascii=False) + "\n",
+        "reports/catalog/exercise_catalog.csv": exercise_csv,
+        "reports/catalog/exercise_catalog.md": exercise_markdown,
+        "reports/catalog/tree.txt": build_tree(list(entries), generated_on, head_commit, source_fingerprint),
+        "reports/catalog/rename_plan.csv": build_rename_plan(),
+        "reports/catalog/README.md": build_reports_readme(
             len(entries),
             exercise_count,
             generated_on,
@@ -617,7 +617,7 @@ def build_outputs(root: Path, generated_on: str, head_commit: str) -> dict[str, 
     for relative, content in outputs.items():
         if relative in entries:
             inventory_blobs[relative] = content.encode("utf-8")
-    outputs["reports/nova/file_inventory.csv"] = build_file_inventory(inventory_blobs)
+    outputs["reports/catalog/file_inventory.csv"] = build_file_inventory(inventory_blobs)
     return outputs
 
 

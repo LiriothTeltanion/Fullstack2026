@@ -10,7 +10,7 @@ from _loader import find_one, load_file
 
 
 MODULE = load_file(
-    "nova_week1_day1_daily_challenge",
+    "fullstack_week1_day1_daily_challenge",
     find_one(
         "Week1Python/Day1StartingwithPython/DailyChallenge/BuildUpAString/"
         "buildupastring.py"
