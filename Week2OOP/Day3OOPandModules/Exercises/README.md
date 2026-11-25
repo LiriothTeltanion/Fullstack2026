@@ -1,5 +1,13 @@
 # 🛠️ Day 3 Exercises – OOP and Modules
 
+<div align="center">
+
+<img src="../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../assets/readme/progress/exercises-2c52a77d12.svg" width="100%" alt="Progress card for Exercises">
+
+</div>
+
 ## 📦 What's Inside
 
 This folder focuses on the **seven XP exercises** that live inside [`xp_oop_modules_all.py`](ExercisesXP/xp_oop_modules_all.py). The script bundles every activity into one runnable file so you can review object-oriented patterns and module usage in a single place.

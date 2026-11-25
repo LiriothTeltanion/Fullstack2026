@@ -1,5 +1,13 @@
 # Files & JSON XP – Combined Solutions ✨
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xp-7736123bb3.svg" width="100%" alt="Progress card for Exercises XP">
+
+</div>
+
 This folder contains a single script, `xp_files_json_all.py`, that solves the two Files & JSON XP tasks:
 
 1. **Random Sentence Generator** – builds a sentence of user-defined length by reading from `words.txt`.

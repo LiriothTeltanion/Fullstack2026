@@ -1,5 +1,13 @@
 # 🗡️ Exercises XP Ninja — JS Basics
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xpninja-c55cdcf506.svg" width="100%" alt="Progress card for Exercises XPNinja">
+
+</div>
+
 Mini-solution covering **Variables, Conditionals, Loops, and Functions** with two exercises: BMI comparison and Grade Average.  
 Neutral tone; emojis to make scanning easier. ✨
 

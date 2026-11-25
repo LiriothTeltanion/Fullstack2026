@@ -1,5 +1,13 @@
 # 💪 Daily Challenge - Dictionaries
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/dictionaries-9a26300e0f.svg" width="100%" alt="Progress card for Dictionaries">
+
+</div>
+
 **Author:** Kevin Cusnir "Lirioth"  
 **Course:** Fullstack Bootcamp 2026  
 **Last Updated:** October 19, 2025

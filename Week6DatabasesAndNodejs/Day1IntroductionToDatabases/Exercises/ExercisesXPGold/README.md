@@ -1,5 +1,13 @@
 # Day1 Introduction To Databases — Exercises XP Gold
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xpgold-4e2fb61e02.svg" width="100%" alt="Progress card for Exercises XPGold">
+
+</div>
+
 > Practice relational modeling, joins, constraints, CRUD operations, and PostgreSQL queries.
 
 ## Learning goals

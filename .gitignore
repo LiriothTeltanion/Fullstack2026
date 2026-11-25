@@ -116,11 +116,3 @@ CLAUDE.local.md
 /pyproject.nova.suggested.toml
 /tools/nova_ultimate.py
 /tests/python/test_nova_generator.py
-/assets/readme/progress/
-/assets/readme/learning-orbit.svg
-/assets/readme/stack-pulse.svg
-/assets/readme/nova-*.svg
-/assets/readme/ultimate/nova-footer-pulse.svg
-/assets/readme/ultimate/nova-readiness-live.svg
-/assets/readme/ultimate/nova-roadmap-horizon.svg
-/assets/readme/ultimate/nova-six-weeks-journey.svg

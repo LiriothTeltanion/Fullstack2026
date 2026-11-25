@@ -1,5 +1,13 @@
 # ⚡ Week 4 — Advanced and Asynchronous JavaScript
 
+<div align="center">
+
+<img src="../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../assets/readme/progress/week4-adv-asynchronous-java-script-9e969cfe32.svg" width="100%" alt="Progress card for Week4 Adv Asynchronous Java Script">
+
+</div>
+
 Build resilient asynchronous flows with HTTP requests, loading states, validation, and error handling.
 
 ## Contents

@@ -1,5 +1,13 @@
 # Day1 Advanced Array Methods — Exercises XP
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xp-4b75acb0a5.svg" width="100%" alt="Progress card for Exercises XP">
+
+</div>
+
 > Practice asynchronous control flow, promises, error handling, and resilient user feedback.
 
 ## Learning goals

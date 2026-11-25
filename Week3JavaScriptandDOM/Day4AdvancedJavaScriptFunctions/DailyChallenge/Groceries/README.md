@@ -1,5 +1,13 @@
 # Groceries
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/groceries-a9b8627c73.svg" width="100%" alt="Progress card for Groceries">
+
+</div>
+
 > Design reusable functions with clear parameters, return values, validation, and scope.
 
 ## Learning goals

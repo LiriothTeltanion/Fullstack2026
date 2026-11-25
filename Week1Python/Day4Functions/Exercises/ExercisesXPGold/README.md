@@ -1,5 +1,13 @@
 # 🥈 Exercises XP Gold - Advanced Function Techniques# 🥇 Exercises XP Gold - Advanced Function Techniques# 🥈 XP Gold — Functions (Short & Simple)
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xpgold-0aa5d263c3.svg" width="100%" alt="Progress card for Exercises XPGold">
+
+</div>
+
 **Author:** Kevin Cusnir "Lirioth"  
 
 **Course:** Fullstack Bootcamp 2026  

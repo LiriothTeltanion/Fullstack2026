@@ -1,5 +1,13 @@
 # 🥈 Exercises XP Gold - Enhanced Data Manipulation
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xpgold-29cf741779.svg" width="100%" alt="Progress card for Exercises XPGold">
+
+</div>
+
 **Author:** Kevin Cusnir "Lirioth"  
 **Course:** Fullstack Bootcamp 2026  
 **Last Updated:** October 18, 2025

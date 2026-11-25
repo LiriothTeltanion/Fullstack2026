@@ -1,5 +1,13 @@
 # Exercises XP — Promises
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xp-44a220fa48.svg" width="100%" alt="Progress card for Exercises XP">
+
+</div>
+
 ## Files
 - `index_promises.html` — Minimal UI to run and see outputs.
 - `promises.js` — All exercises implemented (short & simple).

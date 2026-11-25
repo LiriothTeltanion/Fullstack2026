@@ -1,5 +1,13 @@
 # Exercises XP — dvdrental Relationships & Queries (PostgreSQL)
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xp-80340752f0.svg" width="100%" alt="Progress card for Exercises XP">
+
+</div>
+
 This pack contains a single SQL file with commented solutions for both exercises.
 Emojis are used for section markers (no hearts).
 

@@ -1,5 +1,13 @@
 # Exercise XP Gold — HTML Form #3 (plain)
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xpgold-f1d06e9641.svg" width="100%" alt="Progress card for Exercises XPGold">
+
+</div>
+
 A minimal two-page form matching the screenshot layout. The first page submits with GET;
 the second page reads the query string and writes the values into a `<section>` using the DOM.
 

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Animated Fullstack2026 learning orbit</title>
+  <desc id="desc">Technology nodes orbiting a central full-stack learning core.</desc>
+  <defs>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="420" rx="26" fill="#0b1123"/>
+  <ellipse cx="600" cy="210" rx="450" ry="145" fill="none" stroke="#38bdf8" stroke-opacity="0.22" stroke-width="2" stroke-dasharray="8 12">
+    <animate attributeName="stroke-dashoffset" values="0;-200" dur="12s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="600" cy="210" rx="325" ry="105" fill="none" stroke="#a78bfa" stroke-opacity="0.22" stroke-width="2" stroke-dasharray="5 14">
+    <animate attributeName="stroke-dashoffset" values="0;180" dur="10s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <g filter="url(#glow)">
+    <circle cx="600" cy="210" r="78" fill="url(#core)">
+      <animate attributeName="r" values="72;82;72" dur="4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <text x="600" y="204" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial" font-size="22" font-weight="800">FULL-STACK</text>
+  <text x="600" y="232" text-anchor="middle" fill="#e0f2fe" font-family="Segoe UI, Arial" font-size="15">INTEGRATION CORE</text>
+
+  <g font-family="Segoe UI, Arial" font-size="16" font-weight="700" text-anchor="middle">
+    <g>
+      <circle cx="160" cy="210" r="48" fill="#132f4c" stroke="#38bdf8"/>
+      <text x="160" y="216" fill="#e0f2fe">PYTHON</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0;12 -16;0 0" dur="5s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <circle cx="310" cy="88" r="44" fill="#2e1f52" stroke="#a78bfa"/>
+      <text x="310" y="94" fill="#f3e8ff">OOP</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0;-8 12;0 0" dur="4.4s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <circle cx="495" cy="82" r="48" fill="#4b3b0d" stroke="#facc15"/>
+      <text x="495" y="88" fill="#fef9c3">JAVASCRIPT</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0;8 -10;0 0" dur="5.7s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <circle cx="705" cy="82" r="46" fill="#133b45" stroke="#22d3ee"/>
+      <text x="705" y="88" fill="#cffafe">ASYNC</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0;-10 -8;0 0" dur="4.9s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <circle cx="890" cy="88" r="50" fill="#12345a" stroke="#60a5fa"/>
+      <text x="890" y="94" fill="#dbeafe">TYPESCRIPT</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0;10 14;0 0" dur="5.3s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <circle cx="1040" cy="210" r="45" fill="#183c2c" stroke="#4ade80"/>
+      <text x="1040" y="216" fill="#dcfce7">API</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0;-14 -8;0 0" dur="4.2s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <circle cx="850" cy="332" r="46" fill="#153246" stroke="#38bdf8"/>
+      <text x="850" y="338" fill="#e0f2fe">REACT</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0;9 -14;0 0" dur="5.4s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <circle cx="600" cy="342" r="46" fill="#3e2035" stroke="#f472b6"/>
+      <text x="600" y="348" fill="#fce7f3">DATABASE</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0;-8 10;0 0" dur="4.7s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <circle cx="350" cy="332" r="48" fill="#35234b" stroke="#c084fc"/>
+      <text x="350" y="338" fill="#f3e8ff">DEPLOY</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0;8 12;0 0" dur="5.1s" repeatCount="indefinite"/>
+    </g>
+  </g>
+</svg>

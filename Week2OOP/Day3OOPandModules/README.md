@@ -1,5 +1,13 @@
 # 📦 Day 3 — OOP and Modules
 
+<div align="center">
+
+<img src="../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../assets/readme/progress/day3-oopand-modules-61faf7cdb6.svg" width="100%" alt="Progress card for Day3 OOPand Modules">
+
+</div>
+
 ## 🎯 Learning Objectives
 
 By the end of this day, you will be able to:

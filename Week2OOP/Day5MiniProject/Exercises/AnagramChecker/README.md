@@ -1,5 +1,13 @@
 # Mini‑project — Anagram checker 🧠🔤
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/anagram-checker-8fdcf3b2c3.svg" width="100%" alt="Progress card for Anagram Checker">
+
+</div>
+
 Files (lowercase, no underscores):
 - `anagramchecker.py` — class **AnagramChecker** (loads word list, validates words, finds anagrams). No printing.
 - `anagrams.py` — UI/CLI that handles input validation and pretty output.

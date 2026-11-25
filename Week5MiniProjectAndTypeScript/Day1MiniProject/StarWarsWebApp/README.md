@@ -1,5 +1,13 @@
 # Star Wars Character Finder
 
+<div align="center">
+
+<img src="../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../assets/readme/progress/star-wars-web-app-63b913747f.svg" width="100%" alt="Progress card for Star Wars Web App">
+
+</div>
+
 > Current evidence (2026-08-24): source present; browser/API behavior, accessibility, explanation, and mastery are unverified.
 
 A single-page web application that uses AJAX to fetch and display Star Wars character information.

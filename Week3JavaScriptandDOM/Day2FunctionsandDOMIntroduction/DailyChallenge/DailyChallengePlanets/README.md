@@ -1,5 +1,13 @@
 # Daily Challenge Planets
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/daily-challenge-planets-bcd2f51b89.svg" width="100%" alt="Progress card for Daily Challenge Planets">
+
+</div>
+
 > Design reusable functions with clear parameters, return values, validation, and scope.
 
 ## Learning goals

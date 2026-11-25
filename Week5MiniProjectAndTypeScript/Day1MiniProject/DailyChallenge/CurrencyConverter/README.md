@@ -1,5 +1,13 @@
 # Currency Converter
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/currency-converter-e742522f43.svg" width="100%" alt="Progress card for Currency Converter">
+
+</div>
+
 A modern currency converter web application that uses the ExchangeRate API to provide real-time currency conversion rates.
 
 ## Description

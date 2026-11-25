@@ -1,5 +1,13 @@
 # Objects, Destructuring & Classes — Exercises XP (TypeScript) 🧠🧩
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xp-1913cdd331.svg" width="100%" alt="Progress card for Exercises XP">
+
+</div>
+
 Practice **object destructuring**, **object/array methods**, and **classes with inheritance**.
 
 ## ✅ What’s inside

@@ -1,5 +1,13 @@
 # Exercises XP — HTTP & Forms (GET, POST, JSON)
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xp-200dd1c988.svg" width="100%" alt="Progress card for Exercises XP">
+
+</div>
+
 A tiny, beginner-friendly demo for the bootcamp exercises.
 
 ## ⭐ Exercise 1: HTML Form (GET)

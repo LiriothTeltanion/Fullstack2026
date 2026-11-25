@@ -1,5 +1,13 @@
 # Daily Challenge — Node.js Modules, NPM & Files
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/nodejs-app-and-npm-55f394adf0.svg" width="100%" alt="Progress card for Nodejs App And NPM">
+
+</div>
+
 Mini‑project demonstrating:
 - A basic CommonJS module
 - Using an NPM package (chalk)

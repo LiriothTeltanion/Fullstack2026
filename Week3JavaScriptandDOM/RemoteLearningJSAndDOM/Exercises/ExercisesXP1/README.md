@@ -1,5 +1,13 @@
 # 🥉 Exercises XP 1 — Interactive JavaScript Practice
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xp1-6a9e6acad2.svg" width="100%" alt="Progress card for Exercises XP1">
+
+</div>
+
 Create interactive browser experiences with JavaScript, DOM events, accessibility, and responsive behavior.
 
 ## Contents

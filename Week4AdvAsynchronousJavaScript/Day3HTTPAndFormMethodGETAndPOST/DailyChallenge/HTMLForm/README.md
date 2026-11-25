@@ -1,5 +1,13 @@
 # HTML Form
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/htmlform-73d95fe81c.svg" width="100%" alt="Progress card for HTMLForm">
+
+</div>
+
 > Practice asynchronous control flow, promises, error handling, and resilient user feedback.
 
 ## Learning goals

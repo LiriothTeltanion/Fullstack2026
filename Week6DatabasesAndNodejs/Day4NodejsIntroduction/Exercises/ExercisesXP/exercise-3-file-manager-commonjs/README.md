@@ -1,5 +1,13 @@
 # Exercise 3 File Manager Commonjs
 
+<div align="center">
+
+<img src="../../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../../assets/readme/progress/exercise-3-file-manager-commonjs-d81ac35c81.svg" width="100%" alt="Progress card for Exercise 3 file manager commonjs">
+
+</div>
+
 > Practice relational modeling, joins, constraints, CRUD operations, and PostgreSQL queries.
 
 ## Learning goals

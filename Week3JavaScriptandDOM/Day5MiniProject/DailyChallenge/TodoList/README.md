@@ -1,5 +1,13 @@
 # Todo List
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/todo-list-1254c9044b.svg" width="100%" alt="Progress card for Todo List">
+
+</div>
+
 > Create accessible browser interactions using DOM selection, events, forms, and state updates.
 
 ## Learning goals

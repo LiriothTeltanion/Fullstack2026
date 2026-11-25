@@ -1,5 +1,13 @@
 # 🥈 Python Practice — Birthdays & Fruit Shop
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xpgold-dd00d1c574.svg" width="100%" alt="Progress card for Exercises XPGold">
+
+</div>
+
 Two tiny console exercises: a birthday lookup (with optional insert) and a fruit shop inventory cost calculator. Code is kept simple with small comments.
 
 > ▶️ Run with **Python 3.10+**. No extra packages required.

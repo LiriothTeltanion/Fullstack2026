@@ -1,5 +1,13 @@
 # 💪 Challenges Set 1 - 20 Python Exercises
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/challenges1-e9520d5915.svg" width="100%" alt="Progress card for Challenges1">
+
+</div>
+
 Comprehensive collection of 20 programming challenges covering fundamental Python concepts from Week 1.
 
 ## 📊 Quick Stats

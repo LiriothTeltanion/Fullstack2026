@@ -1,5 +1,13 @@
 # 📄 Day 4 — File I/O, JSON and APIs
 
+<div align="center">
+
+<img src="../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../assets/readme/progress/day4-python-file-iojsonand-api-f45fc61397.svg" width="100%" alt="Progress card for Day4 Python File IOJSONand API">
+
+</div>
+
 ## 🎯 Learning Objectives
 
 By the end of this day, you will be able to:

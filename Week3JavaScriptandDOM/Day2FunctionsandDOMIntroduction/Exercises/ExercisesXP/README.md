@@ -1,5 +1,13 @@
 # Exercises XP — JavaScript (Functions, DOM, Loops)
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xp-0ff82fe9a6.svg" width="100%" alt="Progress card for Exercises XP">
+
+</div>
+
 Short & simple solutions (commented in English) for 7 exercises. One HTML runner with buttons prints results to `<pre>` blocks and the console.
 
 ## Files

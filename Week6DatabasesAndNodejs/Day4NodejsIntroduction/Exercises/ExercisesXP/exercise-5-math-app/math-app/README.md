@@ -1,5 +1,13 @@
 # Math app
 
+<div align="center">
+
+<img src="../../../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../../../assets/readme/progress/math-app-06109cb6e4.svg" width="100%" alt="Progress card for Math app">
+
+</div>
+
 Practice relational modeling, safe queries, joins, constraints, and persistent data workflows.
 
 ## Contents

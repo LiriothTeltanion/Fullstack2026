@@ -1,5 +1,13 @@
 # 🛠️ Day 4 Exercises - Python File I/O, JSON and API
 
+<div align="center">
+
+<img src="../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../assets/readme/progress/exercises-6b1d3135e0.svg" width="100%" alt="Progress card for Exercises">
+
+</div>
+
 ## 🎯 Exercise Goals
 
 These exercises help you master:

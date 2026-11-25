@@ -1,5 +1,13 @@
 # Js
 
+<div align="center">
+
+<img src="../../../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../../../assets/readme/progress/js-dc50386d56.svg" width="100%" alt="Progress card for Js">
+
+</div>
+
 JavaScript modules for this exercise.
 
 ## Contents

@@ -1,5 +1,13 @@
 # ExercisesXPGold — Advanced TypeScript (Single File)
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xpgold-933866d3e0.svg" width="100%" alt="Progress card for Exercises XPGold">
+
+</div>
+
 Solutions for Exercises XP Gold (1–5) in a single TypeScript file with quick console tests.
 
 ## File

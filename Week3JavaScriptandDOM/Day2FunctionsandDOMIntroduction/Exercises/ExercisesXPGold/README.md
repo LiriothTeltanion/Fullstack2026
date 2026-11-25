@@ -1,5 +1,13 @@
 # Exercises XP Gold
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xpgold-1439b84fab.svg" width="100%" alt="Progress card for Exercises XPGold">
+
+</div>
+
 What we will learn:
 - Variables, Conditionals, Loops
 - Functions

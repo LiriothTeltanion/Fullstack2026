@@ -1,5 +1,13 @@
 # 📝 Daily Challenge - String Sorting & Analysis
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/challenges-48c4324ce8.svg" width="100%" alt="Progress card for Challenges">
+
+</div>
+
 Two essential string manipulation challenges: alphabetical sorting of comma-separated input and finding the longest word in a sentence.
 
 ## 📊 Quick Stats

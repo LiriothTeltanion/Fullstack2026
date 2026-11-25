@@ -1,5 +1,13 @@
 # Daily Challenges — Promises & Morse
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/play-with-words-ccce75e27c.svg" width="100%" alt="Progress card for Play With Words">
+
+</div>
+
 Short, commented solutions in vanilla JavaScript. Includes a minimal UI and the exact chains requested.
 
 ## Files

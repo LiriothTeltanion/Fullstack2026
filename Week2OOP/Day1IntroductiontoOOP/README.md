@@ -1,5 +1,13 @@
 # 🧱 Day 1 — Introduction to Object-Oriented Programming
 
+<div align="center">
+
+<img src="../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../assets/readme/progress/day1-introductionto-oop-a75d18f2da.svg" width="100%" alt="Progress card for Day1 Introductionto OOP">
+
+</div>
+
 Welcome to your first day of Object-Oriented Programming! Today you'll learn to think about code in terms of objects and classes, a fundamental shift that will transform how you approach programming.
 
 ## 🎯 Learning Objectives

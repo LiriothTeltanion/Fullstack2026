@@ -1,5 +1,13 @@
 # 🎯 Daily Challenge – Circle Class Practice
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/circle-97d878cfe4.svg" width="100%" alt="Progress card for Circle">
+
+</div>
+
 The daily challenge for Day 3 centers on the [`Circle`](circle.py) class. You'll explore encapsulation, dunder methods, and operator overloading while keeping the implementation friendly and well-documented.
 
 ## 🧱 Requirements Covered by `circle.py`

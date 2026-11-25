@@ -1,5 +1,13 @@
 # 💉 Mini Project: Vaccines — OOP Queue Manager
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/mini-project-vaccines-a94241f92f.svg" width="100%" alt="Progress card for Mini Project Vaccines">
+
+</div>
+
 Minimal, clean solution with a **Human** class and a **Queue** that manages vaccination order.  
 Neutral tone, clear emojis for readability. ✨
 

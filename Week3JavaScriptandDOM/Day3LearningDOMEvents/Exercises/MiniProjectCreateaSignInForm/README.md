@@ -1,5 +1,13 @@
 # Mini Project Createa Sign In Form
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/mini-project-createa-sign-in-form-ba63e6bf9c.svg" width="100%" alt="Progress card for Mini Project Createa Sign In Form">
+
+</div>
+
 > Create accessible browser interactions using DOM selection, events, forms, and state updates.
 
 ## Learning goals

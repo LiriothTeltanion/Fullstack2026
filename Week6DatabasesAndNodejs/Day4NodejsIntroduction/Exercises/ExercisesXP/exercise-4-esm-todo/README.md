@@ -1,5 +1,13 @@
 # Exercise 4 Esm Todo
 
+<div align="center">
+
+<img src="../../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../../assets/readme/progress/exercise-4-esm-todo-8d35444102.svg" width="100%" alt="Progress card for Exercise 4 esm todo">
+
+</div>
+
 > Practice relational modeling, joins, constraints, CRUD operations, and PostgreSQL queries.
 
 ## Learning goals

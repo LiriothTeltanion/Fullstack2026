@@ -1,5 +1,13 @@
 # 🛠️ Optional Day 5 Milestones – Anagram Checker
 
+<div align="center">
+
+<img src="../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../assets/readme/progress/exercises-1e195418da.svg" width="100%" alt="Progress card for Exercises">
+
+</div>
+
 The original step-by-step exercises for a library system are now **deprecated**. Day 5 focuses solely on the Anagram Checker mini-project that lives in [`../DailyChallenge`](../DailyChallenge). If you would like structured milestones to rebuild the solution from scratch, follow the sequence below.
 
 > 📚 Need the complete write-up? Read [`AnagramChecker/README.md`](AnagramChecker/README.md). It contains the official project description, file details, and extension ideas.

@@ -1,5 +1,13 @@
 # Exercise3 Calculator
 
+<div align="center">
+
+<img src="../../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../../assets/readme/progress/exercise3-calculator-3705d63715.svg" width="100%" alt="Progress card for Exercise3 calculator">
+
+</div>
+
 > Create accessible browser interactions using DOM selection, events, forms, and state updates.
 
 ## Learning goals

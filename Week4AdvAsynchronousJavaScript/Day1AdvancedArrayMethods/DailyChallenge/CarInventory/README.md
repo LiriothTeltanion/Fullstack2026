@@ -1,5 +1,13 @@
 # 🚗 Daily Challenge — Car Inventory
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/car-inventory-0e0706421a.svg" width="100%" alt="Progress card for Car Inventory">
+
+</div>
+
 Learn & practice advanced array methods in JavaScript with a tiny, testable project.
 
 ## 🧠 What you’ll use

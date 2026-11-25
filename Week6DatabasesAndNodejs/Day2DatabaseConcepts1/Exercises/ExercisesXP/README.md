@@ -1,5 +1,13 @@
 # Exercises XP — SQL Answers (PostgreSQL, pgAdmin / psql)
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xp-26b89bf1e6.svg" width="100%" alt="Progress card for Exercises XP">
+
+</div>
+
 This pack contains a single **.sql** file with commented solutions for:
 - Items & Customers (generic public schema)
 - **dvdrental** sample database

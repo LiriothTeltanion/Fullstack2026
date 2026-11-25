@@ -1,5 +1,13 @@
 # Daily Challenge: Letters ✍️
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/letters-f1db44c3f7.svg" width="100%" alt="Progress card for Letters">
+
+</div>
+
 **Last Updated:** October 7th, 2025
 
 ## 🌟 Goal

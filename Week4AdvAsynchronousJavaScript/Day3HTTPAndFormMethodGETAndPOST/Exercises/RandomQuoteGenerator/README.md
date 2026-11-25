@@ -1,5 +1,13 @@
 # Random Quote Generator (separate files)
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/random-quote-generator-fdaba25419.svg" width="100%" alt="Progress card for Random Quote Generator">
+
+</div>
+
 Learn and practice:
 - Conditionals and the ternary operator
 - Loops and array methods

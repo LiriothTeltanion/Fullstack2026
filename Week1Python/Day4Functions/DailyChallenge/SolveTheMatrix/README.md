@@ -1,5 +1,13 @@
 # 💪 Daily Challenge - Solve The Matrix
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/solve-the-matrix-4caca0648d.svg" width="100%" alt="Progress card for Solve The Matrix">
+
+</div>
+
 Decode a matrix by reading column-by-column and extracting letters to reconstruct a hidden message.
 
 ## 📊 Quick Stats

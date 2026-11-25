@@ -1,5 +1,13 @@
 # 🏋️ OOP Exercises - Introduction to Classes and Objects
 
+<div align="center">
+
+<img src="../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../assets/readme/progress/exercises-3cc599f444.svg" width="100%" alt="Progress card for Exercises">
+
+</div>
+
 A comprehensive set of exercises to master the fundamentals of Object-Oriented Programming in Python.
 
 ## 📋 What You'll Learn

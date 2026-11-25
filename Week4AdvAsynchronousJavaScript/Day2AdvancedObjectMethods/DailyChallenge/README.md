@@ -1,5 +1,13 @@
 # Daily Challenge — Creating Objects (TypeScript) 🎬🧱
 
+<div align="center">
+
+<img src="../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../assets/readme/progress/daily-challenge-615fbaa15b.svg" width="100%" alt="Progress card for Daily Challenge">
+
+</div>
+
 Define a custom **`Video`** class and practice object-oriented basics.
 
 ## ✅ What’s inside

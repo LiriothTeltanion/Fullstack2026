@@ -1,5 +1,13 @@
 # 📈 Python Practice — Student Grade Summary & Sales Data Analysis
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xpplus-677f7b4b10.svg" width="100%" alt="Progress card for Exercises XPPlus">
+
+</div>
+
 Two small exercises: one for computing grade summaries and letter grades, and one for basic data analysis over a list of sales transactions. The code stays clean with tiny comments.
 
 > ▶️ Run with **Python 3.10+**. No external packages needed.

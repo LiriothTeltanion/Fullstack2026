@@ -1,5 +1,13 @@
 # Daily Challenge GOLD: Bubble Sort
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/bubble-sort-dc81cde00f.svg" width="100%" alt="Progress card for Bubble Sort">
+
+</div>
+
 **What you will learn**
 - Use array methods and loops to solve a sorting algorithm
 - Use nested for loops

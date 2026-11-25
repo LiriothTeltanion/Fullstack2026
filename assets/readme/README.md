@@ -1,5 +1,13 @@
 # README Visuals
 
+<div align="center">
+
+<img src="folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="progress/readme-9453d23d46.svg" width="100%" alt="Progress card for Readme">
+
+</div>
+
 SVG illustrations shown in the repository READMEs. Every file listed in
 [`visual_manifest.json`](visual_manifest.json) records its SHA-256 hash, dimensions,
 alt text, motion behavior and privacy review; `npm run verify:visuals` checks them.

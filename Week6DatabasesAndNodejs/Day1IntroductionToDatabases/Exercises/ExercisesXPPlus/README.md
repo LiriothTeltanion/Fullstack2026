@@ -1,5 +1,13 @@
 # DI — Databases XP+ : Students (PostgreSQL)
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xpplus-a44867596e.svg" width="100%" alt="Progress card for Exercises XPPlus">
+
+</div>
+
 This package contains a single SQL script to create the `students` table, insert the required rows, and run all the queries requested in the XP+ exercise.
 
 ## Files

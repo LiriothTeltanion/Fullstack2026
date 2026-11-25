@@ -1,5 +1,13 @@
 # 🔬 Advanced Algorithm - Two Sum Problem
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/advanced-algorithm-911e3731b7.svg" width="100%" alt="Progress card for Advanced Algorithm">
+
+</div>
+
 High-performance implementation of the classic two-sum problem with multiple algorithmic approaches and performance analysis.
 
 ## 📊 Quick Stats

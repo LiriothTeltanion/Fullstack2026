@@ -1,5 +1,13 @@
 # Full-Stack Coding Bootcamp – OOP & Modules XP (All-In-One) ✨
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xp-19dd687672.svg" width="100%" alt="Progress card for Exercises XP">
+
+</div>
+
 This repository (or folder) contains a **single Python file** that solves all the XP exercises for **Object Oriented Programming & Modules** in one place, plus this README for quick instructions. Simple, clean, and commented in English (with some friendly emojis).
 
 ---

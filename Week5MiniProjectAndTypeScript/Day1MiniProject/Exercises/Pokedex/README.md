@@ -1,5 +1,13 @@
 # Pokédex App
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/pokedex-0fed258102.svg" width="100%" alt="Progress card for Pokedex">
+
+</div>
+
 > Current evidence (2026-08-24): source present; browser/API behavior, accessibility, explanation, and mastery are unverified.
 
 A Pokémon Pokédex web application that uses the PokeAPI to fetch and display Pokémon information in an interactive Pokedex device interface.

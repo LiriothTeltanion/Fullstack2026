@@ -1,5 +1,13 @@
 # 🧠 Daily Challenge: OOP Quizz + 🃏 Deck of Cards (Minimal Solution)
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/oopquiz-92469ab711.svg" width="100%" alt="Progress card for OOPQuiz">
+
+</div>
+
 This package includes:
 - **Exercise 1:** concise OOP answers ✅
 - **Exercise 2:** working `Card` + `Deck` implementation with `shuffle()` and `deal()` / `deal_many()` ✅

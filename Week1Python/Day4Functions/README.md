@@ -1,5 +1,13 @@
 # 🧩 Day 4 — Functions
 
+<div align="center">
+
+<img src="../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../assets/readme/progress/day4-functions-e1dfe1f6c2.svg" width="100%" alt="Progress card for Day4 Functions">
+
+</div>
+
 **Author:** Kevin Cusnir "Lirioth"  
 **Course:** Fullstack Bootcamp 2026  
 **Last Updated:** October 18, 2025

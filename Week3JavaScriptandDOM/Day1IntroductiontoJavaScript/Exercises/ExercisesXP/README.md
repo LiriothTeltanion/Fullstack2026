@@ -1,5 +1,13 @@
 # Day1 Introductionto Java Script — Exercises XP
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xp-d1fe555080.svg" width="100%" alt="Progress card for Exercises XP">
+
+</div>
+
 > Create accessible browser interactions using DOM selection, events, forms, and state updates.
 
 ## Learning goals

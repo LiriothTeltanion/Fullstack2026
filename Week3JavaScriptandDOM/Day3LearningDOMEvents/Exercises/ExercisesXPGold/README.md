@@ -1,5 +1,13 @@
 # Exercises XP Gold — DOM & Forms
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xpgold-e35a4208fd.svg" width="100%" alt="Progress card for Exercises XPGold">
+
+</div>
+
 **Last Updated:** October 7th, 2025
 
 ## What we will learn

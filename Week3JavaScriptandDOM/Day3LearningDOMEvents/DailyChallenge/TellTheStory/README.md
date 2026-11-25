@@ -1,5 +1,13 @@
 # Tell The Story
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/tell-the-story-cd3ae5ebb9.svg" width="100%" alt="Progress card for Tell The Story">
+
+</div>
+
 > Create accessible browser interactions using DOM selection, events, forms, and state updates.
 
 ## Learning goals

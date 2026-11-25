@@ -1,5 +1,13 @@
 # Mini Project Coloring Game
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/mini-project-coloring-game-5320641e49.svg" width="100%" alt="Progress card for Mini Project Coloring Game">
+
+</div>
+
 > Create accessible browser interactions using DOM selection, events, forms, and state updates.
 
 ## Learning goals

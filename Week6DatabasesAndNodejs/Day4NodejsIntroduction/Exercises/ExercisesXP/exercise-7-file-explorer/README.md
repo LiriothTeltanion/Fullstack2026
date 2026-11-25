@@ -1,5 +1,13 @@
 # Exercise 7 File Explorer
 
+<div align="center">
+
+<img src="../../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../../assets/readme/progress/exercise-7-file-explorer-cd77af1da3.svg" width="100%" alt="Progress card for Exercise 7 file explorer">
+
+</div>
+
 > Practice relational modeling, joins, constraints, CRUD operations, and PostgreSQL queries.
 
 ## Learning goals

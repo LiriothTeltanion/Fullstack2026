@@ -1,5 +1,13 @@
 # Exercise 1 Commonjs Products
 
+<div align="center">
+
+<img src="../../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../../assets/readme/progress/exercise-1-commonjs-products-8faee08461.svg" width="100%" alt="Progress card for Exercise 1 commonjs products">
+
+</div>
+
 > Practice relational modeling, joins, constraints, CRUD operations, and PostgreSQL queries.
 
 ## Learning goals

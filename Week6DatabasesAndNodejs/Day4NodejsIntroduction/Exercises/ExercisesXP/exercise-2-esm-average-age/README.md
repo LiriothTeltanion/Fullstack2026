@@ -1,5 +1,13 @@
 # Exercise 2 Esm Average Age
 
+<div align="center">
+
+<img src="../../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../../assets/readme/progress/exercise-2-esm-average-age-c4dc30ec36.svg" width="100%" alt="Progress card for Exercise 2 esm average age">
+
+</div>
+
 > Practice relational modeling, joins, constraints, CRUD operations, and PostgreSQL queries.
 
 ## Learning goals

@@ -1,5 +1,13 @@
 # GoWildcats — Daily Challenge (TypeScript) 🐾🏈
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/go-wildcats-a2d75a34e0.svg" width="100%" alt="Progress card for Go Wildcats">
+
+</div>
+
 Single‑file solution using **`forEach`** to practice advanced array methods.
 
 ## ✅ What this does

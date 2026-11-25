@@ -1,5 +1,13 @@
 # Exercise2 Color Guess
 
+<div align="center">
+
+<img src="../../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../../assets/readme/progress/exercise2-color-guess-373f060e80.svg" width="100%" alt="Progress card for Exercise2 color guess">
+
+</div>
+
 > Create accessible browser interactions using DOM selection, events, forms, and state updates.
 
 ## Learning goals

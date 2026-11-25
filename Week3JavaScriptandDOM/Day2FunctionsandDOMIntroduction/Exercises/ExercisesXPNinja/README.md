@@ -1,5 +1,13 @@
 # Exercises XP Ninja
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xpninja-18b57686e3.svg" width="100%" alt="Progress card for Exercises XPNinja">
+
+</div>
+
 What we will learn:
 - Variables, Conditionals, Loops
 - Functions

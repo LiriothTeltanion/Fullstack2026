@@ -1,5 +1,13 @@
 # 💪 Daily Challenge - Old MacDonald's Farm
 
+<div align="center">
+
+<img src="../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../assets/readme/progress/daily-challenge-b452743c13.svg" width="100%" alt="Progress card for Daily Challenge">
+
+</div>
+
 Create a comprehensive farm simulation using Object-Oriented Programming! This challenge combines multiple OOP concepts into a fun, interactive project.
 
 ## 🎯 Challenge Overview

@@ -1,5 +1,13 @@
 # 🎨 Challenges Set 2 - Pattern Drawing & Algorithm Analysis
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/challenges2-e9acc2f59e.svg" width="100%" alt="Progress card for Challenges2">
+
+</div>
+
 Advanced exercises focusing on ASCII pattern generation and algorithm understanding through detailed code analysis.
 
 ## 📊 Quick Stats

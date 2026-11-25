@@ -1,5 +1,13 @@
 # Daily Challenge Stars
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/daily-challenge-stars-45167b388e.svg" width="100%" alt="Progress card for Daily Challenge Stars">
+
+</div>
+
 > Create accessible browser interactions using DOM selection, events, forms, and state updates.
 
 ## Learning goals

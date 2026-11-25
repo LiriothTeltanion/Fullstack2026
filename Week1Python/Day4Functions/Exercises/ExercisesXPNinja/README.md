@@ -1,5 +1,13 @@
 # 🥷 Exercises XP Ninja - Expert Function Challenges
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xpninja-60b62c5837.svg" width="100%" alt="Progress card for Exercises XPNinja">
+
+</div>
+
 Four advanced exercises demonstrating professional-grade function design, string processing, and algorithm implementation.
 
 ## 📊 Quick Stats

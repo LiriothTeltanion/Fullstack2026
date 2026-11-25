@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="NOVA readiness 92.0 percent">
+<defs><linearGradient id="panel" x1="0" x2="1"><stop stop-color="#08112b"/><stop offset="1" stop-color="#101c42"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><style>.big{font:900 46px 'Segoe UI',Arial,sans-serif;fill:#f8fafc}.status{font:800 16px 'Segoe UI',Arial,sans-serif;fill:#86efac;letter-spacing:1px}.label{font:700 14px 'Segoe UI',Arial,sans-serif;fill:#dbeafe}.value{font:900 14px 'Segoe UI',Arial,sans-serif}.caption{font:600 12px 'Segoe UI',Arial,sans-serif;fill:#94a3b8}</style></defs>
+<rect width="1200" height="300" rx="25" fill="url(#panel)" stroke="#263154"/>
+<circle cx="180" cy="145" r="94" fill="#0b1028" stroke="#20294a" stroke-width="2"/>
+<circle cx="180" cy="145" r="76" fill="none" stroke="#20294a" stroke-width="18"/>
+<circle cx="180" cy="145" r="76" fill="none" stroke="#22c55e" stroke-width="18" stroke-linecap="round" transform="rotate(-90 180 145)" stroke-dasharray="0 477.52" filter="url(#glow)"><animate attributeName="stroke-dasharray" from="0 477.52" to="439.32 477.52" dur="1.8s" fill="freeze"/></circle>
+<text x="180" y="145" text-anchor="middle" class="big">92.0%</text><text x="180" y="173" text-anchor="middle" class="status">AUDITED READINESS</text><text x="180" y="214" text-anchor="middle" class="caption">NOVA Ultimate v2.0.0</text><line x1="330" y1="35" x2="330" y2="265" stroke="#263154"/>
+<text x="405" y="70" class="label">Learning breadth</text>
+<text x="715" y="70" text-anchor="end" class="value" fill="#22c55e">100%</text>
+<rect x="405" y="82" width="310" height="10" rx="5" fill="#20294a"/>
+<rect x="405" y="82" width="0" height="10" rx="5" fill="#22c55e">
+<animate attributeName="width" from="0" to="310.0" dur="1.5s" begin="0.00s" fill="freeze"/>
+</rect><text x="405" y="118" class="label">Documentation</text>
+<text x="715" y="118" text-anchor="end" class="value" fill="#22c55e">100%</text>
+<rect x="405" y="130" width="310" height="10" rx="5" fill="#20294a"/>
+<rect x="405" y="130" width="0" height="10" rx="5" fill="#22c55e">
+<animate attributeName="width" from="0" to="310.0" dur="1.5s" begin="0.08s" fill="freeze"/>
+</rect><text x="405" y="166" class="label">Structure</text>
+<text x="715" y="166" text-anchor="end" class="value" fill="#22c55e">100%</text>
+<rect x="405" y="178" width="310" height="10" rx="5" fill="#20294a"/>
+<rect x="405" y="178" width="0" height="10" rx="5" fill="#22c55e">
+<animate attributeName="width" from="0" to="310.0" dur="1.5s" begin="0.16s" fill="freeze"/>
+</rect><text x="405" y="214" class="label">Code health</text>
+<text x="715" y="214" text-anchor="end" class="value" fill="#f59e0b">60%</text>
+<rect x="405" y="226" width="310" height="10" rx="5" fill="#20294a"/>
+<rect x="405" y="226" width="0" height="10" rx="5" fill="#f59e0b">
+<animate attributeName="width" from="0" to="186.0" dur="1.5s" begin="0.24s" fill="freeze"/>
+</rect><text x="785" y="70" class="label">Testing</text>
+<text x="1095" y="70" text-anchor="end" class="value" fill="#22c55e">100%</text>
+<rect x="785" y="82" width="310" height="10" rx="5" fill="#20294a"/>
+<rect x="785" y="82" width="0" height="10" rx="5" fill="#22c55e">
+<animate attributeName="width" from="0" to="310.0" dur="1.5s" begin="0.32s" fill="freeze"/>
+</rect><text x="785" y="118" class="label">Tooling</text>
+<text x="1095" y="118" text-anchor="end" class="value" fill="#22c55e">100%</text>
+<rect x="785" y="130" width="310" height="10" rx="5" fill="#20294a"/>
+<rect x="785" y="130" width="0" height="10" rx="5" fill="#22c55e">
+<animate attributeName="width" from="0" to="310.0" dur="1.5s" begin="0.40s" fill="freeze"/>
+</rect><text x="785" y="166" class="label">Automation</text>
+<text x="1095" y="166" text-anchor="end" class="value" fill="#f59e0b">60%</text>
+<rect x="785" y="178" width="310" height="10" rx="5" fill="#20294a"/>
+<rect x="785" y="178" width="0" height="10" rx="5" fill="#f59e0b">
+<animate attributeName="width" from="0" to="186.0" dur="1.5s" begin="0.48s" fill="freeze"/>
+</rect><text x="785" y="214" class="label">Portfolio</text>
+<text x="1095" y="214" text-anchor="end" class="value" fill="#22c55e">100%</text>
+<rect x="785" y="226" width="310" height="10" rx="5" fill="#20294a"/>
+<rect x="785" y="226" width="0" height="10" rx="5" fill="#22c55e">
+<animate attributeName="width" from="0" to="310.0" dur="1.5s" begin="0.56s" fill="freeze"/>
+</rect>
+<text x="405" y="270" class="caption">Green = ready · cyan = solid · amber = developing · red = attention</text></svg>

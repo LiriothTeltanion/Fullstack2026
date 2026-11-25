@@ -1,5 +1,13 @@
 # ⏱️ Daily Challenge: Modules — Page Load Timer (Python)
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/modules-e3d1c33ab5.svg" width="100%" alt="Progress card for Modules">
+
+</div>
+
 Measure how long a webpage takes to fully load — request + full body download — using **requests** and **time**. 🌐🐍
 
 ---

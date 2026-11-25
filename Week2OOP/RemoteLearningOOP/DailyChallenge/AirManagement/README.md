@@ -1,5 +1,13 @@
 # ✈️ Daily Challenge: Air Management — OOP + `datetime`
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/air-management-2c6b6fc9f2.svg" width="100%" alt="Progress card for Air Management">
+
+</div>
+
 Minimal system to manage airlines, airplanes, flights, and airports.  
 Each plane can fly **once per day**, schedules are kept **sorted by date**, and the API is tidy and easy to test. 🌟
 

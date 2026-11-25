@@ -1,5 +1,13 @@
 # 🏋️ Exercises XP - Dictionaries Fundamentals
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xp-285afc1699.svg" width="100%" alt="Progress card for Exercises XP">
+
+</div>
+
 **Author:** Kevin Cusnir "Lirioth"  
 **Course:** Fullstack Bootcamp 2026  
 **Last Updated:** October 19, 2025

@@ -1,5 +1,13 @@
 # Src
 
+<div align="center">
+
+<img src="../../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../../assets/readme/progress/src-a542c6e722.svg" width="100%" alt="Progress card for Src">
+
+</div>
+
 Source modules for this project.
 
 ## Contents

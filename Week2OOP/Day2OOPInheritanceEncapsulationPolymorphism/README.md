@@ -1,5 +1,13 @@
 # 🏛️ Day 2 — Inheritance, Encapsulation and Polymorphism
 
+<div align="center">
+
+<img src="../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../assets/readme/progress/day2-oopinheritance-encapsulation-polymorphism-6270e8dcad.svg" width="100%" alt="Progress card for Day2 OOPInheritance Encapsulation Polymorphism">
+
+</div>
+
 ## 🎯 Learning Objectives
 
 By the end of this day, you will be able to:

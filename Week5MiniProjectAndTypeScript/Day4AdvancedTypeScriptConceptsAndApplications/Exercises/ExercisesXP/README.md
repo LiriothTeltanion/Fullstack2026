@@ -1,5 +1,13 @@
 # ExercisesXP — Advanced TypeScript (Single File)
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xp-fbf0813a52.svg" width="100%" alt="Progress card for Exercises XP">
+
+</div>
+
 Single TypeScript file containing solutions for exercises 1–7:
 - Intersection Types
 - Type Guards (union types)

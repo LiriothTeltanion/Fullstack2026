@@ -1,5 +1,13 @@
 # 🥇 Exercises XP Ninja - Advanced Python Challenges
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xpninja-cdf5889bed.svg" width="100%" alt="Progress card for Exercises XPNinja">
+
+</div>
+
 **Author:** Kevin Cusnir "Lirioth"  
 **Course:** Fullstack Bootcamp 2026  
 **Last Updated:** October 18, 2025

@@ -1,5 +1,13 @@
 # 📚 Daily Challenge – Pagination Utility
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/pagination-1cf902caf8.svg" width="100%" alt="Progress card for Pagination">
+
+</div>
+
 ## 🎯 Challenge Overview
 Recreate a lightweight pagination helper that slices a list into pages of configurable size. The provided `pagination.py` script already implements:
 - Tracking the current page index.

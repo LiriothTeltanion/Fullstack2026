@@ -1,5 +1,13 @@
 # Exercise3 Drag Drop
 
+<div align="center">
+
+<img src="../../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../../assets/readme/progress/exercise3-drag-drop-5279c0a41a.svg" width="100%" alt="Progress card for Exercise3 drag drop">
+
+</div>
+
 > Create accessible browser interactions using DOM selection, events, forms, and state updates.
 
 ## Learning goals

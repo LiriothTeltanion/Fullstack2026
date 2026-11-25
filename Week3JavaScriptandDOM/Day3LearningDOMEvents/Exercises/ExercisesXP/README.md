@@ -1,5 +1,13 @@
 # Day3 Learning DOM Events — Exercises XP
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xp-6babf4344d.svg" width="100%" alt="Progress card for Exercises XP">
+
+</div>
+
 > Create accessible browser interactions using DOM selection, events, forms, and state updates.
 
 ## Learning goals

@@ -1,5 +1,13 @@
 # Day1 Introductionto OOP — Exercises XP
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xp-773fa7fe22.svg" width="100%" alt="Progress card for Exercises XP">
+
+</div>
+
 > Practice classes, objects, methods, special methods, and maintainable object-oriented design.
 
 ## Learning goals

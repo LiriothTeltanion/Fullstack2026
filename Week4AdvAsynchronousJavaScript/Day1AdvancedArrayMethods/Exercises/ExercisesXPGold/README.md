@@ -1,5 +1,13 @@
 # Arrays & Destructuring — Exercises XP Gold (TypeScript) 🥇🧩
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xpgold-dfd74631c0.svg" width="100%" alt="Progress card for Exercises XPGold">
+
+</div>
+
 Practice **array methods** and **destructuring** with focused analyses and clean one-liners.
 
 ## ✅ What’s inside

@@ -1,5 +1,13 @@
 # Exercises XP Ninja — DOM, Events, Forms
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xpninja-c8db0eb93d.svg" width="100%" alt="Progress card for Exercises XPNinja">
+
+</div>
+
 **Last Updated:** October 7th, 2025
 
 ## What we will learn

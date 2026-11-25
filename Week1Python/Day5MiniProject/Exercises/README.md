@@ -1,5 +1,13 @@
 # Exercises
 
+<div align="center">
+
+<img src="../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../assets/readme/progress/exercises-58c48947a8.svg" width="100%" alt="Progress card for Exercises">
+
+</div>
+
 Organize practical exercises with clear goals, execution paths, validation, and improvement guidance.
 
 ## Contents

@@ -1,5 +1,13 @@
 # Exercise 6 npm Beginner Chalk
 
+<div align="center">
+
+<img src="../../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../../assets/readme/progress/exercise-6-npm-beginner-chalk-0023adb1dd.svg" width="100%" alt="Progress card for Exercise 6 npm beginner chalk">
+
+</div>
+
 > Practice relational modeling, joins, constraints, CRUD operations, and PostgreSQL queries.
 
 ## Learning goals

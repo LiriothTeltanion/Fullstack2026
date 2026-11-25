@@ -1,5 +1,13 @@
 # Daily Challenge GOLD — Caesar Cipher 🔐🧠
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/caesar-cypher-c2aae16993.svg" width="100%" alt="Progress card for Caesar Cypher">
+
+</div>
+
 A clean Python implementation of the **Caesar cipher** with **encrypt**, **decrypt**, and **brute-force** modes.
 
 ## ✅ Features

@@ -1,5 +1,13 @@
 # Exercise1 Timer
 
+<div align="center">
+
+<img src="../../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../../assets/readme/progress/exercise1-timer-2c9c28cd61.svg" width="100%" alt="Progress card for Exercise1 timer">
+
+</div>
+
 > Create accessible browser interactions using DOM selection, events, forms, and state updates.
 
 ## Learning goals

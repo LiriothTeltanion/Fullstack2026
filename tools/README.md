@@ -1,5 +1,13 @@
 # Tools
 
+<div align="center">
+
+<img src="../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../assets/readme/progress/tools-0284c6ac58.svg" width="100%" alt="Progress card for Tools">
+
+</div>
+
 Scripts that keep the repository consistent. CI runs them on every pull request
 (see [`.github/workflows/quality.yml`](../.github/workflows/quality.yml)).
 

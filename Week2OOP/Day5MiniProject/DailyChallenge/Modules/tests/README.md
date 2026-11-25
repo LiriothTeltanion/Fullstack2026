@@ -1,5 +1,13 @@
 # Tests
 
+<div align="center">
+
+<img src="../../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../../assets/readme/progress/tests-0c695b6ae8.svg" width="100%" alt="Progress card for Tests">
+
+</div>
+
 Tests for this project.
 
 ## Contents

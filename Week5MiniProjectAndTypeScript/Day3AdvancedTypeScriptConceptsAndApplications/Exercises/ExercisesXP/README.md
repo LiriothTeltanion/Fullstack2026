@@ -1,5 +1,13 @@
 # ExercisesXP OOP — TypeScript (Single File)
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xp-2d5251840f.svg" width="100%" alt="Progress card for Exercises XP">
+
+</div>
+
 Single-file solution for the OOP-focused Exercises XP (1–5): access modifiers, readonly, inheritance, static methods, and interfaces (with optional/readonly fields).
 
 ## Files

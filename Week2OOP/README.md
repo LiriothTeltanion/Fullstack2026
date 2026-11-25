@@ -1,5 +1,13 @@
 # 🏗️ Week 2 — Object-Oriented Programming
 
+<div align="center">
+
+<img src="../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../assets/readme/progress/week2-oop-f3122b8ed5.svg" width="100%" alt="Progress card for Week2 OOP">
+
+</div>
+
 **Bootcamp:** Full-Stack Development  
 **Student:** Kevin "Lirioth" Cusnir  
 **Week:** 2 - Object-Oriented Programming  

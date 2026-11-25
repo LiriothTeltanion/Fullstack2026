@@ -1,5 +1,13 @@
 # Todo App
 
+<div align="center">
+
+<img src="../../../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../../../assets/readme/progress/todo-app-fd921d256b.svg" width="100%" alt="Progress card for Todo App">
+
+</div>
+
 Practice relational modeling, safe queries, joins, constraints, and persistent data workflows.
 
 ## Contents

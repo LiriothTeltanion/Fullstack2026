@@ -1,5 +1,13 @@
 # Exercise 5 Math App
 
+<div align="center">
+
+<img src="../../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../../assets/readme/progress/exercise-5-math-app-f52754e467.svg" width="100%" alt="Progress card for Exercise 5 math app">
+
+</div>
+
 > Practice relational modeling, joins, constraints, CRUD operations, and PostgreSQL queries.
 
 ## Learning goals

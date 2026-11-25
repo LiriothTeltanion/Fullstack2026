@@ -1,5 +1,13 @@
 # Drumset — Mini Project
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/drumset-mini-613bae1cac.svg" width="100%" alt="Progress card for Drumset mini">
+
+</div>
+
 This is a tiny, focused implementation of the drumset exercise.
 
 ## How to run

@@ -1,5 +1,13 @@
 # Exercises XP — Fetch API & Async/Await (separate files)
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xp-e8ff4d5aaf.svg" width="100%" alt="Progress card for Exercises XP">
+
+</div>
+
 > Current evidence (2026-08-24): source and safe configuration pattern present; live Giphy/SWAPI behavior, browser accessibility, explanation, and mastery are unverified.
 
 Learn and practice:

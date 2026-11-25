@@ -1,5 +1,13 @@
 # Python
 
+<div align="center">
+
+<img src="../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../assets/readme/progress/python-4a960de9ce.svg" width="100%" alt="Progress card for Python">
+
+</div>
+
 Strengthen Python fundamentals through progressive exercises, challenges, and complete console projects.
 
 ## Contents

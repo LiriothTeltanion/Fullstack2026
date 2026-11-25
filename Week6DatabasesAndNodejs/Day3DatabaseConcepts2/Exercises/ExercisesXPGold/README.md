@@ -1,5 +1,13 @@
 # Exercises XP Gold — dvdrental (Relationships & Requests)
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xpgold-02be91889d.svg" width="100%" alt="Progress card for Exercises XPGold">
+
+</div>
+
 This pack contains one SQL file with commented solutions for both exercises.
 Emojis are section markers (no hearts). Everything is in English.
 

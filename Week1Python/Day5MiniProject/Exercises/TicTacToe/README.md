@@ -1,5 +1,13 @@
 # Tic-Tac-Toe 🎮
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/tic-tac-toe-ed49f2ef4e.svg" width="100%" alt="Progress card for Tic Tac Toe">
+
+</div>
+
 Classic two-player tic-tac-toe implemented as a simple CLI exercise for Day 5 of Week 1.
 
 ## Overview

@@ -1,5 +1,13 @@
 # 🌐 Day 3 — HTTP and GET/POST Forms
 
+<div align="center">
+
+<img src="../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../assets/readme/progress/day3-httpand-form-method-getand-post-2713582506.svg" width="100%" alt="Progress card for Day3 HTTPAnd Form Method GETAnd POST">
+
+</div>
+
 Build resilient asynchronous flows with HTTP requests, loading states, validation, and error handling.
 
 ## Contents

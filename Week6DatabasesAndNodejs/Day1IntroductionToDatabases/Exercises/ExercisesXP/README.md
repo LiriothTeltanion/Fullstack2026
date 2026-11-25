@@ -1,5 +1,13 @@
 # DI — Databases XP: Items & Customers (PostgreSQL)
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xp-337d5c9753.svg" width="100%" alt="Progress card for Exercises XP">
+
+</div>
+
 commented SQL to create two tables (`items`, `customers`), insert sample data, and run the required queries.
 
 ## Files

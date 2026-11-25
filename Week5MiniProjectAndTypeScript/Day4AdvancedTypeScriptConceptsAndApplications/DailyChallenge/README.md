@@ -1,5 +1,13 @@
 # TypeGuardUnion — Daily Challenge: Type Guard with Union Types
 
+<div align="center">
+
+<img src="../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../assets/readme/progress/daily-challenge-dd0d57f83c.svg" width="100%" alt="Progress card for Daily Challenge">
+
+</div>
+
 Single-file TypeScript solution demonstrating discriminated unions and custom type guards.
 
 ## File

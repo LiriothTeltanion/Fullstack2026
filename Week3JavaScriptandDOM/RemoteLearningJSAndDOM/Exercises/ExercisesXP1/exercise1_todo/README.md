@@ -1,5 +1,13 @@
 # Exercise1 Todo
 
+<div align="center">
+
+<img src="../../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../../assets/readme/progress/exercise1-todo-6cbda756ce.svg" width="100%" alt="Progress card for Exercise1 todo">
+
+</div>
+
 > Create accessible browser interactions using DOM selection, events, forms, and state updates.
 
 ## Learning goals

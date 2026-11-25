@@ -1,5 +1,13 @@
 # 🐾 Day 2 Exercises – Inheritance, Encapsulation & Polymorphism
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xp-f1817611e4.svg" width="100%" alt="Progress card for Exercises XP">
+
+</div>
+
 ## 🎯 Learning Goals
 - Understand how inheritance lets subclasses (like `Bengal` or `PetDog`) reuse and extend parent behaviour.
 - Practice encapsulating behaviour inside classes such as `Pets`, `Dog`, and `Family`.

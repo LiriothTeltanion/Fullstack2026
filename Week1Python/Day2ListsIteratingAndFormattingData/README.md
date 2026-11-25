@@ -1,5 +1,13 @@
 # 📚 Day 2 — Lists, Iteration and Data Formatting
 
+<div align="center">
+
+<img src="../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../assets/readme/progress/day2-lists-iterating-and-formatting-data-540ca92ecb.svg" width="100%" alt="Progress card for Day2 Lists Iterating And Formatting Data">
+
+</div>
+
 **Author:** Kevin Cusnir "Lirioth"  
 **Course:** Fullstack Bootcamp 2026  
 **Last Updated:** October 18, 2025

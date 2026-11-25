@@ -1,5 +1,13 @@
 # 🏋️ Exercises XP - Functions Fundamentals
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xp-ae3b3197a6.svg" width="100%" alt="Progress card for Exercises XP">
+
+</div>
+
 Master essential function concepts through seven practical exercises covering function definition, parameters, defaults, random generation, and list manipulation.
 
 ## 📊 Quick Stats

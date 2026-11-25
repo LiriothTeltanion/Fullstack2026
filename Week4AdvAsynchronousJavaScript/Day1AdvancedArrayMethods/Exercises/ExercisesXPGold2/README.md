@@ -1,5 +1,13 @@
 # Arrays Methods — Exercises XP Gold (TypeScript) 🥇🧮
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xpgold2-0a6e7b392d.svg" width="100%" alt="Progress card for Exercises XPGold2">
+
+</div>
+
 Practice key array and string methods with concise TypeScript functions.
 
 ## ✅ What’s inside

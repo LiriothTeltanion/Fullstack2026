@@ -1,5 +1,13 @@
 # 🔤 Day 5 — Mini-projects
 
+<div align="center">
+
+<img src="../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../assets/readme/progress/day5-mini-project-e4f4b5beef.svg" width="100%" alt="Progress card for Day5 Mini Project">
+
+</div>
+
 Welcome to the final project of the Python OOP module! Instead of building a large library system, Day 5 now focuses on a compact but complete **Anagram Checker** that lets you practise object-oriented design, modular thinking, file handling, and simple CLI flows all in one place.
 
 If you prefer a detailed, learner-friendly walkthrough, jump straight to [`Exercises/AnagramChecker/README.md`](Exercises/AnagramChecker/README.md). The highlights are summarised below so the whole folder stays in sync.

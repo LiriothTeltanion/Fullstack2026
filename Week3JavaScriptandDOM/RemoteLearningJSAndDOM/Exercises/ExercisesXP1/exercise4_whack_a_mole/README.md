@@ -1,5 +1,13 @@
 # Exercise4 Whack A Mole
 
+<div align="center">
+
+<img src="../../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../../assets/readme/progress/exercise4-whack-a-mole-e543b0681c.svg" width="100%" alt="Progress card for Exercise4 whack a mole">
+
+</div>
+
 > Create accessible browser interactions using DOM selection, events, forms, and state updates.
 
 ## Learning goals

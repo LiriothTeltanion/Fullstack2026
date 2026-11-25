@@ -1,5 +1,13 @@
 # LibrarySystem — TypeScript Daily Challenge
 
+<div align="center">
+
+<img src="../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../assets/readme/progress/daily-challenge-018a6493ca.svg" width="100%" alt="Progress card for Daily Challenge">
+
+</div>
+
 Single-file solution implementing a simple library system using interfaces, classes, access modifiers, optional and readonly properties, and basic inheritance.
 
 ## Files

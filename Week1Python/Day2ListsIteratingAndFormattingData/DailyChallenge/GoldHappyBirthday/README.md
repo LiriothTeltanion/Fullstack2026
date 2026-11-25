@@ -1,5 +1,13 @@
 # 💪 Daily Challenge GOLD — Happy Birthday
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/gold-happy-birthday-051524da32.svg" width="100%" alt="Progress card for Gold Happy Birthday">
+
+</div>
+
 **Author:** Kevin Cusnir "Lirioth"  
 **Course:** Fullstack Bootcamp 2026  
 **Last Updated:** October 18, 2025

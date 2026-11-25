@@ -1,5 +1,13 @@
 # Exercises XP — Node.js Modules & FS
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/exercises-xp-33f9f32714.svg" width="100%" alt="Progress card for Exercises XP">
+
+</div>
+
 A tidy set of small Node.js exercises using **CommonJS** and **ES Modules**, plus the `fs` module and a couple of beginner-friendly packages.
 
 > All scripts are commented in ENGLISH and use a few emojis (no hearts) to keep the vibe friendly. ✅💡

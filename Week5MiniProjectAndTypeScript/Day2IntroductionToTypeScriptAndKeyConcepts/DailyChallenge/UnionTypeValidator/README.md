@@ -1,5 +1,13 @@
 # Union Type Validator
 
+<div align="center">
+
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+
+<img src="../../../../assets/readme/progress/union-type-validator-805b55c1bb.svg" width="100%" alt="Progress card for Union Type Validator">
+
+</div>
+
 ## 📚 What You'll Learn
 
 This daily challenge demonstrates:
