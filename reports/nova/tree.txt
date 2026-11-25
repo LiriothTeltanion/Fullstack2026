@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-25
-Base HEAD: 121cdc572c9cc809b930b75a2067fdebde1cd14a
-Source-index SHA-256 (generated outputs excluded): b01de2c8867a89ea0cea6e2381efbb979450d7f332a2a1210157ce9fa6b8a04e
-Indexed files: 851
+Base HEAD: 48191344584a765832a8878226e774bbe99617fc
+Source-index SHA-256 (generated outputs excluded): b3577db06c11864702f7c496748f9b135af9c1b3e75f7db6c793558b9e8b5d7c
+Indexed files: 852
 
 .
 ├── .github
@@ -37,6 +37,7 @@ Indexed files: 851
 │   │   │   ├── challenges1-e9520d5915.svg
 │   │   │   ├── challenges2-e9acc2f59e.svg
 │   │   │   ├── circle-97d878cfe4.svg
+│   │   │   ├── coffee-shop-menu-manager-7c0ffee001.svg
 │   │   │   ├── css-301984da57.svg
 │   │   │   ├── css-472e2fb5e8.svg
 │   │   │   ├── css-5401dbb63d.svg
