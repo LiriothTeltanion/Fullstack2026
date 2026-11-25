@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
-Regenerated: 2026-11-25
-Base HEAD: f692aee2ccbf5d31a3e9928391fe58e65d105468
-Source-index SHA-256 (generated outputs excluded): f4450d4f803ddf5e2e7206a7375f8b6535638632091cdf3cc1b4bf6b3d67a062
-Indexed files: 2942
+Regenerated: 2026-11-26
+Base HEAD: c32b1dd5bd609aeb2bbb8f23cb96c62213e90e07
+Source-index SHA-256 (generated outputs excluded): 5e17ea35dc911df75220c19cd189aa26b38e8bb9593d35d27d317ae2e1377dae
+Indexed files: 2943
 
 .
 ├── .github
@@ -1210,6 +1210,7 @@ Indexed files: 2942
 │   │   │   │   │   │   ├── app.test.js
 │   │   │   │   │   │   └── README.md
 │   │   │   │   │   ├── index.html
+│   │   │   │   │   ├── package-lock.json
 │   │   │   │   │   ├── package.json
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   └── vite.config.js

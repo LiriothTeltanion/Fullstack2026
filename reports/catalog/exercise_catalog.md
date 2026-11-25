@@ -1,9 +1,9 @@
 # Canonical Exercise Catalog
 
-> Regenerated from the exact Git index on `2026-11-25` by `tools/refresh_structure_catalogs.py`.
+> Regenerated from the exact Git index on `2026-11-26` by `tools/refresh_structure_catalogs.py`.
 
-- Base HEAD: `f692aee2ccbf5d31a3e9928391fe58e65d105468`
-- Source-index fingerprint: `sha256:f4450d4f803ddf5e2e7206a7375f8b6535638632091cdf3cc1b4bf6b3d67a062` (generated outputs excluded)
+- Base HEAD: `c32b1dd5bd609aeb2bbb8f23cb96c62213e90e07`
+- Source-index fingerprint: `sha256:5e17ea35dc911df75220c19cd189aa26b38e8bb9593d35d27d317ae2e1377dae` (generated outputs excluded)
 
 This catalog proves repository presence and path integrity only. It does not prove that an exercise runs, that Kevin can explain it, or that it is mastered or portfolio-ready.
 
@@ -51,7 +51,7 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week14MoreTopicsAndInterviews/Day1AWSAndJWT/Exercises/S3UploadsWithExpress` | Exercise | CSS \| HTML \| JSON \| JavaScript | 17 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day1AWSAndJWT/Exercises/S3UploadsWithExpress>); runtime unverified |
 | `Week14MoreTopicsAndInterviews/Day2DeployWithRender/Exercises/DeployReactAndNode` | Exercise | CSS \| HTML \| JSON \| JavaScript | 25 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day2DeployWithRender/Exercises/DeployReactAndNode>); runtime unverified |
 | `Week14MoreTopicsAndInterviews/Day3FullStackDeployment/Exercises/DeployFullStackApp` | Exercise | CSS \| HTML \| JSON \| JavaScript | 30 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day3FullStackDeployment/Exercises/DeployFullStackApp>); runtime unverified |
-| `Week14MoreTopicsAndInterviews/Day7MiniProjects/DailyChallenge/LoginAndRegister` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript \| SQL | 28 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day7MiniProjects/DailyChallenge/LoginAndRegister>); runtime unverified |
+| `Week14MoreTopicsAndInterviews/Day7MiniProjects/DailyChallenge/LoginAndRegister` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript \| SQL | 29 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day7MiniProjects/DailyChallenge/LoginAndRegister>); runtime unverified |
 | `Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/GoogleMap` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 11 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/GoogleMap>); runtime unverified |
 | `Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/MemeGenerator` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 16 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/MemeGenerator>); runtime unverified |
 | `Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/SearchBookApp` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 15 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/SearchBookApp>); runtime unverified |
