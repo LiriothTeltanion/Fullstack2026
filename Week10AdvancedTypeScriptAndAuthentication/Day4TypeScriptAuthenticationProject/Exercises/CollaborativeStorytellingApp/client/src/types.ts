@@ -1,1 +1,1 @@
-export type { Story, User } from "../../shared/types";
+export type { Story, StoryComment, User } from "../../shared/types";

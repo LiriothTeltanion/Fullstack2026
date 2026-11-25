@@ -1,9 +1,9 @@
 # Canonical Exercise Catalog
 
-> Regenerated from the exact Git index on `2026-11-25` by `tools/refresh_structure_catalogs.py`.
+> Regenerated from the exact Git index on `2026-11-26` by `tools/refresh_structure_catalogs.py`.
 
-- Base HEAD: `9bc93407a3436b464d942312073ed50c304d543d`
-- Source-index fingerprint: `sha256:f6d92b46287a9bd5e9cec79f15ef6461786b8e552f1321b121f03d7da48b4c78` (generated outputs excluded)
+- Base HEAD: `6194755a8a34c2e046e66b7dfac3babdbeeb2bb3`
+- Source-index fingerprint: `sha256:0db805138ca35ceadd87157f61582331095d9dcd2b2da0c9044e974bcac36a82` (generated outputs excluded)
 
 This catalog proves repository presence and path integrity only. It does not prove that an exercise runs, that Kevin can explain it, or that it is mastered or portfolio-ready.
 
@@ -24,7 +24,7 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week10AdvancedTypeScriptAndAuthentication/Day2MiniProject/Exercises/RecipeBookApp` | Mini Project | CSS \| HTML \| JSON \| JavaScript \| TypeScript | 23 | present (canonical) | [source](<../../Week10AdvancedTypeScriptAndAuthentication/Day2MiniProject/Exercises/RecipeBookApp>); runtime unverified |
 | `Week10AdvancedTypeScriptAndAuthentication/Day3Authentication/Exercises/ExercisesXP` | Exercise | JSON \| JavaScript | 23 | present (canonical) | [source](<../../Week10AdvancedTypeScriptAndAuthentication/Day3Authentication/Exercises/ExercisesXP>); runtime unverified |
 | `Week10AdvancedTypeScriptAndAuthentication/Day4TypeScriptAuthenticationProject/Exercises/AdvancedFunctionalities` | Mini Project | JSON \| TypeScript | 19 | present (canonical) | [source](<../../Week10AdvancedTypeScriptAndAuthentication/Day4TypeScriptAuthenticationProject/Exercises/AdvancedFunctionalities>); runtime unverified |
-| `Week10AdvancedTypeScriptAndAuthentication/Day4TypeScriptAuthenticationProject/Exercises/CollaborativeStorytellingApp` | Mini Project | CSS \| HTML \| JSON \| JavaScript \| SQL \| TypeScript | 44 | present (canonical) | [source](<../../Week10AdvancedTypeScriptAndAuthentication/Day4TypeScriptAuthenticationProject/Exercises/CollaborativeStorytellingApp>); runtime unverified |
+| `Week10AdvancedTypeScriptAndAuthentication/Day4TypeScriptAuthenticationProject/Exercises/CollaborativeStorytellingApp` | Mini Project | CSS \| HTML \| JSON \| JavaScript \| SQL \| TypeScript | 68 | present (canonical) | [source](<../../Week10AdvancedTypeScriptAndAuthentication/Day4TypeScriptAuthenticationProject/Exercises/CollaborativeStorytellingApp>); runtime unverified |
 | `Week10AdvancedTypeScriptAndAuthentication/RemoteLearningAuthAndTypeScript/Exercises/AuthenticationProject` | Exercise | CSS \| HTML \| JSON \| JavaScript \| TypeScript | 34 | present (canonical) | [source](<../../Week10AdvancedTypeScriptAndAuthentication/RemoteLearningAuthAndTypeScript/Exercises/AuthenticationProject>); runtime unverified |
 | `Week12FinalProject/Day1CapstoneSubmission/CapstoneProject` | Exercise | CSS \| HTML \| JSON \| JavaScript \| SQL | 32 | present (canonical) | [source](<../../Week12FinalProject/Day1CapstoneSubmission/CapstoneProject>); runtime unverified |
 | `Week13WebDevelopmentBasics/Day1HTMLAndCSS/DailyChallenge/Avengers` | Daily Challenge | CSS \| HTML | 3 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day1HTMLAndCSS/DailyChallenge/Avengers>); runtime unverified |

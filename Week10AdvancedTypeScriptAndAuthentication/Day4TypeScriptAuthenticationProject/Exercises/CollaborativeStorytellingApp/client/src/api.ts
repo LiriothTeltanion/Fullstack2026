@@ -1,4 +1,4 @@
-import type { Story, User } from "./types";
+import type { Story, StoryComment, User } from "./types";
 
 let readAccessToken: () => string | null = () => null;
 let writeAccessToken: (token: string | null) => void = () => {};
@@ -74,10 +74,11 @@ async function request<T>(path: string, method = "GET", body?: unknown, retry = 
   return data as T;
 }
 
-async function authenticate(path: string, username: string, password: string) {
+async function authenticate(path: string, username: string, password: string, email?: string) {
   const data = await request<{ user: User; accessToken: string }>(path, "POST", {
     username,
     password,
+    email,
   });
   writeAccessToken(data.accessToken);
   return data;
@@ -86,8 +87,8 @@ async function authenticate(path: string, username: string, password: string) {
 export const api = {
   me: () => request<{ user: User }>("/auth/me"),
   login: (username: string, password: string) => authenticate("/auth/login", username, password),
-  register: (username: string, password: string) =>
-    authenticate("/auth/register", username, password),
+  register: (username: string, password: string, email: string) =>
+    authenticate("/auth/register", username, password, email),
   logout: async () => {
     const result = await request<{ message: string }>("/auth/logout", "POST");
     writeAccessToken(null);
@@ -101,6 +102,10 @@ export const api = {
   updateStory: (id: number, changes: Partial<Pick<Story, "title" | "content">>) =>
     request<{ story: Story }>(`/stories/${id}`, "PATCH", changes),
   deleteStory: (id: number) => request<void>(`/stories/${id}`, "DELETE"),
+  comments: (storyId: number) =>
+    request<{ comments: StoryComment[] }>(`/stories/${storyId}/comments`),
+  addComment: (storyId: number, body: string) =>
+    request<{ comment: StoryComment }>(`/stories/${storyId}/comments`, "POST", { body }),
   addContributor: (id: number, username: string) =>
     request<{ story: Story }>(`/stories/${id}/contributors`, "POST", { username }),
 };

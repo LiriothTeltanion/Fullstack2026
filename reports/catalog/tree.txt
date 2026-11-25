@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
-Regenerated: 2026-11-25
-Base HEAD: 9bc93407a3436b464d942312073ed50c304d543d
-Source-index SHA-256 (generated outputs excluded): f6d92b46287a9bd5e9cec79f15ef6461786b8e552f1321b121f03d7da48b4c78
-Indexed files: 2945
+Regenerated: 2026-11-26
+Base HEAD: 6194755a8a34c2e046e66b7dfac3babdbeeb2bb3
+Source-index SHA-256 (generated outputs excluded): 0db805138ca35ceadd87157f61582331095d9dcd2b2da0c9044e974bcac36a82
+Indexed files: 2969
 
 .
 ├── .github
@@ -754,34 +754,51 @@ Indexed files: 2945
 │   │   │   │   │   │   │   ├── AuthForm.tsx
 │   │   │   │   │   │   │   ├── README.md
 │   │   │   │   │   │   │   ├── StoryCard.tsx
-│   │   │   │   │   │   │   └── StoryForm.tsx
+│   │   │   │   │   │   │   ├── StoryComments.css
+│   │   │   │   │   │   │   ├── StoryComments.tsx
+│   │   │   │   │   │   │   ├── StoryForm.tsx
+│   │   │   │   │   │   │   └── ThemeToggle.tsx
 │   │   │   │   │   │   ├── api.ts
 │   │   │   │   │   │   ├── App.tsx
+│   │   │   │   │   │   ├── authSlice.ts
 │   │   │   │   │   │   ├── index.css
 │   │   │   │   │   │   ├── main.tsx
+│   │   │   │   │   │   ├── navigation.tsx
 │   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── routes.ts
 │   │   │   │   │   │   ├── store.ts
 │   │   │   │   │   │   ├── storySlice.ts
 │   │   │   │   │   │   └── types.ts
+│   │   │   │   │   ├── tests
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── routes.test.mjs
 │   │   │   │   │   ├── index.html
+│   │   │   │   │   ├── package-lock.json
 │   │   │   │   │   ├── package.json
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   ├── tsconfig.json
+│   │   │   │   │   ├── vercel.json
 │   │   │   │   │   └── vite.config.ts
 │   │   │   │   ├── server
 │   │   │   │   │   ├── controllers
 │   │   │   │   │   │   ├── authController.js
+│   │   │   │   │   │   ├── commentsController.js
 │   │   │   │   │   │   ├── README.md
 │   │   │   │   │   │   └── storiesController.js
 │   │   │   │   │   ├── db
+│   │   │   │   │   │   ├── migrations
+│   │   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   │   └── story-comments-hosted.sql
 │   │   │   │   │   │   ├── init.js
 │   │   │   │   │   │   ├── README.md
-│   │   │   │   │   │   └── schema.sql
+│   │   │   │   │   │   ├── schema.sql
+│   │   │   │   │   │   └── setup.js
 │   │   │   │   │   ├── middleware
 │   │   │   │   │   │   ├── loadStory.js
 │   │   │   │   │   │   ├── README.md
 │   │   │   │   │   │   └── requireAuth.js
 │   │   │   │   │   ├── models
+│   │   │   │   │   │   ├── commentModel.js
 │   │   │   │   │   │   ├── db.js
 │   │   │   │   │   │   ├── README.md
 │   │   │   │   │   │   ├── refreshModel.js
@@ -792,11 +809,21 @@ Indexed files: 2945
 │   │   │   │   │   │   ├── contributorRoutes.js
 │   │   │   │   │   │   ├── README.md
 │   │   │   │   │   │   └── storiesRoutes.js
+│   │   │   │   │   ├── tests
+│   │   │   │   │   │   ├── comments.memory.test.js
+│   │   │   │   │   │   ├── comments.postgres.test.js
+│   │   │   │   │   │   ├── commentsFixture.js
+│   │   │   │   │   │   ├── email-auth.test.js
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── sessionStore.test.js
+│   │   │   │   │   │   └── setup.test.js
 │   │   │   │   │   ├── .env.example
 │   │   │   │   │   ├── app.js
+│   │   │   │   │   ├── package-lock.json
 │   │   │   │   │   ├── package.json
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   ├── server.js
+│   │   │   │   │   ├── sessionStore.js
 │   │   │   │   │   └── settings.js
 │   │   │   │   ├── shared
 │   │   │   │   │   ├── README.md
