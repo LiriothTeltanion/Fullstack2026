@@ -15,70 +15,7 @@
 | [Day 1 · XP Ninja 1–5](Day1StartingwithPython/Exercises/ExercisesXPNinja/) | `VERIFIED` by [7 focused tests](../tests/python/test_week1_day1_exercises_xp_ninja.py) and observed launcher commands | `UNVERIFIED` | `UNVERIFIED` | Kevin prediction and explanation |
 | [Day 1 · Daily Challenge](Day1StartingwithPython/DailyChallenge/) | Official alignment and repository behavior `VERIFIED` by a read-only source comparison plus [5 tests](../tests/python/test_week1_day1_daily_challenge.py) | `UNVERIFIED` | Submission `UNVERIFIED` | Kevin explanation and manual submission |
 
-See the [Day 1 evidence guide](Day1StartingwithPython/), [XP record](../.learning/evidence/2026-09-10-week1-day1-exercises-xp.md), [Gold record](../.learning/evidence/2026-09-11-week1-day1-exercises-xp-gold.md), [Ninja record](../.learning/evidence/2026-09-11-week1-day1-exercises-xp-ninja.md), and [Daily alignment record](../.learning/evidence/2026-09-11-week1-day1-daily-challenge-alignment.md). Twenty-three focused tests verify the supplied XP, Gold, and Ninja behaviors; five additional tests protect the requirement-aligned Daily artifact. They do not change Week 1's overall learning state from `unknown`.
-
-<details>
-<summary>Historical repository snapshot — generated 2026-07-15</summary>
-
-<!-- NOVA:ULTIMATE:START -->
-<div align="center">
-
-### Week1 Python
-
-**Goal:** Strengthen Python fundamentals through progressive exercises, challenges, and complete console projects.
-
-</div>
-
-## 🧭 NOVA Folder Guide
-
-| Metric | Value |
-|---|---:|
-| Historical readiness heuristic | **80% · generated 2026-07-15** |
-| Files | 115 |
-| Source files | 35 |
-| Colocated test files | 0; four bounded Week 1 suites now live under `tests/python/` |
-| Text lines | 15,917 |
-
-### ▶️ Main paths
-
-- `Week1Python/Day5MiniProject/DailyChallenge/AdvancedAlgorithm/main.py`
-- `Week1Python/Day5MiniProject/Exercises/Challenges2/main.py`
-- `Week1Python/Day5MiniProject/Exercises/Hangman/main.py`
-
-### 🚀 Run
-
-```bash
-python Week1Python/Day5MiniProject/DailyChallenge/AdvancedAlgorithm/main.py
-python Week1Python/Day5MiniProject/Exercises/Challenges2/main.py
-python Week1Python/Day5MiniProject/Exercises/Hangman/main.py
-```
-
-### 🟢 What is already strong
-
-- ✅ README documentation is generated and repeatable.
-- ✅ Contains 35 source file(s) across practical exercises or projects.
-- ✅ No Python syntax error was detected in this folder tree.
-- ✅ A likely runnable entry point was detected.
-- ✅ Centralized bounded tests now cover Day 1 Exercises XP, XP Gold, Hangman, and Tic-Tac-Toe behavior.
-
-### 🟠 What to improve next
-
-- ⚠️ Most Week 1 exercises and interactive flows still lack requirement-specific runtime tests.
-
-### 🧪 Validation
-
-```bash
-python tools/nova_quality_gate.py --repo . --strict
-python -m unittest discover -s tests/python -p "test_*.py" -v
-node tools/run_node_tests.mjs .
-```
-
-> The readiness value is a transparent repository heuristic, not a course grade and not proof that every interactive or external-API exercise was executed.
-
-<sub>Managed by NOVA Ultimate v2.0.0 · 2026-07-15T06:22:47+03:00</sub>
-<!-- NOVA:ULTIMATE:END -->
-
-</details>
+See the [Day 1 evidence guide](Day1StartingwithPython/). Twenty-three focused tests verify the supplied XP, Gold, and Ninja behaviors; five additional tests protect the requirement-aligned Daily artifact. They do not change Week 1's overall learning state from `unknown`.
 
 Practice Python fundamentals through progressive daily exercises and mini-projects. This week builds from basic syntax to complete applications while keeping repository evidence separate from learning evidence.
 

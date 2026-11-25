@@ -16,66 +16,7 @@
 | Kevin's understanding | `UNVERIFIED` | Requires Kevin's own explanation, a changed example, independent recreation, and an edge case. |
 | Octopus submission or grade | `UNVERIFIED` | No submission, instructor review, completion, or grade is asserted here. |
 
-Full commands and evidence boundary: [Gold record](../../../../.learning/evidence/2026-09-11-week1-day1-exercises-xp-gold.md) · [Ninja record](../../../../.learning/evidence/2026-09-11-week1-day1-exercises-xp-ninja.md) · [Daily alignment record](../../../../.learning/evidence/2026-09-11-week1-day1-daily-challenge-alignment.md).
-
-<details>
-<summary>Historical repository snapshot — generated 2026-07-15</summary>
-
-<!-- NOVA:ULTIMATE:START -->
-<div align="center">
-
-### Exercises XPGold
-
-**Goal:** Practice Python basics, string repetition, numeric input, and conditional season mapping.
-
-</div>
-
-## 🧭 NOVA Folder Guide
-
-| Metric | Value |
-|---|---:|
-| Historical readiness heuristic | **80% · generated 2026-07-15** |
-| Files | 3 |
-| Source files | 1 |
-| Colocated test files | 0; one focused Gold suite now lives under `tests/python/` |
-| Text lines | 272 |
-
-### ▶️ Main paths
-
-- `Week1Python/Day1StartingwithPython/Exercises/ExercisesXPGold/exercisesxpgold.py`
-
-### 🚀 Run
-
-```bash
-python Week1Python/Day1StartingwithPython/Exercises/ExercisesXPGold/exercisesxpgold.py
-```
-
-### 🟢 What is already strong
-
-- ✅ README documentation is generated and repeatable.
-- ✅ Contains 1 source file(s) across practical exercises or projects.
-- ✅ No Python syntax error was detected in this folder tree.
-- ✅ A likely runnable entry point was detected.
-- ✅ Six centralized tests now cover the two supplied XP Gold behaviors.
-
-### 🟠 What to improve next
-
-- ⚠️ Kevin's independent explanation and Octopus submission state remain unverified.
-
-### 🧪 Validation
-
-```bash
-python tools/nova_quality_gate.py --repo . --strict
-python -m unittest discover -s tests/python -p "test_*.py" -v
-node tools/run_node_tests.mjs .
-```
-
-> The readiness value is a transparent repository heuristic, not a course grade and not proof that every interactive or external-API exercise was executed.
-
-<sub>Managed by NOVA Ultimate v2.0.0 · 2026-07-15T06:22:49+03:00</sub>
-<!-- NOVA:ULTIMATE:END -->
-
-</details>
+Focused tests: [Gold](../../../../tests/python/test_week1_day1_exercises_xp_gold.py) · [Ninja](../../../../tests/python/test_week1_day1_exercises_xp_ninja.py) · [Daily Challenge](../../../../tests/python/test_week1_day1_daily_challenge.py).
 
 **Author:** Kevin Cusnir<br>
 **Creative signature:** Lirioth Teltanion<br>

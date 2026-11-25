@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""NOVA repository-wide quality gate for Fullstack2026.
+"""Repository-wide quality gate for Fullstack2026.
 
 Validates every relevant visible file without executing interactive exercises:
 Python/JavaScript/TypeScript syntax, JSON, HTML, CSS, Markdown links, likely
@@ -229,7 +229,7 @@ def repository_findings(root: Path) -> list[Finding]:
         if path.is_file():
             out.append(Finding("error", "root_archive", "Redundant source ZIP at repository root", path.name, path.name))
     if not (root / ".github" / "workflows" / "quality.yml").exists():
-        out.append(Finding("error", "missing_ci", "NOVA CI workflow missing", ".github/workflows/quality.yml"))
+        out.append(Finding("error", "missing_ci", "CI workflow missing", ".github/workflows/quality.yml"))
     if (root / "package.json").exists() and not (root / "package-lock.json").exists():
         out.append(Finding("error", "missing_lockfile", "package-lock.json missing", "Run npm install once and commit the lockfile.", "package.json"))
     week_dirs = [p for p in root.iterdir() if p.is_dir() and re.fullmatch(r"Week\d+.*", p.name, re.I)]
@@ -242,7 +242,7 @@ def repository_findings(root: Path) -> list[Finding]:
             except OSError:
                 continue
             if not any(p.is_file() and p.name.lower() == "readme.md" for p in directory.iterdir()):
-                out.append(Finding("warning", "missing_readme", "Directory missing README.md", "Run NOVA Readme Forge.", rel(directory, root)))
+                out.append(Finding("warning", "missing_readme", "Directory missing README.md", "Add a README.md that explains the folder.", rel(directory, root)))
     if not (root / "tests" / "python").exists():
         out.append(Finding("warning", "missing_python_tests", "Python anchor tests missing", "tests/python"))
     if not (root / "tests" / "js").exists():
@@ -257,7 +257,7 @@ def write_reports(root: Path, report: dict) -> tuple[Path, Path]:
     md_path = output / "quality_report.md"
     json_path.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     lines = [
-        "# NOVA Quality Gate", "",
+        "# Quality Gate", "",
         f"- **Status:** {report['status'].upper()}",
         f"- **Files scanned:** {report['files_scanned']}",
         f"- **Errors:** {report['counts']['error']}",
@@ -277,7 +277,7 @@ def write_reports(root: Path, report: dict) -> tuple[Path, Path]:
 
 
 def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="NOVA whole-repository quality gate")
+    parser = argparse.ArgumentParser(description="Whole-repository quality gate")
     parser.add_argument("--repo", default=".")
     parser.add_argument("--strict", action="store_true")
     parser.add_argument("--syntax-only", action="store_true")
@@ -334,7 +334,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     findings.sort(key=lambda f: (order.get(f.severity, 9), f.path or "", f.line or 0, f.code))
     counts = {kind: sum(1 for f in findings if f.severity == kind) for kind in ("error", "warning", "info")}
     report = {
-        "tool": {"name": "NOVA Quality Gate", "version": VERSION},
+        "tool": {"name": "Fullstack2026 Quality Gate", "version": VERSION},
         "generated_at": iso_now(), "repository": ".",
         "files_scanned": len(all_files),
         "source_files_scanned": sum(1 for p in all_files if p.suffix.lower() in SOURCE_EXTENSIONS),
@@ -347,7 +347,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         jpath, mpath = write_reports(root, report)
         print(f"Report: {mpath}")
         print(f"JSON:   {jpath}")
-    print(f"NOVA QUALITY: {report['status'].upper()} | errors={counts['error']} warnings={counts['warning']} files={len(all_files)}")
+    print(f"QUALITY GATE: {report['status'].upper()} | errors={counts['error']} warnings={counts['warning']} files={len(all_files)}")
     for item in findings[:50]:
         where = f" {item.path}" if item.path else ""
         if item.line:

@@ -67,7 +67,7 @@ Thumbs.db
 # Editor folders
 .vscode/
 .idea/
-# NOVA local state (reports are intentionally versionable)
+# Local tool state (reports are intentionally versionable)
 .nova/
 
 # Local secrets/configuration
@@ -83,14 +83,44 @@ Thumbs.db
 Week*.zip
 .nova-readme-backups/
 
-# Local-only notes for coding assistants. They stay on Kevin's machines and are
+# Local-only notes. They stay on Kevin's machines and are
 # not published.
 /AGENTS.md
 /.ai/
 /.github/copilot-instructions.md
 
-# Local private agent context (never committed)
+# Local private context (never committed)
 AGENTS.local.md
 CLAUDE.local.md
 *.local.md
 .claude/settings.local.json
+
+# Local planning notes, review records and generated reports. They stay on
+# Kevin's machines and are not published (moved out of the index 2026-11-25).
+/.github/INTERNAL_GUIDE.md
+/.learning/OCTOPUS_INTAKE.md
+/.learning/PROGRESS.md
+/.learning/REVIEW_QUEUE.md
+/.learning/evidence/
+/.learning/sessions/
+/reports/resume/
+/reports/nova/NOVA_UPDATE_REPORT.md
+/reports/nova/README.nova.generated.md
+/reports/nova/next_actions.md
+/reports/nova/nova_repo_audit.*
+/reports/nova/nova_repo_dashboard.html
+/reports/nova/SUMMARY.txt
+/reports/nova/quality_report.*
+/FINAL_README_INSTALL_REPORT.md
+/NOVA_*.bat
+/pyproject.nova.suggested.toml
+/tools/nova_ultimate.py
+/tests/python/test_nova_generator.py
+/assets/readme/progress/
+/assets/readme/learning-orbit.svg
+/assets/readme/stack-pulse.svg
+/assets/readme/nova-*.svg
+/assets/readme/ultimate/nova-footer-pulse.svg
+/assets/readme/ultimate/nova-readiness-live.svg
+/assets/readme/ultimate/nova-roadmap-horizon.svg
+/assets/readme/ultimate/nova-six-weeks-journey.svg

@@ -15,7 +15,7 @@
 | Kevin's independent understanding | `UNVERIFIED` | Requires prediction, explanation, recreation, and an edge-case variation. |
 | Octopus submission, review, and grade | `UNVERIFIED` | No platform action is inferred from local files or tests. |
 
-Full commands and limitations are recorded in the [dated Ninja evidence record](../../../../.learning/evidence/2026-09-11-week1-day1-exercises-xp-ninja.md).
+The behaviors above are covered by the [focused Ninja tests](../../../../tests/python/test_week1_day1_exercises_xp_ninja.py).
 
 ## Exercise map
 
@@ -50,63 +50,6 @@ Before this moves from repository `VERIFIED` to learning `explained`, Kevin shou
 <summary>Historical repository guide — generated before the 2026-09-11 requirement review</summary>
 
 # 🥇 Exercises XP Ninja - Advanced Challenges
-
-<!-- NOVA:ULTIMATE:START -->
-<div align="center">
-
-[Preserved legacy folder pulse asset](../../../../assets/readme/nova-folder-pulse.svg)
-
-### Exercises XPNinja
-
-[Preserved legacy heuristic asset](../../../../assets/readme/progress/exercises-xpninja-0250e546b7.svg)
-
-**Goal:** Extend the lesson with advanced algorithmic and creative problem-solving challenges.
-
-</div>
-
-## 🧭 NOVA Folder Guide
-
-| Metric | Value |
-|---|---:|
-| Readiness | **80%** |
-| Files | 3 |
-| Source files | 1 |
-| Test files | 0 |
-| Text lines | 323 |
-
-### ▶️ Main paths
-
-- `Week1Python/Day1StartingwithPython/Exercises/ExercisesXPNinja/exercisesxpninja.py`
-
-### 🚀 Run
-
-```bash
-python Week1Python/Day1StartingwithPython/Exercises/ExercisesXPNinja/exercisesxpninja.py
-```
-
-### 🟢 What is already strong
-
-- ✅ README documentation is generated and repeatable.
-- ✅ Contains 1 source file(s) across practical exercises or projects.
-- ✅ No Python syntax error was detected in this folder tree.
-- ✅ A likely runnable entry point was detected.
-
-### 🟠 What to improve next
-
-- ⚠️ No local unit test is present yet; repository-wide syntax checks still cover the sources.
-
-### 🧪 Validation
-
-```bash
-python tools/nova_quality_gate.py --repo . --strict
-python -m unittest discover -s tests/python -p "test_*.py" -v
-node tools/run_node_tests.mjs .
-```
-
-> The readiness value is a transparent repository heuristic, not a course grade and not proof that every interactive or external-API exercise was executed.
-
-<sub>Managed by NOVA Ultimate v2.0.0 · 2026-07-15T06:22:49+03:00</sub>
-<!-- NOVA:ULTIMATE:END -->
 
 **Author:** Kevin Cusnir "Lirioth"  
 **Course:** Fullstack Bootcamp 2026  
@@ -278,7 +221,7 @@ Try these to level up your skills:
 **Kevin Cusnir "Lirioth"**  
 - 🎓 Fullstack Developer Student  
 - 💻 GitHub: [@Lirioth](https://github.com/Lirioth)  
-- 📧 Repository: [Fullstack2026](https://github.com/Lirioth/Fullstack2026)
+- 📧 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)
 
 ---
 

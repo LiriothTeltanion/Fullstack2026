@@ -30,17 +30,15 @@ STRUCTURE_VALIDATOR = load_file(
 class RepositoryLayoutTests(unittest.TestCase):
     def test_quality_infrastructure(self):
         self.assertTrue((ROOT / ".github/workflows/quality.yml").exists())
-        self.assertTrue((ROOT / ".github/INTERNAL_GUIDE.md").exists())
         self.assertTrue((ROOT / ".github/pull_request_template.md").exists())
         self.assertTrue((ROOT / "CONTRIBUTING.md").exists())
         self.assertFalse(
             (ROOT / ".github/README.md").exists(),
             ".github/README.md can mask the root README on GitHub's repository page",
         )
-        self.assertTrue((ROOT / "tools/nova_quality_gate.py").exists())
+        self.assertTrue((ROOT / "tools/quality_gate.py").exists())
         self.assertTrue((ROOT / "tools/validate_display_titles.py").exists())
         self.assertTrue((ROOT / ".learning/display-map.json").exists())
-        self.assertTrue((ROOT / ".learning/OCTOPUS_INTAKE.md").exists())
         self.assertTrue((ROOT / ".learning/intake/README.md").exists())
         self.assertTrue((ROOT / ".learning/intake/queue.json").exists())
         self.assertTrue((ROOT / ".learning/intake/exercise-intake.schema.json").exists())
@@ -48,15 +46,11 @@ class RepositoryLayoutTests(unittest.TestCase):
         self.assertTrue((ROOT / "eslint.config.js").exists())
         self.assertFalse((ROOT / ".eslintrc.cjs").exists())
         self.assertFalse((ROOT / ".eslintignore").exists())
-        for privacy_aware_tool in (
-            ROOT / "tools/nova_quality_gate.py",
-            ROOT / "tools/nova_ultimate.py",
-        ):
-            self.assertIn(
-                '".private"',
-                privacy_aware_tool.read_text(encoding="utf-8"),
-                f"{privacy_aware_tool.name} must never scan authenticated intake data",
-            )
+        self.assertIn(
+            '".private"',
+            (ROOT / "tools/quality_gate.py").read_text(encoding="utf-8"),
+            "quality_gate.py must never scan authenticated intake data",
+        )
         package = json.loads((ROOT / "package.json").read_text(encoding="utf-8"))
         package_lock = json.loads((ROOT / "package-lock.json").read_text(encoding="utf-8"))
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
@@ -81,7 +75,6 @@ class RepositoryLayoutTests(unittest.TestCase):
             "verify:structure",
             "test:python",
             "test:js",
-            "audit",
             "intake",
             "intake:check",
             "lint:baseline",
@@ -116,24 +109,6 @@ class RepositoryLayoutTests(unittest.TestCase):
         self.assertIn("GitHub Desktop", contributing)
         self.assertIn("Publish branch", contributing)
         self.assertIn("Asia/Jerusalem", contributing)
-
-    def test_local_copilot_instructions_when_present(self):
-        """The Copilot commit guidance is local-only; check it where it exists."""
-        path = ROOT / ".github/copilot-instructions.md"
-        if not path.exists():
-            self.skipTest("local-only file, not published")
-        instructions = path.read_text(encoding="utf-8")
-        for required_text in (
-            "Kevin Cusnir",
-            "Lirioth Teltanion",
-            "What changed",
-            "Why",
-            "Verification",
-            "Known limitations",
-            "type(scope): emoji imperative summary",
-            "Creative-Signature: Lirioth Teltanion",
-        ):
-            self.assertIn(required_text, instructions)
 
     def test_canonical_repository_structure(self):
         result = subprocess.run(

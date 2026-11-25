@@ -58,5 +58,5 @@ provides enough source-safe context.
 
 The schema is documented in
 [`exercise-intake.schema.json`](exercise-intake.schema.json), while
-[`queue.json`](queue.json) is the public planning queue. The broader policy and
-action gates remain authoritative in [`../OCTOPUS_INTAKE.md`](../OCTOPUS_INTAKE.md).
+[`queue.json`](queue.json) is the public planning queue. Course material from the
+private academy platform is never copied into this repository.

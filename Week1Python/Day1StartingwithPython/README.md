@@ -17,7 +17,7 @@
 | Kevin's understanding | `UNVERIFIED` | Repository tests do not prove independent explanation, recreation, or transfer. |
 | Octopus submission or grade | `UNVERIFIED` | No platform submission, instructor review, or grade is claimed by this repository. |
 
-**Direct evidence:** [XP guide](Exercises/ExercisesXP/) · [Gold guide](Exercises/ExercisesXPGold/) · [Ninja guide](Exercises/ExercisesXPNinja/) · [Daily guide](DailyChallenge/) · [XP record](../../.learning/evidence/2026-09-10-week1-day1-exercises-xp.md) · [Gold record](../../.learning/evidence/2026-09-11-week1-day1-exercises-xp-gold.md) · [Ninja record](../../.learning/evidence/2026-09-11-week1-day1-exercises-xp-ninja.md) · [Daily alignment record](../../.learning/evidence/2026-09-11-week1-day1-daily-challenge-alignment.md)
+**Direct evidence:** [XP guide](Exercises/ExercisesXP/) · [Gold guide](Exercises/ExercisesXPGold/) · [Ninja guide](Exercises/ExercisesXPNinja/) · [Daily guide](DailyChallenge/)
 
 > `VERIFIED` is deliberately narrow: it describes repository behavior only. It does not mean that the complete day is mastered, submitted, or graded.
 
@@ -26,69 +26,6 @@
 **Course:** Fullstack Bootcamp 2026<br>
 **Local README originally updated:** October 18, 2025<br>
 **Evidence checkpoint reviewed:** September 11, 2026
-
-<details>
-<summary>Historical repository snapshot — generated 2026-07-15</summary>
-
-<!-- NOVA:ULTIMATE:START -->
-<div align="center">
-
-### Day1 Startingwith Python
-
-**Goal:** Strengthen Python fundamentals through progressive exercises, challenges, and complete console projects.
-
-</div>
-
-## 🧭 NOVA Folder Guide
-
-| Metric | Value |
-|---|---:|
-| Historical readiness heuristic | **80% · generated 2026-07-15** |
-| Files | 16 |
-| Source files | 4 |
-| Colocated test files | 0; two focused Day 1 suites now live under `tests/python/` |
-| Text lines | 2,056 |
-
-### ▶️ Main paths
-
-- `Week1Python/Day1StartingwithPython/Exercises/ExercisesXP/exercisesxp.py`
-- `Week1Python/Day1StartingwithPython/Exercises/ExercisesXPGold/exercisesxpgold.py`
-- `Week1Python/Day1StartingwithPython/Exercises/ExercisesXPNinja/exercisesxpninja.py`
-
-### 🚀 Run
-
-```bash
-python Week1Python/Day1StartingwithPython/Exercises/ExercisesXP/exercisesxp.py
-python Week1Python/Day1StartingwithPython/Exercises/ExercisesXPGold/exercisesxpgold.py
-python Week1Python/Day1StartingwithPython/Exercises/ExercisesXPNinja/exercisesxpninja.py
-```
-
-### 🟢 What is already strong
-
-- ✅ README documentation is generated and repeatable.
-- ✅ Contains 4 source file(s) across practical exercises or projects.
-- ✅ No Python syntax error was detected in this folder tree.
-- ✅ A likely runnable entry point was detected.
-- ✅ Two centralized focused suites now cover the nine supplied XP behaviors and two supplied Gold behaviors.
-
-### 🟠 What to improve next
-
-- ⚠️ XP Ninja, Daily Challenge, and Kevin's independent learning evidence remain unverified.
-
-### 🧪 Validation
-
-```bash
-python tools/nova_quality_gate.py --repo . --strict
-python -m unittest discover -s tests/python -p "test_*.py" -v
-node tools/run_node_tests.mjs .
-```
-
-> The readiness value is a transparent repository heuristic, not a course grade and not proof that every interactive or external-API exercise was executed.
-
-<sub>Managed by NOVA Ultimate v2.0.0 · 2026-07-15T06:22:48+03:00</sub>
-<!-- NOVA:ULTIMATE:END -->
-
-</details>
 
 <details>
 <summary>Historical learning guide — retained for provenance, not current evidence</summary>
