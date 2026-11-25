@@ -12,7 +12,7 @@ Another to-do app, but this one has All / Active / Completed filters and keeps t
 
 ## ▶️ How to run
 
-Open `index.html` in a browser (or run `npm run dev` from the repo root and open this folder at `http://localhost:8000/`). `js/app.js` uses `document` and `localStorage`, so it only runs in the browser, not with `node`.
+Open `index.html` in a browser (or run `npm run dev` from the repo root and go to `http://localhost:8000/Week3JavaScriptandDOM/RemoteLearningJSAndDOM/Exercises/ExercisesXP1/exercise1_todo/`). `js/app.js` uses `document` and `localStorage`, so it only runs in the browser, not with `node`.
 
 ## 🎯 The challenge
 

@@ -18,6 +18,7 @@ Two terminals:
 # terminal 1: the API on port 5000
 cd server
 npm install
+cp .env.example .env   # optional: it only sets PORT, 5000 by default
 npm start
 
 # terminal 2: the React client

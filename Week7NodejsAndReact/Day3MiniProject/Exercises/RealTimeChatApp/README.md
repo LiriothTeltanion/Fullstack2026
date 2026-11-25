@@ -14,6 +14,7 @@ A chat where messages show up in every open tab straight away. Express serves th
 
 ```bash
 npm install
+cp .env.example .env   # optional: it only sets PORT, 3000 by default
 npm run dev
 ```
 

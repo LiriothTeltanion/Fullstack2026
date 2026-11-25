@@ -79,7 +79,7 @@ The [course map](.learning/course-map.yml) lists every week and day, and the [di
 | [🛠️ Week 11](Week11FinalProject/) | Final Project | Final project scope |
 | [🚀 Week 12](Week12FinalProject/) | Final Project | Capstone starter and Demo Day |
 | [🎨 Week 13](Week13WebDevelopmentBasics/) | Web Development Basics (self-learning) | HTML, CSS, Bootstrap pages |
-| [🎓 Week 14](Week14MoreTopicsAndInterviews/) | More Topics and Interview Prep | S3 uploads, JWT, Render deploys, meme generator |
+| [🎓 Week 14](Week14MoreTopicsAndInterviews/) | More Topics and Interview Prep | S3 uploads, JWT, Render deploys, meme generator, book search |
 
 <details>
 <summary><strong>🐍 Week 1 — Python foundations</strong></summary>

@@ -19,6 +19,8 @@ cd server && npm install && npm run dev     # API on http://localhost:4000
 cd client && npm install && npm run dev     # React on http://localhost:5173
 ```
 
+`server/.env.example` and `client/.env.example` only hold the local defaults (`PORT=4000`, `CLIENT_ORIGIN` for port 5173, an empty `VITE_API_URL`), so copying them to `.env` is optional on my laptop.
+
 I ran the API and called it with curl:
 
 ```

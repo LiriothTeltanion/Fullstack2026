@@ -12,7 +12,7 @@ My to-do list fits in one HTML file, with the CSS and the script inside it. I ca
 
 ## ▶️ How to run
 
-Open `todo_list.html` in a browser (or run `npm run dev` from the repo root and open it at `http://localhost:8000/`). The delete icon comes from Font Awesome on a CDN, so it needs internet.
+Open `todo_list.html` in a browser (or run `npm run dev` from the repo root and go to `http://localhost:8000/Week3JavaScriptandDOM/Day5MiniProject/DailyChallenge/TodoList/todo_list.html`). The delete icon comes from Font Awesome on a CDN, so it needs internet.
 
 ## 🎯 The challenge
 

@@ -12,7 +12,7 @@ A small test of value against reference. I copy a `client` name (a string) and p
 
 ## ▶️ How to run
 
-Open `index.html` in a browser (or run `npm run dev` from the repo root and open this folder at `http://localhost:8000/`), open DevTools → Console and click **displayGroceries()**, **cloneGroceries()** or **runAll**.
+Open `index.html` in a browser (or run `npm run dev` from the repo root and go to `http://localhost:8000/Week3JavaScriptandDOM/Day4AdvancedJavaScriptFunctions/DailyChallenge/Groceries/`), open DevTools → Console and click **displayGroceries()**, **cloneGroceries()** or **runAll**.
 
 ```
 Before change -> client: John | user: John

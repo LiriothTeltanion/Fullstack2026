@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-25
-Base HEAD: 08d22783b087e1c566be62168117d0261098545b
-Source-index SHA-256 (generated outputs excluded): 141ebed8653fef2978412436808013f2d5b8fe3687225d4e8f9f7fc27a586ca1
-Indexed files: 2519
+Base HEAD: a25ba7b6a56e4b5299701e3b708b566980d96bb4
+Source-index SHA-256 (generated outputs excluded): e300c61a340ba988efd0bbc342acee91aa9c466f6a42e75878a65003e45424c5
+Indexed files: 2549
 
 .
 ├── .github
@@ -94,8 +94,10 @@ Indexed files: 2519
 │   │   │   ├── daily-challenge-dd0d57f83c.svg
 │   │   │   ├── daily-challenge-f96753fac0.svg
 │   │   │   ├── daily-challenge-fd8e7677ef.svg
+│   │   │   ├── daily-challenge-gifs-ab4a724356.svg
 │   │   │   ├── daily-challenge-not-bad-d1c834c9ea.svg
 │   │   │   ├── daily-challenge-planets-bcd2f51b89.svg
+│   │   │   ├── daily-challenge-promise-all-68e59af1aa.svg
 │   │   │   ├── daily-challenge-stars-45167b388e.svg
 │   │   │   ├── data-and-server-e5349de563.svg
 │   │   │   ├── day1-advanced-array-methods-316a98efce.svg
@@ -373,6 +375,7 @@ Indexed files: 2519
 │   │   │   ├── rock-paper-scissors-37d39eddc9.svg
 │   │   │   ├── rss-facts-feed-8960529c68.svg
 │   │   │   ├── s3-uploads-with-express-faa98115f8.svg
+│   │   │   ├── search-book-app-c3e536e5ac.svg
 │   │   │   ├── shopping-website-a42400536b.svg
 │   │   │   ├── snap-shot-fea6e0e67e.svg
 │   │   │   ├── solve-the-matrix-4caca0648d.svg
@@ -1117,6 +1120,24 @@ Indexed files: 2519
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
+│   │   │   ├── SearchBookApp
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── Book.jsx
+│   │   │   │   │   │   ├── BookCard.jsx
+│   │   │   │   │   │   ├── BookList.jsx
+│   │   │   │   │   │   ├── Header.jsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.css
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── books.js
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── .env.example
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   └── README.md
 │   │   └── README.md
 │   └── README.md
@@ -1747,6 +1768,23 @@ Indexed files: 2519
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day5FetchAndAsyncAwait
+│   │   ├── DailyChallenge
+│   │   │   ├── GifsReference
+│   │   │   │   ├── css
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── styles.css
+│   │   │   │   ├── js
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   ├── config.example.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   └── README.md
+│   │   │   ├── PromiseAll
+│   │   │   │   ├── app.js
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   └── styles.css
+│   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── ExercisesXP
 │   │   │   │   ├── css

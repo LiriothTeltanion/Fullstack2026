@@ -2,12 +2,12 @@
 
 > Regenerated from the exact Git index on `2026-11-25` by `tools/refresh_structure_catalogs.py`.
 
-- Base HEAD: `08d22783b087e1c566be62168117d0261098545b`
-- Source-index fingerprint: `sha256:141ebed8653fef2978412436808013f2d5b8fe3687225d4e8f9f7fc27a586ca1` (generated outputs excluded)
+- Base HEAD: `a25ba7b6a56e4b5299701e3b708b566980d96bb4`
+- Source-index fingerprint: `sha256:e300c61a340ba988efd0bbc342acee91aa9c466f6a42e75878a65003e45424c5` (generated outputs excluded)
 
 This catalog proves repository presence and path integrity only. It does not prove that an exercise runs, that Kevin can explain it, or that it is mastered or portfolio-ready.
 
-- Indexed exercise families: **256**
+- Indexed exercise families: **259**
 - Completion and quality scores: **unverified** pending exercise-level review
 - Regenerate: `python tools/refresh_structure_catalogs.py --repo . --write`
 - Check drift: `python tools/refresh_structure_catalogs.py --repo . --check`
@@ -48,6 +48,7 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week14MoreTopicsAndInterviews/Day2DeployWithRender/Exercises/DeployReactAndNode` | Exercise | CSS \| HTML \| JSON \| JavaScript | 25 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day2DeployWithRender/Exercises/DeployReactAndNode>); runtime unverified |
 | `Week14MoreTopicsAndInterviews/Day3FullStackDeployment/Exercises/DeployFullStackApp` | Exercise | CSS \| HTML \| JSON \| JavaScript | 30 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day3FullStackDeployment/Exercises/DeployFullStackApp>); runtime unverified |
 | `Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/MemeGenerator` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 12 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/MemeGenerator>); runtime unverified |
+| `Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/SearchBookApp` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 15 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/SearchBookApp>); runtime unverified |
 | `Week1Python/Day1StartingwithPython/DailyChallenge/BuildUpAString` | Daily Challenge | Python | 2 | present (canonical) | [source](<../../Week1Python/Day1StartingwithPython/DailyChallenge/BuildUpAString>); runtime unverified |
 | `Week1Python/Day1StartingwithPython/Exercises/ExercisesXP` | Exercise | Python | 2 | present (canonical) | [source](<../../Week1Python/Day1StartingwithPython/Exercises/ExercisesXP>); runtime unverified |
 | `Week1Python/Day1StartingwithPython/Exercises/ExercisesXPGold` | Exercise | Python | 2 | present (canonical) | [source](<../../Week1Python/Day1StartingwithPython/Exercises/ExercisesXPGold>); runtime unverified |
@@ -162,6 +163,8 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week4AdvAsynchronousJavaScript/Day4AsynchronousJavaScript/DailyChallenge/PlayWithWords` | Daily Challenge | CSS \| HTML \| JavaScript | 3 | present (canonical) | [source](<../../Week4AdvAsynchronousJavaScript/Day4AsynchronousJavaScript/DailyChallenge/PlayWithWords>); runtime unverified |
 | `Week4AdvAsynchronousJavaScript/Day4AsynchronousJavaScript/Exercises/ExercisesXP` | Exercise | CSS \| HTML \| JavaScript | 3 | present (canonical) | [source](<../../Week4AdvAsynchronousJavaScript/Day4AsynchronousJavaScript/Exercises/ExercisesXP>); runtime unverified |
 | `Week4AdvAsynchronousJavaScript/Day4AsynchronousJavaScript/Exercises/ExercisesXPGold` | Exercise | JavaScript | 2 | present (canonical) | [source](<../../Week4AdvAsynchronousJavaScript/Day4AsynchronousJavaScript/Exercises/ExercisesXPGold>); runtime unverified |
+| `Week4AdvAsynchronousJavaScript/Day5FetchAndAsyncAwait/DailyChallenge/GifsReference` | Daily Challenge | CSS \| HTML \| JavaScript | 7 | present (canonical) | [source](<../../Week4AdvAsynchronousJavaScript/Day5FetchAndAsyncAwait/DailyChallenge/GifsReference>); runtime unverified |
+| `Week4AdvAsynchronousJavaScript/Day5FetchAndAsyncAwait/DailyChallenge/PromiseAll` | Daily Challenge | CSS \| HTML \| JavaScript | 4 | present (canonical) | [source](<../../Week4AdvAsynchronousJavaScript/Day5FetchAndAsyncAwait/DailyChallenge/PromiseAll>); runtime unverified |
 | `Week4AdvAsynchronousJavaScript/Day5FetchAndAsyncAwait/Exercises/ExercisesXP` | Exercise | CSS \| HTML \| JavaScript | 7 | present (canonical) | [source](<../../Week4AdvAsynchronousJavaScript/Day5FetchAndAsyncAwait/Exercises/ExercisesXP>); runtime unverified |
 | `Week4AdvAsynchronousJavaScript/Day5FetchAndAsyncAwait/Exercises/ExercisesXPGold` | Exercise | JavaScript | 2 | present (canonical) | [source](<../../Week4AdvAsynchronousJavaScript/Day5FetchAndAsyncAwait/Exercises/ExercisesXPGold>); runtime unverified |
 | `Week4AdvAsynchronousJavaScript/Day5FetchAndAsyncAwait/Exercises/ExercisesXPNinja` | Exercise | JavaScript | 2 | present (canonical) | [source](<../../Week4AdvAsynchronousJavaScript/Day5FetchAndAsyncAwait/Exercises/ExercisesXPNinja>); runtime unverified |

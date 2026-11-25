@@ -14,6 +14,7 @@ For the Ninja tier I wrote my own rate limiter instead of installing one, then b
 
 ```bash
 npm install
+cp .env.example .env   # optional: it only sets PORT, 3000 by default
 npm run dev
 ```
 

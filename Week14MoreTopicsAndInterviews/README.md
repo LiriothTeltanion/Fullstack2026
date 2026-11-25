@@ -8,7 +8,7 @@
 
 </div>
 
-Extra topics: file uploads to S3, JWT with the PERN stack, deploying on Render and a meme generator. 5 exercises in total.
+Extra topics: file uploads to S3, JWT with the PERN stack, deploying on Render, a meme generator and a book search app. 6 exercises in total.
 
 ## Contents
 
@@ -17,7 +17,7 @@ Extra topics: file uploads to S3, JWT with the PERN stack, deploying on Render a
 | [`Day1AWSAndJWT/`](Day1AWSAndJWT/) | AWS S3 and JWT | 0 | 2 |
 | [`Day2DeployWithRender/`](Day2DeployWithRender/) | Deploying with Render | 0 | 1 |
 | [`Day3FullStackDeployment/`](Day3FullStackDeployment/) | Full-stack Deployment | 0 | 1 |
-| [`Day7MiniProjects/`](Day7MiniProjects/) | Mini-projects | 0 | 1 |
+| [`Day7MiniProjects/`](Day7MiniProjects/) | Mini-projects | 1 | 1 |
 
 ---
 

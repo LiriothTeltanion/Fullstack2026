@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daily Challenge: Promise.all()</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>🌅 Sunrise in two cities</h1>
+      <p class="muted">Both answers show up together, only after both requests finish.</p>
+
+      <form id="sunrise-form" class="cities">
+        <fieldset>
+          <legend>First city</legend>
+          <label for="lat1">Latitude</label>
+          <input
+            id="lat1"
+            name="lat1"
+            type="number"
+            step="any"
+            min="-90"
+            max="90"
+            value="48.864716"
+            required
+          />
+          <label for="lng1">Longitude</label>
+          <input
+            id="lng1"
+            name="lng1"
+            type="number"
+            step="any"
+            min="-180"
+            max="180"
+            value="2.349014"
+            required
+          />
+        </fieldset>
+        <fieldset>
+          <legend>Second city</legend>
+          <label for="lat2">Latitude</label>
+          <input
+            id="lat2"
+            name="lat2"
+            type="number"
+            step="any"
+            min="-90"
+            max="90"
+            value="40.730610"
+            required
+          />
+          <label for="lng2">Longitude</label>
+          <input
+            id="lng2"
+            name="lng2"
+            type="number"
+            step="any"
+            min="-180"
+            max="180"
+            value="-73.935242"
+            required
+          />
+        </fieldset>
+        <button type="submit" class="btn">Get both sunrises</button>
+      </form>
+
+      <output id="result" class="result" aria-live="polite"></output>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
