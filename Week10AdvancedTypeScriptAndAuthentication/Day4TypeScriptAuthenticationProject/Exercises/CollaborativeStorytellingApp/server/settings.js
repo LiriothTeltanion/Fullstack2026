@@ -6,6 +6,9 @@ export const SESSION_SECRET = process.env.SESSION_SECRET;
 export const IS_PRODUCTION = process.env.NODE_ENV === "production";
 export const TOKEN_LIFETIME = "15m";
 export const TOKEN_MAX_AGE_MS = 2 * 60 * 60 * 1000;
+if (IS_PRODUCTION && process.env.STORAGE_MODE === "memory") {
+  throw new Error("Production requires PostgreSQL storage.");
+}
 
 if (!JWT_SECRET) {
   throw new Error("JWT_SECRET is missing. Copy .env.example to .env and set it.");

@@ -1,18 +1,24 @@
 import { useState, type FormEvent } from "react";
 import type { Story, User } from "../types";
+import StoryComments from "./StoryComments";
+import { AppLink } from "../navigation";
 
 interface StoryCardProps {
   story: Story;
   currentUser: User;
-  onSave: (id: number, changes: { title: string; content: string }) => Promise<void>;
-  onDelete: (id: number) => Promise<void>;
-  onRemoveContributor: (id: number) => Promise<void>;
-  onAddContributor: (id: number, username: string) => Promise<void>;
+  detailView?: boolean;
+  onEdit?: (id: number) => void;
+  onSave: (id: number, changes: { title: string; content: string }) => Promise<void | boolean>;
+  onDelete: (id: number) => Promise<void | boolean>;
+  onRemoveContributor: (id: number) => Promise<void | boolean>;
+  onAddContributor: (id: number, username: string) => Promise<void | boolean>;
 }
 
 export default function StoryCard({
   story,
   currentUser,
+  detailView = false,
+  onEdit,
   onSave,
   onDelete,
   onAddContributor,
@@ -27,6 +33,10 @@ export default function StoryCard({
   const [newContributor, setNewContributor] = useState("");
 
   const startEditing = () => {
+    if (onEdit) {
+      onEdit(story.id);
+      return;
+    }
     setTitle(story.title); // start from the latest saved version
     setContent(story.content);
     setEditing(true);
@@ -34,15 +44,15 @@ export default function StoryCard({
 
   const save = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    await onSave(story.id, { title, content });
-    setEditing(false);
+    const saved = await onSave(story.id, { title, content });
+    if (saved !== false) setEditing(false);
   };
 
   const invite = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!newContributor.trim()) return;
-    await onAddContributor(story.id, newContributor.trim());
-    setNewContributor("");
+    const invited = await onAddContributor(story.id, newContributor.trim());
+    if (invited !== false) setNewContributor("");
   };
 
   return (
@@ -68,12 +78,18 @@ export default function StoryCard({
         </form>
       ) : (
         <>
-          <h2>{story.title}</h2>
+          <h2>
+            {detailView ? (
+              story.title
+            ) : (
+              <AppLink href={`/stories/${story.id}`}>{story.title}</AppLink>
+            )}
+          </h2>
           <p className="muted">
             by {story.author.username}
             {story.contributors.length > 0 &&
               ` with ${story.contributors.map(user => user.username).join(", ")}`}{" "}
-             - updated {new Date(story.updatedAt).toLocaleString()}
+            - updated {new Date(story.updatedAt).toLocaleString()}
           </p>
           <p className="story-content">{story.content}</p>
           <div className="row">
@@ -120,6 +136,7 @@ export default function StoryCard({
           </button>
         </form>
       )}
+      {detailView && <StoryComments key={story.id} storyId={story.id} />}
     </article>
   );
 }
