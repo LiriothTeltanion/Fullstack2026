@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-25
-Base HEAD: 3abcedfc6f31b54a76e4d77c95fc9e9c3c9278cd
-Source-index SHA-256 (generated outputs excluded): eff367df38ad4a4c5b3947e2d12d7ef7ca536b2d00f73e5609172f08713cf933
-Indexed files: 2912
+Base HEAD: dadd23b404eaf78315438affbe780ba4863999f0
+Source-index SHA-256 (generated outputs excluded): 3ecfd245d70559b183b97c7f46f7714e65e7fe54f9627eeac26bd334d46e8b57
+Indexed files: 2916
 
 .
 ├── .github
@@ -470,6 +470,7 @@ Indexed files: 2912
 │   │   ├── repository_health.test.mjs
 │   │   ├── typescript_declarations.test.mjs
 │   │   ├── typescript_syntax.test.mjs
+│   │   ├── week12_items.test.mjs
 │   │   ├── week4_gold_arrays.test.mjs
 │   │   └── week7_routes.test.mjs
 │   ├── python
@@ -876,6 +877,7 @@ Indexed files: 2912
 │   │   │   │   └── vite.config.js
 │   │   │   ├── server
 │   │   │   │   ├── controllers
+│   │   │   │   │   ├── createItemHandler.js
 │   │   │   │   │   ├── itemsController.js
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── db
@@ -891,6 +893,9 @@ Indexed files: 2912
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── routes
 │   │   │   │   │   ├── items.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── itemsController.test.js
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── .env.example
 │   │   │   │   ├── package.json

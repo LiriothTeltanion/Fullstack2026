@@ -1,4 +1,5 @@
 import * as Items from "../models/itemsModel.js";
+import { createAddItemHandler } from "./createItemHandler.js";
 
 export async function getItems(req, res, next) {
   try {
@@ -8,17 +9,7 @@ export async function getItems(req, res, next) {
   }
 }
 
-export async function addItem(req, res, next) {
-  const title = (req.body.title || "").trim();
-  if (!title) {
-    return res.status(400).json({ error: "Title is required." });
-  }
-  try {
-    res.status(201).json(await Items.create(title));
-  } catch (error) {
-    next(error);
-  }
-}
+export const addItem = createAddItemHandler(Items.create);
 
 export async function toggleItem(req, res, next) {
   try {
