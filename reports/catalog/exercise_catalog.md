@@ -2,8 +2,8 @@
 
 > Regenerated from the exact Git index on `2026-11-25` by `tools/refresh_structure_catalogs.py`.
 
-- Base HEAD: `8e35db5d69d4d06046b0b7af15de9372439e84c8`
-- Source-index fingerprint: `sha256:3caa6a3e9e8347a274285368d1c65cd08931617f1bf2e80c8173f05bdf47842b` (generated outputs excluded)
+- Base HEAD: `9450b84ab1e94ea65f74a143dbfb49faf5f96306`
+- Source-index fingerprint: `sha256:40781818dc611ce261b86490f6a5b953079dbb8db626eae7812e1b567805c3f1` (generated outputs excluded)
 
 This catalog proves repository presence and path integrity only. It does not prove that an exercise runs, that Kevin can explain it, or that it is mastered or portfolio-ready.
 
@@ -230,7 +230,7 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week6DatabasesAndNodejs/Day5NodejsWebServer/Exercises/ExercisesXPGold` | Exercise | JSON \| JavaScript | 4 | present (canonical) | [source](<../../Week6DatabasesAndNodejs/Day5NodejsWebServer/Exercises/ExercisesXPGold>); runtime unverified |
 | `Week6DatabasesAndNodejs/Day5NodejsWebServer/Exercises/ExercisesXPNinja` | Exercise | CSS \| HTML \| JSON \| JavaScript | 7 | present (canonical) | [source](<../../Week6DatabasesAndNodejs/Day5NodejsWebServer/Exercises/ExercisesXPNinja>); runtime unverified |
 | `Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/DailyChallenge/TriviaQuizGame` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript | 14 | present (canonical) | [source](<../../Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/DailyChallenge/TriviaQuizGame>); runtime unverified |
-| `Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/Exercises/ExercisesXP` | Exercise | JSON \| JavaScript | 13 | present (canonical) | [source](<../../Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/Exercises/ExercisesXP>); runtime unverified |
+| `Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/Exercises/ExercisesXP` | Exercise | JSON \| JavaScript | 16 | present (canonical) | [source](<../../Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/Exercises/ExercisesXP>); runtime unverified |
 | `Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/Exercises/ExercisesXPGold` | Exercise | JSON \| JavaScript | 14 | present (canonical) | [source](<../../Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/Exercises/ExercisesXPGold>); runtime unverified |
 | `Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/Exercises/ExercisesXPNinja` | Exercise | JSON \| JavaScript | 12 | present (canonical) | [source](<../../Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/Exercises/ExercisesXPNinja>); runtime unverified |
 | `Week7NodejsAndReact/Day2SQLQueryBuilder/DailyChallenge/RegistrationAndLogin` | Daily Challenge | JSON \| JavaScript \| SQL | 14 | present (canonical) | [source](<../../Week7NodejsAndReact/Day2SQLQueryBuilder/DailyChallenge/RegistrationAndLogin>); runtime unverified |

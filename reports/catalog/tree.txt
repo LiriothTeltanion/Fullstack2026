@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-25
-Base HEAD: 8e35db5d69d4d06046b0b7af15de9372439e84c8
-Source-index SHA-256 (generated outputs excluded): 3caa6a3e9e8347a274285368d1c65cd08931617f1bf2e80c8173f05bdf47842b
-Indexed files: 2907
+Base HEAD: 9450b84ab1e94ea65f74a143dbfb49faf5f96306
+Source-index SHA-256 (generated outputs excluded): 40781818dc611ce261b86490f6a5b953079dbb8db626eae7812e1b567805c3f1
+Indexed files: 2911
 
 .
 ├── .github
@@ -470,7 +470,8 @@ Indexed files: 2907
 │   │   ├── repository_health.test.mjs
 │   │   ├── typescript_declarations.test.mjs
 │   │   ├── typescript_syntax.test.mjs
-│   │   └── week4_gold_arrays.test.mjs
+│   │   ├── week4_gold_arrays.test.mjs
+│   │   └── week7_routes.test.mjs
 │   ├── python
 │   │   ├── _loader.py
 │   │   ├── README.md
@@ -2508,7 +2509,11 @@ Indexed files: 2907
 │   │   │   │   │   ├── index.js
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   └── todos.js
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── controllers.test.js
+│   │   │   │   │   └── README.md
 │   │   │   │   ├── .env.example
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── server.js

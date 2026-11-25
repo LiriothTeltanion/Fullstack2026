@@ -13,7 +13,7 @@ Three small routers on one Express server: two HTML pages, a todo API and a book
 ## ▶️ How to run
 
 ```bash
-npm install
+npm ci
 cp .env.example .env   # optional: it only sets PORT, 3000 by default
 npm run dev
 ```
@@ -44,7 +44,26 @@ curl -X POST -H "Content-Type: application/json" -d '{"title":"Write the README"
 - Splitting routes and controllers keeps the route files to a handful of lines
 - `Number(req.params.id)` matters, because params are strings and `1 === "1"` is false
 - The data lives in memory, so a restart brings the seed todos and books back
+
 - `express-rate-limit` in front of every route allows each IP 100 requests per 15 minutes and answers 429 after that, so one client can't flood the server
+
+## 🧪 Input validation and regression checks
+
+Created and verified: 2026-11-25T20:27:38+02:00 (Asia/Jerusalem). This bounded review covers the two in-memory CRUD controllers.
+
+- Create requests require non-empty text: `title` for todos; `title` and `author` for books. Text is trimmed.
+- `completed` accepts JSON `true` and `false`. Strings such as `"false"` are rejected with HTTP 400 instead of being converted to `true`.
+- A book's `year` accepts a safe integer, an integer string from a form, or `null`. Omitting it during creation produces `null`; zero stays zero. Invalid numbers and other types return HTTP 400.
+- Updates validate all supplied fields before changing a record. Missing bodies, non-object bodies and updates with no supported fields return HTTP 400. A rejected request leaves existing data and the next creation ID intact.
+- Records remain in memory; this exercise does not persist data between server restarts.
+
+Run the focused tests from this exercise folder. They use Node's built-in test runner and require no package installation.
+
+```bash
+npm test
+```
+
+The tests call the controllers directly with response doubles. They cover valid CRUD, response status and body shapes, missing records, invalid types, absent bodies and atomic rejection. The repository also runs these cases in its JavaScript suite.
 
 ---
 
