@@ -16,6 +16,8 @@
     "syntax": "python tools/quality_gate.py --repo . --syntax-only --strict",
     "catalogs:refresh": "python tools/refresh_structure_catalogs.py --repo . --write",
     "catalogs:check": "python tools/refresh_structure_catalogs.py --repo . --check",
+    "showcase:build": "python tools/build_showcase.py --repo . --write",
+    "showcase:check": "python tools/build_showcase.py --repo . --check",
     "intake": "python tools/learning_intake.py",
     "intake:check": "python tools/learning_intake.py validate",
     "verify:visuals": "python tools/validate_readme_visuals.py --repo .",

@@ -12,6 +12,7 @@
 [![Course map](https://img.shields.io/badge/Course%20map-12%20weeks-8b5cf6?style=for-the-badge)](.learning/course-map.yml)
 [![Tests](https://img.shields.io/badge/Tests-Python%20%26%20Node-06b6d4?style=for-the-badge)](tests/)
 [![Security](https://img.shields.io/badge/Security-policy-f59e0b?style=for-the-badge)](SECURITY.md)
+[![Live showcase](https://img.shields.io/badge/Live-exercise%20showcase-06b6d4?style=for-the-badge&logo=netlify)](https://kevincusnir.netlify.app)
 
 ### My twelve-week full-stack bootcamp: exercises, mini-projects and the tooling that keeps them tidy
 
@@ -171,6 +172,8 @@ The [course map](.learning/course-map.yml) lists every week and day, and the [di
 ---
 
 ## 🌟 Project highlights
+
+Every exercise is also on the [live showcase](https://kevincusnir.netlify.app), where the browser projects open as demos.
 
 | Project | Technologies | What I practiced |
 |---|---|---|

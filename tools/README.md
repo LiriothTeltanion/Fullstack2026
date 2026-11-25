@@ -17,6 +17,7 @@ Scripts that keep the repository consistent. CI runs them on every pull request 
 | [`refresh_structure_catalogs.py`](refresh_structure_catalogs.py) | Rebuilds the catalogs in `reports/catalog/` (`npm run catalogs:refresh`) |
 | [`validate_readme_visuals.py`](validate_readme_visuals.py) | README images, manifest hashes and alt text |
 | [`validate_display_titles.py`](validate_display_titles.py) | Display titles for weeks and days |
+| [`build_showcase.py`](build_showcase.py) | Builds `index.html`, the exercise showcase published on Netlify (`npm run showcase:build`) |
 | [`learning_intake.py`](learning_intake.py) | Exercise intake queue (`npm run intake`) |
 | [`run_node_tests.mjs`](run_node_tests.mjs) | Runs the tests in `tests/js/` |
 | [`check_typescript_syntax.mjs`](check_typescript_syntax.mjs) | TypeScript syntax check for the quality gate |
