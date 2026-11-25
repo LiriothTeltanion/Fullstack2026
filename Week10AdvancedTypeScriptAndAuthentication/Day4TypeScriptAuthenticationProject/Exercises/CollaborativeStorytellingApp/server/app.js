@@ -7,8 +7,12 @@ import lusca from "lusca";
 import authRoutes from "./routes/authRoutes.js";
 import storiesRoutes from "./routes/storiesRoutes.js";
 import { IS_PRODUCTION, SESSION_SECRET } from "./settings.js";
+import { createSessionStore } from "./sessionStore.js";
+import { pool } from "./models/db.js";
 
 const app = express();
+// Vercel supplies the immediate HTTPS proxy; secure cookies still require HTTPS.
+if (process.env.TRUST_PROXY === "1") app.set("trust proxy", 1);
 
 // Every IP gets at most 100 requests per 15 minutes, so one client can't flood the server.
 app.use(
@@ -28,16 +32,27 @@ app.use(cookieParser());
 // PATCH or DELETE without the matching token in the x-csrf-token header.
 app.use(
   session({
+    store: createSessionStore(),
     secret: SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
-    cookie: { httpOnly: true, sameSite: "strict", secure: IS_PRODUCTION },
+    cookie: { httpOnly: true, sameSite: "strict", secure: IS_PRODUCTION, maxAge: 7200000 },
   })
 );
 app.use(lusca.csrf());
 
 // The React client asks for the token once and sends it back on every change.
 app.get("/api/csrf-token", (req, res) => res.json({ csrfToken: res.locals._csrf }));
+
+app.get("/api/health", async (req, res) => {
+  try {
+    if (!pool) return res.status(503).json({ status: "unavailable" });
+    await pool.query("SELECT 1");
+    return res.json({ status: "ok" });
+  } catch {
+    return res.status(503).json({ status: "unavailable" });
+  }
+});
 
 app.use("/api/auth", authRoutes);
 app.use("/api/stories", storiesRoutes);

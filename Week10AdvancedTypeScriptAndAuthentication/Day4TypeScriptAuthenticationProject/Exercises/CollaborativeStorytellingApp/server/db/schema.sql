@@ -26,3 +26,11 @@ CREATE TABLE IF NOT EXISTS refresh_sessions (
   user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
   expires_at TIMESTAMPTZ NOT NULL
 );
+
+-- The CSRF session must survive process restarts and separate hosting instances.
+CREATE TABLE IF NOT EXISTS http_sessions (
+  sid VARCHAR PRIMARY KEY,
+  sess JSON NOT NULL,
+  expire TIMESTAMP(6) NOT NULL
+);
+CREATE INDEX IF NOT EXISTS http_sessions_expire_idx ON http_sessions (expire);

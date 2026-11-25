@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-25
-Base HEAD: dadd23b404eaf78315438affbe780ba4863999f0
-Source-index SHA-256 (generated outputs excluded): 3ecfd245d70559b183b97c7f46f7714e65e7fe54f9627eeac26bd334d46e8b57
-Indexed files: 2916
+Base HEAD: f692aee2ccbf5d31a3e9928391fe58e65d105468
+Source-index SHA-256 (generated outputs excluded): 3fa018c2a2cfe8a8eccee92febf24a5eda7ccea154d70ca9ed5582b78101c8a4
+Indexed files: 2924
 
 .
 ├── .github
@@ -761,9 +761,11 @@ Indexed files: 2916
 │   │   │   │   │   │   ├── storySlice.ts
 │   │   │   │   │   │   └── types.ts
 │   │   │   │   │   ├── index.html
+│   │   │   │   │   ├── package-lock.json
 │   │   │   │   │   ├── package.json
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   ├── tsconfig.json
+│   │   │   │   │   ├── vercel.json
 │   │   │   │   │   └── vite.config.ts
 │   │   │   │   ├── server
 │   │   │   │   │   ├── controllers
@@ -773,7 +775,8 @@ Indexed files: 2916
 │   │   │   │   │   ├── db
 │   │   │   │   │   │   ├── init.js
 │   │   │   │   │   │   ├── README.md
-│   │   │   │   │   │   └── schema.sql
+│   │   │   │   │   │   ├── schema.sql
+│   │   │   │   │   │   └── setup.js
 │   │   │   │   │   ├── middleware
 │   │   │   │   │   │   ├── loadStory.js
 │   │   │   │   │   │   ├── README.md
@@ -789,11 +792,17 @@ Indexed files: 2916
 │   │   │   │   │   │   ├── contributorRoutes.js
 │   │   │   │   │   │   ├── README.md
 │   │   │   │   │   │   └── storiesRoutes.js
+│   │   │   │   │   ├── tests
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── sessionStore.test.js
+│   │   │   │   │   │   └── setup.test.js
 │   │   │   │   │   ├── .env.example
 │   │   │   │   │   ├── app.js
+│   │   │   │   │   ├── package-lock.json
 │   │   │   │   │   ├── package.json
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   ├── server.js
+│   │   │   │   │   ├── sessionStore.js
 │   │   │   │   │   └── settings.js
 │   │   │   │   ├── shared
 │   │   │   │   │   ├── README.md
