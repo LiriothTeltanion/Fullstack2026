@@ -12,9 +12,10 @@ Three Bootstrap 5 pages: a component tour and two recreated landing pages.
 
 ## Contents
 
-- [`Components/`](Components/): Components: a dark page with a dozen Bootstrap components
-- [`RecreateLandingPage/`](RecreateLandingPage/): Recreate a Landing Page: a habit tracker landing page rebuilt with Bootstrap
-- [`RecreateLandingPage2/`](RecreateLandingPage2/): Recreate a Landing Page 2: a dark synthwave festival page in the Bootstrap cover style
+- [Components/](Components/) — Exercise - Components
+- [RecreateLandingPage/](RecreateLandingPage/) — Exercise - Recreate a Landing Page
+- [RecreateLandingPage2/](RecreateLandingPage2/) — Exercise - Recreate a Landing Page 2
+- [StartupLandingPage/](StartupLandingPage/) — Exercise - Startup Landing Page
 
 ---
 
@@ -23,3 +24,5 @@ Three Bootstrap 5 pages: a component tour and two recreated landing pages.
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 Week 13 Day 4 - Bootstrap - Exercises
+
+Navigation verified 2026-11-25. Entries link to available code and run instructions.

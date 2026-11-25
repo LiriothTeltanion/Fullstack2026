@@ -1,35 +1,27 @@
 import { useCallback, useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { loadData } from "../features/dataSlice";
+import type { AppDispatch, RootState } from "../store";
 
-// The three states a request can be in. Only "success" has data, only "error" has a message.
 export type DataState<T> =
   { status: "loading" } | { status: "error"; message: string } | { status: "success"; data: T };
 
+/** Redux owns request state; T describes what the component expects from this URL. */
 export function useData<T>(url: string) {
-  const [state, setState] = useState<DataState<T>>({ status: "loading" });
+  const dispatch = useDispatch<AppDispatch>();
+  const entry = useSelector((state: RootState) => state.data.byUrl[url]);
   const [reloadCount, setReloadCount] = useState(0);
 
   useEffect(() => {
-    const controller = new AbortController();
-    setState({ status: "loading" });
-
-    fetch(url, { signal: controller.signal })
-      .then(response => {
-        if (!response.ok) throw new Error(`Server answered ${response.status}`);
-        return response.json() as Promise<T>;
-      })
-      .then(data => setState({ status: "success", data }))
-      .catch((error: unknown) => {
-        if (controller.signal.aborted) return; // the component moved on, ignore it
-        setState({
-          status: "error",
-          message: error instanceof Error ? error.message : "Unknown error",
-        });
-      });
-
-    return () => controller.abort();
-  }, [url, reloadCount]);
+    const request = dispatch(loadData(url));
+    return () => request.abort();
+  }, [dispatch, url, reloadCount]);
 
   const reload = useCallback(() => setReloadCount(count => count + 1), []);
-
+  let state: DataState<T> = { status: "loading" };
+  if (entry?.error) state = { status: "error", message: entry.error };
+  else if (entry && !entry.loading && entry.hasData) {
+    state = { status: "success", data: entry.data as T };
+  }
   return { state, reload };
 }

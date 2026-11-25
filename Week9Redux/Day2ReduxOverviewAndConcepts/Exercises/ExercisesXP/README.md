@@ -23,7 +23,7 @@ Vite prints a local address (usually `http://localhost:5173`). Open it in the br
 
 1. **Counter reducer.** `counterReducer` handles `counter/increment`, `counter/decrement` and `counter/reset` with a `switch` and returns a new object each time.
 2. **Todo reducer.** `todosReducer` adds, toggles and removes todos without changing the old array (`[...state]`, `map`, `filter`).
-3. **Store and React wiring.** `store.js` combines the reducers with `configureStore`, `main.jsx` wraps the app in `<Provider>`, and the components use `useSelector` and `useDispatch`.
+3. **Store and React wiring.** `store.js` combines the reducers with `configureStore`, `main.jsx` wraps the app in `<Provider>`, and `TodoList` uses `connect` to receive the array and bound actions through props. The counter and history use hooks.
 4. **Action history.** `historyReducer` keeps the last five action types and skips the internal `@@` actions.
 
 | File | What it holds |

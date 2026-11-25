@@ -19,15 +19,23 @@ npm run dev
 
 ## 🎯 The challenge
 
-| Piece | What it does |
-|---|---|
-| `categoriesSlice` | Three starting categories, `categoryAdded` and `categorySelected` (the filter, `"all"` by default) |
-| `tasksSlice` | `taskAdded(title, categoryId)`, `taskToggled`, `taskEdited`, `taskDeleted` |
-| `selectVisibleTasks` | Tasks of the selected category, built with `createSelector` |
-| `selectCompletedCount` | Done tasks among the visible ones |
-| `selectProgressByCategory` | `{ name, total, done, percent }` for every category |
-| `TaskList` + `TaskItem` | The add form (with a category menu when "All" is selected) and memoized rows |
-| `ProgressPanel` | One `role="progressbar"` bar per category |
+Categories now support add, rename and delete. Deleting a category keeps its tasks under Uncategorized and resets an active category filter to All. The task form remains usable after deleting the last category.
+
+- [CategorySelector](src/features/categories/CategorySelector.jsx) reads Redux categories and the selected ID with useSelector.
+- [selectCategoryById](src/features/categories/categoriesSlice.js) memoizes category lookup.
+- [selectTasksByCategory and selectCompletedTasks](src/features/tasks/tasksSlice.js) memoize the selected or explicitly requested category's tasks and completed tasks.
+- [TaskList](src/features/tasks/TaskList.jsx) uses those selectors and stable useCallback handlers for add, edit, delete and completion.
+- Progress includes Uncategorized, so task counts remain consistent after category deletion.
+
+| Piece                      | What it does                                                                                       |
+| -------------------------- | -------------------------------------------------------------------------------------------------- |
+| `categoriesSlice`          | Three starting categories, `categoryAdded` and `categorySelected` (the filter, `"all"` by default) |
+| `tasksSlice`               | `taskAdded(title, categoryId)`, `taskToggled`, `taskEdited`, `taskDeleted`                         |
+| `selectVisibleTasks`       | Tasks of the selected category, built with `createSelector`                                        |
+| `selectCompletedCount`     | Done tasks among the visible ones                                                                  |
+| `selectProgressByCategory` | `{ name, total, done, percent }` for every category                                                |
+| `TaskList` + `TaskItem`    | The add form (with a category menu when "All" is selected) and memoized rows                       |
+| `ProgressPanel`            | One `role="progressbar"` bar per category                                                          |
 
 ## 🧠 What I learned
 

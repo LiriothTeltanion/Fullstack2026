@@ -1,4 +1,4 @@
-# 🛣️ Routes - Exercises XP
+# API routes
 
 <div align="center">
 
@@ -8,17 +8,6 @@
 
 </div>
 
-The Express routers for Exercises XP.
+authRoutes.js exposes registration, email confirmation, login, refresh, logout and protected profile routes. Registration, confirmation and login each have a separate limiter. Refresh has its own longer budget.
 
-## Contents
-
-- [`authRoutes.js`](authRoutes.js)
-- [`usersRoutes.js`](usersRoutes.js)
-
----
-
-## 👤 Author
-
-**Kevin Cusnir 'Lirioth'**  
-Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
-Week 10 Day 3 - Authentication - Exercises XP
+usersRoutes.js applies verifyToken before the existing user-list endpoint.

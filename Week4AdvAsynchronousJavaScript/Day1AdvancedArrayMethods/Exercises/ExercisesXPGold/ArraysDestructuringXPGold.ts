@@ -60,44 +60,9 @@ export function deepFlatten<T = number>(arr: any[]): T[] {
   return out;
 }
 
-// Target structure: [1,2,3,[4],[5]]
-// Strategy: flatten only the outermost layer once; for any nested subarrays, flatten them by one more level.
-export const arrayFlattened: (number | number[])[] = (arrayNested as any[])
-  .map(x => x) // copy
-  .map(x =>
-    Array.isArray(x) && Array.isArray(x[0])
-      ? (x as any[]).flat
-        ? (x as any[]).flat(1)
-        : deepFlatten<number>(x as any[]).slice(0, 1)
-      : x
-  ) // smart flatten by one for [[[n]]]
-  .map(x =>
-    Array.isArray(x) && Array.isArray(x[0])
-      ? (x as any[]).flat
-        ? (x as any[]).flat(1)
-        : deepFlatten<number>(x as any[]).slice(0, 1)
-      : x
-  ) // repeat in case of deeper nests
-  .map(x =>
-    Array.isArray(x) && !Array.isArray(x[0])
-      ? x
-      : Array.isArray(x)
-        ? [deepFlatten<number>(x as any[])[0]]
-        : x
-  )
-  .map(x => (Array.isArray(x) ? (x.length === 1 ? [x[0]] : x) : x))
-  .flatMap(x => (Array.isArray(x) ? [x] : [x])); // ensure shape (number | number[])[]
-
-// Cleaner one-liner equivalent using flatMap + shallow-normalization
-export const arrayFlattenedOneLine: (number | number[])[] = (arrayNested as any[]).flatMap(x => {
-  if (!Array.isArray(x)) return [x]; // number
-  if (Array.isArray(x[0])) {
-    // nested
-    const d = deepFlatten<number>(x);
-    return [[d[0]]]; // keep one level for [4] / [5]
-  }
-  return [x]; // already [n]
-});
+// Removing two levels unwraps the singleton values and leaves one layer around 4 and 5.
+export const arrayFlattened: (number | number[])[] = arrayNested.flat().flat();
+export const arrayFlattenedOneLine: (number | number[])[] = arrayNested.flat(2);
 
 // Greeting transformations
 export const greeting = [

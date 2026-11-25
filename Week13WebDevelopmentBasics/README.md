@@ -8,17 +8,17 @@
 
 </div>
 
-Self-learning week on HTML, CSS, Git, CSS Grid, Bootstrap and animation. 17 exercises in total.
+Self-learning week on HTML, CSS, Git, CSS Grid, Bootstrap and animation. 20 repository entries with run instructions.
 
 ## Contents
 
-| Folder | Topic | Required | Optional |
-|---|---|---:|---:|
-| [`Day1HTMLAndCSS/`](Day1HTMLAndCSS/) | HTML and CSS | 0 | 3 |
-| [`Day2GitAndGitHub/`](Day2GitAndGitHub/) | Git and GitHub | 1 | 3 |
-| [`Day3CSSGridAndLayout/`](Day3CSSGridAndLayout/) | CSS Grid and Layout | 1 | 3 |
-| [`Day4Bootstrap/`](Day4Bootstrap/) | Bootstrap | 2 | 2 |
-| [`Day5CodingDay/`](Day5CodingDay/) | Coding Day | 1 | 1 |
+| Folder | Topic | Repository entries |
+|---|---|---:|
+| [Day1HTMLAndCSS/](Day1HTMLAndCSS/) | Day 1 — HTML and CSS | 3 |
+| [Day2GitAndGitHub/](Day2GitAndGitHub/) | Day 2 — Git and GitHub | 4 |
+| [Day3CSSGridAndLayout/](Day3CSSGridAndLayout/) | Day 3 — CSS Grid and Layout | 5 |
+| [Day4Bootstrap/](Day4Bootstrap/) | Day 4 — Bootstrap | 5 |
+| [Day5CodingDay/](Day5CodingDay/) | Day 5 — Coding Day | 3 |
 
 ---
 
@@ -27,3 +27,5 @@ Self-learning week on HTML, CSS, Git, CSS Grid, Bootstrap and animation. 17 exer
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 Week 13 - Web Development Basics
+
+Navigation verified 2026-11-25. Entries link to available code and run instructions.

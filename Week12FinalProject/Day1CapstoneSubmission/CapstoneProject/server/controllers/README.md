@@ -13,6 +13,7 @@ The request handlers for Capstone Project.
 ## Contents
 
 - [`itemsController.js`](itemsController.js)
+- [`createItemHandler.js`](createItemHandler.js) - validates titles before invoking persistence.
 
 ---
 

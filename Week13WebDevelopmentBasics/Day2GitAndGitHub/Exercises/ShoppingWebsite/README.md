@@ -8,30 +8,22 @@
 
 </div>
 
-Riff Shop, a small music gear store: eight products, category filters and a slide-in cart that remembers what I added after a reload. The products live in an array in [app.js](app.js), and the page builds the cards from it.
+A basic HTML/CSS shopping layout with a logo at the left, a Products link at the right and a footer with the current year and author. The product cards use inline-block, so three cards fit on a desktop row. Narrow screens show two or one.
 
 ## ▶️ How to run
 
-Open [index.html](index.html) in a browser. Nothing to install; the cart is stored in `localStorage` under `riff-shop-cart`.
+Run npm run dev from the repository root and open this exercise's index.html. [Products](products.html) is a separate page. Both pages share [style.css](style.css) and the working demo cart in [app.js](app.js).
 
 ## 🎯 The challenge
 
-| Function | What it does |
-|---|---|
-| `renderProducts(category)` | Filters the `products` array (or shows all) and rebuilds the product grid |
-| `renderCart()` | Rebuilds the cart lines, the item count badge and the total, and hides "Your cart is empty." when needed |
-| `addToCart(id)` / `removeOne(id)` | Change the quantity in the `cart` object (`{ productId: quantity }`), then save and re-render |
-| `loadCart()` / `saveCart()` | Read and write `localStorage`, wrapped in `try/catch` for private browsing |
-| `toggleCart(open)` | Shows the cart panel, updates `aria-expanded` and moves focus to the close button |
+- Basic CSS layout uses floats, block and inline-block.
+- Three or more product cards fit in a desktop row.
+- The header links to the products page.
+- The footer shows the year and Kevin's name.
 
-Prices go through `Intl.NumberFormat` with `currency: "ILS"`. The checkout button only empties the cart and says the shop is a demo.
+## Extras
 
-## 🧠 What I learned
-
-- One click listener on the grid with `event.target.closest(".add")` handles every "Add to cart" button, even ones created later
-- Storing quantities by id keeps the cart small, and the product details always come from the array
-- `display: flex` on the cart panel would beat the `hidden` attribute, so the CSS also has `.cart[hidden] { display: none; }`
-- `aria-pressed` on the filter buttons tells a screen reader which category is selected
+The music catalog, category filter and persisted cart are extras. [Login](login.html) and [registration](signup.html) are responsive bonus forms with native HTML validation. They demonstrate the form layout using test values. Creating accounts and authenticating users require a backend.
 
 ---
 

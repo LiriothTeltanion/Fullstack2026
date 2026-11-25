@@ -10,6 +10,10 @@
 
 The second Ninja set, in [arrayMethodsNinja2.js](arrayMethodsNinja2.js), works on a list of five games and uses the newer array methods.
 
+## Menu and string exercises
+
+Run `node menuAndStrings.js` to inspect a menu, tag dishes by ingredient names, split a string, count whole words and reverse an array in place. Chunk sizes must be positive integers. The menu report keeps the original menu intact and only adds a main when needed. [Source](menuAndStrings.js).
+
 ## ▶️ How to run
 
 ```bash

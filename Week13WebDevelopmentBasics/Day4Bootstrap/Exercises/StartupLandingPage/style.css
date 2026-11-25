@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #102b30;
+  color: #fff;
+  font-family: system-ui, sans-serif;
+}
+main {
+  min-height: 100vh;
+  padding: clamp(1.2rem, 5vw, 4rem);
+  background-image:
+    linear-gradient(90deg, rgba(8, 28, 35, 0.92), rgba(8, 28, 35, 0.35)), url("background.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.brand {
+  font-size: 1.2rem;
+  font-weight: 750;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+.hero {
+  max-width: 800px;
+  padding: clamp(4rem, 14vh, 9rem) 0 4rem;
+}
+.hero > p {
+  max-width: 40ch;
+  line-height: 1.6;
+  color: #e3ebe8;
+}
+h1 {
+  margin: 1.2rem 0;
+  font-family: Georgia, serif;
+  font-size: clamp(3rem, 8vw, 6.2rem);
+  line-height: 1.03;
+  letter-spacing: -0.05em;
+  font-weight: 400;
+}
+.cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 1.3rem;
+  border-radius: 4px;
+  color: #102b30;
+  background: #e8edba;
+  font-weight: 650;
+  text-decoration: none;
+}
+.cta:hover {
+  background: white;
+}
+.cta:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 5px;
+}
+#subscription {
+  max-width: 560px;
+  padding: 1.3rem;
+  background: rgba(8, 28, 35, 0.85);
+  border: 1px solid #819893;
+  border-radius: 8px;
+}
+#subscription h2 {
+  margin-top: 0;
+  font-size: 1.15rem;
+}
+#subscription p {
+  line-height: 1.6;
+}
+footer {
+  margin-top: 3rem;
+  font-size: 0.8rem;
+  color: #d5e2df;
+}

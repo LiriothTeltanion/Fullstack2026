@@ -140,3 +140,113 @@ main {
     transform: none;
   }
 }
+
+/* Thor feature: original CSS lightning and a geometric hammer, no borrowed image. */
+.site-nav {
+  background: #102c43;
+  color: #fff;
+  padding: 1rem;
+}
+
+.site-nav ul,
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 1.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  color: inherit;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+}
+
+a:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 5px;
+}
+
+.banner {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  text-align: left;
+  min-height: 330px;
+  padding: 5rem max(1.5rem, calc((100% - 1100px) / 2));
+  background:
+    linear-gradient(135deg, transparent 48%, #b3dafa55 49%, #b3dafa55 50%, transparent 51%),
+    linear-gradient(145deg, transparent 68%, #def5ff66 69%, #def5ff66 70%, transparent 71%),
+    linear-gradient(100deg, #0e2033, #203c58);
+}
+
+.banner::before,
+.banner::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transform: rotate(-20deg);
+  opacity: 0.28;
+}
+
+.banner::before {
+  width: 150px;
+  height: 78px;
+  top: 64px;
+  right: 12%;
+  border: 5px solid #b5c6d2;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #e7eef3, #819baa);
+  box-shadow: 0 0 55px #c2eaff44;
+}
+
+.banner::after {
+  width: 25px;
+  height: 160px;
+  top: 127px;
+  right: calc(12% + 47px);
+  background: repeating-linear-gradient(0deg, #694a38 0 12px, #b9a28c 12px 15px);
+  border: 3px solid #d5dce0;
+  border-radius: 4px;
+}
+
+.featured-copy {
+  max-width: 62ch;
+}
+
+.featured-copy h1 {
+  margin: 0 0 1rem;
+  font-size: 40px;
+  line-height: 1.15;
+  text-shadow: 2px 2px 0 #0e2033;
+}
+
+.featured-copy .tagline {
+  max-width: 48ch;
+  margin: 0;
+  color: #edf5fd;
+  font-size: 1.1rem;
+  text-wrap: pretty;
+}
+
+.footer-links {
+  margin-top: 1rem;
+}
+
+.footer-links a {
+  color: #c4e4ff;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 767px) {
+  .banner::before,
+  .banner::after {
+    opacity: 0.2;
+    right: 8%;
+  }
+}

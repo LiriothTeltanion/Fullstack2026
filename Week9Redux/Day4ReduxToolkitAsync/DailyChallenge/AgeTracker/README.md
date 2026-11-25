@@ -17,6 +17,10 @@ npm install
 npm run dev
 ```
 
+## Course implementation
+
+`AgeDisplay` shows the age and pending state. `AgeControls` dispatches the two async thunks from a form.
+
 ## 🎯 The challenge
 
 | Piece | What it does |

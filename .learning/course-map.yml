@@ -1,6 +1,6 @@
 schema_version: 1
 repository: LiriothTeltanion/Fullstack2026
-last_reviewed: 2026-09-11
+last_reviewed: 2026-11-25
 timezone: Asia/Jerusalem
 
 evidence_states:
@@ -43,6 +43,7 @@ weeks:
       - path: Week1Python/Day3Dictionaries
       - path: Week1Python/Day4Functions
       - path: Week1Python/Day5MiniProject
+      - path: Week1Python/RemoteLearningPython
     bounded_evidence:
       - path: Week1Python/Day1StartingwithPython/Exercises/ExercisesXP
         repository_state: verified
@@ -132,6 +133,7 @@ weeks:
       - path: Week5MiniProjectAndTypeScript/Day2IntroductionToTypeScriptAndKeyConcepts
       - path: Week5MiniProjectAndTypeScript/Day3AdvancedTypeScriptConceptsAndApplications
       - path: Week5MiniProjectAndTypeScript/Day4AdvancedTypeScriptConceptsAndApplications
+      - path: Week5MiniProjectAndTypeScript/RemoteLearningTypeScript
     bounded_evidence:
       - path: Week5MiniProjectAndTypeScript/Day1MiniProject/DailyChallenge/CurrencyConverter
         repository_state: present
@@ -150,6 +152,23 @@ weeks:
         evidence: source_package_and_syntax_transpile
         limitation: strict_tsc_blocked_by_missing_nested_node_types
 
+      - path: Week5MiniProjectAndTypeScript/RemoteLearningTypeScript/Exercises/RecipeFinder
+        repository_state: present
+        evidence: source_and_readme
+        limitation: local_browser_test_only
+      - path: Week5MiniProjectAndTypeScript/RemoteLearningTypeScript/Exercises/ExercisesXP/redux-counter
+        repository_state: present
+        evidence: source_and_readme
+        limitation: local_browser_test_only
+      - path: Week5MiniProjectAndTypeScript/RemoteLearningTypeScript/Exercises/ReduxPractice/ExercisesXPGold
+        repository_state: present
+        evidence: source_and_readme
+        limitation: local_browser_test_only
+      - path: Week5MiniProjectAndTypeScript/RemoteLearningTypeScript/Exercises/ReduxPractice/ExercisesXPNinja
+        repository_state: present
+        evidence: source_and_readme
+        limitation: local_browser_test_only
+
   - id: week-6
     title: Databases and Node.js
     path: Week6DatabasesAndNodejs
@@ -161,6 +180,7 @@ weeks:
       - path: Week6DatabasesAndNodejs/Day2DatabaseConcepts1
       - path: Week6DatabasesAndNodejs/Day3DatabaseConcepts2
       - path: Week6DatabasesAndNodejs/Day4NodejsIntroduction
+      - path: Week6DatabasesAndNodejs/Day5NodejsWebServer
     bounded_evidence:
       - path: Week6DatabasesAndNodejs/Day4NodejsIntroduction/Exercises/ExercisesXP/exercise-5-math-app/math-app
         repository_state: verified
@@ -177,9 +197,15 @@ weeks:
     repository_state: present
     learning_state: unknown
     official_scope: authenticated_octopus_navigation_captured_privately
-    scaffold_only: true
-    limitation: public_repo_has_no_source_prompts_rubrics_submission_evidence_or_item_status
-    days: []
+    scaffold_only: false
+    limitation: repository_implementations_present_external_integrations_and_academic_results_require_individual_review
+    days:
+      - path: Week7NodejsAndReact/Day1RoutesControllersAndMiddleware
+      - path: Week7NodejsAndReact/Day2SQLQueryBuilder
+      - path: Week7NodejsAndReact/Day3MiniProject
+      - path: Week7NodejsAndReact/Day4IntroductionToReact
+      - path: Week7NodejsAndReact/Day5ReactComponentsAndState
+      - path: Week7NodejsAndReact/RemoteLearningNodejs
     bounded_evidence: []
 
   - id: week-8
@@ -188,9 +214,13 @@ weeks:
     repository_state: present
     learning_state: unknown
     official_scope: authenticated_octopus_navigation_captured_privately
-    scaffold_only: true
-    limitation: public_repo_has_no_source_prompts_rubrics_submission_evidence_or_item_status
-    days: []
+    scaffold_only: false
+    limitation: repository_implementations_present_external_integrations_and_academic_results_require_individual_review
+    days:
+      - path: Week8React/Day1MultipleComponentsAndEvents
+      - path: Week8React/Day2AdvancedReact
+      - path: Week8React/Day3ReactAdvancedHooks
+      - path: Week8React/Day4MiniProject
     bounded_evidence: []
 
   - id: week-9
@@ -199,9 +229,14 @@ weeks:
     repository_state: present
     learning_state: unknown
     official_scope: authenticated_octopus_navigation_captured_privately
-    scaffold_only: true
-    limitation: public_repo_has_no_source_prompts_rubrics_submission_evidence_or_item_status
-    days: []
+    scaffold_only: false
+    limitation: repository_implementations_present_external_integrations_and_academic_results_require_individual_review
+    days:
+      - path: Week9Redux/Day2ReduxOverviewAndConcepts
+      - path: Week9Redux/Day3ReduxToolkitAppStructure
+      - path: Week9Redux/Day4ReduxToolkitAsync
+      - path: Week9Redux/Day5ReduxMiniProject
+      - path: Week9Redux/RemoteLearningRedux
     bounded_evidence: []
 
   - id: week-10
@@ -210,9 +245,14 @@ weeks:
     repository_state: present
     learning_state: unknown
     official_scope: authenticated_octopus_navigation_captured_privately
-    scaffold_only: true
-    limitation: public_repo_has_no_source_prompts_rubrics_authentication_scope_submission_evidence_or_item_status
-    days: []
+    scaffold_only: false
+    limitation: repository_implementations_present_external_integrations_and_academic_results_require_individual_review
+    days:
+      - path: Week10AdvancedTypeScriptAndAuthentication/Day1UsingTypeScriptWithReact
+      - path: Week10AdvancedTypeScriptAndAuthentication/Day2MiniProject
+      - path: Week10AdvancedTypeScriptAndAuthentication/Day3Authentication
+      - path: Week10AdvancedTypeScriptAndAuthentication/Day4TypeScriptAuthenticationProject
+      - path: Week10AdvancedTypeScriptAndAuthentication/RemoteLearningAuthAndTypeScript
     bounded_evidence: []
 
   - id: week-11
@@ -222,8 +262,9 @@ weeks:
     learning_state: unknown
     official_scope: authenticated_octopus_navigation_captured_privately
     scaffold_only: true
-    limitation: public_repo_has_no_project_brief_rubric_milestone_submission_evidence_or_item_status
-    days: []
+    limitation: scope_submitted_2026_11_25_awaiting_instructor_approval_course_implementation_pending
+    days:
+      - path: Week11FinalProject/Day1FinalProjectScope
     bounded_evidence: []
 
   - id: week-12
@@ -233,8 +274,10 @@ weeks:
     learning_state: unknown
     official_scope: authenticated_octopus_navigation_captured_privately
     scaffold_only: true
-    limitation: public_repo_has_no_project_continuation_rubric_submission_evidence_or_item_status
-    days: []
+    limitation: pern_example_and_presentation_template_final_course_deliverables_pending
+    days:
+      - path: Week12FinalProject/Day1CapstoneSubmission
+      - path: Week12FinalProject/Day5DemoDay
     bounded_evidence: []
 
   - id: week-13
@@ -243,9 +286,14 @@ weeks:
     repository_state: present
     learning_state: unknown
     official_scope: authenticated_octopus_navigation_captured_privately
-    scaffold_only: true
-    limitation: folders_ready_no_solutions_yet
-    days: []
+    scaffold_only: false
+    limitation: repository_implementations_present_external_integrations_and_academic_results_require_individual_review
+    days:
+      - path: Week13WebDevelopmentBasics/Day1HTMLAndCSS
+      - path: Week13WebDevelopmentBasics/Day2GitAndGitHub
+      - path: Week13WebDevelopmentBasics/Day3CSSGridAndLayout
+      - path: Week13WebDevelopmentBasics/Day4Bootstrap
+      - path: Week13WebDevelopmentBasics/Day5CodingDay
     bounded_evidence: []
 
   - id: week-14
@@ -254,7 +302,12 @@ weeks:
     repository_state: present
     learning_state: unknown
     official_scope: authenticated_octopus_navigation_captured_privately
-    scaffold_only: true
-    limitation: folders_ready_no_solutions_yet
-    days: []
+    scaffold_only: false
+    limitation: repository_implementations_present_external_integrations_and_academic_results_require_individual_review
+    days:
+      - path: Week14MoreTopicsAndInterviews/Day1AWSAndJWT
+      - path: Week14MoreTopicsAndInterviews/Day2DeployWithRender
+      - path: Week14MoreTopicsAndInterviews/Day3FullStackDeployment
+      - path: Week14MoreTopicsAndInterviews/Day7MiniProjects
+      - path: Week14MoreTopicsAndInterviews/Day8InterviewAssignments
     bounded_evidence: []

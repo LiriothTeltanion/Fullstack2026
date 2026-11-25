@@ -1,5 +1,8 @@
 <article class="post">
-  <h2><a href="<%= post.link %>" target="_blank" rel="noopener"><%= post.title %></a></h2>
+  <h2>
+    <% if (post.link) { %><a href="<%= post.link %>" target="_blank" rel="noopener"><%= post.title %></a><% } else { %><%= post.title %><% } %>
+  </h2>
+  <% if (post.creator) { %><p>By <%= post.creator %></p><% } %>
   <p class="date"><%= post.date %></p>
   <p><%= post.summary %></p>
   <% if (post.categories.length) { %>

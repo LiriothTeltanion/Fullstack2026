@@ -33,15 +33,19 @@ curl -X PUT -H "Content-Type: application/json" -d '{"published_year":1966}' htt
 
 ## 🎯 The challenge
 
+Books accept and return publishedYear as the assignment's JSON field. The existing published_year input/output remains supported for older callers, and the database column keeps its original name. Empty titles/authors, invalid years and malformed IDs return 400. A valid ID with no record returns 404.
+
+The provided schema.sql resets the demo tables. Apply it only in a disposable exercise database.
+
 1. **Blog API** on `/posts`: `GET /`, `GET /:id`, `POST /`, `PUT /:id`, `DELETE /:id`. Title and content are both required.
 2. **Book API** on `/api/books`: the same five routes with `:bookId`. A `PUT` only changes the fields it receives.
 
-| File | Job |
-|---|---|
-| `db/db.js` | One `knex({ client: "pg", connection })` built from `.env` |
-| `models/*.js` | Knex queries: `select`, `where().first()`, `insert().returning("*")`, `update`, `del` |
-| `controllers/*.js` | Check the body, call the model, choose 200, 201, 400 or 404 |
-| `routes/*.js` | Map the URLs to the controller functions |
+| File               | Job                                                                                   |
+| ------------------ | ------------------------------------------------------------------------------------- |
+| `db/db.js`         | One `knex({ client: "pg", connection })` built from `.env`                            |
+| `models/*.js`      | Knex queries: `select`, `where().first()`, `insert().returning("*")`, `update`, `del` |
+| `controllers/*.js` | Check the body, call the model, choose 200, 201, 400 or 404                           |
+| `routes/*.js`      | Map the URLs to the controller functions                                              |
 
 Database errors go to a last error handler that answers 500.
 

@@ -12,6 +12,9 @@ The source code for Collaborative Storytelling App.
 
 ## Contents
 
+- [store.ts](store.ts) and [storySlice.ts](storySlice.ts) provide Redux session and story state.
+- [types.ts](types.ts) re-exports the [shared API contract](../../shared/types.ts).
+
 - [`components/`](components/)
 - [`App.tsx`](App.tsx)
 - [`api.ts`](api.ts)

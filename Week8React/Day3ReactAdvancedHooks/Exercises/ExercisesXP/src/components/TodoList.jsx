@@ -3,7 +3,7 @@ import { useReducer, useState } from "react";
 function todoReducer(todos, action) {
   switch (action.type) {
     case "add":
-      return [...todos, { id: Date.now(), text: action.text }];
+      return [...todos, { id: crypto.randomUUID(), text: action.text }];
     case "remove":
       return todos.filter(todo => todo.id !== action.id);
     default:

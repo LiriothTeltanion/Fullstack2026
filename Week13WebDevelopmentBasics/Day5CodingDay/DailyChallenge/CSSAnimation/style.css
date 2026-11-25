@@ -281,3 +281,99 @@ body:has(#pause:checked) *::after {
     opacity: 0.8;
   }
 }
+
+/* The assignment's eight interactive transition demonstrations. */
+.transition-page {
+  max-width: 1000px;
+  margin: auto;
+}
+.transition-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+.demo {
+  border: 0;
+  min-height: 150px;
+  padding: 1rem;
+  color: white;
+  background: #38566e;
+  font: 600 1rem/1.4 system-ui;
+  cursor: pointer;
+  transition:
+    opacity 0.25s,
+    background-color 0.25s,
+    transform 0.25s,
+    border-radius 0.25s,
+    box-shadow 0.25s;
+}
+.demo:focus-visible {
+  outline: 3px solid #ffb703;
+  outline-offset: 5px;
+}
+.fade {
+  opacity: 0.5;
+}
+.fade:is(:hover, :focus-visible) {
+  opacity: 1;
+}
+.change-color:is(:hover, :focus-visible) {
+  background: #9b304c;
+}
+.resize:is(:hover, :focus-visible) {
+  transform: scale(1.12);
+}
+.resize:active {
+  transform: scale(0.88);
+}
+.rotate-tile:is(:hover, :focus-visible) {
+  transform: rotate(-10deg);
+}
+.circle:is(:hover, :focus-visible) {
+  border-radius: 50%;
+}
+.shadow-3d:is(:hover, :focus-visible) {
+  box-shadow: 8px 8px 0 #172b3d;
+  transform: translate(-4px, -4px);
+}
+.swing:is(:hover, :focus-visible) {
+  animation: assignment-swing 0.55s ease;
+}
+.inset:is(:hover, :focus-visible) {
+  box-shadow: inset 0 0 0 12px #ffb703;
+}
+@keyframes assignment-swing {
+  20% {
+    transform: translateX(8px);
+  }
+  40% {
+    transform: translateX(-8px);
+  }
+  60% {
+    transform: translateX(5px);
+  }
+  80% {
+    transform: translateX(-3px);
+  }
+}
+@media (max-width: 720px) {
+  .transition-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 400px) {
+  .transition-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .demo {
+    transition: none;
+  }
+  .demo:is(:hover, :focus-visible, :active) {
+    animation: none;
+    transform: none;
+  }
+}

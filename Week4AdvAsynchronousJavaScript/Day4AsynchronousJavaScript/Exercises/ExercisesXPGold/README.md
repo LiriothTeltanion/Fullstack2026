@@ -10,6 +10,10 @@
 
 Timers and promises in [asyncGold.js](asyncGold.js). Every "download" is a fake delay made with `setTimeout`, so the timings are easy to see.
 
+## Ordered promise results
+
+Run `node promiseReports.js`. After the delayed value settles the program prints `[3, 42, "foo"]`, then `[2, 4, 6]`. Plain values also occupy a slot in the output. A rejection reaches the error handler and the collection returns no partial result. [Source](promiseReports.js).
+
 ## ▶️ How to run
 
 ```bash

@@ -10,6 +10,26 @@
 
 The Ninja set in [ExercisesXPNinja.ts](ExercisesXPNinja.ts) goes one step further: generics, a discriminated union, overloads and safe parsing of `unknown`.
 
+## 📚 Assignment-aligned functions
+
+The earlier examples remain available as extra practice. The chapter-specific functions are in [requiredNinja.ts](requiredNinja.ts), with typed calls in [requiredNinja.examples.ts](requiredNinja.examples.ts).
+
+| Function or type                      | Behavior                                                                                           |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| MappedType / mapType                  | Conditional result type; number becomes its square, string becomes its length                      |
+| getProperty                           | keyof constrains the key and T[K] preserves the inferred property type                             |
+| HasNumericProperty / multiplyProperty | The selected key must hold a number; multiplication returns its result without changing the object |
+
+```bash
+node requiredNinja.examples.ts
+node --test requiredNinja.test.ts
+npx tsc --strict --noEmit --target ES2022 --module nodenext --allowImportingTsExtensions --types node requiredNinja.ts requiredNinja.examples.ts requiredNinja.test.ts
+```
+
+Run from this folder after installing the root development dependencies. Node 22.18+ runs the files directly. Tests contain expected compile-time errors as well as runtime assertions: a successful Node run alone does not prove the generic constraints.
+
+The tests cover negative/decimal numbers, empty strings, indexed inference, optional properties, symbol and numeric keys, non-mutating multiplication, invalid factors and overflow. String length follows JavaScript UTF-16 code-unit semantics. The conditional generic return uses one localized assertion because TypeScript cannot narrow that generic return type from the runtime branch.
+
 ## ▶️ How to run
 
 ```bash

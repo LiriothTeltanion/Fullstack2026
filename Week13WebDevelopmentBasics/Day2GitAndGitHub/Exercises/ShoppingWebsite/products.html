@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Riff Shop: a small music gear shopping page with a working cart."
+    />
+    <title>Riff Shop · Products</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="#top">Riff<span>Shop</span></a>
+      <a class="products-link" href="products.html">Products</a>
+      <button
+        type="button"
+        class="cart-button"
+        id="cart-button"
+        aria-controls="cart"
+        aria-expanded="false"
+      >
+        Cart <span class="badge" id="cart-count">0</span>
+      </button>
+    </header>
+
+    <main id="top">
+      <p>
+        <a href="login.html">Log in</a> · <a href="signup.html">Create an account</a> (bonus forms)
+      </p>
+      <section class="hero">
+        <h1>Our products</h1>
+        <p>Strings, picks, cables and small extras. Free delivery in Israel over 200 ₪.</p>
+      </section>
+
+      <section aria-labelledby="products-title">
+        <div class="toolbar">
+          <h2 id="products-title">Products</h2>
+          <div class="filters" role="group" aria-label="Filter by category">
+            <button type="button" class="filter is-active" data-category="all" aria-pressed="true">
+              All
+            </button>
+            <button type="button" class="filter" data-category="guitar" aria-pressed="false">
+              Guitar
+            </button>
+            <button type="button" class="filter" data-category="studio" aria-pressed="false">
+              Studio
+            </button>
+            <button type="button" class="filter" data-category="practice" aria-pressed="false">
+              Practice
+            </button>
+          </div>
+        </div>
+        <!-- app.js fills this list from the products array -->
+        <ul class="product-grid" id="product-grid"></ul>
+      </section>
+    </main>
+
+    <aside class="cart" id="cart" aria-labelledby="cart-title" hidden>
+      <div class="cart-head">
+        <h2 id="cart-title">Your cart</h2>
+        <button type="button" class="close" id="cart-close" aria-label="Close cart">×</button>
+      </div>
+      <ul class="cart-lines" id="cart-lines"></ul>
+      <p class="empty" id="cart-empty">Your cart is empty.</p>
+      <p class="total">Total: <strong id="cart-total">0 ₪</strong></p>
+      <button type="button" class="checkout" id="checkout">Checkout</button>
+      <p class="note" id="checkout-note" role="status" aria-live="polite"></p>
+    </aside>
+
+    <footer class="site-footer">
+      <p><span id="footer-year">2026</span> · Kevin Cusnir · Riff Shop practice project.</p>
+    </footer>
+  </body>
+</html>

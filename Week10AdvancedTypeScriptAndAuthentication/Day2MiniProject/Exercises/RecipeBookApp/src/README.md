@@ -12,6 +12,8 @@ The source code for Recipe Book App.
 
 ## Contents
 
+- [model/](model/), [templates/](templates/) and [main.ts](main.ts) implement the class-based DOM entry point.
+
 - [`components/`](components/)
 - [`hooks/`](hooks/)
 - [`models/`](models/)

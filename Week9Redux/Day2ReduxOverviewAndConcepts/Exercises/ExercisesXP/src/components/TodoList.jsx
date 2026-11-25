@@ -1,16 +1,14 @@
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { connect } from "react-redux";
 import { addTodo, removeTodo, toggleTodo } from "../redux/actions.js";
 
-export default function TodoList() {
-  const todos = useSelector(state => state.todos);
-  const dispatch = useDispatch();
+function TodoList({ todos, onAdd, onToggle, onRemove }) {
   const [text, setText] = useState("");
 
   const handleSubmit = event => {
     event.preventDefault();
     if (!text.trim()) return;
-    dispatch(addTodo(text.trim()));
+    onAdd(text.trim());
     setText("");
   };
 
@@ -31,14 +29,10 @@ export default function TodoList() {
         {todos.map(todo => (
           <li key={todo.id}>
             <label className={todo.done ? "done" : ""}>
-              <input
-                type="checkbox"
-                checked={todo.done}
-                onChange={() => dispatch(toggleTodo(todo.id))}
-              />{" "}
+              <input type="checkbox" checked={todo.done} onChange={() => onToggle(todo.id)} />{" "}
               {todo.text}
             </label>
-            <button className="danger" onClick={() => dispatch(removeTodo(todo.id))}>
+            <button className="danger" onClick={() => onRemove(todo.id)}>
               Delete
             </button>
           </li>
@@ -47,3 +41,7 @@ export default function TodoList() {
     </section>
   );
 }
+
+const mapStateToProps = state => ({ todos: state.todos });
+const mapDispatchToProps = { onAdd: addTodo, onToggle: toggleTodo, onRemove: removeTodo };
+export default connect(mapStateToProps, mapDispatchToProps)(TodoList);

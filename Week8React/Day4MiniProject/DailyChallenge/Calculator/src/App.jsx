@@ -15,7 +15,7 @@ function App() {
     if (answer.error) return;
     const line = `${first} ${operations[operation].symbol} ${second} = ${answer.result}`;
     // Keep only the last five calculations.
-    setHistory([line, ...history].slice(0, 5));
+    setHistory(previous => [line, ...previous].slice(0, 5));
   };
 
   return (
@@ -47,14 +47,17 @@ function App() {
           onChange={event => setSecond(event.target.value)}
           aria-label="Second number"
         />
-        <button type="submit">Calculate</button>
+        <button type="submit">{operation === "add" ? "Add Them" : "Calculate"}</button>
       </form>
 
-      {output && (
-        <p className={output.error ? "card error" : "card result"}>
-          {output.error || output.result}
-        </p>
-      )}
+      <p
+        className={output ? (output.error ? "card error" : "card result") : undefined}
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        {output && (output.error || output.result)}
+      </p>
 
       {history.length > 0 && (
         <section className="card">

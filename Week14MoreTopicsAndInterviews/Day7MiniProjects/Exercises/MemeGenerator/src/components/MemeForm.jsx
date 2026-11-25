@@ -1,4 +1,4 @@
-// Controlled inputs: every value comes from the meme state in App
+// Controlled inputs: every value comes from the MemeGenerator class state.
 export default function MemeForm({ meme, onChange, onRandom, disabled }) {
   return (
     <form className="form" onSubmit={event => event.preventDefault()}>
@@ -28,7 +28,7 @@ export default function MemeForm({ meme, onChange, onRandom, disabled }) {
         </label>
       </div>
       <button type="button" onClick={onRandom} disabled={disabled}>
-        Get a new meme image 🖼️
+        Gen
       </button>
     </form>
   );

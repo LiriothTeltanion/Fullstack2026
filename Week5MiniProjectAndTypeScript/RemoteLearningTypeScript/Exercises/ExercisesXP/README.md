@@ -10,6 +10,20 @@
 
 Nine short first steps with TypeScript, all in [ExercisesXP.ts](ExercisesXP.ts). Each exercise is a few lines with a numbered `console.log`.
 
+## Chapter #4303 · React, TypeScript and Redux Toolkit
+
+The chapter's counter is a separate runnable application in [redux-counter](redux-counter/README.md). It starts at zero and uses a typed Redux Toolkit slice, a configured store, React Redux Provider, and a Counter component with Increment and Decrement buttons. The nine TypeScript practices below remain available unchanged.
+
+From this folder:
+
+```bash
+cd redux-counter
+npm ci
+npm start
+```
+
+The application README documents the template, tests, type check and production build.
+
 ## ▶️ How to run
 
 ```bash

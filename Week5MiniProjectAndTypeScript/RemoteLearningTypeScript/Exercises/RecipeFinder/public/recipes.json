@@ -1,0 +1,210 @@
+[
+  {
+    "id": "lemon-chickpea-bowl",
+    "title": "Lemon chickpea bowl",
+    "description": "Bright, crisp and ready before the kettle cools.",
+    "minutes": 15,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "chickpeas",
+        "quantity": "1 can, drained"
+      },
+      {
+        "name": "lemon",
+        "quantity": "1"
+      },
+      {
+        "name": "cucumber",
+        "quantity": "1"
+      },
+      {
+        "name": "olive oil",
+        "quantity": "1 tablespoon"
+      },
+      {
+        "name": "parsley",
+        "quantity": "1 small handful"
+      }
+    ],
+    "steps": [
+      "Rinse and drain the chickpeas. Dice the cucumber and roughly chop the parsley.",
+      "Whisk the lemon juice with the olive oil in a bowl.",
+      "Fold in the chickpeas, cucumber and parsley. Taste and serve."
+    ]
+  },
+  {
+    "id": "tomato-skillet-eggs",
+    "title": "Tomato skillet eggs",
+    "description": "A warm, one-pan favourite for a quiet evening.",
+    "minutes": 25,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "tomatoes",
+        "quantity": "4 medium"
+      },
+      {
+        "name": "eggs",
+        "quantity": "4"
+      },
+      {
+        "name": "garlic",
+        "quantity": "2 cloves"
+      },
+      {
+        "name": "olive oil",
+        "quantity": "1 tablespoon"
+      },
+      {
+        "name": "paprika",
+        "quantity": "1 teaspoon"
+      }
+    ],
+    "steps": [
+      "Chop the tomatoes and finely slice the garlic.",
+      "Warm the oil in a skillet. Stir in the garlic and paprika, then add the tomatoes and simmer for 12 minutes.",
+      "Make four small wells, crack in the eggs and cover. Cook until the whites and yolks are set, then serve hot."
+    ]
+  },
+  {
+    "id": "smoky-lentil-soup",
+    "title": "Smoky lentil soup",
+    "description": "A generous pot, a handful of staples, a little comfort.",
+    "minutes": 35,
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "red lentils",
+        "quantity": "1 cup, rinsed"
+      },
+      {
+        "name": "carrot",
+        "quantity": "2"
+      },
+      {
+        "name": "onion",
+        "quantity": "1"
+      },
+      {
+        "name": "vegetable stock",
+        "quantity": "1 litre"
+      },
+      {
+        "name": "smoked paprika",
+        "quantity": "1 teaspoon"
+      },
+      {
+        "name": "olive oil",
+        "quantity": "1 tablespoon"
+      }
+    ],
+    "steps": [
+      "Dice the onion and carrots. Warm the oil in a pot and soften the vegetables for 5 minutes.",
+      "Add the lentils, paprika and vegetable stock. Bring to a gentle boil.",
+      "Simmer for 25 minutes, stirring occasionally, until the lentils and carrots are tender."
+    ]
+  },
+  {
+    "id": "sesame-mushroom-noodles",
+    "title": "Sesame mushroom noodles",
+    "description": "A glossy tangle of noodles and golden mushrooms.",
+    "minutes": 20,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "noodles",
+        "quantity": "200 grams"
+      },
+      {
+        "name": "mushrooms",
+        "quantity": "200 grams"
+      },
+      {
+        "name": "soy sauce",
+        "quantity": "2 tablespoons"
+      },
+      {
+        "name": "sesame oil",
+        "quantity": "1 teaspoon"
+      },
+      {
+        "name": "spring onion",
+        "quantity": "2"
+      }
+    ],
+    "steps": [
+      "Cook the noodles according to the packet, then drain.",
+      "Slice and pan-fry the mushrooms until golden, using a splash of water if needed.",
+      "Toss the noodles with the mushrooms, soy sauce and sesame oil. Finish with sliced spring onions."
+    ]
+  },
+  {
+    "id": "lemon-herb-couscous",
+    "title": "Lemon herb couscous",
+    "description": "Fluffy grains, plenty of herbs and a sunny finish.",
+    "minutes": 12,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "couscous",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "vegetable stock",
+        "quantity": "1 cup, hot"
+      },
+      {
+        "name": "lemon",
+        "quantity": "1"
+      },
+      {
+        "name": "parsley",
+        "quantity": "1 small handful"
+      },
+      {
+        "name": "olive oil",
+        "quantity": "1 tablespoon"
+      }
+    ],
+    "steps": [
+      "Pour the hot stock over the couscous, cover and leave for 5 minutes.",
+      "Fluff the couscous with a fork and stir in the olive oil.",
+      "Add lemon zest, lemon juice and chopped parsley. Mix and serve warm."
+    ]
+  },
+  {
+    "id": "roasted-pepper-toast",
+    "title": "Roasted pepper toast",
+    "description": "Crisp sourdough with a creamy, colourful topping.",
+    "minutes": 10,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "sourdough bread",
+        "quantity": "4 slices"
+      },
+      {
+        "name": "roasted peppers",
+        "quantity": "2, from a jar"
+      },
+      {
+        "name": "ricotta",
+        "quantity": "100 grams"
+      },
+      {
+        "name": "basil",
+        "quantity": "6 leaves"
+      },
+      {
+        "name": "black pepper",
+        "quantity": "1 pinch"
+      }
+    ],
+    "steps": [
+      "Drain and slice the roasted peppers.",
+      "Toast the bread until crisp and spread with ricotta.",
+      "Add the peppers, torn basil and black pepper. Serve immediately."
+    ]
+  }
+]

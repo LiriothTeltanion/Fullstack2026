@@ -8,11 +8,12 @@
 
 </div>
 
-A guessing game served by my own Node.js server: the page shows an emoji, I pick its name from four options, and the server keeps the score and a leaderboard. It uses the built-in `http` module, no Express.
+A guessing game served by my own Node.js server: the page shows an emoji, I pick its name from four options, and the server keeps the score and a leaderboard. Express receives the requests and the route handler returns JSON or the static game page.
 
 ## ▶️ How to run
 
 ```bash
+npm install
 node server.js
 ```
 
@@ -53,3 +54,7 @@ Scoring: a right answer is 1 point, and from the third right answer in a row it'
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 Week 6 Day 5 - Node.js Web Server - Daily Challenge
+
+## Verification · 2026-11-25
+
+The Express adapter retains the round, guess and leaderboard JSON endpoints. The earlier Node-only server is preserved in Git history and the dated private backup.

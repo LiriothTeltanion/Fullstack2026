@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Register · User API</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Register</h1>
+      <p>Local coursework demo. Use made-up profile details.</p>
+      <form action="/register" method="post" data-user-form>
+        <label>Name<input name="name" autocomplete="given-name" required /></label>
+        <label>Last name<input name="lastName" autocomplete="family-name" required /></label>
+        <label>Email<input name="email" type="email" autocomplete="email" required /></label>
+        <label>Username<input name="username" autocomplete="username" required /></label>
+        <label
+          >Password<input name="password" type="password" autocomplete="new-password" required
+        /></label>
+        <button type="submit" disabled>Register</button>
+      </form>
+      <p id="result" role="status" aria-live="polite" aria-atomic="true"></p>
+      <a href="login.html">Already registered? Log in</a>
+    </main>
+    <script src="forms.js" defer></script>
+  </body>
+</html>

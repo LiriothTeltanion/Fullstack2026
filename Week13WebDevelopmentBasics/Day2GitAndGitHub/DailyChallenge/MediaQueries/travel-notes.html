@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A small blog layout that changes with media queries." />
+    <title>Media Queries · Travel Notes</title>
+    <link rel="stylesheet" href="travel-notes.css" />
+  </head>
+  <body>
+    <!-- The text of this badge comes from CSS and changes at each breakpoint -->
+    <p class="breakpoint" aria-hidden="true"></p>
+
+    <header class="masthead">
+      <h1>Travel Notes</h1>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="#posts">Posts</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="layout">
+      <main id="posts">
+        <article class="post" style="--tone: #f59e0b">
+          <h2>Sunrise over the Negev</h2>
+          <p>
+            The desert turns orange for about ten minutes. On a phone these cards stack in one
+            column, on a tablet they sit two by two, and on a wide screen the sidebar joins them.
+          </p>
+        </article>
+        <article class="post" style="--tone: #0ea5e9">
+          <h2>A day in Tel Aviv</h2>
+          <p>Beach in the morning, the market at noon and the old port at night.</p>
+        </article>
+        <article class="post" style="--tone: #10b981">
+          <h2>Hiking the Ramon crater</h2>
+          <p>Bring more water than you think. The trail has almost no shade.</p>
+        </article>
+        <article class="post" style="--tone: #a855f7">
+          <h2>Jerusalem stones</h2>
+          <p>Every building has the same pale stone, which glows gold late in the day.</p>
+        </article>
+      </main>
+
+      <aside class="sidebar" id="about">
+        <h2>About this page</h2>
+        <p>
+          Resize the window and watch the badge in the corner. It names the media query that is
+          active.
+        </p>
+        <ul>
+          <li><strong>Phone:</strong> up to 599px</li>
+          <li><strong>Tablet:</strong> 600px to 899px</li>
+          <li><strong>Desktop:</strong> 900px and up</li>
+        </ul>
+        <p>The colors also follow the system light or dark setting.</p>
+      </aside>
+    </div>
+
+    <footer class="footer" id="contact">
+      <p>Made for the Media Queries daily challenge.</p>
+    </footer>
+  </body>
+</html>

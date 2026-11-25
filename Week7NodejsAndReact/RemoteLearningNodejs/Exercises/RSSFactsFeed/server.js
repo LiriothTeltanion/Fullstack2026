@@ -19,6 +19,7 @@ app.use(
 
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false })); // reads the search forms
+app.use("/bootstrap", express.static("node_modules/bootstrap/dist/css"));
 app.use(express.static("public"));
 app.use("/", feedRouter);
 

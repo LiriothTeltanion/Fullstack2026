@@ -1,0 +1,2 @@
+Today I am learning Python.
+I like making small useful tools.

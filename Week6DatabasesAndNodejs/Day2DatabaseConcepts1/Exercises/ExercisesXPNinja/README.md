@@ -10,6 +10,20 @@
 
 Seven harder questions on the `dvdrental` sample database, in [xp_ninja_dvdrental.sql](xp_ninja_dvdrental.sql).
 
+## 🧩 Assignment practice: customers, purchases and joins
+
+[required_customer_joins_demo.sql](required_customer_joins_demo.sql) adds the customer/purchase requirements as an independent synthetic transaction. The seven dvdrental questions below remain extra practice.
+
+~~~bash
+psql -v ON_ERROR_STOP=1 -d fullstack_practice -f required_customer_joins_demo.sql
+~~~
+
+Use a disposable practice database. BEGIN creates a separate schema and ROLLBACK removes all its demonstration objects and changes. An existing schema with the same name is not reused.
+
+The last two names are selected by descending first name, then last name, projecting no ID. Deleting Scott's purchases does not delete his customer record. A separate purchase with a NULL customer reference survives a purchase-to-customer LEFT JOIN and is excluded by INNER JOIN.
+
+A physically deleted purchase appears in neither join: LEFT JOIN can retain an existing unmatched row, but cannot reconstruct a deleted row. A customer-to-purchase LEFT JOIN still shows Scott with NULL purchase fields. The synthetic verification checks these distinctions and confirms the schema disappears after rollback.
+
 ## ▶️ How to run
 
 This file only works on `dvdrental` (the PostgreSQL sample database from the course):

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import UserCard from "./components/UserCard";
 import Counter from "./components/Counter";
 import Greeting from "./components/Greeting";
 import SignupForm from "./components/SignupForm";
@@ -31,6 +32,8 @@ export default function App() {
       </section>
       <section className="card">
         <h2>3-5. Users</h2>
+        <UserCard />
+        <UserCard name="Demo reader" age={24} role="Guest" />
         <SignupForm onAdd={addUser} />
         <UserList users={users} />
       </section>

@@ -12,6 +12,8 @@ The request handlers for Task API 2.
 
 ## Contents
 
+- [`usersController.js`](usersController.js): Registration, login and public profile handlers
+
 - [`tasksController.js`](tasksController.js)
 
 ---

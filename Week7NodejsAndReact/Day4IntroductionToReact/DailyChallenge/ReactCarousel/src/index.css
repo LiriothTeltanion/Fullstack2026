@@ -123,3 +123,23 @@ main {
     transition: none;
   }
 }
+
+.assignment-carousel .carousel .slide {
+  padding: 0;
+}
+.assignment-carousel .destination {
+  min-height: 300px;
+  margin: 0;
+  padding: 3rem 2.5rem;
+  display: grid;
+  place-items: center;
+}
+.assignment-carousel .thumbs {
+  display: block;
+  padding: 0;
+  background: transparent;
+}
+.assignment-carousel .thumb {
+  height: auto;
+  padding: 0.5rem;
+}

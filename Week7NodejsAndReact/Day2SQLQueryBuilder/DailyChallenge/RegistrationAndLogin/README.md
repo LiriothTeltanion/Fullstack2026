@@ -35,13 +35,17 @@ curl -X POST -H "Content-Type: application/json" -d '{"username":"lirioth","pass
 
 ## 🎯 The challenge
 
-| Route | What it does |
-|---|---|
+Registration and profile updates validate email shape and text fields before querying PostgreSQL. Malformed IDs and invalid input return 400, missing users return 404, and duplicate username/email returns 409, including a database uniqueness conflict. Registration still inserts public user data and its bcrypt hash in one transaction.
+
+The provided schema.sql resets the demo tables. Apply it only in a disposable exercise database.
+
+| Route            | What it does                                                                                         |
+| ---------------- | ---------------------------------------------------------------------------------------------------- |
 | `POST /register` | Needs email, username and a password of 6+ characters. Returns 409 if the username or email is taken |
-| `POST /login` | Compares the password with the stored hash using `bcrypt.compare` |
-| `GET /users` | All users, without passwords |
-| `GET /users/:id` | One user or 404 |
-| `PUT /users/:id` | Updates email, first name or last name |
+| `POST /login`    | Compares the password with the stored hash using `bcrypt.compare`                                    |
+| `GET /users`     | All users, without passwords                                                                         |
+| `GET /users/:id` | One user or 404                                                                                      |
+| `PUT /users/:id` | Updates email, first name or last name                                                               |
 
 `models/userModel.js` has `createUser()`, which inserts into `users` and `hashpwd` inside `db.transaction()`. If the second insert fails, the first one is rolled back.
 

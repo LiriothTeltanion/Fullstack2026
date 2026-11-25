@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: #f5f4ee;
+  color: #193d35;
+  font-family: system-ui, sans-serif;
+}
+a {
+  color: inherit;
+  text-underline-offset: 0.25em;
+}
+header,
+footer,
+main > section {
+  max-width: 1180px;
+  margin: auto;
+  padding: 1.6rem clamp(1rem, 4vw, 3rem);
+}
+header,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.brand {
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: -0.05em;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.skip {
+  position: absolute;
+  left: 1rem;
+  top: -6rem;
+  background: white;
+  padding: 1rem;
+  z-index: 2;
+}
+.skip:focus {
+  top: 1rem;
+}
+a:focus-visible {
+  outline: 3px solid #a8471f;
+  outline-offset: 5px;
+}
+main .cover {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  border-top: 1px solid #c9d2c9;
+  border-bottom: 1px solid #c9d2c9;
+}
+.cover h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(2.7rem, 7vw, 6rem);
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+  font-weight: 400;
+  margin: 1rem 0 2rem;
+}
+.cover > p {
+  font-size: 0.9rem;
+}
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0.9rem 1.2rem;
+  background: #193d35;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+h2 {
+  font-size: 1.4rem;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 1rem;
+}
+.project {
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.6rem;
+  text-decoration: none;
+  background: #e3eadb;
+  border: 1px solid #d1ddc8;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+.project:hover {
+  transform: translateY(-4px);
+}
+.project span {
+  font-size: 0.8rem;
+}
+.project h3 {
+  font-family: Georgia, serif;
+  font-size: 1.9rem;
+  line-height: 1.1;
+  font-weight: 400;
+  margin: 0.8rem 0;
+}
+.project p {
+  line-height: 1.5;
+  margin: 0;
+}
+.music {
+  background: #f1dfcb;
+}
+.react {
+  background: #d6e4ea;
+}
+.css {
+  background: #e9dded;
+}
+#about p {
+  max-width: 65ch;
+  line-height: 1.7;
+}
+footer {
+  border-top: 1px solid #c9d2c9;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+@media (max-width: 480px) {
+  header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .project {
+    transition: none;
+  }
+  .project:hover {
+    transform: none;
+  }
+}

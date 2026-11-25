@@ -19,6 +19,10 @@ npm run dev
 
 It needs an internet connection, because the data comes from `https://jsonplaceholder.typicode.com`.
 
+## Course implementation
+
+`UserData` fetches and lists users independently. A failed user request shows an error and a retry button. The posts view reuses the user slice to label authors.
+
 ## 🎯 The challenge
 
 1. **Posts thunk.** `fetchPosts` loads 10 posts and calls `rejectWithValue` when the response isn't ok.

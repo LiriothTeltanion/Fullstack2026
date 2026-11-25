@@ -8,7 +8,7 @@
 
 </div>
 
-The scope of my final project: the plan, the data model and the milestones. 1 exercises in total.
+The proposed Ivrit Sheli vocabulary review module, its data model and its implementation milestones.
 
 ## Contents
 

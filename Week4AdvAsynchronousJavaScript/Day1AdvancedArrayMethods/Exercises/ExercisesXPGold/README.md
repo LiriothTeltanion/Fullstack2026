@@ -25,8 +25,8 @@ I compile to `~/tmp-ts` on purpose. Inside the repo every `.js` file is treated 
 Ex1 analyzeMapOutput: [ 2, 4, 6 ]
 Ex2 analyzeReduceOutput: [ 1, 2, 0, 1, 2, 3 ]
 Ex3 indicesObserved: [ 0, 1, 2, 3, 4, 5 ]
-Ex4 arrayFlattened: [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ] ]
-Ex4 arrayFlattenedOneLine: [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ] ]
+Ex4 arrayFlattened: [ 1, 2, 3, [ 4 ], [ 5 ] ]
+Ex4 arrayFlattenedOneLine: [ 1, 2, 3, [ 4 ], [ 5 ] ]
 Ex4 greetingJoined: [ 'Hello young grasshopper!', 'you are', 'learning fast!' ]
 Ex4 greetingSentence: Hello young grasshopper! you are learning fast!
 Ex4 freed: [ 3 ]
@@ -39,7 +39,7 @@ Ex4 freed: [ 3 ]
 3. **The `i` argument**: it is the index, so for the six items of `arrayNum` it runs from 0 to 5.
 4. **Nested arrays**: flatten `[[1], [2], [3], [[[4]]], [[[5]]]]`, join the `greeting` words into one sentence, and free the `3` buried under 26 levels of brackets with my recursive `deepFlatten()`.
 
-Part 4 is not finished. The target was `[1, 2, 3, [4], [5]]`, but both `arrayFlattened` and `arrayFlattenedOneLine` leave every number in its own one-item array. `arrayNested.flat(2)` would give the target in one call.
+Both versions remove two levels. The first applies two shallow flattening steps and the one-line version uses `arrayNested.flat(2)`. The deeper entries keep one pair of brackets.
 
 ## 🧠 What I learned
 

@@ -1,18 +1,19 @@
-import { useDispatch, useSelector } from "react-redux";
+import { connect } from "react-redux";
 import { selectDay, selectSelectedDay } from "../redux/plannerReducer.js";
 
-export default function DayPicker() {
-  const day = useSelector(selectSelectedDay);
-  const dispatch = useDispatch();
-
+export function DayPicker({ day, onSelectDay }) {
   return (
     <label className="row">
       Day:
       <input
         type="date"
         value={day}
-        onChange={event => event.target.value && dispatch(selectDay(event.target.value))}
+        onChange={event => event.target.value && onSelectDay(event.target.value)}
       />
     </label>
   );
 }
+
+export default connect(state => ({ day: selectSelectedDay(state) }), {
+  onSelectDay: selectDay,
+})(DayPicker);

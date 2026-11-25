@@ -43,3 +43,7 @@ Vite prints a local address (usually `http://localhost:5173`); I open it in the 
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 Week 8 Day 3 - React Advanced Hooks - Daily Challenge
+
+## Regression checks · 2026-11-25
+
+Run npm test for the reducer checks covering rapid additions, editing, filters, toggles and deletion. Task ids use crypto.randomUUID() so two additions in the same clock tick remain independently editable. Older numeric ids loaded from localStorage keep working because task actions carry the stored id unchanged.

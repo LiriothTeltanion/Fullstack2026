@@ -12,9 +12,11 @@ Files, JSON and my first API requests, split into the usual three levels.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/): a sentence generator that reads a word file, and a JSON read, edit and save
-- [`ExercisesXPGold/`](ExercisesXPGold/): a JSON-backed restaurant menu and two Giphy searches
-- [`ExercisesXPNinja/`](ExercisesXPNinja/): a Valentine's menu with regex rules and a D&D character roller
+- [ExercisesXP/](ExercisesXP/) — Exercises XP
+- [ExercisesXPGold/](ExercisesXPGold/) — Exercises XP Gold
+- [ExercisesXPNinja/](ExercisesXPNinja/) — Exercises XP Ninja
+- [SysGuessGame/](SysGuessGame/) — Exercise - Sys Built-in Module Guess Game
+- [TranslatorUsingFiles/](TranslatorUsingFiles/) — Exercise - Translator Using Files and Modules
 
 ---
 
@@ -23,3 +25,5 @@ Files, JSON and my first API requests, split into the usual three levels.
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 Week 2 Day 4 - File I/O, JSON and APIs - Exercises
+
+Navigation verified 2026-11-25. Entries link to available code and run instructions.

@@ -10,6 +10,10 @@
 
 Five array puzzles in [arrayMethodsNinja.js](arrayMethodsNinja.js), each answered with `reduce`, `filter` or `map` instead of a manual loop.
 
+## Array reports
+
+Run `node arrayReports.js` to compare a loop and a reducer on the same data. Both dog-age totals are 154 human years. Both letter counters produce x=1, y=1 and z=2. The other two functions remove whitespace from an email and build a full-name-to-role lookup. The counters also support an empty list and keys that match built-in object property names. [Source](arrayReports.js).
+
 ## ▶️ How to run
 
 ```bash

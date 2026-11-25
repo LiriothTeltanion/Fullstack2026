@@ -12,6 +12,10 @@ The Express back end for Collaborative Storytelling App.
 
 ## Contents
 
+- [db/schema.sql](db/schema.sql) creates PostgreSQL tables; npm run db:setup applies them.
+- [models/refreshModel.js](models/refreshModel.js) persists and atomically rotates refresh sessions.
+- [routes/contributorRoutes.js](routes/contributorRoutes.js) exposes contributor invite/list/removal routes.
+
 - [`controllers/`](controllers/)
 - [`middleware/`](middleware/)
 - [`models/`](models/)

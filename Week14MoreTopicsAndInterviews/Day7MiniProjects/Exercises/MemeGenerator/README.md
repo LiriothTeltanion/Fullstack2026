@@ -21,22 +21,31 @@ Then open `http://localhost:5173`. `npm run build` makes a static `dist/` folder
 
 ## 🎯 The challenge
 
-| Component | What it does |
-|---|---|
-| `App` | Fetches `https://api.imgflip.com/get_memes` once in `useEffect`, keeps the templates and the `meme` state (text, size, color, image) |
-| `Header` | Title bar |
-| `MemeForm` | Controlled inputs: two text fields, a range slider (20 to 72 px) and a color picker. One `handleChange` updates any field by its `name` |
-| `MemePreview` | The image with both texts placed on top with `position: absolute` |
+| Component       | What it does                                                                                                                                                             |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `App`           | Composes the header and editor                                                                                                                                           |
+| `MemeGenerator` | Class component; fetches `https://api.imgflip.com/get_memes` in `componentDidMount`, keeps `topText`, `bottomText`, `randomImage`, templates and style settings in state |
+| `Header`        | Title bar, image and Meme Generator paragraph                                                                                                                            |
+| `MemeForm`      | Controlled inputs: two text fields, a range slider (20 to 72 px) and a color picker. One `handleChange` updates any field by its `name`                                  |
+| `MemePreview`   | The image with two `h2` text overlays placed on top with `position: absolute`                                                                                            |
 
 `pickRandomImage()` chooses a random template from the list. The meme text uses Impact in capitals with a four-way black `text-shadow`, the classic meme look.
+
+The initial `randomImage` is `https://i.imgflip.com/1bij.jpg`. Loading templates preserves it until the **Gen** button is pressed. HTTP errors, invalid/empty collections and network failures leave this image and its editable text available; image load failures are announced separately. The request is aborted on unmount. Generation is disabled until templates are available.
 
 ## 🧠 What I learned
 
 - One change handler can serve every input when each input's `name` matches a key in the state object
-- `setMeme((current) => ({ ...current, ... }))` keeps the other fields when one changes
+- Class `setState` merges the changed fields while preserving the remaining editor settings
 - The range input gives a string, so `fontSize` goes through `Number()` before it reaches the style
 - I wrapped the image and texts in their own `.meme-frame` so the caption under the image doesn't push the bottom text up
 - Downloading the finished meme would need a canvas, and the Imgflip images may block that, so this version only previews it
+
+## Verification · 2026-11-25
+
+`npm test` mounts the real components in a DOM environment with API fixtures to verify the initial image remains unchanged after loading, live text/style controls, random generation, error feedback and lifecycle cleanup. `npm run build` creates the production bundle. Imgflip remains an external service; the application reports its failure rather than claiming offline image storage.
+
+Built with AI-assisted tooling; I reviewed, tested and can explain every change.
 
 ---
 

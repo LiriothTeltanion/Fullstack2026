@@ -12,6 +12,8 @@ The data access functions for Task API 2.
 
 ## Contents
 
+- [`userStore.js`](userStore.js): Queued atomic JSON user storage
+
 - [`taskStore.js`](taskStore.js)
 
 ---

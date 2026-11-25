@@ -10,6 +10,10 @@
 
 Real requests this time. [fetchGold.js](fetchGold.js) talks to JSONPlaceholder, a free fake REST API that needs no key, using `fetch()` and `async/await` in Node.
 
+## GIFs and promise timing
+
+The [random GIF page](../../DailyChallenge/GifsReference/index.html) appends a GIF and reports fetch or configuration errors. [Its setup](../../DailyChallenge/GifsReference/README.md) explains how to provide a local Giphy key. Run `node fetchTimings.js` for the two timing examples and the users, posts and albums requests. In the sequential case the fast job starts after the slow value prints. In the concurrent case both start together, the fast timer finishes first, and the displayed results are slow, then fast. The JSON requests use async/await throughout and report a failed response.
+
 ## ▶️ How to run
 
 Node 18 or newer has `fetch` built in. It needs an internet connection.

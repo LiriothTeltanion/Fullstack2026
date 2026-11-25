@@ -1,16 +1,14 @@
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { connect } from "react-redux";
 import { addTask, selectSelectedDay } from "../redux/plannerReducer.js";
 
-export default function TaskForm() {
-  const day = useSelector(selectSelectedDay);
-  const dispatch = useDispatch();
+export function TaskForm({ day, onAddTask }) {
   const [text, setText] = useState("");
 
   const handleSubmit = event => {
     event.preventDefault();
     if (!text.trim()) return;
-    dispatch(addTask(day, text.trim()));
+    onAddTask(day, text.trim());
     setText("");
   };
 
@@ -26,3 +24,7 @@ export default function TaskForm() {
     </form>
   );
 }
+
+export default connect(state => ({ day: selectSelectedDay(state) }), {
+  onAddTask: addTask,
+})(TaskForm);

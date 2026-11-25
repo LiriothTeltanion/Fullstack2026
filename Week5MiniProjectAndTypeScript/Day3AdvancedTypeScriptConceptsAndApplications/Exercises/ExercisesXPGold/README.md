@@ -52,3 +52,32 @@ I wrote the fields out in full instead of using constructor parameter properties
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 Week 5 Day 3 - Advanced TypeScript Concepts and Applications - Exercises XP Gold
+
+
+## 🧩 Focused class examples
+
+The examples in [ClassExamples.ts](ClassExamples.ts) exercise the exported classes in [CourseClasses.ts](CourseClasses.ts).
+
+| Example | Behavior |
+| --- | --- |
+| Employee and Manager | Protected name and salary support shared details. A manager adds its public department and overrides the details method. |
+| Car | The make and model are readonly. The model is private, while the public year can change. |
+| MathUtils | A static PI constant powers circumference calculations. Negative and non-finite radii raise RangeError. |
+| Addition and Multiplication | Both classes implement the same two-number Operation contract. |
+| ColoredRectangle | A Shape can expose area; a Rectangle adds readonly dimensions and perimeter. Zero-length dimensions are accepted, and negative or non-finite dimensions are rejected. |
+
+Run from this folder using Node 24 or newer and the repository's installed TypeScript compiler.
+
+```bash
+node ClassExamples.ts
+node --test ClassExamples.test.ts
+npx --no-install tsc --strict --types node --target es2022 --module nodenext --allowImportingTsExtensions --noEmit CourseClasses.ts ClassExamples.ts ClassContracts.ts ClassExamples.test.ts ExercisesXPGold.ts
+```
+
+The example prints a manager in Engineering, the updated `2025 Toyota Yaris`, circumference `12.56636`, operation results `7` and `12`, and rectangle area/perimeter `12` and `14`.
+
+[ClassContracts.ts](ClassContracts.ts) holds seven statements with expected compiler errors for protected access, private access and readonly assignment. Its exported function is for compile-time checking and stays uncalled. TypeScript's readonly and private keywords enforce these rules during type checking. JavaScript runtime reflection can still access ordinary properties after type stripping.
+
+The earlier [Version example](ExercisesXPGold.ts) accepts exactly `major.minor`, with two non-negative safe integers and no surrounding whitespace. It rejects missing, malformed, overflowing or unsafe parts with RangeError. Version ordering retains the existing `0.9, 1.2, 1.10` result. The regression suite tests those boundaries alongside the class examples.
+
+Built with AI-assisted tooling; I reviewed, tested and can explain every change.

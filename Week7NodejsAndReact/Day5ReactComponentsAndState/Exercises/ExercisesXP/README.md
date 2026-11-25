@@ -21,6 +21,8 @@ Open the address Vite prints (usually http://localhost:5173).
 
 ## 🎯 The challenge
 
+Click, Enter and the Color mount effect show the required alert dialogs and keep visible feedback. A ref prevents the mount alert from appearing twice during the StrictMode development check. The Garage receives size="small" and renders Who lives in my small Garage?.
+
 1. **Car and Garage** (`Car.jsx`, `Garage.jsx`): the model comes in as a prop (`carInfo`), the color is state, and the page reads "This car is red Mustang". Inside it, `<Garage size="small" />` prints "Who lives in my small Garage?".
 2. **Events** (`Events.jsx`): a "Click Me" button, an input that reacts to the Enter key and repeats what was typed, and an ON/OFF toggle. The messages are shown on the page instead of in `alert()` boxes.
 3. **Phone** (`Phone.jsx`): one state object (brand, model, color, year); the button changes only the color to blue with `{ ...current, color: "blue" }`.

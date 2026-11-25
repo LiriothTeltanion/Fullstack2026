@@ -8,11 +8,14 @@
 
 </div>
 
-Extra TypeScript practice from the remote-learning material.
+The remote-learning set includes nine TypeScript fundamentals, a [React and Redux counter](Exercises/ExercisesXP/redux-counter/), and an [ingredient-based Recipe Finder](Exercises/RecipeFinder/).
 
 ## Contents
 
 - [`Exercises/`](Exercises/)
+
+- [Gold · Todo list](Exercises/ReduxPractice/ExercisesXPGold/)
+- [Ninja · Practice profile](Exercises/ReduxPractice/ExercisesXPNinja/)
 
 ---
 

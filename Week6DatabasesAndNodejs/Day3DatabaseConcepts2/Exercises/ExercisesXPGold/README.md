@@ -10,6 +10,18 @@
 
 `xp_gold_dvdrental.sql` covers two more `dvdrental` exercises: rentals that are still out, and a "Happy Halloween" plan that adds up how much film each store could show.
 
+## 🧪 Follow-up: visible safe list and zero totals
+
+[required_gold_followup.sql](required_gold_followup.sql) adds the missing visible safe-film list and robust totals. Run it after the original questions, against a disposable dvdrental practice copy:
+
+~~~bash
+psql -v ON_ERROR_STOP=1 -d dvdrental -f required_gold_followup.sql
+~~~
+
+It does not create or change tables/views. Horror membership and the six case-insensitive scary substrings exclude a film; a missing description is treated as empty text. Catalog totals count each film once. Store totals count physical copies that have no outstanding rental; multiple returned rentals do not duplicate an available copy. LEFT JOIN plus COALESCE keeps stores with no inventory or no available copies at zero.
+
+The original rental, grouped-customer, Joe Swank, city and country queries remain intact. Synthetic PostgreSQL verification covers them and this follow-up, including an empty catalog and a catalog with no safe films.
+
 ## ▶️ How to run
 
 ```bash

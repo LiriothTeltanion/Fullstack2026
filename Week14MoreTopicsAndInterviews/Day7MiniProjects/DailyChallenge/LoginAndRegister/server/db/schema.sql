@@ -1,0 +1,13 @@
+-- Run inside this exercise's dedicated PostgreSQL database.
+CREATE TABLE IF NOT EXISTS users (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL CHECK (length(trim(name)) > 0),
+  email VARCHAR(255) NOT NULL UNIQUE,
+  joined DATE NOT NULL DEFAULT CURRENT_DATE
+);
+
+CREATE TABLE IF NOT EXISTS login (
+  id SERIAL PRIMARY KEY,
+  hash VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL UNIQUE REFERENCES users(email) ON UPDATE CASCADE ON DELETE CASCADE
+);

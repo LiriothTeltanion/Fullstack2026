@@ -17,6 +17,10 @@ npm install
 npm run dev
 ```
 
+## Course implementation
+
+`TodoList` selects the current list. `AddTodo` dispatches a new item, and each `TodoItem` dispatches its own toggle and removal.
+
 ## 🎯 The challenge
 
 1. **Counter slice.** `counterSlice` has `increment`, `decrement`, `incrementByAmount` (the amount comes from an input) and `reset`.

@@ -12,6 +12,8 @@ The Express routers for Collaborative Storytelling App.
 
 ## Contents
 
+- [contributorRoutes.js](contributorRoutes.js) implements the assignment contributor endpoints.
+
 - [`authRoutes.js`](authRoutes.js)
 - [`storiesRoutes.js`](storiesRoutes.js)
 

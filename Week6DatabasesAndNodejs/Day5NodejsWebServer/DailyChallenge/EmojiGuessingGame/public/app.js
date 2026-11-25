@@ -7,6 +7,7 @@ const streakEl = document.getElementById("streak");
 const playerInput = document.getElementById("player");
 const nextButton = document.getElementById("next");
 const leaderboardEl = document.getElementById("leaderboard");
+const form = document.getElementById("guess-form");
 
 let currentRoundId = null;
 
@@ -20,9 +21,10 @@ async function loadRound() {
 
   round.options.forEach(option => {
     const button = document.createElement("button");
-    button.type = "button";
+    button.type = "submit";
+    button.name = "guess";
+    button.value = option;
     button.textContent = option;
-    button.addEventListener("click", () => sendGuess(option));
     optionsEl.append(button);
   });
 }
@@ -65,5 +67,10 @@ async function loadLeaderboard() {
 }
 
 nextButton.addEventListener("click", loadRound);
+form.addEventListener("submit", event => {
+  event.preventDefault();
+  const guess = event.submitter?.value;
+  if (guess) sendGuess(guess);
+});
 loadRound();
 loadLeaderboard();

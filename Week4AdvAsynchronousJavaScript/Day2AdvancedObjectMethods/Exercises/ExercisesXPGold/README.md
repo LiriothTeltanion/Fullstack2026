@@ -10,6 +10,10 @@
 
 [objectMethodsGold.js](objectMethodsGold.js) has six short exercises with the `Object` helpers and spread.
 
+## Object reports
+
+Run `node objectReports.js`. The name formatter destructures its parameter. The keys and values report sorts the keys once and looks up each corresponding value. Two references to the same counter share all three increments, so the example prints 3. [Source](objectReports.js).
+
 ## ▶️ How to run
 
 ```bash

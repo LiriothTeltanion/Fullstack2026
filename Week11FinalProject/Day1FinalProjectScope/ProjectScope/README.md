@@ -8,23 +8,19 @@
 
 </div>
 
-The scope document for my final project, written as a fill-in plan. I complete every blank line in [`SCOPE.md`](SCOPE.md) before writing code, and it becomes the checklist for weeks 11 and 12.
+Ivrit Sheli is a Hebrew-learning product. [The proposed module](SCOPE.md) describes a PERN vocabulary review feature, its acceptance checks and its relationship to the existing application.
 
 ## ▶️ How to run
 
-There is nothing to run here. I open [`SCOPE.md`](SCOPE.md), replace each `_…_` line with my own answer, and keep the daily log at the bottom up to date.
+Open [the scope](SCOPE.md) for the proposed user journey, data model and implementation milestones.
 
 ## 🎯 The challenge
 
-| Section of `SCOPE.md` | What I decide there |
+| Design question | Where to find the answer |
 |---|---|
-| 1–2 · Idea and users | The problem in one sentence and who has it |
-| 3–5 · MVP, nice to have, out of scope | The features I must finish, the extras and what I will not build |
-| 6 · User stories | "As a … I want to … so that …" |
-| 7–9 · Data model, API, pages | Tables and relations, REST endpoints with auth, React routes |
-| 10 · Tech choices | PERN stack plus the smaller choices (query layer, state, styling, hosting) |
-| 11–12 · Timeline and risks | One goal per day until Demo Day, and a plan B for each risk |
-| 13 · Daily log | What I did and the next step, one line per day |
+| What already exists? | Existing work and proposed course contribution |
+| What would the learner do? | User stories, acceptance checks and screen flow |
+| How would the module be verified? | Data model, acceptance checks and delivery evidence |
 
 ## 🧠 What I learned
 

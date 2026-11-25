@@ -25,7 +25,7 @@ curl -X POST -H "Content-Type: application/json" -d '{bad json' http://localhost
 ```
 
 ```
-{"id":3,"title":"Write the README","description":"How to run and endpoints","completed":false}
+{"id":1,"title":"Write the README","description":"How to run and endpoints","completed":false}
 {"error":"completed must be true or false"}
 {"error":"The request body is not valid JSON"}
 ```
@@ -40,7 +40,7 @@ curl -X POST -H "Content-Type: application/json" -d '{bad json' http://localhost
 | `PUT /tasks/:id` | Changes only the fields that were sent, with the same type checks |
 | `DELETE /tasks/:id` | Removes the task and saves the file |
 
-`models/taskModel.js` is the only file that touches the disk (`readTasks`, `saveTasks`, `nextId`). The error handler in `server.js` turns broken JSON into a 400 and file problems into a 500.
+`models/taskModel.js` is the only file that touches the disk (`readTasks`, `updateTasks`, `saveTasks`, `nextId`). The error handler in `app.js` turns broken JSON into a 400 and file problems into a 500.
 
 ## 🧠 What I learned
 
@@ -57,3 +57,7 @@ curl -X POST -H "Content-Type: application/json" -d '{bad json' http://localhost
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 Week 7 Day 3 - Mini-project Day - Mini Project
+
+## JSON persistence verification · 2026-11-25
+
+The task file starts as an empty array. Writes are queued in one server process and atomically replace the JSON file, preserving concurrent additions. Run npm test for the isolated HTTP and storage regression tests. The original seeded example is preserved in the dated private backup and Git history.

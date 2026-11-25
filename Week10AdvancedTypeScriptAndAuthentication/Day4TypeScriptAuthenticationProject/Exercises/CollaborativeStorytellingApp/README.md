@@ -8,67 +8,69 @@
 
 </div>
 
-A small full-stack app where people write stories together. You sign up, start a story, invite other users by name, and those contributors can keep writing it. The Express server checks a JWT cookie on every story route, and the React client is written in TypeScript.
+A collaborative story editor with a React TypeScript client, Redux Toolkit and an Express API backed by PostgreSQL. Authors invite collaborators to continue their stories. The author alone can delete the story or remove collaborators.
 
 ## ▶️ How to run
 
-Two terminals, one for each half:
+Create a new local PostgreSQL database named storytelling first.
 
-```bash
-cd server
-cp .env.example .env   # set JWT_SECRET and SESSION_SECRET
-npm install
-npm run dev            # http://localhost:5000
-```
+    cd server
+    cp .env.example .env
+    # Set DATABASE_URL, JWT_SECRET and SESSION_SECRET in .env.
+    npm install
+    npm run db:setup
+    npm run dev
 
-```bash
-cd client
-npm install
-npm run dev            # http://localhost:5173, /api is proxied to the server
-```
+In another terminal run the client.
 
-To try the sharing, register two users in two different browsers (or a private window).
+    cd client
+    npm install
+    npm run dev
+
+Vite serves the client and proxies /api to the backend on port 5000. To try collaboration, register two users in separate browsers or a private window.
+
+PostgreSQL is the default. For a disposable local demo, explicitly select STORAGE_MODE=memory. That mode resets its tables when the process stops. API field names and numeric IDs remain compatible with the earlier in-memory version.
 
 ## 🎯 The challenge
 
-**Server** (`server/`, Express + bcrypt + jsonwebtoken)
+| Endpoint                        | Access                                                               |
+| ------------------------------- | -------------------------------------------------------------------- |
+| POST /api/auth/register, /login | Returns a user and a short-lived access token                        |
+| POST /api/auth/refresh          | Rotates the httpOnly refresh cookie and returns another access token |
+| POST /api/auth/logout           | Revokes the current refresh session and clears cookies               |
+| GET /api/auth/me                | Checks the access JWT                                                |
+| GET /api/stories                | Any signed-in user                                                   |
+| POST /api/stories               | The signed-in user becomes the author                                |
+| PATCH /api/stories/:id          | Author and invited collaborators                                     |
+| DELETE /api/stories/:id         | Author only                                                          |
+| POST /api/contributors          | Author only, using story_id plus user_id or username                 |
+| GET /api/contributors/:story_id | Lists contribution IDs, user IDs and usernames                       |
+| DELETE /api/contributors/:id    | Author only                                                          |
 
-| Endpoint | Who can use it |
-|---|---|
-| `POST /api/auth/register`, `/login`, `/logout`, `GET /api/auth/me` | Register also logs in; the JWT (2 h) lives in an httpOnly cookie |
-| `GET /api/stories` | Any logged-in user, newest first, with usernames instead of ids |
-| `POST /api/stories` | Any logged-in user; they become the author |
-| `PATCH /api/stories/:id` | The author and the contributors (403 for anyone else) |
-| `DELETE /api/stories/:id` | Only the author |
-| `POST /api/stories/:id/contributors` | Only the author; refuses unknown users and people who can already edit |
+The original POST /api/stories/:id/contributors endpoint remains available. Unknown users and duplicate invitations return errors.
 
-A run with two users, where noa writes the story and dan is invited later:
+## 🧩 How the parts fit
 
-```
-dan  PATCH  /api/stories/1               → 403 Only the author and contributors can edit this story
-noa  POST   /api/stories/1/contributors  → 201 (dan added)
-noa  POST   /api/stories/1/contributors  → 409 That user can already edit this story
-dan  PATCH  /api/stories/1               → 200 (new content saved)
-dan  DELETE /api/stories/1               → 403 Only the author can delete this story
-noa  DELETE /api/stories/1               → 204
-```
+- [schema.sql](server/db/schema.sql) defines users, stories, contributor relationships and rotating refresh sessions. Queries use PostgreSQL parameters.
+- [storyModel.js](server/models/storyModel.js) translates SQL names to the existing camelCase JSON contract.
+- [refreshModel.js](server/models/refreshModel.js) consumes and replaces a refresh session in one transaction.
+- [shared/types.ts](shared/types.ts) defines the public User and Story shapes used by the client and referenced by the server model.
+- [store.ts](client/src/store.ts) configures Redux Toolkit. [storySlice.ts](client/src/storySlice.ts) owns the user, access token, stories, loading and error states.
+- The access JWT lasts 15 minutes and stays only in Redux memory. The refresh JWT lasts 7 days and stays in an httpOnly cookie. Reloading renews the session, and one failed authorized request can be retried after refresh.
+- Concurrent refresh attempts share a promise. Story request IDs prevent older responses from replacing newer state.
+- CSRF tokens protect changing requests. The API client reacquires an invalidated CSRF token once. Rate limits remain active.
 
-`requireAuth` turns the cookie into `req.user`, and `loadStory` finds the story once (or answers 404) before the controller runs. The data is in memory, so it resets when the server restarts.
+## Deployment setup
 
-**Client** (`client/`, React + TypeScript)
-
-- `api.ts` has one generic `request<T>()` and a typed method per endpoint.
-- `App` checks the session with `/api/auth/me` on load, then shows `AuthForm` or the stories.
-- `StoryCard` decides from the story data whether to show **Continue the story**, **Delete** and the invite form.
+For separate frontend and backend hosts, forward the frontend's /api path to the HTTPS backend so the browser cookie and CSRF flow stays same-origin. Keep DATABASE_URL and signing secrets on the backend, initialize the schema and set NODE_ENV=production for secure cookies. Hosting and database accounts are configured separately.
 
 ## 🧠 What I learned
 
-- The server decides who may edit; the client only hides buttons, and the 403 answers are what really protect a story
-- With the token in an httpOnly cookie and the Vite proxy, the client never handles the token at all
-- `request<T>()` gives every call a typed result, so `api.stories()` comes back as `{ stories: Story[] }`
-- A small `loadStory` middleware removed the same "find it or 404" block from three controllers
-- Reloading the list after each change kept the client simple, at the cost of one extra request
-- A cookie login needs CSRF protection: `lusca.csrf()` refuses changes without the token from `GET /api/csrf-token`, so `api.ts` fetches it once and sends it as `x-csrf-token`, and `express-rate-limit` adds 100 requests per 15 minutes per IP (10 for register and login)
+- The server enforces story permissions even when a caller bypasses the buttons.
+- PostgreSQL foreign keys and a unique story/user pair keep contribution records consistent. Deleting a story cascades to its contributions.
+- JSON contracts can remain stable while the storage implementation changes.
+- Access and refresh tokens serve different lifetimes. Revoking a refresh session prevents that session from issuing more access tokens.
+- Redux stores session and story data while form input stays inside its component.
 
 ---
 
