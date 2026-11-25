@@ -8,13 +8,13 @@
 
 </div>
 
-The three exercise tiers of Day 1.
+My three exercise sets for the first JavaScript day.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/) — seven array, loop and object exercises with a run page
-- [`ExercisesXPGold/`](ExercisesXPGold/) — divisible by three, attendance and sum / max by hand
-- [`ExercisesXPNinja/`](ExercisesXPNinja/) — BMI comparison and grade average in Node
+- [`ExercisesXP/`](ExercisesXP/): seven array, loop and object tasks, each with its own Run button
+- [`ExercisesXPGold/`](ExercisesXPGold/): divisible by three, a guest list and sum / max without built-ins
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): comparing two BMIs and a grade average, run in Node
 
 ---
 

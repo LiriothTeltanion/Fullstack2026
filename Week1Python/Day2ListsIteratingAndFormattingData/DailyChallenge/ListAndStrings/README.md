@@ -8,7 +8,7 @@
 
 </div>
 
-Two small problems in [dailychallengelistandstrings.py](dailychallengelistandstrings.py): generating multiples and cleaning repeated letters. The interactive part sits in a `_cli()` function, so I can import the helpers without triggering any prompts.
+Two short problems in [dailychallengelistandstrings.py](dailychallengelistandstrings.py): make a list of multiples, and remove letters that repeat next to each other. I kept the prompts in a `_cli()` function, so importing the file doesn't ask for anything.
 
 ## ▶️ How to run
 
@@ -24,20 +24,23 @@ Enter a word: ppoollee
 pole
 ```
 
-The examples in the docstrings also run as doctests: `python -m doctest -v dailychallengelistandstrings.py`.
+The docstring examples double as doctests: `python -m doctest -v dailychallengelistandstrings.py`.
 
 ## 🎯 The challenge
 
 | Function | What it does |
 |---|---|
-| `multiples(number, length)` | Returns the first `length` multiples: `[number * i for i in range(1, length + 1)]`. Negative numbers work (`multiples(-3, 4)` gives `[-3, -6, -9, -12]`), a length of 0 gives `[]`, and a negative length raises `ValueError`. |
-| `collapse_duplicates(word)` | Collapses letters that repeat next to each other: `"bookkeeper"` gives `"bokeper"`. It is case-sensitive, so `"AaAa"` stays the same, and repeats that are not next to each other stay too (`"abca"`). |
+| `multiples(number, length)` | `[number * i for i in range(1, length + 1)]`. `multiples(-3, 4)` gives `[-3, -6, -9, -12]`, a length of 0 gives `[]` and a negative length raises `ValueError`. |
+| `collapse_duplicates(word)` | Keeps a letter only if it differs from the last one kept, so `"bookkeeper"` becomes `"bokeper"`. It is case-sensitive (`"AaAa"` stays) and repeats that aren't neighbours stay too (`"abca"`). |
+
+One thing I noticed later: in `_cli()` the `ValueError` from a negative length is raised in the `else` part, outside the `try`, so typing `-1` as the length crashes the script instead of printing the friendly message.
 
 ## 🧠 What I learned
 
-- A list comprehension with `range(1, length + 1)` replaces a whole loop
-- Comparing each character with the last one I kept is enough to drop neighbours that repeat
-- Small pure functions are easy to test with doctests
+- `range(1, length + 1)` inside a comprehension gave me the whole list in one line
+- To drop neighbours that repeat, I only need to look at `result[-1]`, not the whole word
+- Starting `result` with `word[0]` meant I had to handle the empty string first
+- Code in a `try`/`else` block isn't protected by the `except`, which is where my crash comes from
 
 ---
 

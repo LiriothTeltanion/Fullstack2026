@@ -8,11 +8,11 @@
 
 </div>
 
-The Day 2 daily challenge.
+The daily challenge for Day 2.
 
 ## Contents
 
-- [`UnionTypeValidator/`](UnionTypeValidator/) — `validateUnionType(value, allowedTypes)` with ten test cases and a form example
+- [`UnionTypeValidator/`](UnionTypeValidator/): `validateUnionType(value, allowedTypes)`, ten printed test cases and a form example
 
 ---
 

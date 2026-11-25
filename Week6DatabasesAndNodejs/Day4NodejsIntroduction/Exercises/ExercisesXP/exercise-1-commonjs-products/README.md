@@ -8,7 +8,7 @@
 
 </div>
 
-A small product catalog exported with CommonJS, and a function that finds a product by its name.
+Five products in one file, shared with CommonJS, and a second file that searches them by name.
 
 ## ▶️ How to run
 
@@ -26,15 +26,17 @@ node shop.js
 
 | File | What it does |
 |---|---|
-| `products.js` | Exports an array of five products (`name`, `price`, `category`) with `module.exports` |
-| `shop.js` | Loads it with `require("./products")`. `findProductByName(name)` trims the name, compares it without caring about upper or lower case and returns the product or `null`; an empty name prints a warning. The file searches for three names as a demo. |
+| `products.js` | `module.exports = products`: an array of five items with `name`, `price` and `category` |
+| `shop.js` | Loads the list with `require("./products")`. `findProductByName(name)` trims and lowercases the name, finds the match and returns it or `null`. An empty or non-string name prints a warning first. The file then searches for three names as a demo. |
+
+`shop.js` also exports `findProductByName`, but since the demo runs at the top level it would print its three lines if another file required it.
 
 ## 🧠 What I learned
 
-- `module.exports` decides what another file gets back from `require()`
-- `Array.prototype.find()` returns the first match, or `undefined` when there is none
-- Comparing with `toLowerCase()` makes the search case-insensitive
-- A guard clause handles empty input before the real work
+- Whatever I assign to `module.exports` is exactly what `require()` hands back, here a plain array
+- `find()` gives `undefined` when nothing matches, so `hit || null` makes the "not found" value explicit
+- Lowercasing both sides is enough for a case-insensitive name search
+- Checking for an empty name at the top keeps the rest of the function simple
 
 ---
 

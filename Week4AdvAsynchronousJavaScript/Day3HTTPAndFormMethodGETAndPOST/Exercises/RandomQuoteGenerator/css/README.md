@@ -8,11 +8,11 @@
 
 </div>
 
-The stylesheet for the Random Quote Generator page.
+The look of the quote app: a dark theme built on CSS variables.
 
 ## Contents
 
-- [`styles.css`](styles.css) — layout, buttons and the quote card
+- [`styles.css`](styles.css): the cards, the big blockquote, the byline with the like badge, button rows and form fields
 
 ---
 

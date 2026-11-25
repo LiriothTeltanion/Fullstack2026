@@ -8,7 +8,7 @@
 
 </div>
 
-Two small console exercises in [exercisesxpgold.py](exercisesxpgold.py): a birthday lookup with an optional insert, and a fruit shop that adds up the cost of all its stock. The interactive part lives in `_cli()`, so importing the module only exposes the helpers.
+[exercisesxpgold.py](exercisesxpgold.py) holds two small programs. One looks up birthdays by name and lets me add a new person first. The other adds up what it would cost to buy a fruit shop's whole stock. The prompts are in `_cli()`, so the helper functions can be imported without running anything.
 
 ## ▶️ How to run
 
@@ -35,17 +35,18 @@ Total cost to buy everything: 89.0
 
 | Function | What it does |
 |---|---|
-| `add_birthday(birthdays, name, date)` | Returns a new dictionary with the extra person. |
-| `lookup_birthday(birthdays, name)` | Returns the stored date, or `None` if the name is not there. |
-| `stock_value(items)` | Multiplies `price * stock` for every fruit in the nested dictionary and sums it: 4 × 10 + 2 × 5 + 1.5 × 24 + 3 × 1 = 89.0. |
+| `add_birthday(birthdays, name, date)` | Gives back a new dictionary with the extra person, the old one stays as it was. |
+| `lookup_birthday(birthdays, name)` | `birthdays.get(name)`, so a missing name returns `None` and `_cli()` prints a "Sorry" line. |
+| `stock_value(items)` | Sums `price * stock` over the nested fruit dictionary: 4 × 10 + 2 × 5 + 1.5 × 24 + 3 × 1 = 89.0. |
 
-Exercises 1-3 are the birthdays (show the names, optionally add one, look one up) and Exercise 4 is the fruit shop. Dates are plain text, and names are case-sensitive (`"alice"` is not `"Alice"`).
+Exercises 1 to 3 are the birthday part and Exercise 4 is the shop. The dates are just text, nothing checks the format, and the lookup is case-sensitive, so `alice` won't find `Alice`.
 
 ## 🧠 What I learned
 
-- `", ".join(birthdays.keys())` prints the names on one line
-- Returning a new dictionary instead of changing the old one keeps the helpers easy to test
-- A generator inside `sum()` adds up a nested dictionary in one line
+- `", ".join(birthdays.keys())` prints all names on one line with commas
+- `.get()` returning `None` made the "not found" branch a plain `if match:`
+- A nested dictionary like `{"price": 4, "stock": 10}` reads better than two separate lists
+- `sum()` with a generator was enough for the stock total, no loop variable needed
 
 ---
 

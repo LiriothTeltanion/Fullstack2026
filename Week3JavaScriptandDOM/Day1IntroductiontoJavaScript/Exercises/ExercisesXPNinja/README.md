@@ -8,11 +8,11 @@
 
 </div>
 
-Two exercises with variables, conditionals, loops and functions: compare two people's BMI and check if a grade average passes.
+Two Node exercises: compare the BMI of two people, and decide if a list of grades passes or fails.
 
 ## ▶️ How to run
 
-`index.js` is a CommonJS file (`require` / `module.exports`), but the repo root `package.json` has `"type": "module"`, so `node index.js` stops with `require is not defined`. Run a `.cjs` copy instead:
+`index.js` is written as CommonJS (`require` / `module.exports`). The repo root `package.json` has `"type": "module"`, so `node index.js` stops with `require is not defined`. Running a `.cjs` copy works:
 
 ```powershell
 Copy-Item index.js $env:TEMP\ninja.cjs; node $env:TEMP\ninja.cjs
@@ -43,12 +43,14 @@ cp index.js /tmp/ninja.cjs && node /tmp/ninja.cjs
 | `reportPassFail(avg)` | Above 65 passes, below 65 fails, exactly 65 is a borderline case. |
 | `findAvg(gradesList)` | Logs the average and the pass/fail message, as the exercise asks. |
 
+The exercise only asked for `findAvg`. I split the math and the message into two helpers and let `findAvg` call both.
+
 ## 🧠 What I learned
 
-- A method can use `this` to read the other properties of its object
-- `toFixed(2)` returns a string, so I wrap it in `Number()` before comparing
-- Splitting `findAvg` into two smaller functions makes each one easy to reuse
-- The `type` field in `package.json` decides whether Node reads `.js` files as ESM or CommonJS
+- Inside `bmi()`, `this` points to the person, so the method reads its own `massKg` and `heightM`
+- `toFixed(2)` gives back a string, which is why I wrap it in `Number()` before comparing
+- An empty grade list returns `NaN`, and `reportPassFail` prints a warning instead of a wrong result
+- Node decides between ESM and CommonJS from the `type` field in `package.json`
 
 ---
 

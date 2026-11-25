@@ -6,11 +6,11 @@
 
 </div>
 
-The Day 1 daily challenge, with 5 tests in [test_week1_day1_daily_challenge.py](../../../tests/python/test_week1_day1_daily_challenge.py).
+Only one daily challenge on Day 1, tested by 5 tests in [test_week1_day1_daily_challenge.py](../../../tests/python/test_week1_day1_daily_challenge.py).
 
 ## Contents
 
-- [`BuildUpAString/`](BuildUpAString/) — checks that a string has exactly 10 characters, prints its first and last characters, builds it up one character at a time and shuffles it
+- [`BuildUpAString/`](BuildUpAString/): a 10-character length check, first and last character, the string printed one letter at a time and a shuffled copy
 
 ---
 

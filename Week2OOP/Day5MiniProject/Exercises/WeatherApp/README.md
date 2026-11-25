@@ -8,7 +8,7 @@
 
 </div>
 
-A weather app built on the OpenWeatherMap API with the PyOWM library: current weather, city IDs, forecasts and air quality in the terminal, plus a bonus humidity chart.
+My weather app talks to OpenWeatherMap through the PyOWM library. In the terminal it shows the current weather, city IDs, forecasts and air quality, and a second script draws a humidity chart.
 
 ## ▶️ How to run
 
@@ -21,28 +21,30 @@ python weatherapp.py
 python weathergui.py
 ```
 
-`weatherapp.py` first prints the weather in Paris, then asks for a place like `Los Angeles,US`. `weathergui.py` asks for a city and opens a bar chart window.
+`weatherapp.py` shows Paris first, then asks for a place like `Los Angeles,US`. `weathergui.py` asks for a city (Enter means `Paris,FR`) and opens a chart. Without a key you get `Paris demo failed: Missing API key...`, not a crash.
 
 ## 🎯 The challenge
 
-- [`weatherapp.py`](weatherapp.py) - terminal helpers:
+- [`weatherapp.py`](weatherapp.py), the terminal part:
 
   | Function | What it does |
   |---|---|
-  | `current_weather_at_place(owm, place)` | Status, temperature in °C, wind, sunrise and sunset for `City,CC` |
-  | `find_city_id(owm, query)` / `current_weather_at_id(owm, id)` | Finds a city ID with geocoding, then asks for the weather by ID |
-  | `forecast_at_place`, `forecast_at_id`, `forecast_at_coords` | 5-day forecasts in 3-hour steps |
-  | `air_quality_by_place(owm, place)` | The air quality index (1 Good to 5 Very Poor) and pollutant levels |
+  | `current_weather_at_place(owm, place)` | Status, temperature in °C, wind, sunrise and sunset for a `City,CC` string |
+  | `find_city_id(owm, query)` / `current_weather_at_id(owm, id)` | Looks up a city ID through geocoding, then gets the weather for that ID |
+  | `forecast_at_place`, `forecast_at_id`, `forecast_at_coords` | The 5-day forecast in 3-hour steps, by name, ID or coordinates |
+  | `air_quality_by_place(owm, place)` | Air quality index from 1 (Good) to 5 (Very Poor) plus pollutant levels in μg/m³ |
 
-  The interactive part also prints the next five forecast entries.
-- [`weathergui.py`](weathergui.py) - the Ninja bonus: it averages the forecast humidity per day and draws a Matplotlib bar chart for the next 3 days, with the value written on each bar (`init_plot`, `plot_temperatures`, `write_humidity_on_bar_chart`)
+  After the air quality, the interactive part lists the next five forecast entries with their humidity.
+- [`weathergui.py`](weathergui.py), the Ninja bonus: it groups the 3-hour forecasts by local day, averages the humidity and draws a Matplotlib bar chart for the next 3 days with the percentage written on each bar (`init_plot`, `plot_temperatures`, `write_humidity_on_bar_chart`)
+
+The names come from the brief, so `plot_temperatures()` actually draws humidity.
 
 ## 🧠 What I learned
 
-- A library like PyOWM wraps the raw API calls in readable objects and methods
-- API keys belong in environment variables, not in the code
-- Times from an API come in UTC, so I convert them before showing or grouping by day
-- Matplotlib only needs a few calls to turn a list of numbers into a labeled chart
+- PyOWM hides the raw HTTP calls behind managers like `weather_manager()` and `airpollution_manager()`
+- `make_owm()` reads the key from `OWM_API_KEY`, so nothing secret is written in the files
+- Forecast times arrive in UTC, and I convert them to local time before grouping by day, or the days come out shifted
+- `ax.bar()` plus one `ax.text()` per bar is all the chart needs
 
 ---
 

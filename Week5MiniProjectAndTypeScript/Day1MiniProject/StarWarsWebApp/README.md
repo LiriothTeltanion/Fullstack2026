@@ -8,28 +8,29 @@
 
 </div>
 
-A single page that uses the [Star Wars API (SWAPI)](https://www.swapi.tech/) to show a random character every time I click **Find Someone**: name, height, gender, birth year and home world.
+Every click on **Find Someone** shows a random character from the [Star Wars API (SWAPI)](https://www.swapi.tech/): name, height, gender, birth year and home world.
 
 ## ▶️ How to run
 
-Open `index.html` in a modern browser and click the button. The HTML, CSS and JavaScript are all in that one file. You can also run `npm run dev` from the repository root and go to `http://localhost:8000/Week5MiniProjectAndTypeScript/Day1MiniProject/StarWarsWebApp/`.
+The page is one file, `index.html`. Open it in a browser and press the button. With `npm run dev` from the repository root, it is also at `http://localhost:8000/Week5MiniProjectAndTypeScript/Day1MiniProject/StarWarsWebApp/`.
 
 ## 🎯 The challenge
 
 | Function | What it does |
 |---|---|
-| `findRandomCharacter()` | Picks a random ID from 1 to 83 and runs the whole flow |
-| `getCharacterData(id)` | Fetches the character from `swapi.tech/api/people/{id}` |
-| `getHomeworldName(url)` | Makes a second request for the planet name |
+| `findRandomCharacter()` | Gets a random ID from 1 to 83 and runs the whole flow |
+| `getCharacterData(id)` | Checks the ID, then fetches `swapi.tech/api/people/{id}` |
+| `getHomeworldName(url)` | A second request for the planet name; returns `'Unknown'` if it fails |
 | `showLoading()` / `showError()` / `displayCharacter()` | Switch the card between loading, error and result |
 
-The button is disabled while loading, so requests can't overlap. Any failure shows "Oh No! That person isn't available." The page has a starry background, a gold-bordered card and icons from Font Awesome.
+The button stays disabled until the request ends, so two clicks can't overlap. When something goes wrong the card says "Oh No! That person isn't available." `escapeHtml()` cleans the text before it goes into `innerHTML`. Styling is a starry background, a gold-bordered card and Font Awesome icons.
 
 ## 🧠 What I learned
 
-- Using `fetch` with async/await instead of chained `.then()` calls
-- Chaining two requests where the second needs data from the first
-- Showing loading and error states so the page never looks stuck
+- async/await reads top to bottom, much easier to follow than a chain of `.then()` calls
+- The character JSON only has a URL for the home world, so I need a second `fetch` that waits for the first
+- Returning `'Unknown'` from the planet request keeps the card working even if that call breaks
+- Disabling the button while loading is the simplest way to stop double requests
 
 ---
 

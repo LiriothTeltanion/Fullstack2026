@@ -8,11 +8,11 @@
 
 </div>
 
-Unit tests for the page load timer; run them from the `Modules` folder with `python -m unittest discover -s tests` (they need `requests` installed).
+Local unit tests for the timer. Run them from the `Modules` folder with `python -m unittest discover -s tests`, after installing `requests`.
 
 ## Contents
 
-- [`test_timer.py`](test_timer.py) — 2 tests with a fake session: one measurement and a two-attempt benchmark
+- [`test_timer.py`](test_timer.py): 2 tests with a fake session, one single measurement and one two-attempt benchmark
 
 ---
 

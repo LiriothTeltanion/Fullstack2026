@@ -8,15 +8,15 @@
 
 </div>
 
-The exercise tiers and the mini project of Day 3.
+Four exercise tiers plus the Sign In form mini project.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/) — change an article, read a form, highlight words, sphere volume
-- [`ExercisesXPAnimations/`](ExercisesXPAnimations/) — `setTimeout` / `setInterval` timer and a moving box
-- [`ExercisesXPGold/`](ExercisesXPGold/) — music select, delete colors and a shopping list built from JavaScript
-- [`ExercisesXPNinja/`](ExercisesXPNinja/) — tip calculator, email validation and geolocation
-- [`MiniProjectCreateaSignInForm/`](MiniProjectCreateaSignInForm/) — Sign In / Sign Up double slider
+- [`ExercisesXP/`](ExercisesXP/): editing an article, reading a form, hover highlights and a sphere volume
+- [`ExercisesXPAnimations/`](ExercisesXPAnimations/): paragraphs added on a timer and a box that slides
+- [`ExercisesXPGold/`](ExercisesXPGold/): a genre select, removing colors and a shopping list made in JS
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): tip calculator, email check and my location
+- [`MiniProjectCreateaSignInForm/`](MiniProjectCreateaSignInForm/): a sliding Sign In / Sign Up card
 
 ---
 

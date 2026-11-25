@@ -7,7 +7,7 @@ from _loader import find_one, load_file
 fake_requests = types.ModuleType("requests")
 fake_requests.Session = lambda: None
 sys.modules.setdefault("requests", fake_requests)
-mod = load_file("nova_timer", find_one("Week*/**/DailyChallenge/Modules/timer.py"))
+mod = load_file("fullstack_timer", find_one("Week*/**/DailyChallenge/Modules/timer.py"))
 
 class MockResponse:
     status_code = 200

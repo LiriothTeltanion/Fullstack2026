@@ -8,17 +8,17 @@
 
 </div>
 
-Week 4 of the bootcamp: modern array and object methods, HTML forms with GET and POST, promises, and `fetch` with async/await.
+The fourth week of the bootcamp. It opens with array and object methods, moves on to forms with GET and POST, and ends with promises and `fetch` with async/await.
 
 ## Contents
 
 | Folder | What it is |
 |---|---|
-| [`Day1AdvancedArrayMethods/`](Day1AdvancedArrayMethods/) | `find`, `sort`, `forEach`, `map`, `reduce` and `flat` |
-| [`Day2AdvancedObjectMethods/`](Day2AdvancedObjectMethods/) | Destructuring, `Object.entries`, classes and references |
+| [`Day1AdvancedArrayMethods/`](Day1AdvancedArrayMethods/) | `find`, `sort`, `forEach`, `map`, `reduce` and `flat`, mostly in TypeScript |
+| [`Day2AdvancedObjectMethods/`](Day2AdvancedObjectMethods/) | Destructuring, `Object.entries`, classes and object references |
 | [`Day3HTTPAndFormMethodGETAndPOST/`](Day3HTTPAndFormMethodGETAndPOST/) | GET and POST forms, query strings, JSON and a quote app |
-| [`Day4AsynchronousJavaScript/`](Day4AsynchronousJavaScript/) | Creating and chaining promises |
-| [`Day5FetchAndAsyncAwait/`](Day5FetchAndAsyncAwait/) | `fetch`, async/await and error handling with real APIs |
+| [`Day4AsynchronousJavaScript/`](Day4AsynchronousJavaScript/) | Making promises and chaining them |
+| [`Day5FetchAndAsyncAwait/`](Day5FetchAndAsyncAwait/) | `fetch` and async/await against Giphy and SWAPI |
 
 ---
 

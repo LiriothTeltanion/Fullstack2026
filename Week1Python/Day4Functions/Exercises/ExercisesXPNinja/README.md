@@ -8,7 +8,7 @@
 
 </div>
 
-The harder Day 4 set, all in [xpninjafunctionssingle.py](xpninjafunctionssingle.py): building full names, translating to and from Morse code, printing text inside a star box, and writing insertion sort by hand.
+Four harder function exercises in [xpninjafunctionssingle.py](xpninjafunctionssingle.py): putting a full name together with proper capitals, a Morse code translator that works both ways, a star frame around any number of words, and insertion sort written by hand.
 
 ## ▶️ How to run
 
@@ -16,14 +16,13 @@ The harder Day 4 set, all in [xpninjafunctionssingle.py](xpninjafunctionssingle.
 python xpninjafunctionssingle.py
 ```
 
-It runs a short demo for each of the four exercises:
+Each exercise has a short demo function, and they run one after the other:
 
 ```
 === Exercise 1: Names ===
 John Hooker Lee
 Bruce Lee
 Bruce O'Connor-Smith Lee
-
 === Exercise 2: Morse ===
 'SOS HELP 123' -> '... --- ... / .... . .-.. .--. / .---- ..--- ...--'
 ...
@@ -36,11 +35,13 @@ After:  [17, 20, 26, 31, 44, 54, 55, 77, 93]
 
 | Function | What it does |
 |---|---|
-| `get_full_name()` | Takes keyword-only arguments and an optional middle name: `get_full_name(first_name="john", middle_name="hooker", last_name="lee")` gives `'John Hooker Lee'`. |
-| `smart_cap()` | Fixes the capitalization, including hyphens and apostrophes: `"o'connor-smith"` becomes `"O'Connor-Smith"`. |
-| `text_to_morse()` / `morse_to_text()` | Use two dictionaries (one is the reverse of the other). Letters are separated by spaces and words by ` / `. Unsupported characters raise a `ValueError`. |
-| `box_printer(*strings)` | Accepts any number of strings, pads them to the longest one, prints the star frame and also returns it. |
-| `insertion_sort()` | Sorts the list in place, like sorting cards in your hand: bigger items shift right and the current one drops into its spot. |
+| `get_full_name(*, first_name, last_name, middle_name=None)` | Keyword-only arguments. The middle name is optional, and an empty first or last name raises `ValueError`. |
+| `smart_cap(name)` | Trims, lowercases and capitalizes each piece around `-` and `'`, so `" o'connor-smith "` becomes `O'Connor-Smith`. |
+| `text_to_morse()` / `morse_to_text()` | Letters are separated by a space and words by ` / `. The decode dictionary is the encode one flipped. A character with no Morse code raises `ValueError`. |
+| `box_printer(*strings)` | Pads every string to the longest one with `ljust()`, prints the frame and also returns it. |
+| `insertion_sort(alist)` | Sorts in place: bigger items slide one step right until the current one fits. |
+
+The box demo prints:
 
 ```
 ******************
@@ -55,10 +56,10 @@ After:  [17, 20, 26, 31, 44, 54, 55, 77, 93]
 
 ## 🧠 What I learned
 
-- `*args` lets a function take any number of arguments
-- A reversed dictionary (`{v: k for k, v in d.items()}`) gives a two-way lookup
-- Keyword-only parameters (after `*`) make calls easier to read
-- Insertion sort is O(n²) in the worst case but O(n) when the list is almost sorted
+- `*strings` in the parameters lets the caller pass as many words as they want
+- Flipping a dictionary with `{v: k for k, v in d.items()}` gave me the decoder for free
+- The `*` before the name parameters forces callers to write `first_name=...`, which keeps the order from getting mixed up
+- Insertion sort is slow on a reversed list but very quick when the list is already almost sorted
 
 ---
 

@@ -42,7 +42,7 @@
   <path d="M88 198 H1112" stroke="#1e2d52" stroke-width="8" stroke-linecap="round"/>
   <path class="signal" d="M88 198 H1112" stroke="url(#signal-gradient)" stroke-width="3" stroke-linecap="round" stroke-dasharray="18 22" filter="url(#soft-glow)"/>
 
-  <text x="76" y="55" class="eyebrow">NOVA COURSE OBSERVATORY · EVIDENCE MODE</text>
+  <text x="76" y="55" class="eyebrow">FULLSTACK2026 COURSE OBSERVATORY · TWELVE WEEKS</text>
   <text x="76" y="112" class="title">FULLSTACK 2026</text>
   <text x="76" y="151" class="subtitle">A twelve-week learning repository built in public with explicit evidence boundaries.</text>
   <text x="1124" y="56" text-anchor="end" class="signature">KEVIN CUSNIR · LIRIOTH TELTANION</text>

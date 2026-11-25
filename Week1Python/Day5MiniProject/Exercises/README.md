@@ -8,14 +8,14 @@
 
 </div>
 
-The Day 5 exercises: two terminal games and two sets of challenges.
+Two games and two challenge sets, the practical side of Day 5.
 
 ## Contents
 
-- [`TicTacToe/`](TicTacToe/) — two-player tic-tac-toe with move validation, win and tie detection, and replay
-- [`Hangman/`](Hangman/) — Hangman with ASCII gallows, 6 lives and replay, split into modules
-- [`Challenges1/`](Challenges1/) — 20 small functions on lists, strings and math
-- [`Challenges2/`](Challenges2/) — star patterns with loops and tracing a sorting snippet
+- [`TicTacToe/`](TicTacToe/): X and O take turns typing `row col` until three in a row or a full board
+- [`Hangman/`](Hangman/): guess letters before the gallows fill up, with the game logic in its own class
+- [`Challenges1/`](Challenges1/): twenty little functions, several of them home-made versions of built-ins
+- [`Challenges2/`](Challenges2/): a pyramid and two triangles of stars, then a sorting snippet traced step by step
 
 ---
 

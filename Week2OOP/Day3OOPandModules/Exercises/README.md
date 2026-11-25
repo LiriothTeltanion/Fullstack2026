@@ -8,13 +8,13 @@
 
 </div>
 
-The Day 3 exercises on dunder methods and modules.
+Dunder methods and modules, in three levels of difficulty.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/) — a `Currency` class with operators, random strings, dates, minutes lived and fake users
-- [`ExercisesXPGold/`](ExercisesXPGold/) — next holiday, age on other planets, two regex tasks and a password generator
-- [`ExercisesXPNinja/`](ExercisesXPNinja/) — temperature classes that convert and compare, and a `QuantumParticle`
+- [`ExercisesXP/`](ExercisesXP/): `Currency` operators, random strings, dates, minutes lived and fake users
+- [`ExercisesXPGold/`](ExercisesXPGold/): next holiday, space age, regex and a password generator
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): comparable temperature classes and a `QuantumParticle`
 
 ---
 

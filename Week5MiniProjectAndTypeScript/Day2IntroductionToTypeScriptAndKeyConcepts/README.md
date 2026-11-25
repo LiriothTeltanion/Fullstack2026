@@ -8,14 +8,14 @@
 
 </div>
 
-Day 2 of Week 5: first steps in TypeScript with type annotations, unions, tuples, object types and overloads.
+My first TypeScript day: annotations, unions, tuples, object types and function overloads.
 
 ## Contents
 
 | Folder | What it is |
 |---|---|
-| [`Exercises/`](Exercises/) | Exercises XP: nine basic TypeScript exercises |
-| [`DailyChallenge/`](DailyChallenge/) | Union Type Validator |
+| [`Exercises/`](Exercises/) | Exercises XP: nine small TypeScript exercises in one file |
+| [`DailyChallenge/`](DailyChallenge/) | Union Type Validator, a `typeof` check against a list of types |
 
 ---
 

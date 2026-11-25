@@ -8,12 +8,12 @@
 
 </div>
 
-The Day 4 exercise sets.
+Two exercise sets, both single `.ts` files that Node can run directly.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/) — intersection types, type guards, assertions and generic constraints
-- [`ExercisesXPGold/`](ExercisesXPGold/) — guards on intersection types, generic casting, a generic `Box` and `Queue`
+- [`ExercisesXP/`](ExercisesXP/): intersection types, a `typeof` guard, assertion vs conversion, generic constraints
+- [`ExercisesXPGold/`](ExercisesXPGold/): an `in` guard on an intersection, generic conversion, and the `Box` and `Queue` classes
 
 ---
 

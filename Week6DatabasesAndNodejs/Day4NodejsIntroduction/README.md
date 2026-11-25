@@ -8,14 +8,14 @@
 
 </div>
 
-Node.js basics: CommonJS `require` and ES module `import`, npm packages (`chalk`, `lodash`) and reading and writing files with `fs`.
+My first day with Node.js: `require` and `import`, npm packages (`chalk`, `lodash`) and reading and writing files with `fs`.
 
 ## Contents
 
 | Folder | What it is |
 |---|---|
-| [`Exercises/ExercisesXP/`](Exercises/ExercisesXP/) | Seven small exercises, one folder each |
-| [`DailyChallenge/NodejsAppAndNPM/`](DailyChallenge/NodejsAppAndNPM/) | Three tasks and a script that joins a greeting module, `chalk` and `fs` |
+| [`Exercises/ExercisesXP/`](Exercises/ExercisesXP/) | Seven small exercises, each in its own folder |
+| [`DailyChallenge/NodejsAppAndNPM/`](DailyChallenge/NodejsAppAndNPM/) | Three tasks and a script that combines a greeting module, `chalk` and `fs` |
 
 ---
 

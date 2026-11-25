@@ -8,18 +8,18 @@
 
 </div>
 
-`validateUnionType(value, allowedTypes)` takes a value and a list of type names and returns `true` if the value's `typeof` is one of them, `false` otherwise.
+A small checker: `validateUnionType(value, allowedTypes)` gets a value and a list of type names, and says `true` when `typeof value` is in the list.
 
 ## ▶️ How to run
 
-From this folder (it has its own `package.json`):
+This folder has its own `package.json`, so run these from here:
 
 ```bash
 npm install     # typescript and @types/node
 npm start       # compiles to dist/ (git-ignored) and runs dist/index.js
 ```
 
-`npm run build` only compiles and `npm run dev` recompiles on every change. To type-check it from the repository root:
+`npm run build` only compiles, and `npm run dev` keeps `tsc` watching. From the repository root I can type-check it with:
 
 ```bash
 npm run typecheck:anchor
@@ -45,15 +45,16 @@ function validateUnionType(value: any, allowedTypes: string[]): boolean {
 }
 ```
 
-`validateUnionTypeAlt` does the same with `allowedTypes.includes(typeof value)`.
+There is a second version, `validateUnionTypeAlt`, that is just `allowedTypes.includes(typeof value)`. The script prints both on the same value to show they agree.
 
-`src/index.ts` runs ten cases and prints the value, its type, the allowed types and the result: string, number, boolean (expected to fail), object, array, function, undefined, a `string | number` variable, symbol (expected to fail) and bigint. A form example then checks `username`, `age`, `isSubscribed`, `userId` and `invalidField` (which is `null`) and prints VALID or INVALID for each.
+`src/index.ts` runs ten cases and prints the value, its type, the allowed list and the answer: string, number, boolean (meant to fail), object, array, function, undefined, a `string | number` variable, symbol (meant to fail) and bigint. At the end a form example checks `username`, `age`, `isSubscribed`, `userId` and `invalidField`. That last one is `null`, so it comes out INVALID because `typeof null` is `"object"`.
 
 ## 🧠 What I learned
 
-- `typeof` works at runtime, while union types like `string | number` only exist at compile time
-- `typeof []` and `typeof null` are both `"object"`, so I need `Array.isArray()` or a custom guard to tell them apart
-- Typing parameters and return values, and looping with `for...of`
+- `string | number` is gone after compiling; at runtime all I have is `typeof`
+- An array passes as `"object"`, so this check can't tell an array from a plain object without `Array.isArray()`
+- A `for...of` loop with an early `return true` and `includes()` give the same result; the second is one line
+- Typing the form rows with a `FormField` interface made the `forEach` at the end easy to write
 
 ---
 

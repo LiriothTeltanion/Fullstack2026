@@ -8,11 +8,11 @@
 
 </div>
 
-The Day 2 exercise set.
+Only one set on Day 2.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/) — destructuring, `Object.entries`, classes, inheritance and references
+- [`ExercisesXP/`](ExercisesXP/): nested destructuring, `Object.entries`, a subclass with `super()` and object references
 
 ---
 

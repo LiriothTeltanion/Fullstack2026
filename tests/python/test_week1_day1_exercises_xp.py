@@ -11,7 +11,7 @@ from _loader import find_one, load_file
 
 
 MODULE = load_file(
-    "nova_week1_day1_exercises_xp",
+    "fullstack_week1_day1_exercises_xp",
     find_one(
         "Week1Python/Day1StartingwithPython/Exercises/ExercisesXP/exercisesxp.py"
     ),

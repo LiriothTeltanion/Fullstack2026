@@ -8,13 +8,13 @@
 
 </div>
 
-The Day 3 exercise sets and the quote app.
+Two exercise sets about forms, plus the quote app I built the same day.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/) — a GET form, a POST form and JSON Mario
-- [`ExercisesXPGold/`](ExercisesXPGold/) — a two-page form that reads the query string
-- [`RandomQuoteGenerator/`](RandomQuoteGenerator/) — random quotes, likes, counts and an author filter
+- [`ExercisesXP/`](ExercisesXP/): a GET form, a POST form and JSON Mario, with the script in `app.js`
+- [`ExercisesXPGold/`](ExercisesXPGold/): a form on one page, the submitted values on a second page
+- [`RandomQuoteGenerator/`](RandomQuoteGenerator/): random quotes, likes, counts, new quotes and an author filter
 
 ---
 

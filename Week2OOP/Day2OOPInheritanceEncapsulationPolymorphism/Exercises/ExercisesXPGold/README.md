@@ -8,7 +8,7 @@
 
 </div>
 
-A bank account, a stricter child account and a small ATM menu, all in `exercisesxpgoldinheritance.py`.
+A small banking system in `exercisesxpgoldinheritance.py`: an account you have to log in to, a child account with a minimum balance, and an ATM menu on top.
 
 ## ▶️ How to run
 
@@ -23,20 +23,21 @@ Expected error: Withdrawal denied: balance would drop below minimum (200).
 Withdrew 700. New balance: 300
 ```
 
-The interactive ATM is commented out so the script does not wait for input. Uncomment `ATM([a, b], try_limit=3)` at the bottom to try it.
+That's a quick check with the `kevin` and `maya` accounts. The ATM is commented out so the script doesn't wait for input; uncomment `ATM([a, b], try_limit=3)` to use it.
 
 ## 🎯 The challenge
 
-1. **BankAccount** - `authenticate(username, password)` sets `authenticated`; `deposit()` and `withdraw()` raise `PermissionError` before login and only accept positive whole numbers
-2. **MinimumBalanceAccount** - inherits `BankAccount`, adds `minimum_balance` and overrides `withdraw()` so the balance never drops below it
-3. **ATM** - checks the account list and `try_limit` (an invalid limit falls back to 2), then shows a menu: log in, deposit, withdraw, exit
+1. **BankAccount** - `authenticate(username, password)` sets `authenticated`. Before that, `deposit()` and `withdraw()` raise `PermissionError`, and the amount has to be a positive `int`
+2. **MinimumBalanceAccount** - inherits from `BankAccount`, adds `minimum_balance` and overrides `withdraw()`. Taking 900 out of 1000 with a minimum of 200 raises `ValueError`, taking 700 works
+3. **ATM** - checks the account list and `try_limit` (a bad value falls back to 2), then loops through a main menu, a login with limited tries and an account menu
+
+The plain `BankAccount.withdraw()` has no balance check, so it can go negative.
 
 ## 🧠 What I learned
 
-- Overriding one method in a child class is enough to change its rules
-- Keeping the balance check inside the account class keeps the menu code simple
-- Raising an error is better than printing a warning when an action is not allowed
-- A `try / except` around `int(input())` stops a typo from crashing the ATM
+- To change the withdraw rule, the child class overrides one method and keeps everything else
+- `PermissionError` and `ValueError` stop a bad action, while a `print` would let it go through
+- In the ATM menu, `try / except` around `int(input())` turns a typo into an `Error:` line, not a crash
 
 ---
 

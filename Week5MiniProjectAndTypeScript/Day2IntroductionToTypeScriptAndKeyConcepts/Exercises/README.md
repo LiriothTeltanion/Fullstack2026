@@ -8,11 +8,11 @@
 
 </div>
 
-The Day 2 exercise set.
+One exercise set for this day.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/) — nine exercises from Hello World to function overloading
+- [`ExercisesXP/`](ExercisesXP/): nine exercises, from Hello World up to function overloading
 
 ---
 

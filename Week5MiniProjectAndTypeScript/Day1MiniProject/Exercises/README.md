@@ -8,11 +8,11 @@
 
 </div>
 
-The Day 1 exercise app.
+The exercise for this day is a single app.
 
 ## Contents
 
-- [`Pokedex/`](Pokedex/) — a Pokédex device in the browser with random, previous and next Pokémon from PokeAPI
+- [`Pokedex/`](Pokedex/): a Pokédex device in the browser, with random, previous and next Pokémon from PokeAPI
 
 ---
 

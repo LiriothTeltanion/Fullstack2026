@@ -8,12 +8,12 @@
 
 </div>
 
-The modules that [main.py](../main.py) imports for the two-sum challenge.
+What [main.py](../main.py) imports for the two-sum challenge.
 
 ## Contents
 
-- [`pairs.py`](pairs.py) — `find_value_pairs_hash()` and `find_value_pairs_two_pointer()`
-- [`demodata.py`](demodata.py) — `make_dataset()` builds the random list and returns it with the target 3728
+- [`pairs.py`](pairs.py): the two solvers, `find_value_pairs_hash()` with a `Counter` and `find_value_pairs_two_pointer()` on a sorted copy
+- [`demodata.py`](demodata.py): `make_dataset()`, which makes the random numbers (seed optional) and returns them with the target 3728
 
 ---
 

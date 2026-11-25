@@ -6,7 +6,7 @@
 
 </div>
 
-My solution to the Day 1 daily challenge, in [buildupastring.py](buildupastring.py): it checks that a string has exactly 10 characters, then builds it up one character at a time and shuffles it.
+The program in [buildupastring.py](buildupastring.py) asks for a string and only goes on if it is exactly 10 characters long. Then it prints the string growing one letter per line and finishes with a shuffled copy.
 
 ## ▶️ How to run
 
@@ -27,15 +27,18 @@ abcdefghij
 Jumbled string: acbdgfheji
 ```
 
-The jumbled string changes on every run.
+The jumbled line is different every time I run it.
 
 ## 🎯 The challenge
 
-1. Ask for a string.
-2. Check the length: fewer than 10 characters prints "String not long enough.", more than 10 prints "String too long.", and exactly 10 prints "Perfect string" and continues.
-3. Print the first and last characters.
-4. Use a `for` loop to print the string growing one character per line.
-5. Bonus: print a shuffled version with the same characters.
+I split it into three functions and a `main()`:
+
+| Function | What it does |
+|---|---|
+| `validate_length(text)` | Returns `(False, "String not long enough.")`, `(False, "String too long.")` or `(True, "Perfect string")`. |
+| `build_up_text(text)` | Adds one character per loop step to `built` and prints it. |
+| `jumble_text(text)` | Shuffles `list(text)` with `random.shuffle()` and joins it back. |
+| `main()` | Prints the message, stops if the length is wrong, else prints the first and last characters and calls the other two. |
 
 ## 🧪 Tests
 
@@ -46,13 +49,14 @@ python -m unittest discover -s tests/python -p "test_week1_day1_daily_challenge.
 python -m doctest -v Week1Python/Day1StartingwithPython/DailyChallenge/BuildUpAString/buildupastring.py
 ```
 
-5 tests in [test_week1_day1_daily_challenge.py](../../../../tests/python/test_week1_day1_daily_challenge.py) check the 9, 10 and 11 character boundaries, the build-up output and that the shuffle keeps the same characters.
+5 tests in [test_week1_day1_daily_challenge.py](../../../../tests/python/test_week1_day1_daily_challenge.py) try 9, 10 and 11 characters, check the build-up lines and make sure the shuffle keeps the same letters.
 
 ## 🧠 What I learned
 
-- `s[0]` and `s[-1]` give the first and last characters
-- Adding one character per loop step (`built += ch`) builds the prefixes
-- `random.shuffle()` works on a list, so I convert the string to a list and join it back
+- `s[0]` is the first character and `s[-1]` the last, so I don't need the length for either
+- Returning a `(bool, message)` tuple let `main()` print the message and decide whether to stop
+- Strings can't be shuffled in place, so `jumble_text()` works on `list(text)` and joins it again
+- A random result can still be tested: I compare the sorted letters instead of the order
 
 ---
 

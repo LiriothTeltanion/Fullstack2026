@@ -8,11 +8,11 @@
 
 </div>
 
-The Day 4 daily challenge.
+Just one challenge on Day 4.
 
 ## Contents
 
-- [`TextAnalysis/`](TextAnalysis/) — word counts and text cleanup with a `Text` class and a subclass
+- [`TextAnalysis/`](TextAnalysis/): word counts with a `Text` class and cleanup in a subclass
 
 ---
 

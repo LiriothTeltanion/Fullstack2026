@@ -8,11 +8,11 @@
 
 </div>
 
-The stylesheet for the HTML Form page.
+Styling for the HTML Form page, linked from `../index.html`.
 
 ## Contents
 
-- [`styles.css`](styles.css) — the card layout, inputs, buttons and the output list
+- [`styles.css`](styles.css): color variables, the centered `.wrap`, the cards, inputs, buttons and the `.log` output list
 
 ---
 

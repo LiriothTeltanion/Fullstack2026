@@ -8,11 +8,11 @@
 
 </div>
 
-The script for the Car Inventory page. It uses `document`, so it runs in the browser through `../index.html`, not with Node.
+The Car Inventory script. It needs `document`, so I load it through `../index.html` instead of running it with Node.
 
 ## Contents
 
-- [`app.js`](app.js) — the inventory data, `getCarHonda()`, `sortCarInventoryByYear()` and the button handlers
+- [`app.js`](app.js): the five cars, `getCarHonda()`, `sortCarInventoryByYear()` and the two button handlers
 
 ---
 

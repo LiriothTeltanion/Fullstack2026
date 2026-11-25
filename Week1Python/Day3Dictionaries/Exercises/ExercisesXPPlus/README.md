@@ -8,7 +8,7 @@
 
 </div>
 
-Two extra Day 3 exercises in [exercisesxpplus.py](exercisesxpplus.py): grade summaries with letter grades, and some basic analysis over a list of sales transactions. Everything uses plain dictionaries and lists, no external packages.
+Two bigger dictionary exercises in [exercisesxpplus.py](exercisesxpplus.py). The first turns lists of scores into averages and letter grades. The second takes a list of sales and answers questions like "who bought more than once?" and "which product sold the most units?".
 
 ## ▶️ How to run
 
@@ -34,21 +34,24 @@ most popular: ['Headphones']
 
 | Function | What it does |
 |---|---|
-| `letter_grade(score)` | Walks through `GRADE_THRESHOLDS`: `>= 90` → A, `>= 80` → B, `>= 70` → C, `>= 60` → D, otherwise F. |
-| `calculate_student_grades(grades)` | Returns each student's average and letter, plus the class average. A student with no scores gets `0.0` and `"N/A"`, so there is no division by zero. |
-| `analyse_sales_data(transactions)` | Adds `total_price = price * quantity`, sums totals per product and per customer, keeps transactions above 500 sorted from highest to lowest, finds loyal customers (more than one purchase), averages each product's transactions and finds the most popular product by quantity. It returns a list for the most popular product, so ties are kept. |
+| `letter_grade(score)` | Checks `GRADE_THRESHOLDS` from the top: 90 or more is A, then B, C, D at 80, 70, 60, and F below that. |
+| `calculate_student_grades(grades)` | Average and letter per student, plus the class average. A student with an empty list gets `0.0` and `"N/A"` instead of a division by zero. |
+| `analyse_sales_data(transactions)` | Adds `total_price` to a copy of each sale, then sums per product and per customer, keeps sales over 500 from biggest to smallest, lists customers with more than one purchase, averages each product and finds the product with the most units. |
 
-The `.get(key, 0)` pattern is what I used for every counter:
+Every counter in there uses the same `.get()` trick:
 
 ```python
 product_totals[record["product"]] = product_totals.get(record["product"], 0.0) + total_price
 ```
 
+The most popular product comes back as a list. With this data it is only `['Headphones']` (4 units), but a tie would keep both names.
+
 ## 🧠 What I learned
 
-- Building summaries with dictionaries and `.get()` defaults
-- Sorting a list of dicts with `key=lambda ...` and `reverse=True`
-- Returning a list when there can be a tie instead of picking one value
+- `.get(key, 0)` let me count things without first checking if the key exists
+- Sorting dictionaries by one field is `sort(key=lambda item: item["total_price"], reverse=True)`
+- Copying each sale with `dict(entry)` before adding `total_price` leaves the original data alone
+- Returning a list for "most popular" was simpler than deciding which product wins a tie
 
 ---
 

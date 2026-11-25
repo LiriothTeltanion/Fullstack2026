@@ -8,11 +8,11 @@
 
 </div>
 
-The Day 4 Node.js exercises.
+Day 4's Node.js exercises are all in one XP set.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/) — seven small exercises on modules, npm packages and the `fs` module
+- [`ExercisesXP/`](ExercisesXP/): seven small exercises on modules, npm packages and `fs`
 
 ---
 

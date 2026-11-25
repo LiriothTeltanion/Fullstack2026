@@ -8,13 +8,13 @@
 
 </div>
 
-The three Day 5 mini projects.
+Day 5's three mini projects, each split into a logic file and a menu file.
 
 ## Contents
 
-- [`AnagramChecker/`](AnagramChecker/) — checks a word against a word list and shows its anagrams
-- [`RockPaperScissors/`](RockPaperScissors/) — rock, paper, scissors against the computer with a score summary
-- [`WeatherApp/`](WeatherApp/) — weather, forecasts and air quality from OpenWeatherMap, plus a humidity chart
+- [`AnagramChecker/`](AnagramChecker/): checks a word against a word list and lists its anagrams
+- [`RockPaperScissors/`](RockPaperScissors/): rounds against the computer and a win, loss and draw count
+- [`WeatherApp/`](WeatherApp/): OpenWeatherMap weather, forecasts and air quality, plus a humidity chart
 
 ---
 

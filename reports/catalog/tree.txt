@@ -1,7 +1,7 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-25
-Base HEAD: e4f703e0513021142bc3ba898992a6a68fa6a69a
-Source-index SHA-256 (generated outputs excluded): d97ed622ccf04bd45fccfc9fc7fc76d82b863150b4f45935a8d9ea0f2b8cd934
+Base HEAD: 8ef87128cfc1be259d6045ff533add6e6603dbdd
+Source-index SHA-256 (generated outputs excluded): 862708b7d1df300e0fe491870784c50885b26d3c1958f8c130bbf3c1e1104f97
 Indexed files: 858
 
 .
@@ -24,6 +24,14 @@ Indexed files: 858
 │   ├── readme
 │   │   ├── days
 │   │   │   └── week1-day1-python-foundations.svg
+│   │   ├── hero
+│   │   │   ├── footer-pulse.svg
+│   │   │   ├── readiness-live.svg
+│   │   │   ├── roadmap-horizon.svg
+│   │   │   ├── root-banner.svg
+│   │   │   ├── six-weeks-journey.svg
+│   │   │   ├── stack-galaxy.svg
+│   │   │   └── twelve-week-journey.svg
 │   │   ├── progress
 │   │   │   ├── advanced-algorithm-911e3731b7.svg
 │   │   │   ├── air-management-2c6b6fc9f2.svg
@@ -290,25 +298,17 @@ Indexed files: 858
 │   │   │   ├── week9-redux-f6ec485707.svg
 │   │   │   ├── words-in-the-stars-47bf0873fc.svg
 │   │   │   └── workflows-93d7c4b837.svg
-│   │   ├── ultimate
-│   │   │   ├── nova-footer-pulse.svg
-│   │   │   ├── nova-readiness-live.svg
-│   │   │   ├── nova-roadmap-horizon.svg
-│   │   │   ├── nova-root-banner.svg
-│   │   │   ├── nova-six-weeks-journey.svg
-│   │   │   ├── nova-stack-galaxy.svg
-│   │   │   └── nova-twelve-week-journey.svg
+│   │   ├── cosmic-banner.svg
 │   │   ├── folder-pulse.svg
+│   │   ├── fullstack-banner.svg
+│   │   ├── health-center.svg
 │   │   ├── learning-orbit.svg
-│   │   ├── nova-fullstack-banner.svg
-│   │   ├── nova-readiness-center.svg
-│   │   ├── nova-ultimate-banner.svg
 │   │   ├── README.md
 │   │   ├── stack-pulse.svg
 │   │   └── visual_manifest.json
 │   └── README.md
 ├── reports
-│   └── nova
+│   └── catalog
 │       ├── catalog_manifest.json
 │       ├── exercise_catalog.csv
 │       ├── exercise_catalog.md

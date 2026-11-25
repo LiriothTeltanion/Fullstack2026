@@ -8,7 +8,7 @@
 
 </div>
 
-A small `Farm` class that counts how many animals of each type live on the farm and prints them in a neat column, finishing with "E-I-E-I-0!".
+Old MacDonald had a farm, and here it's a `Farm` class. It counts each type of animal and prints them in a lined-up column that ends with "E-I-E-I-0!".
 
 ## ▶️ How to run
 
@@ -16,7 +16,7 @@ A small `Farm` class that counts how many animals of each type live on the farm 
 python oldmcdonaldsfarm.py
 ```
 
-The script builds McDonald's farm (5 cows, 2 sheep, 12 goats) and prints the full info and a one-line summary:
+The demo farm has 5 cows, 2 sheep and 12 goats. It prints the full info first, then a one-line summary:
 
 ```text
 McDonald's farm
@@ -34,10 +34,10 @@ McDonald's farm has cows, goats and sheeps.
 
 | Method | What it does |
 |---|---|
-| `add_animal(animal_type, count=1)` | Adds to a dictionary, so adding `'sheep'` twice gives 2 sheep |
-| `get_info()` | Lines the animal names up in a column, using the longest name as the width |
-| `get_animal_types()` | Returns the types in alphabetical order |
-| `get_short_info()` | Builds a sentence with plurals and "and" before the last type |
+| `add_animal(animal_type, count=1)` | Adds to the count in a dictionary, so two calls with `'sheep'` give 2 sheep |
+| `get_info()` | Pads every name to the length of the longest one, so the colons line up |
+| `get_animal_types()` | Returns the animal types sorted A to Z |
+| `get_short_info()` | Builds the summary sentence, with an `s` for counts above 1 and "and" before the last type |
 
 ```python
 macdonald = Farm("McDonald")
@@ -48,11 +48,13 @@ macdonald.add_animal('goat', 12)
 print(macdonald.get_info())
 ```
 
+The plural rule only adds an `s`, which is why the summary says "sheeps". A word list of irregular plurals would fix that.
+
 ## 🧠 What I learned
 
-- Storing counts in a dictionary with `dict.get(key, 0)` is simpler than keeping a list of animal objects
-- f-string format specs like `{name:<{width}}` make aligned text output easy
-- Joining a list into natural English ("a, b and c") needs a few edge cases: empty, one item, two items
+- `self.animals.get(animal_type, 0) + count` adds to a count even when the key doesn't exist yet
+- A nested format spec, `{a:<{w}}`, pads text to a width I calculate at runtime
+- A readable "a, b and c" list needs three cases: one item, two items, and more than two
 
 ---
 

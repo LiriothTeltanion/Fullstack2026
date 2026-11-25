@@ -8,11 +8,11 @@
 
 </div>
 
-The remote learning exercise for the OOP week.
+One remote exercise for the OOP week.
 
 ## Contents
 
-- [`MiniProjectVaccines/`](MiniProjectVaccines/) — a vaccination queue with priority, age and family rules
+- [`MiniProjectVaccines/`](MiniProjectVaccines/): a vaccination queue with priority, age and family rules
 
 ---
 

@@ -8,7 +8,7 @@
 
 </div>
 
-A `Video` class with a title, an uploader and a length in seconds, plus a `watch()` method. I make two videos by hand and five more from an array.
+`VideoObjects.ts` defines a `Video` with a title, an uploader and a length in seconds. Two videos are made by hand and five more come out of an array.
 
 ## ▶️ How to run
 
@@ -19,7 +19,7 @@ npx tsc VideoObjects.ts --module commonjs --outDir ~/tmp-ts
 node ~/tmp-ts/VideoObjects.js
 ```
 
-The demo block only runs as CommonJS (`require.main === module`), and inside this repository `.js` files are ES modules, so I compile it to a folder outside the repo first.
+The prints are guarded by `require.main === module`, which needs CommonJS, and the repo marks `.js` as ES modules. That is why the compiled file goes to `~/tmp-ts`.
 
 ```
 Kevin watched all 420 seconds of Intro to TypeScript!
@@ -31,16 +31,16 @@ Alex watched all 360 seconds of Testing 101!
 
 ## 🎯 The challenge
 
-1. **`class Video`** — the constructor takes `title`, `uploader` and `time`.
-2. **`watch()`** — returns `"<uploader> watched all <time> seconds of <title>!"`.
-3. **Two instances** — `video1` and `video2`.
-4. **Bonus** — `videosData` is an array of five plain objects, and `map` turns each one into a `Video`.
+1. **`class Video`**: the constructor stores `title`, `uploader` and `time` as public fields.
+2. **`watch()`**: returns `"<uploader> watched all <time> seconds of <title>!"`.
+3. **Two instances**: `video1` and `video2`.
+4. **Bonus**: `videosData` holds five plain objects typed as `VideoData`, and `map` turns each one into a `Video`.
 
 ## 🧠 What I learned
 
-- A class bundles data and the methods that use it
-- An array of objects with named fields is easy to read and to loop over
-- `map` with `new` creates many instances in one line
+- The class keeps the data and the `watch()` sentence together, so every video formats itself
+- For the bonus I chose an array of objects with named fields, which reads better than positional arrays
+- Mapping plain data through `new Video(...)` creates all the instances in one line
 
 ---
 

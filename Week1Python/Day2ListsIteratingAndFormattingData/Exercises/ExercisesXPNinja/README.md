@@ -8,7 +8,7 @@
 
 </div>
 
-Four harder Day 2 exercises in [exercisesxpninja.py](exercisesxpninja.py), using only the standard library: a formula, list statistics, paragraph analysis and word frequency.
+The four Ninja exercises for Day 2 live in [exercisesxpninja.py](exercisesxpninja.py), standard library only. I wrote each one as a function that returns its result, and `_cli()` does the asking and printing.
 
 ## ▶️ How to run
 
@@ -16,7 +16,7 @@ Four harder Day 2 exercises in [exercisesxpninja.py](exercisesxpninja.py), using
 python exercisesxpninja.py
 ```
 
-The script asks for input in Exercises 1 and 4 and prints everything else on its own:
+It asks for input twice, at the start and at the end. Everything in between prints by itself:
 
 ```
 Enter D values (comma-separated): 100,150,180
@@ -37,16 +37,17 @@ python:2
 
 | Function | What it does |
 |---|---|
-| `q_values()` | Computes `Q = sqrt((2 * C * D) / H)` with `C = 50` and `H = 30` for each comma-separated `D`, rounded to an integer. |
-| `number_report()` | Works on `[3, 47, 99, -80, 22, 97, 54, -23, 5, 7]`: sorted list, sum, first and last items, numbers above 50 and below 10, squares, no duplicates, average, max and min. As a bonus it also calculates sum, average, max and min by hand with a loop. |
-| `analyse_paragraph()` | Counts characters, sentences (`.`, `!`, `?`), words, unique words, non-whitespace characters, average words per sentence and repeated words. With no sentence ending it counts one sentence, so there's no division by zero. |
-| `word_frequency()` | Counts each word in a line. It splits on whitespace only and is case-sensitive, so `Python` and `python` are different, and so are `fun,` and `fun`. |
+| `q_values(d_values)` | `Q = sqrt((2 * C * D) / H)` with `C = 50` and `H = 30`, rounded, for each `D` I type. |
+| `number_report(numbers)` | Takes `NUMS = [3, 47, 99, -80, 22, 97, 54, -23, 5, 7]` and returns a dictionary: the list, the list sorted high to low, sum, first and last, above 50, below 10, squares, no duplicates, average, max and min. It also does sum, average, max and min by hand in one loop. |
+| `analyse_paragraph(text)` | Characters, sentences (counting `.`, `!` and `?`), words, unique words, non-space characters, words per sentence and how many words repeat. If there is no sentence ending it counts one sentence, so the division never fails. |
+| `word_frequency(tokens)` | A `Counter` turned into a dictionary sorted by word. It splits on spaces and keeps case, so `Python` and `python` are separate, and so are `fun,` and `fun`. |
 
 ## 🧠 What I learned
 
-- `collections.Counter` does word counting in one line
-- Writing max, min and sum by hand shows what the built-ins do for me
-- Returning a dictionary from a function keeps related results together
+- `** 0.5` is a square root, so I didn't even need `math.sqrt()`
+- `Counter` counts words in one call, and `sorted(...items())` puts the output in a stable order
+- Doing max and min by hand starts from `numbers[0]`, which would break on an empty list
+- Returning a dictionary from `number_report()` let `_cli()` print the pieces in any order
 
 ---
 

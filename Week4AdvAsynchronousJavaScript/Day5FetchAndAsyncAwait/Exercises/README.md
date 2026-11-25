@@ -8,11 +8,11 @@
 
 </div>
 
-The Day 5 exercise set.
+Day 5 has one exercise page.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/) — four `fetch` and async/await exercises with the Giphy API and SWAPI
+- [`ExercisesXP/`](ExercisesXP/): four buttons that call the Giphy API and SWAPI with `fetch` and async/await
 
 ---
 

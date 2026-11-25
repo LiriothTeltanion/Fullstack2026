@@ -8,7 +8,7 @@
 
 </div>
 
-A script that translates a list of French words to English with the `googletrans` module and prints the result as a dictionary.
+Four French greetings go in, a dictionary of English translations comes out. The translating is done by the `googletrans` module.
 
 ## ▶️ How to run
 
@@ -21,18 +21,18 @@ python dailychallengetranslator.py
 {'Bonjour': 'Hello', 'Au revoir': 'Goodbye', 'Bienvenue': 'Welcome', 'A bientôt': 'See you soon'}
 ```
 
-Without the package or without internet, it prints a warning first and uses a small built-in dictionary for the same four words.
+If the package is missing or there's no internet, it prints a warning and an install hint first, then the same dictionary from a small built-in mapping.
 
 ## 🎯 The challenge
 
-- `translate_words(words, src="fr", dest="en")` imports `Translator` inside the function, translates the whole list in one call and returns `{original: translated}`
-- `main()` tries the live translation and, if anything fails, falls back to the hard-coded mapping while keeping the input order
+- `translate_words(words, src="fr", dest="en")` imports `Translator` inside the function, sends the whole list in one request and returns `{original: translated}`
+- `main()` tries the live version first. On any error it switches to a hard-coded mapping of the four words and keeps the order of `french_words`
 
 ## 🧠 What I learned
 
-- Importing a third-party module inside a function lets the rest of the script run without it
-- `zip()` pairs each original word with its translation in one line
-- A small offline fallback keeps a demo working when the network or a package is missing
+- If the import fails inside `translate_words()`, I raise an `ImportError` with the exact `pip` command in it
+- `zip(words, results)` matches every French word with its translated result, no index needed
+- Having an offline fallback means the demo prints the right dictionary even when the module or the network fails
 
 ---
 

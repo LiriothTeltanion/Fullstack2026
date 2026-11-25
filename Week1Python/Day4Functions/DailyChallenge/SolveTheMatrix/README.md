@@ -8,7 +8,7 @@
 
 </div>
 
-A hidden message is spread over a grid of characters. Reading it column by column and keeping only the letters reveals the sentence.
+There's a sentence hidden in a grid of letters and symbols. If I read the grid down each column and keep only the letters, it comes out. My solution is `decode_matrix()` in [solvethematrix.py](solvethematrix.py).
 
 ## ▶️ How to run
 
@@ -16,9 +16,11 @@ A hidden message is spread over a grid of characters. Reading it column by colum
 python solvethematrix.py
 ```
 
-It prints `This is Matrix`.
+The output is one line: `This is Matrix`.
 
 ## 🎯 The challenge
+
+The grid:
 
 ```
 7ir
@@ -30,10 +32,10 @@ $a
 #t%
 ```
 
-`decode_matrix()` does it in two steps:
+`decode_matrix()` works in two passes:
 
-1. **Read column by column**, top to bottom, left to right. Some rows are shorter than others, so I check `c < len(r)` before reading a character.
-2. **Clean the text**: keep the letters, skip any symbols before the first letter, and turn each group of symbols between letters into one space. Symbols at the very end are dropped.
+1. **Read by columns.** The outer loop goes over column numbers, the inner one over rows. The rows aren't all the same length, so I only read `r[c]` when `c < len(r)`.
+2. **Clean up.** Letters are kept. Symbols before the first letter are skipped, a run of symbols between two letters becomes a single space, and symbols after the last letter are dropped.
 
 ```python
 for c in range(cols):
@@ -42,14 +44,14 @@ for c in range(cols):
             col_read += r[c]
 ```
 
-Column 1 gives `This`, column 2 gives `is Mat` and column 3 gives `rix`, so the result is `This is Matrix`.
+Column 1 gives `This`, column 2 gives `is Mat` and column 3 gives `rix`, which joins into `This is Matrix`.
 
 ## 🧠 What I learned
 
-- Swapping the loop order (columns outside, rows inside) reads a grid by columns
-- Checking the row length avoids an `IndexError` when rows have different lengths
-- A simple flag like `seen_letter` helps decide when a symbol should become a space
-- `str.isalpha()` is an easy filter for letters
+- Putting the column loop outside and the row loop inside is all it takes to read a grid sideways
+- Uneven rows would raise `IndexError` without the `c < len(r)` check
+- The `seen_letter` flag is what stops the leading `7` from turning into a space
+- Looking ahead with a second index `j` let me tell "symbols between words" from "symbols at the end"
 
 ---
 

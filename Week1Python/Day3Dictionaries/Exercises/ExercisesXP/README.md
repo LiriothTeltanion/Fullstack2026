@@ -8,7 +8,7 @@
 
 </div>
 
-Four exercises in [exercisesxp.py](exercisesxp.py) where I practiced the dictionary basics: building one from two lists, looping with `.items()`, editing a nested dictionary, and making several mappings from the same list.
+Four exercises on dictionary basics, all in [exercisesxp.py](exercisesxp.py): a dictionary made from two lists, a cinema bill for a family, a nested brand dictionary I had to edit step by step, and three mappings built from one list of Disney characters.
 
 ## ▶️ How to run
 
@@ -16,7 +16,7 @@ Four exercises in [exercisesxp.py](exercisesxp.py) where I practiced the diction
 python exercisesxp.py
 ```
 
-The script prints every exercise in order. In the middle it asks `Add extra family? (y/n)` for the ticket bonus; type `n` to skip it.
+Everything prints in order. Halfway through it asks `Add extra family? (y/n)` for the ticket bonus, and `n` skips it:
 
 ```
 {'Ten': 10, 'Twenty': 20, 'Thirty': 30}
@@ -37,20 +37,20 @@ US colors: ['pink', 'green']
 
 | Function | What it does |
 |---|---|
-| `build_dict(keys, values)` | Pairs two lists with `zip()`: `["Ten", "Twenty", "Thirty"]` and `[10, 20, 30]` give `{'Ten': 10, 'Twenty': 20, 'Thirty': 30}`. |
-| `ticket_price(age)` | Returns 0 under age 3, 10 from 3 to 12, and 15 above 12. |
-| `cinemax_report(family)` | Loops over the family with `.items()` and adds up the total. |
-| `_bonus_prompt()` | The bonus: adds more family members from the keyboard; negative or non-numeric ages are skipped with a message. |
-| `update_brand()` | Works on a shallow copy of the nested Zara `brand` dictionary: sets `number_stores`, adds `country_creation`, appends "Desigual" to the competitors, removes `creation_date` with `.pop()`, then merges `more_on_zara` with `.update()` (which brings `creation_date` back and sets `number_stores` to 10000). |
-| `brand_summary()` | Collects the clients, the last competitor, the US colors and the keys for printing. |
-| `disney_mappings()` | Builds three dictionaries from one list with `enumerate()`: name → index, index → name, and name → index after `sorted()`. |
+| `build_dict(keys, values)` | `zip()` pairs `["Ten", "Twenty", "Thirty"]` with `[10, 20, 30]`. |
+| `ticket_price(age)` | 0 under 3, 10 from 3 to 12, 15 from 13 up. |
+| `cinemax_report(family)` | Goes through Rick, Beth, Morty and Summer with `.items()`, builds the "pays" lines and the total of 50. |
+| `_bonus_prompt()` | Lets me add more people from the keyboard. A negative age or text is skipped with a warning and it asks again. |
+| `update_brand(brand)` | Edits a copy of the Zara dictionary in the order the exercise asks: `number_stores = 2`, adds `country_creation`, appends "Desigual", pops `creation_date`, then `.update()` with `more_on_zara`. That last step puts `creation_date` back and sets the stores to 10000. |
+| `brand_summary(brand)` | Picks out the clients, the last competitor, the US colours, the key count and the merged dictionary for printing. |
+| `disney_mappings(users)` | Three dictionary comprehensions over `enumerate()`: name to index, index to name, and name to index after `sorted()`. |
 
 ## 🧠 What I learned
 
-- `dict(zip(keys, values))` is the quickest way to pair two lists
-- `.items()` gives key and value together in a loop
-- `.pop(key, None)` removes a key without crashing if it is missing
-- `dict(brand)` is only a shallow copy: the top-level keys are new, but nested lists are still shared
+- `dict(zip(keys, values))` turns two matching lists into a dictionary without a loop
+- `.update()` overwrites keys that already exist, which is why the store count jumps to 10000
+- `.pop("creation_date", None)` doesn't crash if the key is already gone
+- `dict(brand)` copies only the top level, so the competitors list inside is still shared with the original
 
 ---
 

@@ -8,14 +8,14 @@
 
 </div>
 
-Extra OOP practice from the remote learning days: a queue manager and a flight scheduling system.
+Two bigger OOP tasks from the remote learning days, a vaccination queue and a flight scheduler.
 
 ## Contents
 
 | Folder | What it is |
 |---|---|
-| [`Exercises/MiniProjectVaccines/`](Exercises/MiniProjectVaccines/) | A vaccination queue with `Human` and `Queue` classes |
-| [`DailyChallenge/AirManagement/`](DailyChallenge/AirManagement/) | Airlines, airplanes, flights and airports with date-based schedules |
+| [`Exercises/MiniProjectVaccines/`](Exercises/MiniProjectVaccines/) | A vaccination queue made of `Human` and `Queue` classes |
+| [`DailyChallenge/AirManagement/`](DailyChallenge/AirManagement/) | Airlines, planes, flights and airports, with schedules sorted by date |
 
 ---
 

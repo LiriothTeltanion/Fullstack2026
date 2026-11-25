@@ -8,11 +8,11 @@
 
 </div>
 
-The browser script for the Timer exercise. It needs the page, so open `../index.html` instead of running it with `node`.
+Two `setTimeout` calls, one `setInterval` and a click listener on **Clear Interval**. It writes into the page, so open `../index.html` instead of running it with `node`.
 
 ## Contents
 
-- [`app.js`](app.js) — the 2-second alert, the 2-second paragraph and the paragraph interval that stops at 5 or on **Clear Interval**
+- [`app.js`](app.js): the alert, `addParagraph()` and the interval that stops at five paragraphs
 
 ---
 

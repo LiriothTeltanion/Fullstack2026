@@ -8,13 +8,13 @@
 
 </div>
 
-Events, forms and timers: making pages react to clicks, typing, hovering and time.
+Day 3 was all about events. My pages started reacting to clicks, typing, mouse hovers, form submits and timers.
 
 ## Contents
 
 | Folder | What it is |
 |---|---|
-| [`Exercises/`](Exercises/) | Exercises XP, XP Animations, XP Gold, XP Ninja and the Sign In Form mini project |
+| [`Exercises/`](Exercises/) | XP, XP Animations, XP Gold, XP Ninja and the Sign In Form mini project |
 | [`DailyChallenge/`](DailyChallenge/) | Letters and Tell the Story |
 
 ---

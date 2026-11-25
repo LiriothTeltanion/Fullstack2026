@@ -8,13 +8,13 @@
 
 </div>
 
-The three exercise tiers of Day 4.
+XP in the browser, Gold and Ninja in Node.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/) — scope, ternary, arrow and self-invoking functions, the juice bar
-- [`ExercisesXPGold/`](ExercisesXPGold/) — closures, currying and composition in Node
-- [`ExercisesXPNinja/`](ExercisesXPNinja/) — the curried `mergeWords` sentence builder
+- [`ExercisesXP/`](ExercisesXP/): scope predictions, a ternary, IIFEs and the juice bar
+- [`ExercisesXPGold/`](ExercisesXPGold/): closures, currying and `compose`, checked in the terminal
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): `mergeWords`, a sentence built one call at a time
 
 ---
 

@@ -8,12 +8,12 @@
 
 </div>
 
-A currency converter that uses [ExchangeRate-API](https://www.exchangerate-api.com/) to fill two dropdowns with every supported currency and convert an amount with live rates. A switch button (⇅) swaps the two currencies.
+Two dropdowns, an amount and a **Convert** button. The currency list and the rates both come from [ExchangeRate-API](https://www.exchangerate-api.com/), and the ⇅ button swaps the two currencies.
 
 ## ▶️ How to run
 
-1. Create a free ExchangeRate-API account and copy your key.
-2. Copy the template and put your key in `config.js` instead of the placeholder. `config.js` is ignored by Git, so the key stays on your machine.
+1. Make a free ExchangeRate-API account and copy the key.
+2. Copy the template and replace `"replace-me"` with the key. Git ignores `config.js`, so the key stays on the local machine.
 
 ```bash
 cp config.example.js config.js
@@ -21,24 +21,25 @@ cp config.example.js config.js
 
 3. Open `index.html` in a browser, or run `npm run dev` from the repository root and go to `http://localhost:8000/Week5MiniProjectAndTypeScript/Day1MiniProject/DailyChallenge/CurrencyConverter/`.
 
-The defaults are 1 USD to ILS. Pick the currencies, type an amount and click **Convert** or press Enter.
+It starts on 1 USD to ILS. Choose the currencies, type an amount, then click **Convert** or press Enter.
 
 ## 🎯 The challenge
 
 | Function | What it does |
 |---|---|
-| `loadSupportedCurrencies()` | On load, calls `GET /v6/{key}/codes` and fills both dropdowns |
-| `convertCurrency()` | Checks both currencies and a positive amount, then calls `GET /v6/{key}/pair/{from}/{to}/{amount}` |
-| `displayResult()` | Shows `conversion_result` and the `conversion_rate` |
-| `switchCurrencies()` | Swaps "From" and "To" and converts again |
+| `loadSupportedCurrencies()` | On load, calls `GET /v6/{key}/codes`; `populateCurrencySelects()` then fills both dropdowns |
+| `convertCurrency()` | Needs two currencies and an amount above 0, then calls `GET /v6/{key}/pair/{from}/{to}/{amount}` |
+| `displayResult()` | Prints `conversion_result` with 2 decimals and the rate with 4 (`1 USD = … ILS`) |
+| `switchCurrencies()` | Swaps "From" and "To" and converts again if the amount is positive |
 
-A spinner shows during a conversion. If the currencies don't load, the page asks me to check the key; a failed conversion shows "Failed to convert currency. Please try again."
+A spinner shows while a request runs. A bad key leaves "Failed to load currencies. Please check your API key and try again." on the page.
 
 ## 🧠 What I learned
 
-- Using async/await with a real API that needs a key
-- Keeping the key out of Git with a local config file
-- Building dropdowns from API data and showing loading and error states
+- The key lives in a git-ignored `config.js` that sets `window.CURRENCY_CONFIG`, so it never reaches the repo
+- The `pair` endpoint takes the amount in the URL, so the API does the math and I only format the answer
+- `supported_codes` is a list of `[code, name]` pairs, and destructuring them in `forEach` builds both dropdowns in one loop
+- Putting `convertBtn.disabled = false` in `finally` re-enables the button even when the request fails
 
 Exchange rates come from ExchangeRate-API.
 

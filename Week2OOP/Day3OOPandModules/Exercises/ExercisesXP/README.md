@@ -8,7 +8,7 @@
 
 </div>
 
-All seven XP exercises on dunder methods and modules in one script, `xp_oop_modules_all.py`.
+Seven XP exercises live in one script, `xp_oop_modules_all.py`. The first is about dunder methods, the other six each try a different module.
 
 ## ▶️ How to run
 
@@ -34,24 +34,26 @@ Sum is: 20 ✅
 ...
 ```
 
-The random string, the dates and the minutes change on every run. Without Faker, exercise 7 prints how to install it.
+Exercises 3 to 6 change on every run. Without Faker, exercise 7 just prints the install hint.
 
 ## 🎯 The challenge
 
-1. **Currencies** - a `Currency` class with `__str__`, `__repr__`, `__int__`, `__add__`, `__iadd__` and `__radd__`; adding two different currencies raises `TypeError`
-2. **Import** - `sum_two_numbers(a, b)`; the task asked for a separate `func.py`, but I kept the function in the same script
-3. **String module** - a random 5-letter string from `string.ascii_letters` and `random.choice`
-4. **Current date** - today's date with `date.today()`
-5. **Time until January 1st** - days, hours, minutes and seconds left, from a `datetime` subtraction
-6. **Minutes lived** - parses a birthdate with `strptime` and divides `total_seconds()` by 60
-7. **Faker** - `generate_users(n)` builds a list of fake users with a name, an address and a language code
+1. **Currencies** - `Currency` defines `__str__`, `__repr__`, `__int__`, `__add__`, `__iadd__` and `__radd__`. A count of 1 prints `dollar`, anything else gets an `s`. Adding dollars to shekels raises `TypeError`
+2. **Import** - `sum_two_numbers(7, 13)` prints `Sum is: 20`. The task wanted it in its own `func.py`, but I kept it in this file
+3. **String module** - five picks from `string.ascii_letters` with `random.choice`
+4. **Current date** - `date.today()` in ISO format
+5. **Time until January 1st** - subtracts now from next year's January 1st and splits the `timedelta` into days, hours, minutes and seconds
+6. **Minutes lived** - `strptime` reads `1994-06-16`, and `total_seconds() // 60` gives the minutes
+7. **Faker** - `generate_users(n)` returns dicts with `name`, `address` and `language_code`
+
+One leftover bug: `.replace("\n", ", ")` looks for a backslash and an `n`, not a newline, so addresses still print on two lines.
 
 ## 🧠 What I learned
 
-- `a + b`, `a += b` and `5 + a` call three different dunder methods
-- `__radd__` is what makes a number on the left side of `+` work
-- Subtracting two `datetime` objects gives a `timedelta` I can split into units
-- Importing an optional package inside a function keeps the script running without it
+- `c1 + c2`, `c1 += c2` and `5 + c1` end up in three different methods: `__add__`, `__iadd__` and `__radd__`
+- `__add__` returns a plain number, while `__iadd__` changes the object and returns `self`
+- A `timedelta` has no hours field, so I split its `seconds` into hours and minutes with `//` and `%`
+- Putting `from faker import Faker` inside the function means the other six exercises run without it
 
 ---
 

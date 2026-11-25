@@ -8,7 +8,7 @@
 
 </div>
 
-Two small dictionary challenges in [dictionaries.py](dictionaries.py): mapping each letter of a word to its positions, and finding which items I can afford with a given wallet.
+Two problems in [dictionaries.py](dictionaries.py). First, a dictionary that says at which positions each letter of a word appears. Second, a shopping list: given prices as strings like `"$1,000"` and a wallet, which items can I buy?
 
 ## ▶️ How to run
 
@@ -16,7 +16,7 @@ Two small dictionary challenges in [dictionaries.py](dictionaries.py): mapping e
 python dictionaries.py
 ```
 
-It asks for a word, prints the letter map, and then runs the three shopping examples from the exercise:
+I type a word, it prints the letter map and then runs the three shopping examples from the exercise:
 
 ```
 Enter a word: mississippi
@@ -30,9 +30,11 @@ Nothing
 
 | Function | What it does |
 |---|---|
-| `letter_indices(word)` | Loops with `enumerate()` and uses `setdefault()` to start a list the first time a letter shows up. |
-| `to_int(value)` | Turns a price like `"$1,000"` into `1000` by removing the `$` and the commas. |
-| `affordable_items(items, wallet)` | Keeps the items that fit in the wallet and returns them sorted. If the list is empty, the script prints `Nothing`. |
+| `letter_indices(word)` | Walks the word with `enumerate()` and appends each index to that letter's list. |
+| `to_int(value)` | Strips the `$` and the commas so `"$1,000"` becomes `1000`. |
+| `affordable_items(items, wallet)` | Keeps the names whose price is at most the wallet and returns them sorted. `_cli()` prints `Nothing` when the list is empty. |
+
+The heart of the first part is two lines:
 
 ```python
 for idx, ch in enumerate(word):
@@ -45,12 +47,14 @@ for idx, ch in enumerate(word):
 | `$100` | `['Apple', 'Bananas', 'Fan', 'Honey', 'Pan', 'Spoon']` |
 | `$1` | `Nothing` |
 
+The `$100` case includes the Pan at exactly `$100`, because I compare with `<=`.
+
 ## 🧠 What I learned
 
-- `enumerate()` gives the index and the character in one loop
-- `setdefault(key, [])` saves the "is the key already there?" check
-- Cleaning strings with chained `.replace()` before `int()`
-- `sorted()` on a generator returns a new sorted list
+- `setdefault(ch, [])` creates the list the first time a letter shows up and returns the same list after that
+- Prices stored as text need cleaning before any comparison, two `.replace()` calls were enough here
+- `sorted()` accepts a generator directly, so I never built a temporary list
+- Dictionaries keep insertion order, which is why the letter map follows the word
 
 ---
 

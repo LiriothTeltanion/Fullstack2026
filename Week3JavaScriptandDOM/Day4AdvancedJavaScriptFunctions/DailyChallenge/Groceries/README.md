@@ -8,7 +8,7 @@
 
 </div>
 
-Show the difference between copying a value (a string) and sharing a reference (an object), using a `client` name and a `groceries` object.
+A small test of value against reference. I copy a `client` name (a string) and point a second variable at a `groceries` object, then change the originals and watch which copy follows.
 
 ## ▶️ How to run
 
@@ -27,16 +27,16 @@ After changes  -> groceries.totalPrice: 35$ | groceries.other.paid: false
 | `displayGroceries()` | Arrow function that logs each fruit with `forEach`. |
 | `cloneGroceries()` | Copies `client` into `user`, then changes `client` to `Betty`: `user` stays `John`. Points `shopping` at `groceries`, changes `totalPrice` and `other.paid` through `shopping`, and the change shows in `groceries` too. |
 
-Bonus: a `structuredClone(groceries)` copy is changed on its own and the original stays the same.
+For the bonus I made a `structuredClone(groceries)` copy, changed it, and the original didn't move.
 
 More notes are in [README_Groceries.md](README_Groceries.md).
 
 ## 🧠 What I learned
 
-- Strings, numbers and booleans are copied by value
-- Objects and arrays are shared by reference, so a change through one name shows in the other
-- `structuredClone` makes a deep, independent copy, nested objects included
-- Arrow functions are a short way to write small helpers
+- `user = client` copies the string itself, so renaming `client` to Betty doesn't touch `user`
+- `shopping = groceries` copies only the reference, both names point to the same object
+- Even the nested `other.paid` changed through `shopping`, because there is still only one object
+- `structuredClone` gives me a real deep copy that I can change safely
 
 ---
 

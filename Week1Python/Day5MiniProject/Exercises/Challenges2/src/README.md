@@ -8,12 +8,12 @@
 
 </div>
 
-The modules that [main.py](../main.py) runs for Challenges 2.
+The two modules that [main.py](../main.py) runs for Challenges 2.
 
 ## Contents
 
-- [`patterns.py`](patterns.py) — `pattern_a()`, `pattern_b()` and `pattern_c()` draw the star patterns
-- [`ex2analysis.py`](ex2analysis.py) — the commented sorting snippet and a step-by-step trace of it
+- [`patterns.py`](patterns.py): `pattern_a()`, `pattern_b()` and `pattern_c()`, which print and return the star shapes
+- [`ex2analysis.py`](ex2analysis.py): my commented copy of the sorting snippet and the function that traces it step by step
 
 ---
 

@@ -8,7 +8,7 @@
 
 </div>
 
-My own CommonJS module with `add` and `multiply`, used together with the `lodash` package.
+`math.js` is a CommonJS module with `add` and `multiply`. `app.js` loads it together with the `lodash` package and works on a short list of numbers.
 
 ## ▶️ How to run
 
@@ -27,10 +27,10 @@ node app.js
 
 | Function | What it does |
 |---|---|
-| `add(a, b)` | Converts both values with `Number()` and adds them |
-| `multiply(a, b)` | Converts both values with `Number()` and multiplies them |
+| `add(a, b)` | Runs both values through `Number()` and adds them |
+| `multiply(a, b)` | Runs both values through `Number()` and multiplies them |
 
-`app.js` takes `[2, 2, 3, 3, 3, 6]`, removes the repeats with `_.uniq`, sorts them with `_.sortBy`, then uses `reduce` with my two helpers for the sum and the product.
+`app.js` starts from `[2, 2, 3, 3, 3, 6]`. `_.uniq` drops the repeats, `_.sortBy` sorts what's left, and two `reduce` calls use my helpers: the sum starts at 0 and the product starts at 1.
 
 ## 🧪 Tests
 
@@ -40,14 +40,14 @@ From the repository root:
 node --test tests/js/math_helpers.test.mjs
 ```
 
-1 test loads `math.js` and checks that `add(2, 3)` is 5 and `multiply(4, 5)` is 20.
+1 test finds this `math.js`, loads it and checks that `add(2, 3)` is 5 and `multiply(4, 5)` is 20.
 
 ## 🧠 What I learned
 
-- `npm install` reads `package.json` and downloads `lodash` into `node_modules`
-- A local module is required with `./`, a package just by its name
-- `_.uniq` removes duplicates and `_.sortBy` returns a sorted copy
-- Small pure functions are easy to test
+- `npm install` reads `package.json` and puts `lodash` in `node_modules`; that folder stays out of Git
+- `require("./math")` loads my file, while `require("lodash")` with no `./` loads a package
+- The starting value of `reduce` matters: 0 for a sum, 1 for a product
+- Because `add` and `multiply` only return values, the test can check them without running `app.js`
 
 ---
 

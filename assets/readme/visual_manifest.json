@@ -11,11 +11,11 @@
   },
   "assets": [
     {
-      "asset_id": "nova-course-observatory-hero",
-      "path": "assets/readme/ultimate/nova-root-banner.svg",
-      "sha256": "de6b62bca70e212383410ee543e589f9f61349759961a6306c109ff5dd29b24c",
+      "asset_id": "course-observatory-hero",
+      "path": "assets/readme/hero/root-banner.svg",
+      "sha256": "2d5977026a925ab3058fcac869b503ce63d2d0c40440889fb9f6175654f37331",
       "source_kind": "original_repository_svg_with_ai_assistance",
-      "provenance": "Re-authored from the repository's earlier NOVA banner using the local Blue Obsidian visual contract and sanitized week-level evidence.",
+      "provenance": "Re-authored from the repository's earlier banner using the local Blue Obsidian visual contract and sanitized week-level evidence.",
       "new_or_reused": "materially_revised",
       "dimensions": "1200x420",
       "view_box": "0 0 1200 420",
@@ -36,8 +36,8 @@
       "last_reviewed": "2026-08-24T15:04:34+03:00"
     },
     {
-      "asset_id": "nova-twelve-week-evidence-map",
-      "path": "assets/readme/ultimate/nova-twelve-week-journey.svg",
+      "asset_id": "twelve-week-evidence-map",
+      "path": "assets/readme/hero/twelve-week-journey.svg",
       "sha256": "2d5ab57ff2c4d3e493f2ea4d6d4513edd95216fc6c2c818207351b76d7d54305",
       "source_kind": "original_repository_svg_with_ai_assistance",
       "provenance": "Created from Kevin-supplied week-level course titles; no authenticated screenshot or private progress data is embedded.",
@@ -59,8 +59,8 @@
       "last_reviewed": "2026-08-24T15:04:34+03:00"
     },
     {
-      "asset_id": "nova-source-backed-technology-constellation",
-      "path": "assets/readme/ultimate/nova-stack-galaxy.svg",
+      "asset_id": "source-backed-technology-constellation",
+      "path": "assets/readme/hero/stack-galaxy.svg",
       "sha256": "89188bea28ca996894babbd9785228e26824fe188d50627ed75fed84dfb793b3",
       "source_kind": "original_repository_svg_with_ai_assistance",
       "provenance": "Repurposed from the repository's earlier animated technology constellation. Motion was removed and the evidence boundary was rewritten around source presence rather than mastery.",

@@ -8,7 +8,7 @@
 
 </div>
 
-A `Text` class that analyzes a piece of text, and a `TextModification` subclass that cleans it, both in `dailychallengetextanalysis.py`.
+`dailychallengetextanalysis.py` has two classes. `Text` answers questions about a piece of text, and its subclass `TextModification` cleans the text up.
 
 ## ▶️ How to run
 
@@ -28,26 +28,28 @@ remove_stop_words() -> hello hello tiny test isn't lovely hello
 ...
 ```
 
+The demo makes a fresh `TextModification` before each cleaner, because every cleaner overwrites `self.text`.
+
 ## 🎯 The challenge
 
 | Method | What it does |
 |---|---|
-| `Text.word_frequency(word)` | Case-insensitive count of a word, or `None` if it is not there |
-| `Text.most_common_word()` | The most frequent word, using `Counter` |
-| `Text.unique_words()` | A sorted list of the different words |
-| `Text.from_file(path)` | Class method that builds a `Text` from a file |
-| `TextModification.remove_punctuation()` | Strips ASCII punctuation with `str.translate` |
-| `TextModification.remove_stop_words()` | Drops common English words like "the" and "is"; a custom list can be passed in |
-| `TextModification.remove_special_characters()` | Regex cleanup; `keep_basic_punct=True` keeps `.,!?;:'-` |
+| `Text.word_frequency(word)` | Counts a word without caring about case, and returns `None` when it's missing |
+| `Text.most_common_word()` | `Counter(tokens).most_common(1)` |
+| `Text.unique_words()` | Sorted list of the distinct words |
+| `Text.from_file(path)` | A class method that reads a file and returns a `Text` |
+| `TextModification.remove_punctuation()` | Removes ASCII punctuation with `str.maketrans` and `translate` |
+| `TextModification.remove_stop_words()` | Drops words like "the" and "is". You can pass your own list |
+| `TextModification.remove_special_characters()` | Regex cleanup. With `keep_basic_punct=True` it keeps `.,!?;:'-` |
 
-Words are found with the regex `[A-Za-z0-9']+`, so "isn't" stays one word.
+Words come from the regex `[A-Za-z0-9']+`, which keeps "isn't" as one word. One side effect: `remove_stop_words()` rebuilds the text from the lowercase tokens, so the capital letters are gone afterwards.
 
 ## 🧠 What I learned
 
-- A `@classmethod` is a clean way to give a class a second constructor, like `from_file()`
-- A subclass can add new behavior while still using the parent's private helper `_tokenize()`
-- `collections.Counter` finds the most common item in one line
-- Lowercasing before counting makes the analysis case-insensitive
+- `from_file()` as a `@classmethod` gives `Text` a second way to be created
+- `TextModification` reuses the parent's `_tokenize()`, so splitting into words is written only once
+- `remove_punctuation()` also removes the apostrophe, so "Isn't" turns into "Isnt"
+- Returning `None` instead of `0` from `word_frequency()` tells "not there" apart from a count
 
 ---
 

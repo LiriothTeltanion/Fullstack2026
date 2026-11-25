@@ -8,11 +8,11 @@
 
 </div>
 
-The browser script for the Todo List. It needs the page, so open `../index.html` instead of running it with `node`.
+All the logic for the to-do app. It reacts to the Add button, the Enter key, the filter chips and clicks inside the list. Open `../index.html` to use it, since it needs the page and `localStorage`.
 
 ## Contents
 
-- [`app.js`](app.js) — add, toggle, remove and filter tasks, saved in `localStorage`
+- [`app.js`](app.js): loads `todos_v1` from storage, then adds, toggles, removes and filters tasks, saving after every change
 
 ---
 

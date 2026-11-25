@@ -8,7 +8,7 @@
 
 </div>
 
-Three small classes in one file, `exercisesxpgold.py`: a circle, a list wrapper and a restaurant menu manager.
+`exercisesxpgold.py` holds the three Gold classes: `Circle`, `MyList` and a `MenuManager` for a restaurant.
 
 ## ▶️ How to run
 
@@ -26,11 +26,13 @@ Dish 'Soup' updated ✅
 Dish 'Hamburger' removed ✅
 ```
 
+The `Randoms:` line in the `MyList` demo changes on every run.
+
 ## 🎯 The challenge
 
-1. **Circle** - `perimeter()`, `area()` and `describe()`; a radius of 0 or less raises `ValueError`
-2. **MyList** - `reversed_list()`, `sorted_list()` (case-insensitive) and the bonus `random_numbers_like(low, high)`, which returns one random number per letter
-3. **MenuManager** - starts with five dishes and has `add_item`, `update_item`, `remove_item` and `print_menu`; the spice level must be `A` (not spicy), `B` (a little spicy) or `C` (very spicy)
+1. **Circle** - `perimeter()`, `area()` and `describe()`. The constructor refuses a radius of 0 or less with a `ValueError`
+2. **MyList** - `reversed_list()`, `sorted_list()` (ignores case, so `['b', 'A', 'c']` becomes `['A', 'b', 'c']`) and the bonus `random_numbers_like(low, high)`, one random number per letter
+3. **MenuManager** - starts with five dishes. `add_item`, `update_item` and `remove_item` change the list, `print_menu` shows it. Spice has to be `A`, `B` or `C`, anything else raises `ValueError`
 
 ```python
 mm = MenuManager()
@@ -39,12 +41,14 @@ mm.update_item("Soup", 11, "B", False)
 mm.remove_item("Hamburger")   # prints the updated menu
 ```
 
+Adding a dish that's already there doesn't overwrite it. It prints a warning and tells you to use `update_item`.
+
 ## 🧠 What I learned
 
-- A constructor is a good place to reject bad values before the object exists
-- Returning a new list keeps the original data safe from changes
-- Small private helpers like `_find_index()` remove repeated search loops
-- Comparing names with `.strip().lower()` makes lookups forgiving
+- Checking the radius in `__init__` means a broken `Circle` never gets created
+- `reversed_list()` and `sorted_list()` return new lists, and the stored `_letters` stays as it was
+- One helper, `_find_index()`, serves add, update and remove, so the search loop is written once
+- `.strip().lower()` on both sides lets `"soup "` match `"Soup"`
 
 ---
 

@@ -8,18 +8,18 @@
 
 </div>
 
-Day 3 mixed two things: dunder methods that let my classes work with Python's operators, and modules from the standard library (and a couple of third-party ones) instead of writing everything myself.
+Two topics shared Day 3. Dunder methods let my classes use `+`, `<` and friends, and modules (built-in plus a couple from pip) saved me from writing everything by hand.
 
 ## Contents
 
 | Folder | What it is |
 |---|---|
-| [`Exercises/ExercisesXP/`](Exercises/ExercisesXP/) | A `Currency` class with `__add__`, `__iadd__` and friends, random strings, dates, minutes lived, fake users with Faker |
-| [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | Next holiday, age on other planets, two regex tasks and a password generator |
-| [`Exercises/ExercisesXPNinja/`](Exercises/ExercisesXPNinja/) | Temperature classes that convert and compare, and a playful `QuantumParticle` |
-| [`DailyChallenge/Circle/`](DailyChallenge/Circle/) | A `Circle` with radius and diameter properties that can be added, compared and sorted |
-| [`DailyChallenge/Translator/`](DailyChallenge/Translator/) | French to English with `googletrans` |
-| [`DailyChallenge/UserInfo/`](DailyChallenge/UserInfo/) | Gold: read `Name,Age,Score` records and sort them with a lambda |
+| [`Exercises/ExercisesXP/`](Exercises/ExercisesXP/) | A `Currency` class with `__add__` and `__iadd__`, random strings, dates, minutes lived and fake users from Faker |
+| [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | The next holiday, age on other planets, two regex tasks and a password generator |
+| [`Exercises/ExercisesXPNinja/`](Exercises/ExercisesXPNinja/) | Temperature classes that convert and compare, and a toy `QuantumParticle` |
+| [`DailyChallenge/Circle/`](DailyChallenge/Circle/) | A `Circle` with radius and diameter properties that adds, compares and sorts |
+| [`DailyChallenge/Translator/`](DailyChallenge/Translator/) | French words to English with `googletrans` |
+| [`DailyChallenge/UserInfo/`](DailyChallenge/UserInfo/) | Gold: `Name,Age,Score` records sorted with a lambda |
 
 ---
 

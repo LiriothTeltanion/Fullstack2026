@@ -8,11 +8,11 @@
 
 </div>
 
-The Day 4 daily challenge.
+A single daily challenge today, with two parts on one page.
 
 ## Contents
 
-- [`PlayWithWords/`](PlayWithWords/) — `makeAllCaps` and `sortWords` chained together, and a Morse translator built from promises
+- [`PlayWithWords/`](PlayWithWords/): `makeAllCaps` chained into `sortWords`, then text to Morse code through three steps
 
 ---
 

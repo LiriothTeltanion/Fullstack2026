@@ -8,7 +8,7 @@
 
 </div>
 
-Array analysis and destructuring in one TypeScript file: what `map` and `reduce` return, the `index` argument of `map`, nested arrays and a deeply trapped number.
+Four "what does this return?" exercises, written out in `ArraysDestructuringXPGold.ts`. The answers are exported constants, so the file both explains and proves each result.
 
 ## ▶️ How to run
 
@@ -19,7 +19,7 @@ npx tsc ArraysDestructuringXPGold.ts --module commonjs --outDir ~/tmp-ts
 node ~/tmp-ts/ArraysDestructuringXPGold.js
 ```
 
-The demo block only runs as CommonJS (`require.main === module`), and inside this repository `.js` files are ES modules, so I compile it to a folder outside the repo first.
+I compile to `~/tmp-ts` on purpose. Inside the repo every `.js` file is treated as an ES module, and the demo only prints when `require.main === module`, a CommonJS thing.
 
 ```
 Ex1 analyzeMapOutput: [ 2, 4, 6 ]
@@ -34,19 +34,19 @@ Ex4 freed: [ 3 ]
 
 ## 🎯 The challenge
 
-1. **Analyse `map`** — every item is a number, so `[1, 2, 3].map(...)` returns `[2, 4, 6]`.
-2. **Analyse `reduce`** — starting from `[1, 2]` and concatenating `[0, 1]` and `[2, 3]` gives `[1, 2, 0, 1, 2, 3]`.
-3. **The `i` argument** — it is the index, so for six items it goes from 0 to 5.
-4. **Nested arrays** — flatten `[[1], [2], [3], [[[4]]], [[[5]]]]`, join the `greeting` words into sentences, and free the `3` from 26 levels of arrays with my recursive `deepFlatten()`.
+1. **`map` analysis**: every item of `[1, 2, 3]` is a number, so the callback always doubles it and the result is `[2, 4, 6]`.
+2. **`reduce` analysis**: the start value is `[1, 2]`, then `concat` adds `[0, 1]` and `[2, 3]`, giving `[1, 2, 0, 1, 2, 3]`.
+3. **The `i` argument**: it is the index, so for the six items of `arrayNum` it runs from 0 to 5.
+4. **Nested arrays**: flatten `[[1], [2], [3], [[[4]]], [[[5]]]]`, join the `greeting` words into one sentence, and free the `3` buried under 26 levels of brackets with my recursive `deepFlatten()`.
 
-The target for the nested array was `[1, 2, 3, [4], [5]]`. My `arrayFlattened` keeps every number in its own one-item array, so it does not match yet; `arrayNested.flat(2)` gives the target.
+Part 4 is not finished. The target was `[1, 2, 3, [4], [5]]`, but both `arrayFlattened` and `arrayFlattenedOneLine` leave every number in its own one-item array. `arrayNested.flat(2)` would give the target in one call.
 
 ## 🧠 What I learned
 
-- `map` always returns an array of the same length
-- The second argument of `reduce` is the starting value
-- `flat(depth)` removes exactly that many levels of nesting
-- A small recursive function can flatten any depth
+- `map` never changes the length, even when the callback could return `undefined`
+- In `reduce`, the second argument is the accumulator's first value, here a whole array
+- `flat(n)` removes exactly `n` levels, so I need to count the brackets before picking `n`
+- A function that calls itself on every inner array frees a value from any depth
 
 ---
 

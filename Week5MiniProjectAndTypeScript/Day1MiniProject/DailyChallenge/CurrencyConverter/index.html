@@ -369,7 +369,7 @@
         // API Configuration
         // Using a demo API key - for production, get your own key from https://www.exchangerate-api.com/
         // Free tier: 1,500 requests/month
-        const API_KEY = (window.NOVA_CONFIG?.CURRENCY_API_KEY ?? "");
+        const API_KEY = (window.CURRENCY_CONFIG?.CURRENCY_API_KEY ?? "");
         const BASE_URL = 'https://v6.exchangerate-api.com/v6';
 
         // Initialize when DOM is loaded

@@ -8,7 +8,7 @@
 
 </div>
 
-Four small programs in `exercisesxp.py` that practice inheritance, wrapper classes and polymorphism.
+`exercisesxp.py` runs four short programs back to back. Each one practices a different side of inheritance, and they all print a numbered header (`EX1` to `EX4`).
 
 ## ▶️ How to run
 
@@ -30,21 +30,21 @@ LunaDog wins!
 ...
 ```
 
-The trick in exercise 3 is picked with `random.choice`, so that line changes on each run.
+In exercise 3 the trick comes from `random.choice`, so Fido does something different each time.
 
 ## 🎯 The challenge
 
-1. **Pets** - `Bengal`, `Chartreux` and `Siamese` inherit from `Cat`; a `Pets` object calls `walk()` on every cat without caring about the breed
-2. **Dogs** - a `Dog` can bark, has `run_speed()` (weight / age × 10) and `fight()`, where the higher speed × weight wins
-3. **PetDog** - a subclass of `Dog` that calls `super().__init__()`, adds `train()`, `play(*args)` and `do_a_trick()`; an untrained dog prints that it is not trained yet
-4. **Family** - `Family.born()` creates `Person` objects with the family's last name, and `check_majority()` uses `is_18()` to decide if a member may go out
+1. **Pets** - `Bengal`, `Chartreux` and `Siamese` all inherit from `Cat`. `Pets.walk()` loops over the list and calls `walk()` on each cat, whatever the breed
+2. **Dogs** - `Dog` has `bark()`, `run_speed()` (weight / age × 10) and `fight()`. The dog with the bigger speed × weight wins, and equal power is a tie
+3. **PetDog** - extends `Dog` through `super().__init__()` and adds a `trained` flag. `train()` barks and sets it, `play(*args)` takes dogs or plain names, and `do_a_trick()` refuses until the dog is trained (Buddy prints `Buddy is not trained yet`)
+4. **Family** - `born()` creates a `Person` that gets the family's last name. `check_majority()` asks `is_18()` and prints whether that member may go out with friends
 
 ## 🧠 What I learned
 
-- A subclass gets every method of its parent for free and only adds what is new
-- `super().__init__()` is how a child class reuses the parent's setup
-- Polymorphism means one loop can call the same method on different classes
-- `*args` lets `play()` accept any number of dogs or plain names
+- `Siamese` is just `pass`, and it can still walk, because everything comes from `Cat`
+- Calling `super().__init__()` in `PetDog` saved me from copying the name, age and weight lines
+- The same `walk()` call works on three different breeds, which is polymorphism in practice
+- `isinstance(d, str)` let `play()` mix `PetDog` objects and simple strings in one call
 
 ---
 

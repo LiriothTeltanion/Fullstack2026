@@ -8,11 +8,11 @@
 
 </div>
 
-My first npm package in use. The code lives in the `npm-beginner/` folder.
+The first time I used a package from npm. The project sits in `npm-beginner/`.
 
 ## Contents
 
-- [`npm-beginner/`](npm-beginner/) — `app.js` prints three styled lines with `chalk`
+- [`npm-beginner/`](npm-beginner/): `app.js` prints three styled lines with `chalk`
 
 ---
 

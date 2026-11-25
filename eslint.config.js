@@ -17,7 +17,7 @@ const browserExerciseFiles = [
 
 export default defineConfig([
   {
-    name: "nova/ignores",
+    name: "course/ignores",
     ignores: [
       "node_modules/",
       "**/dist/",
@@ -29,7 +29,7 @@ export default defineConfig([
     ],
   },
   {
-    name: "nova/recommended",
+    name: "course/recommended",
     files: curriculumFiles,
     extends: [js.configs.recommended, tseslint.configs.recommended],
     languageOptions: {
@@ -41,7 +41,7 @@ export default defineConfig([
     },
   },
   {
-    name: "nova/browser-exercises",
+    name: "course/browser-exercises",
     files: browserExerciseFiles,
     languageOptions: {
       globals: {
@@ -51,7 +51,7 @@ export default defineConfig([
     },
   },
   {
-    name: "nova/javascript-compatibility",
+    name: "course/javascript-compatibility",
     files: ["**/*.js"],
     rules: {
       // The curriculum intentionally includes CommonJS and guided @ts-ignore
@@ -62,7 +62,7 @@ export default defineConfig([
     },
   },
   {
-    name: "nova/eslint-10-baseline",
+    name: "course/eslint-10-baseline",
     files: curriculumFiles,
     rules: {
       // ESLint 10 added these checks to eslint:recommended. Keep the verified

@@ -8,7 +8,7 @@
 
 </div>
 
-Nine extra Day 2 exercises in [exercisesxpgold.py](exercisesxpgold.py): more list practice, ranges, `index()`, `max()` and a guessing game.
+Nine more Day 2 exercises in [exercisesxpgold.py](exercisesxpgold.py). Most are list and loop practice; the last one is a small guessing game against `random`.
 
 ## ▶️ How to run
 
@@ -39,23 +39,24 @@ games won: 0 games lost: 1
 
 ## 🎯 The challenge
 
-1. **Concatenate lists without `+`** - copy with `list(a)` and add the rest with `.extend(b)`.
-2. **Multiples of 5 and 7** - prints every number from 1500 to 2500 divisible by both (so by 35).
-3. **Check the index** - asks for a name and prints its first index with `.index()`, or "name not found".
-4. **Greatest number** - reads three integers and prints `max(x, y, z)`.
-5. **The alphabet** - labels each letter as a vowel (`aeiou`) or a consonant; `y` counts as a consonant.
-6. **Words and letters** - collects 7 words and one character, then prints where the character first appears in each word with `.find()`.
-7. **Min, max, sum** - for 1 to 1,000,000. Instead of building a list of a million items, I use the Gauss formula `n * (n + 1) // 2`.
-8. **List and tuple** - turns comma-separated input into a list and a tuple of strings.
-9. **Guessing game** - guess a number from 1 to 9 or type `q` to quit; it counts wins and losses and rejects invalid input.
+1. **Concatenate lists**: no `+` allowed, so I copy `a` with `list(a)` and call `.extend(b)` on the copy.
+2. **Multiples of 5 and 7**: every number from 1500 to 2500 where `n % 5 == 0 and n % 7 == 0`.
+3. **Check the index**: looks up a name in a list of game characters (Samus, Cortana, Link…) and prints its first index, or `name not found`.
+4. **Greatest number**: three `int(input())` calls and `max(x, y, z)`.
+5. **The alphabet**: each letter is checked against `"aeiou"`, so `y` ends up as a consonant.
+6. **Words and letters**: 7 words and one character, then `.find()` tells me the first position in each word or says it isn't there.
+7. **Min, max, sum**: for 1 to 1,000,000. I skipped building a million-item list and used `n * (n + 1) // 2`.
+8. **List and tuple**: splits comma-separated input, strips spaces and prints it as a list and as a tuple.
+9. **Guessing game**: a guess from 1 to 9 against `random.randint(1, 9)`, `q` to quit. Text prints `invalid` and 0 or 10 prints `out of range`; neither counts as a game.
 
-Exercises 3, 4, 6, 8 and 9 ask for input.
+Exercises 3, 4, 6, 8 and 9 ask for input. Exercise 4 has no validation, so typing a word there crashes with `ValueError`.
 
 ## 🧠 What I learned
 
-- `extend()` changes the list in place, so I copy first if I need the original
-- Checking `if name in names` before `.index()` avoids a `ValueError`
-- Choosing the right formula can replace a huge loop
+- `extend()` changes the list it's called on, which is why I copy `a` first
+- `if user in names` before `.index()` avoids the `ValueError` for a missing name
+- `.find()` returns -1 instead of failing, so it fits a loop better than `.index()`
+- The Gauss formula gives the same sum as `sum(range(...))` without the big list
 
 ---
 

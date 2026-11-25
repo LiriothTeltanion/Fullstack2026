@@ -8,17 +8,17 @@
 
 </div>
 
-Seven small Node.js exercises (Node 18 or newer). Each one runs inside its own folder, after `npm install` when it uses a package.
+Seven short Node.js exercises (Node 18 or newer). I run each one from its own folder, with `npm install` first when it needs a package.
 
 ## Contents
 
-- [`exercise-1-commonjs-products/`](exercise-1-commonjs-products/) — a product list exported with `module.exports` and a search by name
-- [`exercise-2-esm-average-age/`](exercise-2-esm-average-age/) — an ES module array of people and their average age
-- [`exercise-3-file-manager-commonjs/`](exercise-3-file-manager-commonjs/) — `readFile` and `writeFile` helpers used on two text files
-- [`exercise-4-esm-todo/`](exercise-4-esm-todo/) — a `TodoList` class written as an ES module
-- [`exercise-5-math-app/`](exercise-5-math-app/) — my own `add` and `multiply` module together with `lodash`
-- [`exercise-6-npm-beginner-chalk/`](exercise-6-npm-beginner-chalk/) — a first colorful message with `chalk`
-- [`exercise-7-file-explorer/`](exercise-7-file-explorer/) — copying a file and listing a folder with `fs`
+- [`exercise-1-commonjs-products/`](exercise-1-commonjs-products/): a product list shared with `module.exports` and a search by name
+- [`exercise-2-esm-average-age/`](exercise-2-esm-average-age/): an array of people as an ES module, and their average age
+- [`exercise-3-file-manager-commonjs/`](exercise-3-file-manager-commonjs/): `readFile` and `writeFile` helpers tried on two text files
+- [`exercise-4-esm-todo/`](exercise-4-esm-todo/): a `TodoList` class written as an ES module
+- [`exercise-5-math-app/`](exercise-5-math-app/): my own `add` and `multiply` next to `lodash`
+- [`exercise-6-npm-beginner-chalk/`](exercise-6-npm-beginner-chalk/): a first colored message with `chalk`
+- [`exercise-7-file-explorer/`](exercise-7-file-explorer/): copy a file and list a folder with `fs`
 
 ---
 

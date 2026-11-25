@@ -8,13 +8,13 @@
 
 </div>
 
-Functions with parameters and return values, and my first changes to a page through the DOM.
+The day I started writing functions that take parameters and return values, and also the first time my JavaScript changed a page through the DOM.
 
 ## Contents
 
 | Folder | What it is |
 |---|---|
-| [`Exercises/`](Exercises/) | Exercises XP, XP Gold and XP Ninja |
+| [`Exercises/`](Exercises/) | XP, XP Gold and XP Ninja |
 | [`DailyChallenge/`](DailyChallenge/) | Planets and Words in the Stars |
 
 ---

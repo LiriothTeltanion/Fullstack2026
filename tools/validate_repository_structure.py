@@ -71,7 +71,7 @@ REQUIRED_PATHS = (
     ".learning/intake/README.md",
     ".learning/intake/queue.json",
     ".learning/intake/exercise-intake.schema.json",
-    "reports/nova/exercise_catalog_metadata.csv",
+    "reports/catalog/exercise_catalog_metadata.csv",
     "assets/readme/visual_manifest.json",
     "tools/validate_display_titles.py",
     "tools/validate_readme_visuals.py",
@@ -377,11 +377,11 @@ def validate_catalogs(
     metadata_roots: list[str] = []
     catalogs = (
         (
-            "reports/nova/exercise_catalog.csv",
+            "reports/catalog/exercise_catalog.csv",
             ("path", "source_files", "entry_points", "readme_path", "test_files"),
         ),
-        ("reports/nova/exercise_catalog_metadata.csv", ("path", "entry_points")),
-        ("reports/nova/file_inventory.csv", ("path",)),
+        ("reports/catalog/exercise_catalog_metadata.csv", ("path", "entry_points")),
+        ("reports/catalog/file_inventory.csv", ("path",)),
     )
     for relative, path_columns in catalogs:
         if relative not in tracked:
@@ -398,15 +398,15 @@ def validate_catalogs(
                 problems.append(f"{relative}: missing path column(s): {', '.join(missing_columns)}")
                 continue
             for row_number, row in enumerate(reader, start=2):
-                if relative == "reports/nova/file_inventory.csv" and row.get("path"):
+                if relative == "reports/catalog/file_inventory.csv" and row.get("path"):
                     inventory_paths.add(row["path"].replace("\\", "/"))
-                if relative == "reports/nova/exercise_catalog.csv":
+                if relative == "reports/catalog/exercise_catalog.csv":
                     root = row.get("path", "").replace("\\", "/")
                     if root:
                         exercise_roots.append(root)
                     if not split_catalog_paths(row.get("source_files", "")):
                         problems.append(f"{relative}:{row_number}: exercise row has no indexed source_files")
-                elif relative == "reports/nova/exercise_catalog_metadata.csv":
+                elif relative == "reports/catalog/exercise_catalog_metadata.csv":
                     root = row.get("path", "").replace("\\", "/")
                     if root:
                         metadata_roots.append(root)
@@ -446,7 +446,7 @@ def validate_catalogs(
         root_counts[root] += 1
     for root, count in sorted(root_counts.items()):
         if count > 1:
-            problems.append(f"reports/nova/exercise_catalog.csv: duplicate exercise root ({count} rows): {root}")
+            problems.append(f"reports/catalog/exercise_catalog.csv: duplicate exercise root ({count} rows): {root}")
 
     metadata_root_counts: dict[str, int] = defaultdict(int)
     for root in metadata_roots:
@@ -454,12 +454,12 @@ def validate_catalogs(
     for root, count in sorted(metadata_root_counts.items()):
         if count > 1:
             problems.append(
-                f"reports/nova/exercise_catalog_metadata.csv: duplicate exercise root ({count} rows): {root}"
+                f"reports/catalog/exercise_catalog_metadata.csv: duplicate exercise root ({count} rows): {root}"
             )
     for root in sorted(set(metadata_roots) - set(exercise_roots)):
-        problems.append(f"reports/nova/exercise_catalog.csv: missing versioned metadata root: {root}")
+        problems.append(f"reports/catalog/exercise_catalog.csv: missing versioned metadata root: {root}")
     for root in sorted(set(exercise_roots) - set(metadata_roots)):
-        problems.append(f"reports/nova/exercise_catalog_metadata.csv: missing generated catalog root: {root}")
+        problems.append(f"reports/catalog/exercise_catalog_metadata.csv: missing generated catalog root: {root}")
 
     curriculum_sources = [
         path
@@ -469,17 +469,17 @@ def validate_catalogs(
     for source in curriculum_sources:
         owners = [root for root in exercise_roots if source.startswith(f"{root}/")]
         if not owners:
-            problems.append(f"reports/nova/exercise_catalog.csv: uncatalogued curriculum source: {source}")
+            problems.append(f"reports/catalog/exercise_catalog.csv: uncatalogued curriculum source: {source}")
         elif len(owners) > 1:
             problems.append(
-                f"reports/nova/exercise_catalog.csv: source belongs to {len(owners)} rows: {source} -> {owners}"
+                f"reports/catalog/exercise_catalog.csv: source belongs to {len(owners)} rows: {source} -> {owners}"
             )
 
-    expected_inventory = tracked - {"reports/nova/file_inventory.csv"}
+    expected_inventory = tracked - {"reports/catalog/file_inventory.csv"}
     for item in sorted(expected_inventory - inventory_paths):
-        problems.append(f"reports/nova/file_inventory.csv: missing indexed path: {item}")
+        problems.append(f"reports/catalog/file_inventory.csv: missing indexed path: {item}")
     for item in sorted(inventory_paths - expected_inventory):
-        problems.append(f"reports/nova/file_inventory.csv: unindexed path remains: {item}")
+        problems.append(f"reports/catalog/file_inventory.csv: unindexed path remains: {item}")
     return problems
 
 

@@ -8,13 +8,13 @@
 
 </div>
 
-The daily challenges of Day 1.
+Two small browser challenges and a Node one for the gold level.
 
 ## Contents
 
-- [`DailyChallengeNotBad/`](DailyChallengeNotBad/) — replace `not ... bad` with `good`
-- [`DailyChallengeStars/`](DailyChallengeStars/) — a star triangle with one loop and with two
-- [`BubbleSort/`](BubbleSort/) — gold challenge: `join()` and a descending Bubble Sort
+- [`DailyChallengeNotBad/`](DailyChallengeNotBad/): swaps `not ... bad` for `good` in a sentence
+- [`DailyChallengeStars/`](DailyChallengeStars/): a star triangle, once with one loop and once with two
+- [`BubbleSort/`](BubbleSort/): `join()` separators and a descending Bubble Sort written by hand
 
 ---
 

@@ -6,7 +6,7 @@
 
 </div>
 
-Two extra Day 1 exercises in [exercisesxpgold.py](exercisesxpgold.py): printing repeated lines with one `print()`, and turning a month number into a season.
+Two bonus exercises in [exercisesxpgold.py](exercisesxpgold.py). One prints eight lines with a single `print()`, the other asks for a month and answers with its season.
 
 ## ▶️ How to run
 
@@ -26,26 +26,27 @@ Spring
 
 ## 🎯 The challenge
 
-1. **Hello World - I love Python** - one single `print()` builds all eight lines with string multiplication:
+1. **Hello World - I love Python**: the whole thing is one line, using string multiplication:
 
    ```python
    print("Hello world\n" * 4 + "I love python\n" * 3 + "I love python")
    ```
 
-   The last "I love python" is added without `\n`, so the output ends cleanly.
+   I add the last "I love python" on its own, without `\n`, so there is no empty line at the end.
 
-2. **What is the season?** - `get_valid_month()` keeps asking until the input is a whole number from 1 to 12, and `get_season()` maps the month with tuple membership:
+2. **What is the season?**: `get_valid_month()` loops until it gets a whole number between 1 and 12 (text prints `Please enter a whole number.`). Then `get_season()` checks which tuple the month is in:
 
    ```python
-   if m in (3, 4, 5):
+   if month in SPRING_MONTHS:
        return "Spring"
-   elif m in (6, 7, 8):
+   elif month in SUMMER_MONTHS:
        return "Summer"
-   elif m in (9, 10, 11):
+   elif month in AUTUMN_MONTHS:
        return "Autumn"
-   elif m in (12, 1, 2):
-       return "Winter"
+   return "Winter"
    ```
+
+   The tuples are constants at the top of the file, like `SPRING_MONTHS = (3, 4, 5)`. If `get_season()` gets a bad month it raises `ValueError` instead of quietly saying "Winter".
 
 ## 🧪 Tests
 
@@ -55,13 +56,14 @@ From the repository root:
 python -m unittest discover -s tests/python -p "test_week1_day1_exercises_xp_gold.py" -v
 ```
 
-6 tests in [test_week1_day1_exercises_xp_gold.py](../../../../tests/python/test_week1_day1_exercises_xp_gold.py) check the exact repeated output, all 12 months, invalid values and the retry loop.
+6 tests in [test_week1_day1_exercises_xp_gold.py](../../../../tests/python/test_week1_day1_exercises_xp_gold.py) check the exact eight lines, all 12 months, invalid values and the retry loop.
 
 ## 🧠 What I learned
 
-- `"text\n" * n` replaces a pile of `print()` calls
-- `if m in (3, 4, 5)` reads better than chaining `or`
-- Keeping validation in its own function makes it easy to reuse and test
+- `"text\n" * 4` repeats a string, which beats writing four `print()` calls
+- `month in (3, 4, 5)` is shorter than `month == 3 or month == 4 or month == 5`
+- Named tuples like `WINTER_MONTHS` make the `if` chain read almost like English
+- Keeping the input loop apart from `get_season()` meant I could test the season logic without typing anything
 
 ---
 

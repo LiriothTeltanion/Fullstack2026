@@ -8,11 +8,11 @@
 
 </div>
 
-Print a triangle of stars in two ways: with one loop and with two nested loops.
+A triangle of six rows of stars, drawn twice: once with a single loop and once with two nested loops.
 
 ## ▶️ How to run
 
-Open `index.html` in a browser (or use `npm run dev` from the repo root) and click **One loop** or **Two nested loops**. The pattern appears on the page and in the console.
+Open `index.html` in a browser (or use `npm run dev` from the repo root) and click **One loop** or **Two nested loops**. The triangle shows up on the page and in the console.
 
 ```
 *
@@ -30,16 +30,16 @@ Open `index.html` in a browser (or use `npm run dev` from the repo root) and cli
 | `oneLoop()` | Keeps one `line` string and adds `"* "` to it on each of the 6 rows. |
 | `twoLoops()` | The outer loop counts the rows; the inner loop adds one `"* "` per column up to the row number. |
 
-Both call `.trim()` on each line, so there are no trailing spaces, and both write the result into `<pre id="out">`.
+In both versions each line goes through `.trim()` before I add it, so no row ends with a space. The final text is written into `<pre id="out">`.
 
 More notes are in [README_Stars_Pattern_JS.md](README_Stars_Pattern_JS.md).
 
 ## 🧠 What I learned
 
-- One loop is enough when each line is the previous line plus one star
-- Nested loops are the general way to build rows and columns
-- `.trim()` removes the extra space left by `"* "` at the end of the line
-- `textContent` on a `<pre>` keeps the line breaks
+- When every row is the row before plus one star, a single loop is enough
+- Two nested loops are the version that also works for other shapes
+- `"* "` leaves a space at the end of each row, and `.trim()` cleans it up
+- Setting `textContent` on a `<pre>` keeps my `\n` line breaks visible
 
 ---
 

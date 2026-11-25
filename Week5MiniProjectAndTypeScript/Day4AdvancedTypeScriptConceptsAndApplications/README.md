@@ -8,14 +8,14 @@
 
 </div>
 
-Day 4 of Week 5: intersection types, type guards, type assertions and generics with constraints.
+The last TypeScript day of the week: intersection types, type guards, assertions and generics with constraints.
 
 ## Contents
 
 | Folder | What it is |
 |---|---|
 | [`Exercises/`](Exercises/) | Exercises XP and Exercises XP Gold |
-| [`DailyChallenge/`](DailyChallenge/) | Type Guard with Union Types |
+| [`DailyChallenge/`](DailyChallenge/) | Type Guard with Union Types, sorting a mixed list |
 
 ---
 

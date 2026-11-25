@@ -8,14 +8,14 @@
 
 </div>
 
-Four small browser apps. Each folder has its own `index.html`, `css/` and `js/`.
+Four small browser apps from the remote sessions. Every folder has its own `index.html`, `css/` and `js/`.
 
 ## Contents
 
-- [`exercise1_todo/`](exercise1_todo/) — a to-do list with filters, saved in `localStorage`
-- [`exercise2_color_guess/`](exercise2_color_guess/) — guess the `rgb()` value of a random color
-- [`exercise3_calculator/`](exercise3_calculator/) — a calculator with memory keys
-- [`exercise4_whack_a_mole/`](exercise4_whack_a_mole/) — a 30-second game with top-5 high scores
+- [`exercise1_todo/`](exercise1_todo/): a to-do list with filters that survives a reload
+- [`exercise2_color_guess/`](exercise2_color_guess/): guess the `rgb()` of a random color, in three difficulties
+- [`exercise3_calculator/`](exercise3_calculator/): a calculator with memory keys
+- [`exercise4_whack_a_mole/`](exercise4_whack_a_mole/): 30 seconds of hamster hitting and a top-5 table
 
 ---
 

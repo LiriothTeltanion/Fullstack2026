@@ -8,11 +8,11 @@
 
 </div>
 
-The daily challenge of Day 4.
+Just one challenge today.
 
 ## Contents
 
-- [`Groceries/`](Groceries/) — value vs reference with a `client` string and a `groceries` object
+- [`Groceries/`](Groceries/): a `client` string copied by value next to a `groceries` object shared by reference
 
 ---
 

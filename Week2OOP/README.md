@@ -8,18 +8,18 @@
 
 </div>
 
-Week 2 of the Developers Institute full-stack bootcamp was all about object-oriented Python: classes, inheritance, dunder methods, modules, files, JSON and a first taste of APIs.
+The second bootcamp week moved from plain functions to classes: inheritance and dunder methods first, then modules, files, JSON and my first API calls.
 
 ## Contents
 
 | Day | What I built |
 |---|---|
 | [`Day1IntroductiontoOOP/`](Day1IntroductiontoOOP/) | Cats, dogs, a song printer, a zoo and Old MacDonald's farm |
-| [`Day2OOPInheritanceEncapsulationPolymorphism/`](Day2OOPInheritanceEncapsulationPolymorphism/) | Pet classes, dog fights, a family roster, bank accounts, Game of Life and a pagination class |
-| [`Day3OOPandModules/`](Day3OOPandModules/) | Currency with operators, temperature classes, a `Circle` class, a translator and user info sorting |
-| [`Day4PythonFileIOJSONandAPI/`](Day4PythonFileIOJSONandAPI/) | Sentence generator, JSON menu managers, Giphy calls and text analysis |
-| [`Day5MiniProject/`](Day5MiniProject/) | Anagram checker, rock-paper-scissors, weather app, deck of cards and a page load timer |
-| [`RemoteLearningOOP/`](RemoteLearningOOP/) | Vaccines queue mini project and the air management challenge |
+| [`Day2OOPInheritanceEncapsulationPolymorphism/`](Day2OOPInheritanceEncapsulationPolymorphism/) | Pets, dog fights, a family tree, bank accounts, Game of Life and a `Pagination` class |
+| [`Day3OOPandModules/`](Day3OOPandModules/) | `Currency` with operators, temperature classes, a `Circle`, a translator and user info sorting |
+| [`Day4PythonFileIOJSONandAPI/`](Day4PythonFileIOJSONandAPI/) | A sentence generator, JSON menu editors, Giphy requests and a text analyzer |
+| [`Day5MiniProject/`](Day5MiniProject/) | Anagram checker, rock-paper-scissors, a weather app, a card deck and a page load timer |
+| [`RemoteLearningOOP/`](RemoteLearningOOP/) | A vaccine queue and the air traffic management challenge |
 
 ---
 

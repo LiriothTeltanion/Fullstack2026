@@ -8,7 +8,7 @@
 
 </div>
 
-Week 5 of the bootcamp: three browser apps built on public APIs, then TypeScript from basic types to classes, generics and type guards.
+The week started with three small browser apps that call public APIs, and then moved to TypeScript: basic types first, then classes, generics and type guards.
 
 ## Contents
 

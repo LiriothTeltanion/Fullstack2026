@@ -8,7 +8,7 @@
 
 </div>
 
-Nine beginner TypeScript exercises in one file: annotations, unions, `if...else`, tuples, object types, a DOM type assertion, `switch` and overloads.
+All nine exercises sit in `ExercisesXP_Basics.ts`: typed constants, a union, `if...else`, a tuple, an object type, a DOM type assertion, a `switch` and an overloaded function.
 
 ## ▶️ How to run
 
@@ -19,7 +19,7 @@ npx tsc ExercisesXP_Basics.ts --module commonjs --outDir ~/tmp-ts
 node ~/tmp-ts/ExercisesXP_Basics.js
 ```
 
-The demo block only runs as CommonJS (`require.main === module`), and inside this repository `.js` files are ES modules, so I compile it to a folder outside the repo first.
+The demo at the bottom only runs as CommonJS (`require.main === module`). Inside this repository `.js` files are treated as ES modules, so I compile to a folder outside the repo first.
 
 ```
 Hello, World!
@@ -35,20 +35,21 @@ greet("Kevin"): Hello, Kevin!
 | Function | What it does |
 |---|---|
 | `describeNumberSign(n)` | Returns `positive`, `negative` or `zero` |
-| `getDetails(name, age)` | Returns a tuple `[string, number, string]` with a greeting |
-| `createPerson(name, age)` | Returns an object of type `Person` |
-| `setInputValueById(id, value)` | Asserts the element is an `HTMLInputElement` and sets its value; does nothing outside a browser |
-| `getAction(role)` | A `switch` that maps `admin`, `editor`, `viewer` and `guest` to an action, or `Invalid role` |
-| `greet()` / `greet(name)` | Two overload signatures with one implementation; the default is `there` |
+| `getDetails(name, age)` | Returns the tuple `[string, number, string]`, the last item a greeting |
+| `createPerson(name, age)` | Builds an object of type `Person` |
+| `setInputValueById(id, value)` | Treats the element as an `HTMLInputElement` and sets its value; outside a browser it just returns |
+| `getAction(role)` | Trims and lowercases the role, then a `switch` with grouped cases (`admin`/`owner`/`superuser`, `editor`/`author`/`contributor`, …) returns the action or `Invalid role` |
+| `greet()` / `greet(name)` | Two overload signatures, one body; with no name it says `Hello, there!` |
 
-Exercises 1 to 3 are typed constants: a message, `age` and `fullName`, and an `id` of type `string | number`.
+Exercises 1 to 3 are just typed constants: `helloMessage`, `age` and `fullName`, and `id` typed as `string | number`.
 
 ## 🧠 What I learned
 
-- TypeScript checks types while compiling; the JavaScript that runs has none
-- A tuple fixes both the length and the type of each position
-- `as HTMLInputElement` only tells the compiler what I expect, it checks nothing at runtime
-- Overload signatures describe the calls; one body handles them all
+- The types are only for the compiler; the `.js` that `tsc` writes has none of them
+- A tuple return type pins both the length and the type of each slot
+- `as HTMLInputElement` is a promise I make to the compiler, so I still check that the element exists
+- Stacking `case` labels with no `return` between them lets several roles share one answer
+- With overloads, callers see the clean signatures and one implementation with `name?` does the work
 
 ---
 

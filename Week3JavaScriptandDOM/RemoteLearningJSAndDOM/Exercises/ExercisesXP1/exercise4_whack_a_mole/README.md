@@ -8,11 +8,11 @@
 
 </div>
 
-A 30-second Whack-a-Mole game with a top-5 high score table saved in the browser.
+Whack-a-Mole with a 30-second clock. A hamster 🐹 jumps between nine holes, and the best five scores stay saved in the browser.
 
 ## ▶️ How to run
 
-Open `index.html` in a browser (or use `npm run dev` from the repo root and open this folder), then click **Start (30s)** and click the hamster 🐹 as often as you can.
+Open `index.html` in a browser (or use `npm run dev` from the repo root and open this folder), then click **Start (30s)** and hit the hamster as many times as you can.
 
 ## 🎯 The challenge
 
@@ -25,12 +25,14 @@ Open `index.html` in a browser (or use `npm run dev` from the repo root and open
 | `endGame()` | Stops both intervals, shows `Done!` and checks the high scores. |
 | `maybeRecordHighScore(sc)` | If the score makes the top 5, asks for a name, sorts the list and keeps 5 entries in `localStorage`. |
 
+The Start button is disabled while a game runs, so a second click can't start extra timers.
+
 ## 🧠 What I learned
 
-- Two `setInterval` timers can run side by side, and each needs its own `clearInterval`
-- `localStorage` keeps the high scores after the page is closed
-- Sorting by score and then by time keeps older ties first
-- Optional chaining (`list[4]?.score ?? -1`) handles a list with fewer than 5 scores
+- The clock and the mole each have their own `setInterval`, and `endGame()` has to clear both
+- High scores live under `mole_highscores_v1` in `localStorage`, so they survive closing the tab
+- `b.score - a.score || a.at - b.at` sorts by score, and on a tie the older score stays ahead
+- `list[4]?.score ?? -1` still works when there are fewer than five saved scores
 
 ---
 

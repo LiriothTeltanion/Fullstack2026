@@ -26,6 +26,10 @@ does not reinterpret early work as production-ready code.
 
 ### Changed
 
+- Rewrote the Week 1–6 READMEs in my own voice: what I built, how it works and
+  what I learned, taken from the code, with real sample outputs.
+- Moved the generated catalogs to `reports/catalog/`, renamed the README
+  visuals folder to `assets/readme/hero/` and gave its SVG files neutral names.
 - Gave every README one shared layout, modeled on the Coffee Shop Menu Manager:
   exercise READMEs use a kind title, the folder pulse and progress card, How to run,
   The challenge, Tests (when they exist), What I learned and the same author block;

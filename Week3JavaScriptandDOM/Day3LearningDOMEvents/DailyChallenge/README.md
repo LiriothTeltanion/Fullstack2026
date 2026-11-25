@@ -8,12 +8,12 @@
 
 </div>
 
-The daily challenges of Day 3.
+Both challenges for this day are small forms that listen to events.
 
 ## Contents
 
-- [`Letters/`](Letters/) — a text field that keeps only letters
-- [`TellTheStory/`](TellTheStory/) — a Mad Libs story generator with a shuffle button
+- [`Letters/`](Letters/): an input that throws away anything that is not a letter
+- [`TellTheStory/`](TellTheStory/): Mad Libs, with a button to shuffle the story
 
 ---
 

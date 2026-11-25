@@ -8,11 +8,11 @@
 
 </div>
 
-The stylesheet for the Color Guess exercise.
+Navy panels with a big color swatch on top, the answer buttons in a three-column grid, and green or red outlines once I guess.
 
 ## Contents
 
-- [`styles.css`](styles.css) — the target swatch, the option grid, the correct / wrong colors and the hidden Hard inputs
+- [`styles.css`](styles.css): theme variables, the 140px `.swatch`, the `.grid` of options with `.correct` / `.wrong`, and `.hard.hide` to hide the number inputs
 
 ---
 

@@ -8,7 +8,7 @@
 
 </div>
 
-One HTML page with three small exercises about forms and JSON: a GET form, a POST form and a `JSON.stringify` demo with the Mario game object.
+Even though it sits under the array day, this XP set is about forms and JSON. Everything is in one HTML file with an inline script: a GET form, a POST form and the Mario game object turned into JSON.
 
 ## ▶️ How to run
 
@@ -22,16 +22,16 @@ and go to `http://localhost:8000/Week4AdvAsynchronousJavaScript/Day1AdvancedArra
 
 ## 🎯 The challenge
 
-1. **GET form** — sends `name` and `message` to the same page. The data shows up in the URL as a query string, and `parseQuery()` reads it back with `URLSearchParams` and prints it as JSON next to the full URL.
-2. **POST form** — the submit handler calls `preventDefault()`, so no request is sent. It logs the form data with `Object.fromEntries(new FormData(form))` and shows an alert.
-3. **JSON Mario** — **Make JSON** turns `marioGame` into a compact string and a pretty one (`JSON.stringify(obj, null, 2)`), shows both and stops on a `debugger;` line so I can inspect them in DevTools.
+1. **GET form**: `name` and `message` go back to the same page as a query string. On load, `parseQuery()` reads `location.search` with `URLSearchParams`, and `renderGetEcho()` prints the result as JSON next to the full URL.
+2. **POST form**: the submit handler calls `preventDefault()`, so nothing is actually sent. It logs `Object.fromEntries(data.entries())` from a `FormData` and shows an alert that tells me to serve the page over HTTP to see a real POST.
+3. **JSON Mario**: **Make JSON** writes `marioGame` as a compact string and as a pretty one (`JSON.stringify(marioGame, null, 2)`), then hits a `debugger;` line.
 
 ## 🧠 What I learned
 
-- GET puts the form data in the URL, POST puts it in the request body
-- `URLSearchParams` makes reading a query string easy
-- `JSON.stringify` keeps nested objects nested, it just turns them into text
-- `debugger;` pauses the code when DevTools is open
+- With GET the fields end up in the address bar, with POST they travel in the request body
+- Looping over `URLSearchParams` entries turns a query string into a plain object
+- Nested objects stay nested after `JSON.stringify`, they just become one string
+- `debugger;` only pauses when DevTools is open, otherwise the browser skips it
 
 ---
 

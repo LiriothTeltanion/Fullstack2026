@@ -8,11 +8,11 @@
 
 </div>
 
-The remote learning daily challenge for the OOP week.
+The remote daily challenge that went with the OOP week.
 
 ## Contents
 
-- [`AirManagement/`](AirManagement/) — airlines, airplanes, flights and airports with date-based schedules
+- [`AirManagement/`](AirManagement/): airlines, planes, flights and airports with date-sorted schedules
 
 ---
 

@@ -8,7 +8,7 @@
 
 </div>
 
-Three exercises with forms and events: a tip calculator, an email checker with and without a regex, and the browser's geolocation.
+Three exercises with forms and events: a tip calculator, an email checker (once with a regex and once without), and the browser's geolocation.
 
 ## ▶️ How to run
 
@@ -23,14 +23,16 @@ Open `index.html` in a browser (or use `npm run dev` from the repo root). Exerci
 | `isValidEmailRegex(value)` | Tests `/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/`. |
 | `getGeolocation()` | Calls `navigator.geolocation.getCurrentPosition` and prints the latitude and longitude, or the error message. |
 
-The email form shows `✅ Looks like a valid email.` or `❌ Invalid email format.` for the method chosen with the radio buttons. The `#totalTip` block stays hidden until the first calculation.
+The radio buttons pick which checker runs, and the form answers `✅ Looks like a valid email.` or `❌ Invalid email format.`. The `#totalTip` block stays hidden until the first calculation.
+
+The "no regex" version still uses two small regexes at the end for the allowed characters, so it is only regex-free for the structure checks.
 
 ## 🧠 What I learned
 
-- `parseFloat` and `Number.isFinite` catch empty or wrong number inputs
-- `new FormData(form).get("method")` reads the checked radio button
-- Checking an email without a regex means splitting it at `@` and testing each part
-- Geolocation is asynchronous: the answer arrives later in a callback
+- `parseFloat` plus `Number.isFinite` tells me when the bill field is empty or not a number
+- `new FormData(form).get("method")` returns the value of the checked radio button
+- Without a regex, I split the email at the `@` and test the name and the domain separately
+- `getCurrentPosition` doesn't return the location, it calls my success or error callback later
 
 ---
 

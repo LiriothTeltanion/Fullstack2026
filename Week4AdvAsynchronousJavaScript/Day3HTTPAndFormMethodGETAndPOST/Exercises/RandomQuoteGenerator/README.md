@@ -8,7 +8,7 @@
 
 </div>
 
-A quote app in plain JavaScript: it shows a random quote (never the same one twice in a row), lets me like it, count its characters and words, add new quotes and filter them by author.
+My quote app in plain JavaScript. It shows a random quote (never the last one again), and I can like it, count its characters and words, add quotes and step through one author's quotes.
 
 ## ▶️ How to run
 
@@ -18,20 +18,22 @@ Open `index.html` in a browser, or run `npm run dev` from the repository root an
 
 | Function | What it does |
 |---|---|
-| `randomIndex()` | Picks a random index that is different from the last one |
-| `render(idx)` | Shows the quote, the author and the like count |
-| `countChars(includeSpaces)` | Counts characters with or without spaces |
-| `countWords()` | Counts the words of the current quote |
-| `showFiltered(pos)` | Moves through the filtered quotes and wraps around at both ends |
-| `updateFilterStatus()` | Shows `Filtered by author: ... — 1 of N` and turns Previous/Next on or off |
+| `randomIndex()` | Draws again in a `do...while` until the index differs from `lastIndex` |
+| `render(idx)` | Writes the quote, the author and the like count |
+| `countChars(includeSpaces)` | Counts characters with or without whitespace |
+| `countWords()` | Splits on whitespace and counts the words |
+| `showFiltered(pos)` | Moves through the filtered quotes and wraps at both ends |
+| `updateFilterStatus()` | Shows `Filtered by author: ... — 1 of N` and enables Previous/Next |
 
-A new quote gets the next `id` after the highest one. The author filter is case-insensitive and matches part of the name; **Clear** removes it.
+A new quote gets the highest `id` plus one. The filter is case-insensitive and matches part of a name; **Clear** removes it.
+
+One thing I noticed: quote 0 is rendered on load without setting `lastIndex`, so the first **Generate Quote** can show it again.
 
 ## 🧠 What I learned
 
-- A `do...while` loop is handy for "pick again until it is different"
-- Keeping indexes in a separate array makes filtering easy without copying the quotes
-- `(pos + length) % length` wraps an index around in both directions
+- `do...while` fits "pick again until it is different" because the first pick always happens
+- Keeping only the matching indexes in `filtered` avoids copying quote objects
+- `(pos + length) % length` wraps an index in both directions, -1 included
 
 ---
 

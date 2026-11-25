@@ -8,7 +8,7 @@
 
 </div>
 
-Five object-oriented TypeScript exercises in one file.
+`ExercisesXP_OOP.ts` holds five short class and interface exercises, with a demo at the end.
 
 ## ▶️ How to run
 
@@ -19,7 +19,7 @@ npx tsc ExercisesXP_OOP.ts --module commonjs --outDir ~/tmp-ts
 node ~/tmp-ts/ExercisesXP_OOP.js
 ```
 
-The demo block only runs as CommonJS (`require.main === module`), and inside this repository `.js` files are ES modules, so I compile it to a folder outside the repo first.
+The demo is guarded by `require.main === module`, so it needs CommonJS output. Since `.js` files in this repo are ES modules, the compiled file goes to a folder outside it.
 
 ```
 Employee: Ada Lovelace (Engineer)
@@ -31,18 +31,18 @@ User #101: Kevin Cusnir <kevin@example.com> | Membership: gold
 
 ## 🎯 The challenge
 
-1. **`Employee`** — `private` name and salary, a `public` position and a `protected` department; `getEmployeeInfo()` reads the private name.
-2. **`Product`** — a `readonly id`; assigning it again is a compile error. `getProductInfo()` formats the price with two decimals.
-3. **`Animal` → `Dog`** — `Dog` overrides `makeSound()`.
-4. **`Calculator`** — static `add` and `subtract`, called without an instance.
-5. **`User` → `PremiumUser`** — an interface with a `readonly id` and an optional `membershipLevel`; `printUserDetails()` prints it.
+1. **`Employee`**: `private` name and salary, a `public` position and a `protected` department. `getEmployeeInfo()` uses the private name inside the class. The salary is stored but nothing reads it yet.
+2. **`Product`**: `readonly id`, so a second assignment is a compile error. `getProductInfo()` prints the price with two decimals (the demo doesn't call it).
+3. **`Animal` → `Dog`**: `Dog` overrides `makeSound()` with the `override` keyword and returns `bark`.
+4. **`Calculator`**: static `add` and `subtract`, called as `Calculator.add(10, 5)` with no instance.
+5. **`User` → `PremiumUser`**: `User` has a `readonly id`; `PremiumUser` adds an optional `membershipLevel` limited to `"silver" | "gold" | "platinum"`. `printUserDetails()` adds the level only when it is set.
 
 ## 🧠 What I learned
 
-- `private` and `protected` are checked by the compiler, not at runtime
-- `readonly` stops reassignment after the constructor
-- Static methods belong to the class itself
-- An interface can extend another and add optional fields
+- Reading `emp.name` from outside is a compile error, but the compiled JavaScript would still allow it
+- `readonly` can be set once in the constructor and never again
+- `override` makes the compiler confirm that the parent really has that method
+- A string literal union is a quick way to limit a field to a few allowed values
 
 ---
 

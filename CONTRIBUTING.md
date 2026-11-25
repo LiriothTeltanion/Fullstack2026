@@ -13,7 +13,7 @@ creative and portfolio identity.
 Kevin's canonical local clone is:
 
 ```text
-<NovaDev>\002_PROJECTS_NEXUS\040_LEARNING_ACADEMY\_042_Fullstack2026
+<workspace>\002_PROJECTS_NEXUS\040_LEARNING_ACADEMY\_042_Fullstack2026
 ```
 
 Before changing files, verify:
@@ -31,7 +31,7 @@ folders are placeholders and must not receive repository work.
 ## Protected `main` branch
 
 The active
-[`Protect main · PR + NOVA CI`](https://github.com/LiriothTeltanion/Fullstack2026/rules/21315698)
+[`Protect main` ruleset](https://github.com/LiriothTeltanion/Fullstack2026/rules/21315698)
 ruleset makes pull requests the normal path into `main`.
 
 - Every change to `main` must arrive through a pull request.

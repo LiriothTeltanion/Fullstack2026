@@ -8,7 +8,7 @@
 
 </div>
 
-Five harder TypeScript exercises in one file: guards on an intersection type, generic casting, and two generic classes.
+The Gold set in `ExercisesXPGold.ts`: an `in` guard on an intersection type, a generic converter and two generic classes.
 
 ## ▶️ How to run
 
@@ -34,17 +34,19 @@ E5 qStr peek: { value: 'beta' }
 
 | Part | What it does |
 |---|---|
-| `getProperty(obj, prop)` | Exercise 1: reads a property of an `AdminUser` (`User & Admin`), or `undefined` |
-| `castToType(value, ctor)` | Exercise 2: a real runtime conversion through a function like `Number` |
-| `getArrayLength(items)` | Exercise 3: accepts only number or string arrays |
-| `Box<T>` | Exercise 4: a class that implements a generic `Storage<T>` interface |
-| `Queue<T>` | Exercise 5: `add`, `remove`, `peek`, `length` and `isEmpty` for items of type `Item<T>` |
+| `getProperty(obj, prop)` | Exercise 1: on an `AdminUser` (`User & Admin`), checks `prop in obj` and returns the value or `undefined` |
+| `castToType(value, ctor)` | Exercise 2: calls the function I pass in (`Number`, or an arrow that compares with `"true"`) |
+| `getArrayLength(items)` | Exercise 3: `T` must be a number array or a string array |
+| `Box<T>` | Exercise 4: implements a generic `Storage<T>` interface (`add`, `get`) and adds `size()` |
+| `Queue<T>` | Exercise 5: `add`, `remove`, `peek`, `length` and `isEmpty` over `Item<T>` objects |
+
+`Queue.remove()` uses `shift()`, so after removing `alpha`, `peek()` shows `beta`.
 
 ## 🧠 What I learned
 
-- "Casting" in TypeScript is only an assertion, so real conversion needs a function
-- A class can implement a generic interface for any type
-- Constraints on `T` stop wrong types at compile time
+- The `in` operator checks at runtime whether a key exists, which a type alone can't do
+- To turn `"123.45"` into a number I need a real function like `Number`; an assertion would leave it a string
+- Implementing `Storage<T>` forces `Box` to have `add` and `get` with matching types
 
 ---
 

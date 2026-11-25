@@ -8,7 +8,7 @@
 
 </div>
 
-Sorting, `LIMIT`, aliases and my first joins, first on the Day 1 tables and then on the `dvdrental` sample database.
+Sorting, `LIMIT`, aliases and my first joins. I started on the Day 1 tables and then moved to the `dvdrental` sample database.
 
 ## Contents
 

@@ -8,7 +8,7 @@
 
 </div>
 
-A small page that asks for a sentence and replaces the part from `not` to `bad` with `good`, but only when `bad` comes after `not`.
+The page asks me for a sentence. If it has `not` and later `bad`, everything from `not` to `bad` becomes `good`. If not, the sentence comes back as it was.
 
 ## ▶️ How to run
 
@@ -21,13 +21,13 @@ Result: The movie is good, I like it
 
 ## 🎯 The challenge
 
-`checkSentence()` in `script.js`:
+All the work happens in `checkSentence()` in `script.js`:
 
-1. Asks for a sentence with `prompt()` (an empty answer or Cancel shows `No sentence.`).
-2. Finds `wordNot = sentence.indexOf("not")` and `wordBad = sentence.indexOf("bad")`.
-3. If both exist and `wordBad > wordNot`, it builds `before + "good" + after` with `slice()` (`after` starts at `wordBad + 3`).
-4. Otherwise it keeps the sentence as it is.
-5. Shows the result in `#result` and logs the indexes in the console.
+1. `prompt()` asks for the sentence. An empty answer or Cancel shows `No sentence.`
+2. `wordNot = sentence.indexOf("not")` and `wordBad = sentence.indexOf("bad")` find the two words.
+3. When both are found and `wordBad > wordNot`, I glue `before + "good" + after` together with `slice()`. `after` starts at `wordBad + 3`, right after the letters of `bad`.
+4. In any other case the sentence stays the same.
+5. The result goes into `#result`, and the indexes are logged so I can check them.
 
 | Input | Result |
 |---|---|
@@ -38,10 +38,10 @@ More notes and edge cases are in [README_Not_Bad_JS.md](README_Not_Bad_JS.md).
 
 ## 🧠 What I learned
 
-- `indexOf()` returns `-1` when a word is missing, so I check both indexes first
-- `slice()` lets me rebuild a string around the part I want to replace
-- The search is case-sensitive: `Not` or `BAD` are not found
-- `prompt()` returns `null` on Cancel, so I handle that before using the text
+- `indexOf()` gives `-1` for a missing word, so both indexes need a check before I use them
+- Cutting with `slice()` and joining the pieces is an easy way to replace part of a string
+- The search is case-sensitive, so `Not` or `BAD` won't match
+- Cancel on a `prompt()` returns `null`, and I have to handle it before calling string methods
 
 ---
 

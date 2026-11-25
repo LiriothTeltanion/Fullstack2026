@@ -8,7 +8,7 @@
 
 </div>
 
-Four players, their teams and scores. With `forEach` I build the usernames with `!`, the list of winners and the total score.
+`gameInfo` holds four players with a team, a score and some items. Three `forEach` loops turn it into a list of usernames, a list of winners and one total score.
 
 ## ▶️ How to run
 
@@ -19,7 +19,7 @@ npx tsc GoWildcats.ts --module commonjs --outDir ~/tmp-ts
 node ~/tmp-ts/GoWildcats.js
 ```
 
-The demo block only runs as CommonJS (`require.main === module`), and inside this repository `.js` files are ES modules, so I compile it to a folder outside the repo first.
+The console demo sits behind `require.main === module`, which only exists in CommonJS. The repo's `package.json` says `"type": "module"`, so I compile to a folder outside the repository and run it from there.
 
 ```
 usernames: [ 'john!', 'becky!', 'susy!', 'tyson!' ]
@@ -29,17 +29,17 @@ totalScore: 71
 
 ## 🎯 The challenge
 
-1. **`usernames`** — every username with an exclamation mark at the end.
-2. **`winners`** — the usernames of players with a score above 5.
-3. **`totalScore`** — the sum of all scores.
+1. **`usernames`**: each username with `"!"` added at the end.
+2. **`winners`**: the usernames whose score is above 5. John has exactly 5, so he is not a winner.
+3. **`totalScore`**: 5 + 10 + 55 + 1, added up in a `let` counter.
 
-Each part uses `forEach` and pushes into an array or adds to a counter. A comment at the end shows the same results with `map`, `filter` and `reduce`.
+All three are exported. A comment at the bottom shows the same results with `map`, `filter` and `reduce`, as a reference only.
 
 ## 🧠 What I learned
 
-- `forEach` returns nothing, so I fill an outer array or variable
-- `map`, `filter` and `reduce` do the same jobs in one line each
-- A `type` for the player objects catches typos in property names
+- `forEach` has no return value, so the result has to live in an array or counter declared outside the loop
+- The `filter` + `map` version of the winners is shorter, but the prompt asked for `forEach`
+- Typing the players with a `Player` type means a typo like `p.scor` fails at compile time
 
 ---
 

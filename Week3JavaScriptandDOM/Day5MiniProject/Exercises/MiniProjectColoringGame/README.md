@@ -8,7 +8,7 @@
 
 </div>
 
-A pixel drawing board: pick a color, then click and drag over the grid to paint the squares.
+A pixel drawing board. I pick a color, hold the mouse button down and drag across the grid, and every square I pass gets painted.
 
 ## ▶️ How to run
 
@@ -24,16 +24,16 @@ Open `index.html` in a browser (or run `npm run dev` from the repo root and open
 | `mousedown` / `mouseup` on the page | Turn the `drawing` flag on and off, so dragging paints only while the button is held. |
 | `mouseover` on the grid | Paints each cell the mouse passes while `drawing` is on. |
 
-- The color input and 7 quick swatches change the color.
-- The size menu rebuilds the grid at 8, 16, 24 or 32 squares per side (16 by default).
-- **Clear** removes the color from every cell.
+- The color picker and 7 quick swatches change the color. A swatch also updates the picker.
+- The size menu rebuilds the grid at 8, 16, 24 or 32 squares per side (16 to start).
+- **Clear** wipes the color from every cell.
 
 ## 🧠 What I learned
 
-- One listener on the grid can handle every cell (event delegation)
-- A simple `true` / `false` flag turns a click into click-and-drag drawing
-- `createDocumentFragment()` adds hundreds of cells to the page in one step
-- CSS Grid with `repeat(size, minmax(0, 1fr))` keeps the squares even
+- The grid has one `mouseover` listener for all the cells, and `isCell()` filters out everything else
+- A single `drawing` boolean, set on `mousedown` and reset on `mouseup`, is what makes drag-painting work
+- Building the cells inside a `createDocumentFragment()` puts up to 1024 of them on the page in one append
+- `repeat(size, minmax(0, 1fr))` keeps the squares the same width whatever size I choose
 
 ---
 

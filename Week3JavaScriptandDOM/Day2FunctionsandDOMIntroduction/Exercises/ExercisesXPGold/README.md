@@ -8,11 +8,11 @@
 
 </div>
 
-Four small string and array functions, plus a DOM exercise that paints the diagonal of a table red.
+Four little functions for strings and arrays, and one DOM task that paints the diagonal of a table red.
 
 ## ▶️ How to run
 
-Open `index.html` in a browser (or use `npm run dev` from the repo root) and open DevTools → Console for Exercises 1–4. The table on the page shows Exercise 5.
+Open `index.html` in a browser (or use `npm run dev` from the repo root). Exercises 1–4 print in DevTools → Console, and Exercise 5 is the table on the page.
 
 ```
 Exercise 1 — isBlank: true false
@@ -31,12 +31,14 @@ Exercise 4 — isOmnipresent: true false
 | `isOmnipresent(arrOfArrs, value)` | `true` only when the value is in every sub-array. |
 | `colorDiagonalRed()` | Adds the `red` class to `rows[i].cells[i]` of the 5×5 table. |
 
+`colorDiagonalRed()` is wrapped in `( … )()`, so it runs once by itself when the script loads.
+
 ## 🧠 What I learned
 
-- `split(/\s+/)` handles names with extra spaces
-- Comparing a character with its `toUpperCase()` tells me its case
-- Returning `false` early stops the search as soon as one sub-array misses the value
-- `table.rows` and `row.cells` make table work easy without extra selectors
+- Splitting the name with `/\s+/` means double spaces don't break `abbrevName`
+- If a character equals its own `toUpperCase()`, it was already upper case, so I flip it down
+- In `isOmnipresent` I `return false` at the first sub-array without the value, no need to check the rest
+- The diagonal is just "row number = cell number", and `table.rows[i].cells[i]` reads exactly like that
 
 ---
 

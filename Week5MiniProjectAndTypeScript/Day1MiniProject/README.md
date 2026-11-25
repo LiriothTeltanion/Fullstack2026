@@ -8,15 +8,15 @@
 
 </div>
 
-Day 1 of Week 5: three single-page apps that fetch data from public APIs with async/await.
+Three one-page apps, each one fetching JSON from a public API with async/await.
 
 ## Contents
 
 | Folder | What it is |
 |---|---|
 | [`StarWarsWebApp/`](StarWarsWebApp/) | Mini project: a random Star Wars character from SWAPI |
-| [`Exercises/`](Exercises/) | The Pokédex app with PokeAPI |
-| [`DailyChallenge/`](DailyChallenge/) | Currency Converter with ExchangeRate-API |
+| [`Exercises/`](Exercises/) | A Pokédex that talks to PokeAPI |
+| [`DailyChallenge/`](DailyChallenge/) | Currency Converter on top of ExchangeRate-API |
 
 ---
 

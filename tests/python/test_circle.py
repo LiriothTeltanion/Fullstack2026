@@ -2,7 +2,7 @@ import math
 import unittest
 from _loader import find_one, load_file
 
-mod = load_file("nova_circle", find_one("Week*/**/DailyChallenge/Circle/circle.py"))
+mod = load_file("fullstack_circle", find_one("Week*/**/DailyChallenge/Circle/circle.py"))
 
 class CircleTests(unittest.TestCase):
     def test_radius_diameter_and_area(self):

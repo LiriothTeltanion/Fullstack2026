@@ -8,11 +8,11 @@
 
 </div>
 
-The daily challenge of Day 5.
+The Friday challenge is a to-do list.
 
 ## Contents
 
-- [`TodoList/`](TodoList/) — add, tick and delete tasks in a single HTML file
+- [`TodoList/`](TodoList/): add, tick and delete tasks, all in one HTML file
 
 ---
 

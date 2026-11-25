@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/readme/ultimate/nova-root-banner.svg" width="100%" alt="Fullstack2026 twelve-week course map: Weeks 1–6 hold my exercises and projects; Weeks 7–12 are ready for the next lessons.">
+<img src="./assets/readme/hero/root-banner.svg" width="100%" alt="Fullstack2026 twelve-week course map: Weeks 1–6 hold my exercises and projects; Weeks 7–12 are ready for the next lessons.">
 
 <br>
 
@@ -59,7 +59,7 @@ The [course map](.learning/course-map.yml) lists every week and day, and the [di
 
 <div align="center">
 
-<img src="./assets/readme/ultimate/nova-twelve-week-journey.svg" width="100%" alt="Map of Weeks 1–12: Weeks 1–6 hold source code, Weeks 7–12 are ready for upcoming lessons.">
+<img src="./assets/readme/hero/twelve-week-journey.svg" width="100%" alt="Map of Weeks 1–12: Weeks 1–6 hold source code, Weeks 7–12 are ready for upcoming lessons.">
 
 </div>
 
@@ -194,7 +194,7 @@ The [course map](.learning/course-map.yml) lists every week and day, and the [di
 ## 🧬 Technology constellation
 
 <p align="center">
-  <img src="./assets/readme/ultimate/nova-stack-galaxy.svg" width="100%" alt="Technology constellation connecting Python, OOP, HTML and CSS, JavaScript, TypeScript, SQL, Node.js and testing, the technologies used in this repository.">
+  <img src="./assets/readme/hero/stack-galaxy.svg" width="100%" alt="Technology constellation connecting Python, OOP, HTML and CSS, JavaScript, TypeScript, SQL, Node.js and testing, the technologies used in this repository.">
 </p>
 
 | Layer | Technologies and concepts |
@@ -279,7 +279,7 @@ Fullstack2026/
 ├─ Week1Python/ … Week12FinalProject/
 ├─ .learning/          course map, display titles, intake queue
 ├─ assets/readme/      README images
-├─ reports/nova/       generated exercise catalog and file inventory
+├─ reports/catalog/       generated exercise catalog and file inventory
 ├─ tests/python/       Python tests
 ├─ tests/js/           Node tests
 └─ tools/              quality and structure scripts

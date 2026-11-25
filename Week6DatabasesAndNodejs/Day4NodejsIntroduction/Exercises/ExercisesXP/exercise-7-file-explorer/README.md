@@ -8,11 +8,11 @@
 
 </div>
 
-Reading, copying and listing files with `fs`. The code lives in the `file-explorer/` folder.
+Copying a file and listing a folder with `fs`. Both scripts are in `file-explorer/`.
 
 ## Contents
 
-- [`file-explorer/`](file-explorer/) — `copy-file.js` copies `source.txt`, `read-directory.js` lists the folder
+- [`file-explorer/`](file-explorer/): `copy-file.js` copies `source.txt`, `read-directory.js` lists the folder
 
 ---
 

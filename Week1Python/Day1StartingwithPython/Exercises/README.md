@@ -6,13 +6,13 @@
 
 </div>
 
-The Day 1 exercises in three levels, each with its own unit tests.
+Day 1 came in three levels, and I wrote a test file for each one.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/) — nine core exercises, covered by [10 tests](../../../tests/python/test_week1_day1_exercises_xp.py)
-- [`ExercisesXPGold/`](ExercisesXPGold/) — two extra exercises, covered by [6 tests](../../../tests/python/test_week1_day1_exercises_xp_gold.py)
-- [`ExercisesXPNinja/`](ExercisesXPNinja/) — five harder ones, covered by [7 tests](../../../tests/python/test_week1_day1_exercises_xp_ninja.py)
+- [`ExercisesXP/`](ExercisesXP/): the nine main exercises, [10 tests](../../../tests/python/test_week1_day1_exercises_xp.py)
+- [`ExercisesXPGold/`](ExercisesXPGold/): two extras on repeated output and seasons, [6 tests](../../../tests/python/test_week1_day1_exercises_xp_gold.py)
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): five harder ones, [7 tests](../../../tests/python/test_week1_day1_exercises_xp_ninja.py)
 
 ---
 

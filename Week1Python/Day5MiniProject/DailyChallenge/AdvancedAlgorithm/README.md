@@ -8,11 +8,11 @@
 
 </div>
 
-My solution to the two-sum daily challenge: generate 20,000 random numbers and find every pair that adds up to a target (3728 by default). I wrote two versions, a hash-based one in [src/pairs.py](src/pairs.py) and a two-pointer one, so I could compare them. [main.py](main.py) is the command-line runner and [src/demodata.py](src/demodata.py) builds the random list.
+The two-sum challenge: make 20,000 random numbers and find every pair that adds up to a target, 3728 unless I pass another one. I solved it twice so I could compare: a hash-table version and a two-pointer version, both in [src/pairs.py](src/pairs.py). [main.py](main.py) is the command-line runner and [src/demodata.py](src/demodata.py) builds the random list.
 
 ## ▶️ How to run
 
-Run it from this folder. The code uses `int | None` type hints, so it needs Python 3.10 or newer.
+From this folder, with Python 3.10 or newer (the code uses `int | None`):
 
 ```bash
 python main.py                      # 20,000 numbers, target 3728, hash algorithm
@@ -21,7 +21,7 @@ python main.py --algo two-pointer   # use the sorted two-pointer version
 python main.py --n 10000 --target 5000 --sample 5
 ```
 
-Other options: `--low` and `--high` set the number range (0 to 10,000 by default).
+`--low` and `--high` change the range of the numbers, 0 to 10,000 by default.
 
 ```
 === Two-Sum Pairs Finder ===
@@ -31,22 +31,23 @@ Algorithm: hash
 Unique value pairs found: 1369
 Total index-pairs (with multiplicities): 7548
 Time: 1.91 ms
-
 Sample pairs:
 - 0 and 3728 sum to 3728
 - 1 and 3727 sum to 3728
 ...
 ```
 
+The time changes a little from run to run.
+
 ## 🎯 The challenge
 
-Return the unique value pairs `(a, b)` with `a + b = target` and `a ≤ b`, and also count how many index pairs exist when values repeat. With `[1, 2, 2, 5, 5, 5]` and target 7, `(2, 5)` appears as 2 × 3 = 6 index pairs.
+The goal is the list of different value pairs `(a, b)` with `a + b = target` and `a ≤ b`, plus how many index pairs there are when values repeat. In `[1, 2, 2, 5, 5, 5]` with target 7, the pair `(2, 5)` counts as 2 × 3 = 6 index pairs.
 
 | Function | What it does |
 |---|---|
-| `make_dataset(n, low, high, seed)` | Builds the random list and returns it with the target. |
-| `find_value_pairs_hash(nums, target)` | O(n). Counts every number with `Counter`, then for each unique `a` checks whether `target - a` is there and multiplies the counts. When `a + a = target` it needs at least two copies, and the count is `n × (n - 1) / 2`. Only this version returns the index-pair total. |
-| `find_value_pairs_two_pointer(nums, target)` | O(n log n). Sorts a copy, puts one pointer at each end and moves them inward depending on whether the sum is too small or too big. It returns unique value pairs only. |
+| `make_dataset(n, low, high, seed)` | Fills a list with `random.randint(low, high)` and returns it with the target. A seed makes the list repeatable. |
+| `find_value_pairs_hash(nums, target)` | O(n). A `Counter` of all values, then for each different `a` I check if `target - a` exists and multiply the two counts. If `a` is exactly half the target it needs at least two copies, and the count is `c × (c - 1) / 2`. Only this version gives the index-pair total. |
+| `find_value_pairs_two_pointer(nums, target)` | O(n log n). Sorts a copy, starts one pointer at each end and moves the left one up when the sum is too small and the right one down when it's too big. Returns the value pairs only. |
 
 ```python
 arr = sorted(nums)
@@ -61,14 +62,14 @@ while i <= j:
         j -= 1
 ```
 
-With `--seed 42` the two-pointer version finds 1370 pairs instead of 1369: because the loop runs while `i <= j`, a single 1864 is paired with itself as `(1864, 1864)`. Using `i < j` would match the hash version.
+One difference I found: with `--seed 42` the two-pointer version reports 1370 pairs and the hash version 1369. The loop runs while `i <= j`, so a single 1864 meets itself and becomes `(1864, 1864)`. Changing it to `i < j` would make the two agree.
 
 ## 🧠 What I learned
 
-- Replacing nested loops (O(n²)) with a hash table lookup
-- The two-pointer technique on a sorted list, and how one `<=` can change the result
-- Counting combinations when values repeat
-- Timing code with `time.perf_counter()` and adding options with `argparse`
+- A `Counter` lookup replaces the inner loop of the O(n²) "check every pair" idea
+- Two pointers only work on a sorted list, and the sort is where the n log n comes from
+- One `<=` instead of `<` was enough to produce a wrong extra pair
+- Duplicates change the count: 3 copies of the same half-target value make 3 pairs, not 9
 
 ---
 

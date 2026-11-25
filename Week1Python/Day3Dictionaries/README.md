@@ -8,20 +8,20 @@
 
 </div>
 
-Python dictionaries: key-value pairs, safe lookups with `.get()`, nested data and building mappings from lists. Every exercise is a single script (Python 3.10+, no extra packages).
+Dictionary day. I practised key-value pairs, `.get()` for keys that might be missing, nested dictionaries and building a dictionary out of two lists. Each exercise is one script, Python 3.10+ and nothing to install.
 
 ## Contents
 
 | Folder | What it is |
 |--------|------------|
-| [`Exercises/ExercisesXP/`](Exercises/ExercisesXP/) | `zip()`, Cinemax ticket prices, the nested Zara brand dict, Disney character mappings |
-| [`Exercises/ExercisesXPPlus/`](Exercises/ExercisesXPPlus/) | Student grade summary and sales data analysis |
-| [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | Birthday lookup and a fruit shop calculator |
-| [`Exercises/ExercisesXPNinja/`](Exercises/ExercisesXPNinja/) | Car manufacturer list: counting, sorting, removing duplicates |
-| [`Exercises/TimedChallenge1/`](Exercises/TimedChallenge1/) | Reversing the words of a sentence |
-| [`Exercises/TimedChallenge2/`](Exercises/TimedChallenge2/) | Checking for a perfect number |
-| [`DailyChallenge/Dictionaries/`](DailyChallenge/Dictionaries/) | Letter index map and affordable items |
-| [`DailyChallenge/CaesarCypher/`](DailyChallenge/CaesarCypher/) | Caesar cipher encrypt, decrypt and brute force |
+| [`Exercises/ExercisesXP/`](Exercises/ExercisesXP/) | `zip()`, Cinemax ticket prices, the nested Zara brand dictionary and Disney character maps |
+| [`Exercises/ExercisesXPPlus/`](Exercises/ExercisesXPPlus/) | A student grade summary and a small sales report |
+| [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | Birthday lookups and a fruit shop total |
+| [`Exercises/ExercisesXPNinja/`](Exercises/ExercisesXPNinja/) | A list of car makers: counting, sorting and removing duplicates |
+| [`Exercises/TimedChallenge1/`](Exercises/TimedChallenge1/) | Print a sentence with its words in reverse order |
+| [`Exercises/TimedChallenge2/`](Exercises/TimedChallenge2/) | Is this a perfect number? |
+| [`DailyChallenge/Dictionaries/`](DailyChallenge/Dictionaries/) | Where each letter appears in a word, and what I can buy with my wallet |
+| [`DailyChallenge/CaesarCypher/`](DailyChallenge/CaesarCypher/) | A Caesar cipher that encrypts, decrypts and tries every shift |
 
 ---
 

@@ -8,7 +8,7 @@
 
 </div>
 
-A `Pagination` class that splits a list into pages of a chosen size and moves between them.
+Like the page buttons under a search result: `Pagination` takes a list and a page size, shows one page at a time and moves forward, back or straight to a page.
 
 ## ▶️ How to run
 
@@ -16,7 +16,7 @@ A `Pagination` class that splits a list into pages of a chosen size and moves be
 python pagination.py
 ```
 
-The demo pages the alphabet four letters at a time:
+The demo pages through the alphabet, four letters per page:
 
 ```text
 ['a', 'b', 'c', 'd']
@@ -26,27 +26,27 @@ ValueError
 ValueError
 ```
 
-The two `ValueError` lines come from `go_to_page(10)` and `go_to_page(0)`, because there are only 7 pages.
+Both `ValueError` lines are expected. There are only 7 pages, so `go_to_page(10)` and `go_to_page(0)` are refused.
 
 ## 🎯 The challenge
 
 | Method | What it does |
 |---|---|
-| `__init__(items, page_size=10)` | Stores a copy of the items, rejects a page size below 1 and works out `total_pages` with `math.ceil` |
-| `get_visible_items()` | Slices the items for the current page |
-| `go_to_page(page_num)` | Jumps to a page (counted from 1) or raises `ValueError` if it is out of range |
-| `first_page()` / `last_page()` | Jump to the first or last page |
-| `next_page()` / `previous_page()` | Move one page, but never past the ends |
-| `__str__()` | Prints the visible items one per line |
+| `__init__(items, page_size=10)` | Copies the items, refuses a page size under 1 and gets `total_pages` from `math.ceil` |
+| `get_visible_items()` | Returns the slice for the current page |
+| `go_to_page(page_num)` | Jumps to a page counted from 1, or raises `ValueError` when it's out of range |
+| `first_page()` / `last_page()` | Go to the first or last page |
+| `next_page()` / `previous_page()` | Move one page, stopping at the ends |
+| `__str__()` | The visible items, one per line |
 
-The four navigation methods return `self`, so calls can be chained: `p.first_page().next_page()`.
+Those four navigation methods return `self`, which allows chains like `p.first_page().next_page()`.
 
 ## 🧠 What I learned
 
-- Keeping `current_idx` and `total_pages` inside the class means the rest of the code never does page math
-- The user counts pages from 1, but the class counts from 0, so I convert in one place
-- Raising `ValueError` is clearer than silently staying on the same page
-- Returning `self` is all it takes to make methods chainable
+- `math.ceil(26 / 4)` gives 7, so the half-full last page still counts
+- People say "page 1" but the class stores index 0, and `go_to_page()` is the only place that converts
+- Moving past the last page just stays put, while a bad page number raises an error
+- Returning `self` at the end of a method is all chaining needs
 
 ---
 

@@ -104,13 +104,8 @@ CLAUDE.local.md
 /.learning/evidence/
 /.learning/sessions/
 /reports/resume/
-/reports/nova/NOVA_UPDATE_REPORT.md
-/reports/nova/README.nova.generated.md
-/reports/nova/next_actions.md
-/reports/nova/nova_repo_audit.*
-/reports/nova/nova_repo_dashboard.html
-/reports/nova/SUMMARY.txt
-/reports/nova/quality_report.*
+/reports/nova/
+/reports/catalog/quality_report.*
 /FINAL_README_INSTALL_REPORT.md
 /NOVA_*.bat
 /pyproject.nova.suggested.toml

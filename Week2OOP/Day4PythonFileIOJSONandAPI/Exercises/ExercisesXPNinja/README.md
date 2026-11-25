@@ -8,7 +8,7 @@
 
 </div>
 
-A restaurant menu with Valentine's specials checked by regex, and a Dungeons & Dragons character generator that exports JSON and TXT.
+A restaurant menu that only accepts Valentine's specials when they pass a set of regex and spelling rules, and a Dungeons & Dragons character generator that saves its results as JSON and TXT.
 
 ## ▶️ How to run
 
@@ -19,23 +19,32 @@ python ninjamenueditor.py
 python charactersgame.py
 ```
 
-The character game asks how many players there are, then a name and age for each, and saves `characters.json` and `characters.txt` in the current folder. Without keyboard input it creates two sample characters.
+The character game asks how many players, then a name and age for each, and writes `characters.json` and `characters.txt`. Without keyboard input it makes Aria (22) and Borin (35):
+
+```text
+=== Character 1 ===
+Name: Aria
+Age: 22
+Strength     : 11
+...
+```
 
 ## 🎯 The challenge
 
-1. **Valentine's menu** - [`ninjamenumanager.py`](ninjamenumanager.py) loads [`restaurantmenu.json`](restaurantmenu.json) and [`ninjamenueditor.py`](ninjamenueditor.py) is the menu loop. "Show menu" prints an ASCII heart made of `*` and both menus. A Valentine item is only added if:
-   - the first word starts with `V` and connection words like "of" or "the" are lowercase
+1. **Valentine's menu** - [`ninjamenumanager.py`](ninjamenumanager.py) handles [`restaurantmenu.json`](restaurantmenu.json) and [`ninjamenueditor.py`](ninjamenueditor.py) is the menu loop. "Show menu" draws an ASCII heart out of `*`, then the regular menu and the Valentine specials. A special is accepted only when:
+   - the first word starts with a capital `V`, other words start uppercase, and connection words like "of" or "the" stay lowercase
    - the name has at least two letters `e` and no digits
-   - the price matches the pattern `XX,14` (for example `23,14`)
+   - the price fits `XX,14`, for example `23,14`
 
-   A valid item is saved to JSON right away.
-2. **Dungeons & Dragons** - [`charactersgame.py`](charactersgame.py) rolls each of the six stats with "4d6, drop the lowest". A `Character` class rolls the stats, and a `Game` class asks for the players and writes both export files
+   An accepted special is saved right away; a refused one gets a hint about the rule it broke.
+2. **Dungeons & Dragons** - [`charactersgame.py`](charactersgame.py) rolls each of the six abilities with "4d6, drop the lowest". `Character.create()` does the rolling, and `Game` asks for the players and writes both export files
 
 ## 🧠 What I learned
 
-- `re.compile(r"^\d{2},14$")` plus `fullmatch()` checks a whole price string in one step
-- Splitting validation into small rules makes the error hints easy to print
-- `dataclasses.asdict()` turns objects into dictionaries that `json.dump` can save
+- `re.compile(r"^\d{2},14$")` with `fullmatch()` checks the whole price string, so `123,14` fails
+- Keeping the name rules in `validate_valentine_name()` let the editor call it again to explain a refusal
+- "Drop the lowest" is just sort the four rolls high to low and add the first three
+- `dataclasses.asdict()` turned each `Character` into a dict that `json.dump` could save
 
 ---
 

@@ -8,7 +8,7 @@
 
 </div>
 
-A small system in `air_management.py` that manages airlines, airplanes, flights and airports. Each plane flies at most once a day, and every schedule stays sorted by date.
+`air_management.py` is a tiny airline system with four classes: airlines, planes, flights and airports. A plane flies at most once per day, and every list of flights stays sorted by date.
 
 ## ▶️ How to run
 
@@ -26,23 +26,25 @@ TLV on-ground: [202]
 LHR on-ground: [303, 101]
 ```
 
+Plane 101 flies to London. Plane 202's Paris flight is only booked, so it stays at TLV.
+
 ## 🎯 The challenge
 
 | Class | What it does |
 |---|---|
-| `Airline` | A two-letter `id`, a `name` and its `planes` |
-| `Airplane` | `location_on_date(d)` gives the airport at the start of day `d`, `available_on_date(d, airport)` checks it is there with no flight that day, `schedule()` keeps `next_flights` sorted, and `fly(destination)` runs the earliest flight there |
-| `Flight` | Gets an id like `LHR-AR-2025-10-12` (destination, airline, date); `take_off()` and `land()` move the plane between the airports' lists |
-| `Airport` | `schedule_flight(destination, date, airline=None)` picks a free plane (lowest id first) and updates every schedule; `info(start, end)` lists the departures in a date range |
+| `Airline` | A two-letter `id`, a `name` and a list of `planes` |
+| `Airplane` | `location_on_date(d)` says where the plane is at the start of day `d`. `available_on_date(d, airport)` checks it's there with no flight that day. `schedule()` keeps `next_flights` sorted, and `fly(destination)` runs the earliest flight to that airport |
+| `Flight` | Builds its id from destination, airline and date (`LHR-AR-2025-10-12`). `take_off()` and `land()` move the plane from one airport's list to the other |
+| `Airport` | `schedule_flight(destination, date, airline=None)` picks a free plane (lowest id wins) and adds the flight to every schedule. `info(start, end)` lists departures between two dates |
 
-"Where is the plane on a date?" means at the start of that day, before any take-off. The model does not handle times of day or flights with stops.
+`schedule_flight()` also scans the airports from `register_airports()` for planes that will have landed by then. There are no times of day and no stops: "where is the plane" means before that day's take-off.
 
 ## 🧠 What I learned
 
-- Objects that point to each other (plane, flight, airport) must all be updated together
-- `datetime.date` compares and sorts naturally, which keeps schedules simple
-- Working out a plane's position from its future flights avoids storing it twice
-- Sorting the candidates by id makes the result repeatable
+- A flight touches the plane, the origin and the destination, so all three lists have to change together
+- `datetime.date` objects compare with `<`, so `sort(key=lambda f: f.date)` keeps schedules in order
+- `location_on_date()` works the position out from booked flights, and nothing extra is stored
+- Choosing the plane with `sorted(candidates, key=lambda p: p.id)[0]` gives the same answer on every run
 
 ---
 

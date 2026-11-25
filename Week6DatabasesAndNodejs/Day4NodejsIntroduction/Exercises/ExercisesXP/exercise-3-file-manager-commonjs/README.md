@@ -8,11 +8,11 @@
 
 </div>
 
-A small CommonJS module with promise-based `readFile` and `writeFile` helpers, used to read one text file and write another.
+`fileManager.js` is a little CommonJS module with promise-based `readFile` and `writeFile`. `app.js` uses it to read one text file and write another.
 
 ## ▶️ How to run
 
-Run it inside this folder, because the file paths are resolved from the current directory:
+Run it from inside this folder. The paths are resolved from the current directory, not from the script:
 
 ```bash
 node app.js
@@ -25,24 +25,24 @@ node app.js
 ⚙️  Done.
 ```
 
-It overwrites `Bye World.txt` (which starts as `Bye World !!`) with `Writing to the file`.
+`Bye World.txt` starts as `Bye World !!` in the repo, and after one run it says `Writing to the file`. So running it changes a tracked file.
 
 ## 🎯 The challenge
 
 | Function | What it does |
 |---|---|
-| `readFile(filePath)` | Reads a UTF-8 file with `fs.promises`, logs its full path and returns the text |
-| `writeFile(filePath, content)` | Creates missing folders with `mkdir({ recursive: true })`, then writes the text |
-| `main()` in `app.js` | Reads `Hello World.txt`, prints it and writes `Writing to the file` into `Bye World.txt` |
+| `readFile(filePath)` | Reads a UTF-8 file with `fs.promises`, logs the full path and returns the text |
+| `writeFile(filePath, content)` | Makes any missing folders with `mkdir({ recursive: true })`, then writes the text |
+| `main()` in `app.js` | Reads `Hello World.txt`, prints it trimmed and writes `Writing to the file` into `Bye World.txt` |
 
-Both helpers log an error and throw it again, so `app.js` exits with code 1 when something fails.
+Both helpers log the error and throw it again, and `main().catch()` turns that into exit code 1.
 
 ## 🧠 What I learned
 
-- `require("fs").promises` gives `fs` functions that work with `await`
-- `path.resolve()` turns a relative path into a full one, based on where I run the command
-- Re-throwing an error lets the caller decide what to do with it
-- Writing a file replaces its old content
+- `require("fs").promises` gives the same `fs` functions, but they return promises I can `await`
+- `path.resolve("./Hello World.txt")` depends on where I run `node`, which is why the folder matters
+- Logging and then re-throwing lets the helper explain the problem while `app.js` decides to stop
+- `writeFile` replaces the whole file; it doesn't add to the end
 
 ---
 

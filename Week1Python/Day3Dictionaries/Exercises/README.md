@@ -8,16 +8,16 @@
 
 </div>
 
-The Day 3 dictionary exercises: four XP levels and two timed challenges.
+Four levels of dictionary exercises plus the two timed challenges from Day 3.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/) — `zip()`, Cinemax ticket prices, the nested Zara brand dict, Disney character mappings
-- [`ExercisesXPPlus/`](ExercisesXPPlus/) — student grade summary and sales data analysis
-- [`ExercisesXPGold/`](ExercisesXPGold/) — birthday lookup and a fruit shop stock calculator
-- [`ExercisesXPNinja/`](ExercisesXPNinja/) — car manufacturer list: counting, sorting, removing duplicates
-- [`TimedChallenge1/`](TimedChallenge1/) — reversing the words of a sentence
-- [`TimedChallenge2/`](TimedChallenge2/) — checking for a perfect number
+- [`ExercisesXP/`](ExercisesXP/): two lists zipped into a dict, ticket prices, the Zara brand and Disney characters
+- [`ExercisesXPPlus/`](ExercisesXPPlus/): grades per student and sales totals per product
+- [`ExercisesXPGold/`](ExercisesXPGold/): look up a birthday by name and add up a fruit shop order
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): car manufacturers counted, sorted and cleaned of duplicates
+- [`TimedChallenge1/`](TimedChallenge1/): words of a sentence in reverse order
+- [`TimedChallenge2/`](TimedChallenge2/): a perfect number check
 
 ---
 

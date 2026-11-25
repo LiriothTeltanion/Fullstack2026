@@ -8,11 +8,11 @@
 
 </div>
 
-A Hangman game for the terminal. It picks a random word or phrase, shows ASCII gallows, and gives you 6 wrong guesses before you lose. [main.py](main.py) runs the game loop; the game state, word list and gallows art live in [src/](src/).
+Hangman in the terminal. The game picks a random word or phrase, draws the gallows in ASCII and you can miss 6 times before you lose. [main.py](main.py) is the loop that talks to the player, and the game state, the word list and the drawings are in [src/](src/).
 
 ## ▶️ How to run
 
-From this folder (no external packages, just Python 3):
+From this folder, plain Python 3:
 
 ```bash
 python main.py
@@ -21,7 +21,6 @@ python main.py
 ```
 Word: ****** ****
 Lives: 6
-
 Enter a letter: r
 ✅ Hit!
 Word:  *r**** **r*
@@ -31,23 +30,23 @@ Lives: 6
 
 ## 🎯 The challenge
 
-- Type one letter and press Enter. Upper or lower case both work.
-- Letters you haven't found show as `*`. Spaces stay visible, so `credit card` starts as `****** ****`.
-- A wrong letter costs a life and adds a piece to the gallows. Guessing the same letter again doesn't cost anything.
-- Anything that isn't a single letter shows an input error and lets you try again.
-- You win when every letter is revealed and lose after 6 misses. Then the game asks `Play again? (y/n)`.
+- One letter per turn, upper or lower case.
+- Hidden letters show as `*`, but spaces stay, so `credit card` starts as `****** ****`.
+- A wrong letter costs a life and adds a piece to the drawing. Repeating a letter costs nothing, the game just tells you.
+- Anything that isn't one letter prints `Input error:` with the reason, and you try again.
+- Reveal every letter to win, miss 6 times to lose. Then it asks `Play again? (y/n)`.
 
-`HangmanGame` in [src/game.py](src/game.py) keeps the secret in lowercase, a `set` of guessed letters and a counter of wrong guesses:
+`HangmanGame` in [src/game.py](src/game.py) stores the secret in lowercase, a `set` of guessed letters and a `wrong` counter:
 
 | Method | What it does |
 |---|---|
 | `guess(ch)` | Returns `'hit'`, `'miss'` or `'repeat'`, and raises `ValueError` for invalid input. |
-| `masked()` | The secret with `*` for unknown letters. |
-| `is_won()` / `is_lost()` / `is_over()` | No `*` left / `wrong >= MAX_WRONG` / either one. |
-| `gallows()` | The ASCII frame for the current wrong count. |
-| `guessed_letters()` | The guessed letters, sorted for display. |
+| `masked()` | The secret with `*` for every letter not guessed yet. |
+| `is_won()` / `is_lost()` / `is_over()` | No `*` left / `wrong >= MAX_WRONG` / one of the two. |
+| `gallows()` | The ASCII frame that matches the number of misses. |
+| `guessed_letters()` | The guessed letters, sorted, for the status line. |
 
-`main.py` only handles input and printing. It loops until `is_over()`, then shows the result and asks about another round.
+`main.py` never touches the rules. It reads input, calls the class, prints, and loops until `is_over()`.
 
 ## 🧪 Tests
 
@@ -57,14 +56,14 @@ From the repository root:
 python -m unittest discover -s tests/python -p "test_hangman.py" -v
 ```
 
-2 tests in [test_hangman.py](../../../../tests/python/test_hangman.py) check hits, repeats, a win, a miss and the `ValueError` for invalid input.
+2 tests in [test_hangman.py](../../../../tests/python/test_hangman.py) cover a hit, a repeat, a win, a miss and the `ValueError` for bad input.
 
 ## 🧠 What I learned
 
-- Keeping game logic in a class and the user interface in `main.py`
-- Using a `set` to find repeated guesses quickly
-- Validating input with `ValueError` and `try/except`
-- Organizing a project into modules and importing them
+- With the rules inside `HangmanGame`, I could test them without typing a single guess
+- A `set` answers "did I already guess this?" straight away
+- Raising `ValueError` in the class and catching it in `main.py` keeps bad input from ending the game
+- Running `main.py` from this folder matters, because it imports `src.game` as a package
 
 ---
 

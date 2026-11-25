@@ -8,13 +8,13 @@
 
 </div>
 
-The Day 1 exercise sets.
+Three exercise sets. The XP one is about forms and JSON, the two Gold ones are about arrays.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/) — a browser page with GET and POST forms and a JSON demo
-- [`ExercisesXPGold/`](ExercisesXPGold/) — analysing `map` and `reduce`, nested arrays and destructuring
-- [`ExercisesXPGold2/`](ExercisesXPGold2/) — sum, unique values, cleaning falsy values, `repeat` and `padStart`
+- [`ExercisesXP/`](ExercisesXP/): one page with a GET form, a POST form and a JSON demo
+- [`ExercisesXPGold/`](ExercisesXPGold/): reading `map` and `reduce` output, nested arrays and destructuring
+- [`ExercisesXPGold2/`](ExercisesXPGold2/): sum, duplicates, falsy values, a custom `repeat` and `padStart`
 
 ---
 

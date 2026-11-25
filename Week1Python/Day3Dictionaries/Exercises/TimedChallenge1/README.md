@@ -8,7 +8,7 @@
 
 </div>
 
-A small program in [timedsentence.py](timedsentence.py) that reverses the order of the words in a sentence.
+A timed one, so I kept it short. [timedsentence.py](timedsentence.py) prints the words of a sentence in the opposite order.
 
 ## ▶️ How to run
 
@@ -16,7 +16,7 @@ A small program in [timedsentence.py](timedsentence.py) that reverses the order 
 python timedsentence.py
 ```
 
-Type a line and press Enter:
+There is no prompt, I just type the line and press Enter:
 
 ```
 You have entered a wrong domain
@@ -25,19 +25,19 @@ domain wrong a entered have You
 
 ## 🎯 The challenge
 
-`reverse_words(line)` does it in three steps:
+`reverse_words(line)` is three lines:
 
-1. `line.split()` breaks the sentence into words on any whitespace.
+1. `line.split()` cuts the sentence into words on any whitespace.
 2. `words.reverse()` flips the list in place.
-3. `" ".join(words)` glues the words back with single spaces.
+3. `" ".join(words)` puts it back together with one space between words.
 
-If there is no input at all (`EOFError`), the program prints an empty line.
+`main()` catches `EOFError`, so running it with empty input prints an empty line instead of a traceback.
 
 ## 🧠 What I learned
 
-- `split()` with no argument also handles several spaces in a row
-- `list.reverse()` changes the list and returns `None`, so I call it on its own line
-- `" ".join()` is the opposite of `split()`
+- `split()` without an argument ignores extra spaces, so `"  hello   big  world "` gives `world big hello`
+- `list.reverse()` returns `None`, so writing `words = words.reverse()` would have lost my list
+- Catching `EOFError` matters when input is piped in instead of typed
 
 ---
 

@@ -8,29 +8,29 @@
 
 </div>
 
-One page with three sections: a GET form, a POST form and a JSON exercise with the Mario game object.
+Three cards on one page (GET form, POST form, JSON Mario), with the logic in `app.js`.
 
 ## ▶️ How to run
 
-Open `index.html` in a browser for the GET form. To see the POST request in the Network tab, serve the repository from its root:
+The GET part works straight from `index.html`. To watch the POST in the Network tab, the page needs a server:
 
 ```bash
 npm run dev
 ```
 
-and go to `http://localhost:8000/Week4AdvAsynchronousJavaScript/Day3HTTPAndFormMethodGETAndPOST/Exercises/ExercisesXP/`. Python's simple server only handles GET, so it answers the POST with an error, but the request and its form data are still visible in DevTools.
+then open `http://localhost:8000/Week4AdvAsynchronousJavaScript/Day3HTTPAndFormMethodGETAndPOST/Exercises/ExercisesXP/`. Python's simple server only answers GET, so the POST gets an error back, but DevTools still shows the request and its form data.
 
 ## 🎯 The challenge
 
-1. **GET form** — the data ends up in the URL after `?`. On load, `readGetParams()` reads it with `URLSearchParams` and prints it as JSON.
-2. **POST form** — the data is not in the URL; it goes in the request body (DevTools → Network → Payload).
-3. **JSON Mario** — `makeMarioJSON()` turns `marioGame` into pretty JSON and shows it. **Make JSON (with debugger)** stops on `debugger;` first so I can inspect the values.
+1. **GET form**: `name` and `message` land in the URL after `?`. On load, `readGetParams()` copies them from `URLSearchParams` into an object and prints it as JSON.
+2. **POST form**: no JavaScript on purpose. The data is in DevTools → Network → Payload, not in the URL.
+3. **JSON Mario**: `makeMarioJSON()` shows `marioGame` as pretty JSON. **Make JSON (with debugger)** passes `true`, so it stops on `debugger;` first. The compact `jsonText` it builds is never used.
 
 ## 🧠 What I learned
 
-- GET is visible in the URL, so it is not for private data
-- POST data travels in the body of the request
-- The Network tab shows exactly what a form sends
+- Anything sent with GET shows in the address bar and the history, so it is a bad fit for private data
+- `file://` is enough for GET, but a real POST needs the page to come from a server
+- A default parameter (`withDebugger = false`) let one function serve both buttons
 
 ---
 

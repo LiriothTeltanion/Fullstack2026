@@ -8,14 +8,14 @@
 
 </div>
 
-Day 3 of Week 4: how forms send data with GET and POST, reading query strings, JSON, and a small quote app.
+How a form sends its data with GET or POST, reading the query string back with `URLSearchParams`, JSON, and a quote app in plain JavaScript.
 
 ## Contents
 
 | Folder | What it is |
 |---|---|
 | [`Exercises/`](Exercises/) | Exercises XP, Exercises XP Gold and the Random Quote Generator |
-| [`DailyChallenge/`](DailyChallenge/) | HTML Form and True or False |
+| [`DailyChallenge/`](DailyChallenge/) | HTML Form (JSON log) and True or False (`allTruthy`) |
 
 ---
 

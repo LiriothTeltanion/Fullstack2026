@@ -8,11 +8,11 @@
 
 </div>
 
-The browser script for Move the Box. It needs the page, so open `../index.html` instead of running it with `node`.
+Just one function, `myMove()`, which the button's click calls. It needs the box and container from `../index.html`.
 
 ## Contents
 
-- [`app.js`](app.js) — `myMove()` slides the red box 1px per millisecond until the right edge
+- [`app.js`](app.js): reads the current `left`, computes the 350px limit and steps the box with a 1 ms interval
 
 ---
 

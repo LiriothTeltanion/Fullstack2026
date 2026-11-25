@@ -8,11 +8,11 @@
 
 </div>
 
-The stylesheet for the Todo List exercise.
+A dark Material-style look: purple buttons, teal filter chips when active, and a line through completed tasks.
 
 ## Contents
 
-- [`styles.css`](styles.css) — layout of the bar, input, filter chips and list, and the crossed-out style for completed tasks
+- [`styles.css`](styles.css): theme variables, the add bar, the `.chip.active` filters, the task rows and an `.sr-only` helper for hidden labels
 
 ---
 

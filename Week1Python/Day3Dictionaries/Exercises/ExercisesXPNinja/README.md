@@ -8,7 +8,7 @@
 
 </div>
 
-The car manufacturers exercise in [xpninjacars.py](xpninjacars.py): turning a string into a list, then counting, sorting and removing duplicates with small reusable functions. Running the script calls `_cli()`, so importing the module elsewhere stays quiet.
+The car manufacturers exercise, in [xpninjacars.py](xpninjacars.py). It starts from the string `"Volkswagen, Toyota, Ford Motor, Honda, Chevrolet"` and answers a list of questions about it, one small function per question.
 
 ## ▶️ How to run
 
@@ -30,18 +30,21 @@ Ascending A-Z with reversed names: ['telorvehC', 'rotoM droF', 'adnoH', 'atoyoT'
 
 | Function | What it does |
 |---|---|
-| `parse_manufacturers(names)` | Splits the comma-separated string into a clean list. |
-| `sort_descending(names)` | Returns the list in Z-A order, ignoring case. |
-| `count_with_letter(names, letter)` | Counts the names that contain a letter (upper or lower case). |
-| `count_without_letter(names, letter)` | Counts the names that do not contain a letter. |
-| `deduplicate_preserve_order(names)` | Bonus: removes duplicates but keeps the first-seen order. |
-| `ascending_reversed(names)` | Bonus: sorts A-Z and reverses each name's letters. |
+| `parse_manufacturers(names)` | Splits on commas, strips the spaces and drops empty pieces. |
+| `sort_descending(names)` | Z to A, ignoring case. |
+| `count_with_letter(names, letter)` | How many names contain the letter, upper or lower case. |
+| `count_without_letter(names, letter)` | The opposite count. |
+| `deduplicate_preserve_order(names)` | Bonus: removes repeats but keeps the order they first appeared in. |
+| `ascending_reversed(names)` | Bonus: sorts A to Z, then writes each name backwards. |
+
+For the duplicates bonus I used a second list with Honda and Toyota twice. Seven names go in and five come out.
 
 ## 🧠 What I learned
 
-- `sorted(names, key=lambda value: value.lower(), reverse=True)` gives Z-A without changing the original list or caring about case
-- A `set` of seen names plus a list keeps the order while dropping duplicates
-- `name[::-1]` reverses a string
+- `sorted(..., key=lambda value: value.lower(), reverse=True)` sorts Z to A and leaves the original list alone
+- A `set` makes "have I seen this?" fast, and the separate list keeps the order a set would lose
+- `name[::-1]` flips a string with slicing
+- Lowering both sides (`letter.lower()` and `name.lower()`) makes the letter counts case-insensitive
 
 ---
 

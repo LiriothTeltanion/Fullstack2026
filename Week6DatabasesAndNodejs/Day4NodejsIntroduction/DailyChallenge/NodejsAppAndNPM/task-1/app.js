@@ -5,5 +5,5 @@ const { greet } = require("../greeting");
 
 console.log("🧪 Task 1 — Basic Module System");
 console.log(greet("Kevin"));
-console.log(greet("Nova Dev"));
+console.log(greet("Sam"));
 console.log(greet(""));

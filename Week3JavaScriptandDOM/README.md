@@ -8,14 +8,14 @@
 
 </div>
 
-My first week of JavaScript, from arrays and loops to DOM events, timers and small browser projects. Most folders are browser pages: open their `index.html`, or run `npm run dev` from the repo root and go to `http://localhost:8000/`.
+My first week of JavaScript. It starts with arrays and loops and ends with DOM events, timers and small browser projects. Most folders are web pages: open their `index.html`, or run `npm run dev` from the repo root and go to `http://localhost:8000/`.
 
 ## Contents
 
 | Folder | What it is |
 |---|---|
 | [`Day1IntroductiontoJavaScript/`](Day1IntroductiontoJavaScript/) | Arrays, loops, objects and a Bubble Sort |
-| [`Day2FunctionsandDOMIntroduction/`](Day2FunctionsandDOMIntroduction/) | Functions and first DOM changes |
+| [`Day2FunctionsandDOMIntroduction/`](Day2FunctionsandDOMIntroduction/) | Functions and my first DOM changes |
 | [`Day3LearningDOMEvents/`](Day3LearningDOMEvents/) | Events, forms, timers and a Sign In form |
 | [`Day4AdvancedJavaScriptFunctions/`](Day4AdvancedJavaScriptFunctions/) | Scope, closures, currying, value vs reference |
 | [`Day5MiniProject/`](Day5MiniProject/) | Coloring Game, Drum Set and Todo List |

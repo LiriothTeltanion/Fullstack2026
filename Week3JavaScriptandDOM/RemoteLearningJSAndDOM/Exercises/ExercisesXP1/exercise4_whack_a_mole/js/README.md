@@ -8,11 +8,11 @@
 
 </div>
 
-The browser script for Whack-a-Mole. It needs the page, so open `../index.html` instead of running it with `node`.
+The game loop: two timers, one click listener on the grid, and a high score list in `localStorage`. Open `../index.html` to play.
 
 ## Contents
 
-- [`app.js`](app.js) — builds the grid, runs the 30-second game and keeps the top 5 scores in `localStorage`
+- [`app.js`](app.js): builds the nine holes, moves the hamster every 800 ms, counts down 30 seconds and saves the top 5
 
 ---
 

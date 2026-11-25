@@ -8,12 +8,12 @@
 
 </div>
 
-The Day 3 daily challenges.
+Day 3 had two daily challenges, both small browser pages.
 
 ## Contents
 
-- [`HTMLForm/`](HTMLForm/) — a form that appends each submission to the page as JSON
-- [`TrueOrFalse/`](TrueOrFalse/) — `allTruthy()` checks that every argument is truthy
+- [`HTMLForm/`](HTMLForm/): every submit adds the form values to the page as a JSON string
+- [`TrueOrFalse/`](TrueOrFalse/): `allTruthy()` returns `true` only when every argument is truthy
 
 ---
 

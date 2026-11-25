@@ -8,16 +8,16 @@
 
 </div>
 
-Day 2 was about the three big OOP ideas: child classes that reuse a parent, hiding data behind methods, and different classes that answer the same method call in their own way.
+Child classes that reuse a parent, data that only changes through methods, and different classes that answer the same call in their own way. That was Day 2.
 
 ## Contents
 
 | Folder | What it is |
 |---|---|
-| [`Exercises/ExercisesXP/`](Exercises/ExercisesXP/) | Cat breeds and a `Pets` class, dogs that fight, a `PetDog` that learns tricks, and a `Family` of `Person` objects |
-| [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | Bank accounts, a minimum-balance account and a simple ATM menu |
-| [`Exercises/ExercisesXPNinja/`](Exercises/ExercisesXPNinja/) | Conway's Game of Life, with a subclass whose grid grows |
-| [`DailyChallenge/Pagination/`](DailyChallenge/Pagination/) | A `Pagination` class that splits a list into pages |
+| [`Exercises/ExercisesXP/`](Exercises/ExercisesXP/) | Cat breeds walked by a `Pets` class, dog fights, a `PetDog` with tricks and a `Family` of `Person` objects |
+| [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | A bank account with login, a minimum-balance child account and an ATM menu |
+| [`Exercises/ExercisesXPNinja/`](Exercises/ExercisesXPNinja/) | Conway's Game of Life, plus a subclass whose grid grows |
+| [`DailyChallenge/Pagination/`](DailyChallenge/Pagination/) | A `Pagination` class that cuts a list into pages |
 
 ---
 
