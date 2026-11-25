@@ -77,6 +77,7 @@ export async function updateStory(story, changes) {
 export async function deleteStory(id) {
   if (!usePostgres) {
     db.stories = db.stories.filter(story => story.id !== id);
+    db.comments = db.comments.filter(comment => comment.storyId !== id);
     db.contributors = db.contributors.filter(item => item.storyId !== id);
     return;
   }

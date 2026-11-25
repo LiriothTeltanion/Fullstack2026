@@ -12,3 +12,11 @@ export interface Story {
   createdAt: string;
   updatedAt: string;
 }
+
+export interface StoryComment {
+  id: number;
+  storyId: number;
+  author: User;
+  body: string;
+  createdAt: string;
+}
