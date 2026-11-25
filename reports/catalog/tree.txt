@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-25
-Base HEAD: dadd23b404eaf78315438affbe780ba4863999f0
-Source-index SHA-256 (generated outputs excluded): 3ecfd245d70559b183b97c7f46f7714e65e7fe54f9627eeac26bd334d46e8b57
-Indexed files: 2916
+Base HEAD: f692aee2ccbf5d31a3e9928391fe58e65d105468
+Source-index SHA-256 (generated outputs excluded): f4450d4f803ddf5e2e7206a7375f8b6535638632091cdf3cc1b4bf6b3d67a062
+Indexed files: 2942
 
 .
 ├── .github
@@ -872,6 +872,7 @@ Indexed files: 2916
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -2752,6 +2753,7 @@ Indexed files: 2916
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   └── slides.js
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -2773,6 +2775,7 @@ Indexed files: 2916
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -2789,6 +2792,7 @@ Indexed files: 2916
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -2807,6 +2811,7 @@ Indexed files: 2916
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -2824,6 +2829,7 @@ Indexed files: 2916
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -2843,6 +2849,7 @@ Indexed files: 2916
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -2874,6 +2881,7 @@ Indexed files: 2916
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -2889,6 +2897,7 @@ Indexed files: 2916
 │   │   │   │   │   ├── randomPick.js
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -2943,6 +2952,7 @@ Indexed files: 2916
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -2959,6 +2969,7 @@ Indexed files: 2916
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -2981,6 +2992,7 @@ Indexed files: 2916
 │   │   │   │   │   ├── lifecycle.test.js
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   ├── unbounded.html
@@ -3000,6 +3012,7 @@ Indexed files: 2916
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -3015,6 +3028,7 @@ Indexed files: 2916
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -3062,6 +3076,7 @@ Indexed files: 2916
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   └── validate.js
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -3095,6 +3110,7 @@ Indexed files: 2916
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── .env.example
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -3110,6 +3126,7 @@ Indexed files: 2916
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -3128,6 +3145,7 @@ Indexed files: 2916
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -3143,6 +3161,7 @@ Indexed files: 2916
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -3169,6 +3188,7 @@ Indexed files: 2916
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   └── reducer.test.js
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -3192,6 +3212,7 @@ Indexed files: 2916
 │   │   │   │   │   ├── app.test.js
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -3215,6 +3236,7 @@ Indexed files: 2916
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -3236,6 +3258,7 @@ Indexed files: 2916
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -3264,6 +3287,7 @@ Indexed files: 2916
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -3304,6 +3328,7 @@ Indexed files: 2916
 │   │   │   │   │   ├── quotes.js
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -3324,6 +3349,7 @@ Indexed files: 2916
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── .env.example
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
