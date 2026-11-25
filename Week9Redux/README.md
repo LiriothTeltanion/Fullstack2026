@@ -8,11 +8,17 @@
 
 </div>
 
-Week 9 covers Redux. The course has not reached it yet.
+Redux and Redux Toolkit, from the basic concepts to async logic. I haven't reached this week yet, so every folder is ready but empty.
 
 ## Contents
 
-Nothing yet. Each lesson will get its own `DayNTitle/` folder with `Exercises/` and `DailyChallenge/`, like Weeks 1–6.
+| Folder | Topic | Required | Optional |
+|---|---|---:|---:|
+| [`Day2ReduxOverviewAndConcepts/`](Day2ReduxOverviewAndConcepts/) | Redux Overview and Concepts | 2 | 2 |
+| [`Day3ReduxToolkitAppStructure/`](Day3ReduxToolkitAppStructure/) | Redux Toolkit App Structure | 2 | 2 |
+| [`Day4ReduxToolkitAsync/`](Day4ReduxToolkitAsync/) | Redux Toolkit and Async Logic | 2 | 2 |
+| [`Day5ReduxMiniProject/`](Day5ReduxMiniProject/) | Redux Mini-project | 2 | 2 |
+| [`RemoteLearningRedux/`](RemoteLearningRedux/) | Redux | 0 | 3 |
 
 ---
 

@@ -8,11 +8,18 @@
 
 </div>
 
-Week 7 covers Node.js and React. The course has not reached it yet.
+Express routes and middleware, SQL query builders, then the first steps in React. I haven't reached this week yet, so every folder is ready but empty.
 
 ## Contents
 
-Nothing yet. Each lesson will get its own `DayNTitle/` folder with `Exercises/` and `DailyChallenge/`, like Weeks 1–6.
+| Folder | Topic | Required | Optional |
+|---|---|---:|---:|
+| [`Day1RoutesControllersAndMiddleware/`](Day1RoutesControllersAndMiddleware/) | Routes, Controllers and Middleware | 2 | 2 |
+| [`Day2SQLQueryBuilder/`](Day2SQLQueryBuilder/) | SQL Query Builder | 2 | 2 |
+| [`Day3MiniProject/`](Day3MiniProject/) | Mini-project Day | 2 | 3 |
+| [`Day4IntroductionToReact/`](Day4IntroductionToReact/) | Introduction to React | 2 | 2 |
+| [`Day5ReactComponentsAndState/`](Day5ReactComponentsAndState/) | React Components and State | 2 | 3 |
+| [`RemoteLearningNodejs/`](RemoteLearningNodejs/) | Node.js | 1 | 0 |
 
 ---
 

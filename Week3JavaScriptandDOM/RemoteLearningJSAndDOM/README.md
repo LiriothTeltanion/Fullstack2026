@@ -15,6 +15,7 @@ Extra JavaScript and DOM practice I did in the remote learning sessions: four sm
 | Folder | What it is |
 |---|---|
 | [`Exercises/`](Exercises/) | Exercises XP 1 and Exercises XP 2 |
+| [`Exercises/OptionalJSExercises/`](Exercises/OptionalJSExercises/) | Optional JS Exercises: to do (optional) |
 
 ---
 

@@ -134,7 +134,7 @@ class LearningIntakeTests(unittest.TestCase):
                     )
 
     def test_future_week_intake_cannot_predeclare_a_path(self):
-        with self.assertRaisesRegex(INTAKE.IntakeError, "Weeks 7–12"):
+        with self.assertRaisesRegex(INTAKE.IntakeError, "Weeks 7–14"):
             INTAKE.build_public_record(
                 self.source(
                     week_id="week-7",

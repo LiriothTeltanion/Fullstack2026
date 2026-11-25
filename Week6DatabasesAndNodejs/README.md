@@ -18,6 +18,7 @@ Three days of PostgreSQL (tables, filters, joins, foreign keys and the `dvdrenta
 | [`Day2DatabaseConcepts1/`](Day2DatabaseConcepts1/) | Sorting, aliases, `DISTINCT` and first joins on `dvdrental` |
 | [`Day3DatabaseConcepts2/`](Day3DatabaseConcepts2/) | Foreign keys with `ON DELETE CASCADE`, `LEFT JOIN`, a view and multi-table questions on `dvdrental` |
 | [`Day4NodejsIntroduction/`](Day4NodejsIntroduction/) | Seven small Node.js exercises and a daily challenge mixing a module, `chalk` and `fs` |
+| [`Day5NodejsWebServer/`](Day5NodejsWebServer/) | Node.js Web Server: not started yet (2 required, 2 optional) |
 
 ---
 

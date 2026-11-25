@@ -16,6 +16,8 @@ Two games and two challenge sets, the practical side of Day 5.
 - [`Hangman/`](Hangman/): guess letters before the gallows fill up, with the game logic in its own class
 - [`Challenges1/`](Challenges1/): twenty little functions, several of them home-made versions of built-ins
 - [`Challenges2/`](Challenges2/): a pyramid and two triangles of stars, then a sorting snippet traced step by step
+- [`RemoteExerciseOurFirstGUI/`](RemoteExerciseOurFirstGUI/): Our First GUI: to do (optional)
+- [`RemoteExerciseFindDuplicates/`](RemoteExerciseFindDuplicates/): Find Duplicates: to do (optional)
 
 ---
 

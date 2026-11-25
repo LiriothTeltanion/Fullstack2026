@@ -17,6 +17,9 @@ does not reinterpret early work as production-ready code.
 
 ### Added
 
+- Added Weeks 13 and 14 and a ready-to-fill folder for every course exercise I
+  haven't done yet, optional Gold, Ninja and remote ones included (133
+  folders, 35 new days). The showcase counts what is still to do.
 - Added `index.html`, an exercise showcase for the Netlify site built from the
   READMEs by `tools/build_showcase.py`, plus a 404 page and `netlify.toml`.
 - Added source-safe Week 1 Day 1 evidence records and focused regression suites

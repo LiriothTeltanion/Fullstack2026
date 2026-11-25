@@ -8,11 +8,17 @@
 
 </div>
 
-Week 10 covers Advanced TypeScript and Authentication. The course has not reached it yet.
+TypeScript with React, authentication and a bigger TypeScript project. I haven't reached this week yet, so every folder is ready but empty.
 
 ## Contents
 
-Nothing yet. Each lesson will get its own `DayNTitle/` folder with `Exercises/` and `DailyChallenge/`, like Weeks 1–6.
+| Folder | Topic | Required | Optional |
+|---|---|---:|---:|
+| [`Day1UsingTypeScriptWithReact/`](Day1UsingTypeScriptWithReact/) | Using TypeScript with React | 2 | 2 |
+| [`Day2MiniProject/`](Day2MiniProject/) | Mini-project | 2 | 1 |
+| [`Day3Authentication/`](Day3Authentication/) | Authentication | 1 | 0 |
+| [`Day4TypeScriptAuthenticationProject/`](Day4TypeScriptAuthenticationProject/) | TypeScript and Authentication Project | 1 | 1 |
+| [`RemoteLearningAuthAndTypeScript/`](RemoteLearningAuthAndTypeScript/) | Authentication and TypeScript | 0 | 1 |
 
 ---
 

@@ -43,6 +43,8 @@ WEEK_ROOTS = {
             "Week10AdvancedTypeScriptAndAuthentication",
             "Week11FinalProject",
             "Week12FinalProject",
+            "Week13WebDevelopmentBasics",
+            "Week14MoreTopicsAndInterviews",
         ),
         start=1,
     )
@@ -95,7 +97,7 @@ def now_iso() -> str:
 
 def week_number(week_id: str) -> int:
     if week_id not in WEEK_ROOTS:
-        raise IntakeError("week_id must be week-1 through week-12")
+        raise IntakeError("week_id must be week-1 through week-14")
     return int(week_id.removeprefix("week-"))
 
 
@@ -125,7 +127,7 @@ def normalize_repository_path(value: Any, week_id: str, *, batch: bool) -> str |
         return None
     if number >= 7:
         mode = "batch intake" if batch else "intake"
-        raise IntakeError(f"Weeks 7–12 {mode} must leave planned_repository_path null")
+        raise IntakeError(f"Weeks 7–14 {mode} must leave planned_repository_path null")
     if not isinstance(value, str):
         raise IntakeError("planned_repository_path must be text or null")
     if "\\" in value:
@@ -435,7 +437,7 @@ def prompt_choice(label: str, allowed: set[str], default: str) -> str:
 
 def command_add(repo: Path) -> int:
     print("Use only Kevin's own words. Do not paste Octopus prompts, URLs, scores, or private data.\n")
-    week_raw = input("Week number [1-12]: ").strip()
+    week_raw = input("Week number [1-14]: ").strip()
     week_id = f"week-{week_raw}"
     source: dict[str, Any] = {
         "week_id": week_id,

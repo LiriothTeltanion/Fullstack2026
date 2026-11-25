@@ -15,6 +15,8 @@ Real network requests at last: `fetch`, `async`/`await`, checking `response.ok` 
 | Folder | What it is |
 |---|---|
 | [`Exercises/`](Exercises/) | Exercises XP: two Giphy searches, a SWAPI starship and an async/await snippet |
+| [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | Exercises XP Gold: to do (optional) |
+| [`Exercises/ExercisesXPNinja/`](Exercises/ExercisesXPNinja/) | Exercises XP Ninja: to do (optional) |
 
 ---
 

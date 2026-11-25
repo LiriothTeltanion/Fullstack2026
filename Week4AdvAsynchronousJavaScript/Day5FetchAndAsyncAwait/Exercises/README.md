@@ -13,6 +13,8 @@ Day 5 has one exercise page.
 ## Contents
 
 - [`ExercisesXP/`](ExercisesXP/): four buttons that call the Giphy API and SWAPI with `fetch` and async/await
+- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: to do (optional)
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: to do (optional)
 
 ---
 

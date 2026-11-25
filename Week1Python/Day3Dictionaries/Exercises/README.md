@@ -18,6 +18,7 @@ Four levels of dictionary exercises plus the two timed challenges from Day 3.
 - [`ExercisesXPNinja/`](ExercisesXPNinja/): car manufacturers counted, sorted and cleaned of duplicates
 - [`TimedChallenge1/`](TimedChallenge1/): words of a sentence in reverse order
 - [`TimedChallenge2/`](TimedChallenge2/): a perfect number check
+- [`RemoteExerciseListComprehension/`](RemoteExerciseListComprehension/): List Comprehension: to do (optional)
 
 ---
 

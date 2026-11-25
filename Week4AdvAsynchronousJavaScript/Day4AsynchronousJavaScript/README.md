@@ -16,6 +16,7 @@ Promises day: building them with `new Promise`, settling them with `resolve` or 
 |---|---|
 | [`Exercises/`](Exercises/) | Exercises XP: `compareToTen`, a delayed promise and pre-settled promises |
 | [`DailyChallenge/`](DailyChallenge/) | Play With Words: a caps-and-sort chain and a Morse translator |
+| [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | Exercises XP Gold: to do (optional) |
 
 ---
 

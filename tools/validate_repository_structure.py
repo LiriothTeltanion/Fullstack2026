@@ -51,6 +51,8 @@ CANONICAL_WEEKS = (
     "Week10AdvancedTypeScriptAndAuthentication",
     "Week11FinalProject",
     "Week12FinalProject",
+    "Week13WebDevelopmentBasics",
+    "Week14MoreTopicsAndInterviews",
 )
 
 WEEK_ROOT_RE = re.compile(r"^Week(?P<number>\d+)", re.IGNORECASE)

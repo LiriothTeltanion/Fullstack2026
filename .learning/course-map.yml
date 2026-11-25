@@ -236,3 +236,25 @@ weeks:
     limitation: public_repo_has_no_project_continuation_rubric_submission_evidence_or_item_status
     days: []
     bounded_evidence: []
+
+  - id: week-13
+    title: Web Development Basics
+    path: Week13WebDevelopmentBasics
+    repository_state: present
+    learning_state: unknown
+    official_scope: authenticated_octopus_navigation_captured_privately
+    scaffold_only: true
+    limitation: folders_ready_no_solutions_yet
+    days: []
+    bounded_evidence: []
+
+  - id: week-14
+    title: More Topics and Interview Prep
+    path: Week14MoreTopicsAndInterviews
+    repository_state: present
+    learning_state: unknown
+    official_scope: authenticated_octopus_navigation_captured_privately
+    scaffold_only: true
+    limitation: folders_ready_no_solutions_yet
+    days: []
+    bounded_evidence: []

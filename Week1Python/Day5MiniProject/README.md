@@ -20,6 +20,8 @@ The end of Week 1. I used everything from Days 1 to 4 (conditionals, loops, list
 | [`Exercises/Challenges2/`](Exercises/Challenges2/) | Star patterns from loops and a traced sorting snippet |
 | [`DailyChallenge/Challenges/`](DailyChallenge/Challenges/) | Sorting comma-separated words and finding the longest word |
 | [`DailyChallenge/AdvancedAlgorithm/`](DailyChallenge/AdvancedAlgorithm/) | Two-sum over 20,000 random numbers, solved with a hash table and with two pointers |
+| [`Exercises/RemoteExerciseOurFirstGUI/`](Exercises/RemoteExerciseOurFirstGUI/) | Our First GUI: to do (optional) |
+| [`Exercises/RemoteExerciseFindDuplicates/`](Exercises/RemoteExerciseFindDuplicates/) | Find Duplicates: to do (optional) |
 
 ---
 

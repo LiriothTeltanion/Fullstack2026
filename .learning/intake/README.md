@@ -41,6 +41,6 @@ npm run intake:check
 - grades, XP, attendance, due dates or submission status;
 - personal data, credentials, cookies or tokens.
 
-For Weeks 7–12 the `planned_repository_path` stays empty until the lesson exists.
+For Weeks 7–14 the `planned_repository_path` stays empty until the lesson exists.
 
 The format is defined in [`exercise-intake.schema.json`](exercise-intake.schema.json), and [`queue.json`](queue.json) is the public queue.

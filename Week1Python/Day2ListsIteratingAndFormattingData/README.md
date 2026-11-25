@@ -19,6 +19,7 @@ Day 2 was about collections and loops: lists, tuples, sets, `for` and `while`, a
 | [`Exercises/ExercisesXPNinja/`](Exercises/ExercisesXPNinja/) | 4 exercises: a square root formula, list stats, paragraph stats and word counts. |
 | [`DailyChallenge/ListAndStrings/`](DailyChallenge/ListAndStrings/) | Multiples of a number and squashing repeated letters. |
 | [`DailyChallenge/GoldHappyBirthday/`](DailyChallenge/GoldHappyBirthday/) | An ASCII birthday cake with candles for the last digit of your age. |
+| [`Exercises/RemoteExerciseTrickyCounter/`](Exercises/RemoteExerciseTrickyCounter/) | Tricky Counter: to do (optional) |
 
 ---
 

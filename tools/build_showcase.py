@@ -99,9 +99,14 @@ def collect(repo: Path) -> dict:
             }
         )
     by_day = {day["path"]: day for week in weeks for day in week["days"]}
-    total = demos = 0
+    total = demos = todo = 0
+    week_todo = {week["path"]: 0 for week in weeks}
     for readme in sorted(f for f in files if f.startswith("Week") and f.endswith("/README.md")):
         text = (repo / readme).read_text(encoding="utf-8")
+        if "**Status:** to do" in text:
+            todo += 1
+            week_todo[readme.split("/", 1)[0]] = week_todo.get(readme.split("/", 1)[0], 0) + 1
+            continue
         if "## ▶️ How to run" not in text:
             continue
         match = TITLE_RE.match(text.splitlines()[0])
@@ -131,7 +136,9 @@ def collect(repo: Path) -> dict:
         demos += has_demo
     for day in by_day.values():
         day["items"].sort(key=sort_key)
-    return {"weeks": weeks, "total": total, "demos": demos}
+    for week in weeks:
+        week["todo"] = week_todo.get(week["path"], 0)
+    return {"weeks": weeks, "total": total, "demos": demos, "todo": todo}
 
 
 def render_card(item: dict) -> str:
@@ -174,7 +181,7 @@ def render(data: dict) -> str:
             sections.append(
                 f'<section class="week upcoming" id="{anchor}" aria-labelledby="{anchor}-title">'
                 f'<h2 id="{anchor}-title">{html.escape(week["title"])}</h2>'
-                '<p class="upcoming-note">Coming up. The lessons for this week have not started yet.</p></section>'
+                f'<p class="upcoming-note">Coming up. {week["todo"]} {"folder is" if week["todo"] == 1 else "folders are"} ready for these lessons.</p></section>'
             )
             continue
         days = []
@@ -187,13 +194,16 @@ def render(data: dict) -> str:
             )
         sections.append(
             f'<section class="week" id="{anchor}" aria-labelledby="{anchor}-title">'
-            f'<h2 id="{anchor}-title">{html.escape(week["title"])} <span class="count">{count}</span></h2>'
+            f'<h2 id="{anchor}-title">{html.escape(week["title"])} <span class="count">{count}</span>'
+            + (f' <span class="todo">{week["todo"]} to do</span>' if week["todo"] else "")
+            + "</h2>"
             + "".join(days)
             + "</section>"
         )
     return (
         TEMPLATE.replace("{{TOTAL}}", str(data["total"]))
         .replace("{{DEMOS}}", str(data["demos"]))
+        .replace("{{TODO}}", str(data["todo"]))
         .replace("{{WEEKS_WITH_WORK}}", str(sum(1 for w in data["weeks"] if any(d["items"] for d in w["days"]))))
         .replace("{{NAV}}", "".join(nav))
         .replace("{{SECTIONS}}", "".join(sections))
@@ -254,6 +264,7 @@ a { color: var(--cyan); }
 main { padding: 8px 0 40px; }
 .week { margin: 34px 0; scroll-margin-top: 150px; }
 .week h2 { font-size: 1.5rem; margin: 0 0 6px; display: flex; align-items: center; gap: 10px; }
+.todo { font-size: .8rem; font-weight: 600; color: var(--amber); border: 1px solid rgba(252,211,77,.4); border-radius: 999px; padding: 1px 10px; }
 .count { font-size: .85rem; font-weight: 600; color: #04121a; background: var(--cyan); border-radius: 999px; padding: 1px 10px; }
 .day h3 { color: var(--violet); font-size: 1.02rem; margin: 22px 0 10px; font-weight: 650; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 14px; }
@@ -300,6 +311,7 @@ footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--m
     <li><strong>{{TOTAL}}</strong> exercises</li>
     <li><strong>{{DEMOS}}</strong> live demos</li>
     <li><strong>{{WEEKS_WITH_WORK}}</strong> weeks with code</li>
+    <li><strong>{{TODO}}</strong> still to do</li>
   </ul>
   <ul class="weeknav" aria-label="Jump to a week">{{NAV}}</ul>
   <img class="pulse" src="assets/readme/folder-pulse.svg" alt="" width="1000" height="120">

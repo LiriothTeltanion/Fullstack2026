@@ -91,6 +91,12 @@
           "icon": "🎮",
           "title": "Day 5 — Mini-projects",
           "display_title": "🎮 Day 5 — Mini-projects"
+        },
+        {
+          "path": "Week1Python/RemoteLearningPython",
+          "icon": "🛰️",
+          "title": "Remote Learning — Python",
+          "display_title": "🛰️ Remote Learning — Python"
         }
       ]
     },
@@ -257,6 +263,12 @@
           "icon": "🛡️",
           "title": "Day 4 — Advanced TypeScript Concepts and Applications",
           "display_title": "🛡️ Day 4 — Advanced TypeScript Concepts and Applications"
+        },
+        {
+          "path": "Week5MiniProjectAndTypeScript/RemoteLearningTypeScript",
+          "icon": "🛰️",
+          "title": "Remote Learning — TypeScript",
+          "display_title": "🛰️ Remote Learning — TypeScript"
         }
       ]
     },
@@ -291,6 +303,12 @@
           "icon": "🟢",
           "title": "Day 4 — Introduction to Node.js",
           "display_title": "🟢 Day 4 — Introduction to Node.js"
+        },
+        {
+          "path": "Week6DatabasesAndNodejs/Day5NodejsWebServer",
+          "icon": "🌐",
+          "title": "Day 5 — Node.js Web Server",
+          "display_title": "🌐 Day 5 — Node.js Web Server"
         }
       ]
     },
@@ -301,7 +319,44 @@
       "title": "Week 7 — Node.js and React",
       "display_title": "🔗 Week 7 — Node.js and React",
       "readme": "Week7NodejsAndReact/README.md",
-      "days": []
+      "days": [
+        {
+          "path": "Week7NodejsAndReact/Day1RoutesControllersAndMiddleware",
+          "icon": "🛣️",
+          "title": "Day 1 — Routes, Controllers and Middleware",
+          "display_title": "🛣️ Day 1 — Routes, Controllers and Middleware"
+        },
+        {
+          "path": "Week7NodejsAndReact/Day2SQLQueryBuilder",
+          "icon": "🧮",
+          "title": "Day 2 — SQL Query Builder",
+          "display_title": "🧮 Day 2 — SQL Query Builder"
+        },
+        {
+          "path": "Week7NodejsAndReact/Day3MiniProject",
+          "icon": "🚀",
+          "title": "Day 3 — Mini-project Day",
+          "display_title": "🚀 Day 3 — Mini-project Day"
+        },
+        {
+          "path": "Week7NodejsAndReact/Day4IntroductionToReact",
+          "icon": "⚛️",
+          "title": "Day 4 — Introduction to React",
+          "display_title": "⚛️ Day 4 — Introduction to React"
+        },
+        {
+          "path": "Week7NodejsAndReact/Day5ReactComponentsAndState",
+          "icon": "🧩",
+          "title": "Day 5 — React Components and State",
+          "display_title": "🧩 Day 5 — React Components and State"
+        },
+        {
+          "path": "Week7NodejsAndReact/RemoteLearningNodejs",
+          "icon": "🛰️",
+          "title": "Remote Learning — Node.js",
+          "display_title": "🛰️ Remote Learning — Node.js"
+        }
+      ]
     },
     {
       "id": "week-8",
@@ -310,7 +365,32 @@
       "title": "Week 8 — React",
       "display_title": "⚛️ Week 8 — React",
       "readme": "Week8React/README.md",
-      "days": []
+      "days": [
+        {
+          "path": "Week8React/Day1MultipleComponentsAndEvents",
+          "icon": "🧱",
+          "title": "Day 1 — Multiple Components and Events",
+          "display_title": "🧱 Day 1 — Multiple Components and Events"
+        },
+        {
+          "path": "Week8React/Day2AdvancedReact",
+          "icon": "🔬",
+          "title": "Day 2 — Advanced React",
+          "display_title": "🔬 Day 2 — Advanced React"
+        },
+        {
+          "path": "Week8React/Day3ReactAdvancedHooks",
+          "icon": "🪝",
+          "title": "Day 3 — React Advanced Hooks",
+          "display_title": "🪝 Day 3 — React Advanced Hooks"
+        },
+        {
+          "path": "Week8React/Day4MiniProject",
+          "icon": "🚀",
+          "title": "Day 4 — Mini-project Day",
+          "display_title": "🚀 Day 4 — Mini-project Day"
+        }
+      ]
     },
     {
       "id": "week-9",
@@ -319,7 +399,38 @@
       "title": "Week 9 — Redux",
       "display_title": "🔁 Week 9 — Redux",
       "readme": "Week9Redux/README.md",
-      "days": []
+      "days": [
+        {
+          "path": "Week9Redux/Day2ReduxOverviewAndConcepts",
+          "icon": "🔁",
+          "title": "Day 2 — Redux Overview and Concepts",
+          "display_title": "🔁 Day 2 — Redux Overview and Concepts"
+        },
+        {
+          "path": "Week9Redux/Day3ReduxToolkitAppStructure",
+          "icon": "🧰",
+          "title": "Day 3 — Redux Toolkit App Structure",
+          "display_title": "🧰 Day 3 — Redux Toolkit App Structure"
+        },
+        {
+          "path": "Week9Redux/Day4ReduxToolkitAsync",
+          "icon": "⏳",
+          "title": "Day 4 — Redux Toolkit and Async Logic",
+          "display_title": "⏳ Day 4 — Redux Toolkit and Async Logic"
+        },
+        {
+          "path": "Week9Redux/Day5ReduxMiniProject",
+          "icon": "🚀",
+          "title": "Day 5 — Redux Mini-project",
+          "display_title": "🚀 Day 5 — Redux Mini-project"
+        },
+        {
+          "path": "Week9Redux/RemoteLearningRedux",
+          "icon": "🛰️",
+          "title": "Remote Learning — Redux",
+          "display_title": "🛰️ Remote Learning — Redux"
+        }
+      ]
     },
     {
       "id": "week-10",
@@ -328,7 +439,38 @@
       "title": "Week 10 — Advanced TypeScript and Authentication",
       "display_title": "🛡️ Week 10 — Advanced TypeScript and Authentication",
       "readme": "Week10AdvancedTypeScriptAndAuthentication/README.md",
-      "days": []
+      "days": [
+        {
+          "path": "Week10AdvancedTypeScriptAndAuthentication/Day1UsingTypeScriptWithReact",
+          "icon": "🔷",
+          "title": "Day 1 — Using TypeScript with React",
+          "display_title": "🔷 Day 1 — Using TypeScript with React"
+        },
+        {
+          "path": "Week10AdvancedTypeScriptAndAuthentication/Day2MiniProject",
+          "icon": "🚀",
+          "title": "Day 2 — Mini-project",
+          "display_title": "🚀 Day 2 — Mini-project"
+        },
+        {
+          "path": "Week10AdvancedTypeScriptAndAuthentication/Day3Authentication",
+          "icon": "🔐",
+          "title": "Day 3 — Authentication",
+          "display_title": "🔐 Day 3 — Authentication"
+        },
+        {
+          "path": "Week10AdvancedTypeScriptAndAuthentication/Day4TypeScriptAuthenticationProject",
+          "icon": "🛡️",
+          "title": "Day 4 — TypeScript and Authentication Project",
+          "display_title": "🛡️ Day 4 — TypeScript and Authentication Project"
+        },
+        {
+          "path": "Week10AdvancedTypeScriptAndAuthentication/RemoteLearningAuthAndTypeScript",
+          "icon": "🛰️",
+          "title": "Remote Learning — Authentication and TypeScript",
+          "display_title": "🛰️ Remote Learning — Authentication and TypeScript"
+        }
+      ]
     },
     {
       "id": "week-11",
@@ -337,7 +479,14 @@
       "title": "Week 11 — Final Project",
       "display_title": "🛠️ Week 11 — Final Project",
       "readme": "Week11FinalProject/README.md",
-      "days": []
+      "days": [
+        {
+          "path": "Week11FinalProject/Day1FinalProjectScope",
+          "icon": "📝",
+          "title": "Day 1 — Final Project Scope",
+          "display_title": "📝 Day 1 — Final Project Scope"
+        }
+      ]
     },
     {
       "id": "week-12",
@@ -346,7 +495,94 @@
       "title": "Week 12 — Final Project",
       "display_title": "🚀 Week 12 — Final Project",
       "readme": "Week12FinalProject/README.md",
-      "days": []
+      "days": [
+        {
+          "path": "Week12FinalProject/Day1CapstoneSubmission",
+          "icon": "🏁",
+          "title": "Day 1 — Capstone Submission",
+          "display_title": "🏁 Day 1 — Capstone Submission"
+        },
+        {
+          "path": "Week12FinalProject/Day5DemoDay",
+          "icon": "🎤",
+          "title": "Day 5 — Demo Day",
+          "display_title": "🎤 Day 5 — Demo Day"
+        }
+      ]
+    },
+    {
+      "id": "week-13",
+      "path": "Week13WebDevelopmentBasics",
+      "icon": "🎨",
+      "title": "Week 13 — Web Development Basics",
+      "display_title": "🎨 Week 13 — Web Development Basics",
+      "readme": "Week13WebDevelopmentBasics/README.md",
+      "days": [
+        {
+          "path": "Week13WebDevelopmentBasics/Day1HTMLAndCSS",
+          "icon": "🧾",
+          "title": "Day 1 — HTML and CSS",
+          "display_title": "🧾 Day 1 — HTML and CSS"
+        },
+        {
+          "path": "Week13WebDevelopmentBasics/Day2GitAndGitHub",
+          "icon": "🌿",
+          "title": "Day 2 — Git and GitHub",
+          "display_title": "🌿 Day 2 — Git and GitHub"
+        },
+        {
+          "path": "Week13WebDevelopmentBasics/Day3CSSGridAndLayout",
+          "icon": "🔲",
+          "title": "Day 3 — CSS Grid and Layout",
+          "display_title": "🔲 Day 3 — CSS Grid and Layout"
+        },
+        {
+          "path": "Week13WebDevelopmentBasics/Day4Bootstrap",
+          "icon": "🅱️",
+          "title": "Day 4 — Bootstrap",
+          "display_title": "🅱️ Day 4 — Bootstrap"
+        },
+        {
+          "path": "Week13WebDevelopmentBasics/Day5CodingDay",
+          "icon": "💻",
+          "title": "Day 5 — Coding Day",
+          "display_title": "💻 Day 5 — Coding Day"
+        }
+      ]
+    },
+    {
+      "id": "week-14",
+      "path": "Week14MoreTopicsAndInterviews",
+      "icon": "🎓",
+      "title": "Week 14 — More Topics and Interview Prep",
+      "display_title": "🎓 Week 14 — More Topics and Interview Prep",
+      "readme": "Week14MoreTopicsAndInterviews/README.md",
+      "days": [
+        {
+          "path": "Week14MoreTopicsAndInterviews/Day1AWSAndJWT",
+          "icon": "☁️",
+          "title": "Day 1 — AWS S3 and JWT",
+          "display_title": "☁️ Day 1 — AWS S3 and JWT"
+        },
+        {
+          "path": "Week14MoreTopicsAndInterviews/Day2DeployWithRender",
+          "icon": "🚢",
+          "title": "Day 2 — Deploying with Render",
+          "display_title": "🚢 Day 2 — Deploying with Render"
+        },
+        {
+          "path": "Week14MoreTopicsAndInterviews/Day3FullStackDeployment",
+          "icon": "🌍",
+          "title": "Day 3 — Full-stack Deployment",
+          "display_title": "🌍 Day 3 — Full-stack Deployment"
+        },
+        {
+          "path": "Week14MoreTopicsAndInterviews/Day7MiniProjects",
+          "icon": "🚀",
+          "title": "Day 7 — Mini-projects",
+          "display_title": "🚀 Day 7 — Mini-projects"
+        }
+      ]
     }
   ],
   "folder_types": [

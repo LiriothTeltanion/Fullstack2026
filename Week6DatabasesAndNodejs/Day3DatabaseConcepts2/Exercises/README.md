@@ -14,6 +14,7 @@ Both Day 3 scripts run against the `dvdrental` sample database.
 
 - [`ExercisesXP/`](ExercisesXP/): languages, `new_film` and `customer_review` with `ON DELETE CASCADE`, outstanding rentals
 - [`ExercisesXPGold/`](ExercisesXPGold/): unreturned rentals, a view, and viewing time per store
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: to do (optional)
 
 ---
 

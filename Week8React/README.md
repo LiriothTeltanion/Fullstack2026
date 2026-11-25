@@ -8,11 +8,16 @@
 
 </div>
 
-Week 8 covers React. The course has not reached it yet.
+React components, events, hooks and a mini-project day. I haven't reached this week yet, so every folder is ready but empty.
 
 ## Contents
 
-Nothing yet. Each lesson will get its own `DayNTitle/` folder with `Exercises/` and `DailyChallenge/`, like Weeks 1–6.
+| Folder | Topic | Required | Optional |
+|---|---|---:|---:|
+| [`Day1MultipleComponentsAndEvents/`](Day1MultipleComponentsAndEvents/) | Multiple Components and Events | 2 | 3 |
+| [`Day2AdvancedReact/`](Day2AdvancedReact/) | Advanced React | 2 | 4 |
+| [`Day3ReactAdvancedHooks/`](Day3ReactAdvancedHooks/) | React Advanced Hooks | 2 | 3 |
+| [`Day4MiniProject/`](Day4MiniProject/) | Mini-project Day | 2 | 1 |
 
 ---
 

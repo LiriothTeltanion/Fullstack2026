@@ -13,6 +13,8 @@ One exercise set for this day.
 ## Contents
 
 - [`ExercisesXP/`](ExercisesXP/): nine exercises, from Hello World up to function overloading
+- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: to do (optional)
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: to do (optional)
 
 ---
 

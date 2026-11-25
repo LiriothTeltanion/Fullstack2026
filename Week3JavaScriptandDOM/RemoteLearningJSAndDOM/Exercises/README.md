@@ -14,6 +14,7 @@ Two packs of extra practice from the remote learning sessions.
 
 - [`ExercisesXP1/`](ExercisesXP1/): to-do list, color guess, calculator and whack-a-mole
 - [`ExercisesXP2/`](ExercisesXP2/): timer, moving box and drag and drop
+- [`OptionalJSExercises/`](OptionalJSExercises/): Optional JS Exercises: to do (optional)
 
 ---
 

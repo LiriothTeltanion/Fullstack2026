@@ -20,6 +20,7 @@ Two topics shared Day 3. Dunder methods let my classes use `+`, `<` and friends,
 | [`DailyChallenge/Circle/`](DailyChallenge/Circle/) | A `Circle` with radius and diameter properties that adds, compares and sorts |
 | [`DailyChallenge/Translator/`](DailyChallenge/Translator/) | French words to English with `googletrans` |
 | [`DailyChallenge/UserInfo/`](DailyChallenge/UserInfo/) | Gold: `Name,Age,Score` records sorted with a lambda |
+| [`Exercises/RemoteExerciseExtendingList/`](Exercises/RemoteExerciseExtendingList/) | Extending List: to do (optional) |
 
 ---
 
