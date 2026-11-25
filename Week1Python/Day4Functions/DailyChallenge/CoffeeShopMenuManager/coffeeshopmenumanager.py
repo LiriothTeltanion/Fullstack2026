@@ -63,12 +63,12 @@ def add_item(menu_dict: Menu) -> None:
     if not drink:
         print("Invalid name.")
         return
+    price = read_price("Enter price: ")
+    if price is None:
+        return
     if drink in menu_dict:
         # An existing drink keeps its price: updating is a different action.
         print("Item already exists!")
-        return
-    price = read_price("Enter price: ")
-    if price is None:
         return
     menu_dict[drink] = price
     print(f'"{drink}" added!')

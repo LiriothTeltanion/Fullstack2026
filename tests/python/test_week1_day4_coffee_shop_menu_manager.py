@@ -66,9 +66,15 @@ class Week1Day4CoffeeShopMenuManagerTests(unittest.TestCase):
 
     def test_add_item_keeps_the_price_of_an_existing_drink(self) -> None:
         menu = starting_menu()
-        # Only the name is asked: an existing drink never reaches the price question.
-        lines = run_with_inputs(lambda: MODULE.add_item(menu), ["Latte"])
+        # Name and price are always asked, as in the brief; the old price stays.
+        lines = run_with_inputs(lambda: MODULE.add_item(menu), ["Latte", "9"])
         self.assertEqual(lines, ["Item already exists!"])
+        self.assertEqual(menu, starting_menu())
+
+    def test_add_item_checks_the_price_before_the_duplicate(self) -> None:
+        menu = starting_menu()
+        lines = run_with_inputs(lambda: MODULE.add_item(menu), ["latte", "-1"])
+        self.assertEqual(lines, ["Invalid price."])
         self.assertEqual(menu, starting_menu())
 
     def test_add_item_rejects_a_negative_or_non_numeric_price(self) -> None:
