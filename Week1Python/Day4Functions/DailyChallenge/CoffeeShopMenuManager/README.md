@@ -15,7 +15,7 @@ The menu is a dictionary where the key is the drink name and the value is its pr
 | Function | What it does |
 |---|---|
 | `show_menu(menu_dict)` | Prints every drink with its price, or says the menu is empty. |
-| `add_item(menu_dict)` | Asks for a name and a price and adds the drink. An existing drink keeps its price. |
+| `add_item(menu_dict)` | Asks for a name and a price, then adds the drink. If the drink already exists, it prints `Item already exists!` and keeps the old price. |
 | `update_price(menu_dict)` | Changes the price of a drink that exists. |
 | `delete_item(menu_dict)` | Removes a drink that exists. |
 | `show_options()` | Prints the list of actions. |
@@ -35,6 +35,7 @@ Two small helpers keep the action functions short: `read_drink_name()` trims and
 - **The loop dispatches through a dictionary of functions** (`"1": show_menu`, and so on) instead of a long `if / elif` chain. Adding option 6 was one new line.
 - **The program starts behind `if __name__ == "__main__":`.** Importing the file from a test does not start the interactive loop.
 - **Names are compared in lowercase**, so `Latte` finds `latte`.
+- **`add_item` always asks for the price before checking for duplicates.** The brief asks for the name and the price first, so the program reads the same number of answers every time. That keeps a scripted run (or an automatic checker) in step with the menu.
 
 ## 🧪 Tests
 
@@ -44,6 +45,7 @@ python -m unittest discover -s tests/python -p "test_week1_day4*" -v
 
 `tests/python/test_week1_day4_coffee_shop_menu_manager.py` scripts the keyboard answers and checks the printed lines and the resulting menu: each action, the invalid cases, the extras and one complete session.
 
-## 📌 Status
+## 📚 What I learned
 
-Local behavior is covered by the tests above. Octopus submission, checker response and instructor review are recorded separately and are not claimed here.
+- Splitting a program into small functions makes each part easy to test on its own.
+- The order of `input()` calls is part of the behaviour: one missing question shifts every answer after it.
