@@ -59,6 +59,10 @@ jobs:
         continue-on-error: ${{ github.ref_type != 'tag' && github.event_name != 'workflow_dispatch' }}
         run: npm run catalogs:check
 
+      - name: Showcase page is current
+        continue-on-error: ${{ github.ref_type != 'tag' && github.event_name != 'workflow_dispatch' }}
+        run: python tools/build_showcase.py --repo . --check
+
       - name: Python anchor tests
         run: python -m unittest discover -s tests/python -p "test_*.py" -v
 

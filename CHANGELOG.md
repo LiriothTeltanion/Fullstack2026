@@ -17,6 +17,8 @@ does not reinterpret early work as production-ready code.
 
 ### Added
 
+- Added `index.html`, an exercise showcase for the Netlify site built from the
+  READMEs by `tools/build_showcase.py`, plus a 404 page and `netlify.toml`.
 - Added source-safe Week 1 Day 1 evidence records and focused regression suites
   for Exercises XP 1–9, XP Gold 1–2, and XP Ninja 1–5.
 - Added a separate local-behavior audit and five regression tests for the
