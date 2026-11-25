@@ -8,12 +8,12 @@
 
 </div>
 
-The two mini projects of Day 5.
+Two mini projects, one you draw with and one you play.
 
 ## Contents
 
-- [`MiniProjectColoringGame/`](MiniProjectColoringGame/) — click and drag to paint a pixel grid
-- [`drumset-mini/`](drumset-mini/) — nine drum pads played with the keyboard or the mouse
+- [`MiniProjectColoringGame/`](MiniProjectColoringGame/): hold the mouse down and drag to paint a pixel grid
+- [`drumset-mini/`](drumset-mini/): nine drum pads on the keys `A` to `L`, or by mouse
 
 ---
 

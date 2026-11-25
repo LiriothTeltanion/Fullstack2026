@@ -8,7 +8,7 @@
 
 </div>
 
-Four small exercises with the Fetch API and async/await. Each one has its own button in `index.html` and writes a short result in the output panel.
+Four exercises with the Fetch API and async/await. Each has a button in `index.html`; the full response goes to the console and a summary to the output panel.
 
 ## ▶️ How to run
 
@@ -21,23 +21,23 @@ npm run dev
 
 3. Open `http://localhost:8000/Week4AdvAsynchronousJavaScript/Day5FetchAndAsyncAwait/Exercises/ExercisesXP/`, open DevTools → Console and click each button.
 
-Without a key, exercises 1 and 2 show `Missing Giphy API key. ...`; exercises 3 and 4 still work.
+`app.js` reads the key from `window.GIPHY_CONFIG.apiKey`. With no `config.js`, or with the `YOUR_...` placeholder still in it, exercises 1 and 2 show `Missing Giphy API key. ...`; 3 and 4 need no key.
 
 ## 🎯 The challenge
 
-1. **Giphy "hilarious"** — logs the full JSON and shows the count and the first GIF's title and URL.
-2. **Giphy "sun"** — `limit=10` and `offset=2`, then shows the 10 titles.
-3. **SWAPI starship 9** — async/await only, no `.then()`. Logs `result` and shows the starship's name.
-4. **Analyse the snippet** — `asyncCall()` shows `calling` right away and `resolved` about 2 seconds later.
+1. **Giphy "hilarious"**: logs the full JSON and shows the count plus the first GIF's title and URL.
+2. **Giphy "sun"**: `limit=10` and `offset=2`, then shows the 10 titles.
+3. **SWAPI starship 9**: `await` only, no `.then()`. Logs `result` and shows the starship's name.
+4. **Analyse the snippet**: `asyncCall()` shows `calling` at once and `resolved` about 2 seconds later.
 
-`handleStatus()` throws on any non-2xx response, and every exercise is wrapped in `try/catch`.
+`handleStatus()` throws on any response that is not ok, and every handler is wrapped in `try/catch`, so errors land in the panel.
 
 ## 🧠 What I learned
 
-- `fetch` only rejects on network errors, so I have to check `response.ok` myself
-- `await` pauses only the async function, not the whole page
-- `URL` and `searchParams` build query strings safely
-- A key used in the browser is visible to everyone, so it stays out of Git and should be a restricted one
+- `fetch` resolves even on a 404 or 500, so checking `response.ok` is my job
+- `await` pauses only its own function; the page keeps responding
+- `new URL()` with `searchParams.set()` builds the query string and encodes it for me
+- A key used in the browser is readable by anyone, so mine stays out of Git and is a restricted one
 
 ---
 

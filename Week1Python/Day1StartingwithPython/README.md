@@ -6,16 +6,16 @@
 
 </div>
 
-The very basics: variables and data types, arithmetic, comparisons, `input()` and `print()`, `if`/`elif`/`else` and simple string handling. 28 unit tests in [tests/python](../../tests/python/) cover this day (`python -m unittest discover -s tests/python -p "test_week1_day1_*.py" -v`).
+My first day of Python: variables and types, arithmetic, comparisons, `input()` and `print()`, `if`/`elif`/`else` and a bit of string work. Everything here has tests, 28 in total, in [tests/python](../../tests/python/). I run them with `python -m unittest discover -s tests/python -p "test_week1_day1_*.py" -v`.
 
 ## Contents
 
 | Folder | What it is |
 |---|---|
-| [`Exercises/ExercisesXP/`](Exercises/ExercisesXP/) | Nine short exercises: printing, math, comparisons, odd/even, a name match and a ride height check. |
-| [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | String repetition and a month-to-season mapper with input validation. |
-| [`Exercises/ExercisesXPNinja/`](Exercises/ExercisesXPNinja/) | PATH and the `py` launcher, boolean puzzles, counting characters, longest sentence without the letter A. |
-| [`DailyChallenge/BuildUpAString/`](DailyChallenge/BuildUpAString/) | Check a 10-character string, print its prefixes and shuffle it. |
+| [`Exercises/ExercisesXP/`](Exercises/ExercisesXP/) | Nine small ones: printing, some math, comparisons, odd or even, a name match and a ride height check. |
+| [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | Repeating lines with string multiplication and turning a month into a season. |
+| [`Exercises/ExercisesXPNinja/`](Exercises/ExercisesXPNinja/) | How `PATH` and `py` work, boolean puzzles, a character count and the "no letter A" sentence game. |
+| [`DailyChallenge/BuildUpAString/`](DailyChallenge/BuildUpAString/) | Check that a string is 10 characters long, print it growing, then shuffle it. |
 
 ---
 

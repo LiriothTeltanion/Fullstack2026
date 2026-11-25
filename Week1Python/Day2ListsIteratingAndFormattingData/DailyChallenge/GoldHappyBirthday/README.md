@@ -8,7 +8,7 @@
 
 </div>
 
-A small program in [happybirthday.py](happybirthday.py) that asks for your birthdate and draws an ASCII birthday cake with one candle per last digit of your age.
+You type your birthdate and [happybirthday.py](happybirthday.py) draws an ASCII cake. The number of candles is the last digit of your age.
 
 ## ▶️ How to run
 
@@ -16,7 +16,7 @@ A small program in [happybirthday.py](happybirthday.py) that asks for your birth
 python happybirthday.py
 ```
 
-For someone who is 23 or 33 (3 candles) the cake looks like this:
+Someone who is 23 or 33 gets 3 candles:
 
 ```
        ___iii___
@@ -28,24 +28,27 @@ For someone who is 23 or 33 (3 candles) the cake looks like this:
    ~~~~~~~~~~~~~~~~~~~
 ```
 
-The age depends on your computer's date, so the cake can change from day to day.
+The age comes from today's date on the computer, so the same birthdate can give a different cake next month.
 
 ## 🎯 The challenge
 
-1. Ask for a birthdate as `DD/MM/YYYY` (for example `16/06/1994`).
-2. Parse it with `datetime.strptime()`. If the format or the date is wrong, print a short message and stop.
-3. Calculate the age from today's date:
+1. `main()` asks for the date as `DD/MM/YYYY`, for example `16/06/1994`.
+2. `datetime.strptime(s, "%d/%m/%Y")` parses it. A wrong format or an impossible date like `31/02/2000` prints `Please use DD/MM/YYYY and ensure the date is valid.` and the program ends.
+3. The age is the year difference minus one if the birthday hasn't happened yet this year:
+
    ```python
    age = today.year - bday.year - ((today.month, today.day) < (bday.month, bday.day))
    ```
-4. Use `age % 10` as the number of candles, so 31 gives one candle and 40 gives none.
-5. Draw the cake. If the birth year is a leap year (`calendar.isleap()`), draw it twice.
+
+4. `candles = age % 10`, so 31 gets one candle and 40 gets none.
+5. `print_cake(candles)` draws it. When `calendar.isleap(bday.year)` is true, the cake is printed twice.
 
 ## 🧠 What I learned
 
-- `strptime()` format codes: `%d` day, `%m` month, `%Y` year
-- Python compares tuples element by element, which makes the "birthday not reached yet" check one line
-- `"i" * candles` builds the candle row
+- The `strptime()` codes I needed were `%d`, `%m` and `%Y`, and it raises `ValueError` for bad dates on its own
+- Comparing `(month, day)` tuples gives `True` or `False`, and `True` counts as 1 when I subtract it
+- `"i" * candles` builds the candle row, and zero candles still leaves a clean top line
+- `calendar.isleap()` saved me from writing the divisible-by-4-but-not-100 rule myself
 
 ---
 

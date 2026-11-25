@@ -8,11 +8,11 @@
 
 </div>
 
-The Day 4 daily challenge.
+One daily challenge, split into three tasks.
 
 ## Contents
 
-- [`NodejsAppAndNPM/`](NodejsAppAndNPM/) — a CommonJS module, the `chalk` package and `fs` in three tasks, then all together in `challenge.js`
+- [`NodejsAppAndNPM/`](NodejsAppAndNPM/): a CommonJS module, the `chalk` package and `fs`, one per task, and then all three in `challenge.js`
 
 ---
 

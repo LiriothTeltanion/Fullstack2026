@@ -8,13 +8,11 @@
 
 </div>
 
-A two-page form: `index.html` sends a name and a last name with GET to `result.html`, which reads them from the URL and writes them into a `<section>`.
+Form #3 uses two pages. `index.html` sends a name and a last name with GET to `result.html`, and that page reads them back from its own URL.
 
 ## ▶️ How to run
 
-Open `index.html` in a browser, keep the default values (John Doe) or type new ones, and press **Submit**.
-
-`result.html` shows:
+Open `index.html` in a browser. The inputs start with John and Doe, so pressing **Submit** right away gives this in `result.html`:
 
 ```
 NAME: John
@@ -23,14 +21,14 @@ LAST NAME: Doe
 
 ## 🎯 The challenge
 
-1. **The form** — `action="result.html"` and `method="get"`, with `name` and `lastname` inputs.
-2. **The result page** — a small inline script reads both values with `URLSearchParams`, trims them and adds one `<p>` per value to `<section id="output">`. An empty value shows `(empty)`.
+1. **The form**: `action="result.html"` and `method="get"`, with two text inputs called `name` and `lastname`.
+2. **The result page**: an inline script (wrapped in an IIFE) reads both values with `URLSearchParams.get()`, trims them and appends one `<p>` per value to `<section id="output">`. A missing or blank value prints `(empty)`.
 
 ## 🧠 What I learned
 
-- A form's `action` can point to another page
-- GET makes the values available to the next page through the URL
-- `textContent` is a safe way to put user input on the page
+- The `action` attribute decides which page receives the form, and it does not have to be the same page
+- After a GET submit, the next page can read everything it needs from `window.location.search`
+- Writing the values with `textContent` keeps any HTML someone types from being run as markup
 
 ---
 

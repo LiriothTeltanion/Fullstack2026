@@ -8,7 +8,7 @@
 
 </div>
 
-A `Circle` class in [`circle.py`](circle.py) that can be built from a radius or a diameter, and that can be added, compared and sorted.
+You can create my `Circle` in [`circle.py`](circle.py) from a radius or from a diameter. After that, circles can be added together, compared and sorted like numbers.
 
 ## ▶️ How to run
 
@@ -27,16 +27,18 @@ c1 == c2: False
 sorted by radius: [1.0, 3.0, 4.0, 7.0, 10.0]
 ```
 
+`c2` is made with `diameter=8`, which is why its radius shows up as 4.
+
 ## 🎯 The challenge
 
 | Part | What it does |
 |---|---|
-| `__init__(radius=None, diameter=None)` | Takes one of the two; giving both or neither raises `ValueError` |
-| `radius` / `diameter` properties | Read and set either one; the setters reject values of 0 or less |
-| `area()` | Returns `math.pi * radius ** 2` |
-| `__str__` / `__repr__` | Print `Circle(r=3.00, d=6.00)` |
-| `__add__` | `c1 + c2` returns a new circle with the two radii added |
-| `__eq__`, `__lt__`, `__gt__` | Compare by radius, so `sorted()` and `.sort()` work |
+| `__init__(radius=None, diameter=None)` | Needs exactly one of the two. Both or neither raises `ValueError` |
+| `radius` / `diameter` properties | Get or set either one. A value of 0 or less is refused |
+| `area()` | `math.pi * radius ** 2` |
+| `__str__` / `__repr__` | Both print `Circle(r=3.00, d=6.00)` |
+| `__add__` | `c1 + c2` makes a new circle whose radius is the two radii added. Adding a non-circle raises `TypeError` |
+| `__eq__`, `__lt__`, `__gt__` | Compare radii, which is what `sorted()` and `.sort()` rely on |
 
 ## 🧪 Tests
 
@@ -46,14 +48,14 @@ From the repository root:
 python -m unittest discover -s tests/python -p "test_circle.py" -v
 ```
 
-3 tests check the radius and diameter, adding and sorting circles, and the errors for invalid values.
+3 tests cover radius, diameter and area, adding and sorting, and the errors for bad values.
 
 ## 🧠 What I learned
 
-- A property setter is a good place to validate a value every time it changes
-- Storing only the radius and computing the diameter keeps the two from getting out of sync
-- `a + b` and `a < b` are just calls to `__add__` and `__lt__`
-- With `__lt__` defined, sorting a list of my own objects needs no `key`
+- The radius setter runs on every assignment, including the one inside `__init__`, so the check lives in one place
+- Only `_radius` is stored, and `diameter` is computed from it, so they can't disagree
+- Writing `a + b` or `a < b` really calls `__add__` or `__lt__` behind the scenes
+- Once `__lt__` exists, `circles.sort()` works on my own objects without a `key`
 
 ---
 

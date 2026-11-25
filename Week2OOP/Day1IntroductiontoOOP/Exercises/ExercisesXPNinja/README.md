@@ -8,7 +8,7 @@
 
 </div>
 
-A `Phone` class in `exercisesxpninja.py` that can call other phones, keep a call history and send messages.
+Two `Phone` objects talking to each other. The class in `exercisesxpninja.py` makes calls, keeps a call history and sends text messages.
 
 ## ▶️ How to run
 
@@ -28,18 +28,20 @@ Call history for +972-50-111-2222:
 
 | Method | What it does |
 |---|---|
-| `call(other_phone)` | Prints and records who called whom |
-| `show_call_history()` | Prints the numbered call history, or `No calls yet.` |
-| `send_message(other_phone, content)` | Stores a message dict (`to`, `from`, `content`) on both phones |
-| `show_outgoing_messages()` | Lists the messages this phone sent |
-| `show_incoming_messages()` | Lists the messages this phone received |
-| `show_messages_from(other_phone)` | Lists the incoming messages from one phone |
+| `call(other_phone)` | Prints `X called Y` and saves it in the caller's history |
+| `show_call_history()` | Numbered list of calls, or `No calls yet.` |
+| `send_message(other_phone, content)` | Builds a dict with `to`, `from` and `content` and stores it on both phones |
+| `show_outgoing_messages()` | Messages where this phone is the sender |
+| `show_incoming_messages()` | Messages where this phone is the receiver |
+| `show_messages_from(other_phone)` | Incoming messages from one specific number |
+
+Only the caller remembers a call. The phone that receives it doesn't get an entry in its own history.
 
 ## 🧠 What I learned
 
-- One object can call methods on another object it receives as an argument
-- Saving a copy with `dict(msg)` keeps the two phones from sharing the same dictionary
-- List comprehensions are a quick way to filter messages by sender or receiver
+- A method can take another object as a parameter and read or change that object's data
+- The receiver gets `dict(msg)`, a copy, so editing one phone's message can't change the other's
+- One `messages` list is enough, because filtering on `from` or `to` splits it into outgoing and incoming
 
 ---
 

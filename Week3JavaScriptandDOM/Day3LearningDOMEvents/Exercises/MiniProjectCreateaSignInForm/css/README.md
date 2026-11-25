@@ -8,11 +8,11 @@
 
 </div>
 
-The stylesheet for the Sign In / Sign Up double slider.
+The fun part is the red panel: its background is twice as wide and moves the other way, so the photo seems to stay still while the panel slides.
 
 ## Contents
 
-- [`styles.css`](styles.css) — color variables, the two-column forms, the sliding red overlay, a reduced-motion rule and a one-column layout below 860px
+- [`styles.css`](styles.css): color variables on `:root`, the two form columns, the overlay moved by `[data-state]`, a `prefers-reduced-motion` rule and a single column under 860px
 
 ---
 

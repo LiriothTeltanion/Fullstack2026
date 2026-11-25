@@ -8,12 +8,12 @@
 
 </div>
 
-The Day 5 daily challenges.
+The two daily challenges that closed the week.
 
 ## Contents
 
-- [`Modules/`](Modules/) — a page load timer with `requests` and `time`, a small command-line tool and tests
-- [`OOPQuiz/`](OOPQuiz/) — short OOP quiz answers and a deck of cards with `Card` and `Deck` classes
+- [`Modules/`](Modules/): times full page downloads with `requests` and `time`, has a small CLI and tests
+- [`OOPQuiz/`](OOPQuiz/): short answers to the OOP quiz, and `Card` and `Deck` classes
 
 ---
 

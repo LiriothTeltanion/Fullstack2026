@@ -8,11 +8,11 @@
 
 </div>
 
-The TypeScript source of the Union Type Validator. `tsc` compiles it to `../dist/` with the settings in `../tsconfig.json`.
+Source folder of the validator. `tsc` builds it into `../dist/` using `../tsconfig.json`.
 
 ## Contents
 
-- [`index.ts`](index.ts) — `validateUnionType()`, `validateUnionTypeAlt()`, the ten test cases and the form example
+- [`index.ts`](index.ts): both validator functions, the ten test cases, the loop vs `includes` comparison and the form example
 
 ---
 

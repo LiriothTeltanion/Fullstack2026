@@ -8,11 +8,11 @@
 
 </div>
 
-The stylesheet for the Calculator exercise.
+The keypad is a four-column CSS grid. Operator keys are slate, `=` is green, and the wide `0` key spans two columns.
 
 ## Contents
 
-- [`styles.css`](styles.css) — the dark panel, the right-aligned display and a 4-column keypad with a wide `0` and a green `=`
+- [`styles.css`](styles.css): the dark panel, a right-aligned 32px display, the key grid and a 1px press effect on `:active`
 
 ---
 

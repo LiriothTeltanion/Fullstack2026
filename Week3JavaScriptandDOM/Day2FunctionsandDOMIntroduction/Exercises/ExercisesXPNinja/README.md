@@ -8,11 +8,11 @@
 
 </div>
 
-Five console exercises with loops and functions, and a sixth that draws a month calendar on the page.
+Five console exercises with loops and functions, and a sixth one that draws a month calendar on the page.
 
 ## ▶️ How to run
 
-Open `index.html` in a browser (or use `npm run dev` from the repo root). Open DevTools → Console for Exercises 1–5; the calendar for September 2012 appears on the page.
+Open `index.html` in a browser (or use `npm run dev` from the repo root). Exercises 1–5 log to DevTools → Console, and the calendar for September 2012 shows up on the page.
 
 ```
 Exercise 2 — capitalize('abcdef'): ['AbCdEf', 'aBcDeF']
@@ -31,12 +31,14 @@ Exercise 5 — unique: [1, 2, 3, 4, 5]
 | `unique(arr)` | Keeps the first copy of each value with a `Set`, in the original order. |
 | `createCalendar(year, month)` | Builds a Monday-first table with `MO` … `SU` headers and dots for empty days. |
 
+The calendar was the longest part. The month is 1–12 for the caller and gets turned into the 0–11 that `Date` expects.
+
 ## 🧠 What I learned
 
-- `Math.floor(Math.random() * 100) + 1` gives a whole number from 1 to 100
-- `new Date(year, month + 1, 0).getDate()` returns the number of days in a month
-- `(getDay() + 6) % 7` shifts Sunday-first weekdays to Monday-first
-- A `Set` remembers what I have already seen
+- `Math.floor(Math.random() * 100) + 1` gives a whole number from 1 to 100, never 0
+- `new Date(year, month + 1, 0).getDate()` is a neat trick: day 0 of next month is the last day of this one
+- `getDay()` starts the week on Sunday, and `(getDay() + 6) % 7` moves it to Monday
+- In `unique()` the `Set` remembers what I already saw, while the array keeps the order
 
 ---
 

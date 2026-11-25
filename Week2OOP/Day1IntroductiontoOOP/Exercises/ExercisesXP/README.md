@@ -8,7 +8,7 @@
 
 </div>
 
-My first four Python classes, all in `exercisesxp.py`: cats, dogs, a song and a zoo.
+Four classes in `exercisesxp.py`, one per exercise: `Cat`, `Dog`, `Song` and `Zoo`. Running the file plays all four demos in order.
 
 ## ▶️ How to run
 
@@ -27,23 +27,23 @@ Rex jumps 100.0 cm high!
 ...
 ```
 
-The script also prints `INFO - ...` log lines, because every class logs what it does.
+You'll also see `INFO - ...` lines mixed in. I added `logging` to every class, so each bark, jump and new animal gets logged.
 
 ## 🎯 The challenge
 
-1. **Cats** - three `Cat` objects and `find_oldest_cat()`, which uses `max()` with `key=lambda cat: cat.age`
-2. **Dogs** - two `Dog` objects that bark and jump (the jump is twice the height), then the bigger one is printed
-3. **Song** - a `Song` that stores lyrics as a list and prints them line by line with `sing_me_a_song()`
-4. **Zoo** - a `Zoo` that adds and sells animals, sorts them and groups them by first letter
+1. **Cats** - three cats (Mimi 4, Nala 7, Loki 2) go into `find_oldest_cat()`, which picks the winner with `max(cats, key=lambda cat: cat.age)`
+2. **Dogs** - Rex (50 cm) and Teacup (20 cm) bark and jump. The jump is double the height, and the bark depends on size: Teacup says `yip yip!`, Rex says `woof!`
+3. **Song** - `Song` keeps the lyrics as a list and `sing_me_a_song()` prints them one line at a time
+4. **Zoo** - Brooklyn Safari gets a giraffe, a bear and a baboon, sells the bear, then `sort_animals()` groups what's left by first letter (`B: ['Baboon']`, `G: ['Giraffe']`)
 
-The `Cat`, `Dog` and `Song` classes are dataclasses that check their values in `__post_init__` (for example, an empty name or a negative age raises an error).
+`Cat`, `Dog` and `Song` are dataclasses. Their `__post_init__` rejects bad input, so `Cat("", 3)` or a negative age raises an error right away.
 
 ## 🧠 What I learned
 
-- `__init__` sets up a new object, and `self` is that object inside every method
-- A function can take objects as arguments and compare their attributes
-- `@dataclass` writes `__init__` for me, and `__post_init__` is the place to validate
-- `@property` turns a method like `is_senior` into something that reads like an attribute
+- `self` is just the object the method was called on, and `__init__` fills it in
+- `max()` with a `key` function finds the oldest cat without writing my own loop
+- With `@dataclass` I don't write `__init__` at all, and `__post_init__` runs right after it for checks
+- A `@property` like `size_category` reads like a normal attribute but is computed every time
 
 ---
 

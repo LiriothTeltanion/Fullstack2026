@@ -8,13 +8,13 @@
 
 </div>
 
-A form with a name and a last name. Each **Send** keeps me on the page and adds the values to a list as a JSON string, plus a pretty version and the time.
+Two inputs, name and last name. **Send** doesn't reload the page; it adds a list item with the time, the values as a JSON string and a pretty-printed copy.
 
 ## ▶️ How to run
 
 Open `index.html` in a browser, or run `npm run dev` from the repository root and go to `http://localhost:8000/Week4AdvAsynchronousJavaScript/Day3HTTPAndFormMethodGETAndPOST/DailyChallenge/HTMLForm/`.
 
-Typing Ada and Lovelace adds:
+Ada and Lovelace give:
 
 ```
 {"name":"Ada","lastname":"Lovelace"}
@@ -24,17 +24,17 @@ Typing Ada and Lovelace adds:
 
 | Function | What it does |
 |---|---|
-| `el(tag, text, className)` | Small helper that creates an element with text and a class |
-| `appendJsonEntry(obj)` | Adds a list item with the time, `JSON.stringify(obj)` and the pretty JSON |
-| submit handler | Calls `preventDefault()`, reads the form with `FormData` and builds `{ name, lastname }` |
+| `el(tag, text, className)` | Creates an element with text and a class |
+| `appendJsonEntry(obj)` | Adds an `<li>` with `Submitted at <time>`, `JSON.stringify(obj)` and the pretty JSON |
+| submit handler | Calls `preventDefault()`, reads the `FormData` and builds `{ name, lastname }` |
 
-**Clear Output** empties the list.
+**Clear Output** empties the list. The form has `novalidate`, so empty fields go through as `""`.
 
 ## 🧠 What I learned
 
-- `preventDefault()` stops the page from reloading on submit
-- `Object.fromEntries(new FormData(form))` turns a form into an object
-- `JSON.stringify(obj, null, 2)` makes JSON readable
+- Without `preventDefault()` the submit reloads the page and the log disappears
+- `Object.fromEntries(data.entries())` turns a `FormData` into a plain object
+- `JSON.stringify(obj, null, 2)` adds line breaks and a two-space indent
 
 ---
 

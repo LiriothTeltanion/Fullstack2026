@@ -8,7 +8,7 @@
 
 </div>
 
-Drag a red box into a yellow target. Dropped fully inside, it centers itself; dropped outside, it jumps back to where it started.
+I drag a red box into a yellow target. If I drop it fully inside, it centers itself. If any part sticks out, it jumps back to where it started.
 
 ## ▶️ How to run
 
@@ -23,12 +23,14 @@ Open `index.html` in a browser (or use `npm run dev` from the repo root and open
 | `isInsideTarget(el, tgt)` | Compares the two `getBoundingClientRect()` boxes to see if the box is fully inside the target. |
 | `pointerup` | Centers the box in the target, or sends it back to its original place. |
 
+I used pointer events instead of the HTML drag-and-drop API, and the box has `touch-action: none` so a finger drag moves it instead of scrolling the page.
+
 ## 🧠 What I learned
 
-- Pointer events work for both mouse and touch with the same code
-- `setPointerCapture` keeps the drag going even if the pointer leaves the box
-- `getBoundingClientRect()` gives the position and size I need to check overlaps
-- Saving the starting `offsetLeft` and `offsetTop` makes "snap back" easy
+- One set of `pointerdown` / `pointermove` / `pointerup` listeners covers both mouse and touch
+- After `setPointerCapture`, the box keeps getting `pointermove` even when the pointer slips off it
+- "Fully inside" is four comparisons between the two rectangles from `getBoundingClientRect()`
+- I save `offsetLeft` and `offsetTop` once at the start, and that is all "snap back" needs
 
 ---
 

@@ -8,7 +8,7 @@
 
 </div>
 
-A first npm package in use: `chalk` prints three styled lines in the terminal.
+`app.js` uses the `chalk` package to print three styled lines in the terminal. That's the whole exercise: install a package and use it.
 
 ## ▶️ How to run
 
@@ -23,19 +23,19 @@ Welcome to the  NPM Beginner  demo!
 💡 Tip: Try different chalk styles like underline, italic, or inverse.
 ```
 
-In a real terminal the lines have bold text, a blue background, green and yellow labels, and underline, italic and inverse words.
+In the terminal the first line is bold with " NPM Beginner " in white on blue, the labels are green and yellow, and the last three style names are shown underlined, in italics and inverted.
 
 ## 🎯 The challenge
 
-- `package.json` asks for `chalk` `^4.1.2`. Version 4 still works with `require()`; version 5 and newer only work as ES modules.
-- Styles chain together, like `chalk.bgBlue.white(...)`, and styled pieces are joined with `+`.
-- `chalk.reset(...)` goes back to plain text in the middle of a line.
+- `package.json` asks for `chalk` `^4.1.2`. Version 4 still loads with `require()`; from version 5 on it is ES modules only.
+- Each line is built by adding styled pieces with `+`, for example `chalk.bold("Welcome to the ") + chalk.bgBlue.white(" NPM Beginner ")`.
+- `chalk.reset(...)` switches back to plain text in the middle of a line.
 
 ## 🧠 What I learned
 
-- `npm install` downloads the packages listed in `package.json` into `node_modules`
-- The major version matters when a package moves from CommonJS to ES modules
-- Chained styles like `bgBlue.white` set the background and the text color at once
+- The `^` in `^4.1.2` lets npm install newer 4.x versions but never jump to 5
+- Gluing strings with `+` works because each chalk call just returns a string with color codes inside
+- The tip line shows each style on the word that names it, which made it easy to see what `underline`, `italic` and `inverse` do
 
 ---
 

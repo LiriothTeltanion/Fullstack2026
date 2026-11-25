@@ -8,7 +8,7 @@
 
 </div>
 
-A `TodoList` class exported as an ES module, and a script that adds three tasks, completes two of them and prints the list.
+`todo.js` exports a `TodoList` class, and `app.js` uses it: three tasks go in, two get marked as done, and the list is printed.
 
 ## ▶️ How to run
 
@@ -28,17 +28,17 @@ node app.js
 | Method | What it does |
 |---|---|
 | `add(text)` | Trims the text, gives it the next id and stores `{ id, text, done: false }`; empty text throws an error |
-| `complete(id)` | Marks the task as done, or returns `false` if the id does not exist |
+| `complete(id)` | Sets `done` to `true`, or returns `false` when there is no task with that id |
 | `list()` | Returns a copy of the tasks array |
 
-The tasks live in memory only, so the list starts empty on every run. `package.json` has `"type": "module"` for the `import` / `export` syntax.
+Nothing is saved to disk, so every run starts from an empty list. `package.json` has `"type": "module"` so `import` and `export` work.
 
 ## 🧠 What I learned
 
-- `export class` shares a whole class between modules
-- A counter like `_nextId` gives each task a unique id
-- Returning `[...this.tasks]` stops other code from changing the original array
-- Throwing an error is a clear way to reject bad input
+- `export class TodoList` shares the whole class, and `app.js` makes its own instance with `new`
+- `this._nextId++` hands out 1, 2, 3 in order, so no two tasks ever share an id
+- `list()` returns `[...this.tasks]`, so code outside can't push into the real array (the task objects themselves are still shared)
+- Throwing on empty text is louder than quietly skipping it, which is what I wanted here
 
 ---
 

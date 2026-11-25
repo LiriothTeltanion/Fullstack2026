@@ -8,7 +8,7 @@
 
 </div>
 
-The modules challenge: measure how long a web page takes to load completely, from sending the request until the last byte arrives, with `requests` and `time`.
+How long does a page really take to load? This timer uses `requests` and `time` to measure from the moment the request leaves until the last byte of the body has arrived.
 
 ## ▶️ How to run
 
@@ -22,33 +22,35 @@ python cli.py
 python cli.py --urls google.com ynet.co.il imdb.com --attempts 3 --timeout 10 --json-out results.json
 ```
 
-It prints a table with the minimum, average and maximum time, the standard deviation and each sample, plus an `Errors:` line under any site that had failures. The numbers depend on your network.
+The output is a table with min, average and max time, the standard deviation, the number of good attempts and each sample. A site that failed gets an `Errors:` line under it. Your numbers will depend on your connection.
 
 ## 🎯 The challenge
 
 | Part | What it does |
 |---|---|
-| `timer.normalize_url(url)` | Adds `https://` when the address has no scheme |
-| `timer.measure_load_time(url, timeout=15, verify=True)` | Starts `time.perf_counter()`, sends `GET` with `stream=True`, reads the whole body in chunks and returns a dict with `elapsed_s`, `status`, `bytes`, `ok` and `error` |
-| `timer.benchmark(urls, attempts=3, ...)` | Runs several attempts per site and keeps the times, min, average, max and standard deviation |
-| `cli.py` | Reads the options with `argparse`, prints the table and can save the report as JSON |
+| `timer.normalize_url(url)` | Puts `https://` in front when the address has no scheme |
+| `timer.measure_load_time(url, timeout=15, verify=True)` | Starts `time.perf_counter()`, sends a `GET` with `stream=True`, reads the body in 64 KB chunks and returns `elapsed_s`, `status`, `bytes`, `ok` and `error` |
+| `timer.benchmark(urls, attempts=3, ...)` | Several attempts per site, then the times plus min, average, max and standard deviation |
+| `cli.py` | `argparse` options, the printed table and the optional JSON report |
+
+A failed request still returns how long it took, with `ok: False` and the error text.
 
 ## 🧪 Tests
 
-From the repository root (no internet and no `requests` needed, the session is faked):
+From the repository root (no internet and no `requests` needed, because the session is faked):
 
 ```bash
 python -m unittest discover -s tests/python -p "test_timer.py" -v
 ```
 
-1 test checks the byte count of one measurement and the summary of a two-attempt benchmark. This folder also has its own [`tests/`](tests/) with 2 more tests; they need `requests` installed and run from this folder with `python -m unittest discover -s tests`.
+1 test checks the byte count of one measurement and the summary of a two-attempt benchmark. This folder also has its own [`tests/`](tests/) with 2 more tests. Those need `requests` installed and run from this folder with `python -m unittest discover -s tests`.
 
 ## 🧠 What I learned
 
-- `stream=True` plus reading every chunk measures the full download, not just the headers
-- `time.perf_counter()` is the right clock for measuring short durations
-- Keeping the logic in `timer.py` and the printing in `cli.py` makes the logic easy to test
-- `unittest.mock.patch` lets me test network code without touching the network
+- Without `stream=True` and reading every chunk, I'd only be timing until the headers arrive
+- `time.perf_counter()` is made for timing short intervals, unlike the wall clock in `time.time()`
+- `timer.py` has no `print` at all, which is what made it easy to test
+- `unittest.mock.patch` swaps the real session for a fake one, so the tests never go online
 
 ---
 

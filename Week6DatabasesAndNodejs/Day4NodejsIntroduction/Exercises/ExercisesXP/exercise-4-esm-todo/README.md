@@ -8,11 +8,11 @@
 
 </div>
 
-A to-do list written with ES modules. The code lives in the `todoApp/` folder.
+A to-do list with ES modules. The code is one folder down, in `todoApp/`.
 
 ## Contents
 
-- [`todoApp/`](todoApp/) — the `TodoList` class and a script that adds, completes and lists tasks
+- [`todoApp/`](todoApp/): the `TodoList` class and a script that adds, completes and lists tasks
 
 ---
 

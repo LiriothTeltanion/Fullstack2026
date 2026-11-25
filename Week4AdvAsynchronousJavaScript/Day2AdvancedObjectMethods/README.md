@@ -8,14 +8,14 @@
 
 </div>
 
-Day 2 of Week 4: destructuring, `Object.entries`, classes, inheritance and how object references work, in TypeScript.
+Objects in TypeScript: destructuring, `Object.entries`, classes with `extends`, and why two objects that look the same are not equal.
 
 ## Contents
 
 | Folder | What it is |
 |---|---|
-| [`Exercises/`](Exercises/) | Exercises XP: destructuring, classes and references |
-| [`DailyChallenge/`](DailyChallenge/) | Creating Objects: a `Video` class |
+| [`Exercises/`](Exercises/) | Exercises XP: six object and class exercises in one file |
+| [`DailyChallenge/`](DailyChallenge/) | Creating Objects: a `Video` class and seven instances |
 
 ---
 

@@ -8,12 +8,12 @@
 
 </div>
 
-The Day 1 daily challenges.
+Two daily challenges for Day 1, one in the browser and one in TypeScript.
 
 ## Contents
 
-- [`CarInventory/`](CarInventory/) — find the first Honda and sort cars by year, in the browser
-- [`GoWildcats/`](GoWildcats/) — usernames, winners and the total score with `forEach`, in TypeScript
+- [`CarInventory/`](CarInventory/): finds the first Honda and sorts the cars by year on a web page
+- [`GoWildcats/`](GoWildcats/): usernames, winners and a total score built with `forEach`
 
 ---
 

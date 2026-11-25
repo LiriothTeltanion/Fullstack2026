@@ -8,14 +8,14 @@
 
 </div>
 
-Day 3 of Week 5: classes in TypeScript with access modifiers, `readonly`, inheritance, static methods and interfaces.
+Classes in TypeScript: access modifiers, `readonly`, inheritance, static methods and interfaces that extend each other.
 
 ## Contents
 
 | Folder | What it is |
 |---|---|
-| [`Exercises/`](Exercises/) | Exercises XP: five object-oriented exercises |
-| [`DailyChallenge/`](DailyChallenge/) | Library System |
+| [`Exercises/`](Exercises/) | Exercises XP: five small object-oriented exercises |
+| [`DailyChallenge/`](DailyChallenge/) | Library System with a `Book` interface and two classes |
 
 ---
 

@@ -8,11 +8,11 @@
 
 </div>
 
-The browser script for the Calculator. It needs the page, so open `../index.html` instead of running it with `node`.
+Everything the keys do lives in this one file, driven by a single `click` listener on the keypad. It needs `../index.html` around it to run.
 
 ## Contents
 
-- [`app.js`](app.js) — digit input, the four operations, `C` / `±` / `%` and the memory keys
+- [`app.js`](app.js): digit input, the running-total operators, `=`, `C`, `±`, `%` and the four memory keys
 
 ---
 

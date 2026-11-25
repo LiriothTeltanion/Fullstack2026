@@ -8,14 +8,14 @@
 
 </div>
 
-Day 4 of Week 4: creating promises, resolving and rejecting them, and chaining them with `.then()` and `.catch()`.
+Promises day: building them with `new Promise`, settling them with `resolve` or `reject`, and chaining `.then()` with one `.catch()` at the end.
 
 ## Contents
 
 | Folder | What it is |
 |---|---|
-| [`Exercises/`](Exercises/) | Exercises XP: three promise exercises |
-| [`DailyChallenge/`](DailyChallenge/) | Play With Words: chained promises and a Morse translator |
+| [`Exercises/`](Exercises/) | Exercises XP: `compareToTen`, a delayed promise and pre-settled promises |
+| [`DailyChallenge/`](DailyChallenge/) | Play With Words: a caps-and-sort chain and a Morse translator |
 
 ---
 

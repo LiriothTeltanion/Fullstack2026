@@ -8,17 +8,17 @@
 
 </div>
 
-Python's collection types and loops: lists, tuples and sets, `for` and `while` loops, and formatting output with f-strings. Most exercises turn into small console tools, like a pizza order or a cinema ticket calculator.
+Day 2 was about collections and loops: lists, tuples, sets, `for` and `while`, and printing results with f-strings. A lot of the exercises ended up as tiny console tools, like a pizza order or a cinema ticket counter.
 
 ## Contents
 
 | Folder | What it is |
 |---|---|
-| [`Exercises/ExercisesXP/`](Exercises/ExercisesXP/) | 10 exercises on sets, tuples, list methods, loops and interactive pricing. |
-| [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | 9 exercises: list concatenation, ranges, `index()`, `max()`, a guessing game. |
-| [`Exercises/ExercisesXPNinja/`](Exercises/ExercisesXPNinja/) | 4 exercises: a formula, list statistics, paragraph analysis, word frequency. |
-| [`DailyChallenge/ListAndStrings/`](DailyChallenge/ListAndStrings/) | Multiples of a number and collapsing repeated letters. |
-| [`DailyChallenge/GoldHappyBirthday/`](DailyChallenge/GoldHappyBirthday/) | An ASCII cake with one candle per last digit of your age. |
+| [`Exercises/ExercisesXP/`](Exercises/ExercisesXP/) | 10 exercises: sets, tuples, list methods, loops, pizza and ticket prices. |
+| [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | 9 exercises: joining lists, ranges, `index()`, `max()` and a number guessing game. |
+| [`Exercises/ExercisesXPNinja/`](Exercises/ExercisesXPNinja/) | 4 exercises: a square root formula, list stats, paragraph stats and word counts. |
+| [`DailyChallenge/ListAndStrings/`](DailyChallenge/ListAndStrings/) | Multiples of a number and squashing repeated letters. |
+| [`DailyChallenge/GoldHappyBirthday/`](DailyChallenge/GoldHappyBirthday/) | An ASCII birthday cake with candles for the last digit of your age. |
 
 ---
 

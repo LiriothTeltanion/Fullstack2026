@@ -8,7 +8,7 @@
 
 </div>
 
-Putting the week together in small browser projects: a drawing board, a drum kit and a to-do list.
+The last day of the week, where I used everything so far in three small browser projects: a pixel drawing board, a drum kit and a to-do list.
 
 ## Contents
 

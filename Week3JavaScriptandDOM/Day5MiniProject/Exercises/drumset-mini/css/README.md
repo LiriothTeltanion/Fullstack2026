@@ -8,11 +8,11 @@
 
 </div>
 
-The stylesheet for the drum set.
+Dark slate pads in a three-column grid (two under 720px, one under 480px) that glow amber while playing.
 
 ## Contents
 
-- [`styles.css`](styles.css) — dark color variables, the pad grid and the amber `playing` highlight
+- [`styles.css`](styles.css): color variables, the `.keys` grid, the pad and key-cap styles, and `.key.playing` that lifts the pad by 2px
 
 ---
 

@@ -8,11 +8,11 @@
 
 </div>
 
-A Mad Libs page: I fill in a noun, an adjective, a name, a verb and a place, and the page writes a short story with my words.
+Mad Libs in the browser. I fill in a noun, an adjective, a name, a verb and a place, and the page turns them into a short story.
 
 ## ▶️ How to run
 
-Open `index.html` in a browser (or use `npm run dev` from the repo root). Fill every field and click **Lib it!**; **Shuffle story** picks another template with the same words, and **Reset** clears everything.
+Open `index.html` in a browser (or use `npm run dev` from the repo root). Fill every field and click **Lib it!**. **Shuffle story** picks another template with the same words, and **Reset** clears everything.
 
 ```
 Kevin dances a shiny dragon in Ramat Gan. Everyone cheered!
@@ -26,16 +26,16 @@ Kevin dances a shiny dragon in Ramat Gan. Everyone cheered!
 | `validate(values)` | Returns the first empty field, or `null`. |
 | `buildStory(words)` | Picks one of 4 template functions at random, avoids repeating the last one, and writes the story into `#story`. |
 
-The `submit` listener calls `preventDefault()`, alerts `Please fill the noun.` (or another field) and focuses it, then enables the Shuffle button.
+On `submit` I call `preventDefault()` first. If a field is empty, an alert says which one (`Please fill the noun.`) and that field gets the focus. Once a story exists, the Shuffle button is enabled.
 
 More notes are in [README_MadLibs.md](README_MadLibs.md).
 
 ## 🧠 What I learned
 
-- `preventDefault()` stops the form from reloading the page
-- Template literals make it easy to drop variables into a sentence
-- An array of small functions works well as a list of story templates
-- Moving the focus to the missing field helps the user fix the form quickly
+- Without `preventDefault()` the form would reload the page and the story would be gone
+- Each template is an arrow function that destructures the five words, so every story is one line
+- `lastIdx` remembers the last template, which stops Shuffle from showing the same story twice in a row
+- Calling `.focus()` on the empty field sends the cursor straight to what needs fixing
 
 ---
 

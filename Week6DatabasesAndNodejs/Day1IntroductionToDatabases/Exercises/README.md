@@ -8,13 +8,13 @@
 
 </div>
 
-The Day 1 SQL exercises: three XP levels, each one a single PostgreSQL script.
+Three XP levels, and each one is a single PostgreSQL script.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/) — `items` and `customers` tables with six filter queries
-- [`ExercisesXPPlus/`](ExercisesXPPlus/) — a `students` table and pattern matching with `ILIKE`
-- [`ExercisesXPGold/`](ExercisesXPGold/) — sorting and paging the `students` table with `LIMIT` and `OFFSET`
+- [`ExercisesXP/`](ExercisesXP/): `items` and `customers`, six filter queries
+- [`ExercisesXPPlus/`](ExercisesXPPlus/): the `students` table and pattern matching with `ILIKE`
+- [`ExercisesXPGold/`](ExercisesXPGold/): sorting and paging `students` with `LIMIT` and `OFFSET`
 
 ---
 

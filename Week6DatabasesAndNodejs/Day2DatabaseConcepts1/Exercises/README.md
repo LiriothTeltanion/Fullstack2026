@@ -8,11 +8,11 @@
 
 </div>
 
-The Day 2 SQL exercises, all in one file.
+Everything for Day 2 is in one SQL file.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/) — sorting and limits on `items` and `customers`, then aliases, `DISTINCT`, joins and `NOT EXISTS` on `dvdrental`
+- [`ExercisesXP/`](ExercisesXP/): sorting and `LIMIT` on `items` and `customers`, then aliases, `DISTINCT`, joins and `NOT EXISTS` on `dvdrental`
 
 ---
 

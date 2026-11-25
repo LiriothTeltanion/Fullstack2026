@@ -8,11 +8,11 @@
 
 </div>
 
-Seven advanced TypeScript exercises in one file, each with a quick console test.
+Seven exercises in `ExercisesXP.ts`, each checked with a `console.log`.
 
 ## ▶️ How to run
 
-From this folder (Node 22.18 or newer runs TypeScript files directly):
+From this folder (Node 22.18 or newer can run `.ts` files directly):
 
 ```bash
 node ExercisesXP.ts
@@ -33,19 +33,21 @@ E7 number: «123.45»
 
 | Function | What it does |
 |---|---|
-| `PersonWithAddress` | Exercise 1: `Person & Address` combines two types |
+| `PersonWithAddress` | Exercise 1: `Person & Address`, used for `kevinHome` |
 | `describeValue(v)` | Exercise 2: a `typeof` guard on `number \| string` |
 | `casted` / `safeString` | Exercise 3: `as string` changes only the type; `String(value)` really converts |
 | `getFirstElement(arr)` | Exercise 4: returns the first item of a mixed array as a string |
-| `logLength(arg)` | Exercise 5: works for anything with a `length` |
-| `describeEmployee(e)` | Exercise 6: `Person & Job`, with a sentence that depends on the position |
-| `formatInput(input)` | Exercise 7: anything with `toString()`, wrapped in « » |
+| `logLength(arg)` | Exercise 5: logs the length of anything that has one (a string, an array) |
+| `describeEmployee(e)` | Exercise 6: `Person & Job`; "manager" and "developer"/"engineer" positions get their own sentence |
+| `formatInput(input)` | Exercise 7: calls `toString()`, trims it and wraps it in « » |
+
+Both exercise 3 lines print `12345`, but `casted` is still a number at runtime.
 
 ## 🧠 What I learned
 
-- An intersection type needs every property of both types
-- A type assertion does not change the value at runtime
-- `T extends { length: number }` lets a generic accept strings and arrays alike
+- An object of an intersection type has to include every field from both sides
+- `T extends { length: number }` let the same `logLength` take `"TypeScript"` and `[1, 2, 3, 4]`
+- Lowercasing the position before `includes()` makes `describeEmployee` match "Manager" and "manager"
 
 ---
 

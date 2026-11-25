@@ -8,14 +8,14 @@
 
 </div>
 
-My first JavaScript day: arrays, loops, objects and string methods, run in the browser or with Node.
+Day one of JavaScript. I worked with arrays, loops, objects and string methods, some in the browser and one file in Node.
 
 ## Contents
 
 | Folder | What it is |
 |---|---|
-| [`Exercises/`](Exercises/) | Exercises XP, XP Gold and XP Ninja |
-| [`DailyChallenge/`](DailyChallenge/) | Not Bad, Stars and the Bubble Sort gold challenge |
+| [`Exercises/`](Exercises/) | XP, XP Gold and XP Ninja |
+| [`DailyChallenge/`](DailyChallenge/) | Not Bad, the star triangle and the gold Bubble Sort |
 
 ---
 

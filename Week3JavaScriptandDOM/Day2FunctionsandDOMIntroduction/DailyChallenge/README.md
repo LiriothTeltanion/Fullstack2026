@@ -8,12 +8,12 @@
 
 </div>
 
-The daily challenges of Day 2.
+One challenge that draws on the page and one that prints in the terminal.
 
 ## Contents
 
-- [`DailyChallengePlanets/`](DailyChallengePlanets/) — planets and moons drawn with the DOM
-- [`WordsInTheStars/`](WordsInTheStars/) — words printed inside a star frame
+- [`DailyChallengePlanets/`](DailyChallengePlanets/): eight planets with their moons, all made with `createElement`
+- [`WordsInTheStars/`](WordsInTheStars/): a list of words framed by a box of `*`, run in Node
 
 ---
 

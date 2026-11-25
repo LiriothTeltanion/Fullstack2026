@@ -8,13 +8,13 @@
 
 </div>
 
-The Day 3 daily challenges, plus the Gold one.
+Two regular challenges from Day 3 and one Gold.
 
 ## Contents
 
-- [`Circle/`](Circle/) — a `Circle` with radius and diameter properties that can be added, compared and sorted
-- [`Translator/`](Translator/) — French to English with `googletrans`
-- [`UserInfo/`](UserInfo/) — Gold: read `Name,Age,Score` records and sort them with a lambda
+- [`Circle/`](Circle/): a `Circle` built from a radius or a diameter, which can be added and sorted
+- [`Translator/`](Translator/): four French words translated to English with `googletrans`
+- [`UserInfo/`](UserInfo/): Gold, five `Name,Age,Score` records sorted with a lambda
 
 ---
 

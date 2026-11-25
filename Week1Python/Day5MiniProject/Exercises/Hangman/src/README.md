@@ -8,13 +8,13 @@
 
 </div>
 
-The modules that [main.py](../main.py) imports for the Hangman game.
+The three modules behind [main.py](../main.py) in the Hangman game.
 
 ## Contents
 
-- [`game.py`](game.py) — the `HangmanGame` class that keeps the game state
-- [`words.py`](words.py) — the word list (`correction`, `childish`, `beach`, `python`, `assertive`, `interference`, `complete`, `share`, `credit card`, `rush`, `south`) and `random_word()`
-- [`art.py`](art.py) — the 7 gallows frames and `MAX_WRONG = 6`
+- [`game.py`](game.py): the `HangmanGame` class with the secret, the guessed letters and the miss counter
+- [`words.py`](words.py): `WORDS` (`correction`, `childish`, `beach`, `python`, `assertive`, `interference`, `complete`, `share`, `credit card`, `rush`, `south`) and `random_word()` to pick one
+- [`art.py`](art.py): the 7 gallows drawings, from empty to complete, and `MAX_WRONG = 6`
 
 ---
 

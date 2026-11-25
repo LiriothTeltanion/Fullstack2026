@@ -8,7 +8,7 @@
 
 </div>
 
-A drum kit in the browser: nine pads that play a sound when I press their key or click them.
+A drum kit in the browser. There are nine pads, and each one plays its sound when I press its key or click it.
 
 ## ▶️ How to run
 
@@ -24,14 +24,16 @@ Open `index.html` in a browser (or run `npm run dev` from the repo root and open
 | `play(sample)` | Lights the pad with the `playing` class for 120 ms and plays the sound. |
 | `onKeyDown(e)` / `onPadClick(e)` | Turn a key press or a click on a pad into `play()`. |
 
-Enter and Space also play the pad that has keyboard focus.
+Enter and Space also play whichever pad has keyboard focus.
+
+The `.mp3` part is more of a plan than a real fallback: after `preload()` the `.wav` is always in the cache, so it always wins.
 
 ## 🧠 What I learned
 
-- `data-key` and `data-sample` attributes connect the HTML pads to the JavaScript map
-- Cloning an `Audio` object lets the same sound play several times at once
-- Browsers block sound until the user interacts, so preloading waits for the first click
-- `closest(".key")` finds the pad even when I click the text inside it
+- `data-key` and `data-sample` on each button tie the HTML pads to the `SAMPLES` map
+- Playing a `cloneNode()` of the sound lets the same drum hit again before the first one ends
+- Browsers won't play audio before the user does something, so `preload()` waits for the first `pointerdown`
+- `e.target.closest(".key")` finds the pad even when the click lands on the letter inside it
 
 ---
 

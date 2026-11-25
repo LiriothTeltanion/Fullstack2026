@@ -8,7 +8,7 @@
 
 </div>
 
-Task 1 of the daily challenge: use the `greet()` function from the shared [`greeting.js`](../greeting.js) module.
+The first task only uses `greet()` from the shared [`greeting.js`](../greeting.js) module.
 
 ## ▶️ How to run
 
@@ -16,18 +16,25 @@ Task 1 of the daily challenge: use the `greet()` function from the shared [`gree
 node app.js
 ```
 
-It prints the title `🧪 Task 1 — Basic Module System`, `Hello, Kevin! 👋`, a second greeting, and `Hello, friend! 👋` for the empty name. No npm packages are needed.
+```
+🧪 Task 1 — Basic Module System
+Hello, Kevin! 👋
+Hello, Sam! 👋
+Hello, friend! 👋
+```
+
+Nothing to install for this one.
 
 ## 🎯 The challenge
 
-- `app.js` loads the module with `const { greet } = require("../greeting")` and calls it three times.
-- `greet(name)` trims the name and uses `friend` when it is empty or not a string.
+- `app.js` gets the function with `const { greet } = require("../greeting")` and calls it with `"Kevin"`, `"Sam"` and an empty string.
+- `greet(name)` trims the name, and if it ends up empty (or isn't a string at all) it says `friend` instead.
 
 ## 🧠 What I learned
 
-- Destructuring picks one function out of `module.exports`
-- `..` in a `require` path goes one folder up
-- A fallback value keeps the function safe with bad input
+- `module.exports = { greet }` on one side and `const { greet } = require(...)` on the other is the whole CommonJS deal
+- The empty-string call is there on purpose, to see the `friend` fallback work
+- Checking `typeof name === "string"` before `trim()` stops a crash if someone passes a number
 
 ---
 

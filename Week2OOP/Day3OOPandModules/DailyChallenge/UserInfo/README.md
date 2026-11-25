@@ -8,7 +8,7 @@
 
 </div>
 
-A `UserInfoApp` class that asks for five `Name,Age,Score` records and sorts them by name, then age, then score.
+`UserInfoApp` asks for five records like `John,20,90` and sorts them by name, then age, then score.
 
 ## ▶️ How to run
 
@@ -16,28 +16,29 @@ A `UserInfoApp` class that asks for five `Name,Age,Score` records and sorts them
 python dailychallengegolduserinfo.py
 ```
 
-With the sample from the prompt (`Tom,19,80`, `John,20,90`, `Jony,17,91`, `Jony,17,93`, `Json,21,85`) it prints:
+Typing the sample from the prompt (`Tom,19,80`, `John,20,90`, `Jony,17,91`, `Jony,17,93`, `Json,21,85`) gives:
 
 ```text
 Sorted: [('John', '20', '90'), ('Jony', '17', '91'), ('Jony', '17', '93'), ('Json', '21', '85'), ('Tom', '19', '80')]
 ```
 
-If there is no keyboard input, it sorts that same sample instead.
+When there's no keyboard to read from (for example, input from an empty pipe), it says so and sorts that same sample.
 
 ## 🎯 The challenge
 
 | Method | What it does |
 |---|---|
-| `collect()` | Asks 5 times, splits each line on commas and asks again if the format is wrong or the age or score is not a number |
+| `collect()` | Asks 5 times and splits each answer on commas. A wrong number of parts, an empty name or a non-numeric age or score makes it ask again |
 | `sort_records(records)` | `sorted(records, key=lambda t: (t[0], int(t[1]), int(t[2])))` |
 
-The values stay as strings so the output matches the expected one, but the lambda turns age and score into numbers for sorting.
+The tuples keep the age and score as strings, so the printout looks like the expected one. Only the sort key turns them into numbers.
 
 ## 🧠 What I learned
 
-- A lambda that returns a tuple sorts by several fields in order
-- Converting to `int` inside the key avoids `"9"` sorting after `"10"`
-- Catching `EOFError` lets the script fall back to a demo when nobody is typing
+- When the lambda returns a tuple, Python compares the first field and only looks at the next one on a tie
+- The two `Jony` rows tie on name and age, so the score decides
+- `int()` in the key matters: as strings, `"9"` would sort after `"10"`
+- Catching `EOFError` gives a fallback demo when nobody is typing
 
 ---
 

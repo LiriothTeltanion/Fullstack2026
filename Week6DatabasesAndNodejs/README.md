@@ -8,16 +8,16 @@
 
 </div>
 
-Three days of PostgreSQL (tables, filters, joins, foreign keys and the `dvdrental` sample database) and one day of Node.js (CommonJS and ES modules, npm packages and the `fs` module).
+Three days of PostgreSQL (tables, filters, joins, foreign keys and the `dvdrental` sample database), then one day of Node.js with CommonJS, ES modules, npm packages and `fs`.
 
 ## Contents
 
 | Folder | What it is |
 |---|---|
 | [`Day1IntroductionToDatabases/`](Day1IntroductionToDatabases/) | First tables: `items`, `customers` and `students`, with `WHERE`, `ORDER BY`, `LIMIT` and `OFFSET` |
-| [`Day2DatabaseConcepts1/`](Day2DatabaseConcepts1/) | Sorting, aliases, `DISTINCT` and first joins on the `dvdrental` database |
+| [`Day2DatabaseConcepts1/`](Day2DatabaseConcepts1/) | Sorting, aliases, `DISTINCT` and first joins on `dvdrental` |
 | [`Day3DatabaseConcepts2/`](Day3DatabaseConcepts2/) | Foreign keys with `ON DELETE CASCADE`, `LEFT JOIN`, a view and multi-table questions on `dvdrental` |
-| [`Day4NodejsIntroduction/`](Day4NodejsIntroduction/) | Seven small Node.js exercises and a daily challenge that combines a module, `chalk` and `fs` |
+| [`Day4NodejsIntroduction/`](Day4NodejsIntroduction/) | Seven small Node.js exercises and a daily challenge mixing a module, `chalk` and `fs` |
 
 ---
 

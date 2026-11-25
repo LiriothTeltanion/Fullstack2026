@@ -8,7 +8,7 @@
 
 </div>
 
-A calculator with the four operations, sign change, percent and memory keys.
+A pocket calculator: the four operations, a sign key, percent, and the memory keys `M+`, `M-`, `MR` and `MC`.
 
 ## ▶️ How to run
 
@@ -30,14 +30,16 @@ Open `index.html` in a browser (or run `npm run dev` from the repo root and open
 | `clearAll()`, `toggleSign()`, `percent()` | The `C`, `±` and `%` keys. |
 | `mplus()`, `mminus()`, `mr()`, `mc()` | Add to, subtract from, recall and clear the memory. |
 
-`setDisplay()` switches to scientific notation when the result is longer than 14 characters. One click listener on the keypad reads `data-num`, `data-op` and `data-act` to decide what each button does.
+When a result is longer than 14 characters, `setDisplay()` switches to scientific notation so it still fits. The keypad has one click listener that reads `data-num`, `data-op` and `data-act` to know which button was pressed.
+
+It works like a cheap desk calculator, left to right, so it doesn't follow math precedence.
 
 ## 🧠 What I learned
 
-- A calculator needs a little state: the total, the pending operator and a "new number" flag
-- `data-*` attributes let one listener handle the whole keypad
-- A `switch` keeps the operator logic short and easy to read
-- Without operator precedence, `7 + 5 × 2` gives 24, not 17
+- The whole calculator runs on three variables: `acc`, the pending `op` and a `fresh` flag for "next digit starts a new number"
+- Thanks to the `data-*` attributes, one listener on `.keys` is enough for all the buttons
+- The `switch` in `compute()` puts all four operations in one short place
+- Because each operator uses the running total, `7 + 5 × 2` gives 24 instead of 17
 
 ---
 

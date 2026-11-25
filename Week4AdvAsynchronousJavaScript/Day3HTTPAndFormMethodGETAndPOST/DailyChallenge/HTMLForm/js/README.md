@@ -8,11 +8,11 @@
 
 </div>
 
-The script for the HTML Form page. It uses `document`, so it runs in the browser through `../index.html`, not with Node.
+Script for the HTML Form page. It works with `document` and the form elements, so it only runs inside `../index.html`.
 
 ## Contents
 
-- [`app.js`](app.js) — the submit handler, `appendJsonEntry()` and the clear button
+- [`app.js`](app.js): the `el()` helper, `appendJsonEntry()`, the submit handler and the **Clear Output** button
 
 ---
 

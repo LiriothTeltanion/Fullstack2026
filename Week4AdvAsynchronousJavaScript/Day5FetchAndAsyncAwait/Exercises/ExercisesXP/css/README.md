@@ -8,11 +8,11 @@
 
 </div>
 
-The stylesheet for the Day 5 Exercises XP page.
+The dark stylesheet behind the Day 5 exercise page.
 
 ## Contents
 
-- [`styles.css`](styles.css) — the exercise cards, buttons and output panel
+- [`styles.css`](styles.css): color variables, one card per exercise, the buttons and the `.out` output panel
 
 ---
 

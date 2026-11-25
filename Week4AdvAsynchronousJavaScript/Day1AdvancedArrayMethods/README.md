@@ -8,14 +8,14 @@
 
 </div>
 
-Day 1 of Week 4: array methods like `find`, `sort`, `forEach`, `map`, `reduce` and `flat`, mostly written in TypeScript.
+Array methods day: `find`, `sort`, `forEach`, `map`, `reduce` and `flat`. Most of it is TypeScript, plus two browser pages.
 
 ## Contents
 
 | Folder | What it is |
 |---|---|
-| [`Exercises/`](Exercises/) | Exercises XP and two XP Gold sets |
-| [`DailyChallenge/`](DailyChallenge/) | Car Inventory and Go Wildcats |
+| [`Exercises/`](Exercises/) | The XP page (forms and JSON) and two XP Gold files on arrays |
+| [`DailyChallenge/`](DailyChallenge/) | Car Inventory in the browser and Go Wildcats in TypeScript |
 
 ---
 

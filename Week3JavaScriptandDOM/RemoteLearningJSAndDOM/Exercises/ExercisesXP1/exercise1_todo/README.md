@@ -8,7 +8,7 @@
 
 </div>
 
-A to-do app with filters that remembers the list in the browser's `localStorage`.
+Another to-do app, but this one has All / Active / Completed filters and keeps the list in `localStorage`, so it's still there after a reload.
 
 ## ▶️ How to run
 
@@ -24,12 +24,14 @@ Open `index.html` in a browser (or run `npm run dev` from the repo root and open
 | `render()` | Redraws the list for the current filter (All, Active, Completed), updates the `N items` counter and disables **Remove All** when the list is empty. |
 | `save()` | Writes the list to `localStorage` under `todos_v1`. |
 
+Every change goes the same way: update the `todos` array, call `save()`, call `render()`.
+
 ## 🧠 What I learned
 
-- `localStorage` only stores strings, so I save with `JSON.stringify` and load with `JSON.parse`
-- Redrawing everything from one array keeps the page and the data in sync
-- One click listener on the `<ul>` handles every checkbox and Remove button
-- Setting `textContent` for the task text avoids putting user input into HTML
+- `localStorage` holds only strings, so the array goes in with `JSON.stringify` and comes back with `JSON.parse`
+- The `|| "[]"` on the first load means an empty storage gives me an empty list instead of an error
+- A single click listener on `#list` handles every checkbox and every Remove button
+- The task text goes in with `textContent`, never inside the `innerHTML` template, so typed HTML stays plain text
 
 ---
 

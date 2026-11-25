@@ -8,7 +8,7 @@
 
 </div>
 
-Six exercises in one TypeScript file about object destructuring, object methods, classes and object references.
+Six exercises in `ObjectsDestructuringClassesXP.ts`, going from destructuring to classes and ending with object references.
 
 ## ▶️ How to run
 
@@ -19,7 +19,7 @@ npx tsc ObjectsDestructuringClassesXP.ts --module commonjs --outDir ~/tmp-ts
 node ~/tmp-ts/ObjectsDestructuringClassesXP.js
 ```
 
-The demo block only runs as CommonJS (`require.main === module`), and inside this repository `.js` files are ES modules, so I compile it to a folder outside the repo first. `tsc` also warns (TS2839) that `[2] === [2]` and `{} === {}` are always false, which is the point of exercise 6, and still writes the file.
+Same trick as the other TypeScript files this week: CommonJS output in a folder outside the repo, so the `require.main === module` demo runs. `tsc` prints a TS2839 warning that `[2] === [2]` and `{} === {}` are always false. That is exactly what exercise 6 is about, and the file is still written.
 
 ```
 I am John Doe from Vancouver, Canada. Latitude(49.2827), Longitude(-123.1207)
@@ -35,18 +35,19 @@ Moooo I'm a cow, named Lily and I'm brown and white
 
 ## 🎯 The challenge
 
-1. **Location** — nested destructuring pulls the name, city, country and coordinates out of `person`.
-2. **`displayStudentInfo({ first, last })`** — destructures its parameter and returns `Your full name is ...`.
-3. **Users** — `Object.entries(users)` turns the object into pairs, then `map` doubles every ID.
-4. **`Person`** — `typeof new Person("John")` is `"object"`.
-5. **`Labrador extends Dog`** — the right constructor calls `super(name)` before setting `size`.
-6. **References** — two arrays or objects that look the same are not equal; `object2` and `object3` point to `object1`, so changing it changes them. `Mammal.sound()` builds the cow sentence.
+1. **Location**: one destructuring statement pulls `name` (renamed to `pName`), `city`, `country` and the two coordinates out of `person`, and `locationLine` puts them in a sentence.
+2. **`displayStudentInfo({ first, last })`**: the parameter itself is destructured, and the function returns `Your full name is ...`.
+3. **Users**: `Object.entries(users)` gives `[key, id]` pairs, and a second `map` doubles every id.
+4. **`Person`**: `typeof new Person("John")` is `"object"`, not `"Person"`.
+5. **`Labrador extends Dog`**: the correct constructor is option 2, which calls `super(name)` and then sets `size`.
+6. **References**: `object2` and `object3` point to `object1`, so after `object1.number = 4` both read 4, while `object4` still reads 5. `Mammal.sound("Moooo")` builds the farmer's cow sentence.
 
 ## 🧠 What I learned
 
-- Destructuring can rename (`name: pName`) and go several levels deep
-- `===` on objects compares references, not contents
-- A subclass constructor must call `super()` before using `this`
+- Destructuring can rename a field and reach into nested objects and arrays in the same line
+- `===` on two arrays or two objects compares where they live in memory, not what is inside
+- Assigning an object to a new variable copies the reference, so a change through one name shows up in all of them
+- In a subclass, `this` is not usable until `super()` has run
 
 ---
 

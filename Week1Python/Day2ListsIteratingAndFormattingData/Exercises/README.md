@@ -8,13 +8,13 @@
 
 </div>
 
-The Day 2 exercises in three levels, all plain Python scripts that run from the terminal.
+Three levels of Day 2 practice. Each one is a single script I run from the terminal.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/) — 10 exercises on sets, tuples, list methods, loops and interactive pricing
-- [`ExercisesXPGold/`](ExercisesXPGold/) — 9 exercises: list concatenation, ranges, `index()`, `max()` and a guessing game
-- [`ExercisesXPNinja/`](ExercisesXPNinja/) — 4 exercises: a formula, list statistics, paragraph analysis and word frequency
+- [`ExercisesXP/`](ExercisesXP/): 10 exercises, from set methods up to a sandwich order queue
+- [`ExercisesXPGold/`](ExercisesXPGold/): 9 exercises, including `extend()`, the alphabet split into vowels and a guessing game
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): 4 exercises with a formula, number stats, a paragraph report and word counts
 
 ---
 

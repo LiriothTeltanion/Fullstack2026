@@ -8,13 +8,13 @@
 
 </div>
 
-The three exercise tiers of Day 2.
+Day 2 practice, from the basic XP set up to Ninja.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/) — seven function and DOM exercises with a run page
-- [`ExercisesXPGold/`](ExercisesXPGold/) — string helpers and a red table diagonal
-- [`ExercisesXPNinja/`](ExercisesXPNinja/) — palindromes, unique values and a month calendar
+- [`ExercisesXP/`](ExercisesXP/): seven function and DOM tasks on one page with Run buttons
+- [`ExercisesXPGold/`](ExercisesXPGold/): four string and array helpers, then a table with a red diagonal
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): palindromes, unique values and a calendar built as a table
 
 ---
 

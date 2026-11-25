@@ -8,11 +8,11 @@
 
 </div>
 
-The browser script for the Sign In / Sign Up double slider. It needs the page, so open `../index.html` instead of running it with `node`.
+The script listens to two buttons, two form submits and a `Ctrl + arrow` shortcut, and turns them into one `data-state` change. It needs the page, so open `../index.html` instead of running it with `node`.
 
 ## Contents
 
-- [`app.js`](app.js) — `setState()` switches the forms (buttons or `Ctrl + ←/→`) and `handleDemoSubmit()` checks each form before a demo alert
+- [`app.js`](app.js): `setState()` swaps the forms and moves the focus, `handleDemoSubmit()` runs the HTML validation before the demo alert
 
 ---
 

@@ -8,18 +8,18 @@
 
 </div>
 
-One commented SQL file with two parts: four queries on the Day 1 `items` and `customers` tables, and fifteen on the `dvdrental` sample database.
+`xp_sql_answers.sql` is split in two: part A has four queries on the Day 1 `items` and `customers` tables, part B has fifteen on the `dvdrental` sample database. Every query has a comment with the question it answers.
 
 ## ▶️ How to run
 
-Each part needs its own database, so in pgAdmin I open the Query Tool on the right one and run that section. With psql:
+The two parts live in different databases. In pgAdmin I open the Query Tool on the right database and run only that section. With psql:
 
 ```bash
 psql -d xp_exercises -f xp_sql_answers.sql   # part A
 psql -d dvdrental -f xp_sql_answers.sql      # part B
 ```
 
-psql keeps going after an error, so in each run the queries of the other part fail with `relation ... does not exist`.
+psql doesn't stop at an error, so in each run the other part's queries just fail with `relation ... does not exist` and the rest still prints.
 
 ## 🎯 The challenge
 
@@ -27,31 +27,31 @@ psql keeps going after an error, so in each run the queries of the other part fa
 
 1. All items, cheapest first.
 2. Items with `price >= 80`, most expensive first.
-3. The first three customers by first name, without the id column. The query also asks for an `email` column, which the Day 1 `customers` table does not have, so there it needs `email` taken out.
-4. Every last name, Z to A.
+3. The first three customers by first name, without the id. My query also selects `email`, but the Day 1 `customers` table has no such column, so on that table `email` has to come out of the `SELECT` before it runs.
+4. Only the last names, Z to A.
 
 **Part B: `dvdrental`**
 
 | Query | What it returns |
 |---|---|
-| B.1 to B.4 | Customers: all columns, `first_name \|\| ' ' \|\| last_name AS full_name`, the distinct `create_date` values, and all rows by first name Z to A |
-| B.5 | Films ordered by `rental_rate`, then title |
+| B.1 to B.4 | Customers: every column, `first_name \|\| ' ' \|\| last_name AS full_name`, the distinct `create_date` values, and all rows by first name Z to A |
+| B.5 | Films by `rental_rate`, then by title |
 | B.6 | Address and phone of customers in the Texas district (`customer` joined with `address`) |
 | B.7 | The films with id 15 and 150 |
-| B.8, B.9 | A favourite film by its exact title (edit the placeholder first) or by its first two letters, `ILIKE 'AB%'` |
-| B.10, B.11 | The 10 cheapest films, then films 11 to 20 using `ROW_NUMBER()` instead of `OFFSET` |
-| B.12 | Every payment next to the customer's name, by customer and date |
+| B.8, B.9 | A favourite film by exact title (the placeholder has to be replaced) or by its first two letters with `ILIKE 'AB%'` |
+| B.10, B.11 | The 10 cheapest films, then films 11 to 20 picked with `ROW_NUMBER()` instead of `OFFSET` |
+| B.12 | Every payment next to the customer's name, by customer and then date |
 | B.13 | Films with no copy in `inventory` (`NOT EXISTS`) |
 | B.14 | Each city with its country |
 | B.15 | Payments with the customer's name, ordered by the staff member who took them |
 
 ## 🧠 What I learned
 
-- `||` joins strings and `AS` gives the new column a name
-- `DISTINCT` removes repeated values from a result
-- `ROW_NUMBER() OVER (ORDER BY ...)` can page results without `OFFSET`
-- `NOT EXISTS` finds rows that have no match in another table
-- A join needs the same key on both sides, like `address_id`
+- `||` glues text together, and `AS full_name` names the column that comes out
+- With `SELECT DISTINCT create_date` each date comes back once, however many customers share it
+- For rows 11 to 20 I numbered the films with `ROW_NUMBER() OVER (...)` in a subquery and kept `rn BETWEEN 11 AND 20`
+- `NOT EXISTS (SELECT 1 …)` finds films that never appear in `inventory`
+- Adding `title` as a second sort key keeps the cheap films in the same order every run, since many share a price
 
 ---
 

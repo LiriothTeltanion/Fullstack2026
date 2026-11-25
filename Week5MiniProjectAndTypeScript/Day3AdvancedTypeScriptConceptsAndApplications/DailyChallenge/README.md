@@ -8,7 +8,7 @@
 
 </div>
 
-A small library system in TypeScript: a `Book` interface, a `Library` class that stores books by ISBN and a `DigitalLibrary` subclass with a website and a list of titles.
+A tiny library in one TypeScript file. Books follow a `Book` interface, a `Library` class keeps them by ISBN, and `DigitalLibrary` extends it with a website and a list of titles.
 
 ## ▶️ How to run
 
@@ -19,7 +19,7 @@ npx tsc LibrarySystem.ts --module commonjs --outDir ~/tmp-ts
 node ~/tmp-ts/LibrarySystem.js
 ```
 
-The demo block only runs as CommonJS (`require.main === module`), and inside this repository `.js` files are ES modules, so I compile it to a folder outside the repo first.
+The demo only runs when the file is executed as CommonJS (`require.main === module`). This repository treats `.js` as ES modules, so I compile into a folder outside it first.
 
 ```
 Title: Clean Code | Author: Robert C. Martin | ISBN: 9780132350884 | Year: 2008 | Genre: Software Engineering
@@ -35,16 +35,19 @@ Digital Library website: https://library.example.com
 | Part | What it does |
 |---|---|
 | `interface Book` | `title`, `author`, `isbn`, `publishedYear` and an optional `genre` |
-| `Library.addBook(book)` | Adds a book, or replaces the one with the same ISBN |
-| `Library.getBookDetails(isbn)` | Returns one formatted line, or `Book not found.` |
-| `Library.getAllBooks()` | `protected`, so only subclasses can read the private list |
-| `DigitalLibrary` | Adds a `readonly website` and `listBooks()`, which returns all titles |
+| `Library.addBook(book)` | Uses `findIndex` on the ISBN: replaces a match, otherwise pushes the new book |
+| `Library.getBookDetails(isbn)` | One formatted line, or `Book not found.` |
+| `Library.getAllBooks()` | `protected` and returns a `ReadonlyArray<Book>`, so a subclass can read the private list but not change it |
+| `DigitalLibrary` | A `readonly website` set in the constructor, and `listBooks()`, which maps the books to their titles |
+
+The Pragmatic Programmer has no genre, which is why its line in the output ends at the year.
 
 ## 🧠 What I learned
 
-- A `private` array keeps the list safe from outside changes
-- `protected` lets a subclass read data without making it public
-- An optional property (`genre?`) needs a check before I use it
+- Keeping `books` `private` means the only way in is through `addBook()`
+- A `protected` getter is the bridge that lets `DigitalLibrary` see the list without making it public
+- Returning `ReadonlyArray` stops a subclass from pushing into the list behind `addBook()`'s back
+- `genre?` can be missing, so I build the ` | Genre: …` part only when it exists
 
 ---
 

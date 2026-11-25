@@ -8,12 +8,12 @@
 
 </div>
 
-The Day 3 SQL exercises, both written for the `dvdrental` sample database.
+Both Day 3 scripts run against the `dvdrental` sample database.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/) — languages, `new_film` and `customer_review` with `ON DELETE CASCADE`, outstanding rentals
-- [`ExercisesXPGold/`](ExercisesXPGold/) — unreturned rentals, a view, and viewing time per store
+- [`ExercisesXP/`](ExercisesXP/): languages, `new_film` and `customer_review` with `ON DELETE CASCADE`, outstanding rentals
+- [`ExercisesXPGold/`](ExercisesXPGold/): unreturned rentals, a view, and viewing time per store
 
 ---
 

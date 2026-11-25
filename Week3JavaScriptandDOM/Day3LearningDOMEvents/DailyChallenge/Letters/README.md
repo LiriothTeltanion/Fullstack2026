@@ -8,7 +8,7 @@
 
 </div>
 
-A text field that keeps only letters: numbers and symbols disappear while I type or paste.
+A text field that only accepts letters. If I type or paste numbers or symbols, they vanish right away.
 
 ## ▶️ How to run
 
@@ -22,17 +22,17 @@ Helper: Non-letter characters were removed. ✅
 
 ## 🎯 The challenge
 
-- An `input` listener runs after every change (typing, paste, drag and drop) and replaces `/[^a-z]/gi` with `""`.
-- When something was removed, it moves the caret back to where I was typing and changes the helper text.
-- The form's `submit` listener calls `preventDefault()` and shows `Submitted: "..." ✅`, or `Nothing to submit.`
-- A `keydown` version that blocks keys before they land is left in the code as a commented-out alternative.
+- An `input` listener fires after every change (typing, paste, drag and drop) and replaces `/[^a-z]/gi` with `""`.
+- When it removed something, it puts the caret back where I was typing and updates the helper text under the field.
+- The form's `submit` listener calls `preventDefault()` and shows `Submitted: "..." ✅`, or `Nothing to submit.` for an empty field.
+- I also wrote a `keydown` version that blocks bad keys before they appear. It is still in the file, commented out, because it can't catch a paste on its own.
 
 ## 🧠 What I learned
 
-- The `input` event catches paste and autofill, which `keydown` alone misses
-- A regex with the `g` and `i` flags removes every non-letter in one call
-- Changing `input.value` moves the caret, so `setSelectionRange()` puts it back
-- `aria-live="polite"` lets screen readers announce the submit message
+- `input` fires for paste and autofill too, so it covers cases `keydown` misses
+- With the `g` and `i` flags, one `replace()` call strips every non-letter, upper or lower case
+- Setting `input.value` throws the caret to the end, and `setSelectionRange()` moves it back
+- The submit message sits in an `aria-live="polite"` element, so a screen reader reads it out
 
 ---
 

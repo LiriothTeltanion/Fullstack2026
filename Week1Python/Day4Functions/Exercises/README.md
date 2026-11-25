@@ -8,14 +8,14 @@
 
 </div>
 
-The Day 4 function exercises: three XP levels and one timed challenge.
+Three levels of function exercises from Day 4, and one timed challenge.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/) — seven warm-ups: defaults, keyword arguments, `random`, list mutation, a weather report
-- [`ExercisesXPGold/`](ExercisesXPGold/) — retirement check with dates, X + XX + XXX + XXXX, a dice simulation
-- [`ExercisesXPNinja/`](ExercisesXPNinja/) — name capitalization, Morse code, a star box with `*args`, insertion sort
-- [`TimedChallenge1/`](TimedChallenge1/) — counting how many times a character appears in a string
+- [`ExercisesXP/`](ExercisesXP/): seven short ones, from `describe_city()` with a default country to a temperature advice program
+- [`ExercisesXPGold/`](ExercisesXPGold/): can this person retire, the X + XX + XXX + XXXX sum, and rolling two dice until doubles
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): name formatting, a Morse translator, a framed box of words and an insertion sort
+- [`TimedChallenge1/`](TimedChallenge1/): count one character in a string, case-sensitive
 
 ---
 

@@ -8,7 +8,7 @@
 
 </div>
 
-Task 3 of the daily challenge: read and print [`files/file-data.txt`](../files/file-data.txt) through [`read-file.js`](../read-file.js).
+In the third task the shared [`read-file.js`](../read-file.js) module reads [`files/file-data.txt`](../files/file-data.txt) and prints it.
 
 ## ▶️ How to run
 
@@ -27,14 +27,14 @@ It demonstrates reading with Node's fs module. ✅
 
 ## 🎯 The challenge
 
-- `readAndPrint(relativePath = "./files/file-data.txt")` builds the full path with `path.resolve(__dirname, relativePath)`, reads it with `fs.promises.readFile` and prints it.
-- If the file is missing it prints `❌ Failed to read: …` and throws, and `app.js` exits with code 1.
+- `readAndPrint(relativePath = "./files/file-data.txt")` turns the path into a full one with `path.resolve(__dirname, relativePath)`, reads it with `fs.promises.readFile` and prints the text.
+- When the file is missing it logs `❌ Failed to read: …` and throws again, and the `.catch()` in `app.js` exits with code 1.
 
 ## 🧠 What I learned
 
-- `fs.promises` returns promises, so the read can be awaited
-- A default parameter gives the function a sensible path when none is passed
-- `__dirname` belongs to the module file, so the path also works when the script starts in `task-3/`
+- With `fs.promises` I can `await` the read instead of passing a callback
+- The default parameter means `app.js` can call `readAndPrint()` with nothing
+- `__dirname` points at the folder of `read-file.js`, so the path works even when I run the script from inside `task-3/`
 
 ---
 

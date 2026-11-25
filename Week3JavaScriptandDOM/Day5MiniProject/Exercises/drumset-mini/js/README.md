@@ -8,11 +8,11 @@
 
 </div>
 
-The browser script for the drum set. It needs the page and its sounds, so open `../index.html` instead of running it with `node`.
+Here the script listens for `keydown` on the whole document and for clicks on the `.keys` container, then plays the right sample. It needs the page and its sounds, so open `../index.html` instead of running it with `node`.
 
 ## Contents
 
-- [`app.js`](app.js) — maps keys to sounds, caches and clones `Audio` objects, and lights each pad while it plays
+- [`app.js`](app.js): the key-to-sound map, the `Audio` cache and clones, and the 120 ms pad highlight
 
 ---
 

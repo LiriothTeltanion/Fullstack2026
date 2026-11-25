@@ -8,7 +8,7 @@
 
 </div>
 
-A short script in [countoccurence.py](countoccurence.py) that counts how many times a character appears in a string. The count is case-sensitive.
+[countoccurence.py](countoccurence.py) counts how many times one character appears in a string. Upper and lower case count as different characters.
 
 ## ▶️ How to run
 
@@ -16,7 +16,7 @@ A short script in [countoccurence.py](countoccurence.py) that counts how many ti
 python countoccurence.py
 ```
 
-Line 1 is the string, line 2 is the character to count:
+No prompts: the first line I type is the string and the second is the character:
 
 ```
 Programming is cool!
@@ -24,9 +24,11 @@ o
 3
 ```
 
-`This is a great example` with `y` prints `0`, and `Hello World` with `l` prints `3`.
+`Hello World` with `l` gives `3`, and `This is a great example` with `y` gives `0`.
 
 ## 🎯 The challenge
+
+The whole solution:
 
 ```python
 def count_char(s: str, ch: str) -> int:
@@ -34,17 +36,18 @@ def count_char(s: str, ch: str) -> int:
     return sum(1 for c in s if c == target) if target else 0
 ```
 
-- Case-sensitive: `'A'` is not `'a'`
-- If more than one character is typed, only the first one is used
-- An empty character gives `0`, and `main()` catches `EOFError` when there is no input
+- `'A'` and `'a'` don't match, the comparison is exact
+- If I type more than one character, only the first one counts
+- An empty second line returns `0`, and `main()` prints `0` if the input ends early (`EOFError`)
 
-`s.count(ch[0])` would give the same result in one call.
+Looking at it again, `s.count(ch[0])` would do the same job in one call.
 
 ## 🧠 What I learned
 
-- `sum()` over a generator is a short way to count matches
-- Checking `ch` before reading `ch[0]` avoids an `IndexError`
-- Under time pressure, getting a simple working version first is the right order
+- `sum(1 for ...)` counts matches without a counter variable
+- Reading `ch[0]` on an empty string raises `IndexError`, so I check `ch` first
+- Handling `EOFError` in both `input()` calls keeps piped input from crashing it
+- In a timed challenge I went for the version I could trust first, the shorter built-in came after
 
 ---
 

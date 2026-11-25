@@ -8,7 +8,7 @@
 
 </div>
 
-Twenty small functions I wrote to practice Week 1 Python: lists, strings, loops, conditionals and a bit of math. They are all in [challengessolutions.py](challengessolutions.py), with type hints and a short docstring each.
+Twenty small functions to go over the Week 1 basics again: lists, strings, loops, conditions and a bit of math. They're all in [challengessolutions.py](challengessolutions.py), each with type hints and a one-line docstring.
 
 ## ▶️ How to run
 
@@ -16,7 +16,7 @@ Twenty small functions I wrote to practice Week 1 Python: lists, strings, loops,
 python challengessolutions.py
 ```
 
-No extra packages needed. It runs a quick demo that calls every function once:
+Nothing to install. It runs a quick demo that calls each function once:
 
 ```
 === Quick Demo ===
@@ -31,32 +31,33 @@ No extra packages needed. It runs a quick demo that calls every function once:
 
 | # | Function | What it does |
 |---|----------|--------------|
-| 1 | `insert_at` | Insert an item at an index |
-| 2 | `count_spaces` | Count the spaces in a string |
-| 3 | `count_case` | Count upper and lower case letters |
-| 4 | `my_sum` | Sum a list without `sum()` |
-| 5 | `find_max` | Find the largest number |
-| 6 | `factorial` | Factorial of n |
-| 7 | `list_count` | Count how many times an element appears |
-| 8 | `norm` | Square root of the sum of squares |
-| 9 | `is_mono` | Check if a list is monotonic |
-| 10 | `longest_word` | Longest word in a list |
-| 11 | `split_ints_and_strs` | Separate integers from strings (booleans and floats are skipped) |
-| 12 | `is_palindrome` | Palindrome check (case-insensitive) |
-| 13 | `sum_over_k` | Count the words longer than k |
+| 1 | `insert_at` | Puts an item at a given index |
+| 2 | `count_spaces` | Counts the spaces in a string |
+| 3 | `count_case` | Counts upper and lower case letters |
+| 4 | `my_sum` | Adds up a list without using `sum()` |
+| 5 | `find_max` | Finds the biggest number without `max()` |
+| 6 | `factorial` | n! |
+| 7 | `list_count` | How many times an element shows up |
+| 8 | `norm` | Square root of the sum of squares, `[1, 2, 2]` gives 3.0 |
+| 9 | `is_mono` | Is the list always going up or always going down? |
+| 10 | `longest_word` | The longest word in a list |
+| 11 | `split_ints_and_strs` | Splits a mixed list into integers and strings, skipping booleans and floats |
+| 12 | `is_palindrome` | Palindrome check that ignores case |
+| 13 | `sum_over_k` | Counts the words longer than k |
 | 14 | `dict_avg` | Average of a dictionary's values |
-| 15 | `common_div` | Common divisors of two numbers, using a GCD helper |
+| 15 | `common_div` | Common divisors of two numbers (without 1), found through their GCD |
 | 16 | `is_prime` | Prime check |
-| 17 | `weird_print` | Keep elements where both the index and the value are even |
-| 18 | `type_count` | Count the types of keyword arguments |
-| 19 | `split_like` | My own version of `str.split()` |
-| 20 | `mask_password` | Replace every character with `*` |
+| 17 | `weird_print` | Keeps items where both the index and the value are even |
+| 18 | `type_count` | Counts the types of the keyword arguments it receives |
+| 19 | `split_like` | My own `str.split()`, including empty pieces when a separator is given |
+| 20 | `mask_password` | Replaces every character with `*` |
 
 ## 🧠 What I learned
 
-- Writing small functions with clear inputs and outputs
-- Rebuilding built-ins like `sum`, `max` and `split` by hand to see how they work
-- Edge cases such as `bool` being a subclass of `int` in Python
+- Writing `my_sum`, `find_max` and `split_like` by hand showed me how much the built-ins do for free
+- `isinstance(True, int)` is `True`, so I check for `bool` first in `split_ints_and_strs`
+- Getting the GCD first means `common_div` only has to look for divisors of one number
+- With a separator, `"a,b,,c,"` splits into five pieces, two of them empty, same as the real `split(",")`
 
 ---
 

@@ -8,14 +8,14 @@
 
 </div>
 
-Scope, arrow functions, closures, currying, and the difference between values and references.
+A day about how functions really behave: scope, arrow functions, closures, currying, and why changing an object through one variable changes it everywhere.
 
 ## Contents
 
 | Folder | What it is |
 |---|---|
-| [`Exercises/`](Exercises/) | Exercises XP, XP Gold and XP Ninja |
-| [`DailyChallenge/`](DailyChallenge/) | Groceries: copy by value vs share by reference |
+| [`Exercises/`](Exercises/) | XP, XP Gold and XP Ninja |
+| [`DailyChallenge/`](DailyChallenge/) | Groceries: a copied string vs a shared object |
 
 ---
 

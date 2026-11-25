@@ -8,13 +8,13 @@
 
 </div>
 
-Day 5 of Week 4: requests with `fetch`, `async`/`await`, checking `response.ok` and handling errors with `try/catch`.
+Real network requests at last: `fetch`, `async`/`await`, checking `response.ok` and catching errors with `try/catch`.
 
 ## Contents
 
 | Folder | What it is |
 |---|---|
-| [`Exercises/`](Exercises/) | Exercises XP: Giphy and SWAPI requests and an async/await snippet |
+| [`Exercises/`](Exercises/) | Exercises XP: two Giphy searches, a SWAPI starship and an async/await snippet |
 
 ---
 

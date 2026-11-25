@@ -8,7 +8,7 @@
 
 </div>
 
-A vaccination queue manager in `vaccines.py`: a `Human` class for each person and a `Queue` class that decides who goes next.
+Who gets vaccinated next? `vaccines.py` answers that with a `Human` class for each person and a `Queue` class that holds the order and the rules.
 
 ## ▶️ How to run
 
@@ -25,30 +25,30 @@ python vaccines.py
 📦 Remaining: ['Dan', 'Cora', 'Eve']
 ```
 
-Cora and Eve are family, but nobody comes after Eve, so `rearrange_queue()` has no one to put between them.
+The demo adds Ada (72), Ben (34, priority), Cora (40), Dan (67) and Eve (25). Ada, Ben and Dan each jump to the front as they arrive, which is why Dan ends up first. Cora and Eve are family, but they're the last two and nobody is left to stand between them, so `rearrange_queue()` keeps them together.
 
 ## 🎯 The challenge
 
-**`Human`** has `id_number`, `name`, `age`, `priority` and `blood_type` (`A`, `B`, `AB` or `O`; anything else raises `ValueError`). Part 2 adds a `family` list, and `add_family_member()` links both people to each other.
+**`Human`** has `id_number`, `name`, `age`, `priority` and `blood_type` (`A`, `B`, `AB` or `O`, anything else raises `ValueError`). Part 2 adds a `family` list, and `add_family_member()` adds each person to the other's list.
 
 | `Queue` method | What it does |
 |---|---|
-| `add_person(person)` | People aged 60 or more, or with priority, go to the front; everyone else goes to the back |
-| `find_in_queue(person)` | Returns the position, or `None` |
-| `swap(person1, person2)` | Exchanges two people, or raises `ValueError` if one is missing |
-| `get_next()` | Removes and returns the first person |
-| `get_next_blood_type(blood_type)` | Removes and returns the first person with that blood type |
-| `sort_by_age()` | Priority first, then people aged 60 or more, then the rest, keeping the order inside each group |
-| `rearrange_queue()` | Part 2: moves people forward so two family members do not stand next to each other when it can be avoided |
+| `add_person(person)` | Age 60 or more, or priority, goes to the front. Everyone else goes to the back |
+| `find_in_queue(person)` | The position, or `None` |
+| `swap(person1, person2)` | Swaps two people, or raises `ValueError` if one isn't in the queue |
+| `get_next()` | Takes the first person out and returns them |
+| `get_next_blood_type(blood_type)` | Takes out the first person with that blood type |
+| `sort_by_age()` | Priority first, then 60 and over, then the rest, keeping the order inside each group |
+| `rearrange_queue()` | Part 2: pulls someone forward so two relatives don't stand next to each other, when that's possible |
 
-Bonus rule: no `list.insert`, `list.pop`, `list.index`, `list.sort` or `sorted`. I used slices, manual loops and three lists joined together instead.
+The bonus rule banned `list.insert`, `list.pop`, `list.index`, `list.sort` and `sorted`. So the queue uses slices, plain loops and three lists added together.
 
 ## 🧠 What I learned
 
-- Splitting people into groups and joining the lists is a simple stable sort
-- Slicing (`humans[1:]`) can replace `pop(0)` when a method is not allowed
-- Two-way links between objects need care so a person is not added twice
-- A greedy rule (take the first person who fits) solves most queue reorderings
+- `prio + older + younger` sorts into groups and keeps everyone's order inside each group, all without `sort()`
+- `self.humans = self.humans[1:]` does the job of `pop(0)` when `pop` isn't allowed
+- `add_family_member()` checks both lists with `is` first, so nobody gets added twice
+- `rearrange_queue()` takes the first person who doesn't clash, which works unless the only people left are relatives
 
 ---
 

@@ -8,7 +8,7 @@
 
 </div>
 
-Five small tasks with standard-library modules (`datetime`, `re`, `secrets`, `string`), all in `exercisesxpgoldmodules.py`.
+Five tasks that lean on the standard library (`datetime`, `re`, `secrets`, `string`). Everything is in `exercisesxpgoldmodules.py`.
 
 ## ▶️ How to run
 
@@ -30,24 +30,24 @@ Name validation:
 Self-test passed: 100 generated passwords validated. ✅
 ```
 
-The first two lines show today's date and the next holiday, so they change from day to day.
+Above that, two lines show today's date and the next holiday, so they depend on the day you run it.
 
 ## 🎯 The challenge
 
-1. **Upcoming holiday** - `today_and_next_holiday()` uses the `holidays` package when it is installed, otherwise a fixed list of dates
-2. **Space age** - `space_age(seconds)` returns the age on each planet from its orbital period
-3. **Regex #1** - `return_numbers()` keeps only the digits of a string with `re.findall(r"\d", s)`
-4. **Regex #2** - `is_valid_full_name()` accepts names like `John Doe`: two capitalized words and one space
-5. **Password generator** - `generate_password(length)` (6 to 30 characters) always includes a digit, a lowercase letter, an uppercase letter and a special character; a self-test checks 100 random passwords
+1. **Upcoming holiday** - `today_and_next_holiday()` asks the `holidays` package if it's installed. Without it, the function picks from a short built-in list (New Year, Valentine's, Labor Day, July 4th, Halloween, Christmas, New Year's Eve)
+2. **Space age** - `space_age(seconds)` divides by one Earth year (31,557,600 s) times each planet's orbital period
+3. **Regex #1** - `return_numbers("k5k3q2g5z6x9bn")` keeps only the digits with `re.findall(r"\d", s)` and returns `532569`
+4. **Regex #2** - `is_valid_full_name()` wants two capitalized words with one space between them. `John  Doe` (two spaces) and `John D` both fail
+5. **Password generator** - `generate_password(length)` accepts 6 to 30 characters and always has at least one digit, one lowercase, one uppercase and one special character
 
-The interactive `password_cli()` is commented out at the bottom so the demo does not stop for input.
+The interactive `password_cli()` is commented out on the last line, so the demo runs `password_self_test(100)` and never waits for input.
 
 ## 🧠 What I learned
 
-- `secrets.SystemRandom()` is the right choice for passwords, not plain `random`
-- Picking one character from each group first, then shuffling, guarantees every rule is met
-- A compiled regex with `^` and `$` checks the whole string, not just a part of it
-- A quick loop of `assert` calls is an easy way to test a random function many times
+- For passwords I used `secrets.SystemRandom()`, because plain `random` is predictable
+- Picking one character from each group first and shuffling afterwards means every rule passes on the first try
+- `"John D"` fails because `[a-z]+` needs at least one lowercase letter after the capital
+- `password_self_test()` generates 100 passwords and `assert`s each one, a cheap way to test random output
 
 ---
 

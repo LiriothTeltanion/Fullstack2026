@@ -6,18 +6,18 @@
 
 </div>
 
-My first week of the Developers Institute full-stack bootcamp, all in plain Python (3.10 or newer, no external packages): variables and conditionals, lists, dictionaries and functions, and two small console games on Day 5. The tests live in [tests/python](../tests/python/); run them from the repository root with `python -m unittest discover -s tests/python -p "test_week1_day1_*.py" -v`.
+Week one of the Developers Institute bootcamp was plain Python for me: 3.10 or newer, nothing to install. I went from variables and `if` statements to lists, dictionaries and functions, and finished on Day 5 with two console games. The unit tests sit in [tests/python](../tests/python/). Day 1 has 28 of them (`python -m unittest discover -s tests/python -p "test_week1_day1_*.py" -v`) and the Day 4 Coffee Shop Menu Manager has its own 19.
 
 ## Contents
 
 | Folder | What it is |
 |---|---|
-| [`Day1StartingwithPython/`](Day1StartingwithPython/) | Variables, types, `input()`/`print()`, conditionals and the "Build up a string" challenge, with 28 tests. |
-| [`Day2ListsIteratingAndFormattingData/`](Day2ListsIteratingAndFormattingData/) | Sets, tuples, lists, `for`/`while` loops, a pizza order and a cinema ticket calculator. |
-| [`Day3Dictionaries/`](Day3Dictionaries/) | `zip()` and `dict()`, nested data (Zara brand, Disney characters), timed challenges and a Caesar cipher. |
-| [`Day4Functions/`](Day4Functions/) | Parameters, defaults, return values and scope; the Solve the Matrix and Coffee Shop Menu Manager challenges. |
-| [`Day5MiniProject/`](Day5MiniProject/) | Tic-Tac-Toe, Hangman and a few extra algorithm challenges. |
-| [`CHEATSHEET.md`](CHEATSHEET.md) | A quick reference for the Python covered this week. |
+| [`Day1StartingwithPython/`](Day1StartingwithPython/) | Variables, types, `input()` and `print()`, `if`/`elif`/`else`, and the "Build up a string" challenge. 28 tests. |
+| [`Day2ListsIteratingAndFormattingData/`](Day2ListsIteratingAndFormattingData/) | Sets, tuples and lists, `for` and `while` loops, a pizza order and a cinema ticket calculator. |
+| [`Day3Dictionaries/`](Day3Dictionaries/) | `zip()` and `dict()`, nested data about Zara and Disney characters, two timed challenges and a Caesar cipher. |
+| [`Day4Functions/`](Day4Functions/) | Parameters, default values, `return` and scope, plus Solve the Matrix and the Coffee Shop Menu Manager. |
+| [`Day5MiniProject/`](Day5MiniProject/) | Tic-Tac-Toe, Hangman and some extra algorithm practice. |
+| [`CHEATSHEET.md`](CHEATSHEET.md) | My quick notes on the Python from this week. |
 
 ---
 

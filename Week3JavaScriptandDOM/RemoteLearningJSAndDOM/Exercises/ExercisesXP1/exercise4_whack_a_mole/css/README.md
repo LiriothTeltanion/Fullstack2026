@@ -8,11 +8,11 @@
 
 </div>
 
-The stylesheet for the Whack-a-Mole exercise.
+A 3 × 3 grid of 120px holes. The hamster hole gets a faint cyan ring, and `user-select: none` keeps fast clicks from selecting the emoji.
 
 ## Contents
 
-- [`styles.css`](styles.css) — the top bar, the 3 × 3 grid of holes and the highlight for the hole with the mole
+- [`styles.css`](styles.css): theme variables, the top bar, the `.grid` of `.cell` buttons, the `.cell.active` look and the scores area
 
 ---
 

@@ -8,14 +8,14 @@
 
 </div>
 
-My first PostgreSQL scripts: create a table, insert rows and filter them with `SELECT`.
+The day I wrote my first PostgreSQL scripts: make a table, insert rows, then filter them with `SELECT`.
 
 ## Contents
 
 | Folder | What it is |
 |---|---|
-| [`Exercises/ExercisesXP/`](Exercises/ExercisesXP/) | `items` and `customers` tables with six filter queries |
-| [`Exercises/ExercisesXPPlus/`](Exercises/ExercisesXPPlus/) | A `students` table in the `bootcamp` database and pattern matching with `ILIKE` |
+| [`Exercises/ExercisesXP/`](Exercises/ExercisesXP/) | `items` and `customers` tables and six filter queries |
+| [`Exercises/ExercisesXPPlus/`](Exercises/ExercisesXPPlus/) | A `students` table in the `bootcamp` database and `ILIKE` patterns |
 | [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | Three more `students` queries with `ORDER BY`, `LIMIT` and `OFFSET` |
 
 ---

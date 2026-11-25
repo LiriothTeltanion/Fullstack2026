@@ -8,12 +8,12 @@
 
 </div>
 
-The two Day 5 daily challenges.
+Day 5 had two daily challenges, one about strings and one about speed.
 
 ## Contents
 
-- [`Challenges/`](Challenges/) — sort comma-separated words and find the longest word in a sentence
-- [`AdvancedAlgorithm/`](AdvancedAlgorithm/) — two-sum on 20,000 random numbers, hash table vs two pointers
+- [`Challenges/`](Challenges/): sort words typed with commas, and pick the longest word in a sentence by counting letters only
+- [`AdvancedAlgorithm/`](AdvancedAlgorithm/): every pair of numbers that adds up to 3728, found two different ways and timed
 
 ---
 

@@ -8,13 +8,13 @@
 
 </div>
 
-The Day 4 exercises on files, JSON and a first web API.
+Files, JSON and my first API requests, split into the usual three levels.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/) — a random sentence generator that reads words from a file, and a JSON read-edit-save exercise
-- [`ExercisesXPGold/`](ExercisesXPGold/) — a restaurant menu manager stored in JSON, plus two Giphy API exercises
-- [`ExercisesXPNinja/`](ExercisesXPNinja/) — a Valentine's menu with regex validation and a D&D character generator
+- [`ExercisesXP/`](ExercisesXP/): a sentence generator that reads a word file, and a JSON read, edit and save
+- [`ExercisesXPGold/`](ExercisesXPGold/): a JSON-backed restaurant menu and two Giphy searches
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): a Valentine's menu with regex rules and a D&D character roller
 
 ---
 

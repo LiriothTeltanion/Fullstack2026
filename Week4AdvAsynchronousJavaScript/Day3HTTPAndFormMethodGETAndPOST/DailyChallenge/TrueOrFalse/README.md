@@ -8,7 +8,7 @@
 
 </div>
 
-A function that returns `true` only when every argument is truthy, with a demo page to try it.
+`allTruthy()` answers `true` only if every argument it gets is truthy. The page has three fixed tests and a box for my own values.
 
 ## ▶️ How to run
 
@@ -24,16 +24,16 @@ allTruthy(5, 4, 3, 2, 1, 0) → false
 
 | Function | What it does |
 |---|---|
-| `allTruthy(...values)` | Loops over the arguments and returns `false` at the first falsy one, otherwise `true` |
+| `allTruthy(...values)` | A `for...of` loop that returns `false` at the first falsy value, otherwise `true` |
 | `parseToken(token)` | Turns typed text like `true`, `null`, `""` or `42` into the real value |
 
-Three buttons run the examples above. The custom box splits my input on commas, parses each part and prints the values and the result as JSON.
+The custom box splits the input on commas, parses each part and prints `{ values, result }` as JSON. One quirk: an empty part (like the end of `1, 2,`) becomes `0`, because `Number("")` is 0.
 
 ## 🧠 What I learned
 
-- Rest parameters (`...values`) collect any number of arguments
-- The falsy values are `false`, `0`, `""`, `null`, `undefined` and `NaN`
-- `values.every(Boolean)` is the one-line version
+- A rest parameter (`...values`) gathers every argument into a real array
+- JavaScript has six falsy values: `false`, `0`, `""`, `null`, `undefined` and `NaN`
+- `values.every(Boolean)` does the same job as my loop in one line
 
 ---
 

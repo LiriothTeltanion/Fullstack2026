@@ -8,13 +8,13 @@
 
 </div>
 
-The Day 2 exercises on inheritance, encapsulation and polymorphism.
+Inheritance practice for Day 2, from pets up to a bank and a cellular automaton.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/) — cat breeds, dogs that fight, a `PetDog` and a family roster
-- [`ExercisesXPGold/`](ExercisesXPGold/) — bank accounts, a minimum-balance account and an ATM menu
-- [`ExercisesXPNinja/`](ExercisesXPNinja/) — Conway's Game of Life with a grid that can grow
+- [`ExercisesXP/`](ExercisesXP/): cat breeds, dog fights, a trainable `PetDog` and a family roster
+- [`ExercisesXPGold/`](ExercisesXPGold/): bank accounts, a minimum-balance account and an ATM
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): Game of Life on a fixed grid and on a growing one
 
 ---
 

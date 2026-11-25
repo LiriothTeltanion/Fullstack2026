@@ -8,11 +8,11 @@
 
 </div>
 
-Ask for words separated by commas and print them one per line inside a rectangle of stars. The frame width depends on the longest word.
+You give it some words separated by commas and it prints them one per line inside a rectangle of stars. The longest word sets how wide the frame is.
 
 ## ▶️ How to run
 
-`index.js` uses `require` and `module.exports`, but the repo root `package.json` has `"type": "module"`, so `node index.js` fails (`window is not defined`). Run a `.cjs` copy instead:
+`index.js` uses `require` and `module.exports`, but the repo root `package.json` has `"type": "module"`, so `node index.js` fails (`window is not defined`). A `.cjs` copy runs fine:
 
 ```powershell
 Copy-Item index.js $env:TEMP\stars.cjs; node $env:TEMP\stars.cjs "Hello, World, in, a, frame"
@@ -41,14 +41,14 @@ node /tmp/stars.cjs                                # asks for the words
 | `wordsInTheStars(input)` | Takes a comma-separated string or an array, trims the words, drops empty ones, finds the longest word and returns the framed text (`*` border of `maxLen + 4`). |
 | `demo(input)` | Prints the frame, or `⚠️ No words were provided.` when there are no words. |
 
-With no arguments the script asks for the words with `readline`.
+Without arguments the script asks for the words through `readline`.
 
 ## 🧠 What I learned
 
-- `split(",")`, `map(trim)` and `filter(Boolean)` turn messy input into a clean array
-- `"*".repeat(n)` and padding with spaces line up every row of the frame
-- The longest word decides the width, so I measure before I print
-- `require.main === module` only works when Node reads the file as CommonJS
+- `split(",")`, then `trim()` on each word, then `filter(Boolean)` cleaned up input like `"a, , b"`
+- Padding every word with `" ".repeat(maxLen - w.length)` keeps the right border straight
+- I have to find the longest word first, because the border depends on it
+- `require.main === module` only makes sense when Node loads the file as CommonJS
 
 ---
 

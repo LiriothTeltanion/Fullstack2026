@@ -8,7 +8,7 @@
 
 </div>
 
-Click a button and a red box slides 1px every millisecond to the right edge of a yellow square.
+I click a button and a red box slides 1px every millisecond until it hits the right edge of a yellow square.
 
 ## ▶️ How to run
 
@@ -16,18 +16,18 @@ Open `index.html` in a browser (or use `npm run dev` from the repo root and open
 
 ## 🎯 The challenge
 
-- `myMove()` clears any animation that is already running, so two intervals never stack.
-- It reads the box's current `left` with `getComputedStyle` and works out the limit: container width minus box width (400 − 50 = 350px).
-- `setInterval(..., 1)` adds 1px to `left` each time and clears itself when the box reaches the limit.
+- `myMove()` first clears an animation that is already running, so two intervals never stack.
+- It reads where the box is now with `getComputedStyle` and works out the limit: container width minus box width (400 − 50 = 350px).
+- `setInterval(..., 1)` adds 1px to `left` each tick and clears itself once the box reaches the limit.
 
-The box keeps its place after the animation, so clicking again at the edge does not move it.
+Unlike the Day 3 version, this one doesn't reset to the left. The box stays at the edge, so a second click there does nothing.
 
 ## 🧠 What I learned
 
-- `getComputedStyle(box).left` gives the real position, even when it comes from CSS
-- `clientWidth` helps me find where the box must stop
-- Clearing the old interval before starting a new one avoids double speed
-- `position: absolute` inside a `position: relative` container lets `left` move the box
+- `getComputedStyle(box).left` gives the real position even when it was only set in CSS
+- `clientWidth` of the container and of the box is all I need to find the stop point
+- Clearing `moveInterval` before a new start keeps the speed at 1px per tick
+- `left` only moves the box because it is `position: absolute` inside a `position: relative` container
 
 ---
 

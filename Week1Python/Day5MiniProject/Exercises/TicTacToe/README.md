@@ -8,7 +8,7 @@
 
 </div>
 
-Classic two-player tic-tac-toe for the terminal, all in [tictactoe.py](tictactoe.py). Players `X` and `O` take turns on a 3×3 board until someone gets three in a row or the board is full.
+Tic-tac-toe for two people at one keyboard, all in [tictactoe.py](tictactoe.py). `X` and `O` take turns on a 3×3 board until one of them gets three in a row or there are no empty cells left.
 
 ## ▶️ How to run
 
@@ -16,7 +16,7 @@ Classic two-player tic-tac-toe for the terminal, all in [tictactoe.py](tictactoe
 python tictactoe.py
 ```
 
-Type the row and the column (each 1-3) separated by a space, for example `2 3`:
+A move is the row and the column, 1 to 3 each, with a space between, like `2 3`:
 
 ```
 Player X, enter row and col (1-3 1-3) 🙂: 1 3
@@ -27,9 +27,7 @@ Player X, enter row and col (1-3 1-3) 🙂: 1 3
   -----
 3  | | 
 Player X wins!
-
 🔄 Play again? (y/n): n
-
 👋 Thanks for playing! Goodbye! 🎉
 ```
 
@@ -37,14 +35,14 @@ Player X wins!
 
 | Function | What it does |
 |---|---|
-| `new_board()` | Builds an empty 3×3 board. |
-| `display_board(board)` | Prints the board with row and column numbers. |
-| `parse_move(user_input)` | Turns `"2 3"` into `(1, 2)` and raises `ValueError` for bad input. |
-| `validate_move(board, user_input)` | Also rejects moves outside the board or on an occupied cell. |
-| `player_input(board, player)` | Keeps asking until the move is valid. |
-| `check_win(board, player)` | Checks rows, columns and both diagonals. |
-| `is_tie(board)` | True when the board is full. |
-| `play()` / `main()` | One game, then the "Play again?" loop. |
+| `new_board()` | A list of three lists, each with three `' '`. |
+| `display_board(board)` | Prints the grid with row and column numbers. |
+| `parse_move(user_input)` | Turns `"2 3"` into `(1, 2)`. Anything that isn't two numbers raises `ValueError`. |
+| `validate_move(board, user_input)` | Also says no to cells outside the board or already taken. |
+| `player_input(board, player)` | Asks again and again until the move is valid, printing the error each time. |
+| `check_win(board, player)` | Looks at the three rows, the three columns and both diagonals. |
+| `is_tie(board)` | `True` once every cell is filled. |
+| `play()` / `main()` | One full game, then the "Play again?" loop (`y` or `yes` to continue). |
 
 ## 🧪 Tests
 
@@ -54,13 +52,14 @@ From the repository root:
 python -m unittest discover -s tests/python -p "test_tictactoe.py" -v
 ```
 
-3 tests in [test_tictactoe.py](../../../../tests/python/test_tictactoe.py) check the empty board, move parsing, wins on a row, a column and a diagonal, a tie, and invalid moves.
+3 tests in [test_tictactoe.py](../../../../tests/python/test_tictactoe.py) check the empty board, parsing a move, a win by row, column and diagonal, a tie and an invalid move.
 
 ## 🧠 What I learned
 
-- A list of lists is an easy way to store a grid
-- Splitting the game into small functions makes each rule easy to test
-- Raising `ValueError` and catching it in the input loop keeps the game from crashing
+- `board[row][col]` on a list of lists maps nicely to how the grid looks on screen
+- The player types 1 to 3 but the list uses 0 to 2, so `parse_move()` subtracts 1 in one place
+- `check_win()` runs right after each move, before the tie check, so a full board with a winner counts as a win
+- Raising errors in `validate_move()` and catching them in `player_input()` kept the rules apart from the prompting
 
 ---
 

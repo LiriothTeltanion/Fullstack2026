@@ -8,13 +8,13 @@
 
 </div>
 
-Three exercises on timers, movement and drag and drop. Each folder has its own `index.html` and `js/`.
+Three exercises about timing and movement. Every folder has its own `index.html` and `js/`, with the CSS inside the page.
 
 ## Contents
 
-- [`exercise1_timer/`](exercise1_timer/) — `setTimeout` and a paragraph interval that stops at 5
-- [`exercise2_move_box/`](exercise2_move_box/) — slide a box 1px per millisecond
-- [`exercise3_drag_drop/`](exercise3_drag_drop/) — drag a box into a target with pointer events
+- [`exercise1_timer/`](exercise1_timer/): two `setTimeout` calls and an interval that stops at 5 paragraphs
+- [`exercise2_move_box/`](exercise2_move_box/): a box sliding 1px per millisecond to the edge
+- [`exercise3_drag_drop/`](exercise3_drag_drop/): drag a box into a target with pointer events
 
 ---
 

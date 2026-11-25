@@ -8,7 +8,7 @@
 
 </div>
 
-A timer exercise in three parts: an alert after 2 seconds, a paragraph after 2 seconds, and a new paragraph every 2 seconds until I stop it.
+The same three-part timer task as on Day 3, done again for the remote session: an alert after 2 seconds, a paragraph after 2 seconds, and then a new paragraph every 2 seconds until something stops it.
 
 ## ▶️ How to run
 
@@ -16,18 +16,18 @@ Open `index.html` in a browser (or run `npm run dev` from the repo root and open
 
 ## 🎯 The challenge
 
-1. **Part I** – `setTimeout` shows `alert("Hello World")` after 2 seconds.
-2. **Part II** – another `setTimeout` adds `<p>Hello World</p>` to `#container` after 2 seconds.
-3. **Part III** – `setInterval` adds a paragraph every 2 seconds and stops when there are 5 paragraphs, or when I click **Clear Interval**.
+1. **Part I**: `setTimeout` shows `alert("Hello World")` after 2 seconds.
+2. **Part II**: another `setTimeout` adds `<p>Hello World</p>` to `#container` after 2 seconds.
+3. **Part III**: `setInterval` adds a paragraph every 2 seconds and stops at 5 paragraphs, or earlier if I click **Clear Interval**.
 
-`addParagraph(text)` creates and appends each paragraph, so Parts II and III share the same code.
+This time I pulled the paragraph code into `addParagraph(text)`, so Parts II and III share it.
 
 ## 🧠 What I learned
 
-- `setTimeout` runs once after a delay, `setInterval` keeps going
-- `clearInterval(id)` needs the id that `setInterval` returned
-- Setting the id to `null` after clearing makes the button safe to click twice
-- Counting the `<p>` elements is an easy way to know when to stop
+- Two `setTimeout` calls with the same 2000 ms delay fire one after the other, in the order I wrote them
+- `clearInterval` only works with the id that `setInterval` gave back, so I keep it in `intervalId`
+- Setting `intervalId = null` after clearing makes a second click on the button do nothing
+- Counting `container.querySelectorAll("p")` tells the interval when it's time to stop
 
 ---
 

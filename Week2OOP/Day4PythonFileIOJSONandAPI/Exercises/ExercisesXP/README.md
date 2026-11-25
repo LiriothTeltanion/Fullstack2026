@@ -8,7 +8,7 @@
 
 </div>
 
-Both Files and JSON XP tasks in one script, `xp_files_json_all.py`: a random sentence generator and a small JSON edit.
+`xp_files_json_all.py` covers both XP tasks: a sentence made of random words from a file, and a JSON string that I read, change and save to disk.
 
 ## ▶️ How to run
 
@@ -25,19 +25,19 @@ Employee salary is: 7000 💰
 Modified JSON saved to: .../modified_employee.json ✅
 ```
 
-The script writes `words.txt` (if it is missing) and `modified_employee.json` in the folder you run it from. To try the interactive prompt of exercise 1, import the module and call `main()`.
+Running it leaves two files in the current folder: `words.txt` (only created when it's missing) and `modified_employee.json`. The demo always uses 6 words. For the version that asks for a length, import the module and call `main()`.
 
 ## 🎯 The challenge
 
-1. **Random sentence generator** - `get_words_from_file()` reads the words (and creates `words.txt` with a default list the first time), `get_random_sentence(length)` picks random words and returns them in lowercase, and `main()` asks for a length and only accepts a whole number from 2 to 20
-2. **Working with JSON** - `process_employee_json()` parses a sample JSON string, prints the nested salary, adds a `birth_date` to the employee and saves the result with `json.dump(..., indent=2)`
+1. **Random sentence generator** - `get_words_from_file()` reads the word list, and the first time it writes `words.txt` from a built-in list of 48 words. `get_random_sentence(length)` picks words with `random.choice` and lowercases the result. `main()` only accepts a whole number from 2 to 20
+2. **Working with JSON** - `process_employee_json()` loads a sample string with `json.loads`, prints Emma's salary from `data["company"]["employee"]["payable"]["salary"]`, adds a `birth_date` and writes the file with `json.dump(..., indent=2)`
 
 ## 🧠 What I learned
 
-- `pathlib.Path` makes it easy to check for a file, read it and write it
-- `json.loads` turns a JSON string into nested dictionaries I can walk with keys
-- Checking the input range before using it keeps the generator from doing odd things
-- Relative file paths depend on where I run the script, not where the script lives
+- `Path.exists()`, `read_text()` and `write_text()` cover all the file work exercise 1 needs
+- Reaching a nested value is just one key after another once the JSON is parsed into dicts
+- Turning `int(raw)` into a `try / except ValueError` gives a clear message for input like `five`
+- `words.txt` is created next to wherever I run the script, which isn't always the script's folder
 
 ---
 

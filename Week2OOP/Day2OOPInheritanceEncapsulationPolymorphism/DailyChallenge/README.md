@@ -8,11 +8,11 @@
 
 </div>
 
-The Day 2 daily challenge.
+One daily challenge for Day 2.
 
 ## Contents
 
-- [`Pagination/`](Pagination/) — a class that splits a list into pages and moves between them
+- [`Pagination/`](Pagination/): splits a list into pages and moves between them
 
 ---
 

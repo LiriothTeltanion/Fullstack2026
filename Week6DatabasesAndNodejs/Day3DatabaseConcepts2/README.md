@@ -8,14 +8,14 @@
 
 </div>
 
-Relationships in the `dvdrental` database: foreign keys, `ON DELETE CASCADE`, `LEFT JOIN`, a view and questions that join four or five tables.
+How the tables in `dvdrental` connect: foreign keys, `ON DELETE CASCADE`, `LEFT JOIN`, a view, and questions that need four or five tables at once.
 
 ## Contents
 
 | Folder | What it is |
 |---|---|
 | [`Exercises/ExercisesXP/`](Exercises/ExercisesXP/) | Film languages, two new linked tables and searches over rentals |
-| [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | Rentals that are still out and a "Happy Halloween" viewing-time plan per store |
+| [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | Rentals still out and a "Happy Halloween" viewing-time plan per store |
 
 ---
 

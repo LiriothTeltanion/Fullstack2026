@@ -8,7 +8,7 @@
 
 </div>
 
-Turn an array of numbers into strings, then sort it from largest to smallest with my own Bubble Sort, without `Array.prototype.sort`.
+I take an array of numbers, turn it into strings a few different ways, and then sort it from biggest to smallest with my own Bubble Sort. No `Array.prototype.sort` allowed.
 
 ## ▶️ How to run
 
@@ -28,20 +28,20 @@ Actual:   [9,8,7,6,5,4,3,2,1,0]
 
 ## 🎯 The challenge
 
-Given `const numbers = [5,0,9,1,7,4,2,6,3,8];`:
+The starting array is `const numbers = [5,0,9,1,7,4,2,6,3,8];`.
 
-1. Convert it with `.toString()`.
-2. Convert it with `.join()` using `"+"`, a space and an empty string.
-3. `bubbleSortDescending(input)` sorts a copy in descending order with two nested `for` loops. When the left number is smaller than the right one, a `temp` variable swaps them. Every pass and every comparison is logged.
+1. Print it with `.toString()`.
+2. Print it with `.join()` three times: with `"+"`, with a space and with an empty string.
+3. Sort it with `bubbleSortDescending(input)`. It copies the array, then runs two nested `for` loops. When the left number is smaller than the right one, a `temp` variable swaps them. Every pass and every comparison goes to the console, so I can watch the big numbers move to the front.
 
-If a pass makes no swap, the loop stops early because the array is already sorted.
+I also keep a `swapped` flag. If a whole pass makes no swap, the array is already in order and the loop breaks early.
 
 ## 🧠 What I learned
 
-- `toString()` always uses commas, while `join()` lets me pick the separator
-- Bubble Sort compares neighbours and pushes the smallest number to the end on each pass
-- The inner loop can stop `pass` steps earlier, because the end of the array is already in place
-- `slice()` gives me a copy, so the original `numbers` array is not changed
+- `toString()` is stuck with commas, `join()` lets me choose the separator
+- Each pass pushes the smallest remaining number to the end of the array
+- The inner loop runs `n - 1 - pass` times, since the tail is already sorted
+- I sort `input.slice()`, so the original `numbers` array stays the same
 
 ---
 

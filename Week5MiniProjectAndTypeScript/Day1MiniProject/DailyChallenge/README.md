@@ -8,11 +8,11 @@
 
 </div>
 
-The Day 1 daily challenge.
+Only one daily challenge on this day.
 
 ## Contents
 
-- [`CurrencyConverter/`](CurrencyConverter/) — convert between any two currencies with live rates from ExchangeRate-API
+- [`CurrencyConverter/`](CurrencyConverter/): converts an amount between two currencies with live ExchangeRate-API rates
 
 ---
 

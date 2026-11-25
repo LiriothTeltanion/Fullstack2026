@@ -8,12 +8,12 @@
 
 </div>
 
-The two exercise packs from the remote learning sessions.
+Two packs of extra practice from the remote learning sessions.
 
 ## Contents
 
-- [`ExercisesXP1/`](ExercisesXP1/) — todo list, color guess, calculator and whack-a-mole
-- [`ExercisesXP2/`](ExercisesXP2/) — timer, move the box and drag and drop
+- [`ExercisesXP1/`](ExercisesXP1/): to-do list, color guess, calculator and whack-a-mole
+- [`ExercisesXP2/`](ExercisesXP2/): timer, moving box and drag and drop
 
 ---
 

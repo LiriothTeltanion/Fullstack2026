@@ -8,11 +8,11 @@
 
 </div>
 
-The Day 4 exercise set.
+One XP set with three promise exercises.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/) — `compareToTen`, a 4-second promise and `Promise.resolve` / `Promise.reject`
+- [`ExercisesXP/`](ExercisesXP/): `compareToTen`, a promise that waits 4 seconds, and `Promise.resolve` / `Promise.reject`
 
 ---
 

@@ -8,7 +8,7 @@
 
 </div>
 
-A command-line tool that checks if a word is in a word list and shows its anagrams. The logic and the menu live in two separate files.
+Type a word and the program tells you if it's in the word list, then shows every other word made of the same letters. The logic and the menu are in separate files.
 
 ## ▶️ How to run
 
@@ -30,26 +30,30 @@ This is a valid English word.
 Anagrams for your word: mate, meta, tame, team
 ```
 
+Input like `hello world` is refused, and `q`, `quit` or `exit` ends the program.
+
 ## 🎯 The challenge
 
-- [`anagramchecker.py`](anagramchecker.py) - the `AnagramChecker` class, which prints nothing:
+- [`anagramchecker.py`](anagramchecker.py) holds the `AnagramChecker` class, which never prints:
 
   | Method | What it does |
   |---|---|
-  | `is_valid_word(word)` | `True` if the word is in the list (case-insensitive) |
+  | `is_valid_word(word)` | `True` when the word is in the list, in any case |
   | `get_anagrams(word)` | The other words with the same letters, sorted, without the word itself |
-  | `is_anagram(word1, word2)` | `True` if two different words use the same letters |
+  | `is_anagram(word1, word2)` | `True` for two different words with the same letters |
 
-  It loads the words in uppercase and builds an index from each word's sorted letters (`MEAT` → `AEMT`) to its bucket of words, so a lookup is a single dictionary access.
-- [`anagrams.py`](anagrams.py) - the menu: it only accepts one word made of letters, and `q` quits
-- [`words.txt`](words.txt) - a small list of 49 words; it can be swapped for a bigger one
+  On start it loads every word in uppercase and builds `index`, which maps sorted letters to words (`MEAT` → `AEMT` → `MATE, MEAT, META, TAME, TEAM`). A lookup is then one dictionary access.
+- [`anagrams.py`](anagrams.py) is the menu. It accepts one word of letters only and lowercases the anagrams for display
+- [`words.txt`](words.txt) is a small list of 49 words. A bigger list can be passed as an argument
+
+Without the file it falls back to `/usr/share/dict/words`, which Windows doesn't have.
 
 ## 🧠 What I learned
 
-- Two words are anagrams when their sorted letters are the same
-- Precomputing an index once makes every later search fast
-- Keeping `print` out of the class means the same logic could power a different interface
-- Normalizing input (letters only, uppercase) before comparing avoids many small bugs
+- Sorting the letters gives every anagram the same "signature", so comparing words means comparing two strings
+- Building the index once at startup makes each later search instant
+- Because `AnagramChecker` prints nothing, a GUI or a web page could reuse it as it is
+- `_normalize()` keeps only letters and uppercases them, so `Meat!` and `MEAT` count as the same word
 
 ---
 

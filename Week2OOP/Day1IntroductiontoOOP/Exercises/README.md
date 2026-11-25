@@ -8,13 +8,13 @@
 
 </div>
 
-The Day 1 exercises, where I wrote my first Python classes.
+Three exercise sets from the first OOP day, one Python file each.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/) — cats, dogs, a song printer and a zoo
-- [`ExercisesXPGold/`](ExercisesXPGold/) — Circle, MyList and a small MenuManager
-- [`ExercisesXPNinja/`](ExercisesXPNinja/) — a Phone class with calls and messages
+- [`ExercisesXP/`](ExercisesXP/): cats, dogs, a song printer and a zoo
+- [`ExercisesXPGold/`](ExercisesXPGold/): `Circle`, `MyList` and a small `MenuManager`
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): a `Phone` that calls and sends messages
 
 ---
 

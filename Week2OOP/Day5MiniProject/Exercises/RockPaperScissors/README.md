@@ -8,7 +8,7 @@
 
 </div>
 
-Rock, paper, scissors against the computer, split into two modules so the rules stay separate from the menu.
+The classic game against the computer. One module knows the rules, the other runs the menu and keeps score.
 
 ## ▶️ How to run
 
@@ -29,24 +29,28 @@ You chose 🪨  rock | Computer chose 📄  paper
 Result: You LOSE. 😿
 ```
 
+The computer's pick is random, so your result will vary.
+
 ## 🎯 The challenge
 
-- [`game.py`](game.py) - the `Game` class:
+- [`game.py`](game.py) holds the `Game` class:
 
   | Method | What it does |
   |---|---|
-  | `get_user_item()` | Asks until the answer is `r`, `p`, `s` or a full word (any case) |
-  | `get_computer_item()` | Picks a random item with the `random.Random` the game holds |
-  | `get_game_result(user, computer)` | Returns `"win"`, `"loss"` or `"draw"` using a "what beats what" dictionary |
-  | `play()` | Runs one round, prints both choices and the result, and returns it |
+  | `get_user_item()` | Keeps asking until it gets `r`, `p`, `s` or the full word, in any case (`scissor` works too) |
+  | `get_computer_item()` | Random choice through the game's `random.Random` |
+  | `get_game_result(user, computer)` | `"win"`, `"loss"` or `"draw"`, using a dict of what beats what |
+  | `play()` | One round: both picks, the printed result, and the result returned |
 
-- [`rockpaperscissors.py`](rockpaperscissors.py) - the menu: play a round, show the scores, or quit with a final summary of wins, losses and draws
+- [`rockpaperscissors.py`](rockpaperscissors.py) is the menu: play, show the scores, or quit with a summary of wins, losses and draws
+
+A small quirk: "Show scores" reuses the same `print_results()` as quitting, so it prints `=== Final Results ===` and `Thanks for playing!` even though the game goes on.
 
 ## 🧠 What I learned
 
-- A dictionary like `{"rock": "scissors", ...}` replaces a long chain of `if` checks
-- Returning the result from `play()` lets the menu keep score without knowing the rules
-- Mapping several inputs (`1` or `p`) to one action makes a menu friendlier
+- `wins_against = {"rock": "scissors", ...}` decides every round in one line, no `if / elif` tree
+- `play()` returns `"win"`, `"loss"` or `"draw"`, and the menu just adds 1 to that key in `results`
+- A mapping like `{"1": "p", "p": "p", ...}` lets the menu accept both numbers and letters
 
 ---
 

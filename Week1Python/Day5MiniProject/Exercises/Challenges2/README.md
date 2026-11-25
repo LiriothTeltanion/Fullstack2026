@@ -8,7 +8,7 @@
 
 </div>
 
-Two exercises: drawing star patterns with loops, and reading a short sorting snippet line by line to understand what it does. [main.py](main.py) runs both; the code lives in [src/patterns.py](src/patterns.py) and [src/ex2analysis.py](src/ex2analysis.py).
+Two exercises here. The first draws star patterns with loops. The second gave me a short piece of sorting code and asked what it does, so I traced it. [main.py](main.py) runs both, and the code is in [src/patterns.py](src/patterns.py) and [src/ex2analysis.py](src/ex2analysis.py).
 
 ## ▶️ How to run
 
@@ -23,7 +23,6 @@ python main.py
   *
  ***
 *****
-
 -> Pattern B
     *
    **
@@ -36,7 +35,7 @@ Final Output: [2, 12, 24, 233, 354]
 
 ## 🎯 The challenge
 
-**Exercise 1: Patterns.** `pattern_a()` draws a pyramid, `pattern_b()` a right-aligned triangle and `pattern_c()` a triangle that grows to five stars and then shrinks back to the right. Each function builds the lines with string multiplication (`" " * n`, `"*" * n`), prints the pattern and also returns it as a string. The pyramid uses `h - i` spaces and `2 * i - 1` stars per row:
+**Exercise 1: Patterns.** `pattern_a()` is a pyramid, `pattern_b()` a triangle leaning right, and `pattern_c()` grows from one star to five and then shrinks back, pushed to the right. Every line is just `" " * n` plus `"*" * m`. Each function prints the pattern and also returns it as a string. For the pyramid, row `i` gets `h - i` spaces and `2 * i - 1` stars:
 
 ```python
 for i in range(1, h + 1):
@@ -45,7 +44,9 @@ for i in range(1, h + 1):
     lines.append(spaces + stars)
 ```
 
-**Exercise 2: Code analysis.** The exercise gave this code and asked what it does:
+`pattern_c()` prints the five-star line twice, once at the end of the growing part and once at the start of the shrinking part. I left it like that.
+
+**Exercise 2: Code analysis.** The given code:
 
 ```python
 my_list = [2, 24, 12, 354, 233]
@@ -59,13 +60,14 @@ for i in range(len(my_list) - 1):
 print(my_list)
 ```
 
-It's a variant of selection sort that swaps as soon as it finds a smaller value, instead of once at the end of the inner loop. `ex2analysis.py` holds my commented version of the code and a function that records `i`, `j`, `minimum` and the list after every check or swap. The trace shows only two swaps are needed, and the final output is `[2, 12, 24, 233, 354]`.
+It's a kind of selection sort, except it swaps every time it finds something smaller instead of once after the inner loop. In `ex2analysis.py` I wrote a commented copy of it and a function that records `i`, `j`, `minimum` and the list after each comparison or swap. The trace shows only two swaps happen, and the result is `[2, 12, 24, 233, 354]`.
 
 ## 🧠 What I learned
 
-- Controlling rows and spacing with loops and simple formulas
-- Returning values instead of only printing, so functions can be reused
-- Tracing code by hand (and in code) to understand an algorithm before trusting it
+- Each pattern came down to a formula for spaces and stars per row
+- Returning the pattern as a string, not only printing it, means a test can compare it
+- Recording each step of the sort made it obvious where the swaps happen
+- The swap inside the `if` still sorts this list, but it moves values more often than real selection sort
 
 ---
 

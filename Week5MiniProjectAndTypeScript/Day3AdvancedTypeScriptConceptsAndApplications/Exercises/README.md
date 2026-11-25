@@ -8,11 +8,11 @@
 
 </div>
 
-The Day 3 exercise set.
+Day 3 has a single exercise set.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/) — access modifiers, `readonly`, inheritance, static methods and extended interfaces
+- [`ExercisesXP/`](ExercisesXP/): `private` and `protected`, `readonly`, a subclass, static methods and an extended interface
 
 ---
 

@@ -8,11 +8,11 @@
 
 </div>
 
-A double-slider page with a Sign In form and a Sign Up form side by side. A red overlay slides over one of them, and its button switches to the other.
+A Sign In form and a Sign Up form sit side by side, and a red panel covers one of them. The button on the panel slides it across and shows the other form.
 
 ## ▶️ How to run
 
-Open `index.html` in a browser (or run `npm run dev` from the repo root and open this folder at `http://localhost:8000/`). `js/app.js` uses `document`, so it only runs in the browser, not with `node`.
+Open `index.html` in a browser (or run `npm run dev` from the repo root and open this folder at `http://localhost:8000/`). `js/app.js` needs `document`, so it only works in the browser, not with `node`.
 
 ## 🎯 The challenge
 
@@ -22,16 +22,18 @@ Open `index.html` in a browser (or run `npm run dev` from the repo root and open
 | `focusFirstInput(section)` | Focuses the first input or button inside a section. |
 | `handleDemoSubmit(e)` | Stops the real submit, shows the browser's validation messages when a field is wrong, and otherwise alerts `Form submitted successfully! (Demo)`. |
 
-- The **Log In** and **Create Account** buttons on the overlay call `setState()`.
-- `Ctrl + ←` or `Ctrl + →` also switches between the two forms.
-- The CSS moves the overlay with `transform` based on `data-state`, turns off the slide for users who prefer reduced motion, and stacks everything in one column below 860px.
+- The **Log In** and **Create Account** buttons on the panel call `setState()`.
+- `Ctrl + ←` or `Ctrl + →` switches forms from the keyboard.
+- The CSS slides the panel with `transform` depending on `data-state`. The slide is off for people who ask for reduced motion, and under 860px everything stacks in one column.
+
+There is no real sign-in behind it. Both forms end in a demo alert.
 
 ## 🧠 What I learned
 
-- One `data-state` attribute can drive the whole animation from CSS
-- `checkValidity()` and `reportValidity()` reuse the `required` and `minlength` rules from the HTML
-- `aria-hidden` and `aria-pressed` tell screen readers which form is active
-- Moving the focus after the slide helps keyboard users
+- The JavaScript only flips one `data-state` attribute, and the CSS does the whole animation from it
+- `checkValidity()` and `reportValidity()` reuse the `required` and `minlength` rules I already wrote in the HTML
+- `aria-hidden` and `aria-pressed` let a screen reader know which form is showing
+- The focus moves inside a 120 ms `setTimeout`, not at the same instant as the click
 
 ---
 

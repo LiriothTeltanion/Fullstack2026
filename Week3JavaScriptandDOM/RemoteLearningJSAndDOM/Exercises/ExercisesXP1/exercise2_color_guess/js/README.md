@@ -8,11 +8,11 @@
 
 </div>
 
-The browser script for Color Guess. It needs the page, so open `../index.html` instead of running it with `node`.
+The game logic listens to the difficulty `<select>`, the answer buttons it creates, **Next Color** and **Guess**. It writes to the page, so open `../index.html`.
 
 ## Contents
 
-- [`app.js`](app.js) — builds each round, checks the guess and runs the 5-second countdown
+- [`app.js`](app.js): random `rgb()` targets, the Easy / Medium / Hard rounds and the 5-second countdown after a win
 
 ---
 

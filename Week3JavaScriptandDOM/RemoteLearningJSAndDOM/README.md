@@ -8,7 +8,7 @@
 
 </div>
 
-Extra JavaScript and DOM practice from the remote learning sessions: small apps, timers and drag and drop.
+Extra JavaScript and DOM practice I did in the remote learning sessions: four small apps, then timers and drag and drop.
 
 ## Contents
 

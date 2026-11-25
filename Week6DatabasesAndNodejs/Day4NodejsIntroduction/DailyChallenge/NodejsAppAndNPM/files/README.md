@@ -8,11 +8,11 @@
 
 </div>
 
-The data file that task 3 and `challenge.js` read.
+Just the text file that task 3 and `challenge.js` print.
 
 ## Contents
 
-- [`file-data.txt`](file-data.txt) — two short lines of text printed by `readAndPrint()`
+- [`file-data.txt`](file-data.txt): two short lines that `readAndPrint()` reads and shows
 
 ---
 

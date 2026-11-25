@@ -8,33 +8,34 @@
 
 </div>
 
-A Pokédex built with [PokeAPI](https://pokeapi.co/). The page looks like a red Pokédex device: a screen for the official artwork, an info panel, a D-pad and a green button.
+My Pokédex looks like the red device from the show: a screen for the official artwork, an info panel, a D-pad and a green button. All the data comes from [PokeAPI](https://pokeapi.co/).
 
 ## ▶️ How to run
 
-Open `index.html` in a modern browser; the HTML, CSS and JavaScript are all in that file. You can also run `npm run dev` from the repository root and go to `http://localhost:8000/Week5MiniProjectAndTypeScript/Day1MiniProject/Exercises/Pokedex/`.
+Everything (HTML, CSS and JavaScript) lives in `index.html`, so opening it in a browser is enough. Or run `npm run dev` from the repository root and go to `http://localhost:8000/Week5MiniProjectAndTypeScript/Day1MiniProject/Exercises/Pokedex/`.
 
-- **Green button:** a random Pokémon from 1 to 1010
-- **D-pad left / right:** previous or next Pokémon; it wraps around, so after #1010 comes #1
-- The info panel shows name, number, height (m), weight (kg) and the types as colored badges
+- **Green button:** loads a random Pokémon between 1 and 1010
+- **D-pad left / right:** previous or next Pokémon, wrapping around (after #1010 comes #1)
+- The info panel lists name, number, height in m, weight in kg and the types as grey badges
 
 ## 🎯 The challenge
 
 | Function | What it does |
 |---|---|
-| `fetchPokemon(id)` | Fetches `https://pokeapi.co/api/v2/pokemon/{id}` and returns the JSON |
-| `getRandomPokemon()` / `getPreviousPokemon()` / `getNextPokemon()` | Choose the ID, fetch it and update the device |
-| `displayPokemonImage()` / `displayPokemonInfo()` | Draw the artwork and the info panel |
-| `disableButtons()` / `enableButtons()` | Block the controls during a request |
-| `showLoading()` / `showError()` | Spinner, or "Oh no! That Pokemon isn't available..." |
+| `fetchPokemon(id)` | Gets `https://pokeapi.co/api/v2/pokemon/{id}` and returns the JSON |
+| `getRandomPokemon()` / `getPreviousPokemon()` / `getNextPokemon()` | Pick the ID, fetch it and redraw the device |
+| `displayPokemonImage()` / `displayPokemonInfo()` | Show the artwork (falling back to the small sprite) and the info panel |
+| `disableButtons()` / `enableButtons()` | Lock the controls while a request is running |
+| `showLoading()` / `showError()` | A spinner, or "Oh no! That Pokemon isn't available..." |
 
-`currentPokemonId` remembers the current Pokémon between clicks, and `MAX_POKEMON` is 1010.
+`currentPokemonId` starts as `null`, so the D-pad does nothing until the first random Pokémon is loaded. PokeAPI gives height and weight in tenths, which is why the code divides both by 10.
 
 ## 🧠 What I learned
 
-- Fetching JSON with async/await and handling loading and error states
-- Keeping a small piece of state to drive previous/next navigation
-- Building a detailed device look with only CSS (gradients, flexbox and grid)
+- One variable, `currentPokemonId`, is enough state for previous and next
+- Wrapping the ID by hand (`< 1` goes to `MAX_POKEMON`, above it goes to 1) is simpler than it sounds
+- PokeAPI units are decimetres and hectograms, so I have to convert before showing them
+- The whole device look is CSS: radial gradients for the lights, flexbox and grid for the layout
 
 Pokémon data comes from PokeAPI. Pokémon and Pokédex are trademarks of Nintendo/Game Freak.
 

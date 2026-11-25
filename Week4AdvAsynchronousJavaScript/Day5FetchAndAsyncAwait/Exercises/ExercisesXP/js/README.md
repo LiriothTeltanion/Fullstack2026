@@ -8,12 +8,12 @@
 
 </div>
 
-The scripts for the Day 5 Exercises XP page. They run in the browser through `../index.html`, not with Node.
+The two scripts that `../index.html` loads, `config.js` first and then `app.js`. Both expect a browser.
 
 ## Contents
 
-- [`app.js`](app.js) — exercises 1 to 4, `handleStatus()` and the output panel
-- [`config.example.js`](config.example.js) — template to copy to `config.js` (git-ignored) with your own Giphy key
+- [`app.js`](app.js): the four exercise handlers, `requireGiphyKey()`, `handleStatus()` and `logPanel()`
+- [`config.example.js`](config.example.js): sets `window.GIPHY_CONFIG` with a placeholder; copy it to `config.js` (git-ignored) and add your own key
 
 ---
 

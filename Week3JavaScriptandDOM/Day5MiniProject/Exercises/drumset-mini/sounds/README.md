@@ -8,20 +8,23 @@
 
 </div>
 
-The nine drum sounds the pads play. `js/app.js` loads them as `sounds/<name>.wav`.
+The nine drum samples, one per pad. `js/app.js` asks for them as `sounds/<name>.wav`, so the file names have to match the `SAMPLES` map.
 
 ## Contents
 
-- [`boom.wav`](boom.wav) — G
-- [`clap.wav`](clap.wav) — A
-- [`hihat.wav`](hihat.wav) — S
-- [`kick.wav`](kick.wav) — D
-- [`openhat.wav`](openhat.wav) — F
-- [`ride.wav`](ride.wav) — H
-- [`snare.wav`](snare.wav) — J
-- [`tink.wav`](tink.wav) — L
-- [`tom.wav`](tom.wav) — K
-- [`PUT_SOUNDS_HERE.txt`](PUT_SOUNDS_HERE.txt) — the expected file names
+| Key | File |
+|---|---|
+| A | [`clap.wav`](clap.wav) |
+| S | [`hihat.wav`](hihat.wav) |
+| D | [`kick.wav`](kick.wav) |
+| F | [`openhat.wav`](openhat.wav) |
+| G | [`boom.wav`](boom.wav) |
+| H | [`ride.wav`](ride.wav) |
+| J | [`snare.wav`](snare.wav) |
+| K | [`tom.wav`](tom.wav) |
+| L | [`tink.wav`](tink.wav) |
+
+[`PUT_SOUNDS_HERE.txt`](PUT_SOUNDS_HERE.txt) lists the expected names, in case someone swaps in their own sounds.
 
 ---
 

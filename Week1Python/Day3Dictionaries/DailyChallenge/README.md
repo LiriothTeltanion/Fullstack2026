@@ -8,12 +8,12 @@
 
 </div>
 
-The two Day 3 daily challenges: the regular one and the Gold one.
+Day 3 came with a regular challenge and a Gold one.
 
 ## Contents
 
-- [`Dictionaries/`](Dictionaries/) — a letter index map and the items I can afford with a wallet
-- [`CaesarCypher/`](CaesarCypher/) — Caesar cipher with encrypt, decrypt and brute-force modes
+- [`Dictionaries/`](Dictionaries/): letter positions with `setdefault()` and a wallet that decides what I can afford
+- [`CaesarCypher/`](CaesarCypher/): the Gold one, a Caesar cipher with a menu and command-line flags
 
 ---
 

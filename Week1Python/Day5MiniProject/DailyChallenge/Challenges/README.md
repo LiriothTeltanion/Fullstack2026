@@ -8,7 +8,7 @@
 
 </div>
 
-Two string challenges in [challenges.py](challenges.py): sort comma-separated words alphabetically, and find the longest word in a sentence.
+Two string problems in [challenges.py](challenges.py). The first sorts words typed with commas between them. The second finds the longest word in a sentence, where only letters count toward the length.
 
 ## ▶️ How to run
 
@@ -16,7 +16,7 @@ Two string challenges in [challenges.py](challenges.py): sort comma-separated wo
 python challenges.py
 ```
 
-It asks for comma-separated words and prints them sorted. After that, a few `assert` checks for the longest-word function run automatically. If nothing else is printed, they all passed.
+It asks for the words and prints them sorted. Then five `assert` checks for `longest_word()` run on their own. No extra output means they all passed.
 
 ```
 Enter comma-separated words: banana,apple,cherry,date
@@ -27,8 +27,10 @@ apple,banana,cherry,date
 
 | Function | What it does |
 |---|---|
-| `sort_comma_separated(words)` | Splits on commas, strips the spaces around each word and drops empty entries, so `"  apple  ,  banana  "` works. An empty input prints a "No valid words" message. |
-| `longest_word(sentence)` | Returns the longest word as it appears in the sentence, punctuation included (`Margaret's`, `forever.`). Only letters count, so `Wow!!!` has 3 letters, not 6. On a tie the first word wins, and a sentence with no letters gives an empty string. |
+| `sort_comma_separated(words)` | Splits on commas, strips spaces and skips empty pieces, so `"  apple  ,  banana  "` is fine. If nothing is left, `_cli()` prints `No valid words were provided`. |
+| `longest_word(sentence)` | Returns the winning word exactly as written, punctuation and all (`Margaret's`, `forever.`), but measures it by letters only. `Wow!!!` counts as 3. The first word wins a tie, and a sentence with no letters returns `""`. |
+
+The loop strips everything that isn't a letter just for measuring:
 
 ```python
 for w in words:
@@ -47,11 +49,14 @@ for w in words:
 | `Forgetfulness is by all means powerless!` | `Forgetfulness` |
 | `!!! 123 ...` | `""` |
 
+The sort is plain `sorted()`, so capital letters come before lowercase ones (`Zebra` before `apple`).
+
 ## 🧠 What I learned
 
-- Parsing input with `split()`, `strip()` and a list comprehension
-- Using `re.sub()` to count only the letters while keeping the original word
-- Tracking the best candidate in one loop, and checking edge cases with `assert`
+- `[part.strip() for part in words.split(",") if part.strip()]` cleans the input in one line
+- Keeping two versions of the word, the original `w` and the `cleaned` one, let me measure one and return the other
+- Using `>` and not `>=` is what makes the first word win a tie
+- A few `assert` lines at the bottom were a quick way to check my edge cases every run
 
 ---
 

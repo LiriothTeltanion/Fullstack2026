@@ -8,7 +8,7 @@
 
 </div>
 
-Five short array and string exercises in one TypeScript file.
+Five short helpers in `ArraysMethodsXPGold.ts`: sum an array, drop duplicates, drop falsy values, repeat a string and line up two emoji racers.
 
 ## ▶️ How to run
 
@@ -19,7 +19,7 @@ npx tsc ArraysMethodsXPGold.ts --module commonjs --outDir ~/tmp-ts
 node ~/tmp-ts/ArraysMethodsXPGold.js
 ```
 
-The demo block only runs as CommonJS (`require.main === module`), and inside this repository `.js` files are ES modules, so I compile it to a folder outside the repo first.
+The output folder is outside the repository because the repo runs `.js` as ES modules, and the guarded demo needs CommonJS to print.
 
 ```
 E1 sumArray([1,2,3,4]): 10
@@ -36,17 +36,17 @@ turtleAfterPad: 🐢=======
 
 | Function | What it does |
 |---|---|
-| `sumArray(nums)` | Adds all the numbers with `reduce` |
-| `uniqueArray(arr)` | Removes duplicates with `new Set` |
-| `cleanArray(arr)` | Drops `null`, `0`, `""`, `false`, `undefined` and `NaN` |
-| `repeat(str, n = 1)` | Repeats a string with a loop instead of `String.prototype.repeat` |
-| `alignRacers()` | Lines the turtle and rabbit up under the start line with `padStart(9)` and shows what `trim().padEnd(9, "=")` does |
+| `sumArray(nums)` | Adds the numbers with `reduce`, starting from 0 |
+| `uniqueArray(arr)` | Puts the array in a `Set` and back into an array with `Array.from` |
+| `cleanArray(arr)` | Keeps everything except `null`, `0`, `""`, `false`, `undefined` and `NaN` |
+| `repeat(str, n = 1)` | Builds the string in a `for` loop instead of calling `String.prototype.repeat`; `n <= 0` gives `""` |
+| `alignRacers()` | Pads the turtle and the rabbit with `padStart(9)` and returns what `trim().padEnd(9, "=")` does to the turtle |
 
 ## 🧠 What I learned
 
-- `Array.from(new Set(arr))` is the shortest way to remove duplicates
-- `NaN` needs `Number.isNaN`, because `NaN === NaN` is false
-- An emoji takes two UTF-16 code units, which changes how `padStart` counts
+- A `Set` keeps only one copy of each value, which makes removing duplicates a one-liner
+- `NaN` is never equal to itself, so `cleanArray` needs `Number.isNaN` to catch it
+- `padStart` counts UTF-16 code units, and an emoji like 🐢 is two of them, so `padStart(9)` adds only 7 spaces
 
 ---
 

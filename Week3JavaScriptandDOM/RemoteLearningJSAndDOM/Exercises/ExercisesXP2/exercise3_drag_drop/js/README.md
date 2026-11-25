@@ -8,11 +8,11 @@
 
 </div>
 
-The browser script for Drag and Drop. It needs the page, so open `../index.html` instead of running it with `node`.
+Three pointer listeners on the box (`pointerdown`, `pointermove`, `pointerup`) and one helper that checks the drop. Open `../index.html` to try it.
 
 ## Contents
 
-- [`app.js`](app.js) — pointer events that drag the box, then center it in the target or snap it back
+- [`app.js`](app.js): drags the box with pointer capture, then centers it in the target or snaps it back
 
 ---
 

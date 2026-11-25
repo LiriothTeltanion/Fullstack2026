@@ -8,12 +8,12 @@
 
 </div>
 
-The two Day 4 daily challenges.
+Both Day 4 daily challenges sit in this folder.
 
 ## Contents
 
-- [`SolveTheMatrix/`](SolveTheMatrix/) — reading a character grid by columns to find a hidden message
-- [`CoffeeShopMenuManager/`](CoffeeShopMenuManager/) — a console menu manager where each action is its own function, with 19 tests
+- [`SolveTheMatrix/`](SolveTheMatrix/): decodes `This is Matrix` from a messy grid of letters and symbols
+- [`CoffeeShopMenuManager/`](CoffeeShopMenuManager/): show, add, update and delete drinks from a menu dictionary, covered by 19 tests
 
 ---
 

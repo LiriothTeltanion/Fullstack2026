@@ -8,7 +8,7 @@
 
 </div>
 
-`handleData()` gets a mixed list of users, products and orders, uses type guards to find out what each item is and returns one message per item. Unknown items get a message instead of an error.
+`handleData()` takes a mixed list of users, products and orders, uses type guards to work out what each item is and writes one line about it. Unknown items get a line too, instead of an error.
 
 ## ▶️ How to run
 
@@ -19,7 +19,7 @@ npx tsc TypeGuardUnion.ts --module commonjs --types node --outDir ~/tmp-ts
 node ~/tmp-ts/TypeGuardUnion.js
 ```
 
-The demo uses `require.main === module`, so it needs CommonJS: running the `.ts` file straight with Node stops with `require is not defined in ES module scope`.
+The demo is wrapped in `if (require.main === module)`, so it needs CommonJS. Running the `.ts` file straight with Node fails with `require is not defined in ES module scope`.
 
 ```
 Hello Kevin, age 30.
@@ -32,16 +32,16 @@ Unknown item at index 3.
 
 | Function | What it does |
 |---|---|
-| `isUser(x)` / `isProduct(x)` / `isOrder(x)` | Type predicates that check the `type` field and the other fields' types |
-| `handleData(items)` | Loops over the list and builds a greeting, a price line or an order line |
+| `isUser(x)` / `isProduct(x)` / `isOrder(x)` | Type predicates: check the `type` field and that the other fields have the right `typeof` |
+| `handleData(items)` | Loops with an index and pushes a greeting, a price line or an order line |
 
-The three types share a `type` field (`"user"`, `"product"`, `"order"`), so `Mixed = User | Product | Order` is a discriminated union.
+All three types have a `type` field (`"user"`, `"product"`, `"order"`), which makes `Mixed = User | Product | Order` a discriminated union. The fourth demo item is `{ type: "mystery", foo: "bar" }`, and that is the one reported at index 3.
 
 ## 🧠 What I learned
 
-- A function that returns `x is User` narrows the type inside an `if`
-- A shared literal field makes union types easy to tell apart
-- Returning a message for unknown data is gentler than throwing
+- When a function returns `x is User`, TypeScript knows `item.name` exists inside that `if`
+- Typing the input as `Array<Mixed | unknown>` is honest about data that may not match
+- I used a plain `for` loop because I wanted the index in the "unknown" message
 
 ---
 

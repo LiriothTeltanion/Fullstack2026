@@ -8,7 +8,7 @@
 
 </div>
 
-A tiny script in [perfectnumber.py](perfectnumber.py) that prints `True` if a number is a perfect number, otherwise `False`. A perfect number equals the sum of its proper divisors: 6 is perfect (1 + 2 + 3 = 6), 10 is not (1 + 2 + 5 = 8).
+[perfectnumber.py](perfectnumber.py) prints `True` when a number is perfect and `False` when it isn't. Perfect means the number equals the sum of its divisors without itself: 6 works (1 + 2 + 3), 10 doesn't (1 + 2 + 5 = 8).
 
 ## ▶️ How to run
 
@@ -28,19 +28,20 @@ False
 
 ## 🎯 The challenge
 
-`is_perfect(n)`:
+How `is_perfect(n)` works:
 
-1. Returns `False` for 1 and anything smaller.
-2. Starts the total at 1, then checks divisors only up to `math.isqrt(n)`. Each divisor `i` also brings its partner `n // i`, and a square root is only counted once.
-3. Stops early if the total is already bigger than `n`.
+1. 1 and anything below it are `False` straight away.
+2. `total` starts at 1, because 1 divides every number above 1.
+3. The loop only goes from 2 to `math.isqrt(n)`. When `i` divides `n`, I add both `i` and `n // i`, unless they are the same number (a perfect square), so it isn't counted twice.
+4. If `total` gets bigger than `n` the function returns `False` early.
 
-Input that is not a whole number prints `False`.
+`main()` wraps `int(input(...))` in a `try`, so typing letters prints `False` instead of crashing.
 
 ## 🧠 What I learned
 
-- Divisors come in pairs, so checking up to the square root is enough
-- `math.isqrt()` gives an exact integer square root
-- An early exit saves work on numbers that are clearly not perfect
+- Divisors come in pairs around the square root, so I only loop up to `isqrt(n)`
+- The square case (`other != i`) is easy to miss and would make 4 look like it has divisors 1 + 2 + 2
+- Returning as soon as the total passes `n` skips a lot of work on big numbers
 
 ---
 

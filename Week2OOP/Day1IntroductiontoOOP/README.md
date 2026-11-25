@@ -8,14 +8,14 @@
 
 </div>
 
-My first day of OOP in Python: writing classes, creating objects from them and giving those objects their own data and methods.
+First contact with classes: I defined them, made objects from them and gave each object its own data and methods.
 
 ## Contents
 
 | Folder | What it is |
 |---|---|
-| [`Exercises/`](Exercises/) | XP (cats, dogs, a song printer, a zoo), plus the Gold and Ninja extras |
-| [`DailyChallenge/`](DailyChallenge/) | Old MacDonald's farm: a `Farm` class that counts animals and prints the farm |
+| [`Exercises/`](Exercises/) | XP (cats, dogs, a song, a zoo) plus the Gold and Ninja sets |
+| [`DailyChallenge/`](DailyChallenge/) | Old MacDonald's farm, a `Farm` class that counts and prints animals |
 
 ---
 

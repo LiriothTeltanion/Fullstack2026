@@ -8,11 +8,11 @@
 
 </div>
 
-The script for the Random Quote Generator. It uses `document`, so it runs in the browser through `../index.html`, not with Node.
+All the logic of the quote app lives in one file. It grabs page elements on load, so it runs from `../index.html` and not from Node.
 
 ## Contents
 
-- [`app.js`](app.js) — the quotes array, the helper functions and every button and form handler
+- [`app.js`](app.js): the `quotes` array, the render and count helpers, and the handlers for every button and both forms
 
 ---
 

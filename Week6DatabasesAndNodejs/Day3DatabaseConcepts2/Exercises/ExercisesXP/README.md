@@ -8,7 +8,7 @@
 
 </div>
 
-SQL answers for two `dvdrental` exercises: film languages, two new tables linked by foreign keys, and questions about rentals that are still out.
+`xp_dvdrental_relationships.sql` answers two `dvdrental` exercises. The first is about film languages and two new tables tied together with foreign keys; the second is a set of questions about rentals that haven't come back.
 
 ## ▶️ How to run
 
@@ -16,35 +16,35 @@ SQL answers for two `dvdrental` exercises: film languages, two new tables linked
 psql -d dvdrental -f xp_dvdrental_relationships.sql
 ```
 
-The script changes the database: it creates `new_film` (kept) and `customer_review` (dropped again in exercise 2) and sets the language of ACADEMY DINOSAUR to German, so a copy of `dvdrental` is the best place to run it.
+Careful: this script changes data. It creates `new_film` (which stays), creates `customer_review` (dropped again in exercise 2) and switches ACADEMY DINOSAUR to German. I'd run it on a copy of `dvdrental`.
 
 ## 🎯 The challenge
 
 **Exercise 1: languages and new tables**
 
-1. List all languages.
-2. Join every film to its language name.
-3. `LEFT JOIN` from `language`, so languages without films still appear.
-4. Create `new_film (id, name)` and add three films.
-5. Create `customer_review` with `film_id REFERENCES new_film(id) ON DELETE CASCADE`, a language foreign key and a `score` between 1 and 10, then add two reviews.
-6. Delete RIVER BOAT RIDDLE and check that its review is gone too.
+1. List the languages.
+2. Join each film with its language name.
+3. `LEFT JOIN` starting from `language`, so a language with no films still shows up (with empty film columns).
+4. Create `new_film (id, name)` and add SUMO SPIRIT, RIVER BOAT RIDDLE and DOCU HOUR.
+5. Create `customer_review`, where `film_id REFERENCES new_film(id) ON DELETE CASCADE`, plus a language foreign key and `score` limited to 1–10. Then add two reviews.
+6. Delete RIVER BOAT RIDDLE and select the reviews again: its review has disappeared too.
 
 **Exercise 2: more questions**
 
-1. Change the language of a film (ACADEMY DINOSAUR to German).
-2. List the foreign keys defined on `customer` from `pg_constraint`; a new customer must point at rows that already exist.
-3. Drop `customer_review`, since no other table depends on it.
-4. Count the rentals that are still out (`return_date IS NULL`).
+1. Change a film's language (ACADEMY DINOSAUR becomes German).
+2. Read the foreign keys of `customer` from `pg_constraint`. They mean a new customer has to point at a store and an address that already exist.
+3. Drop `customer_review`; nothing depends on it, so it goes without complaint.
+4. Count rentals with `return_date IS NULL`.
 5. The 30 outstanding films with the highest `replacement_cost`.
-6. Four searches for a friend: a sumo film with Penelope Monroe, a short R-rated documentary, a film Matthew Mahan paid more than 4.00 for and returned between 28 July and 1 August 2005, and a boat film he rented with a replacement cost of at least 25.
+6. Four searches for a friend: a sumo film with Penelope Monroe, a short R-rated documentary, a film Matthew Mahan paid more than 4.00 for and returned between 28 July and 1 August 2005, and a boat film he rented that costs at least 25 to replace.
 
 ## 🧠 What I learned
 
-- `LEFT JOIN` keeps every row of the left table, even without a match
-- `ON DELETE CASCADE` removes the child rows when the parent row is deleted
-- A `CHECK` constraint rejects bad values, like a score of 11
-- `pg_constraint` shows which foreign keys a table has
-- `IS NULL` (not `= NULL`) finds rentals that were never returned
+- Starting the `LEFT JOIN` from `language` is what keeps the languages that have no films
+- With `ON DELETE CASCADE` one `DELETE` on `new_film` also cleaned up `customer_review`
+- Inside an `INSERT` I can look up ids with small subqueries like `(SELECT id FROM new_film WHERE name = 'SUMO SPIRIT')`
+- For "returned by 1 August" I wrote `< DATE '2005-08-02'`, so times during 1 August are included
+- `return_date = NULL` never matches anything; it has to be `IS NULL`
 
 ---
 
