@@ -1,4 +1,4 @@
-# Day1 Introduction To Databases — Exercises XP Gold
+# 🥇 Exercises XP Gold
 
 <div align="center">
 
@@ -8,32 +8,35 @@
 
 </div>
 
-> Practice relational modeling, joins, constraints, CRUD operations, and PostgreSQL queries.
+Three more queries on the `students` table from XP Plus. Each one returns `first_name`, `last_name` and `birth_date`.
 
-## Learning goals
+## ▶️ How to run
 
-- Practice: SQL.
-- Validate normal inputs, edge cases, and failure states.
-- Be able to explain the solution without reading the code line-by-line.
+Run [XP Plus](../ExercisesXPPlus/) first so `public.students` exists in the `bootcamp` database, then:
 
-## How to run
-
-```text
-# Run exercisesxpgold.sql in PostgreSQL/pgAdmin against the required dataset
+```bash
+psql -d bootcamp -f exercisesxpgold.sql
 ```
 
-## Files
+[`exercisesxpgold.md`](exercisesxpgold.md) has the same steps for pgAdmin.
 
-- `exercisesxpgold.sql`
+## 🎯 The challenge
 
-## Verification checklist
+1. **First four students by last name**: `ORDER BY last_name, first_name LIMIT 4`, so the two Benichous come first, Lea before Marc.
+2. **Youngest student**: `ORDER BY birth_date DESC LIMIT 1` returns Yoan Cohen (2010-12-03).
+3. **Skip two, take three**: `ORDER BY id OFFSET 2 LIMIT 3` returns Lea Benichou, Amelia Dux and David Grez.
 
-- [ ] Main flow works
-- [ ] Invalid input is handled
-- [ ] Code is formatted
-- [ ] Tests or repeatable manual checks exist
-- [ ] README matches the current implementation
+## 🧠 What I learned
 
-## Next improvement
+- A second sort column breaks ties when two rows share a last name
+- The newest birth date belongs to the youngest person, so the order is `DESC`
+- `OFFSET` skips rows and `LIMIT` caps how many come back
+- Paging needs a stable order (here `id`), or the rows can change between runs
 
-Describe one concrete refactor, test, accessibility improvement, or product enhancement.
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 6 Day 1 - Introduction to Databases - Exercises XP Gold

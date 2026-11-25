@@ -1,4 +1,4 @@
-# Random Quote Generator (separate files)
+# 🎮 Mini Project - Random Quote Generator
 
 <div align="center">
 
@@ -8,42 +8,35 @@
 
 </div>
 
-Learn and practice:
-- Conditionals and the ternary operator
-- Loops and array methods
-- Arrow functions
-- Objects, DOM manipulation, and events
+A quote app in plain JavaScript: it shows a random quote (never the same one twice in a row), lets me like it, count its characters and words, add new quotes and filter them by author.
 
-## What you build
-A small app that:
-- Generates a random quote (never the same twice in a row)
-- Lets you add new quotes (automatic `id`, starts at 0)
-- Likes the current quote
-- Shows character and word counts for the current quote
-- Filters quotes by author with Previous/Next navigation
+## ▶️ How to run
 
-## Files
-```
-random-quote-generator/
-├─ index.html
-├─ css/
-│  └─ styles.css
-└─ js/
-   └─ app.js
-```
+Open `index.html` in a browser, or run `npm run dev` from the repository root and go to `http://localhost:8000/Week4AdvAsynchronousJavaScript/Day3HTTPAndFormMethodGETAndPOST/Exercises/RandomQuoteGenerator/`.
 
-## Run
-Open `index.html` in your browser.
+## 🎯 The challenge
 
-## UI
-- 🔁 **Generate Quote**: shows a random quote (not the same as the immediately previous one).
-- 👍 **Like**: increments the like count for the shown quote.
-- 🔡 **Chars (with spaces / no spaces)** and 🧮 **Word count**: display metrics for the current quote.
-- ➕ **Add a quote**: submit text and author to append to the list (id auto-increments).
-- 🔎 **Filter by author**: type a name (case-insensitive contains), then use ⏮️/⏭️ to navigate results. **Clear** resets the view.
+| Function | What it does |
+|---|---|
+| `randomIndex()` | Picks a random index that is different from the last one |
+| `render(idx)` | Shows the quote, the author and the like count |
+| `countChars(includeSpaces)` | Counts characters with or without spaces |
+| `countWords()` | Counts the words of the current quote |
+| `showFiltered(pos)` | Moves through the filtered quotes and wraps around at both ends |
+| `updateFilterStatus()` | Shows `Filtered by author: ... — 1 of N` and turns Previous/Next on or off |
 
-## Notes
-- Emojis are used for clarity; no hearts.
-- IDs are assigned as `maxId + 1` for robustness.
-- Random selection ignores any active filter; filtered results are navigated with Previous/Next.
-- All logic uses plain JavaScript and DOM APIs.
+A new quote gets the next `id` after the highest one. The author filter is case-insensitive and matches part of the name; **Clear** removes it.
+
+## 🧠 What I learned
+
+- A `do...while` loop is handy for "pick again until it is different"
+- Keeping indexes in a separate array makes filtering easy without copying the quotes
+- `(pos + length) % length` wraps an index around in both directions
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 4 Day 3 - HTTP and GET/POST Forms - Mini Project

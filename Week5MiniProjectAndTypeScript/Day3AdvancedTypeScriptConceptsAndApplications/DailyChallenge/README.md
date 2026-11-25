@@ -1,4 +1,4 @@
-# LibrarySystem — TypeScript Daily Challenge
+# 💪 Daily Challenge - Library System
 
 <div align="center">
 
@@ -8,20 +8,48 @@
 
 </div>
 
-Single-file solution implementing a simple library system using interfaces, classes, access modifiers, optional and readonly properties, and basic inheritance.
+A small library system in TypeScript: a `Book` interface, a `Library` class that stores books by ISBN and a `DigitalLibrary` subclass with a website and a list of titles.
 
-## Files
-- `LibrarySystem.ts` — all code in one file. Exports `Book`, `Library`, and `DigitalLibrary`. Includes an optional demo guarded so it won't run when imported by a grader.
+## ▶️ How to run
 
-## How to run locally
+From this folder:
+
 ```bash
-# with ts-node
-npx ts-node LibrarySystem.ts
-
-# or compile and run JS
-npx tsc LibrarySystem.ts
-node LibrarySystem.js
+npx tsc LibrarySystem.ts --module commonjs --outDir ~/tmp-ts
+node ~/tmp-ts/LibrarySystem.js
 ```
 
-## Submission note
-If your autograder evaluates every file in the folder, place **only** `LibrarySystem.ts` in the assignment directory to avoid false negatives on non-TS files.
+The demo block only runs as CommonJS (`require.main === module`), and inside this repository `.js` files are ES modules, so I compile it to a folder outside the repo first.
+
+```
+Title: Clean Code | Author: Robert C. Martin | ISBN: 9780132350884 | Year: 2008 | Genre: Software Engineering
+Title: The Pragmatic Programmer | Author: Andrew Hunt, David Thomas | ISBN: 9780201616224 | Year: 1999
+Title: You Don't Know JS Yet | Author: Kyle Simpson | ISBN: 9781098124045 | Year: 2020 | Genre: JavaScript
+Book not found.
+All book titles: [ 'Clean Code', 'The Pragmatic Programmer', "You Don't Know JS Yet" ]
+Digital Library website: https://library.example.com
+```
+
+## 🎯 The challenge
+
+| Part | What it does |
+|---|---|
+| `interface Book` | `title`, `author`, `isbn`, `publishedYear` and an optional `genre` |
+| `Library.addBook(book)` | Adds a book, or replaces the one with the same ISBN |
+| `Library.getBookDetails(isbn)` | Returns one formatted line, or `Book not found.` |
+| `Library.getAllBooks()` | `protected`, so only subclasses can read the private list |
+| `DigitalLibrary` | Adds a `readonly website` and `listBooks()`, which returns all titles |
+
+## 🧠 What I learned
+
+- A `private` array keeps the list safe from outside changes
+- `protected` lets a subclass read data without making it public
+- An optional property (`genre?`) needs a check before I use it
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 5 Day 3 - Advanced TypeScript Concepts and Applications - Daily Challenge

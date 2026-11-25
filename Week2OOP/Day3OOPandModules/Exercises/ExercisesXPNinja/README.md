@@ -1,4 +1,4 @@
-# Exercises XP Ninja — Dunder Methods 🧠🪄
+# 🥷 Exercises XP Ninja
 
 <div align="center">
 
@@ -8,29 +8,47 @@
 
 </div>
 
-Both Ninja exercises are in `exercisesxpninjadunder.py`.
+Two exercises on dunder methods in `exercisesxpninjadunder.py`: temperature classes that convert and compare, and a playful quantum particle.
 
-## Exercise 1 — Temperature
-- Canonical storage in Kelvin for a **single source of truth**.
-- Subclasses: `Celsius`, `Kelvin`, `Fahrenheit`.
-- Clean conversions and **dunder methods**:
-  - Ordering (`<, ==`) via Kelvin
-  - `__add__/__sub__` with numeric deltas (Kelvin)
-  - `t1 - t2` returns delta (Kelvin, float)
-  - `__str__/__repr__` give readable forms
-- Adding a new scale only needs a new subclass.
+## ▶️ How to run
 
-## Exercise 2 — Quantum Realm
-- `QuantumParticle(x, p, label=None)` with measurement methods:
-  - `position()` → int [1..10000]
-  - `momentum()` → float [0..1)
-  - `spin()` → ±1/2 (stored as ±0.5)
-- Every measurement triggers a disturbance of `(x, p)` and prints **"Quantum Interferences!!"**.
-- `entangle(other)` links two particles so a spin measurement sets opposite spins; prints **"Spooky Action at a Distance !!"**.
-- `__repr__` shows label, x, p, spin, and entanglement status.
-
-## Run
 ```bash
 python exercisesxpninjadunder.py
 ```
-The `__main__` block runs short demos for both exercises.
+
+```text
+>>> Temperature demo
+t_c: 25.00 °C | t_f: 77.00 °F | t_k: 298.15 K
+ordering: True
+delta add/sub: 35.00 °C 15.00 °C
+difference Kelvin: 10.0
+
+>>> Quantum demo
+Spooky Action at a Distance !!
+Particle p1 is now in quantum entanglement with Particle p2
+Quantum Interferences!!
+p1 spin: 0.5 p2 spin: -0.5
+...
+```
+
+The spin and the new `x` and `p` values are random, so they change on each run.
+
+## 🎯 The challenge
+
+1. **Temperature** - a base `Temperature` class stores only Kelvin; `Celsius`, `Kelvin` and `Fahrenheit` subclasses print in their own unit and convert with `.to(...)`. `@total_ordering` plus `__eq__` and `__lt__` give every comparison; adding or subtracting a number shifts the temperature, and `t1 - t2` returns the difference in Kelvin
+2. **Quantum realm** - a `QuantumParticle` whose `position()`, `momentum()` and `spin()` measurements shake up its state and print `Quantum Interferences!!`; `entangle(other)` links two particles so measuring one spin sets the opposite spin on the other
+
+## 🧠 What I learned
+
+- Storing one canonical unit avoids rounding errors when converting back and forth
+- `@total_ordering` writes `<=`, `>` and `>=` from just `__eq__` and `__lt__`
+- `self.__class__(...)` returns a new object of the same subclass after an operation
+- `__repr__` is worth writing early, because it makes debugging objects much easier
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 2 Day 3 - OOP and Modules - Exercises XP Ninja

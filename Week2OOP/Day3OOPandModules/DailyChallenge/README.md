@@ -1,4 +1,4 @@
-# Daily Challenge
+# 💪 Daily Challenges
 
 <div align="center">
 
@@ -8,20 +8,18 @@
 
 </div>
 
-Solve an independent daily challenge that reinforces the current lesson through focused problem solving.
+The Day 3 daily challenges, plus the Gold one.
 
 ## Contents
 
-- [`Circle/`](Circle/)
-- [`Translator/`](Translator/)
-- [`UserInfo/`](UserInfo/)
+- [`Circle/`](Circle/) — a `Circle` with radius and diameter properties that can be added, compared and sorted
+- [`Translator/`](Translator/) — French to English with `googletrans`
+- [`UserInfo/`](UserInfo/) — Gold: read `Name,Age,Score` records and sort them with a lambda
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python Week2OOP/Day3OOPandModules/DailyChallenge/Circle/circle.py
-python Week2OOP/Day3OOPandModules/DailyChallenge/Translator/dailychallengetranslator.py
-python Week2OOP/Day3OOPandModules/DailyChallenge/UserInfo/dailychallengegolduserinfo.py
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 2 Day 3 - OOP and Modules - Daily Challenges

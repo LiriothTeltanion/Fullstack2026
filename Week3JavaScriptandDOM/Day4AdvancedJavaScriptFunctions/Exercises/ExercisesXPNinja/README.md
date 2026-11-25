@@ -1,4 +1,4 @@
-# Exercises XP Ninja — Advanced Functions: Merge Words (Currying)
+# 🥷 Exercises XP Ninja
 
 <div align="center">
 
@@ -8,26 +8,46 @@
 
 </div>
 
-**Goal**  
-Create a function such that `mergeWords('Hello')()` returns `"Hello"`, and chaining more calls collects words into a sentence, e.g.  
-`mergeWords('There')('is')('no')('spoon.')()` → `"There is no spoon."`
+A curried `mergeWords` function: each call adds a word, and a call with no argument returns the whole sentence.
 
-## Implementation (curried)
-- Repeatedly call the returned function with a word.
-- Calling it with **no argument** returns the accumulated sentence.
+## ▶️ How to run
 
-## Files
-- `index.js` — implementation + small console demo.
+`index.js` uses `module.exports` and `require.main`, but the repo root `package.json` has `"type": "module"`, so `node index.js` stops with `module is not defined`. Run a `.cjs` copy instead:
 
-## Run
-```bash
-node index.js
+```powershell
+Copy-Item index.js $env:TEMP\merge.cjs; node $env:TEMP\merge.cjs
 ```
 
-## Example Output
+```bash
+cp index.js /tmp/merge.cjs && node /tmp/merge.cjs
+```
+
 ```
 Hello
 There is no spoon.
 
 one two three
 ```
+
+The empty line is `mergeWords()()`, which returns an empty string.
+
+## 🎯 The challenge
+
+- `mergeWords(first)` starts an accumulator `acc` with the first word.
+- It returns `chain(next)`: with a word, it adds it to `acc` with one space and returns `chain` again; with no argument, it returns `acc`.
+- So `mergeWords('There')('is')('no')('spoon.')()` gives `There is no spoon.`
+
+## 🧠 What I learned
+
+- A function can return itself to allow endless chaining
+- The closure keeps `acc` alive between calls
+- Checking `next === undefined` is how the chain knows it is time to stop
+- `module.exports` only works when Node reads the file as CommonJS
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Day 4 - Advanced JavaScript Functions - Exercises XP Ninja

@@ -1,4 +1,4 @@
-# Daily Challenge — Text Analysis 📚🧠
+# 💪 Daily Challenge - Text Analysis
 
 <div align="center">
 
@@ -8,30 +8,51 @@
 
 </div>
 
-My solution is in `dailychallengetextanalysis.py`: a `Text` class for analysis and a `TextModification` subclass for cleaning text.
+A `Text` class that analyzes a piece of text, and a `TextModification` subclass that cleans it, both in `dailychallengetextanalysis.py`.
 
-## Classes
-- **Text**
-  - `word_frequency(word)` → case-insensitive count or `None` if not found.
-  - `most_common_word()` → most frequent token.
-  - `unique_words()` → sorted list of unique tokens.
-  - `from_file(path)` → class method to read text from a file.
-- **TextModification (inherits Text)**
-  - `remove_punctuation()` → strips ASCII punctuation via `str.translate` + `string.punctuation`.
-  - `remove_stop_words(stop_words=None)` → removes common English stop words; pass your own iterable to customize.
-  - `remove_special_characters(keep_basic_punct=False)` → regex scrub; optional basic punctuation retention.
+## ▶️ How to run
 
-## Tokenization
-- Uses a regex `[A-Za-z0-9']+` to keep words like *don't* and *O'Neill* (lowercased for analysis).
-
-## Run
 ```bash
 python dailychallengetextanalysis.py
 ```
-The `__main__` block demonstrates each method. Replace `sample` with your own text, or load from a file:
-```python
-from dailychallengetextanalysis import TextModification
-txt = TextModification.from_file("novel.txt")
-clean = txt.remove_punctuation()
-print(txt.most_common_word())
+
+```text
+=== Demo: Text ===
+word_frequency('hello') -> 3
+most_common_word() -> hello
+unique_words() -> ['a', 'again', 'hello', 'is', "isn't", 'it', 'lovely', 'test', 'this', 'tiny']
+
+=== Demo: TextModification ===
+remove_punctuation() -> Hello hello This is a tiny test Isnt it lovely Hello again
+remove_stop_words() -> hello hello tiny test isn't lovely hello
+...
 ```
+
+## 🎯 The challenge
+
+| Method | What it does |
+|---|---|
+| `Text.word_frequency(word)` | Case-insensitive count of a word, or `None` if it is not there |
+| `Text.most_common_word()` | The most frequent word, using `Counter` |
+| `Text.unique_words()` | A sorted list of the different words |
+| `Text.from_file(path)` | Class method that builds a `Text` from a file |
+| `TextModification.remove_punctuation()` | Strips ASCII punctuation with `str.translate` |
+| `TextModification.remove_stop_words()` | Drops common English words like "the" and "is"; a custom list can be passed in |
+| `TextModification.remove_special_characters()` | Regex cleanup; `keep_basic_punct=True` keeps `.,!?;:'-` |
+
+Words are found with the regex `[A-Za-z0-9']+`, so "isn't" stays one word.
+
+## 🧠 What I learned
+
+- A `@classmethod` is a clean way to give a class a second constructor, like `from_file()`
+- A subclass can add new behavior while still using the parent's private helper `_tokenize()`
+- `collections.Counter` finds the most common item in one line
+- Lowercasing before counting makes the analysis case-insensitive
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 2 Day 4 - File I/O, JSON and APIs - Daily Challenge

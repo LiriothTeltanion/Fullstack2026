@@ -1,4 +1,4 @@
-# 🏋️ Exercises XP - Functions Fundamentals
+# 🥉 Exercises XP
 
 <div align="center">
 
@@ -8,7 +8,7 @@
 
 </div>
 
-Seven short exercises where I practiced writing functions: parameters, default values, the `random` module, changing a list inside a function, and returning values instead of printing them.
+Seven short exercises in [exercisesxp.py](exercisesxp.py) where I practiced writing functions: parameters, default values, the `random` module, changing a list inside a function, and returning values instead of printing them.
 
 ## ▶️ How to run
 
@@ -16,29 +16,33 @@ Seven short exercises where I practiced writing functions: parameters, default v
 python exercisesxp.py
 ```
 
-`main()` runs all seven exercises in order. Only the standard library is used (`random`). I used Python 3.10+.
+`main()` runs all seven exercises in order. Only the standard library is used (`random`), so the number guess and the temperature change every run:
 
-## 📋 The exercises
-
-| # | Function | What it practices |
-|---|----------|-------------------|
-| 1 | `display_message()` | Defining and calling a function |
-| 2 | `favorite_book(title)` | One parameter and an f-string |
-| 3 | `describe_city(city, country="Unknown")` | A default parameter |
-| 4 | `compare_number(n)` | `random.randint(1, 100)` and an `if`/`else` |
-| 5 | `make_shirt(size="large", text="I love Python")` | Two defaults, positional and keyword arguments |
-| 6 | `show_magicians()` / `make_great()` | Changing a list in place |
-| 7 | `get_random_temp()` / `get_temp_advice()` / `report_weather()` | Returning values and combining functions |
-
-Some calls from `main()`:
-
-```python
-describe_city("Reykjavik", "Iceland")    # Reykjavik is in Iceland.
-describe_city("Paris")                   # Paris is in Unknown.
-make_shirt(size="small", text="Hello!")  # keyword arguments
+```
+I am learning about functions in Python.
+One of my favorite books is Alice in Wonderland.
+Reykjavik is in Iceland.
+Paris is in Unknown.
+Fail! Your number: 50, Random number: 32
+The size of the shirt is large and the text is I love Python.
+...
+Harry Houdini the Great
+...
+🌡️ The temperature right now is -4 degrees Celsius.
+🥶 Brrr, that's freezing! Wear some extra layers today.
 ```
 
-For exercise 6, `main()` passes a copy (`magician_names.copy()`) to `make_great()`, so the original list is not changed. For exercise 7, the temperature thresholds are constants at the top of the file (`TEMP_FREEZING`, `TEMP_CHILLY`, `TEMP_NICE`, `TEMP_WARM`), and `get_temp_advice()` returns a message for each range, from "freezing" below 0 to "really hot" from 33 up.
+## 🎯 The challenge
+
+| Function | What it does |
+|---|---|
+| `display_message()` | Defining and calling a function. |
+| `favorite_book(title)` | One parameter and an f-string. |
+| `describe_city(city, country="Unknown")` | A default parameter. |
+| `compare_number(n)` | Compares `n` with `random.randint(1, 100)`. |
+| `make_shirt(size="large", text="I love Python")` | Two defaults, called with positional and keyword arguments. |
+| `show_magicians()` / `make_great()` | Changes a list in place. `main()` passes a copy (`magician_names.copy()`), so the original list stays the same. |
+| `get_random_temp()` / `get_temp_advice()` / `report_weather()` | Returns values and combines functions. The thresholds are constants at the top of the file (`TEMP_FREEZING`, `TEMP_CHILLY`, `TEMP_NICE`, `TEMP_WARM`), from "freezing" below 0 to "really hot" from 33 up. |
 
 ## 🧠 What I learned
 

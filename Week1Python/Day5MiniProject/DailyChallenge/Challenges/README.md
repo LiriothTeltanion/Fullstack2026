@@ -1,4 +1,4 @@
-# 📝 Daily Challenge - String Sorting & Analysis
+# 💪 Daily Challenge - String Sorting and Longest Word
 
 <div align="center">
 
@@ -8,9 +8,9 @@
 
 </div>
 
-Two string challenges from the Week 1 Day 5 daily challenge, both in `challenges.py`: sort comma-separated words alphabetically, and find the longest word in a sentence.
+Two string challenges in [challenges.py](challenges.py): sort comma-separated words alphabetically, and find the longest word in a sentence.
 
-## How to run
+## ▶️ How to run
 
 ```bash
 python challenges.py
@@ -23,38 +23,21 @@ Enter comma-separated words: banana,apple,cherry,date
 apple,banana,cherry,date
 ```
 
-## Challenge 1: Sorting
+## 🎯 The challenge
 
-I split on commas, strip the spaces around each word and drop empty entries, so `"  apple  ,  banana  "` works and an empty input prints a "No valid words" message.
-
-```python
-def sort_comma_separated(words: str) -> List[str]:
-    cleaned = [part.strip() for part in words.split(",") if part.strip()]
-    return sorted(cleaned)
-```
-
-## Challenge 2: Longest word
-
-The rules:
-
-1. Return the word as it appears in the sentence, punctuation included (`Margaret's`, `forever.`).
-2. Count only letters, so `Wow!!!` has 3 letters, not 6.
-3. On a tie, keep the first word.
-4. If there are no letters at all, return an empty string.
+| Function | What it does |
+|---|---|
+| `sort_comma_separated(words)` | Splits on commas, strips the spaces around each word and drops empty entries, so `"  apple  ,  banana  "` works. An empty input prints a "No valid words" message. |
+| `longest_word(sentence)` | Returns the longest word as it appears in the sentence, punctuation included (`Margaret's`, `forever.`). Only letters count, so `Wow!!!` has 3 letters, not 6. On a tie the first word wins, and a sentence with no letters gives an empty string. |
 
 ```python
-def longest_word(sentence: str) -> str:
-    words = sentence.split()
-    best = ""
-    longest_length = 0
-    for w in words:
-        cleaned = re.sub(r"[^A-Za-z]", "", w)
-        if not cleaned:
-            continue
-        if len(cleaned) > longest_length:
-            best = w
-            longest_length = len(cleaned)
-    return best
+for w in words:
+    cleaned = re.sub(r"[^A-Za-z]", "", w)
+    if not cleaned:
+        continue
+    if len(cleaned) > longest_length:
+        best = w
+        longest_length = len(cleaned)
 ```
 
 | Sentence | Result |
@@ -64,14 +47,16 @@ def longest_word(sentence: str) -> str:
 | `Forgetfulness is by all means powerless!` | `Forgetfulness` |
 | `!!! 123 ...` | `""` |
 
-## What I learned
+## 🧠 What I learned
 
 - Parsing input with `split()`, `strip()` and a list comprehension
 - Using `re.sub()` to count only the letters while keeping the original word
 - Tracking the best candidate in one loop, and checking edge cases with `assert`
 
+---
+
 ## 👤 Author
 
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
-Week 1 Day 5 - Daily Challenge
+Week 1 Day 5 - Mini-projects - Daily Challenge

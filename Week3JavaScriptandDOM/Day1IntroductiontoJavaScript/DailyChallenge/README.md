@@ -1,4 +1,4 @@
-# Daily Challenge
+# 💪 Daily Challenges
 
 <div align="center">
 
@@ -8,19 +8,18 @@
 
 </div>
 
-Create interactive browser experiences with JavaScript, DOM events, accessibility, and responsive behavior.
+The daily challenges of Day 1.
 
 ## Contents
 
-- [`BubbleSort/`](BubbleSort/)
-- [`DailyChallengeNotBad/`](DailyChallengeNotBad/)
-- [`DailyChallengeStars/`](DailyChallengeStars/)
+- [`DailyChallengeNotBad/`](DailyChallengeNotBad/) — replace `not ... bad` with `good`
+- [`DailyChallengeStars/`](DailyChallengeStars/) — a star triangle with one loop and with two
+- [`BubbleSort/`](BubbleSort/) — gold challenge: `join()` and a descending Bubble Sort
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python -m http.server 8000
-node Week3JavaScriptandDOM/Day1IntroductiontoJavaScript/DailyChallenge/DailyChallengeNotBad/script.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Day 1 - Introduction to JavaScript - Daily Challenges

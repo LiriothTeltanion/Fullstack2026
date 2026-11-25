@@ -1,4 +1,4 @@
-# Exercises XP Gold — DOM & Forms
+# 🥇 Exercises XP Gold
 
 <div align="center">
 
@@ -8,21 +8,31 @@
 
 </div>
 
-**Last Updated:** October 7th, 2025
+Three small form exercises. The HTML only has `<div id="root"></div>`; JavaScript builds every section.
 
-## What we will learn
-- Working with the DOM 🧩
-- Event Handlers 🖱️
-- Forms 📝
+## ▶️ How to run
 
-## Files
-- `index.html` — contains a single `<div id="root"></div>`. All UI is created from JS. ✨
-- `index.js` — implementations for the three exercises.
+Open `index.html` in a browser (or use `npm run dev` from the repo root).
 
-## Run
-Open `index.html` in a browser.
+## 🎯 The challenge
 
-## Exercises
-1) Select a kind of Music 🎵 — shows the selected value; adds `Classic` and selects it by default.
-2) Delete colors 🎨 — button calls `removecolor()` to remove the selected color.
-3) Shopping list 🛒 — `shoppingList` array; `addItem()` and `clearAll()` buttons; items render in a list.
+1. **Select a kind of Music** – a `<select>` with Rock and Blues; the script adds `Classic`, selects it by default and shows the chosen value on every `change`.
+2. **Delete colors** – the **Select and Remove** button calls `removecolor()`, which removes the selected color and prints `Removed: Red ✅` (or `List is now empty.`).
+3. **Shopping list** – `addItem()` pushes the typed item into the `shoppingList` array (the Enter key works too) and `clearAll()` empties it; `render()` redraws the `<ul>` and the item count.
+
+A small `el(tag, props, ...children)` helper creates each element, sets its text, class, attributes and `on...` listeners in one call.
+
+## 🧠 What I learned
+
+- A tiny helper function saves a lot of repeated `createElement` code
+- `select.selectedIndex` and `select.remove(index)` edit the options of a list
+- Keeping the data in an array and redrawing from it keeps the list in sync
+- Functions put on `window` can still be called from the console or from HTML
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Day 3 - DOM Events - Exercises XP Gold

@@ -1,4 +1,4 @@
-# 📈 Python Practice — Student Grade Summary & Sales Data Analysis
+# ➕ Exercises XP Plus
 
 <div align="center">
 
@@ -8,7 +8,7 @@
 
 </div>
 
-Two extra exercises from Day 3: grade summaries with letter grades, and some basic analysis over a list of sales transactions. Everything uses plain dictionaries and lists, no external packages.
+Two extra Day 3 exercises in [exercisesxpplus.py](exercisesxpplus.py): grade summaries with letter grades, and some basic analysis over a list of sales transactions. Everything uses plain dictionaries and lists, no external packages.
 
 ## ▶️ How to run
 
@@ -16,37 +16,33 @@ Two extra exercises from Day 3: grade summaries with letter grades, and some bas
 python exercisesxpplus.py
 ```
 
-I used Python 3.10+.
+Shortened output:
 
-## 📚 Exercise 1 — Student Grade Summary
-
-For each student I compute the average and a letter grade, then the class average.
-
-- `avg >= 90` → A, `>= 80` → B, `>= 70` → C, `>= 60` → D, otherwise F
-- The thresholds live in `GRADE_THRESHOLDS` and `letter_grade()` walks through them.
-- `calculate_student_grades()` returns the averages, the letters and the class average. A student with no scores gets `0.0` and `"N/A"`, so there is no division by zero.
-
-```python
-report = calculate_student_grades({"Alice": [88, 92, 100], "Bob": [75, 78, 80]})
-print(round(report.class_average, 2))
-print(report.letter_grades)  # {'Alice': 'A', 'Bob': 'C'}
+```
+class average: 84.87
+Alice - 93.33 A
+Bob - 77.67 C
+...
+product totals: {'Smartphone': 2150.0, 'Laptop': 2200.0, 'Headphones': 800.0}
+customer totals: {1: 1800.0, 2: 2200.0, 3: 1150.0}
+...
+loyal customers: [1, 2, 3]
+most popular: ['Headphones']
 ```
 
-## 🛒 Exercise 2 — Sales Data Analysis
+## 🎯 The challenge
 
-Each transaction is a dict with `customer_id`, `product`, `price`, `quantity` and `date`. `analyse_sales_data()` does five things:
+| Function | What it does |
+|---|---|
+| `letter_grade(score)` | Walks through `GRADE_THRESHOLDS`: `>= 90` → A, `>= 80` → B, `>= 70` → C, `>= 60` → D, otherwise F. |
+| `calculate_student_grades(grades)` | Returns each student's average and letter, plus the class average. A student with no scores gets `0.0` and `"N/A"`, so there is no division by zero. |
+| `analyse_sales_data(transactions)` | Adds `total_price = price * quantity`, sums totals per product and per customer, keeps transactions above 500 sorted from highest to lowest, finds loyal customers (more than one purchase), averages each product's transactions and finds the most popular product by quantity. It returns a list for the most popular product, so ties are kept. |
 
-1. Adds `total_price = price * quantity` and sums totals per product and per customer.
-2. Keeps transactions with `total_price > 500`, sorted from highest to lowest.
-3. Finds loyal customers (more than one purchase).
-4. Computes the average transaction value per product.
-5. Finds the most popular product by quantity sold. It returns a list, so ties are kept.
+The `.get(key, 0)` pattern is what I used for every counter:
 
 ```python
 product_totals[record["product"]] = product_totals.get(record["product"], 0.0) + total_price
 ```
-
-The `.get(key, 0)` pattern is what I used for every counter here.
 
 ## 🧠 What I learned
 
@@ -54,12 +50,10 @@ The `.get(key, 0)` pattern is what I used for every counter here.
 - Sorting a list of dicts with `key=lambda ...` and `reverse=True`
 - Returning a list when there can be a tie instead of picking one value
 
-Next time I'd like to try `collections.Counter` for the counting parts.
-
 ---
 
 ## 👤 Author
 
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
-Week 1 Day 3 - Exercises XP+
+Week 1 Day 3 - Dictionaries - Exercises XP Plus

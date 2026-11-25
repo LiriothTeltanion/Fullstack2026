@@ -1,4 +1,4 @@
-# Union Type Validator
+# 💪 Daily Challenge - Union Type Validator
 
 <div align="center">
 
@@ -8,62 +8,57 @@
 
 </div>
 
-For this TypeScript daily challenge I wrote `validateUnionType(value, allowedTypes)`. It takes a value and an array of type names as strings, and returns `true` if the value's `typeof` is one of them, `false` otherwise.
+`validateUnionType(value, allowedTypes)` takes a value and a list of type names and returns `true` if the value's `typeof` is one of them, `false` otherwise.
 
-## Files
+## ▶️ How to run
 
-```
-UnionTypeValidator/
-├── src/index.ts      # Function, 10 test cases and a form example
-├── package.json
-└── tsconfig.json     # Compiles to dist/ (git-ignored)
-```
-
-## How to run
-
-You need Node.js and npm. From this folder:
+From this folder (it has its own `package.json`):
 
 ```bash
 npm install     # typescript and @types/node
-npm start       # compile with tsc, then run dist/index.js
+npm start       # compiles to dist/ (git-ignored) and runs dist/index.js
 ```
 
-`npm run build` only compiles, and `npm run dev` recompiles on every change. `npm test` does the same as `npm start`.
+`npm run build` only compiles and `npm run dev` recompiles on every change. To type-check it from the repository root:
 
-## The function
+```bash
+npm run typecheck:anchor
+```
+
+```
+📝 Test Case 1: String Validation
+Value: "Alice"
+Type: string
+Allowed Types: ["string", "number"]
+✅ Is Valid: true
+```
+
+## 🎯 The challenge
 
 ```typescript
 function validateUnionType(value: any, allowedTypes: string[]): boolean {
   const valueType = typeof value;
-
   for (const allowedType of allowedTypes) {
-    if (valueType === allowedType) {
-      return true;
-    }
+    if (valueType === allowedType) return true;
   }
-
   return false;
 }
 ```
 
-I also wrote a shorter version, `validateUnionTypeAlt`, that just returns `allowedTypes.includes(typeof value)`.
+`validateUnionTypeAlt` does the same with `allowedTypes.includes(typeof value)`.
 
-```typescript
-const userId: string | number = "USR123";
-validateUnionType(userId, ["string", "number"]); // true
+`src/index.ts` runs ten cases and prints the value, its type, the allowed types and the result: string, number, boolean (expected to fail), object, array, function, undefined, a `string | number` variable, symbol (expected to fail) and bigint. A form example then checks `username`, `age`, `isSubscribed`, `userId` and `invalidField` (which is `null`) and prints VALID or INVALID for each.
 
-const isActive: boolean = true;
-validateUnionType(isActive, ["string", "number"]); // false
-```
+## 🧠 What I learned
 
-## Test cases
+- `typeof` works at runtime, while union types like `string | number` only exist at compile time
+- `typeof []` and `typeof null` are both `"object"`, so I need `Array.isArray()` or a custom guard to tell them apart
+- Typing parameters and return values, and looping with `for...of`
 
-`src/index.ts` runs 10 cases and prints each value, its type, the allowed types and the result: string, number, boolean (expected fail), object, array, function, undefined, a `string | number` variable, symbol (expected fail) and bigint. At the end there's a small form validation example that checks a list of fields like `username`, `age` and `isSubscribed` and prints valid or invalid for each one.
+---
 
-## What I learned
+## 👤 Author
 
-- `typeof` checks types at runtime, while union types like `string | number` only exist at compile time.
-- `typeof []` and `typeof null` both return `"object"`, so `typeof` can't tell arrays, null and objects apart. For that you need `Array.isArray()`, `instanceof` or custom type guards.
-- Typing function parameters and return values, and looping with `for...of`.
-
-Useful docs: [TypeScript union types](https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html) and [MDN typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof).
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 5 Day 2 - TypeScript Fundamentals and Key Concepts - Daily Challenge

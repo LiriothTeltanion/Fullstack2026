@@ -8,19 +8,19 @@
 
 </div>
 
-Build resilient asynchronous flows with HTTP requests, loading states, validation, and error handling.
+Day 4 of Week 4: creating promises, resolving and rejecting them, and chaining them with `.then()` and `.catch()`.
 
 ## Contents
 
-- [`DailyChallenge/`](DailyChallenge/)
-- [`Exercises/`](Exercises/)
+| Folder | What it is |
+|---|---|
+| [`Exercises/`](Exercises/) | Exercises XP: three promise exercises |
+| [`DailyChallenge/`](DailyChallenge/) | Play With Words: chained promises and a Morse translator |
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-node Week4AdvAsynchronousJavaScript/Day4AsynchronousJavaScript/DailyChallenge/PlayWithWords/daily_promises_morse.js
-python -m http.server 8000
-node Week4AdvAsynchronousJavaScript/Day4AsynchronousJavaScript/Exercises/ExercisesXP/promises.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 4 Day 4 - Asynchronous JavaScript

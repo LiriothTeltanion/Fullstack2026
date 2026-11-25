@@ -1,4 +1,4 @@
-# Pokédex App
+# 🎮 Mini Project - Pokédex
 
 <div align="center">
 
@@ -8,42 +8,40 @@
 
 </div>
 
-A Pokédex I built with the [PokeAPI](https://pokeapi.co/). The page looks like a red Pokédex device: a screen for the official artwork, a tan info panel, a D-pad and a green button. You can get a random Pokémon or move through them one by one.
+A Pokédex built with [PokeAPI](https://pokeapi.co/). The page looks like a red Pokédex device: a screen for the official artwork, an info panel, a D-pad and a green button.
 
-## How to run
+## ▶️ How to run
 
-No install needed. Open `index.html` in a modern browser. The HTML, CSS and JavaScript are all inside that file.
+Open `index.html` in a modern browser; the HTML, CSS and JavaScript are all in that file. You can also run `npm run dev` from the repository root and go to `http://localhost:8000/Week5MiniProjectAndTypeScript/Day1MiniProject/Exercises/Pokedex/`.
 
-- **Green button:** random Pokémon (1 to 1010)
-- **D-pad left / right:** previous or next Pokémon. It wraps around, so after #1010 comes #1.
-- The info panel shows name, number, height (m), weight (kg) and the types as colored badges.
+- **Green button:** a random Pokémon from 1 to 1010
+- **D-pad left / right:** previous or next Pokémon; it wraps around, so after #1010 comes #1
+- The info panel shows name, number, height (m), weight (kg) and the types as colored badges
 
-## How it works
+## 🎯 The challenge
 
-Each Pokémon comes from `https://pokeapi.co/api/v2/pokemon/{id}`:
+| Function | What it does |
+|---|---|
+| `fetchPokemon(id)` | Fetches `https://pokeapi.co/api/v2/pokemon/{id}` and returns the JSON |
+| `getRandomPokemon()` / `getPreviousPokemon()` / `getNextPokemon()` | Choose the ID, fetch it and update the device |
+| `displayPokemonImage()` / `displayPokemonInfo()` | Draw the artwork and the info panel |
+| `disableButtons()` / `enableButtons()` | Block the controls during a request |
+| `showLoading()` / `showError()` | Spinner, or "Oh no! That Pokemon isn't available..." |
 
-```javascript
-async function fetchPokemon(pokemonId) {
-    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`);
-    const data = await response.json();
-    return data;
-}
-```
+`currentPokemonId` remembers the current Pokémon between clicks, and `MAX_POKEMON` is 1010.
 
-- `currentPokemonId` keeps track of the current Pokémon between clicks, so previous/next work. `MAX_POKEMON` is 1010.
-- `getRandomPokemon()`, `getPreviousPokemon()` and `getNextPokemon()` call `fetchPokemon()`, then `displayPokemonImage()` and `displayPokemonInfo()` update the device.
-- `disableButtons()` / `enableButtons()` block the controls during a request so clicks can't overlap.
-- `showLoading()` shows a spinner. On network errors or bad data, `showError()` shows "Oh no! That Pokemon isn't available...".
-- On small screens the layout stacks, with the info panel on top.
+## 🧠 What I learned
 
-## What I learned
+- Fetching JSON with async/await and handling loading and error states
+- Keeping a small piece of state to drive previous/next navigation
+- Building a detailed device look with only CSS (gradients, flexbox and grid)
 
-- Fetching JSON with async/await and handling the loading and error states
-- Keeping a small piece of global state to drive navigation
-- Building a detailed UI with only CSS (gradients, animations, flexbox and grid)
+Pokémon data comes from PokeAPI. Pokémon and Pokédex are trademarks of Nintendo/Game Freak.
 
-Ideas for later: search by name, abilities and moves, evolution chains.
+---
 
-## Credits
+## 👤 Author
 
-Pokémon data comes from [PokeAPI](https://pokeapi.co/). Pokémon and Pokédex are trademarks of Nintendo/Game Freak.
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 5 Day 1 - Mini-projects - Mini Project

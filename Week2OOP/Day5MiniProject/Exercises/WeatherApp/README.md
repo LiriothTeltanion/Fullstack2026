@@ -1,4 +1,4 @@
-# Mini Project — Weather App 🌦️
+# 🎮 Mini Project - Weather App
 
 <div align="center">
 
@@ -8,58 +8,46 @@
 
 </div>
 
-Lowercase filenames (no underscores) and emoji-rich comments.  
-Modules:
-- `weatherapp.py` — CLI helpers for current weather, wind, sunrise/sunset, city-ID lookup, 5-day/3h forecasts, and Air Pollution.
-- `weathergui.py` — XP Ninja BONUS: Matplotlib bar chart showing the **3-day humidity** forecast.
+A weather app built on the OpenWeatherMap API with the PyOWM library: current weather, city IDs, forecasts and air quality in the terminal, plus a bonus humidity chart.
 
-## Setup
+## ▶️ How to run
+
+You need your own OpenWeatherMap key in the `OWM_API_KEY` environment variable:
+
 ```bash
-python -m venv .venv && source .venv/bin/activate  # or .venv\Scripts\activate on Windows
 pip install pyowm matplotlib pytz
-export OWM_API_KEY="YOUR_OPENWEATHERMAP_KEY"        # Power up the SDK 🔑
-```
-
-## Tasks covered
-
-### Paris (current)
-Run a quick demo that prints current Paris weather, wind, and sunrise/sunset:
-```bash
+export OWM_API_KEY="your-key"     # Windows PowerShell: $env:OWM_API_KEY="your-key"
 python weatherapp.py
-```
-
-### Interactive by place + city ID
-The same script then asks for a place (e.g., `Los Angeles,US`), prints the current weather,
-resolves the **city ID**, re-queries by ID, and shows **Air Quality**:
-- Geocoding to city ID: `find_city_id()`
-- Current weather by name: `current_weather_at_place()`
-- Current weather by ID: `current_weather_at_id()`
-- Air pollution: `air_quality_by_place()`
-
-### Forecasts
-Use PyOWM Forecasters (5-day / 3h):
-```python
-from weatherapp import make_owm, forecast_at_place, forecast_at_id, forecast_at_coords
-owm = make_owm()
-fc1 = forecast_at_place(owm, "Paris,FR", "3h")
-fc2 = forecast_at_id(owm, 2988507, "3h")        # city ID for Paris
-fc3 = forecast_at_coords(owm, 48.8566, 2.3522, "3h")
-```
-Each returns a **Forecaster** object; iterate over `fcX.forecast.weathers` for entries.
-
-### XP Ninja BONUS — 3-day humidity GUI
-```bash
 python weathergui.py
 ```
-- Uses `matplotlib` to draw a bar chart (Tkinter window).
-- Uses `pytz`/`datetime` for date labels.
-- Functions implemented per brief:
-  - `init_plot(ax, city_label)`
-  - `plot_temperatures(ax, labels, humidities)`
-  - `write_humidity_on_bar_chart(ax, bars, humidities)`
 
-> Tip: If you know your city's timezone (e.g., `Europe/Paris`), pass it to `show_humidity_chart()` for precise grouping.
+`weatherapp.py` first prints the weather in Paris, then asks for a place like `Los Angeles,US`. `weathergui.py` asks for a city and opens a bar chart window.
+
+## 🎯 The challenge
+
+- [`weatherapp.py`](weatherapp.py) - terminal helpers:
+
+  | Function | What it does |
+  |---|---|
+  | `current_weather_at_place(owm, place)` | Status, temperature in °C, wind, sunrise and sunset for `City,CC` |
+  | `find_city_id(owm, query)` / `current_weather_at_id(owm, id)` | Finds a city ID with geocoding, then asks for the weather by ID |
+  | `forecast_at_place`, `forecast_at_id`, `forecast_at_coords` | 5-day forecasts in 3-hour steps |
+  | `air_quality_by_place(owm, place)` | The air quality index (1 Good to 5 Very Poor) and pollutant levels |
+
+  The interactive part also prints the next five forecast entries.
+- [`weathergui.py`](weathergui.py) - the Ninja bonus: it averages the forecast humidity per day and draws a Matplotlib bar chart for the next 3 days, with the value written on each bar (`init_plot`, `plot_temperatures`, `write_humidity_on_bar_chart`)
+
+## 🧠 What I learned
+
+- A library like PyOWM wraps the raw API calls in readable objects and methods
+- API keys belong in environment variables, not in the code
+- Times from an API come in UTC, so I convert them before showing or grouping by day
+- Matplotlib only needs a few calls to turn a list of numbers into a labeled chart
 
 ---
 
-Happy hacking & stay curious. ☀️🌧️🌬️
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 2 Day 5 - Mini-projects - Mini Project

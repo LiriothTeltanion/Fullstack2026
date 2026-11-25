@@ -8,18 +8,19 @@
 
 </div>
 
-Create interactive browser experiences with JavaScript, DOM events, accessibility, and responsive behavior.
+My first JavaScript day: arrays, loops, objects and string methods, run in the browser or with Node.
 
 ## Contents
 
-- [`DailyChallenge/`](DailyChallenge/)
-- [`Exercises/`](Exercises/)
+| Folder | What it is |
+|---|---|
+| [`Exercises/`](Exercises/) | Exercises XP, XP Gold and XP Ninja |
+| [`DailyChallenge/`](DailyChallenge/) | Not Bad, Stars and the Bubble Sort gold challenge |
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python -m http.server 8000
-node Week3JavaScriptandDOM/Day1IntroductiontoJavaScript/DailyChallenge/DailyChallengeNotBad/script.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Day 1 - Introduction to JavaScript

@@ -1,4 +1,4 @@
-# Exercises XP — Promises
+# 🥉 Exercises XP
 
 <div align="center">
 
@@ -8,46 +8,33 @@
 
 </div>
 
-## Files
-- `index_promises.html` — Minimal UI to run and see outputs.
-- `promises.js` — All exercises implemented (short & simple).
-- `README.md` — This file.
+Three promise exercises with a small page: one button per exercise, results in the page and in the console.
 
-## What’s implemented
-### Exercise 1 — Comparison
-```js
-const compareToTen = (num) => new Promise((resolve, reject) => {
-  if (num <= 10) resolve(`OK: ${num} <= 10`);
-  else reject(`Error: ${num} is greater than 10`);
-});
-// Tests:
-compareToTen(15).then(console.log).catch(console.log); // reject
-compareToTen(8).then(console.log).catch(console.log);  // resolve
+## ▶️ How to run
+
+Open `index_promises.html` in a browser, open DevTools → Console and click the buttons. The script uses `document`, so it does not run with Node.
+
+```
+Error: 15 is greater than 10
+OK: 8 <= 10
 ```
 
-### Exercise 2 — Promises
-```js
-const delayedSuccess = new Promise((resolve) => {
-  setTimeout(() => resolve("success"), 4000);
-});
-```
+## 🎯 The challenge
 
-### Exercise 3 — Resolve & Reject
-```js
-const pResolved = Promise.resolve(3);
-const pRejected = Promise.reject("Boo!");
-```
+1. **`compareToTen(num)`** — resolves with `OK: num <= 10` or rejects with `Error: num is greater than 10`. The button tries 15 (reject) and 8 (resolve).
+2. **`delayedSuccess`** — a promise that resolves with `"success"` after 4 seconds.
+3. **`pResolved` / `pRejected`** — `Promise.resolve(3)` and `Promise.reject("Boo!")`, logged with `.then()` and `.catch()`.
 
-## How to run
-### Browser
-1. Open `index_promises.html`.
-2. Open DevTools → **Console**.
-3. Click the buttons to run each exercise.
+## 🧠 What I learned
 
-### Node (optional)
-```bash
-node -e "const {compareToTen, delayedSuccess, pResolved, pRejected}=require('./promises.js'); compareToTen(8).then(console.log); compareToTen(15).catch(console.log); pResolved.then(console.log); pRejected.catch(console.log); delayedSuccess.then(console.log);"
-```
+- A promise starts running as soon as it is created, not when I call `.then()`
+- `.catch()` handles a rejection anywhere before it in the chain
+- `Promise.resolve` and `Promise.reject` make already-settled promises
 
-## Notes
-- Exercise 2 uses a 4-second delay by requirement.
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 4 Day 4 - Asynchronous JavaScript - Exercises XP

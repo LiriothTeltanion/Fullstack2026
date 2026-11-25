@@ -1,4 +1,4 @@
-# Exercises
+# 📚 Exercises
 
 <div align="center">
 
@@ -8,20 +8,19 @@
 
 </div>
 
-Organize practical exercises with clear goals, execution paths, validation, and improvement guidance.
+The Day 5 exercises: two terminal games and two sets of challenges.
 
 ## Contents
 
-- [`Challenges1/`](Challenges1/)
-- [`Challenges2/`](Challenges2/)
-- [`Hangman/`](Hangman/)
-- [`TicTacToe/`](TicTacToe/)
+- [`TicTacToe/`](TicTacToe/) — two-player tic-tac-toe with move validation, win and tie detection, and replay
+- [`Hangman/`](Hangman/) — Hangman with ASCII gallows, 6 lives and replay, split into modules
+- [`Challenges1/`](Challenges1/) — 20 small functions on lists, strings and math
+- [`Challenges2/`](Challenges2/) — star patterns with loops and tracing a sorting snippet
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python Week1Python/Day5MiniProject/Exercises/Challenges2/main.py
-python Week1Python/Day5MiniProject/Exercises/Hangman/main.py
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 1 Day 5 - Mini-projects - Exercises

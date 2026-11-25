@@ -1,4 +1,4 @@
-# Daily Challenge
+# 💪 Daily Challenges
 
 <div align="center">
 
@@ -8,19 +8,17 @@
 
 </div>
 
-Build resilient asynchronous flows with HTTP requests, loading states, validation, and error handling.
+The Day 3 daily challenges.
 
 ## Contents
 
-- [`HTMLForm/`](HTMLForm/)
-- [`TrueOrFalse/`](TrueOrFalse/)
+- [`HTMLForm/`](HTMLForm/) — a form that appends each submission to the page as JSON
+- [`TrueOrFalse/`](TrueOrFalse/) — `allTruthy()` checks that every argument is truthy
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python -m http.server 8000
-node Week4AdvAsynchronousJavaScript/Day3HTTPAndFormMethodGETAndPOST/DailyChallenge/HTMLForm/js/app.js
-node Week4AdvAsynchronousJavaScript/Day3HTTPAndFormMethodGETAndPOST/DailyChallenge/TrueOrFalse/app.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 4 Day 3 - HTTP and GET/POST Forms - Daily Challenges

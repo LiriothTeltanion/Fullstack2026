@@ -8,18 +8,19 @@
 
 </div>
 
-Apply object-oriented design through classes, inheritance, encapsulation, modules, and reusable models.
+Extra OOP practice from the remote learning days: a queue manager and a flight scheduling system.
 
 ## Contents
 
-- [`DailyChallenge/`](DailyChallenge/)
-- [`Exercises/`](Exercises/)
+| Folder | What it is |
+|---|---|
+| [`Exercises/MiniProjectVaccines/`](Exercises/MiniProjectVaccines/) | A vaccination queue with `Human` and `Queue` classes |
+| [`DailyChallenge/AirManagement/`](DailyChallenge/AirManagement/) | Airlines, airplanes, flights and airports with date-based schedules |
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python Week2OOP/RemoteLearningOOP/DailyChallenge/AirManagement/air_management.py
-python Week2OOP/RemoteLearningOOP/Exercises/MiniProjectVaccines/vaccines.py
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 2 Remote Learning - Object-Oriented Programming

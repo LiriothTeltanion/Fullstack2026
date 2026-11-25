@@ -8,7 +8,7 @@
 
 </div>
 
-Two small dictionary challenges: mapping each letter of a word to its positions, and finding which items I can afford with a given wallet.
+Two small dictionary challenges in [dictionaries.py](dictionaries.py): mapping each letter of a word to its positions, and finding which items I can afford with a given wallet.
 
 ## ▶️ How to run
 
@@ -16,25 +16,28 @@ Two small dictionary challenges: mapping each letter of a word to its positions,
 python dictionaries.py
 ```
 
-It asks for a word, prints the letter map, and then runs the three shopping examples from the exercise. I used Python 3.10+.
+It asks for a word, prints the letter map, and then runs the three shopping examples from the exercise:
 
-## 🔤 Challenge 1 — Letter index dictionary
+```
+Enter a word: mississippi
+{'m': [0], 'i': [1, 4, 7, 10], 's': [2, 3, 5, 6], 'p': [8, 9]}
+['Bread', 'Fertilizer', 'Water']
+['Apple', 'Bananas', 'Fan', 'Honey', 'Pan', 'Spoon']
+Nothing
+```
 
-`letter_indices()` loops with `enumerate()` and uses `setdefault()` to start a list the first time a letter shows up:
+## 🎯 The challenge
+
+| Function | What it does |
+|---|---|
+| `letter_indices(word)` | Loops with `enumerate()` and uses `setdefault()` to start a list the first time a letter shows up. |
+| `to_int(value)` | Turns a price like `"$1,000"` into `1000` by removing the `$` and the commas. |
+| `affordable_items(items, wallet)` | Keeps the items that fit in the wallet and returns them sorted. If the list is empty, the script prints `Nothing`. |
 
 ```python
 for idx, ch in enumerate(word):
     positions.setdefault(ch, []).append(idx)
 ```
-
-```
-Enter a word: mississippi
-{'m': [0], 'i': [1, 4, 7, 10], 's': [2, 3, 5, 6], 'p': [8, 9]}
-```
-
-## 🛒 Challenge 2 — Affordable items
-
-Prices come as strings like `"$1,000"`, so `to_int()` removes the `$` and the commas before converting. `affordable_items()` keeps the items that fit in the wallet and returns them sorted. If the list is empty, the script prints `Nothing`.
 
 | Wallet | Result |
 |--------|--------|
@@ -55,4 +58,4 @@ Prices come as strings like `"$1,000"`, so `to_int()` removes the `$` and the co
 
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
-Week 1 Day 3 - Daily Challenge - Dictionaries
+Week 1 Day 3 - Dictionaries - Daily Challenge

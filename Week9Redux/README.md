@@ -1,17 +1,23 @@
 # 🔁 Week 9 — Redux
 
-This week covers Redux. The course has not reached it yet, so the folder only holds this README for now.
+<div align="center">
 
-## Plan
+<img src="../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-When the lessons start, each day gets its own folder with the same layout as Weeks 1–6:
+<img src="../assets/readme/progress/week9-redux-f6ec485707.svg" width="100%" alt="Progress card for Week 9 — Redux">
 
-```text
-Week9Redux/
-└── DayNTitle/
-    ├── README.md
-    ├── Exercises/
-    └── DailyChallenge/
-```
+</div>
 
-I only add a day folder once the lesson is published, and I keep course material itself out of the repository.
+Week 9 covers Redux. The course has not reached it yet.
+
+## Contents
+
+Nothing yet. Each lesson will get its own `DayNTitle/` folder with `Exercises/` and `DailyChallenge/`, like Weeks 1–6.
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 9 - Redux

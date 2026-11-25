@@ -1,4 +1,4 @@
-# Exercises
+# 📚 Exercises
 
 <div align="center">
 
@@ -8,20 +8,18 @@
 
 </div>
 
-Build resilient asynchronous flows with HTTP requests, loading states, validation, and error handling.
+The Day 1 exercise sets.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/)
-- [`ExercisesXPGold/`](ExercisesXPGold/)
-- [`ExercisesXPGold2/`](ExercisesXPGold2/)
+- [`ExercisesXP/`](ExercisesXP/) — a browser page with GET and POST forms and a JSON demo
+- [`ExercisesXPGold/`](ExercisesXPGold/) — analysing `map` and `reduce`, nested arrays and destructuring
+- [`ExercisesXPGold2/`](ExercisesXPGold2/) — sum, unique values, cleaning falsy values, `repeat` and `padStart`
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python -m http.server 8000
-npx tsx Week4AdvAsynchronousJavaScript/Day1AdvancedArrayMethods/Exercises/ExercisesXPGold/ArraysDestructuringXPGold.ts
-npx tsx Week4AdvAsynchronousJavaScript/Day1AdvancedArrayMethods/Exercises/ExercisesXPGold2/ArraysMethodsXPGold.ts
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 4 Day 1 - Advanced Array Methods - Exercises

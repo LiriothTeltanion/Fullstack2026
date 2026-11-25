@@ -1,4 +1,4 @@
-# Css
+# 🎨 Styles - Todo List
 
 <div align="center">
 
@@ -8,8 +8,16 @@
 
 </div>
 
-Stylesheets for this exercise.
+The stylesheet for the Todo List exercise.
 
 ## Contents
 
-- [`styles.css`](styles.css)
+- [`styles.css`](styles.css) — layout of the bar, input, filter chips and list, and the crossed-out style for completed tasks
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Remote Learning - JavaScript and the DOM - Todo List

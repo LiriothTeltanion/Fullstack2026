@@ -1,4 +1,4 @@
-# 💪 Day 1 Daily Challenge
+# 💪 Daily Challenges
 
 <div align="center">
 
@@ -6,18 +6,16 @@
 
 </div>
 
-The Day 1 daily challenge is [Build up a string](BuildUpAString/): the program takes a string, checks that it is exactly 10 characters long, prints its first and last characters, builds it up one character at a time and finally shuffles it.
+The Day 1 daily challenge, with 5 tests in [test_week1_day1_daily_challenge.py](../../../tests/python/test_week1_day1_daily_challenge.py).
 
-From the repository root:
+## Contents
 
-```bash
-python Week1Python/Day1StartingwithPython/DailyChallenge/BuildUpAString/buildupastring.py
-python -m unittest discover -s tests/python -p "test_week1_day1_daily_challenge.py" -v
-```
+- [`BuildUpAString/`](BuildUpAString/) — checks that a string has exactly 10 characters, prints its first and last characters, builds it up one character at a time and shuffles it
 
-5 tests in [tests/python/test_week1_day1_daily_challenge.py](../../../tests/python/test_week1_day1_daily_challenge.py) cover it.
+---
 
 ## 👤 Author
 
 **Kevin Cusnir 'Lirioth'**  
-Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 1 Day 1 - Starting with Python - Daily Challenges

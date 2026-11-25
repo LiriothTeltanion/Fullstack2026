@@ -1,4 +1,4 @@
-# Exercises
+# 📚 Exercises
 
 <div align="center">
 
@@ -8,18 +8,17 @@
 
 </div>
 
-Create interactive browser experiences with JavaScript, DOM events, accessibility, and responsive behavior.
+The two exercise packs from the remote learning sessions.
 
 ## Contents
 
-- [`ExercisesXP1/`](ExercisesXP1/)
-- [`ExercisesXP2/`](ExercisesXP2/)
+- [`ExercisesXP1/`](ExercisesXP1/) — todo list, color guess, calculator and whack-a-mole
+- [`ExercisesXP2/`](ExercisesXP2/) — timer, move the box and drag and drop
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python -m http.server 8000
-node Week3JavaScriptandDOM/RemoteLearningJSAndDOM/Exercises/ExercisesXP1/exercise1_todo/js/app.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Remote Learning - JavaScript and the DOM - Exercises

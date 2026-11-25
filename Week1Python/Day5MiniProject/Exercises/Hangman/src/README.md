@@ -1,4 +1,4 @@
-# Src
+# 📦 Source - Hangman
 
 <div align="center">
 
@@ -8,20 +8,18 @@
 
 </div>
 
-Source modules for this project.
+The modules that [main.py](../main.py) imports for the Hangman game.
 
 ## Contents
 
-- [`art.py`](art.py)
-- [`game.py`](game.py)
-- [`words.py`](words.py)
+- [`game.py`](game.py) — the `HangmanGame` class that keeps the game state
+- [`words.py`](words.py) — the word list (`correction`, `childish`, `beach`, `python`, `assertive`, `interference`, `complete`, `share`, `credit card`, `rush`, `south`) and `random_word()`
+- [`art.py`](art.py) — the 7 gallows frames and `MAX_WRONG = 6`
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python Week1Python/Day5MiniProject/Exercises/Hangman/src/art.py
-python Week1Python/Day5MiniProject/Exercises/Hangman/src/game.py
-python Week1Python/Day5MiniProject/Exercises/Hangman/src/words.py
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 1 Day 5 - Mini-projects - Hangman

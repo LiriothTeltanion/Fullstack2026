@@ -1,4 +1,4 @@
-# Exercises
+# 📚 Exercises
 
 <div align="center">
 
@@ -8,16 +8,16 @@
 
 </div>
 
-Use TypeScript types, interfaces, classes, unions, and guards to make domain logic safer.
+The Day 2 exercise set.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/)
+- [`ExercisesXP/`](ExercisesXP/) — nine exercises from Hello World to function overloading
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-npx tsx Week5MiniProjectAndTypeScript/Day2IntroductionToTypeScriptAndKeyConcepts/Exercises/ExercisesXP/ExercisesXP_Basics.ts
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 5 Day 2 - TypeScript Fundamentals and Key Concepts - Exercises

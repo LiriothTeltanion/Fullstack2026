@@ -8,20 +8,21 @@
 
 </div>
 
-Practice relational modeling, safe queries, joins, constraints, and persistent data workflows.
+Three days of PostgreSQL (tables, filters, joins, foreign keys and the `dvdrental` sample database) and one day of Node.js (CommonJS and ES modules, npm packages and the `fs` module).
 
 ## Contents
 
-- [`Day1IntroductionToDatabases/`](Day1IntroductionToDatabases/)
-- [`Day2DatabaseConcepts1/`](Day2DatabaseConcepts1/)
-- [`Day3DatabaseConcepts2/`](Day3DatabaseConcepts2/)
-- [`Day4NodejsIntroduction/`](Day4NodejsIntroduction/)
+| Folder | What it is |
+|---|---|
+| [`Day1IntroductionToDatabases/`](Day1IntroductionToDatabases/) | First tables: `items`, `customers` and `students`, with `WHERE`, `ORDER BY`, `LIMIT` and `OFFSET` |
+| [`Day2DatabaseConcepts1/`](Day2DatabaseConcepts1/) | Sorting, aliases, `DISTINCT` and first joins on the `dvdrental` database |
+| [`Day3DatabaseConcepts2/`](Day3DatabaseConcepts2/) | Foreign keys with `ON DELETE CASCADE`, `LEFT JOIN`, a view and multi-table questions on `dvdrental` |
+| [`Day4NodejsIntroduction/`](Day4NodejsIntroduction/) | Seven small Node.js exercises and a daily challenge that combines a module, `chalk` and `fs` |
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-node Week6DatabasesAndNodejs/Day4NodejsIntroduction/DailyChallenge/NodejsAppAndNPM/task-1/app.js
-node Week6DatabasesAndNodejs/Day4NodejsIntroduction/DailyChallenge/NodejsAppAndNPM/task-2/app.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 6 - Databases and Node.js

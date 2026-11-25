@@ -1,4 +1,4 @@
-# 💪 Challenges Set 1 - 20 Python Exercises
+# 🧩 Challenges 1
 
 <div align="center">
 
@@ -8,9 +8,9 @@
 
 </div>
 
-Twenty small functions I wrote to practice Week 1 Python: lists, strings, loops, conditionals and a bit of math. They are all in `challengessolutions.py`, with type hints and a short docstring each.
+Twenty small functions I wrote to practice Week 1 Python: lists, strings, loops, conditionals and a bit of math. They are all in [challengessolutions.py](challengessolutions.py), with type hints and a short docstring each.
 
-## How to run
+## ▶️ How to run
 
 ```bash
 python challengessolutions.py
@@ -27,7 +27,7 @@ No extra packages needed. It runs a quick demo that calls every function once:
 20) mask_password: **********
 ```
 
-## The exercises
+## 🎯 The challenge
 
 | # | Function | What it does |
 |---|----------|--------------|
@@ -52,14 +52,16 @@ No extra packages needed. It runs a quick demo that calls every function once:
 | 19 | `split_like` | My own version of `str.split()` |
 | 20 | `mask_password` | Replace every character with `*` |
 
-## What I learned
+## 🧠 What I learned
 
 - Writing small functions with clear inputs and outputs
 - Rebuilding built-ins like `sum`, `max` and `split` by hand to see how they work
 - Edge cases such as `bool` being a subclass of `int` in Python
 
+---
+
 ## 👤 Author
 
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
-Week 1 Day 5 - Mini Project
+Week 1 Day 5 - Mini-projects - Challenges 1

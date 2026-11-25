@@ -1,4 +1,4 @@
-# Exercise1 Todo
+# 🧪 Exercise 1 - Todo List
 
 <div align="center">
 
@@ -8,35 +8,33 @@
 
 </div>
 
-> Create accessible browser interactions using DOM selection, events, forms, and state updates.
+A to-do app with filters that remembers the list in the browser's `localStorage`.
 
-## Learning goals
+## ▶️ How to run
 
-- Practice: CSS, HTML, JavaScript.
-- Validate normal inputs, edge cases, and failure states.
-- Be able to explain the solution without reading the code line-by-line.
+Open `index.html` in a browser (or run `npm run dev` from the repo root and open this folder at `http://localhost:8000/`). `js/app.js` uses `document` and `localStorage`, so it only runs in the browser, not with `node`.
 
-## How to run
+## 🎯 The challenge
 
-```text
-# Open index.html in a browser or serve the repository locally
-node js/app.js
-```
+| Function | What it does |
+|---|---|
+| `addTodo()` | Adds the trimmed text as `{ id, text, done: false }` (button or Enter); empty text is ignored. |
+| `toggle(id)` | Flips `done` when the checkbox is clicked. |
+| `removeOne(id)` / `removeAll()` | Remove one task, or all of them with **Remove All**. |
+| `render()` | Redraws the list for the current filter (All, Active, Completed), updates the `N items` counter and disables **Remove All** when the list is empty. |
+| `save()` | Writes the list to `localStorage` under `todos_v1`. |
 
-## Files
+## 🧠 What I learned
 
-- `css/styles.css`
-- `index.html`
-- `js/app.js`
+- `localStorage` only stores strings, so I save with `JSON.stringify` and load with `JSON.parse`
+- Redrawing everything from one array keeps the page and the data in sync
+- One click listener on the `<ul>` handles every checkbox and Remove button
+- Setting `textContent` for the task text avoids putting user input into HTML
 
-## Verification checklist
+---
 
-- [ ] Main flow works
-- [ ] Invalid input is handled
-- [ ] Code is formatted
-- [ ] Tests or repeatable manual checks exist
-- [ ] README matches the current implementation
+## 👤 Author
 
-## Next improvement
-
-Describe one concrete refactor, test, accessibility improvement, or product enhancement.
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Remote Learning - JavaScript and the DOM - Exercise 1

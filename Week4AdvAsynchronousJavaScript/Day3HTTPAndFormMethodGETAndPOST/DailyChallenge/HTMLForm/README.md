@@ -1,4 +1,4 @@
-# HTML Form
+# 💪 Daily Challenge - HTML Form
 
 <div align="center">
 
@@ -8,35 +8,38 @@
 
 </div>
 
-> Practice asynchronous control flow, promises, error handling, and resilient user feedback.
+A form with a name and a last name. Each **Send** keeps me on the page and adds the values to a list as a JSON string, plus a pretty version and the time.
 
-## Learning goals
+## ▶️ How to run
 
-- Practice: CSS, HTML, JavaScript.
-- Validate normal inputs, edge cases, and failure states.
-- Be able to explain the solution without reading the code line-by-line.
+Open `index.html` in a browser, or run `npm run dev` from the repository root and go to `http://localhost:8000/Week4AdvAsynchronousJavaScript/Day3HTTPAndFormMethodGETAndPOST/DailyChallenge/HTMLForm/`.
 
-## How to run
+Typing Ada and Lovelace adds:
 
-```text
-# Open index.html in a browser or serve the repository locally
-node js/app.js
+```
+{"name":"Ada","lastname":"Lovelace"}
 ```
 
-## Files
+## 🎯 The challenge
 
-- `css/styles.css`
-- `index.html`
-- `js/app.js`
+| Function | What it does |
+|---|---|
+| `el(tag, text, className)` | Small helper that creates an element with text and a class |
+| `appendJsonEntry(obj)` | Adds a list item with the time, `JSON.stringify(obj)` and the pretty JSON |
+| submit handler | Calls `preventDefault()`, reads the form with `FormData` and builds `{ name, lastname }` |
 
-## Verification checklist
+**Clear Output** empties the list.
 
-- [ ] Main flow works
-- [ ] Invalid input is handled
-- [ ] Code is formatted
-- [ ] Tests or repeatable manual checks exist
-- [ ] README matches the current implementation
+## 🧠 What I learned
 
-## Next improvement
+- `preventDefault()` stops the page from reloading on submit
+- `Object.fromEntries(new FormData(form))` turns a form into an object
+- `JSON.stringify(obj, null, 2)` makes JSON readable
 
-Describe one concrete refactor, test, accessibility improvement, or product enhancement.
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 4 Day 3 - HTTP and GET/POST Forms - Daily Challenge

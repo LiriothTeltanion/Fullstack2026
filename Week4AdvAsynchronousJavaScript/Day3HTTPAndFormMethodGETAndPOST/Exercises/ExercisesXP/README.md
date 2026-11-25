@@ -1,4 +1,4 @@
-# Exercises XP — HTTP & Forms (GET, POST, JSON)
+# 🥉 Exercises XP
 
 <div align="center">
 
@@ -8,48 +8,34 @@
 
 </div>
 
-A tiny, beginner-friendly demo for the bootcamp exercises.
+One page with three sections: a GET form, a POST form and a JSON exercise with the Mario game object.
 
-## ⭐ Exercise 1: HTML Form (GET)
-- Form uses `method="GET"` and same page as `action`.
-- When you click **Send**, the data appears in the **URL** after the `?`.
-- I also parse the URL with JS and show it as JSON on the page.
+## ▶️ How to run
 
-**Where does the data appear?**  
-→ In the URL query string (example: `?name=Mario&message=Hello`).
+Open `index.html` in a browser for the GET form. To see the POST request in the Network tab, serve the repository from its root:
 
-## ⭐ Exercise 2: HTML Form #2 (POST)
-- Form uses `method="POST"` and same page as `action`.
-- Data does **not** appear in the URL. It goes into the **request body**.
-
-**Where does the data appear?**  
-→ Open **DevTools → Network**, click the request, check **Payload / Form Data**.
-
-> Tip: Run a tiny local server so the POST shows up in Network:
 ```bash
-# Option 1 (Python 3)
-python -m http.server 8000
-
-# Option 2 (Node)
-npx http-server -p 8000
+npm run dev
 ```
-Then open `http://localhost:8000/` and submit the POST form.
 
-## ⭐ Exercise 3: JSON Mario
-- Convert the `marioGame` JS object to JSON using `JSON.stringify`.
-- Pretty print with spaces: `JSON.stringify(marioGame, null, 2)`.
-- Click **Make JSON (with debugger)** to pause in DevTools and inspect variables.
+and go to `http://localhost:8000/Week4AdvAsynchronousJavaScript/Day3HTTPAndFormMethodGETAndPOST/Exercises/ExercisesXP/`. Python's simple server only handles GET, so it answers the POST with an error, but the request and its form data are still visible in DevTools.
 
-**What happens to nested objects?**  
-→ They remain **nested** in the JSON structure (just represented as text).
+## 🎯 The challenge
 
-## Files
-- `index.html` — the page with the three sections
-- `style.css` — minimal styling
-- `app.js` — simple logic with small comments
+1. **GET form** — the data ends up in the URL after `?`. On load, `readGetParams()` reads it with `URLSearchParams` and prints it as JSON.
+2. **POST form** — the data is not in the URL; it goes in the request body (DevTools → Network → Payload).
+3. **JSON Mario** — `makeMarioJSON()` turns `marioGame` into pretty JSON and shows it. **Make JSON (with debugger)** stops on `debugger;` first so I can inspect the values.
 
-## How to run
-- For GET only: just open `index.html` (double-click).
-- For POST + Network tab: run a local server and open `http://localhost:8000/`.
+## 🧠 What I learned
 
-Enjoy and keep it simple!
+- GET is visible in the URL, so it is not for private data
+- POST data travels in the body of the request
+- The Network tab shows exactly what a form sends
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 4 Day 3 - HTTP and GET/POST Forms - Exercises XP

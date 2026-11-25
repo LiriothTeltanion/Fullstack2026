@@ -8,17 +8,18 @@
 
 </div>
 
-Create interactive browser experiences with JavaScript, DOM events, accessibility, and responsive behavior.
+Extra JavaScript and DOM practice from the remote learning sessions: small apps, timers and drag and drop.
 
 ## Contents
 
-- [`Exercises/`](Exercises/)
+| Folder | What it is |
+|---|---|
+| [`Exercises/`](Exercises/) | Exercises XP 1 and Exercises XP 2 |
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python -m http.server 8000
-node Week3JavaScriptandDOM/RemoteLearningJSAndDOM/Exercises/ExercisesXP1/exercise1_todo/js/app.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Remote Learning - JavaScript and the DOM

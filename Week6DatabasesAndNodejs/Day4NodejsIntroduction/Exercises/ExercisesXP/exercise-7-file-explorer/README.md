@@ -1,4 +1,4 @@
-# Exercise 7 File Explorer
+# 🧪 Exercise 7 - File Explorer
 
 <div align="center">
 
@@ -8,33 +8,16 @@
 
 </div>
 
-> Practice relational modeling, joins, constraints, CRUD operations, and PostgreSQL queries.
+Reading, copying and listing files with `fs`. The code lives in the `file-explorer/` folder.
 
-## Learning goals
+## Contents
 
-- Practice: JSON, JavaScript.
-- Validate normal inputs, edge cases, and failure states.
-- Be able to explain the solution without reading the code line-by-line.
+- [`file-explorer/`](file-explorer/) — `copy-file.js` copies `source.txt`, `read-directory.js` lists the folder
 
-## How to run
+---
 
-```text
-Add the exact run command after verifying the entry point.
-```
+## 👤 Author
 
-## Files
-
-- `file-explorer/copy-file.js`
-- `file-explorer/read-directory.js`
-
-## Verification checklist
-
-- [ ] Main flow works
-- [ ] Invalid input is handled
-- [ ] Code is formatted
-- [ ] Tests or repeatable manual checks exist
-- [ ] README matches the current implementation
-
-## Next improvement
-
-Describe one concrete refactor, test, accessibility improvement, or product enhancement.
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 6 Day 4 - Introduction to Node.js - Exercise 7

@@ -1,4 +1,4 @@
-# Daily challenge: Translator 🌍🗣️
+# 💪 Daily Challenge - Translator
 
 <div align="center">
 
@@ -8,26 +8,36 @@
 
 </div>
 
-My solution is in `dailychallengetranslator.py`.
+A script that translates a list of French words to English with the `googletrans` module and prints the result as a dictionary.
 
-## What it does
-- Translates a list of French words to English using **googletrans** (Google Translate API wrapper).
-- If the module or network isn't available, it **falls back** to a tiny hard-coded mapping for the provided demo list so you can still see the expected output.
+## ▶️ How to run
 
-## Install
 ```bash
-pip install googletrans==4.0.0-rc1
-```
-
-## Run
-```bash
+pip install googletrans==4.0.0-rc1   # optional
 python dailychallengetranslator.py
 ```
-Expected output for the provided list:
-```
-{"Bonjour": "Hello", "Au revoir": "Goodbye", "Bienvenue": "Welcome", "A bientôt": "See you soon"}
+
+```text
+{'Bonjour': 'Hello', 'Au revoir': 'Goodbye', 'Bienvenue': 'Welcome', 'A bientôt': 'See you soon'}
 ```
 
-## How it works
-- The function `translate_words(words, src="fr", dest="en")` imports `Translator` lazily and batch-translates the list.
-- The main block prints the resulting **dict mapping original→translated**, preserving the input order.
+Without the package or without internet, it prints a warning first and uses a small built-in dictionary for the same four words.
+
+## 🎯 The challenge
+
+- `translate_words(words, src="fr", dest="en")` imports `Translator` inside the function, translates the whole list in one call and returns `{original: translated}`
+- `main()` tries the live translation and, if anything fails, falls back to the hard-coded mapping while keeping the input order
+
+## 🧠 What I learned
+
+- Importing a third-party module inside a function lets the rest of the script run without it
+- `zip()` pairs each original word with its translation in one line
+- A small offline fallback keeps a demo working when the network or a package is missing
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 2 Day 3 - OOP and Modules - Daily Challenge

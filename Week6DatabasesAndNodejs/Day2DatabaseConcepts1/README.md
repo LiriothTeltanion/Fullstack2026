@@ -8,16 +8,18 @@
 
 </div>
 
-Practice relational modeling, safe queries, joins, constraints, and persistent data workflows.
+Sorting, `LIMIT`, aliases and my first joins, first on the Day 1 tables and then on the `dvdrental` sample database.
 
 ## Contents
 
-- [`Exercises/`](Exercises/)
+| Folder | What it is |
+|---|---|
+| [`Exercises/ExercisesXP/`](Exercises/ExercisesXP/) | 19 queries: 4 on `items` and `customers`, 15 on `dvdrental` |
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-psql -f Week6DatabasesAndNodejs/Day2DatabaseConcepts1/Exercises/ExercisesXP/xp_sql_answers.sql
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 6 Day 2 - Database Concepts I

@@ -1,4 +1,4 @@
-# 🐾 Day 2 Exercises – Inheritance, Encapsulation & Polymorphism
+# 🥉 Exercises XP
 
 <div align="center">
 
@@ -8,48 +8,48 @@
 
 </div>
 
-## 🎯 Learning Goals
-- Understand how inheritance lets subclasses (like `Bengal` or `PetDog`) reuse and extend parent behaviour.
-- Practice encapsulating behaviour inside classes such as `Pets`, `Dog`, and `Family`.
-- Apply polymorphism by interacting with different subclasses through shared interfaces (e.g., calling `walk()` on any cat).
-- Gain confidence running small OOP programs from the command line.
+Four small programs in `exercisesxp.py` that practice inheritance, wrapper classes and polymorphism.
+
+## ▶️ How to run
+
+```bash
+python exercisesxp.py
+```
+
+```text
+EX1 - Cats walk:
+Nala is just walking around
+Milo is just walking around
+Luna is just walking around
+------------------------------
+EX2 - Dogs:
+Rex is barking
+50.0
+Rex wins!
+LunaDog wins!
+...
+```
+
+The trick in exercise 3 is picked with `random.choice`, so that line changes on each run.
+
+## 🎯 The challenge
+
+1. **Pets** - `Bengal`, `Chartreux` and `Siamese` inherit from `Cat`; a `Pets` object calls `walk()` on every cat without caring about the breed
+2. **Dogs** - a `Dog` can bark, has `run_speed()` (weight / age × 10) and `fight()`, where the higher speed × weight wins
+3. **PetDog** - a subclass of `Dog` that calls `super().__init__()`, adds `train()`, `play(*args)` and `do_a_trick()`; an untrained dog prints that it is not trained yet
+4. **Family** - `Family.born()` creates `Person` objects with the family's last name, and `check_majority()` uses `is_18()` to decide if a member may go out
+
+## 🧠 What I learned
+
+- A subclass gets every method of its parent for free and only adds what is new
+- `super().__init__()` is how a child class reuses the parent's setup
+- Polymorphism means one loop can call the same method on different classes
+- `*args` lets `play()` accept any number of dogs or plain names
 
 ---
 
-## 🧪 Exercise Overview
-The `exercisesxp.py` script contains four progressive mini-exercises:
+## 👤 Author
 
-1. **Cat Walking Club**
-   - Create a list of cat instances (`Bengal`, `Chartreux`, `Siamese`) that all inherit from `Cat`.
-   - Pass the list to the `Pets` wrapper class and call `walk()` to demonstrate polymorphism.
-
-2. **Dog Showdown**
-   - Work with the `Dog` class to make dogs bark, calculate their running speed, and compete using the `fight()` method.
-
-3. **Pet Dog Upgrade**
-   - Extend `Dog` with the `PetDog` subclass that adds training, play sessions with other dogs, and random tricks when trained.
-
-4. **Family Roster**
-   - Use `Person` and `Family` classes to add members, present the family, and check whether individuals are adults.
-
-Each section is executed sequentially when you run the script, printing example output to the console so you can confirm the behaviour.
-
----
-
-## ▶️ How to Run the Exercises
-1. Open a terminal in this directory.
-2. Execute:
-   ```bash
-   python exercisesxp.py
-   ```
-3. Observe the printed walkthrough for cats, dogs, pet tricks, and the family roster.
-
-> ℹ️ Feel free to modify or extend the classes and re-run the script to experiment with different animals or family members.
-
----
-
-## ✅ What You Should Be Able to Do Afterwards
-- Explain how inheritance helps avoid duplicating logic between similar classes.
-- Recognise when to wrap related objects inside a helper class (like `Pets`).
-- Design subclasses that add new behaviour while respecting the parent API.
-- Build small interactive demos to validate your object-oriented designs.
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 2 Day 2 - Inheritance, Encapsulation and Polymorphism - Exercises XP

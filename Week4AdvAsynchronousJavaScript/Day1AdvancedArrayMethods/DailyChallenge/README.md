@@ -1,4 +1,4 @@
-# Daily Challenge
+# 💪 Daily Challenges
 
 <div align="center">
 
@@ -8,18 +8,17 @@
 
 </div>
 
-Build resilient asynchronous flows with HTTP requests, loading states, validation, and error handling.
+The Day 1 daily challenges.
 
 ## Contents
 
-- [`CarInventory/`](CarInventory/)
-- [`GoWildcats/`](GoWildcats/)
+- [`CarInventory/`](CarInventory/) — find the first Honda and sort cars by year, in the browser
+- [`GoWildcats/`](GoWildcats/) — usernames, winners and the total score with `forEach`, in TypeScript
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python -m http.server 8000
-node Week4AdvAsynchronousJavaScript/Day1AdvancedArrayMethods/DailyChallenge/CarInventory/js/app.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 4 Day 1 - Advanced Array Methods - Daily Challenges

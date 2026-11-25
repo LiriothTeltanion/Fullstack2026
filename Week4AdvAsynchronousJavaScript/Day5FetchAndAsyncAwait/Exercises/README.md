@@ -1,4 +1,4 @@
-# Exercises
+# 📚 Exercises
 
 <div align="center">
 
@@ -8,17 +8,16 @@
 
 </div>
 
-Build resilient asynchronous flows with HTTP requests, loading states, validation, and error handling.
+The Day 5 exercise set.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/)
+- [`ExercisesXP/`](ExercisesXP/) — four `fetch` and async/await exercises with the Giphy API and SWAPI
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python -m http.server 8000
-node Week4AdvAsynchronousJavaScript/Day5FetchAndAsyncAwait/Exercises/ExercisesXP/js/app.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 4 Day 5 - Fetch and Async/Await - Exercises

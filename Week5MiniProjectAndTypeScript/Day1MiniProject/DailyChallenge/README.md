@@ -1,4 +1,4 @@
-# Daily Challenge
+# 💪 Daily Challenges
 
 <div align="center">
 
@@ -8,16 +8,16 @@
 
 </div>
 
-Use TypeScript types, interfaces, classes, unions, and guards to make domain logic safer.
+The Day 1 daily challenge.
 
 ## Contents
 
-- [`CurrencyConverter/`](CurrencyConverter/)
+- [`CurrencyConverter/`](CurrencyConverter/) — convert between any two currencies with live rates from ExchangeRate-API
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python -m http.server 8000
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 5 Day 1 - Mini-projects - Daily Challenges

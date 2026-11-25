@@ -1,4 +1,4 @@
-# Exercises
+# 📚 Exercises
 
 <div align="center">
 
@@ -8,17 +8,16 @@
 
 </div>
 
-Build resilient asynchronous flows with HTTP requests, loading states, validation, and error handling.
+The Day 4 exercise set.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/)
+- [`ExercisesXP/`](ExercisesXP/) — `compareToTen`, a 4-second promise and `Promise.resolve` / `Promise.reject`
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python -m http.server 8000
-node Week4AdvAsynchronousJavaScript/Day4AsynchronousJavaScript/Exercises/ExercisesXP/promises.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 4 Day 4 - Asynchronous JavaScript - Exercises

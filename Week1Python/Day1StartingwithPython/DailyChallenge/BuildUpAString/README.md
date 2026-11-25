@@ -1,4 +1,4 @@
-# 💪 Build Up a String
+# 💪 Daily Challenge - Build Up a String
 
 <div align="center">
 
@@ -6,15 +6,13 @@
 
 </div>
 
-My solution to the Day 1 daily challenge, in [buildupastring.py](buildupastring.py).
+My solution to the Day 1 daily challenge, in [buildupastring.py](buildupastring.py): it checks that a string has exactly 10 characters, then builds it up one character at a time and shuffles it.
 
-## 🔄 What it does
+## ▶️ How to run
 
-1. Asks for a string.
-2. Checks the length: fewer than 10 characters prints "String not long enough.", more than 10 prints "String too long.", and exactly 10 prints "Perfect string" and continues.
-3. Prints the first and last characters.
-4. Uses a `for` loop to print the string growing one character per line.
-5. Bonus: prints a shuffled version with the same characters.
+```bash
+python buildupastring.py
+```
 
 ```
 Enter a string (must be exactly 10 characters): abcdefghij
@@ -24,37 +22,42 @@ Last character: j
 a
 ab
 abc
-abcd
-abcde
-abcdef
-abcdefg
-abcdefgh
-abcdefghi
+...
 abcdefghij
-Jumbled string: fdgijbaech
+Jumbled string: acbdgfheji
 ```
 
 The jumbled string changes on every run.
 
-## ▶️ Run and test
+## 🎯 The challenge
+
+1. Ask for a string.
+2. Check the length: fewer than 10 characters prints "String not long enough.", more than 10 prints "String too long.", and exactly 10 prints "Perfect string" and continues.
+3. Print the first and last characters.
+4. Use a `for` loop to print the string growing one character per line.
+5. Bonus: print a shuffled version with the same characters.
+
+## 🧪 Tests
 
 From the repository root:
 
 ```bash
-python Week1Python/Day1StartingwithPython/DailyChallenge/BuildUpAString/buildupastring.py
 python -m unittest discover -s tests/python -p "test_week1_day1_daily_challenge.py" -v
 python -m doctest -v Week1Python/Day1StartingwithPython/DailyChallenge/BuildUpAString/buildupastring.py
 ```
 
-5 tests in [tests/python/test_week1_day1_daily_challenge.py](../../../../tests/python/test_week1_day1_daily_challenge.py) check the 9, 10 and 11 character boundaries, the build-up output and that the shuffle keeps the same characters.
+5 tests in [test_week1_day1_daily_challenge.py](../../../../tests/python/test_week1_day1_daily_challenge.py) check the 9, 10 and 11 character boundaries, the build-up output and that the shuffle keeps the same characters.
 
-## 💡 What I learned
+## 🧠 What I learned
 
-- `s[0]` and `s[-1]` give the first and last characters.
-- Adding one character per loop step (`built += ch`) builds the prefixes.
-- `random.shuffle()` works on a list, so I convert the string to a list and join it back.
+- `s[0]` and `s[-1]` give the first and last characters
+- Adding one character per loop step (`built += ch`) builds the prefixes
+- `random.shuffle()` works on a list, so I convert the string to a list and join it back
+
+---
 
 ## 👤 Author
 
 **Kevin Cusnir 'Lirioth'**  
-Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 1 Day 1 - Starting with Python - Daily Challenge

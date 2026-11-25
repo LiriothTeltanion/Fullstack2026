@@ -1,4 +1,4 @@
-# Exercise 6 npm Beginner Chalk
+# 🧪 Exercise 6 - npm Beginner (chalk)
 
 <div align="center">
 
@@ -8,32 +8,16 @@
 
 </div>
 
-> Practice relational modeling, joins, constraints, CRUD operations, and PostgreSQL queries.
+My first npm package in use. The code lives in the `npm-beginner/` folder.
 
-## Learning goals
+## Contents
 
-- Practice: JSON, JavaScript.
-- Validate normal inputs, edge cases, and failure states.
-- Be able to explain the solution without reading the code line-by-line.
+- [`npm-beginner/`](npm-beginner/) — `app.js` prints three styled lines with `chalk`
 
-## How to run
+---
 
-```text
-node npm-beginner/app.js
-```
+## 👤 Author
 
-## Files
-
-- `npm-beginner/app.js`
-
-## Verification checklist
-
-- [ ] Main flow works
-- [ ] Invalid input is handled
-- [ ] Code is formatted
-- [ ] Tests or repeatable manual checks exist
-- [ ] README matches the current implementation
-
-## Next improvement
-
-Describe one concrete refactor, test, accessibility improvement, or product enhancement.
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 6 Day 4 - Introduction to Node.js - Exercise 6

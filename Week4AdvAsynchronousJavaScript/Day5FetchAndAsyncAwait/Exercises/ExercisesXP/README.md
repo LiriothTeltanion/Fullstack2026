@@ -1,4 +1,4 @@
-# Exercises XP — Fetch API & Async/Await
+# 🥉 Exercises XP
 
 <div align="center">
 
@@ -8,36 +8,41 @@
 
 </div>
 
-Four small exercises where I practiced the Fetch API, async/await, status checks and error handling. Each one has its own button in `index.html`.
+Four small exercises with the Fetch API and async/await. Each one has its own button in `index.html` and writes a short result in the output panel.
 
-## Files
-
-```
-ExercisesXP/
-├─ index.html            # One button per exercise + output panel
-├─ css/styles.css
-└─ js/
-   ├─ app.js             # Exercises 1–4
-   └─ config.example.js  # Template for the local config.js (git-ignored)
-```
-
-## How to run
+## ▶️ How to run
 
 1. Copy `js/config.example.js` to `js/config.js` and put your own restricted Giphy development key in it. `config.js` is ignored by Git.
-2. From the repository root, start a local server and open the exercise page:
+2. From the repository root:
 
 ```bash
-python -m http.server 8000
+npm run dev
 ```
 
-3. Open DevTools (Console) and click each button:
-   - **Exercise 1:** Giphy search for "hilarious" — full JSON in the console, a summary in the panel.
-   - **Exercise 2:** Giphy search for "sun" with `limit=10&offset=2` — shows the titles.
-   - **Exercise 3:** SWAPI starship with async/await only — logs `objectStarWars.result` and shows the name.
-   - **Exercise 4:** shows `calling` right away, then `resolved` after about 2 seconds.
+3. Open `http://localhost:8000/Week4AdvAsynchronousJavaScript/Day5FetchAndAsyncAwait/Exercises/ExercisesXP/`, open DevTools → Console and click each button.
 
-## Notes
+Without a key, exercises 1 and 2 show `Missing Giphy API key. ...`; exercises 3 and 4 still work.
 
-- Every request checks `response.ok`, throws on non-2xx responses and is wrapped in `try/catch`.
-- An older version had a hard-coded Giphy key. I removed it from the current files; any key that was ever committed should be treated as exposed and revoked.
-- A key used in the browser is always visible to visitors, so only use a restricted development key here.
+## 🎯 The challenge
+
+1. **Giphy "hilarious"** — logs the full JSON and shows the count and the first GIF's title and URL.
+2. **Giphy "sun"** — `limit=10` and `offset=2`, then shows the 10 titles.
+3. **SWAPI starship 9** — async/await only, no `.then()`. Logs `result` and shows the starship's name.
+4. **Analyse the snippet** — `asyncCall()` shows `calling` right away and `resolved` about 2 seconds later.
+
+`handleStatus()` throws on any non-2xx response, and every exercise is wrapped in `try/catch`.
+
+## 🧠 What I learned
+
+- `fetch` only rejects on network errors, so I have to check `response.ok` myself
+- `await` pauses only the async function, not the whole page
+- `URL` and `searchParams` build query strings safely
+- A key used in the browser is visible to everyone, so it stays out of Git and should be a restricted one
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 4 Day 5 - Fetch and Async/Await - Exercises XP

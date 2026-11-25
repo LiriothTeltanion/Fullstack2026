@@ -8,18 +8,20 @@
 
 </div>
 
-Practice relational modeling, safe queries, joins, constraints, and persistent data workflows.
+My first PostgreSQL scripts: create a table, insert rows and filter them with `SELECT`.
 
 ## Contents
 
-- [`Exercises/`](Exercises/)
+| Folder | What it is |
+|---|---|
+| [`Exercises/ExercisesXP/`](Exercises/ExercisesXP/) | `items` and `customers` tables with six filter queries |
+| [`Exercises/ExercisesXPPlus/`](Exercises/ExercisesXPPlus/) | A `students` table in the `bootcamp` database and pattern matching with `ILIKE` |
+| [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | Three more `students` queries with `ORDER BY`, `LIMIT` and `OFFSET` |
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-psql -f Week6DatabasesAndNodejs/Day1IntroductionToDatabases/Exercises/ExercisesXP/items_customers.sql
-psql -f Week6DatabasesAndNodejs/Day1IntroductionToDatabases/Exercises/ExercisesXPGold/exercisesxpgold.sql
-psql -f Week6DatabasesAndNodejs/Day1IntroductionToDatabases/Exercises/ExercisesXPPlus/exercisesxpplus.sql
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 6 Day 1 - Introduction to Databases

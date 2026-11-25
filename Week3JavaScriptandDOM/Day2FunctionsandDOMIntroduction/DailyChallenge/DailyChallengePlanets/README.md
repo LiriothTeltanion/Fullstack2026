@@ -1,4 +1,4 @@
-# Daily Challenge Planets
+# 💪 Daily Challenge - Planets
 
 <div align="center">
 
@@ -8,33 +8,32 @@
 
 </div>
 
-> Design reusable functions with clear parameters, return values, validation, and scope.
+A small solar system built with the DOM: each planet is a colored circle with its name, and its moons sit around it.
 
-## Learning goals
+## ▶️ How to run
 
-- Practice: HTML, JavaScript.
-- Validate normal inputs, edge cases, and failure states.
-- Be able to explain the solution without reading the code line-by-line.
+Open `planets.html` in a browser (or run `npm run dev` from the repo root and open this folder at `http://localhost:8000/`). No build step is needed.
 
-## How to run
+## 🎯 The challenge
 
-```text
-# Open planets.html in a browser or serve the repository locally
-```
+- `planets.js` keeps an array of 8 planet objects with `name`, `color` and `moons`.
+- It selects `<section class="listPlanets">` and turns it into a wrapping flex row with a 20px gap.
+- For each planet it creates a `.planet` div, sets the background color and the name, and appends it.
+- For each moon it creates a `.moon` div and places it with `rotate(angle) translate(70px) rotate(-angle)`, where `angle = (i / moons) * 360`, so the moons spread evenly around the planet.
 
-## Files
+The moon counts are demo numbers, not real ones. More notes are in [README_Solar_System.md](README_Solar_System.md).
 
-- `planets.html`
-- `planets.js`
+## 🧠 What I learned
 
-## Verification checklist
+- `document.createElement()` and `appendChild()` build a page from data
+- A `forEach` over an array of objects keeps the data and the drawing separate
+- `rotate` + `translate` + `rotate` back is an easy way to place items on a circle
+- Styles can be set from JavaScript with `element.style`
 
-- [ ] Main flow works
-- [ ] Invalid input is handled
-- [ ] Code is formatted
-- [ ] Tests or repeatable manual checks exist
-- [ ] README matches the current implementation
+---
 
-## Next improvement
+## 👤 Author
 
-Describe one concrete refactor, test, accessibility improvement, or product enhancement.
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Day 2 - Functions and DOM Introduction - Daily Challenge

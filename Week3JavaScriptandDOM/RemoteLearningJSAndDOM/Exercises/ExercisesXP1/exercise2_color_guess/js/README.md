@@ -1,4 +1,4 @@
-# Js
+# 📜 Scripts - Color Guess
 
 <div align="center">
 
@@ -8,16 +8,16 @@
 
 </div>
 
-JavaScript modules for this exercise.
+The browser script for Color Guess. It needs the page, so open `../index.html` instead of running it with `node`.
 
 ## Contents
 
-- [`app.js`](app.js)
+- [`app.js`](app.js) — builds each round, checks the guess and runs the 5-second countdown
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-node Week3JavaScriptandDOM/RemoteLearningJSAndDOM/Exercises/ExercisesXP1/exercise2_color_guess/js/app.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Remote Learning - JavaScript and the DOM - Color Guess

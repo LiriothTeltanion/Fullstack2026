@@ -8,18 +8,19 @@
 
 </div>
 
-Build resilient asynchronous flows with HTTP requests, loading states, validation, and error handling.
+Day 1 of Week 4: array methods like `find`, `sort`, `forEach`, `map`, `reduce` and `flat`, mostly written in TypeScript.
 
 ## Contents
 
-- [`DailyChallenge/`](DailyChallenge/)
-- [`Exercises/`](Exercises/)
+| Folder | What it is |
+|---|---|
+| [`Exercises/`](Exercises/) | Exercises XP and two XP Gold sets |
+| [`DailyChallenge/`](DailyChallenge/) | Car Inventory and Go Wildcats |
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python -m http.server 8000
-node Week4AdvAsynchronousJavaScript/Day1AdvancedArrayMethods/DailyChallenge/CarInventory/js/app.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 4 Day 1 - Advanced Array Methods

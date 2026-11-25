@@ -1,17 +1,23 @@
 # 🛡️ Week 10 — Advanced TypeScript and Authentication
 
-This week covers advanced TypeScript and authentication. The course has not reached it yet, so the folder only holds this README for now.
+<div align="center">
 
-## Plan
+<img src="../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-When the lessons start, each day gets its own folder with the same layout as Weeks 1–6:
+<img src="../assets/readme/progress/week10-advanced-typescript-and-authentication-62a9a9e0bd.svg" width="100%" alt="Progress card for Week 10 — Advanced TypeScript and Authentication">
 
-```text
-Week10AdvancedTypeScriptAndAuthentication/
-└── DayNTitle/
-    ├── README.md
-    ├── Exercises/
-    └── DailyChallenge/
-```
+</div>
 
-I only add a day folder once the lesson is published, and I keep course material itself out of the repository.
+Week 10 covers Advanced TypeScript and Authentication. The course has not reached it yet.
+
+## Contents
+
+Nothing yet. Each lesson will get its own `DayNTitle/` folder with `Exercises/` and `DailyChallenge/`, like Weeks 1–6.
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 10 - Advanced TypeScript and Authentication

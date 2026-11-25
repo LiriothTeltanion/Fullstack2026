@@ -1,4 +1,4 @@
-# Daily Challenge
+# 💪 Daily Challenges
 
 <div align="center">
 
@@ -8,18 +8,17 @@
 
 </div>
 
-Solve an independent daily challenge that reinforces the current lesson through focused problem solving.
+The two Day 2 daily challenges: the regular one and the Gold one.
 
 ## Contents
 
-- [`GoldHappyBirthday/`](GoldHappyBirthday/)
-- [`ListAndStrings/`](ListAndStrings/)
+- [`ListAndStrings/`](ListAndStrings/) — multiples of a number and collapsing repeated letters
+- [`GoldHappyBirthday/`](GoldHappyBirthday/) — an ASCII cake with one candle per last digit of your age
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python Week1Python/Day2ListsIteratingAndFormattingData/DailyChallenge/GoldHappyBirthday/happybirthday.py
-python Week1Python/Day2ListsIteratingAndFormattingData/DailyChallenge/ListAndStrings/dailychallengelistandstrings.py
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 1 Day 2 - Lists, Iteration and Data Formatting - Daily Challenges

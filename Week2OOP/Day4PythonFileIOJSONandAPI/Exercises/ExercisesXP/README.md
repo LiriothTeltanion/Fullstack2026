@@ -1,4 +1,4 @@
-# Files & JSON XP – Combined Solutions ✨
+# 🥉 Exercises XP
 
 <div align="center">
 
@@ -8,53 +8,41 @@
 
 </div>
 
-This folder contains a single script, `xp_files_json_all.py`, that solves the two Files & JSON XP tasks:
+Both Files and JSON XP tasks in one script, `xp_files_json_all.py`: a random sentence generator and a small JSON edit.
 
-1. **Random Sentence Generator** – builds a sentence of user-defined length by reading from `words.txt`.
-2. **JSON Manipulation** – reads a sample employee record, displays the salary, adds a `birth_date`, and saves the updated data.
-
-`words.txt` is created automatically the first time the script runs (with a small default list) so you can launch the exercises immediately. Feel free to edit the file to include your own vocabulary.
-
----
-
-## ✅ Requirements
-
-- Python **3.10+** (standard library only)
-
----
-
-## ▶️ Quick Demo
-
-From this directory run:
+## ▶️ How to run
 
 ```bash
 python xp_files_json_all.py
 ```
 
-The script will:
+```text
+===== Exercise 1: Random Sentence (demo length=6) =====
+📝 (six random words)
 
-- Generate a lowercase random sentence with 6 words.
-- Display the original salary stored in the JSON payload.
-- Save the modified data to `modified_employee.json` in the same folder.
-
----
-
-## 🧑‍💻 Interactive Sentence Generator
-
-To use the interactive prompt from Exercise 1, import and call `main()`:
-
-```python
-from xp_files_json_all import main
-main()  # Follow the on-screen instructions 😊
+===== Exercise 2: JSON Access/Modify/Save =====
+Employee salary is: 7000 💰
+Modified JSON saved to: .../modified_employee.json ✅
 ```
 
-Valid input is an integer between **2 and 20** (inclusive). The words are sourced from `words.txt` every time you run the generator, so updates to the file are reflected automatically.
+The script writes `words.txt` (if it is missing) and `modified_employee.json` in the folder you run it from. To try the interactive prompt of exercise 1, import the module and call `main()`.
+
+## 🎯 The challenge
+
+1. **Random sentence generator** - `get_words_from_file()` reads the words (and creates `words.txt` with a default list the first time), `get_random_sentence(length)` picks random words and returns them in lowercase, and `main()` asks for a length and only accepts a whole number from 2 to 20
+2. **Working with JSON** - `process_employee_json()` parses a sample JSON string, prints the nested salary, adds a `birth_date` to the employee and saves the result with `json.dump(..., indent=2)`
+
+## 🧠 What I learned
+
+- `pathlib.Path` makes it easy to check for a file, read it and write it
+- `json.loads` turns a JSON string into nested dictionaries I can walk with keys
+- Checking the input range before using it keeps the generator from doing odd things
+- Relative file paths depend on where I run the script, not where the script lives
 
 ---
 
-## 📦 Output Files
+## 👤 Author
 
-- `modified_employee.json` – Created after the JSON exercise runs, containing the additional `"birth_date"` field.
-- `words.txt` – Auto-generated on first run if missing; you may customize it anytime.
-
-Enjoy exploring both exercises in one place! 🐍💙
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 2 Day 4 - File I/O, JSON and APIs - Exercises XP

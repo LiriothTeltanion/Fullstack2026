@@ -1,4 +1,4 @@
-# Exercises
+# 📚 Exercises
 
 <div align="center">
 
@@ -8,19 +8,18 @@
 
 </div>
 
-Create interactive browser experiences with JavaScript, DOM events, accessibility, and responsive behavior.
+The three exercise tiers of Day 2.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/)
-- [`ExercisesXPGold/`](ExercisesXPGold/)
-- [`ExercisesXPNinja/`](ExercisesXPNinja/)
+- [`ExercisesXP/`](ExercisesXP/) — seven function and DOM exercises with a run page
+- [`ExercisesXPGold/`](ExercisesXPGold/) — string helpers and a red table diagonal
+- [`ExercisesXPNinja/`](ExercisesXPNinja/) — palindromes, unique values and a month calendar
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python -m http.server 8000
-node Week3JavaScriptandDOM/Day2FunctionsandDOMIntroduction/Exercises/ExercisesXP/script.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Day 2 - Functions and DOM Introduction - Exercises

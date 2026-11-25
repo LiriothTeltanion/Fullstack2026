@@ -1,4 +1,4 @@
-# Exercises XP Ninja — DOM, Events, Forms
+# 🥷 Exercises XP Ninja
 
 <div align="center">
 
@@ -8,48 +8,34 @@
 
 </div>
 
-**Last Updated:** October 7th, 2025
+Three exercises with forms and events: a tip calculator, an email checker with and without a regex, and the browser's geolocation.
 
-## What we will learn
-- Working with the DOM 🧩
-- Event Handlers 🖱️
-- Forms 📝
+## ▶️ How to run
 
----
+Open `index.html` in a browser (or use `npm run dev` from the repo root). Exercise 3 asks for permission to read your location.
 
-## Files
-- `index.html` — three sections for the exercises, loads `main.js`.
-- `main.js` — implementations with friendly comments.
+## 🎯 The challenge
 
----
+| Function | What it does |
+|---|---|
+| `calculateTip()` | Reads the bill, the service quality and the number of people from the page, alerts when the bill or quality is missing, uses 1 person by default, and shows `(bill × quality) ÷ people` with 2 decimals. The word "each" appears only for more than one person. |
+| `isValidEmailNoRegex(value)` | Checks for one `@`, a non-empty name and a domain with a `.`, then allowed characters. |
+| `isValidEmailRegex(value)` | Tests `/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/`. |
+| `getGeolocation()` | Calls `navigator.geolocation.getCurrentPosition` and prints the latitude and longitude, or the error message. |
 
-## Run
-Open `index.html` in a browser.
+The email form shows `✅ Looks like a valid email.` or `❌ Invalid email format.` for the method chosen with the radio buttons. The `#totalTip` block stays hidden until the first calculation.
 
----
+## 🧠 What I learned
 
-## Exercises
-
-### 1) Calculate the tip 🍽️
-- IDs used (as required): `billAmt`, `serviceQual`, `numOfPeople`, `each`, `totalTip`, `tip`, `calculate`.
-- `calculateTip()`:
-  - Prompts for values, validates inputs (alerts if missing/zero).  
-  - Defaults `numOfPeople` to 1 and hides “each” when appropriate.  
-  - Computes `(billAmount * serviceQuality) / numberOfPeople`, rounds to **2** decimals, shows the result.  
-- `#totalTip` is hidden by default and shown only after calculation.  
-- Button `#calculate` uses **onclick** to call `calculateTip()`.
-
-### 2) Validate the email 📧
-- Enter an email, choose validation method (No-Regex or Regex), then **Check**.  
-- No-Regex: structural checks (one `@`, domain has `.`, basic allowed characters).  
-- Regex: `/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/`.
-
-### 3) Get the user’s geolocation 📍
-- Click **Get Coordinates** to read via `navigator.geolocation.getCurrentPosition`.  
-- Displays latitude and longitude, or an error message.
+- `parseFloat` and `Number.isFinite` catch empty or wrong number inputs
+- `new FormData(form).get("method")` reads the checked radio button
+- Checking an email without a regex means splitting it at `@` and testing each part
+- Geolocation is asynchronous: the answer arrives later in a callback
 
 ---
 
-## Notes
-- This project is self-contained (no frameworks).  
-- Works in any modern browser with the Geolocation API enabled. 🌍
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Day 3 - DOM Events - Exercises XP Ninja

@@ -8,18 +8,19 @@
 
 </div>
 
-Create interactive browser experiences with JavaScript, DOM events, accessibility, and responsive behavior.
+Events, forms and timers: making pages react to clicks, typing, hovering and time.
 
 ## Contents
 
-- [`DailyChallenge/`](DailyChallenge/)
-- [`Exercises/`](Exercises/)
+| Folder | What it is |
+|---|---|
+| [`Exercises/`](Exercises/) | Exercises XP, XP Animations, XP Gold, XP Ninja and the Sign In Form mini project |
+| [`DailyChallenge/`](DailyChallenge/) | Letters and Tell the Story |
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python -m http.server 8000
-node Week3JavaScriptandDOM/Day3LearningDOMEvents/DailyChallenge/Letters/main.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Day 3 - DOM Events

@@ -1,4 +1,4 @@
-# Js
+# 📜 Scripts - Whack-a-Mole
 
 <div align="center">
 
@@ -8,16 +8,16 @@
 
 </div>
 
-JavaScript modules for this exercise.
+The browser script for Whack-a-Mole. It needs the page, so open `../index.html` instead of running it with `node`.
 
 ## Contents
 
-- [`app.js`](app.js)
+- [`app.js`](app.js) — builds the grid, runs the 30-second game and keeps the top 5 scores in `localStorage`
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-node Week3JavaScriptandDOM/RemoteLearningJSAndDOM/Exercises/ExercisesXP1/exercise4_whack_a_mole/js/app.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Remote Learning - JavaScript and the DOM - Whack-a-Mole

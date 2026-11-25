@@ -1,4 +1,4 @@
-# Exercise 4 Esm Todo
+# 🧪 Exercise 4 - ESM Todo List
 
 <div align="center">
 
@@ -8,33 +8,16 @@
 
 </div>
 
-> Practice relational modeling, joins, constraints, CRUD operations, and PostgreSQL queries.
+A to-do list written with ES modules. The code lives in the `todoApp/` folder.
 
-## Learning goals
+## Contents
 
-- Practice: JSON, JavaScript.
-- Validate normal inputs, edge cases, and failure states.
-- Be able to explain the solution without reading the code line-by-line.
+- [`todoApp/`](todoApp/) — the `TodoList` class and a script that adds, completes and lists tasks
 
-## How to run
+---
 
-```text
-node todoApp/app.js
-```
+## 👤 Author
 
-## Files
-
-- `todoApp/app.js`
-- `todoApp/todo.js`
-
-## Verification checklist
-
-- [ ] Main flow works
-- [ ] Invalid input is handled
-- [ ] Code is formatted
-- [ ] Tests or repeatable manual checks exist
-- [ ] README matches the current implementation
-
-## Next improvement
-
-Describe one concrete refactor, test, accessibility improvement, or product enhancement.
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 6 Day 4 - Introduction to Node.js - Exercise 4

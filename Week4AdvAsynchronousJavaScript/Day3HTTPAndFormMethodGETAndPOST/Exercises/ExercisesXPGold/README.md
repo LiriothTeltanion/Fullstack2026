@@ -1,4 +1,4 @@
-# Exercise XP Gold — HTML Form #3 (plain)
+# 🥇 Exercises XP Gold
 
 <div align="center">
 
@@ -8,14 +8,34 @@
 
 </div>
 
-A minimal two-page form matching the screenshot layout. The first page submits with GET;
-the second page reads the query string and writes the values into a `<section>` using the DOM.
+A two-page form: `index.html` sends a name and a last name with GET to `result.html`, which reads them from the URL and writes them into a `<section>`.
 
-## Files
-- `index.html` — form with `name`, `lastname`, and submit.
-- `result.html` — displays the submitted values inside `<section id="output">`.
+## ▶️ How to run
 
-## How to run
-1. Open `index.html` in a browser.
-2. Enter values (defaults provided) and press **Submit**.
-3. `result.html` shows the values using a small inline script with `URLSearchParams`.
+Open `index.html` in a browser, keep the default values (John Doe) or type new ones, and press **Submit**.
+
+`result.html` shows:
+
+```
+NAME: John
+LAST NAME: Doe
+```
+
+## 🎯 The challenge
+
+1. **The form** — `action="result.html"` and `method="get"`, with `name` and `lastname` inputs.
+2. **The result page** — a small inline script reads both values with `URLSearchParams`, trims them and adds one `<p>` per value to `<section id="output">`. An empty value shows `(empty)`.
+
+## 🧠 What I learned
+
+- A form's `action` can point to another page
+- GET makes the values available to the next page through the URL
+- `textContent` is a safe way to put user input on the page
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 4 Day 3 - HTTP and GET/POST Forms - Exercises XP Gold

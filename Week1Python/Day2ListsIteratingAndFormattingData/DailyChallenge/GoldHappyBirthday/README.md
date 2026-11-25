@@ -1,4 +1,4 @@
-# 💪 Daily Challenge GOLD — Happy Birthday
+# 🌟 Daily Challenge Gold - Happy Birthday
 
 <div align="center">
 
@@ -8,20 +8,15 @@
 
 </div>
 
-A small program in [happybirthday.py](happybirthday.py) that asks for your birthdate and draws an ASCII birthday cake.
+A small program in [happybirthday.py](happybirthday.py) that asks for your birthdate and draws an ASCII birthday cake with one candle per last digit of your age.
 
-## 🎯 How it works
+## ▶️ How to run
 
-1. Asks for a birthdate as `DD/MM/YYYY` (for example `16/06/1994`).
-2. Parses it with `datetime.strptime()`. If the format or the date is wrong, it prints a short message and stops.
-3. Calculates the age from today's date:
-   ```python
-   age = today.year - bday.year - ((today.month, today.day) < (bday.month, bday.day))
-   ```
-4. Uses `age % 10` as the number of candles, so 31 gives one candle and 40 gives none.
-5. Draws the cake. If the birth year is a leap year (`calendar.isleap()`), it draws it twice.
+```bash
+python happybirthday.py
+```
 
-With 3 candles the cake looks like this:
+For someone who is 23 or 33 (3 candles) the cake looks like this:
 
 ```
        ___iii___
@@ -35,21 +30,27 @@ With 3 candles the cake looks like this:
 
 The age depends on your computer's date, so the cake can change from day to day.
 
-## ▶️ Run
+## 🎯 The challenge
 
-```bash
-python happybirthday.py
-```
+1. Ask for a birthdate as `DD/MM/YYYY` (for example `16/06/1994`).
+2. Parse it with `datetime.strptime()`. If the format or the date is wrong, print a short message and stop.
+3. Calculate the age from today's date:
+   ```python
+   age = today.year - bday.year - ((today.month, today.day) < (bday.month, bday.day))
+   ```
+4. Use `age % 10` as the number of candles, so 31 gives one candle and 40 gives none.
+5. Draw the cake. If the birth year is a leap year (`calendar.isleap()`), draw it twice.
 
-## 💡 What I learned
+## 🧠 What I learned
 
-- `strptime()` format codes: `%d` day, `%m` month, `%Y` year.
-- Python compares tuples element by element, which makes the "birthday not reached yet" check one line.
-- `"i" * candles` builds the candle row.
+- `strptime()` format codes: `%d` day, `%m` month, `%Y` year
+- Python compares tuples element by element, which makes the "birthday not reached yet" check one line
+- `"i" * candles` builds the candle row
 
-Ideas for later: show 10 candles on round birthdays (`age % 10 or 10`) and accept `DD-MM-YYYY` too.
+---
 
 ## 👤 Author
 
 **Kevin Cusnir 'Lirioth'**  
-Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 1 Day 2 - Lists, Iteration and Data Formatting - Daily Challenge Gold

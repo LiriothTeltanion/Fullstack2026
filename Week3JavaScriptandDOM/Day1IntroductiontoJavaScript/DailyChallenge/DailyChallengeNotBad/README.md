@@ -1,4 +1,4 @@
-# Daily Challenge Not Bad
+# 💪 Daily Challenge - Not Bad
 
 <div align="center">
 
@@ -8,33 +8,45 @@
 
 </div>
 
-> Create accessible browser interactions using DOM selection, events, forms, and state updates.
+A small page that asks for a sentence and replaces the part from `not` to `bad` with `good`, but only when `bad` comes after `not`.
 
-## Learning goals
+## ▶️ How to run
 
-- Practice: HTML, JavaScript.
-- Validate normal inputs, edge cases, and failure states.
-- Be able to explain the solution without reading the code line-by-line.
+Open `index.html` in a browser (or run `npm run dev` from the repo root and open this folder at `http://localhost:8000/`), then click **Run**.
 
-## How to run
-
-```text
-# Open index.html in a browser or serve the repository locally
+```
+Input:  The movie is not that bad, I like it
+Result: The movie is good, I like it
 ```
 
-## Files
+## 🎯 The challenge
 
-- `index.html`
-- `script.js`
+`checkSentence()` in `script.js`:
 
-## Verification checklist
+1. Asks for a sentence with `prompt()` (an empty answer or Cancel shows `No sentence.`).
+2. Finds `wordNot = sentence.indexOf("not")` and `wordBad = sentence.indexOf("bad")`.
+3. If both exist and `wordBad > wordNot`, it builds `before + "good" + after` with `slice()` (`after` starts at `wordBad + 3`).
+4. Otherwise it keeps the sentence as it is.
+5. Shows the result in `#result` and logs the indexes in the console.
 
-- [ ] Main flow works
-- [ ] Invalid input is handled
-- [ ] Code is formatted
-- [ ] Tests or repeatable manual checks exist
-- [ ] README matches the current implementation
+| Input | Result |
+|---|---|
+| `This dinner is not that bad ! You cook well` | `This dinner is good ! You cook well` |
+| `This dinner is bad !` | `This dinner is bad !` (no `not`) |
 
-## Next improvement
+More notes and edge cases are in [README_Not_Bad_JS.md](README_Not_Bad_JS.md).
 
-Describe one concrete refactor, test, accessibility improvement, or product enhancement.
+## 🧠 What I learned
+
+- `indexOf()` returns `-1` when a word is missing, so I check both indexes first
+- `slice()` lets me rebuild a string around the part I want to replace
+- The search is case-sensitive: `Not` or `BAD` are not found
+- `prompt()` returns `null` on Cancel, so I handle that before using the text
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Day 1 - Introduction to JavaScript - Daily Challenge

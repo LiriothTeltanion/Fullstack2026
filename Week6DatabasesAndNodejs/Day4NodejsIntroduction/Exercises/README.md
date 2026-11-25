@@ -1,4 +1,4 @@
-# Exercises
+# 📚 Exercises
 
 <div align="center">
 
@@ -8,16 +8,16 @@
 
 </div>
 
-Practice relational modeling, safe queries, joins, constraints, and persistent data workflows.
+The Day 4 Node.js exercises.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/)
+- [`ExercisesXP/`](ExercisesXP/) — seven small exercises on modules, npm packages and the `fs` module
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-node Week6DatabasesAndNodejs/Day4NodejsIntroduction/Exercises/ExercisesXP/exercise-2-esm-average-age/app.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 6 Day 4 - Introduction to Node.js - Exercises

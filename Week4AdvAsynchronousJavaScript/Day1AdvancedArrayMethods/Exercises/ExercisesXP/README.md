@@ -1,4 +1,4 @@
-# Day1 Advanced Array Methods — Exercises XP
+# 🥉 Exercises XP
 
 <div align="center">
 
@@ -8,32 +8,35 @@
 
 </div>
 
-> Practice asynchronous control flow, promises, error handling, and resilient user feedback.
+One HTML page with three small exercises about forms and JSON: a GET form, a POST form and a `JSON.stringify` demo with the Mario game object.
 
-## Learning goals
+## ▶️ How to run
 
-- Practice: HTML.
-- Validate normal inputs, edge cases, and failure states.
-- Be able to explain the solution without reading the code line-by-line.
+Open `http_forms_json_exercises.html` in a browser, or serve the repository from its root:
 
-## How to run
-
-```text
-# Open http_forms_json_exercises.html in a browser or serve the repository locally
+```bash
+npm run dev
 ```
 
-## Files
+and go to `http://localhost:8000/Week4AdvAsynchronousJavaScript/Day1AdvancedArrayMethods/Exercises/ExercisesXP/http_forms_json_exercises.html`.
 
-- `http_forms_json_exercises.html`
+## 🎯 The challenge
 
-## Verification checklist
+1. **GET form** — sends `name` and `message` to the same page. The data shows up in the URL as a query string, and `parseQuery()` reads it back with `URLSearchParams` and prints it as JSON next to the full URL.
+2. **POST form** — the submit handler calls `preventDefault()`, so no request is sent. It logs the form data with `Object.fromEntries(new FormData(form))` and shows an alert.
+3. **JSON Mario** — **Make JSON** turns `marioGame` into a compact string and a pretty one (`JSON.stringify(obj, null, 2)`), shows both and stops on a `debugger;` line so I can inspect them in DevTools.
 
-- [ ] Main flow works
-- [ ] Invalid input is handled
-- [ ] Code is formatted
-- [ ] Tests or repeatable manual checks exist
-- [ ] README matches the current implementation
+## 🧠 What I learned
 
-## Next improvement
+- GET puts the form data in the URL, POST puts it in the request body
+- `URLSearchParams` makes reading a query string easy
+- `JSON.stringify` keeps nested objects nested, it just turns them into text
+- `debugger;` pauses the code when DevTools is open
 
-Describe one concrete refactor, test, accessibility improvement, or product enhancement.
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 4 Day 1 - Advanced Array Methods - Exercises XP

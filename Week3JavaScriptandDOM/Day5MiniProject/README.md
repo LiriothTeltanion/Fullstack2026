@@ -8,18 +8,19 @@
 
 </div>
 
-Create interactive browser experiences with JavaScript, DOM events, accessibility, and responsive behavior.
+Putting the week together in small browser projects: a drawing board, a drum kit and a to-do list.
 
 ## Contents
 
-- [`DailyChallenge/`](DailyChallenge/)
-- [`Exercises/`](Exercises/)
+| Folder | What it is |
+|---|---|
+| [`Exercises/`](Exercises/) | The Coloring Game and Drum Set mini projects |
+| [`DailyChallenge/`](DailyChallenge/) | Todo List |
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python -m http.server 8000
-node Week3JavaScriptandDOM/Day5MiniProject/Exercises/MiniProjectColoringGame/script.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Day 5 - Mini-projects

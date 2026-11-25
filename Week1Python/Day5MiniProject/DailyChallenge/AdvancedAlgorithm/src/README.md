@@ -1,4 +1,4 @@
-# Src
+# 📦 Source - Advanced Algorithm
 
 <div align="center">
 
@@ -8,18 +8,17 @@
 
 </div>
 
-Source modules for this project.
+The modules that [main.py](../main.py) imports for the two-sum challenge.
 
 ## Contents
 
-- [`demodata.py`](demodata.py)
-- [`pairs.py`](pairs.py)
+- [`pairs.py`](pairs.py) — `find_value_pairs_hash()` and `find_value_pairs_two_pointer()`
+- [`demodata.py`](demodata.py) — `make_dataset()` builds the random list and returns it with the target 3728
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python Week1Python/Day5MiniProject/DailyChallenge/AdvancedAlgorithm/src/demodata.py
-python Week1Python/Day5MiniProject/DailyChallenge/AdvancedAlgorithm/src/pairs.py
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 1 Day 5 - Mini-projects - Advanced Algorithm

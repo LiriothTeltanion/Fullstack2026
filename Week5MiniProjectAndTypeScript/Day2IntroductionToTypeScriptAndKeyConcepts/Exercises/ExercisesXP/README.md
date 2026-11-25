@@ -1,4 +1,4 @@
-# ExercisesXP Basics — TypeScript (Single File)
+# 🥉 Exercises XP
 
 <div align="center">
 
@@ -8,20 +8,52 @@
 
 </div>
 
-Single-file solution for the beginner-focused Exercises XP (1–9): Hello World, type annotations, union types, control flow, tuples, objects, DOM type assertions, switch with grouped cases, and function overloading.
+Nine beginner TypeScript exercises in one file: annotations, unions, `if...else`, tuples, object types, a DOM type assertion, `switch` and overloads.
 
-## Files
-- `ExercisesXP_Basics.ts` — all solutions and a small demo guarded so it won't run when imported by a grader.
+## ▶️ How to run
 
-## How to run locally
+From this folder:
+
 ```bash
-# with ts-node
-npx ts-node ExercisesXP_Basics.ts
-
-# or compile and run JS
-npx tsc ExercisesXP_Basics.ts
-node ExercisesXP_Basics.js
+npx tsc ExercisesXP_Basics.ts --module commonjs --outDir ~/tmp-ts
+node ~/tmp-ts/ExercisesXP_Basics.js
 ```
 
-## Submission note
-If your autograder evaluates every file in the folder, place **only** `ExercisesXP_Basics.ts` in the assignment directory to avoid false negatives on non-TS files.
+The demo block only runs as CommonJS (`require.main === module`), and inside this repository `.js` files are ES modules, so I compile it to a folder outside the repo first.
+
+```
+Hello, World!
+Age: 30 | Name: Kevin
+describeNumberSign(-3): negative
+Details tuple: [ 'Alice', 25, 'Hello, Alice! You are 25 years old.' ]
+editor -> Edit content
+greet("Kevin"): Hello, Kevin!
+```
+
+## 🎯 The challenge
+
+| Function | What it does |
+|---|---|
+| `describeNumberSign(n)` | Returns `positive`, `negative` or `zero` |
+| `getDetails(name, age)` | Returns a tuple `[string, number, string]` with a greeting |
+| `createPerson(name, age)` | Returns an object of type `Person` |
+| `setInputValueById(id, value)` | Asserts the element is an `HTMLInputElement` and sets its value; does nothing outside a browser |
+| `getAction(role)` | A `switch` that maps `admin`, `editor`, `viewer` and `guest` to an action, or `Invalid role` |
+| `greet()` / `greet(name)` | Two overload signatures with one implementation; the default is `there` |
+
+Exercises 1 to 3 are typed constants: a message, `age` and `fullName`, and an `id` of type `string | number`.
+
+## 🧠 What I learned
+
+- TypeScript checks types while compiling; the JavaScript that runs has none
+- A tuple fixes both the length and the type of each position
+- `as HTMLInputElement` only tells the compiler what I expect, it checks nothing at runtime
+- Overload signatures describe the calls; one body handles them all
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 5 Day 2 - TypeScript Fundamentals and Key Concepts - Exercises XP

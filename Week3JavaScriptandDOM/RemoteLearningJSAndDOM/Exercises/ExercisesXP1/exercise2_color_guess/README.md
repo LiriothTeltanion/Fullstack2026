@@ -1,4 +1,4 @@
-# Exercise2 Color Guess
+# 🧪 Exercise 2 - Color Guess
 
 <div align="center">
 
@@ -8,35 +8,34 @@
 
 </div>
 
-> Create accessible browser interactions using DOM selection, events, forms, and state updates.
+A color game: the page shows a random color and I guess its `rgb()` value.
 
-## Learning goals
+## ▶️ How to run
 
-- Practice: CSS, HTML, JavaScript.
-- Validate normal inputs, edge cases, and failure states.
-- Be able to explain the solution without reading the code line-by-line.
+Open `index.html` in a browser (or use `npm run dev` from the repo root and open this folder). Pick a difficulty and start guessing.
 
-## How to run
+## 🎯 The challenge
 
-```text
-# Open index.html in a browser or serve the repository locally
-node js/app.js
-```
+| Function | What it does |
+|---|---|
+| `newRound()` | Picks a random target color. Easy shows 3 `rgb()` buttons, Medium shows 6, Hard shows three R / G / B number inputs. |
+| `guessArray(guess)` | Checks a button guess, marks every button as `correct` or `wrong` and disables them. |
+| `guessHard()` | Checks the three typed numbers against the exact target. |
+| `endRound(correct)` | Shows `✅ Correct!` or `❌ Not quite.`; after a correct guess, counts down 5 seconds and starts a new round. |
 
-## Files
+**Next Color** starts a new round at any time, and changing the difficulty does too.
 
-- `css/styles.css`
-- `index.html`
-- `js/app.js`
+## 🧠 What I learned
 
-## Verification checklist
+- `Math.floor(Math.random() * 256)` gives one color channel from 0 to 255
+- `setInterval` with a counter makes a simple countdown
+- A regex like `/\d+/g` pulls the three numbers back out of an `rgb()` string
+- Clearing the old timer first stops two countdowns from running together
 
-- [ ] Main flow works
-- [ ] Invalid input is handled
-- [ ] Code is formatted
-- [ ] Tests or repeatable manual checks exist
-- [ ] README matches the current implementation
+---
 
-## Next improvement
+## 👤 Author
 
-Describe one concrete refactor, test, accessibility improvement, or product enhancement.
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 3 Remote Learning - JavaScript and the DOM - Exercise 2

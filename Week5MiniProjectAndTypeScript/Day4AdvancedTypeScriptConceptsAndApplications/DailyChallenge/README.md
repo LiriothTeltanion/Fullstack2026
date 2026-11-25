@@ -1,4 +1,4 @@
-# TypeGuardUnion — Daily Challenge: Type Guard with Union Types
+# 💪 Daily Challenge - Type Guard with Union Types
 
 <div align="center">
 
@@ -8,31 +8,45 @@
 
 </div>
 
-Single-file TypeScript solution demonstrating discriminated unions and custom type guards.
+`handleData()` gets a mixed list of users, products and orders, uses type guards to find out what each item is and returns one message per item. Unknown items get a message instead of an error.
 
-## File
-- `TypeGuardUnion.ts` — types (`User | Product | Order`), guard predicates, and `handleData` implementation with graceful fallback.
+## ▶️ How to run
 
-## Requirements
-- Node.js 18+
+From this folder:
 
-## Run with ts-node
 ```bash
-npx ts-node TypeGuardUnion.ts
+npx tsc TypeGuardUnion.ts --module commonjs --types node --outDir ~/tmp-ts
+node ~/tmp-ts/TypeGuardUnion.js
 ```
 
-## Compile and run with tsc
-```bash
-npx tsc TypeGuardUnion.ts
-node TypeGuardUnion.js
+The demo uses `require.main === module`, so it needs CommonJS: running the `.ts` file straight with Node stops with `require is not defined in ES module scope`.
+
+```
+Hello Kevin, age 30.
+Product #101 costs $49.90.
+Order ORD-2025-0001: amount $120.50.
+Unknown item at index 3.
 ```
 
-## Notes
-- Uses discriminated unions via the `type` field and predicate functions (`isUser`, `isProduct`, `isOrder`).
-- `handleData` returns an array of messages and handles unexpected cases by returning a descriptive string instead of throwing.
+## 🎯 The challenge
+
+| Function | What it does |
+|---|---|
+| `isUser(x)` / `isProduct(x)` / `isOrder(x)` | Type predicates that check the `type` field and the other fields' types |
+| `handleData(items)` | Loops over the list and builds a greeting, a price line or an order line |
+
+The three types share a `type` field (`"user"`, `"product"`, `"order"`), so `Mixed = User | Product | Order` is a discriminated union.
+
+## 🧠 What I learned
+
+- A function that returns `x is User` narrows the type inside an `if`
+- A shared literal field makes union types easy to tell apart
+- Returning a message for unknown data is gentler than throwing
 
 ---
 
-## 📜 License
+## 👤 Author
 
-This exercise follows the repository-wide MIT terms; see the [LICENSE](../../../LICENSE) file for details.
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 5 Day 4 - Advanced TypeScript Concepts and Applications - Daily Challenge

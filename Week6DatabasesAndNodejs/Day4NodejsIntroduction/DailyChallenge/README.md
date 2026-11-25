@@ -1,4 +1,4 @@
-# Daily Challenge
+# 💪 Daily Challenges
 
 <div align="center">
 
@@ -8,17 +8,16 @@
 
 </div>
 
-Practice relational modeling, safe queries, joins, constraints, and persistent data workflows.
+The Day 4 daily challenge.
 
 ## Contents
 
-- [`NodejsAppAndNPM/`](NodejsAppAndNPM/)
+- [`NodejsAppAndNPM/`](NodejsAppAndNPM/) — a CommonJS module, the `chalk` package and `fs` in three tasks, then all together in `challenge.js`
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-node Week6DatabasesAndNodejs/Day4NodejsIntroduction/DailyChallenge/NodejsAppAndNPM/task-1/app.js
-node Week6DatabasesAndNodejs/Day4NodejsIntroduction/DailyChallenge/NodejsAppAndNPM/task-2/app.js
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 6 Day 4 - Introduction to Node.js - Daily Challenges

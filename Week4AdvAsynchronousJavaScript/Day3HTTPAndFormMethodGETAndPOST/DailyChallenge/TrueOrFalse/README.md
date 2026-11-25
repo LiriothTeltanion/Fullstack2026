@@ -1,4 +1,4 @@
-# Daily Challenge: True or False
+# 💪 Daily Challenge - True or False
 
 <div align="center">
 
@@ -8,29 +8,37 @@
 
 </div>
 
-A tiny JS function that returns `true` only if **all** parameters are truthy.
+A function that returns `true` only when every argument is truthy, with a demo page to try it.
 
-## Function
-```js
-function allTruthy(...values) {
-  for (const v of values) {
-    if (!v) return false;
-  }
-  return true;
-}
+## ▶️ How to run
+
+Open `index.html` in a browser (no build step), or run `npm run dev` from the repository root and go to `http://localhost:8000/Week4AdvAsynchronousJavaScript/Day3HTTPAndFormMethodGETAndPOST/DailyChallenge/TrueOrFalse/`.
+
+```
+allTruthy(true, true, true) → true
+allTruthy(true, false, true) → false
+allTruthy(5, 4, 3, 2, 1, 0) → false
 ```
 
-> FYI: A short version is `const allTruthy = (...v) => v.every(Boolean)`.
+## 🎯 The challenge
 
-## Examples
-- `allTruthy(true, true, true) ➞ true`
-- `allTruthy(true, false, true) ➞ false`
-- `allTruthy(5, 4, 3, 2, 1, 0) ➞ false`
+| Function | What it does |
+|---|---|
+| `allTruthy(...values)` | Loops over the arguments and returns `false` at the first falsy one, otherwise `true` |
+| `parseToken(token)` | Turns typed text like `true`, `null`, `""` or `42` into the real value |
 
-## Files
-- `index.html` — tiny demo page
-- `style.css` — minimal styling
-- `app.js` — the function + examples + a basic input parser for your own tests
+Three buttons run the examples above. The custom box splits my input on commas, parses each part and prints the values and the result as JSON.
 
-## How to run
-- Just open `index.html` in your browser (double-click). No build step needed.
+## 🧠 What I learned
+
+- Rest parameters (`...values`) collect any number of arguments
+- The falsy values are `false`, `0`, `""`, `null`, `undefined` and `NaN`
+- `values.every(Boolean)` is the one-line version
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 4 Day 3 - HTTP and GET/POST Forms - Daily Challenge

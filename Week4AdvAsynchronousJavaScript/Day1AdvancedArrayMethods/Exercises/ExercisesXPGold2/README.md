@@ -1,4 +1,4 @@
-# Arrays Methods — Exercises XP Gold (TypeScript) 🥇🧮
+# 🥇 Exercises XP Gold 2
 
 <div align="center">
 
@@ -8,29 +8,19 @@
 
 </div>
 
-Practice key array and string methods with concise TypeScript functions.
+Five short array and string exercises in one TypeScript file.
 
-## ✅ What’s inside
-- 1️⃣ **Sum elements**: `sumArray([1,2,3,4]) -> 10`
-- 2️⃣ **Remove duplicates**: `uniqueArray([1,1,2,3,3]) -> [1,2,3]`
-- 3️⃣ **Remove certain values**: filter out `null, 0, "", false, undefined, NaN`
-- 4️⃣ **Repeat string** (custom logic): `repeat('Ha!', 3) -> "Ha!Ha!Ha!"`
-- 5️⃣ **Turtle & Rabbit**: align with `padStart`, explain `trim().padEnd(9, '=')`
+## ▶️ How to run
 
-## 📂 Files
-- `ArraysMethodsXPGold.ts` — all solutions in one file, plus a small demo (guarded).
+From this folder:
 
-## ▶️ Run locally
 ```bash
-# Using ts-node
-npx ts-node ArraysMethodsXPGold.ts
-
-# Or compile to JS and run
-npx tsc ArraysMethodsXPGold.ts
-node ArraysMethodsXPGold.js
+npx tsc ArraysMethodsXPGold.ts --module commonjs --outDir ~/tmp-ts
+node ~/tmp-ts/ArraysMethodsXPGold.js
 ```
 
-## 🧪 Quick check
+The demo block only runs as CommonJS (`require.main === module`), and inside this repository `.js` files are ES modules, so I compile it to a folder outside the repo first.
+
 ```
 E1 sumArray([1,2,3,4]): 10
 E2 uniqueArray: [ 1, 2, 3, 4, 5 ]
@@ -41,3 +31,27 @@ E4 repeat('Ha!', 3): Ha!Ha!Ha!
        🐇
 turtleAfterPad: 🐢=======
 ```
+
+## 🎯 The challenge
+
+| Function | What it does |
+|---|---|
+| `sumArray(nums)` | Adds all the numbers with `reduce` |
+| `uniqueArray(arr)` | Removes duplicates with `new Set` |
+| `cleanArray(arr)` | Drops `null`, `0`, `""`, `false`, `undefined` and `NaN` |
+| `repeat(str, n = 1)` | Repeats a string with a loop instead of `String.prototype.repeat` |
+| `alignRacers()` | Lines the turtle and rabbit up under the start line with `padStart(9)` and shows what `trim().padEnd(9, "=")` does |
+
+## 🧠 What I learned
+
+- `Array.from(new Set(arr))` is the shortest way to remove duplicates
+- `NaN` needs `Number.isNaN`, because `NaN === NaN` is false
+- An emoji takes two UTF-16 code units, which changes how `padStart` counts
+
+---
+
+## 👤 Author
+
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 4 Day 1 - Advanced Array Methods - Exercises XP Gold 2

@@ -8,17 +8,19 @@
 
 </div>
 
-Practice relational modeling, safe queries, joins, constraints, and persistent data workflows.
+Relationships in the `dvdrental` database: foreign keys, `ON DELETE CASCADE`, `LEFT JOIN`, a view and questions that join four or five tables.
 
 ## Contents
 
-- [`Exercises/`](Exercises/)
+| Folder | What it is |
+|---|---|
+| [`Exercises/ExercisesXP/`](Exercises/ExercisesXP/) | Film languages, two new linked tables and searches over rentals |
+| [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | Rentals that are still out and a "Happy Halloween" viewing-time plan per store |
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-psql -f Week6DatabasesAndNodejs/Day3DatabaseConcepts2/Exercises/ExercisesXP/xp_dvdrental_relationships.sql
-psql -f Week6DatabasesAndNodejs/Day3DatabaseConcepts2/Exercises/ExercisesXPGold/xp_gold_dvdrental.sql
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 6 Day 3 - Database Concepts II

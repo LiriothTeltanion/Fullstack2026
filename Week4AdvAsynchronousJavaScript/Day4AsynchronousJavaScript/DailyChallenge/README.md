@@ -1,4 +1,4 @@
-# Daily Challenge
+# 💪 Daily Challenges
 
 <div align="center">
 
@@ -8,17 +8,16 @@
 
 </div>
 
-Build resilient asynchronous flows with HTTP requests, loading states, validation, and error handling.
+The Day 4 daily challenge.
 
 ## Contents
 
-- [`PlayWithWords/`](PlayWithWords/)
+- [`PlayWithWords/`](PlayWithWords/) — `makeAllCaps` and `sortWords` chained together, and a Morse translator built from promises
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-node Week4AdvAsynchronousJavaScript/Day4AsynchronousJavaScript/DailyChallenge/PlayWithWords/daily_promises_morse.js
-python -m http.server 8000
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 4 Day 4 - Asynchronous JavaScript - Daily Challenges

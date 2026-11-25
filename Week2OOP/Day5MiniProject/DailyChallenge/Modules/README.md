@@ -1,4 +1,4 @@
-# ⏱️ Daily Challenge: Modules — Page Load Timer (Python)
+# 💪 Daily Challenge - Page Load Timer
 
 <div align="center">
 
@@ -8,86 +8,52 @@
 
 </div>
 
-Measure how long a webpage takes to fully load — request + full body download — using **requests** and **time**. 🌐🐍
+The modules challenge: measure how long a web page takes to load completely, from sending the request until the last byte arrives, with `requests` and `time`.
 
----
-
-## 🧠 What You’ll Practice
-- **OOP & Modules** basics (clean module + CLI) 🧩
-- **requests** for HTTP 🌍
-- **time.perf_counter()** for precise timing ⏲️
-
----
-
-## ✅ Task
-Create a function that returns **the total time** to fetch a webpage — from sending the request until **all bytes** are downloaded. Then test with multiple sites (e.g., google, ynet, imdb).
-
----
-
-## 🚀 Quickstart
-
-**Requirements:** `Python 3.10+` and `requests`
+## ▶️ How to run
 
 ```bash
-pip install requests
+pip install -r requirements.txt
 
-# Run default benchmark (Google, Ynet, IMDb, Wikipedia, GitHub)
+# Default sites: Google, Ynet, IMDb, Wikipedia, GitHub
 python cli.py
 
-# Custom targets + attempts + timeout
-python cli.py --urls google.com ynet.co.il imdb.com --attempts 3 --timeout 10
+# Your own sites, attempts and timeout, with an optional JSON file
+python cli.py --urls google.com ynet.co.il imdb.com --attempts 3 --timeout 10 --json-out results.json
 ```
 
-Optional JSON export:
+It prints a table with the minimum, average and maximum time, the standard deviation and each sample, plus an `Errors:` line under any site that had failures. The numbers depend on your network.
+
+## 🎯 The challenge
+
+| Part | What it does |
+|---|---|
+| `timer.normalize_url(url)` | Adds `https://` when the address has no scheme |
+| `timer.measure_load_time(url, timeout=15, verify=True)` | Starts `time.perf_counter()`, sends `GET` with `stream=True`, reads the whole body in chunks and returns a dict with `elapsed_s`, `status`, `bytes`, `ok` and `error` |
+| `timer.benchmark(urls, attempts=3, ...)` | Runs several attempts per site and keeps the times, min, average, max and standard deviation |
+| `cli.py` | Reads the options with `argparse`, prints the table and can save the report as JSON |
+
+## 🧪 Tests
+
+From the repository root (no internet and no `requests` needed, the session is faked):
+
 ```bash
-python cli.py --urls google.com imdb.com --json-out results.json
+python -m unittest discover -s tests/python -p "test_timer.py" -v
 ```
 
----
+1 test checks the byte count of one measurement and the summary of a two-attempt benchmark. This folder also has its own [`tests/`](tests/) with 2 more tests; they need `requests` installed and run from this folder with `python -m unittest discover -s tests`.
 
-## 🧩 Core Function
+## 🧠 What I learned
 
-- `measure_load_time(url, timeout=15, verify=True)` → returns a dict:
-  - `elapsed_s` ⏳ total time
-  - `status` 📦 HTTP status code
-  - `bytes` 📦 downloaded bytes
-  - `ok` ✅ success flag
-  - `error` ❌ error (if any)
-
-Under the hood, it performs `GET(..., stream=True)` and reads the **entire** body to be accurate. 🔎
+- `stream=True` plus reading every chunk measures the full download, not just the headers
+- `time.perf_counter()` is the right clock for measuring short durations
+- Keeping the logic in `timer.py` and the printing in `cli.py` makes the logic easy to test
+- `unittest.mock.patch` lets me test network code without touching the network
 
 ---
 
-## 🧪 Example Output
+## 👤 Author
 
-```text
-📊 Page Load Benchmark Results
-
-URL                                |      min |      avg |      max |      σ |   n | samples
-----------------------------------------------------------------------------------------------
-https://www.google.com             |   0.183s |   0.221s |   0.254s | 0.029s |   3 | 0.183s, 0.226s, 0.254s
-   ⚠️  Errors: []
-https://www.ynet.co.il             |   0.492s |   0.561s |   0.638s | 0.059s |   3 | 0.492s, 0.553s, 0.638s
-   ⚠️  Errors: []
-```
-
-*(Your numbers will vary based on network conditions.)* 📶
-
----
-
-## 🗂️ Structure
-
-```text
-page_load_timer_challenge/
-├─ timer.py     # ⏱️ Core timing logic (requests + time) with friendly comments
-├─ cli.py       # 🖥️ Command-line runner with table output + JSON option
-├─ tests/
-│  └─ test_timer.py  # 🧪 Unit tests (mocked, no Internet needed)
-└─ README.md
-```
-
----
-
-## 📝 Notes
-- Neutral commentary and tone; no references to external courses or experience levels. 🤝
-- Comments and README include clear emojis to guide reading. ✨
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 2 Day 5 - Mini-projects - Daily Challenge

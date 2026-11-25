@@ -1,4 +1,4 @@
-# Exercises
+# 📚 Exercises
 
 <div align="center">
 
@@ -8,20 +8,18 @@
 
 </div>
 
-Practice relational modeling, safe queries, joins, constraints, and persistent data workflows.
+The Day 1 SQL exercises: three XP levels, each one a single PostgreSQL script.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/)
-- [`ExercisesXPGold/`](ExercisesXPGold/)
-- [`ExercisesXPPlus/`](ExercisesXPPlus/)
+- [`ExercisesXP/`](ExercisesXP/) — `items` and `customers` tables with six filter queries
+- [`ExercisesXPPlus/`](ExercisesXPPlus/) — a `students` table and pattern matching with `ILIKE`
+- [`ExercisesXPGold/`](ExercisesXPGold/) — sorting and paging the `students` table with `LIMIT` and `OFFSET`
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-psql -f Week6DatabasesAndNodejs/Day1IntroductionToDatabases/Exercises/ExercisesXP/items_customers.sql
-psql -f Week6DatabasesAndNodejs/Day1IntroductionToDatabases/Exercises/ExercisesXPGold/exercisesxpgold.sql
-psql -f Week6DatabasesAndNodejs/Day1IntroductionToDatabases/Exercises/ExercisesXPPlus/exercisesxpplus.sql
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 6 Day 1 - Introduction to Databases - Exercises

@@ -1,4 +1,4 @@
-# Exercises
+# 📚 Exercises
 
 <div align="center">
 
@@ -8,23 +8,21 @@
 
 </div>
 
-Organize practical exercises with clear goals, execution paths, validation, and improvement guidance.
+The Day 3 dictionary exercises: four XP levels and two timed challenges.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/)
-- [`ExercisesXPGold/`](ExercisesXPGold/)
-- [`ExercisesXPNinja/`](ExercisesXPNinja/)
-- [`ExercisesXPPlus/`](ExercisesXPPlus/)
-- [`TimedChallenge1/`](TimedChallenge1/)
-- [`TimedChallenge2/`](TimedChallenge2/)
+- [`ExercisesXP/`](ExercisesXP/) — `zip()`, Cinemax ticket prices, the nested Zara brand dict, Disney character mappings
+- [`ExercisesXPPlus/`](ExercisesXPPlus/) — student grade summary and sales data analysis
+- [`ExercisesXPGold/`](ExercisesXPGold/) — birthday lookup and a fruit shop stock calculator
+- [`ExercisesXPNinja/`](ExercisesXPNinja/) — car manufacturer list: counting, sorting, removing duplicates
+- [`TimedChallenge1/`](TimedChallenge1/) — reversing the words of a sentence
+- [`TimedChallenge2/`](TimedChallenge2/) — checking for a perfect number
 
-## Run
+---
 
-From the repository root:
+## 👤 Author
 
-```bash
-python Week1Python/Day3Dictionaries/Exercises/ExercisesXP/exercisesxp.py
-python Week1Python/Day3Dictionaries/Exercises/ExercisesXPGold/exercisesxpgold.py
-python Week1Python/Day3Dictionaries/Exercises/ExercisesXPNinja/xpninjacars.py
-```
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 1 Day 3 - Dictionaries - Exercises
