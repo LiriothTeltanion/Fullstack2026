@@ -2,8 +2,8 @@
 
 > Regenerated from the exact Git index on `2026-11-25` by `tools/refresh_structure_catalogs.py`.
 
-- Base HEAD: `f692aee2ccbf5d31a3e9928391fe58e65d105468`
-- Source-index fingerprint: `sha256:a7cf536a55537c6be883707469440b68a1be6f23eff55f969ee606dcaf3e48cc` (generated outputs excluded)
+- Base HEAD: `119d65bf6bade3ec483c46ded09ed38a3928b5dd`
+- Source-index fingerprint: `sha256:1620db0c26cf213fb9fe8fc8bbe4acd501a5a095b4dd76d7b3466565f16677f8` (generated outputs excluded)
 
 This catalog proves repository presence and path integrity only. It does not prove that an exercise runs, that Kevin can explain it, or that it is mastered or portfolio-ready.
 
@@ -16,7 +16,7 @@ This catalog proves repository presence and path integrity only. It does not pro
 |---|---|---|---:|---|---|
 | `Week10AdvancedTypeScriptAndAuthentication/Day1UsingTypeScriptWithReact/DailyChallenge/BookList` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript \| TypeScript | 13 | present (canonical) | [source](<../../Week10AdvancedTypeScriptAndAuthentication/Day1UsingTypeScriptWithReact/DailyChallenge/BookList>); runtime unverified |
 | `Week10AdvancedTypeScriptAndAuthentication/Day1UsingTypeScriptWithReact/DailyChallenge/TypeScriptReactTodo` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript \| TypeScript | 14 | present (canonical) | [source](<../../Week10AdvancedTypeScriptAndAuthentication/Day1UsingTypeScriptWithReact/DailyChallenge/TypeScriptReactTodo>); runtime unverified |
-| `Week10AdvancedTypeScriptAndAuthentication/Day1UsingTypeScriptWithReact/Exercises/ExercisesXP` | Exercise | CSS \| HTML \| JSON \| JavaScript \| TypeScript | 16 | present (canonical) | [source](<../../Week10AdvancedTypeScriptAndAuthentication/Day1UsingTypeScriptWithReact/Exercises/ExercisesXP>); runtime unverified |
+| `Week10AdvancedTypeScriptAndAuthentication/Day1UsingTypeScriptWithReact/Exercises/ExercisesXP` | Exercise | CSS \| HTML \| JSON \| JavaScript \| TypeScript | 17 | present (canonical) | [source](<../../Week10AdvancedTypeScriptAndAuthentication/Day1UsingTypeScriptWithReact/Exercises/ExercisesXP>); runtime unverified |
 | `Week10AdvancedTypeScriptAndAuthentication/Day1UsingTypeScriptWithReact/Exercises/ExercisesXPGold` | Exercise | CSS \| HTML \| JSON \| JavaScript \| TypeScript | 18 | present (canonical) | [source](<../../Week10AdvancedTypeScriptAndAuthentication/Day1UsingTypeScriptWithReact/Exercises/ExercisesXPGold>); runtime unverified |
 | `Week10AdvancedTypeScriptAndAuthentication/Day1UsingTypeScriptWithReact/Exercises/ExercisesXPNinja` | Exercise | CSS \| HTML \| JSON \| JavaScript \| TypeScript | 15 | present (canonical) | [source](<../../Week10AdvancedTypeScriptAndAuthentication/Day1UsingTypeScriptWithReact/Exercises/ExercisesXPNinja>); runtime unverified |
 | `Week10AdvancedTypeScriptAndAuthentication/Day2MiniProject/DailyChallenge/GenericData` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript \| TypeScript | 21 | present (canonical) | [source](<../../Week10AdvancedTypeScriptAndAuthentication/Day2MiniProject/DailyChallenge/GenericData>); runtime unverified |
@@ -272,7 +272,7 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week8React/Day4MiniProject/Exercises/RandomQuoteGenerator` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 13 | present (canonical) | [source](<../../Week8React/Day4MiniProject/Exercises/RandomQuoteGenerator>); runtime unverified |
 | `Week8React/Day4MiniProject/Exercises/SnapShot` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 16 | present (canonical) | [source](<../../Week8React/Day4MiniProject/Exercises/SnapShot>); runtime unverified |
 | `Week9Redux/Day2ReduxOverviewAndConcepts/DailyChallenge/PlannerApplication` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript | 19 | present (canonical) | [source](<../../Week9Redux/Day2ReduxOverviewAndConcepts/DailyChallenge/PlannerApplication>); runtime unverified |
-| `Week9Redux/Day2ReduxOverviewAndConcepts/Exercises/ExercisesXP` | Exercise | CSS \| HTML \| JSON \| JavaScript | 19 | present (canonical) | [source](<../../Week9Redux/Day2ReduxOverviewAndConcepts/Exercises/ExercisesXP>); runtime unverified |
+| `Week9Redux/Day2ReduxOverviewAndConcepts/Exercises/ExercisesXP` | Exercise | CSS \| HTML \| JSON \| JavaScript | 20 | present (canonical) | [source](<../../Week9Redux/Day2ReduxOverviewAndConcepts/Exercises/ExercisesXP>); runtime unverified |
 | `Week9Redux/Day2ReduxOverviewAndConcepts/Exercises/ExercisesXPGold` | Exercise | CSS \| HTML \| JSON \| JavaScript | 19 | present (canonical) | [source](<../../Week9Redux/Day2ReduxOverviewAndConcepts/Exercises/ExercisesXPGold>); runtime unverified |
 | `Week9Redux/Day2ReduxOverviewAndConcepts/Exercises/ExercisesXPNinja` | Exercise | CSS \| HTML \| JSON \| JavaScript | 16 | present (canonical) | [source](<../../Week9Redux/Day2ReduxOverviewAndConcepts/Exercises/ExercisesXPNinja>); runtime unverified |
 | `Week9Redux/Day3ReduxToolkitAppStructure/DailyChallenge/PlannerApplication` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript | 17 | present (canonical) | [source](<../../Week9Redux/Day3ReduxToolkitAppStructure/DailyChallenge/PlannerApplication>); runtime unverified |
@@ -283,7 +283,7 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week9Redux/Day4ReduxToolkitAsync/Exercises/ExercisesXP` | Exercise | CSS \| HTML \| JSON \| JavaScript | 18 | present (canonical) | [source](<../../Week9Redux/Day4ReduxToolkitAsync/Exercises/ExercisesXP>); runtime unverified |
 | `Week9Redux/Day4ReduxToolkitAsync/Exercises/ExercisesXPGold` | Exercise | CSS \| HTML \| JSON \| JavaScript | 14 | present (canonical) | [source](<../../Week9Redux/Day4ReduxToolkitAsync/Exercises/ExercisesXPGold>); runtime unverified |
 | `Week9Redux/Day4ReduxToolkitAsync/Exercises/ExercisesXPNinja` | Exercise | CSS \| HTML \| JSON \| JavaScript | 14 | present (canonical) | [source](<../../Week9Redux/Day4ReduxToolkitAsync/Exercises/ExercisesXPNinja>); runtime unverified |
-| `Week9Redux/Day5ReduxMiniProject/DailyChallenge/ProductivityTracker` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript | 20 | present (canonical) | [source](<../../Week9Redux/Day5ReduxMiniProject/DailyChallenge/ProductivityTracker>); runtime unverified |
+| `Week9Redux/Day5ReduxMiniProject/DailyChallenge/ProductivityTracker` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript | 21 | present (canonical) | [source](<../../Week9Redux/Day5ReduxMiniProject/DailyChallenge/ProductivityTracker>); runtime unverified |
 | `Week9Redux/Day5ReduxMiniProject/Exercises/ExercisesXP` | Exercise | CSS \| HTML \| JSON \| JavaScript | 19 | present (canonical) | [source](<../../Week9Redux/Day5ReduxMiniProject/Exercises/ExercisesXP>); runtime unverified |
 | `Week9Redux/Day5ReduxMiniProject/Exercises/ExercisesXPGold` | Exercise | CSS \| HTML \| JSON \| JavaScript | 16 | present (canonical) | [source](<../../Week9Redux/Day5ReduxMiniProject/Exercises/ExercisesXPGold>); runtime unverified |
 | `Week9Redux/Day5ReduxMiniProject/Exercises/ExercisesXPNinja` | Exercise | CSS \| HTML \| JSON \| JavaScript | 16 | present (canonical) | [source](<../../Week9Redux/Day5ReduxMiniProject/Exercises/ExercisesXPNinja>); runtime unverified |

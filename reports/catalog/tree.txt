@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-25
-Base HEAD: f692aee2ccbf5d31a3e9928391fe58e65d105468
-Source-index SHA-256 (generated outputs excluded): a7cf536a55537c6be883707469440b68a1be6f23eff55f969ee606dcaf3e48cc
-Indexed files: 2919
+Base HEAD: 119d65bf6bade3ec483c46ded09ed38a3928b5dd
+Source-index SHA-256 (generated outputs excluded): 1620db0c26cf213fb9fe8fc8bbe4acd501a5a095b4dd76d7b3466565f16677f8
+Indexed files: 2922
 
 .
 ├── .github
@@ -555,6 +555,8 @@ Indexed files: 2919
 │   │   │   │   │   ├── main.tsx
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   └── types.ts
+│   │   │   │   ├── tests
+│   │   │   │   │   └── components.test.js
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
@@ -3382,6 +3384,8 @@ Indexed files: 2919
 │   │   │   │   │   ├── index.css
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── tests
+│   │   │   │   │   └── store.test.js
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
@@ -3641,6 +3645,8 @@ Indexed files: 2919
 │   │   │   │   │   ├── index.css
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── tests
+│   │   │   │   │   └── selectors.test.js
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
