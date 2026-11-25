@@ -12,6 +12,8 @@ The Express routers for Task API 2.
 
 ## Contents
 
+- [`users.js`](users.js): User registration, login and profile routes
+
 - [`tasks.js`](tasks.js)
 
 ---

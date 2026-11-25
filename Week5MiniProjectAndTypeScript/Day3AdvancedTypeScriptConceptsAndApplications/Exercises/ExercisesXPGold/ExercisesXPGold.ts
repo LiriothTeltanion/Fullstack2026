@@ -64,7 +64,14 @@ class Version implements Comparable<Version> {
   minor: number;
 
   constructor(text: string) {
+    // A version is exactly major.minor with two safe, non-negative integers.
+    if (!/^\d+\.\d+$/.test(text) || text !== text.trim()) {
+      throw new RangeError("Version must use non-negative major.minor integers.");
+    }
     [this.major, this.minor] = text.split(".").map(Number);
+    if (!Number.isSafeInteger(this.major) || !Number.isSafeInteger(this.minor)) {
+      throw new RangeError("Version components must be safe integers.");
+    }
   }
 
   compareTo(other: Version): number {
@@ -113,3 +120,5 @@ const history = new Stack<string>();
 console.log("5. Back from:", history.pop(), "| now on:", history.peek(), "| size:", history.size);
 
 export {};
+
+export { Version };

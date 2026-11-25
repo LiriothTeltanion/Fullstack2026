@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login · User API</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Log in</h1>
+      <p>Local coursework demo. Use the profile created on the registration page.</p>
+      <form action="/login" method="post" data-user-form>
+        <label>Username<input name="username" autocomplete="username" required /></label>
+        <label
+          >Password<input name="password" type="password" autocomplete="current-password" required
+        /></label>
+        <button type="submit" disabled>Log in</button>
+      </form>
+      <p id="result" role="status" aria-live="polite" aria-atomic="true"></p>
+      <a href="register.html">Create a demo profile</a>
+    </main>
+    <script src="forms.js" defer></script>
+  </body>
+</html>

@@ -1,62 +1,24 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="A tiny solar system and three loaders, animated with CSS keyframes only."
-    />
-    <title>CSS Animation · Orbit</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Eight CSS transitions</title>
+    <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <main>
-      <header class="intro">
-        <h1>Orbit</h1>
-        <p>
-          Pure CSS: <code>@keyframes</code>, <code>transform</code> and <code>animation</code>. No
-          JavaScript.
-        </p>
-        <!-- A checkbox can pause everything: the CSS uses body:has(#pause:checked) -->
-        <label class="pause"><input type="checkbox" id="pause" /> Pause animations</label>
-      </header>
-
-      <div
-        class="space"
-        role="img"
-        aria-label="A sun with three planets circling it at different speeds, and a moon around the blue planet"
-      >
-        <div class="stars"></div>
-        <div class="sun"></div>
-        <div class="orbit orbit-1"><div class="planet planet-1"></div></div>
-        <div class="orbit orbit-2">
-          <div class="planet planet-2">
-            <div class="moon-orbit"><div class="moon"></div></div>
-          </div>
-        </div>
-        <div class="orbit orbit-3"><div class="planet planet-3"></div></div>
+    <main class="transition-page">
+      <h1>Eight CSS transitions</h1>
+      <p>Hover a tile or focus it with the keyboard. Each transition is short and repeatable.</p>
+      <div class="transition-grid">
+        <button class="demo fade">Fade</button><button class="demo change-color">Color</button
+        ><button class="demo resize">Grow and shrink</button
+        ><button class="demo rotate-tile">Rotate</button
+        ><button class="demo circle">Square to circle</button
+        ><button class="demo shadow-3d">3D shadow</button><button class="demo swing">Swing</button
+        ><button class="demo inset">Inset border</button>
       </div>
-
-      <section class="loaders" aria-labelledby="loaders-title">
-        <h2 id="loaders-title">Three loaders</h2>
-        <div class="loader-row">
-          <figure>
-            <div class="spinner" aria-hidden="true"></div>
-            <figcaption>Spin · <code>rotate</code></figcaption>
-          </figure>
-          <figure>
-            <div class="dots" aria-hidden="true"><span></span><span></span><span></span></div>
-            <figcaption>Bounce · <code>animation-delay</code></figcaption>
-          </figure>
-          <figure>
-            <div class="pulse" aria-hidden="true"></div>
-            <figcaption>Pulse · <code>scale</code> + <code>opacity</code></figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <p class="note">If your system asks for reduced motion, everything stays still.</p>
+      <p><a href="extras.html">Extra orbit and CSS loader animations</a></p>
     </main>
   </body>
 </html>

@@ -12,6 +12,8 @@ The data files for Task API 2.
 
 ## Contents
 
+- [`users.json`](users.json): Empty demo-user store; runtime entries hold bcrypt hashes
+
 - [`tasks.json`](tasks.json)
 
 ---

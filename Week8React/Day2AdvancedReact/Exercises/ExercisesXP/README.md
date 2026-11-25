@@ -42,3 +42,7 @@ For exercise 4 I copy `.env.example` to `.env` and paste my own address from web
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 Week 8 Day 2 - Advanced React - Exercises XP
+
+## Regression checks · 2026-11-25
+
+Run npm test to render the production app in JSDOM. The test visits Home, Profile and the intentionally broken Shop, returns to Home, checks the flat and nested JSON, and posts the form to a temporary HTTP receiver returning 200 then 500. Each route boundary has a stable route-specific key so leaving Shop clears its fallback state. The form retains the original key1/email/name JSON shape, allows editing, prevents duplicate sends and reports HTTP failures accurately. npm run build verifies the production bundle.

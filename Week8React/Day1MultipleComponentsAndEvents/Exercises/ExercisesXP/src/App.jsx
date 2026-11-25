@@ -1,3 +1,4 @@
+import LifecycleExercises from "./components/LifecycleExercises.jsx";
 import Car from "./components/Car.jsx";
 import Events from "./components/Events.jsx";
 import Phone from "./components/Phone.jsx";
@@ -5,9 +6,9 @@ import Color from "./components/Color.jsx";
 
 const carInfo = { name: "Ford", model: "Mustang" };
 
-function App() {
+function PreviousExamples() {
   return (
-    <main className="page">
+    <div>
       <h1>Week 8 Day 1 · Exercises XP</h1>
 
       <section className="card">
@@ -29,8 +30,19 @@ function App() {
         <h2>Exercise 4 · useEffect</h2>
         <Color />
       </section>
-    </main>
+    </div>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <main className="page">
+      <h1>Week 8 Day 1 · Lifecycle and error boundaries</h1>
+      <LifecycleExercises />
+      <details>
+        <summary>Earlier component demos</summary>
+        <PreviousExamples />
+      </details>
+    </main>
+  );
+}

@@ -1,0 +1,10 @@
+body {
+  background: #f5f8fa;
+}
+main {
+  max-width: 1080px;
+}
+.coordinate-map {
+  width: 100%;
+  height: clamp(320px, 60vh, 600px);
+}

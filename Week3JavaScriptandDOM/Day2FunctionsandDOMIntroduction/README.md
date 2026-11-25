@@ -12,10 +12,8 @@ The day I started writing functions that take parameters and return values, and 
 
 ## Contents
 
-| Folder | What it is |
-|---|---|
-| [`Exercises/`](Exercises/) | XP, XP Gold and XP Ninja |
-| [`DailyChallenge/`](DailyChallenge/) | Planets and Words in the Stars |
+- [DailyChallenge/](DailyChallenge/) — Daily Challenges
+- [Exercises/](Exercises/) — Exercises
 
 ---
 
@@ -24,3 +22,5 @@ The day I started writing functions that take parameters and return values, and 
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 Week 3 Day 2 - Functions and DOM Introduction
+
+Navigation verified 2026-11-25. Entries link to available code and run instructions.

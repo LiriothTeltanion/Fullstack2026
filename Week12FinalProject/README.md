@@ -8,7 +8,7 @@
 
 </div>
 
-The capstone starter and my Demo Day presentation. 2 exercises in total.
+This week contains a runnable PERN starter and a five-minute Demo Day outline. The proposed project is [Ivrit Sheli](../Week11FinalProject/Day1FinalProjectScope/ProjectScope/). The linked scope describes the planned vocabulary review module and its delivery checks.
 
 ## Contents
 

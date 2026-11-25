@@ -1,0 +1,56 @@
+:root {
+  font-family: system-ui, sans-serif;
+  color: #18323d;
+  background: #f0f5f6;
+  line-height: 1.5;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+main {
+  max-width: 32rem;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 1rem;
+}
+form,
+label {
+  display: grid;
+  gap: 0.4rem;
+}
+form {
+  gap: 0.9rem;
+}
+input,
+button {
+  width: 100%;
+  min-width: 0;
+  padding: 0.6rem;
+  font: inherit;
+  border: 1px solid #7697a5;
+  border-radius: 0.3rem;
+}
+button {
+  background: #126583;
+  color: white;
+  cursor: pointer;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+a {
+  color: #126583;
+}
+#result {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 36rem) {
+  main {
+    margin: 0.5rem;
+  }
+}

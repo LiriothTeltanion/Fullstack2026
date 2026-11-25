@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "node server.js",
-    "dev": "node --watch server.js"
+    "dev": "node --watch server.js",
+    "db:setup": "node db/init.js"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
@@ -15,6 +16,7 @@
     "express-rate-limit": "^8.7.5",
     "express-session": "^1.19.0",
     "jsonwebtoken": "^9.0.2",
-    "lusca": "^1.7.0"
+    "lusca": "^1.7.0",
+    "pg": "^8.16.3"
   }
 }

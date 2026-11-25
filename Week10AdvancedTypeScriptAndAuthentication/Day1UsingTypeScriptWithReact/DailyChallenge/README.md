@@ -12,7 +12,8 @@ The daily challenges for this day.
 
 ## Contents
 
-- [`TypeScriptReactTodo/`](TypeScriptReactTodo/): TypeScript and React Todo: typed todo list with priorities and filters
+- [BookList/](BookList/) — Daily Challenge - Book List
+- [TypeScriptReactTodo/](TypeScriptReactTodo/) — Daily Challenge - TypeScript and React Todo
 
 ---
 
@@ -21,3 +22,5 @@ The daily challenges for this day.
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 Week 10 Day 1 - Using TypeScript with React - Daily Challenges
+
+Navigation verified 2026-11-25. Entries link to available code and run instructions.

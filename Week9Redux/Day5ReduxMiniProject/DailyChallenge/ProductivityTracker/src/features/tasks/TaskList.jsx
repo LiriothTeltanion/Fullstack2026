@@ -1,10 +1,14 @@
 import { useCallback, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { selectCategories, selectSelectedCategoryId } from "../categories/categoriesSlice.js";
+import {
+  selectCategories,
+  selectCategoryById,
+  selectSelectedCategoryId,
+} from "../categories/categoriesSlice.js";
 import TaskItem from "./TaskItem.jsx";
 import {
   selectCompletedCount,
-  selectVisibleTasks,
+  selectTasksByCategory,
   taskAdded,
   taskDeleted,
   taskEdited,
@@ -12,10 +16,11 @@ import {
 } from "./tasksSlice.js";
 
 export default function TaskList() {
-  const tasks = useSelector(selectVisibleTasks);
+  const tasks = useSelector(selectTasksByCategory);
   const completed = useSelector(selectCompletedCount);
   const categories = useSelector(selectCategories);
   const selectedId = useSelector(selectSelectedCategoryId);
+  const selectedCategory = useSelector(selectCategoryById);
   const dispatch = useDispatch();
   const [title, setTitle] = useState("");
   const [categoryId, setCategoryId] = useState(categories[0]?.id ?? "");
@@ -32,20 +37,27 @@ export default function TaskList() {
     [dispatch]
   );
 
-  const handleSubmit = event => {
-    event.preventDefault();
-    const target = selectedId === "all" ? categoryId : selectedId;
-    if (!title.trim() || !target) return;
-    dispatch(taskAdded(title.trim(), target));
-    setTitle("");
-  };
+  const validCategoryId = categories.some(category => category.id === categoryId)
+    ? categoryId
+    : "uncategorized";
+  const handleSubmit = useCallback(
+    event => {
+      event.preventDefault();
+      const target = selectedId === "all" ? validCategoryId : selectedId;
+      if (!title.trim() || !target) return;
+      dispatch(taskAdded(title.trim(), target === "uncategorized" ? null : target));
+      setTitle("");
+    },
+    [dispatch, title, selectedId, validCategoryId]
+  );
 
-  const nameOf = id => categories.find(category => category.id === id)?.name ?? "?";
+  const nameOf = id => categories.find(category => category.id === id)?.name ?? "Uncategorized";
 
   return (
     <section className="card">
       <h2>
-        Tasks ({completed}/{tasks.length} done)
+        {selectedCategory?.name ?? (selectedId === "uncategorized" ? "Uncategorized" : "Tasks")} (
+        {completed}/{tasks.length} done)
       </h2>
       <form className="row" onSubmit={handleSubmit}>
         <input
@@ -56,10 +68,11 @@ export default function TaskList() {
         />
         {selectedId === "all" && (
           <select
-            value={categoryId}
+            value={validCategoryId}
             onChange={event => setCategoryId(event.target.value)}
             aria-label="Category"
           >
+            <option value="uncategorized">Uncategorized</option>
             {categories.map(category => (
               <option key={category.id} value={category.id}>
                 {category.name}

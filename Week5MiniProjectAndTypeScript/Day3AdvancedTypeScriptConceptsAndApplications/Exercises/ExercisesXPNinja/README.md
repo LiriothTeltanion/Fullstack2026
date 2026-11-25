@@ -55,3 +55,31 @@ npx tsc --strict --noEmit ExercisesXPNinja.ts
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 Week 5 Day 3 - Advanced TypeScript Concepts and Applications - Exercises XP Ninja
+
+## 🧩 Class models and interface contracts
+
+[class-exercises.ts](class-exercises.ts) adds five small models with explicit access rules. [The demo](class-exercises.demo.ts) exercises each model. The generic repository and event-emitter practice above is also available through its original entry point.
+
+| Model | Behavior |
+|---|---|
+| Employee → Manager → ExecutiveManager | Public name, private age, protected salary and bonus calculation, inherited salary details and budget approval |
+| Shape → Circle / Square | One shared instance counter, overridden static type names and area calculations |
+| AdvancedCalculator | An interface accepts a numeric operation; addition, subtraction and multiplication reuse that operation method |
+| Device → Laptop | A readonly serial number stays in the inherited details while model and price can change |
+| Smartphone | A readonly product name, mutable price, warranty in months and optional percentage discount |
+
+The example bonus is 10% of monthly salary. The executive's example approval limit is twelve months of salary. Shape dimensions accept zero and reject negative or nonfinite values before incrementing the shared counter. Calculator operations reject nonfinite operands or results, including division by zero. A discount is a percentage from 0 to 100; omitting it charges the full price.
+
+### ▶️ Run and verify
+
+Use Node.js 24 or later for native TypeScript execution. From this directory, run the demo, behavior tests and strict compiler checks.
+
+```bash
+node class-exercises.demo.ts
+node --test class-exercises.test.ts
+npx tsc --strict --noEmit --target ES2022 --module nodenext --types node --allowImportingTsExtensions class-exercises.ts class-exercises.demo.ts class-exercises.test.ts class-exercises.types.ts
+```
+
+The five behavior tests cover inheritance and budget boundaries, a shared static counter, custom operations and invalid arithmetic, laptop updates, and absent/invalid discount values. [Compile-time checks](class-exercises.types.ts) verify eight access, readonly and interface constraints. Their expected errors must remain compiler errors for the check to pass. TypeScript's `private`, `protected` and `readonly` modifiers apply during compilation.
+
+Built with AI-assisted tooling; I reviewed, tested and can explain every change.

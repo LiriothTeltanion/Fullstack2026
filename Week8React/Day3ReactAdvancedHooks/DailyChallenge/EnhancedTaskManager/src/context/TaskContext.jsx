@@ -9,7 +9,7 @@ export function taskReducer(state, action) {
     case "ADD_TASK":
       return {
         ...state,
-        tasks: [...state.tasks, { id: Date.now(), text: action.text, completed: false }],
+        tasks: [...state.tasks, { id: crypto.randomUUID(), text: action.text, completed: false }],
       };
     case "TOGGLE_TASK":
       return {

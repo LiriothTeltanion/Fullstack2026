@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-25
-Base HEAD: a25ba7b6a56e4b5299701e3b708b566980d96bb4
-Source-index SHA-256 (generated outputs excluded): e300c61a340ba988efd0bbc342acee91aa9c466f6a42e75878a65003e45424c5
-Indexed files: 2549
+Base HEAD: 8e35db5d69d4d06046b0b7af15de9372439e84c8
+Source-index SHA-256 (generated outputs excluded): 3caa6a3e9e8347a274285368d1c65cd08931617f1bf2e80c8173f05bdf47842b
+Indexed files: 2907
 
 .
 ├── .github
@@ -462,10 +462,15 @@ Indexed files: 2549
 │       └── tree.txt
 ├── tests
 │   ├── js
+│   │   ├── book_list.test.mjs
+│   │   ├── calculator.test.mjs
 │   │   ├── math_helpers.test.mjs
+│   │   ├── optional_facebook.test.mjs
 │   │   ├── README.md
 │   │   ├── repository_health.test.mjs
-│   │   └── typescript_syntax.test.mjs
+│   │   ├── typescript_declarations.test.mjs
+│   │   ├── typescript_syntax.test.mjs
+│   │   └── week4_gold_arrays.test.mjs
 │   ├── python
 │   │   ├── _loader.py
 │   │   ├── README.md
@@ -473,6 +478,7 @@ Indexed files: 2549
 │   │   ├── test_display_titles.py
 │   │   ├── test_hangman.py
 │   │   ├── test_learning_intake.py
+│   │   ├── test_optional_file_and_guess.py
 │   │   ├── test_readme_visuals.py
 │   │   ├── test_repository_layout.py
 │   │   ├── test_tictactoe.py
@@ -498,6 +504,22 @@ Indexed files: 2549
 ├── Week10AdvancedTypeScriptAndAuthentication
 │   ├── Day1UsingTypeScriptWithReact
 │   │   ├── DailyChallenge
+│   │   │   ├── BookList
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── List.tsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── BookApp.tsx
+│   │   │   │   │   ├── books.ts
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.tsx
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── types.ts
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   ├── tsconfig.json
+│   │   │   │   └── vite.config.ts
 │   │   │   ├── TypeScriptReactTodo
 │   │   │   │   ├── src
 │   │   │   │   │   ├── components
@@ -585,16 +607,26 @@ Indexed files: 2549
 │   │   ├── DailyChallenge
 │   │   │   ├── GenericData
 │   │   │   │   ├── src
+│   │   │   │   │   ├── api
+│   │   │   │   │   │   ├── api.ts
+│   │   │   │   │   │   └── README.md
 │   │   │   │   │   ├── components
 │   │   │   │   │   │   ├── DataFetcher.tsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── features
+│   │   │   │   │   │   ├── dataSlice.ts
 │   │   │   │   │   │   └── README.md
 │   │   │   │   │   ├── hooks
 │   │   │   │   │   │   ├── README.md
 │   │   │   │   │   │   └── useData.ts
+│   │   │   │   │   ├── types
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── types.ts
 │   │   │   │   │   ├── App.tsx
 │   │   │   │   │   ├── index.css
 │   │   │   │   │   ├── main.tsx
 │   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── store.ts
 │   │   │   │   │   └── types.ts
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package.json
@@ -628,12 +660,20 @@ Indexed files: 2549
 │   │   │   │   │   ├── hooks
 │   │   │   │   │   │   ├── README.md
 │   │   │   │   │   │   └── useRecipes.ts
+│   │   │   │   │   ├── model
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── RecipeCollection.ts
+│   │   │   │   │   │   └── RecipeItem.ts
 │   │   │   │   │   ├── models
 │   │   │   │   │   │   ├── README.md
 │   │   │   │   │   │   ├── recipe.ts
 │   │   │   │   │   │   └── storage.ts
+│   │   │   │   │   ├── templates
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── RecipeTemplate.ts
 │   │   │   │   │   ├── App.tsx
 │   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.ts
 │   │   │   │   │   ├── main.tsx
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
@@ -650,17 +690,25 @@ Indexed files: 2549
 │   │   │   │   │   ├── authController.js
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   └── usersController.js
+│   │   │   │   ├── data
+│   │   │   │   │   └── README.md
 │   │   │   │   ├── middleware
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   └── verifyToken.js
 │   │   │   │   ├── models
+│   │   │   │   │   ├── database.js
 │   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── sessionModel.js
 │   │   │   │   │   └── userModel.js
 │   │   │   │   ├── routes
 │   │   │   │   │   ├── authRoutes.js
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   └── usersRoutes.js
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── auth.test.js
+│   │   │   │   │   └── README.md
 │   │   │   │   ├── .env.example
+│   │   │   │   ├── .gitignore
 │   │   │   │   ├── app.js
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
@@ -707,6 +755,8 @@ Indexed files: 2549
 │   │   │   │   │   │   ├── index.css
 │   │   │   │   │   │   ├── main.tsx
 │   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── store.ts
+│   │   │   │   │   │   ├── storySlice.ts
 │   │   │   │   │   │   └── types.ts
 │   │   │   │   │   ├── index.html
 │   │   │   │   │   ├── package.json
@@ -718,6 +768,10 @@ Indexed files: 2549
 │   │   │   │   │   │   ├── authController.js
 │   │   │   │   │   │   ├── README.md
 │   │   │   │   │   │   └── storiesController.js
+│   │   │   │   │   ├── db
+│   │   │   │   │   │   ├── init.js
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── schema.sql
 │   │   │   │   │   ├── middleware
 │   │   │   │   │   │   ├── loadStory.js
 │   │   │   │   │   │   ├── README.md
@@ -725,10 +779,12 @@ Indexed files: 2549
 │   │   │   │   │   ├── models
 │   │   │   │   │   │   ├── db.js
 │   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── refreshModel.js
 │   │   │   │   │   │   ├── storyModel.js
 │   │   │   │   │   │   └── userModel.js
 │   │   │   │   │   ├── routes
 │   │   │   │   │   │   ├── authRoutes.js
+│   │   │   │   │   │   ├── contributorRoutes.js
 │   │   │   │   │   │   ├── README.md
 │   │   │   │   │   │   └── storiesRoutes.js
 │   │   │   │   │   ├── .env.example
@@ -737,6 +793,9 @@ Indexed files: 2549
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   ├── server.js
 │   │   │   │   │   └── settings.js
+│   │   │   │   ├── shared
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── types.ts
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
@@ -873,7 +932,10 @@ Indexed files: 2549
 │   │   │   ├── MediaQueries
 │   │   │   │   ├── index.html
 │   │   │   │   ├── README.md
-│   │   │   │   └── style.css
+│   │   │   │   ├── style.css
+│   │   │   │   ├── travel-notes.css
+│   │   │   │   ├── travel-notes.html
+│   │   │   │   └── travel-notes.md
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── LoginPage
@@ -882,9 +944,13 @@ Indexed files: 2549
 │   │   │   │   ├── README.md
 │   │   │   │   └── style.css
 │   │   │   ├── ShoppingWebsite
+│   │   │   │   ├── account-demo.js
 │   │   │   │   ├── app.js
 │   │   │   │   ├── index.html
+│   │   │   │   ├── login.html
+│   │   │   │   ├── products.html
 │   │   │   │   ├── README.md
+│   │   │   │   ├── signup.html
 │   │   │   │   └── style.css
 │   │   │   └── README.md
 │   │   └── README.md
@@ -900,6 +966,10 @@ Indexed files: 2549
 │   │   │   │   └── style.css
 │   │   │   └── README.md
 │   │   ├── Exercises
+│   │   │   ├── CSSLayout
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   └── style.css
 │   │   │   ├── MyCV
 │   │   │   │   ├── index.html
 │   │   │   │   ├── README.md
@@ -916,6 +986,8 @@ Indexed files: 2549
 │   ├── Day4Bootstrap
 │   │   ├── DailyChallenge
 │   │   │   ├── WildAndWackyVegetables
+│   │   │   │   ├── app.js
+│   │   │   │   ├── extras.html
 │   │   │   │   ├── index.html
 │   │   │   │   ├── README.md
 │   │   │   │   └── style.css
@@ -934,11 +1006,19 @@ Indexed files: 2549
 │   │   │   │   ├── index.html
 │   │   │   │   ├── README.md
 │   │   │   │   └── style.css
+│   │   │   ├── StartupLandingPage
+│   │   │   │   ├── app.js
+│   │   │   │   ├── background.jpg
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   ├── signup-config.js
+│   │   │   │   └── style.css
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day5CodingDay
 │   │   ├── DailyChallenge
 │   │   │   ├── CSSAnimation
+│   │   │   │   ├── extras.html
 │   │   │   │   ├── index.html
 │   │   │   │   ├── README.md
 │   │   │   │   └── style.css
@@ -946,6 +1026,10 @@ Indexed files: 2549
 │   │   ├── Exercises
 │   │   │   ├── PortfolioProject
 │   │   │   │   ├── app.js
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   └── style.css
+│   │   │   ├── RobotAnimation
 │   │   │   │   ├── index.html
 │   │   │   │   ├── README.md
 │   │   │   │   └── style.css
@@ -1104,19 +1188,74 @@ Indexed files: 2549
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day7MiniProjects
+│   │   ├── DailyChallenge
+│   │   │   ├── LoginAndRegister
+│   │   │   │   ├── client
+│   │   │   │   │   ├── src
+│   │   │   │   │   │   ├── api.js
+│   │   │   │   │   │   ├── App.jsx
+│   │   │   │   │   │   ├── AuthForm.jsx
+│   │   │   │   │   │   ├── Dashboard.jsx
+│   │   │   │   │   │   ├── index.css
+│   │   │   │   │   │   ├── main.jsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── tests
+│   │   │   │   │   │   ├── app.test.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── index.html
+│   │   │   │   │   ├── package.json
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── vite.config.js
+│   │   │   │   ├── server
+│   │   │   │   │   ├── db
+│   │   │   │   │   │   ├── fixture.js
+│   │   │   │   │   │   ├── init.js
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── schema.sql
+│   │   │   │   │   ├── tests
+│   │   │   │   │   │   ├── auth.test.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── .env.example
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   ├── db.js
+│   │   │   │   │   ├── devFixture.js
+│   │   │   │   │   ├── package.json
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── server.js
+│   │   │   │   │   └── userModel.js
+│   │   │   │   └── README.md
+│   │   │   └── README.md
 │   │   ├── Exercises
+│   │   │   ├── GoogleMap
+│   │   │   │   ├── src
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── coordinates.js
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   ├── MapCanvas.jsx
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── style.css
+│   │   │   │   ├── .env.example
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   ├── MemeGenerator
 │   │   │   │   ├── src
 │   │   │   │   │   ├── components
 │   │   │   │   │   │   ├── Header.jsx
 │   │   │   │   │   │   ├── MemeForm.jsx
+│   │   │   │   │   │   ├── MemeGenerator.jsx
 │   │   │   │   │   │   ├── MemePreview.jsx
 │   │   │   │   │   │   └── README.md
 │   │   │   │   │   ├── App.css
 │   │   │   │   │   ├── App.jsx
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── app.test.js
+│   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -1134,6 +1273,103 @@ Indexed files: 2549
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── .env.example
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
+│   │   │   ├── TicTacToe
+│   │   │   │   ├── src
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── game.js
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── style.css
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day8InterviewAssignments
+│   │   ├── Exercises
+│   │   │   ├── BalinkBookstore
+│   │   │   │   ├── server
+│   │   │   │   │   ├── catalog.js
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   ├── orders.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── api.js
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── cart.js
+│   │   │   │   │   ├── context.jsx
+│   │   │   │   │   ├── i18n.js
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── ui.jsx
+│   │   │   │   ├── test
+│   │   │   │   │   ├── bookstore.test.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── .gitignore
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
+│   │   │   ├── FSSalesDashboard
+│   │   │   │   ├── data
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── public
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   ├── index.html
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── style.css
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── api.test.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── .gitignore
+│   │   │   │   ├── app.js
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── server.js
+│   │   │   ├── JuniorDeveloperAssignment
+│   │   │   │   ├── config
+│   │   │   │   │   ├── __init__.py
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── settings.py
+│   │   │   │   │   ├── urls.py
+│   │   │   │   │   └── wsgi.py
+│   │   │   │   ├── memes
+│   │   │   │   │   ├── migrations
+│   │   │   │   │   │   ├── 0001_initial.py
+│   │   │   │   │   │   ├── __init__.py
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── __init__.py
+│   │   │   │   │   ├── models.py
+│   │   │   │   │   ├── pagination.py
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── serializers.py
+│   │   │   │   │   ├── tests.py
+│   │   │   │   │   └── views.py
+│   │   │   │   ├── .dockerignore
+│   │   │   │   ├── .env.example
+│   │   │   │   ├── .gitignore
+│   │   │   │   ├── compose.yaml
+│   │   │   │   ├── Dockerfile
+│   │   │   │   ├── manage.py
+│   │   │   │   ├── README.md
+│   │   │   │   └── requirements.txt
+│   │   │   ├── TikalAssignment
+│   │   │   │   ├── src
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   ├── population.js
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── style.css
+│   │   │   │   │   └── swapi.js
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── population.test.js
+│   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
@@ -1385,6 +1621,15 @@ Indexed files: 2549
 │   │   │   │   ├── ninjamenumanager.py
 │   │   │   │   ├── README.md
 │   │   │   │   └── restaurantmenu.json
+│   │   │   ├── SysGuessGame
+│   │   │   │   ├── guess_game.py
+│   │   │   │   └── README.md
+│   │   │   ├── TranslatorUsingFiles
+│   │   │   │   ├── example.txt
+│   │   │   │   ├── README.md
+│   │   │   │   ├── requirements.txt
+│   │   │   │   ├── translation_backends.py
+│   │   │   │   └── translator.py
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day5MiniProject
@@ -1476,6 +1721,18 @@ Indexed files: 2549
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   ├── Exercises
+│   │   │   ├── BuildFacebook1
+│   │   │   │   ├── app.js
+│   │   │   │   ├── auth.js
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   └── style.css
+│   │   │   ├── BuildFacebook2
+│   │   │   │   ├── app.js
+│   │   │   │   ├── auth.js
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   └── style.css
 │   │   │   ├── ExercisesXP
 │   │   │   │   ├── index.html
 │   │   │   │   ├── README.md
@@ -1690,9 +1947,11 @@ Indexed files: 2549
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPNinja
 │   │   │   │   ├── arrayMethodsNinja.js
+│   │   │   │   ├── arrayReports.js
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPNinja2
 │   │   │   │   ├── arrayMethodsNinja2.js
+│   │   │   │   ├── menuAndStrings.js
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
@@ -1706,8 +1965,10 @@ Indexed files: 2549
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPGold
 │   │   │   │   ├── objectMethodsGold.js
+│   │   │   │   ├── objectReports.js
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPNinja
+│   │   │   │   ├── birdConstructors.js
 │   │   │   │   ├── objectMethodsNinja.js
 │   │   │   │   └── README.md
 │   │   │   └── README.md
@@ -1764,6 +2025,7 @@ Indexed files: 2549
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPGold
 │   │   │   │   ├── asyncGold.js
+│   │   │   │   ├── promiseReports.js
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
@@ -1798,9 +2060,11 @@ Indexed files: 2549
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPGold
 │   │   │   │   ├── fetchGold.js
+│   │   │   │   ├── fetchTimings.js
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPNinja
 │   │   │   │   ├── fetchNinja.js
+│   │   │   │   ├── parallelResults.js
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
@@ -1839,10 +2103,16 @@ Indexed files: 2549
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPGold
 │   │   │   │   ├── ExercisesXPGold.ts
-│   │   │   │   └── README.md
+│   │   │   │   ├── README.md
+│   │   │   │   ├── requiredGold.examples.ts
+│   │   │   │   ├── requiredGold.test.ts
+│   │   │   │   └── requiredGold.ts
 │   │   │   ├── ExercisesXPNinja
 │   │   │   │   ├── ExercisesXPNinja.ts
-│   │   │   │   └── README.md
+│   │   │   │   ├── README.md
+│   │   │   │   ├── requiredNinja.examples.ts
+│   │   │   │   ├── requiredNinja.test.ts
+│   │   │   │   └── requiredNinja.ts
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day3AdvancedTypeScriptConceptsAndApplications
@@ -1854,9 +2124,17 @@ Indexed files: 2549
 │   │   │   │   ├── ExercisesXP_OOP.ts
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPGold
+│   │   │   │   ├── ClassContracts.ts
+│   │   │   │   ├── ClassExamples.test.ts
+│   │   │   │   ├── ClassExamples.ts
+│   │   │   │   ├── CourseClasses.ts
 │   │   │   │   ├── ExercisesXPGold.ts
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPNinja
+│   │   │   │   ├── class-exercises.demo.ts
+│   │   │   │   ├── class-exercises.test.ts
+│   │   │   │   ├── class-exercises.ts
+│   │   │   │   ├── class-exercises.types.ts
 │   │   │   │   ├── ExercisesXPNinja.ts
 │   │   │   │   └── README.md
 │   │   │   └── README.md
@@ -1883,8 +2161,96 @@ Indexed files: 2549
 │   ├── RemoteLearningTypeScript
 │   │   ├── Exercises
 │   │   │   ├── ExercisesXP
+│   │   │   │   ├── redux-counter
+│   │   │   │   │   ├── public
+│   │   │   │   │   │   ├── favicon.ico
+│   │   │   │   │   │   ├── logo192.png
+│   │   │   │   │   │   ├── logo512.png
+│   │   │   │   │   │   ├── manifest.json
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── robots.txt
+│   │   │   │   │   ├── src
+│   │   │   │   │   │   ├── App.css
+│   │   │   │   │   │   ├── App.test.tsx
+│   │   │   │   │   │   ├── App.tsx
+│   │   │   │   │   │   ├── Counter.tsx
+│   │   │   │   │   │   ├── counterSlice.test.ts
+│   │   │   │   │   │   ├── counterSlice.ts
+│   │   │   │   │   │   ├── index.css
+│   │   │   │   │   │   ├── index.tsx
+│   │   │   │   │   │   ├── logo.svg
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── setupTests.ts
+│   │   │   │   │   │   ├── store.ts
+│   │   │   │   │   │   └── vite-env.d.ts
+│   │   │   │   │   ├── .gitignore
+│   │   │   │   │   ├── index.html
+│   │   │   │   │   ├── package-lock.json
+│   │   │   │   │   ├── package.json
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── tsconfig.json
+│   │   │   │   │   └── vite.config.ts
 │   │   │   │   ├── ExercisesXP.ts
 │   │   │   │   └── README.md
+│   │   │   ├── RecipeFinder
+│   │   │   │   ├── public
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── recipes.json
+│   │   │   │   ├── src
+│   │   │   │   │   ├── App.tsx
+│   │   │   │   │   ├── catalog.ts
+│   │   │   │   │   ├── hooks.ts
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.tsx
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── recipesSlice.ts
+│   │   │   │   │   ├── store.ts
+│   │   │   │   │   └── types.ts
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── App.test.tsx
+│   │   │   │   │   ├── catalog.test.ts
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── setup.ts
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   ├── tsconfig.json
+│   │   │   │   └── vite.config.ts
+│   │   │   ├── ReduxPractice
+│   │   │   │   ├── app
+│   │   │   │   │   ├── App.tsx
+│   │   │   │   │   ├── hooks.ts
+│   │   │   │   │   ├── main.tsx
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── store.ts
+│   │   │   │   │   └── style.css
+│   │   │   │   ├── ExercisesXPGold
+│   │   │   │   │   ├── src
+│   │   │   │   │   │   ├── AddTodo.tsx
+│   │   │   │   │   │   ├── GoldPage.tsx
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── TodoList.tsx
+│   │   │   │   │   │   └── todoSlice.ts
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── ExercisesXPNinja
+│   │   │   │   │   ├── src
+│   │   │   │   │   │   ├── authSlice.ts
+│   │   │   │   │   │   ├── Login.tsx
+│   │   │   │   │   │   ├── PrivateRoute.tsx
+│   │   │   │   │   │   ├── Profile.tsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── run-dom-tests.mjs
+│   │   │   │   ├── .gitignore
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   ├── tsconfig.json
+│   │   │   │   └── vite.config.ts
 │   │   │   └── README.md
 │   │   └── README.md
 │   └── README.md
@@ -1926,6 +2292,7 @@ Indexed files: 2549
 │   │   │   │   └── xp_gold_music_store.sql
 │   │   │   ├── ExercisesXPNinja
 │   │   │   │   ├── README.md
+│   │   │   │   ├── required_customer_joins_demo.sql
 │   │   │   │   └── xp_ninja_dvdrental.sql
 │   │   │   └── README.md
 │   │   └── README.md
@@ -1944,9 +2311,11 @@ Indexed files: 2549
 │   │   │   │   └── xp_dvdrental_relationships.sql
 │   │   │   ├── ExercisesXPGold
 │   │   │   │   ├── README.md
+│   │   │   │   ├── required_gold_followup.sql
 │   │   │   │   └── xp_gold_dvdrental.sql
 │   │   │   ├── ExercisesXPNinja
 │   │   │   │   ├── README.md
+│   │   │   │   ├── required_waiting_list_demo.sql
 │   │   │   │   └── xp_ninja_dvdrental.sql
 │   │   │   └── README.md
 │   │   └── README.md
@@ -2055,6 +2424,10 @@ Indexed files: 2549
 │   │   │   │   │   ├── index.html
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   └── style.css
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── game.test.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── app.js
 │   │   │   │   ├── game.js
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
@@ -2062,9 +2435,16 @@ Indexed files: 2549
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── ExercisesXP
+│   │   │   │   ├── data
+│   │   │   │   │   ├── dataService.js
+│   │   │   │   │   └── README.md
 │   │   │   │   ├── public
 │   │   │   │   │   ├── index.html
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── api.test.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── app.js
 │   │   │   │   ├── dateUtils.js
 │   │   │   │   ├── ex1-hello-server.js
 │   │   │   │   ├── ex2-html-server.js
@@ -2072,7 +2452,8 @@ Indexed files: 2549
 │   │   │   │   ├── ex4-static-page.js
 │   │   │   │   ├── ex5-date-server.js
 │   │   │   │   ├── package.json
-│   │   │   │   └── README.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── server.js
 │   │   │   ├── ExercisesXPGold
 │   │   │   │   ├── httpHelpers.js
 │   │   │   │   ├── package.json
@@ -2245,21 +2626,35 @@ Indexed files: 2549
 │   │   │   ├── TaskAPI2
 │   │   │   │   ├── controllers
 │   │   │   │   │   ├── README.md
-│   │   │   │   │   └── tasksController.js
+│   │   │   │   │   ├── tasksController.js
+│   │   │   │   │   └── usersController.js
 │   │   │   │   ├── data
 │   │   │   │   │   ├── README.md
-│   │   │   │   │   └── tasks.json
+│   │   │   │   │   ├── tasks.json
+│   │   │   │   │   └── users.json
 │   │   │   │   ├── middleware
 │   │   │   │   │   ├── errorHandler.js
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   └── validateTask.js
 │   │   │   │   ├── models
 │   │   │   │   │   ├── README.md
-│   │   │   │   │   └── taskStore.js
+│   │   │   │   │   ├── taskStore.js
+│   │   │   │   │   └── userStore.js
+│   │   │   │   ├── public
+│   │   │   │   │   ├── forms.js
+│   │   │   │   │   ├── login.html
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── register.html
+│   │   │   │   │   └── styles.css
 │   │   │   │   ├── routes
 │   │   │   │   │   ├── README.md
-│   │   │   │   │   └── tasks.js
+│   │   │   │   │   ├── tasks.js
+│   │   │   │   │   └── users.js
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── users.test.js
 │   │   │   │   ├── .env.example
+│   │   │   │   ├── app.js
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── server.js
@@ -2324,7 +2719,11 @@ Indexed files: 2549
 │   │   │   │   ├── routes
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   └── tasks.js
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── api.test.js
+│   │   │   │   │   └── README.md
 │   │   │   │   ├── .env.example
+│   │   │   │   ├── app.js
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── server.js
@@ -2507,6 +2906,7 @@ Indexed files: 2549
 │   │   │   │   │   │   └── search.ejs
 │   │   │   │   │   ├── partials
 │   │   │   │   │   │   ├── footer.ejs
+│   │   │   │   │   │   ├── head.ejs
 │   │   │   │   │   │   ├── header.ejs
 │   │   │   │   │   │   ├── post.ejs
 │   │   │   │   │   │   └── README.md
@@ -2558,15 +2958,21 @@ Indexed files: 2549
 │   │   │   │   │   │   ├── Color.jsx
 │   │   │   │   │   │   ├── Events.jsx
 │   │   │   │   │   │   ├── Garage.jsx
+│   │   │   │   │   │   ├── LifecycleExercises.jsx
 │   │   │   │   │   │   ├── Phone.jsx
 │   │   │   │   │   │   └── README.md
 │   │   │   │   │   ├── App.jsx
 │   │   │   │   │   ├── index.css
 │   │   │   │   │   ├── main.jsx
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── unbounded.jsx
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── lifecycle.test.js
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
+│   │   │   │   ├── unbounded.html
 │   │   │   │   └── vite.config.js
 │   │   │   ├── ExercisesXPGold
 │   │   │   │   ├── src
@@ -2612,7 +3018,11 @@ Indexed files: 2549
 │   │   │   │   │   │   ├── index.css
 │   │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── tests
+│   │   │   │   │   │   ├── app.test.js
+│   │   │   │   │   │   └── README.md
 │   │   │   │   │   ├── index.html
+│   │   │   │   │   ├── package-lock.json
 │   │   │   │   │   ├── package.json
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   └── vite.config.js
@@ -2620,7 +3030,11 @@ Indexed files: 2549
 │   │   │   │   │   ├── routes
 │   │   │   │   │   │   ├── api.js
 │   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── tests
+│   │   │   │   │   │   ├── api.test.js
+│   │   │   │   │   │   └── README.md
 │   │   │   │   │   ├── .env.example
+│   │   │   │   │   ├── app.js
 │   │   │   │   │   ├── package.json
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   └── server.js
@@ -2664,6 +3078,9 @@ Indexed files: 2549
 │   │   │   │   │   ├── App.jsx
 │   │   │   │   │   ├── index.css
 │   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── app.test.js
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── .env.example
 │   │   │   │   ├── index.html
@@ -2737,6 +3154,9 @@ Indexed files: 2549
 │   │   │   │   │   ├── index.css
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── reducer.test.js
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
@@ -2756,6 +3176,9 @@ Indexed files: 2549
 │   │   │   │   │   ├── App.jsx
 │   │   │   │   │   ├── index.css
 │   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── app.test.js
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package.json
@@ -2846,7 +3269,11 @@ Indexed files: 2549
 │   │   │   │   │   ├── index.css
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── calculate.test.js
+│   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -2911,6 +3338,9 @@ Indexed files: 2549
 │   │   │   │   │   ├── App.jsx
 │   │   │   │   │   ├── index.css
 │   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── planner.test.js
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package.json
@@ -3121,6 +3551,7 @@ Indexed files: 2549
 │   │   │   │   │   │   │   └── README.md
 │   │   │   │   │   │   ├── users
 │   │   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   │   ├── UserData.jsx
 │   │   │   │   │   │   │   └── usersSlice.js
 │   │   │   │   │   │   └── README.md
 │   │   │   │   │   ├── App.jsx
@@ -3182,6 +3613,7 @@ Indexed files: 2549
 │   │   │   │   │   │   ├── categories
 │   │   │   │   │   │   │   ├── categoriesSlice.js
 │   │   │   │   │   │   │   ├── CategoryBar.jsx
+│   │   │   │   │   │   │   ├── CategorySelector.jsx
 │   │   │   │   │   │   │   └── README.md
 │   │   │   │   │   │   ├── tasks
 │   │   │   │   │   │   │   ├── ProgressPanel.jsx
@@ -3206,6 +3638,10 @@ Indexed files: 2549
 │   │   │   │   │   │   ├── README.md
 │   │   │   │   │   │   └── store.js
 │   │   │   │   │   ├── features
+│   │   │   │   │   │   ├── books
+│   │   │   │   │   │   │   ├── BookList.jsx
+│   │   │   │   │   │   │   ├── inventory.js
+│   │   │   │   │   │   │   └── README.md
 │   │   │   │   │   │   ├── expenses
 │   │   │   │   │   │   │   ├── CategorySummary.jsx
 │   │   │   │   │   │   │   ├── ExpenseForm.jsx

@@ -1,4 +1,4 @@
-# 🎛️ Controllers - Exercises XP
+# Authentication controllers
 
 <div align="center">
 
@@ -8,17 +8,7 @@
 
 </div>
 
-The request handlers for Exercises XP.
+- authController.js validates registration, confirms the local email token, logs in, rotates refresh credentials, revokes logout sessions and returns profiles.
+- usersController.js preserves the protected user-list exercise and removes hashes through toPublic.
 
-## Contents
-
-- [`authController.js`](authController.js)
-- [`usersController.js`](usersController.js)
-
----
-
-## 👤 Author
-
-**Kevin Cusnir 'Lirioth'**  
-Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
-Week 10 Day 3 - Authentication - Exercises XP
+Email confirmation is local practice. Real email delivery is an explicit remaining integration.

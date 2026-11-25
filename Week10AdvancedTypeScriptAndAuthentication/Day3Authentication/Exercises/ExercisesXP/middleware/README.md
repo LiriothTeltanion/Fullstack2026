@@ -1,4 +1,4 @@
-# 🧱 Middleware - Exercises XP
+# Access JWT middleware
 
 <div align="center">
 
@@ -8,16 +8,4 @@
 
 </div>
 
-The Express middleware for Exercises XP.
-
-## Contents
-
-- [`verifyToken.js`](verifyToken.js)
-
----
-
-## 👤 Author
-
-**Kevin Cusnir 'Lirioth'**  
-Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
-Week 10 Day 3 - Authentication - Exercises XP
+verifyToken.js reads an explicit bearer credential or the access cookie. It verifies the HS256 algorithm, issuer, audience and access purpose, then checks persistent session state and confirmed user status before allowing the request.

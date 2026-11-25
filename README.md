@@ -76,10 +76,10 @@ The [course map](.learning/course-map.yml) lists every week and day, and the [di
 | [⚛️ Week 8](Week8React/) | React | React components, hooks and mini projects |
 | [🔁 Week 9](Week9Redux/) | Redux | Redux Toolkit apps |
 | [🛡️ Week 10](Week10AdvancedTypeScriptAndAuthentication/) | Advanced TypeScript and Authentication | TypeScript + React, JWT auth, projects |
-| [🛠️ Week 11](Week11FinalProject/) | Final Project | Final project scope |
+| [🛠️ Week 11](Week11FinalProject/) | Final Project | Ivrit Sheli scope submitted for instructor review |
 | [🚀 Week 12](Week12FinalProject/) | Final Project | Capstone starter and Demo Day |
 | [🎨 Week 13](Week13WebDevelopmentBasics/) | Web Development Basics (self-learning) | HTML, CSS, Bootstrap pages |
-| [🎓 Week 14](Week14MoreTopicsAndInterviews/) | More Topics and Interview Prep | S3 uploads, JWT, Render deploys, meme generator, book search |
+| [🎓 Week 14](Week14MoreTopicsAndInterviews/) | More Topics and Interview Prep | S3, JWT, deployment, React mini-projects and interview assignments |
 
 <details>
 <summary><strong>🐍 Week 1 — Python foundations</strong></summary>
@@ -248,7 +248,7 @@ To log the next exercise in my own words, I use the small intake tool (`npm run 
 | `npm test` | Runs the Python and JavaScript test suites |
 | `npm run quality` | Whole-repository check: syntax, JSON, HTML, CSS, links, likely secrets |
 | `npm run verify:structure` | Folder structure, catalogs, README visuals and display titles |
-| `npm run lint` / `npm run lint:baseline` | ESLint, and a check that the known 64 findings do not grow |
+| `npm run lint` / `npm run lint:baseline` | ESLint, and a check that the known 55 findings do not grow |
 | `npm run typecheck:anchor` | Strict type check of the Union Type Validator project |
 | `npm run format` / `npm run format:check` | Prettier for JavaScript and TypeScript |
 | `npm run intake:check` | Validates the exercise intake queue |

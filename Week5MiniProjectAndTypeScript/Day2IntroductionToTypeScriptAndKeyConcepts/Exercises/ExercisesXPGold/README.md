@@ -10,6 +10,27 @@
 
 Five TypeScript basics in [ExercisesXPGold.ts](ExercisesXPGold.ts): parameters, unions, tuples, a type alias and literal types.
 
+## 📚 Assignment-aligned functions
+
+The earlier examples remain available as extra practice. The chapter-specific functions are in [requiredGold.ts](requiredGold.ts), with runnable calls in [requiredGold.examples.ts](requiredGold.examples.ts).
+
+| Function or type                     | Behavior                                                            |
+| ------------------------------------ | ------------------------------------------------------------------- |
+| processValue                         | Formats a number as dollars with two decimals, or reverses a string |
+| sumNumbersInArray                    | Adds finite numeric entries without converting strings              |
+| AdvancedUser / introduceAdvancedUser | Required name and age, optional address, formatted introduction     |
+| welcomeUser                          | Required name string and optional greeting defaulting to Hello      |
+
+```bash
+node requiredGold.examples.ts
+node --test requiredGold.test.ts
+npx tsc --strict --noEmit --target ES2022 --module nodenext --allowImportingTsExtensions --types node requiredGold.ts requiredGold.examples.ts requiredGold.test.ts
+```
+
+Run from this folder after installing the root development dependencies. Node 22.18+ runs these files directly. The separate type check verifies both accepted calls and expected compile-time rejections.
+
+The focused tests cover mixed/empty arrays, negative/zero currency, Unicode surrogate pairs, optional address, default/custom greeting and invalid inputs. Non-finite numeric entries are ignored by the sum and rejected by currency formatting. Text reversal works by Unicode code point; it is not a grapheme-cluster normalizer.
+
 ## ▶️ How to run
 
 Node 22.18 or newer runs the file directly by stripping the types. The type check is separate:

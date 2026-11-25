@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #f6f4ed;
+  color: #20333c;
+  font:
+    17px/1.5 system-ui,
+    sans-serif;
+}
+main {
+  max-width: 430px;
+  padding: 24px;
+  margin: auto;
+  text-align: center;
+}
+h1 {
+  letter-spacing: -0.04em;
+}
+select,
+button {
+  font: inherit;
+}
+select {
+  max-width: 100%;
+  margin: 8px;
+  padding: 6px;
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 20px auto;
+  max-width: 320px;
+}
+.board button {
+  aspect-ratio: 1;
+  min-width: 0;
+  background: white;
+  color: #20333c;
+  border: 2px solid #799a9e;
+  border-radius: 8px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.board button:disabled {
+  opacity: 1;
+  cursor: default;
+}
+.board .winning {
+  background: #cce9d9;
+  border-color: #217449;
+}
+button:focus-visible,
+select:focus-visible {
+  outline: 3px solid #c36528;
+  outline-offset: 3px;
+}
+.reset {
+  border: 0;
+  border-radius: 6px;
+  background: #20333c;
+  color: white;
+  padding: 9px 18px;
+  cursor: pointer;
+}
+.note {
+  color: #4b626c;
+}

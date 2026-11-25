@@ -8,6 +8,28 @@
 
 </div>
 
+## User-management exercise · 2026-11-25
+
+The assignment routes register a demo user, check credentials, list users, read one profile and update it. Registration collects `name`, `lastName`, `email`, `username` and `password`. The two HTML forms keep their submit buttons disabled until the fields are complete and valid.
+
+Run `npm install` and `npm run dev`, then open `http://localhost:3000/register.html` or `http://localhost:3000/login.html`. The original task routes remain available below.
+
+| Route | JSON input and response |
+|---|---|
+| `POST /register` | All five fields. Returns 201 with `{ user }`; validation returns 400 and duplicate username or reused password returns 409 |
+| `POST /login` | `username`, `password`. Returns 200 with a success message and public user; missing values return 400 and incorrect credentials return 401 |
+| `GET /users` | Returns the array of public profiles |
+| `GET /users/:id` | Returns one public profile or 404 |
+| `PUT /users/:id` | Updates the supplied profile fields. Returns `{ user }`, 400 for invalid fields, 404 for an unknown id or 409 for a conflicting username/password |
+
+`routes/users.js` is an `express.Router`. `data/users.json` starts as `[]`. Passwords are hashed with bcrypt, and responses contain only id, name, lastName, email and username. The assignment's duplicate-password check compares the proposed password with existing hashes. bcrypt accepts at most 72 UTF-8 bytes, which the API validates explicitly.
+
+`models/userStore.js` serializes mutations in one process and atomically replaces the JSON file after writing a temporary sibling. A failed read or write returns a server error, keeps the queue usable and avoids returning storage details. Invalid request JSON returns 400. The local demo exposes the profile routes directly and checks credentials on login without creating a session. Use fictional profiles for the exercise.
+
+Run `npm test` for the HTTP regression tests. They use temporary data files and cover registration, duplicate checks under concurrency, hashes, credential errors, profile updates, storage errors and the task extension. The optional `TASK_API_USERS_FILE` and `TASK_API_TASKS_FILE` environment variables select isolated files for these tests.
+
+## Retained task API extension
+
 Version 2 of my Task API. Tasks now have a priority and a due date, the list can be filtered, sorted and paged, and every write goes through a small queue so two quick requests cannot overwrite each other in `data/tasks.json`.
 
 ## ▶️ How to run
@@ -32,7 +54,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"title":"Go","priority":"u
 
 I also sent five `POST` requests at the same time: the stats went from 4 to 9 tasks, so none of the writes was lost.
 
-## 🎯 The challenge
+## 🎯 Task extension routes
 
 | Route | What it does |
 |---|---|

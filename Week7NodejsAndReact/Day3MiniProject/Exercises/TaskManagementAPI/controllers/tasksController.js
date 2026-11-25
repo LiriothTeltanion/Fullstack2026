@@ -1,4 +1,4 @@
-import { readTasks, saveTasks, nextId } from "../models/taskModel.js";
+import { readTasks, updateTasks, nextId } from "../models/taskModel.js";
 
 function validate({ title, description, completed }, isUpdate = false) {
   if (!isUpdate || title !== undefined) {
@@ -31,18 +31,19 @@ export async function getTask(req, res, next) {
 }
 
 export async function createTask(req, res, next) {
-  const error = validate(req.body);
+  const error = validate(req.body ?? {});
   if (error) return res.status(400).json({ error });
   try {
-    const tasks = await readTasks();
-    const task = {
-      id: nextId(tasks),
-      title: req.body.title.trim(),
-      description: req.body.description?.trim() ?? "",
-      completed: req.body.completed ?? false,
-    };
-    tasks.push(task);
-    await saveTasks(tasks);
+    const task = await updateTasks(tasks => {
+      const created = {
+        id: nextId(tasks),
+        title: req.body.title.trim(),
+        description: req.body.description?.trim() ?? "",
+        completed: req.body.completed ?? false,
+      };
+      tasks.push(created);
+      return created;
+    });
     res.status(201).json(task);
   } catch (err) {
     next(err);
@@ -50,20 +51,19 @@ export async function createTask(req, res, next) {
 }
 
 export async function updateTask(req, res, next) {
-  const error = validate(req.body, true);
+  const error = validate(req.body ?? {}, true);
   if (error) return res.status(400).json({ error });
   try {
-    const tasks = await readTasks();
-    const index = tasks.findIndex(t => t.id === Number(req.params.id));
-    if (index === -1) return res.status(404).json({ error: "Task not found" });
-
-    const { title, description, completed } = req.body;
-    const task = tasks[index];
-    if (title !== undefined) task.title = title.trim();
-    if (description !== undefined) task.description = description.trim();
-    if (completed !== undefined) task.completed = completed;
-
-    await saveTasks(tasks);
+    const task = await updateTasks(tasks => {
+      const found = tasks.find(candidate => candidate.id === Number(req.params.id));
+      if (!found) return null;
+      const { title, description, completed } = req.body ?? {};
+      if (title !== undefined) found.title = title.trim();
+      if (description !== undefined) found.description = description.trim();
+      if (completed !== undefined) found.completed = completed;
+      return found;
+    });
+    if (!task) return res.status(404).json({ error: "Task not found" });
     res.json(task);
   } catch (err) {
     next(err);
@@ -72,10 +72,13 @@ export async function updateTask(req, res, next) {
 
 export async function deleteTask(req, res, next) {
   try {
-    const tasks = await readTasks();
-    const remaining = tasks.filter(t => t.id !== Number(req.params.id));
-    if (remaining.length === tasks.length) return res.status(404).json({ error: "Task not found" });
-    await saveTasks(remaining);
+    const removed = await updateTasks(tasks => {
+      const index = tasks.findIndex(task => task.id === Number(req.params.id));
+      if (index === -1) return false;
+      tasks.splice(index, 1);
+      return true;
+    });
+    if (!removed) return res.status(404).json({ error: "Task not found" });
     res.json({ message: "Task deleted" });
   } catch (err) {
     next(err);

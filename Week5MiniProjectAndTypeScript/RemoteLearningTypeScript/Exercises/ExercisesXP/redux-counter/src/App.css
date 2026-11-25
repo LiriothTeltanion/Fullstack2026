@@ -1,0 +1,72 @@
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 5vw, 3rem);
+}
+.counter {
+  width: min(100%, 36rem);
+  padding: clamp(1.5rem, 6vw, 3rem);
+  border: 1px solid #334c78;
+  border-radius: 1.5rem;
+  background: #111f38;
+  box-shadow: 0 2rem 5rem #02081466;
+}
+.eyebrow {
+  margin-top: 0;
+  color: #9fbdff;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  line-height: 1.6;
+}
+h1 {
+  font-size: clamp(1.8rem, 6vw, 2.8rem);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 1rem 0;
+}
+.intro,
+.hint {
+  color: #c2cee5;
+  line-height: 1.6;
+}
+.value {
+  margin: 1.5rem 0;
+  text-align: center;
+  font-size: clamp(5rem, 20vw, 7rem);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+button {
+  flex: 1 1 10rem;
+  min-height: 3rem;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid #719cff;
+  border-radius: 0.6rem;
+  background: #2b61df;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+button.secondary {
+  background: transparent;
+  color: #d6e3ff;
+}
+button:hover {
+  background: #214eba;
+}
+button:focus-visible {
+  outline: 3px solid #f8d475;
+  outline-offset: 4px;
+}
+.hint {
+  margin-bottom: 0;
+  font-size: 0.85rem;
+}

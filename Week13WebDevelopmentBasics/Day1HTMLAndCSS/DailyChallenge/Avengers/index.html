@@ -3,18 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="A fan page with a card for each of the original Avengers." />
-    <title>The Avengers</title>
+    <meta
+      name="description"
+      content="A Thor feature and original Avengers team cards, with accessible page navigation."
+    />
+    <title>Thor · The Avengers</title>
+    <link rel="icon" href="data:," />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="banner">
-      <p class="eyebrow">Fan page</p>
-      <h1>The Avengers</h1>
-      <p class="tagline">Six heroes, one team. Hover over a card to lift it.</p>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="#thor">Thor</a></li>
+        <li><a href="#team">The team</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+    <header class="banner" id="thor">
+      <div class="featured-copy">
+        <h1>Thor</h1>
+        <p class="tagline">
+          Thor Odinson is the Asgardian god of thunder. With the hammer Mjolnir, he brings lightning
+          and strength to the Avengers.
+        </p>
+      </div>
     </header>
 
-    <main>
+    <main id="team">
+      <h2>The original Avengers</h2>
       <ul class="team" aria-label="Team members">
         <li class="hero-card" style="--hero: #c62828">
           <span class="emblem" aria-hidden="true">IM</span>
@@ -61,8 +77,17 @@
       </ul>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="about">
       <p>A fan page for an HTML and CSS exercise. The characters belong to Marvel.</p>
+      <ul class="footer-links">
+        <li><a href="#thor">Back to Thor</a></li>
+        <li><a href="#team">Meet the team</a></li>
+        <li>
+          <a href="../../../Day2GitAndGitHub/DailyChallenge/MediaQueries/index.html"
+            >Responsive version</a
+          >
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

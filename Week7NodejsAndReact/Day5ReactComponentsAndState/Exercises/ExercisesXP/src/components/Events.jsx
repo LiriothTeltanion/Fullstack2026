@@ -5,11 +5,16 @@ export default function Events() {
   const [message, setMessage] = useState("");
   const [isToggleOn, setIsToggleOn] = useState(true);
 
-  const clickMe = () => setMessage("I was clicked");
+  const clickMe = () => {
+    window.alert("I was clicked");
+    setMessage("I was clicked");
+  };
 
   function handleKeyDown(event) {
     if (event.key === "Enter") {
-      setMessage(`The Enter key was pressed, your input is: ${event.target.value}`);
+      const feedback = "The Enter key was pressed, your input is: " + event.target.value;
+      window.alert(feedback);
+      setMessage(feedback);
     }
   }
 

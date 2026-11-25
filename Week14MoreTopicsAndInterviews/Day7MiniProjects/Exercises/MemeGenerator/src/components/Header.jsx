@@ -1,11 +1,15 @@
 export default function Header() {
   return (
     <header className="header">
-      <span className="logo" aria-hidden="true">
-        😹
-      </span>
+      <img
+        className="logo"
+        src="https://i.imgflip.com/1bij.jpg"
+        alt="One Does Not Simply meme"
+        width="40"
+        height="40"
+      />
       <h1>Meme Generator</h1>
-      <p>Templates from the Imgflip API</p>
+      <p>Meme Generator</p>
     </header>
   );
 }

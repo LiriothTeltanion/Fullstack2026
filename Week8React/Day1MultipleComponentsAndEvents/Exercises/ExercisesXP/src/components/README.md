@@ -10,7 +10,7 @@
 
 The React components for Exercises XP.
 
-## Contents
+## Contents\n\n- [LifecycleExercises.jsx](LifecycleExercises.jsx): class counters, boundaries, color and unmount demonstrations
 
 - [`Car.jsx`](Car.jsx)
 - [`Color.jsx`](Color.jsx)

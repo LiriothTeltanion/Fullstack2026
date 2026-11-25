@@ -12,14 +12,14 @@ The second bootcamp week moved from plain functions to classes: inheritance and 
 
 ## Contents
 
-| Day | What I built |
-|---|---|
-| [`Day1IntroductiontoOOP/`](Day1IntroductiontoOOP/) | Cats, dogs, a song printer, a zoo and Old MacDonald's farm |
-| [`Day2OOPInheritanceEncapsulationPolymorphism/`](Day2OOPInheritanceEncapsulationPolymorphism/) | Pets, dog fights, a family tree, bank accounts, Game of Life and a `Pagination` class |
-| [`Day3OOPandModules/`](Day3OOPandModules/) | `Currency` with operators, temperature classes, a `Circle`, a translator and user info sorting |
-| [`Day4PythonFileIOJSONandAPI/`](Day4PythonFileIOJSONandAPI/) | A sentence generator, JSON menu editors, Giphy requests and a text analyzer |
-| [`Day5MiniProject/`](Day5MiniProject/) | Anagram checker, rock-paper-scissors, a weather app, a card deck and a page load timer |
-| [`RemoteLearningOOP/`](RemoteLearningOOP/) | A vaccine queue and the air traffic management challenge |
+| Folder | Topic | Repository entries |
+|---|---|---:|
+| [Day1IntroductiontoOOP/](Day1IntroductiontoOOP/) | Day 1 — Introduction to Object-Oriented Programming | 4 |
+| [Day2OOPInheritanceEncapsulationPolymorphism/](Day2OOPInheritanceEncapsulationPolymorphism/) | Day 2 — Inheritance, Encapsulation and Polymorphism | 5 |
+| [Day3OOPandModules/](Day3OOPandModules/) | Day 3 — OOP and Modules | 7 |
+| [Day4PythonFileIOJSONandAPI/](Day4PythonFileIOJSONandAPI/) | Day 4 — File I/O, JSON and APIs | 6 |
+| [Day5MiniProject/](Day5MiniProject/) | Day 5 — Mini-projects | 5 |
+| [RemoteLearningOOP/](RemoteLearningOOP/) | Remote Learning — Object-Oriented Programming | 2 |
 
 ---
 
@@ -28,3 +28,5 @@ The second bootcamp week moved from plain functions to classes: inheritance and 
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 Week 2 - Object-Oriented Programming
+
+Navigation verified 2026-11-25. Entries link to available code and run instructions.

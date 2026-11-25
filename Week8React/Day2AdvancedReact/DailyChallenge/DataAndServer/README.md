@@ -42,9 +42,13 @@ POST /api/world  {"post":""}  -> 400 {"error":"Please type something first."}
 
 | Part | What it does |
 |---|---|
-| `server/server.js` | Express with `cors`, `express.json()` and the router mounted on `/api`; the port comes from `.env` (`PORT`, default 5000) |
+| `server/app.js` and `server/server.js` | Express with `cors`, `express.json()` and the router mounted on `/api`; the port comes from `.env` (`PORT`, default 5000) |
 | `server/routes/api.js` | `GET /hello` returns the greeting; `POST /world` validates `post` and echoes it back |
-| `client/src/App.jsx` | Part 1 fetches the greeting in `useEffect` and shows it as the `<h1>`. Part 2 posts the input as JSON and prints the server's reply |
+| `client/src/App.jsx` | Part 1 fetches the greeting with async/await in the class component’s `componentDidMount` and shows it as the `<h1>`. Part 2 posts the input as JSON and prints the server's reply |
+
+## Verification · 2026-11-25
+
+Run `npm test` in `client/` for the class lifecycle, greeting, POST reply, network errors and unmount cancellation tests. Run `npm test` in `server/` for the greeting/echo JSON contract, server console output and invalid input types. The client keeps the result below the form in an accessible status region.
 
 ## 🧠 What I learned
 

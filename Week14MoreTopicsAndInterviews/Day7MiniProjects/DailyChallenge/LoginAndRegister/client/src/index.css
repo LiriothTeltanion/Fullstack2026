@@ -1,0 +1,79 @@
+:root {
+  font-family: system-ui, sans-serif;
+  background: #f3f7f8;
+  color: #173640;
+  line-height: 1.5;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+main {
+  padding: clamp(1rem, 5vw, 4rem) 1rem;
+}
+.account-card {
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  background: white;
+  border: 1px solid #cbdde3;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 3rem #1736400d;
+}
+h1 {
+  margin: 0 0 1.5rem;
+  line-height: 1.2;
+}
+form,
+label {
+  display: grid;
+  gap: 0.5rem;
+}
+form {
+  gap: 1rem;
+}
+input,
+button {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #91acb8;
+  border-radius: 0.4rem;
+  padding: 0.7rem;
+  font: inherit;
+}
+button {
+  color: white;
+  background: #155e75;
+  cursor: pointer;
+  font-weight: 650;
+}
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+:focus-visible {
+  outline: 3px solid #d58a31;
+  outline-offset: 3px;
+}
+a {
+  color: #155e75;
+  text-underline-offset: 0.2em;
+}
+.error {
+  color: #9f2525;
+  margin: 0;
+}
+dl {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.5rem 1rem;
+}
+dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+dt {
+  font-weight: 650;
+}

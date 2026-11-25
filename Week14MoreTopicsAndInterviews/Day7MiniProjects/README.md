@@ -12,7 +12,8 @@ Mini-projects. These are the exercises and challenges for this day.
 
 ## Contents
 
-- [`Exercises/`](Exercises/)
+- [Exercises/](Exercises/) — browser mini-projects
+- [Daily challenges](DailyChallenge/) — React registration and sign-in with PostgreSQL
 
 ---
 
@@ -21,3 +22,5 @@ Mini-projects. These are the exercises and challenges for this day.
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 Week 14 Day 7 - Mini-projects
+
+Navigation verified 2026-11-25. Entries link to available code and run instructions.

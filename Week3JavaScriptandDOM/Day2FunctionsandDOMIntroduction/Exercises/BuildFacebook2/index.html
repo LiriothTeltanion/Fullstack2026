@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Build Facebook 2 · Mock Sign-in</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Build Facebook 2</h1>
+      <p>A mock sign-in and newsfeed with artificial accounts.</p>
+      <p>Demo credentials <code id="accounts"></code></p>
+      <button id="sign-in" type="button">Sign in with prompts</button>
+      <p id="status" role="status">Choose a demo account to try.</p>
+      <ul id="feed" aria-label="Newsfeed"></ul>
+      <p class="note">
+        This exercise keeps credentials in JavaScript so I can practice comparisons. A real
+        application needs a server and password hashing.
+      </p>
+    </main>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

@@ -12,6 +12,8 @@ Part of the project for Productivity Tracker.
 
 ## Contents
 
+- [CategorySelector.jsx](CategorySelector.jsx) implements category CRUD, selection and validation. CategoryBar remains a compatibility re-export.
+
 - [`CategoryBar.jsx`](CategoryBar.jsx)
 - [`categoriesSlice.js`](categoriesSlice.js)
 

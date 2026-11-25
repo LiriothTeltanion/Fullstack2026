@@ -9,8 +9,8 @@ router.get("/hello", (req, res) => {
 
 // Part 2: echo back what the client posted.
 router.post("/world", (req, res) => {
-  const { post } = req.body;
-  if (!post || !post.trim()) {
+  const { post } = req.body ?? {};
+  if (typeof post !== "string" || !post.trim()) {
     return res.status(400).json({ error: "Please type something first." });
   }
   console.log("Received:", post);

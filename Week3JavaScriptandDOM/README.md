@@ -12,14 +12,14 @@ My first week of JavaScript. It starts with arrays and loops and ends with DOM e
 
 ## Contents
 
-| Folder | What it is |
-|---|---|
-| [`Day1IntroductiontoJavaScript/`](Day1IntroductiontoJavaScript/) | Arrays, loops, objects and a Bubble Sort |
-| [`Day2FunctionsandDOMIntroduction/`](Day2FunctionsandDOMIntroduction/) | Functions and my first DOM changes |
-| [`Day3LearningDOMEvents/`](Day3LearningDOMEvents/) | Events, forms, timers and a Sign In form |
-| [`Day4AdvancedJavaScriptFunctions/`](Day4AdvancedJavaScriptFunctions/) | Scope, closures, currying, value vs reference |
-| [`Day5MiniProject/`](Day5MiniProject/) | Coloring Game, Drum Set and Todo List |
-| [`RemoteLearningJSAndDOM/`](RemoteLearningJSAndDOM/) | Extra practice: small apps, timers and drag and drop |
+| Folder | Topic | Repository entries |
+|---|---|---:|
+| [Day1IntroductiontoJavaScript/](Day1IntroductiontoJavaScript/) | Day 1 — Introduction to JavaScript | 6 |
+| [Day2FunctionsandDOMIntroduction/](Day2FunctionsandDOMIntroduction/) | Day 2 — Functions and DOM Introduction | 7 |
+| [Day3LearningDOMEvents/](Day3LearningDOMEvents/) | Day 3 — DOM Events | 7 |
+| [Day4AdvancedJavaScriptFunctions/](Day4AdvancedJavaScriptFunctions/) | Day 4 — Advanced JavaScript Functions | 4 |
+| [Day5MiniProject/](Day5MiniProject/) | Day 5 — Mini-projects | 3 |
+| [RemoteLearningJSAndDOM/](RemoteLearningJSAndDOM/) | Remote Learning — JavaScript and the DOM | 8 |
 
 ---
 
@@ -28,3 +28,5 @@ My first week of JavaScript. It starts with arrays and loops and ends with DOM e
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 Week 3 - JavaScript and the DOM
+
+Navigation verified 2026-11-25. Entries link to available code and run instructions.

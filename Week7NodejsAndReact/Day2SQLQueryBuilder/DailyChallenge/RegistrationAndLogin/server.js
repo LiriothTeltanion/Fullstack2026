@@ -22,6 +22,8 @@ app.use("/", userRouter);
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 app.use((err, req, res, next) => {
+  if (err.code === "23505")
+    return res.status(409).json({ error: "Username or email already taken" });
   console.error(err.message);
   res.status(500).json({ error: "Something went wrong" });
 });

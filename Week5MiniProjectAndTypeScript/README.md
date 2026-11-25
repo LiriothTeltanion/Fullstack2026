@@ -18,7 +18,9 @@ The week started with three small browser apps that call public APIs, and then m
 | [`Day2IntroductionToTypeScriptAndKeyConcepts/`](Day2IntroductionToTypeScriptAndKeyConcepts/) | Types, unions, tuples, overloads and a union type validator |
 | [`Day3AdvancedTypeScriptConceptsAndApplications/`](Day3AdvancedTypeScriptConceptsAndApplications/) | Classes, access modifiers, interfaces and a library system |
 | [`Day4AdvancedTypeScriptConceptsAndApplications/`](Day4AdvancedTypeScriptConceptsAndApplications/) | Intersection types, generics and type guards |
-| [`RemoteLearningTypeScript/`](RemoteLearningTypeScript/) | Remote practice: nine first TypeScript exercises |
+| [`RemoteLearningTypeScript/`](RemoteLearningTypeScript/) | TypeScript fundamentals, a Redux counter, and a recipe search with Redux Toolkit |
+
+The [remote Redux exercises](RemoteLearningTypeScript/Exercises/ReduxPractice/) cover a persistent task list and a routed profile with simulated sign-in.
 
 ---
 

@@ -10,6 +10,20 @@
 
 Six multi-table questions on `dvdrental` in [xp_ninja_dvdrental.sql](xp_ninja_dvdrental.sql), each one walking through three to five tables.
 
+## 🧒 Assignment practice: DVD waiting list
+
+[required_waiting_list_demo.sql](required_waiting_list_demo.sql) is a self-contained synthetic demonstration of the family-DVD and waiting-list requirements. The six questions below remain extra practice.
+
+~~~bash
+psql -v ON_ERROR_STOP=1 -d fullstack_practice -f required_waiting_list_demo.sql
+~~~
+
+Use a disposable practice database. The script creates its own schema inside BEGIN and finishes with ROLLBACK; it does not need the real dvdrental dataset. If that schema already exists, creation fails rather than reusing it.
+
+The demonstration lists available physical copies rated G or PG, using NOT EXISTS for outstanding rentals. Every waiting entry references both a DVD copy and a child. A partial unique index prevents duplicate active requests. Counts include DVDs with zero children waiting.
+
+Collection records picked_up_at: the child's name disappears from the active query and the DVD count decreases, while historical information remains. Collection is refused when the copy has an outstanding rental. The fixture verifies foreign keys, duplicate rejection, invalid pickup dates, availability, collection and rollback. After ROLLBACK, no demonstration schema remains.
+
 ## ▶️ How to run
 
 Only on the `dvdrental` sample database:

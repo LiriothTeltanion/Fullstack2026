@@ -8,12 +8,14 @@
 
 </div>
 
-Two React mini projects: a meme generator and a book search app.
+React projects for working with external services, forms and game state. Each folder includes its own setup instructions.
 
 ## Contents
 
-- [`MemeGenerator/`](MemeGenerator/): Meme Generator: a React meme maker using the Imgflip templates
-- [`SearchBookApp/`](SearchBookApp/): Search Book App: Google Books search with a filter, newest books first
+- [GoogleMap/](GoogleMap/) — Mini Project - Google Map
+- [MemeGenerator/](MemeGenerator/) — Mini Project - Meme Generator
+- [SearchBookApp/](SearchBookApp/) — Mini Project - Search Book App
+- [TicTacToe/](TicTacToe/) — Mini Project - Tic Tac Toe
 
 ---
 
@@ -22,3 +24,5 @@ Two React mini projects: a meme generator and a book search app.
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 Week 14 Day 7 - Mini-projects - Exercises
+
+Navigation verified 2026-11-25. Entries link to available code and run instructions.

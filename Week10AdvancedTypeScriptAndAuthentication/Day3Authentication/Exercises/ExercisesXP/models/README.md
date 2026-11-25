@@ -1,4 +1,4 @@
-# 🗄️ Models - Exercises XP
+# Authentication persistence
 
 <div align="center">
 
@@ -8,16 +8,6 @@
 
 </div>
 
-The data access functions for Exercises XP.
-
-## Contents
-
-- [`userModel.js`](userModel.js)
-
----
-
-## 👤 Author
-
-**Kevin Cusnir 'Lirioth'**  
-Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
-Week 10 Day 3 - Authentication - Exercises XP
+- database.js creates the SQLite schema and enables foreign keys, WAL and a busy timeout.
+- userModel.js preserves the lookup, create and public-profile interfaces, with durable users and hashed email-confirmation tokens.
+- sessionModel.js stores refresh identifiers and revocation. Its compare-and-swap update gives each refresh token one successful use.

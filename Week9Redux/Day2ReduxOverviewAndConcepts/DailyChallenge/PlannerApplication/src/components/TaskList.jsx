@@ -1,11 +1,8 @@
-import { useSelector } from "react-redux";
+import { connect } from "react-redux";
 import { selectSelectedDay, selectTasksForSelectedDay } from "../redux/plannerReducer.js";
 import TaskItem from "./TaskItem.jsx";
 
-export default function TaskList() {
-  const day = useSelector(selectSelectedDay);
-  const tasks = useSelector(selectTasksForSelectedDay);
-
+export function TaskList({ day, tasks }) {
   if (tasks.length === 0) {
     return <p className="muted">Nothing planned for {day}.</p>;
   }
@@ -18,3 +15,8 @@ export default function TaskList() {
     </ul>
   );
 }
+
+export default connect(state => ({
+  day: selectSelectedDay(state),
+  tasks: selectTasksForSelectedDay(state),
+}))(TaskList);

@@ -12,8 +12,9 @@ Two CSS Grid layouts: my CV and three landing pages that share one stylesheet.
 
 ## Contents
 
-- [`MyCV/`](MyCV/): My CV: a one-page CV built with named grid areas
-- [`ThreeLandingPages/`](ThreeLandingPages/): Three Landing Pages: a bakery, a gym and a tour company, each with its own grid layout
+- [CSSLayout/](CSSLayout/) — Exercise - CSS Layout
+- [MyCV/](MyCV/) — Exercise - My CV
+- [ThreeLandingPages/](ThreeLandingPages/) — Exercise - Three Landing Pages
 
 ---
 
@@ -22,3 +23,5 @@ Two CSS Grid layouts: my CV and three landing pages that share one stylesheet.
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 Week 13 Day 3 - CSS Grid and Layout - Exercises
+
+Navigation verified 2026-11-25. Entries link to available code and run instructions.

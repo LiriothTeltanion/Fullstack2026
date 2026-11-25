@@ -26,7 +26,7 @@ function App() {
             <Route
               path="/"
               element={
-                <ErrorBoundary>
+                <ErrorBoundary key="home">
                   <HomeScreen />
                 </ErrorBoundary>
               }
@@ -34,7 +34,7 @@ function App() {
             <Route
               path="/profile"
               element={
-                <ErrorBoundary>
+                <ErrorBoundary key="profile">
                   <ProfileScreen />
                 </ErrorBoundary>
               }
@@ -42,7 +42,7 @@ function App() {
             <Route
               path="/shop"
               element={
-                <ErrorBoundary>
+                <ErrorBoundary key="shop">
                   <ShopScreen />
                 </ErrorBoundary>
               }

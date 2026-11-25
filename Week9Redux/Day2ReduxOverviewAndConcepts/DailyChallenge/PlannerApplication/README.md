@@ -8,7 +8,7 @@
 
 </div>
 
-A day planner. I pick a date and get that day's own task list, where I can add, tick, edit and delete tasks. All of it goes through one hand-written Redux reducer.
+A day planner. I pick a date and get that day's own task list, where I can add, tick, edit and delete tasks. All of it goes through one hand-written Redux reducer. `connect` from react-redux supplies the selected date and task list to the date picker and task components, and binds their action creators.
 
 ## ▶️ How to run
 
@@ -26,6 +26,10 @@ npm run dev
 | `updateDay()` | Helper that copies only the list of the day being changed |
 | `selectTasksForSelectedDay` | Returns the tasks of the chosen day, or a shared empty array |
 | `DayPicker`, `TaskForm`, `TaskList`, `TaskItem` | The date input, the add form, the list and one row with its own edit mode |
+
+## Verification · 2026-11-25
+
+Run `npm test` for the per-date CRUD and rapid-addition regression tests, and `npm run build` for the production bundle. `DayPicker`, `TaskForm`, `TaskList` and `TaskItem` each use `connect`; local draft text and edit mode remain in component state. Task ids use `crypto.randomUUID()` so two fast additions keep independent edit/delete targets.
 
 ## 🧠 What I learned
 

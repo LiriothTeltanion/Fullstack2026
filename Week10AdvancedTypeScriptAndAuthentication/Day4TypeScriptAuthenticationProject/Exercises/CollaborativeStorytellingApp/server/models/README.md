@@ -12,6 +12,9 @@ The data access functions for Collaborative Storytelling App.
 
 ## Contents
 
+- [refreshModel.js](refreshModel.js) stores refresh sessions and rotates them in a transaction.
+- [db.js](db.js) configures the pool or the explicit disposable memory mode.
+
 - [`db.js`](db.js)
 - [`storyModel.js`](storyModel.js)
 - [`userModel.js`](userModel.js)

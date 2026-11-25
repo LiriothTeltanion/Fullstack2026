@@ -12,7 +12,8 @@ My portfolio page, linking to projects from earlier weeks.
 
 ## Contents
 
-- [`PortfolioProject/`](PortfolioProject/): Portfolio Project: my portfolio page with real projects from this repository
+- [PortfolioProject/](PortfolioProject/) — Exercise - Portfolio Project
+- [RobotAnimation/](RobotAnimation/) — Exercise - Robot Animation
 
 ---
 
@@ -21,3 +22,5 @@ My portfolio page, linking to projects from earlier weeks.
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 Week 13 Day 5 - Coding Day - Exercises
+
+Navigation verified 2026-11-25. Entries link to available code and run instructions.

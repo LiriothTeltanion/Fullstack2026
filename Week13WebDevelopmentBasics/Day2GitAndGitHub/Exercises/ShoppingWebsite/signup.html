@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Create an account · Riff Shop</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="index.html">Riff Shop</a
+      ><a class="products-link" href="products.html">Products</a>
+    </header>
+    <main>
+      <h1>Create an account</h1>
+      <p>This bonus form practices HTML validation with test values.</p>
+      <form id="account-demo" class="account-form">
+        <label>Name <input name="name" required autocomplete="name" /></label
+        ><label>Email <input type="email" name="email" required autocomplete="email" /></label
+        ><label
+          >Password
+          <input
+            type="password"
+            name="password"
+            required
+            minlength="8"
+            autocomplete="new-password" /></label
+        ><button class="checkout" type="submit">Create an account</button>
+      </form>
+      <p id="account-status" role="status"></p>
+      <p><a href="login.html">Log in</a></p>
+    </main>
+    <script src="account-demo.js"></script>
+  </body>
+</html>

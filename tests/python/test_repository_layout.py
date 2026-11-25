@@ -1,4 +1,5 @@
 import json
+import os
 import subprocess
 import sys
 import unittest
@@ -201,11 +202,11 @@ class RepositoryLayoutTests(unittest.TestCase):
     def test_every_curriculum_directory_has_readme(self):
         missing = []
         for week in (p for p in ROOT.iterdir() if p.is_dir() and p.name.lower().startswith("week")):
-            for directory in [week, *[p for p in week.rglob("*") if p.is_dir()]]:
-                if any(part in {"node_modules", "__pycache__", ".nova"} for part in directory.parts):
-                    continue
-                if any(directory.iterdir()) and not any(p.is_file() and p.name.lower() == "readme.md" for p in directory.iterdir()):
-                    missing.append(str(directory.relative_to(ROOT)))
+            # Dependencies and generated build output can coexist with source in a developer checkout.
+            for folder, children, filenames in os.walk(week):
+                children[:] = [name for name in children if name not in {"node_modules", "__pycache__", ".nova", "dist", "build"}]
+                if (children or filenames) and not any(name.lower() == "readme.md" for name in filenames):
+                    missing.append(str(Path(folder).relative_to(ROOT)))
         self.assertEqual(missing, [], "Missing README.md: " + ", ".join(missing[:20]))
 
 

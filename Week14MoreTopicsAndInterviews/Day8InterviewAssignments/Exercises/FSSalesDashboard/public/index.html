@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fieldwork · Sales Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <a class="brand" href="/">Fieldwork</a>
+        <p>Sales dashboard practice</p>
+        <button id="logout" hidden>Sign out</button>
+      </header>
+      <p id="message" role="status"></p>
+      <section id="auth" aria-labelledby="auth-title">
+        <h1 id="auth-title">A clearer view<br />of your business.</h1>
+        <p>Create a local practice account or sign in.</p>
+        <form id="auth-form">
+          <label
+            >Username<input
+              name="username"
+              minlength="3"
+              maxlength="32"
+              autocomplete="username"
+              required /></label
+          ><label
+            >Password<input
+              name="password"
+              type="password"
+              minlength="10"
+              maxlength="128"
+              autocomplete="current-password"
+              required
+          /></label>
+          <div class="actions">
+            <button name="action" value="login">Sign in</button
+            ><button name="action" value="register" class="secondary">Create account</button>
+          </div>
+        </form>
+      </section>
+      <div id="dashboard" hidden>
+        <nav aria-label="Dashboard">
+          <button data-view="business" aria-pressed="true">My business</button
+          ><button data-view="meetings" aria-pressed="false">Meetings</button
+          ><button data-view="statistics" aria-pressed="false">Meeting statistics</button>
+        </nav>
+        <section id="business" class="view">
+          <h1>My business</h1>
+          <p>Keep your companies and contact details together.</p>
+          <form id="company-form">
+            <input name="id" type="hidden" /><label
+              >Company name<input name="name" maxlength="120" required /></label
+            ><label>Email<input name="email" type="email" maxlength="200" /></label
+            ><label>Phone<input name="phone" maxlength="80" /></label
+            ><label>Address<input name="address" maxlength="300" /></label>
+            <div class="actions">
+              <button>Save company</button
+              ><button type="reset" class="secondary">Clear form</button>
+            </div>
+          </form>
+          <div class="table-scroll">
+            <table>
+              <caption>
+                Companies
+              </caption>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Contact</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="companies"></tbody>
+            </table>
+          </div>
+        </section>
+        <section id="meetings" class="view" hidden>
+          <h1>Meetings</h1>
+          <p>Record a date, place and a useful summary.</p>
+          <form id="meeting-form">
+            <input name="id" type="hidden" /><label
+              >Company<select name="company_id" required></select></label
+            ><label>Date<input name="date" type="date" required /></label
+            ><label>Location<input name="location" maxlength="200" required /></label
+            ><label>Summary<textarea name="summary" maxlength="5000" required></textarea></label>
+            <div class="actions">
+              <button>Save meeting</button
+              ><button type="reset" class="secondary">Clear form</button>
+            </div>
+          </form>
+          <div class="table-scroll">
+            <table>
+              <caption>
+                Meeting history
+              </caption>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Company and location</th>
+                  <th>Summary</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="meeting-rows"></tbody>
+            </table>
+          </div>
+        </section>
+        <section id="statistics" class="view" hidden>
+          <h1>Meeting statistics</h1>
+          <label class="month">Month<input id="month" type="month" required /></label>
+          <p id="month-total"></p>
+          <div id="chart" aria-label="Meetings per day"></div>
+          <p>Each bar shows a day's share of the meetings in the selected month.</p>
+        </section>
+      </div>
+      <footer>Local sales practice · Your account only sees its own companies and meetings.</footer>
+    </main>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

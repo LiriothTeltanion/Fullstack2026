@@ -12,8 +12,8 @@ Coding Day. These are the exercises and challenges for this day.
 
 ## Contents
 
-- [`Exercises/`](Exercises/)
-- [`DailyChallenge/`](DailyChallenge/)
+- [DailyChallenge/](DailyChallenge/) — Daily Challenges
+- [Exercises/](Exercises/) — Exercises
 
 ---
 
@@ -22,3 +22,5 @@ Coding Day. These are the exercises and challenges for this day.
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 Week 13 Day 5 - Coding Day
+
+Navigation verified 2026-11-25. Entries link to available code and run instructions.

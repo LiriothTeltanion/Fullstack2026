@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchUsers, selectUserName } from "../users/usersSlice.js";
+import { selectUserName } from "../users/usersSlice.js";
 import { fetchPosts, selectPosts, selectPostsError, selectPostsStatus } from "./postsSlice.js";
 
 function PostAuthor({ userId }) {
@@ -12,14 +12,12 @@ export default function PostsList() {
   const posts = useSelector(selectPosts);
   const status = useSelector(selectPostsStatus);
   const error = useSelector(selectPostsError);
-  const usersStatus = useSelector(state => state.users.status);
   const dispatch = useDispatch();
 
   // Load once: only when nothing has been requested yet.
   useEffect(() => {
     if (status === "idle") dispatch(fetchPosts());
-    if (usersStatus === "idle") dispatch(fetchUsers());
-  }, [status, usersStatus, dispatch]);
+  }, [status, dispatch]);
 
   return (
     <section className="card">

@@ -1,3 +1,4 @@
+import contributorRoutes from "./routes/contributorRoutes.js";
 import cookieParser from "cookie-parser";
 import express from "express";
 import rateLimit from "express-rate-limit";
@@ -40,11 +41,13 @@ app.get("/api/csrf-token", (req, res) => res.json({ csrfToken: res.locals._csrf 
 
 app.use("/api/auth", authRoutes);
 app.use("/api/stories", storiesRoutes);
+app.use("/api/contributors", contributorRoutes);
 
 app.use((req, res) => res.status(404).json({ error: `No route for ${req.method} ${req.path}` }));
 
 app.use((err, req, res, next) => {
   if (res.headersSent) return next(err);
+  if (err.code === "23505") return res.status(409).json({ error: "That username is taken" });
   // lusca sets 403 on the response before passing its "CSRF token missing" error along.
   const status = err.status ?? (res.statusCode >= 400 ? res.statusCode : 500);
   if (status >= 500) console.error(err);

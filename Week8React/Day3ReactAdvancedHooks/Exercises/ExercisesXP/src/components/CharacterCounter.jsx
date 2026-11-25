@@ -11,7 +11,13 @@ function CharacterCounter() {
 
   return (
     <div>
-      <textarea ref={inputRef} rows="3" cols="40" onInput={handleInput} />
+      <textarea
+        aria-label="Text to count"
+        ref={inputRef}
+        rows="3"
+        cols="40"
+        onInput={handleInput}
+      />
       <p>Characters: {count}</p>
       <button onClick={() => inputRef.current.focus()}>Focus the text box</button>
     </div>

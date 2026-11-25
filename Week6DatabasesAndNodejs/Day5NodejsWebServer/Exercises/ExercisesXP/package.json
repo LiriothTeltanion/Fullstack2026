@@ -8,6 +8,13 @@
     "ex2": "node ex2-html-server.js",
     "ex3": "node ex3-json-routes.js",
     "ex4": "node ex4-static-page.js",
-    "ex5": "node ex5-date-server.js"
+    "ex5": "node ex5-date-server.js",
+    "test": "node --test tests/*.test.js",
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "axios": "^1.13.2"
   }
 }

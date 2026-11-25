@@ -17,6 +17,10 @@ npm install
 npm run dev
 ```
 
+## Course implementation
+
+The book inventory is the course exercise. Switch between all books, horror, fantasy and science fiction to see the memoized genre selectors at work. The expense tracker remains available on the same page.
+
 ## 🎯 The challenge
 
 1. **Expenses slice.** `expenseAdded` (with `prepare`), `expenseUpdated` (replaces the item at its index), `expenseDeleted` and `filterChanged`.

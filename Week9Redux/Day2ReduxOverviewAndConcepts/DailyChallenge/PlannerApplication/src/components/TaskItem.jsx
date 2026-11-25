@@ -1,14 +1,13 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { connect } from "react-redux";
 import { deleteTask, editTask, toggleTask } from "../redux/plannerReducer.js";
 
-export default function TaskItem({ day, task }) {
-  const dispatch = useDispatch();
+export function TaskItem({ day, task, onEditTask, onToggleTask, onDeleteTask }) {
   const [isEditing, setIsEditing] = useState(false);
   const [draft, setDraft] = useState(task.text);
 
   const save = () => {
-    if (draft.trim()) dispatch(editTask(day, task.id, draft.trim()));
+    if (draft.trim()) onEditTask(day, task.id, draft.trim());
     setIsEditing(false);
   };
 
@@ -24,11 +23,7 @@ export default function TaskItem({ day, task }) {
         />
       ) : (
         <label className={task.done ? "done" : ""}>
-          <input
-            type="checkbox"
-            checked={task.done}
-            onChange={() => dispatch(toggleTask(day, task.id))}
-          />{" "}
+          <input type="checkbox" checked={task.done} onChange={() => onToggleTask(day, task.id)} />{" "}
           {task.text}
         </label>
       )}
@@ -40,10 +35,16 @@ export default function TaskItem({ day, task }) {
             Edit
           </button>
         )}
-        <button className="danger" onClick={() => dispatch(deleteTask(day, task.id))}>
+        <button className="danger" onClick={() => onDeleteTask(day, task.id)}>
           Delete
         </button>
       </span>
     </li>
   );
 }
+
+export default connect(null, {
+  onEditTask: editTask,
+  onToggleTask: toggleTask,
+  onDeleteTask: deleteTask,
+})(TaskItem);

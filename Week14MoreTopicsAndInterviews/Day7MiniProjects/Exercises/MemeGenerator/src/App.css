@@ -24,6 +24,8 @@ body {
 
 .logo {
   font-size: 2rem;
+  object-fit: cover;
+  border-radius: 6px;
 }
 
 .header h1 {
@@ -46,7 +48,7 @@ body {
 
 @media (min-width: 800px) {
   .layout {
-    grid-template-columns: 1fr 1.4fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
     align-items: start;
   }
 }
@@ -81,6 +83,18 @@ input[type="color"] {
   height: 2.2rem;
   border: none;
   background: none;
+}
+
+.form,
+.preview-panel,
+label,
+input {
+  min-width: 0;
+}
+
+input {
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 .row {

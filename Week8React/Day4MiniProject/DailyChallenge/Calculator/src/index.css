@@ -87,8 +87,18 @@ textarea {
 
 .calculator {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   gap: 0.5rem;
+}
+
+.calculator input,
+.calculator select {
+  min-width: 0;
+  width: 100%;
+}
+
+.card {
+  overflow-wrap: anywhere;
 }
 
 .calculator button {
@@ -98,4 +108,10 @@ textarea {
 .result {
   font-size: 2rem;
   text-align: center;
+}
+
+@media (max-width: 480px) {
+  .calculator {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }

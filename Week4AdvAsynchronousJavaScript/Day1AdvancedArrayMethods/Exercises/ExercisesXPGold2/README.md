@@ -39,7 +39,7 @@ turtleAfterPad: 🐢=======
 | `sumArray(nums)` | Adds the numbers with `reduce`, starting from 0 |
 | `uniqueArray(arr)` | Puts the array in a `Set` and back into an array with `Array.from` |
 | `cleanArray(arr)` | Keeps everything except `null`, `0`, `""`, `false`, `undefined` and `NaN` |
-| `repeat(str, n = 1)` | Builds the string in a `for` loop instead of calling `String.prototype.repeat`; `n <= 0` gives `""` |
+| `repeat(str, n = 1)` | Builds the string in a `for` loop instead of calling `String.prototype.repeat`; `n <= 0` gives `""`. Positive fractional and non-finite positive counts are rejected. |
 | `alignRacers()` | Pads the turtle and the rabbit with `padStart(9)` and returns what `trim().padEnd(9, "=")` does to the turtle |
 
 ## 🧠 What I learned

@@ -42,6 +42,7 @@ export function cleanArray(arr: any[]): any[] {
 // Implement `repeat` without using String.prototype.repeat (custom loop). Default n = 1.
 export function repeat(str: string, n: number = 1): string {
   if (n <= 0) return "";
+  if (!Number.isSafeInteger(n)) throw new RangeError("Repeat count must be a finite integer.");
   let out = "";
   for (let i = 0; i < n; i++) out += str;
   return out;

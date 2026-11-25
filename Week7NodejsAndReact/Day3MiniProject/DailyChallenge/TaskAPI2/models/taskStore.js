@@ -2,7 +2,7 @@
 // promise chain, so two quick requests cannot overwrite each other.
 import { readFile, writeFile } from "node:fs/promises";
 
-const FILE = new URL("../data/tasks.json", import.meta.url);
+const FILE = process.env.TASK_API_TASKS_FILE || new URL("../data/tasks.json", import.meta.url);
 let queue = Promise.resolve();
 
 export async function readTasks() {

@@ -1,23 +1,39 @@
-### Works with the VS Code "REST Client" extension. The login cookie is kept between requests.
-@base = http://localhost:5000/api
+### REST Client local practice sequence. Its cookie jar keeps both cookies.
+@base = http://127.0.0.1:5000/api
 
-### Register
+### Register an artificial account
+# @name registration
 POST {{base}}/auth/register
 Content-Type: application/json
 
-{ "username": "kevin", "email": "kevin@example.com", "password": "superSecret1" }
+{"username":"sample_writer","email":"writer@example.com","password":"Practice-Orchard-47"}
 
-### Login (sets the httpOnly "token" cookie and also returns the token)
+### Confirm locally using only this registration response
+POST {{base}}/auth/confirm-email
+Content-Type: application/json
+
+{"token":"{{registration.response.body.$.developmentConfirmation.token}}"}
+
+### Login sets access and refresh cookies
 POST {{base}}/auth/login
 Content-Type: application/json
 
-{ "username": "kevin", "password": "superSecret1" }
+{"username":"sample_writer","password":"Practice-Orchard-47"}
 
-### Who am I? (protected)
-GET {{base}}/auth/me
+### Read the protected profile
+GET {{base}}/auth/profile
 
-### All users (protected)
+### Refresh rotates the refresh cookie
+POST {{base}}/auth/refresh
+Content-Type: application/json
+
+{}
+
+### Preserve the protected users exercise
 GET {{base}}/users
 
-### Logout
+### Logout revokes the session and clears both cookies
 POST {{base}}/auth/logout
+Content-Type: application/json
+
+{}

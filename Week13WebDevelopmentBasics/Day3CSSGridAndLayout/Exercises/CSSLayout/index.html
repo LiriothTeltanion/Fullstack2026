@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fieldnotes · CSS Layout</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#projects">Skip to projects</a>
+    <header>
+      <a class="brand" href="#top">Fieldnotes</a>
+      <nav aria-label="Main navigation">
+        <a href="#projects">Projects</a><a href="#about">About</a
+        ><a href="https://github.com/LiriothTeltanion/Fullstack2026">Repository</a>
+      </nav>
+    </header>
+    <main id="top">
+      <section class="cover" aria-labelledby="cover-title">
+        <p>Kevin Cusnir · Full-stack practice</p>
+        <h1 id="cover-title">Small projects.<br />Ideas put to work.</h1>
+        <a class="cta" href="#projects">Explore the projects <span aria-hidden="true">↘</span></a>
+      </section>
+      <section id="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title">Selected exercises</h2>
+        <div class="project-grid">
+          <a
+            class="project python"
+            href="../../../../Week1Python/Day5MiniProject/DailyChallenge/AdvancedAlgorithm/README.md"
+            ><span>Python</span>
+            <h3>Find the pair</h3>
+            <p>Two approaches to finding numbers that add to a target.</p></a
+          >
+          <a
+            class="project music"
+            href="../../../../Week3JavaScriptandDOM/Day5MiniProject/Exercises/drumset-mini/README.md"
+            ><span>JavaScript</span>
+            <h3>A rhythm in the browser</h3>
+            <p>Play the drum set from the keyboard or the screen.</p></a
+          >
+          <a
+            class="project react"
+            href="../../../../Week8React/Day4MiniProject/DailyChallenge/Calculator/README.md"
+            ><span>React</span>
+            <h3>Make it add up</h3>
+            <p>Four operations and a small history of results.</p></a
+          >
+          <a class="project css" href="../../../Day5CodingDay/Exercises/RobotAnimation/index.html"
+            ><span>CSS</span>
+            <h3>A little character</h3>
+            <p>A robot assembled from shapes, ready to wave.</p></a
+          >
+        </div>
+      </section>
+      <section id="about">
+        <h2>A layout I can explain</h2>
+        <p>
+          The navigation uses Flexbox. The project gallery uses Grid. On a narrow screen the cards
+          stack, and the header wraps to keep every link accessible.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <p>Kevin Cusnir · CSS layout exercise</p>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+  </body>
+</html>

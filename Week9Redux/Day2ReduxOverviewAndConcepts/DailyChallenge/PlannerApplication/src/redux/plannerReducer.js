@@ -9,7 +9,7 @@ export const DELETE_TASK = "planner/deleteTask";
 export const selectDay = day => ({ type: SELECT_DAY, payload: day });
 export const addTask = (day, text) => ({
   type: ADD_TASK,
-  payload: { day, task: { id: Date.now(), text, done: false } },
+  payload: { day, task: { id: crypto.randomUUID(), text, done: false } },
 });
 export const editTask = (day, id, text) => ({ type: EDIT_TASK, payload: { day, id, text } });
 export const toggleTask = (day, id) => ({ type: TOGGLE_TASK, payload: { day, id } });

@@ -1,7 +1,7 @@
 import { ESLint } from "eslint";
 
 const expectedCounts = new Map([
-  ["@typescript-eslint/no-explicit-any", 39],
+  ["@typescript-eslint/no-explicit-any", 30],
   ["@typescript-eslint/no-unused-vars", 21],
   ["no-constant-condition", 3],
   ["no-debugger", 1],

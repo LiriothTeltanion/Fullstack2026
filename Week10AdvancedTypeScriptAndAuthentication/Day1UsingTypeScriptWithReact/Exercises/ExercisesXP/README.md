@@ -23,8 +23,8 @@ npm run dev
 
 1. **Greeting.** `GreetingProps` has a required `name` and an optional `age`, and the age only shows when it is passed.
 2. **Counter.** `useState<number>(start)` with a `start` prop that defaults to 0.
-3. **UserCard.** Takes a `User` object (from `types.ts`) and an optional `highlight` flag with a default.
-4. **UserList.** Renders `User[]`, highlighting mentors.
+3. **UserCard.** Optional name, age and role props default to Anonymous, 0 and Member. An omitted age displays Age not provided. The earlier User object and highlight props remain supported.
+4. **UserList.** useEffect fetches https://jsonplaceholder.typicode.com/users, with typed state, loading, HTTP/shape errors and cleanup cancellation. Local signup examples remain visible separately.
 5. **SignupForm.** `ChangeEvent<HTMLInputElement>`, `ChangeEvent<HTMLSelectElement>` and `FormEvent<HTMLFormElement>`, and an `onAdd` prop typed as `(user: Omit<User, "id">) => void`.
 
 ## 🧠 What I learned

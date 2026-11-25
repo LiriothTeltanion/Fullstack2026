@@ -1,119 +1,54 @@
-# Final Project Scope
+# Ivrit Sheli | A Hebrew vocabulary review session
 
-My working plan for the final project. I fill in every `_…_` line before I write code, and I update it when the
-plan changes. The stack is fixed by the course: PostgreSQL, Express, React and Node.js (PERN).
+An adult learning Hebrew in Israel can save a useful word, enter its translation in Spanish or English, and practise it again when the next review is due. Hebrew entries read right to left while translations keep their own text direction.
 
-## 1. The idea in one sentence
+## Existing work and proposed course contribution
 
-_Who is it for, what problem does it solve, and how?_
+[Ivrit Sheli 2.13.0](https://github.com/LiriothTeltanion/IvritSheli/tree/929f925f9494b646b17827809265e5596833ce5b) already has a React interface, a Python/FastAPI backend, learning scenes and local-first progress. This proposal discloses that starting point. The course contribution would be an independently demonstrable vocabulary deck and review flow using React, Node.js, Express and PostgreSQL. The Week 12 folder currently contains a generic PERN starter.
 
-> Example shape: "A web app that helps **[users]** to **[do something]** without **[current pain]**."
+## What a learner can do
 
-## 2. Users
-
-| User | What they want to do | Why they come back |
-|---|---|---|
-| _Visitor (not logged in)_ | _…_ | _…_ |
-| _Registered user_ | _…_ | _…_ |
-| _Admin (only if needed)_ | _…_ | _…_ |
-
-## 3. MVP: the features I must finish
-
-The smallest version that is still useful. If time is short, I cut from section 4, never from here.
-
-| # | Feature | Done when… |
-|---|---|---|
-| 1 | Sign up, log in and log out (JWT + bcrypt) | A new user can register, log in and see a private page |
-| 2 | _Main resource: create and list_ | _…_ |
-| 3 | _Main resource: edit and delete_ | _…_ |
-| 4 | _Search or filter_ | _…_ |
-| 5 | Deployed and reachable by a link | Anyone can open the live URL |
-
-## 4. Nice to have (only after the MVP works)
-
-- _…_
-- _…_
-
-## 5. Out of scope
-
-Things I will not build in this project, so they do not eat my time:
-
-- _…_
-- _…_
-
-## 6. User stories
-
-Format: "As a _user_, I want to _action_ so that _reason_."
-
-1. _As a visitor, I want to …_
-2. _As a user, I want to …_
-3. _…_
-
-## 7. Data model
-
-| Table | Columns (type) | Relations |
-|---|---|---|
-| `users` | `id` (serial PK), `email` (unique), `password_hash`, `created_at` | has many _items_ |
-| _`items`_ | _`id`, `user_id` (FK → users.id), `title`, …_ | belongs to `users` |
-| _…_ | _…_ | _…_ |
-
-## 8. API endpoints
-
-| Method | Route | Auth | What it does |
-|---|---|---|---|
-| POST | `/api/auth/register` | no | Create a user |
-| POST | `/api/auth/login` | no | Return a token |
-| GET | `/api/_items_` | yes | List the logged-in user's items |
-| POST | `/api/_items_` | yes | Create an item |
-| PUT | `/api/_items_/:id` | yes | Update one item |
-| DELETE | `/api/_items_/:id` | yes | Delete one item |
-
-## 9. Pages (React routes)
-
-| Route | Page | Main components |
-|---|---|---|
-| `/` | Home | _…_ |
-| `/login`, `/register` | Auth forms | `LoginForm`, `RegisterForm` |
-| `/dashboard` | Private area | _…_ |
-| _…_ | _…_ | _…_ |
-
-Wireframes: _link or sketch photo here._
-
-## 10. Tech choices
-
-| Part | Choice | Why |
-|---|---|---|
-| Database | PostgreSQL | Used all course long |
-| Back end | Node.js + Express | Routes, controllers, middleware |
-| Query layer | _pg or Knex_ | _…_ |
-| Front end | React + Vite | _…_ |
-| State | _useState / Context / Redux Toolkit_ | _…_ |
-| Styling | _plain CSS / Bootstrap_ | _…_ |
-| Hosting | _…_ | _…_ |
-| External API | _none, or which one and its key in `.env`_ | _…_ |
-
-## 11. Timeline
-
-| When | Goal | Check |
-|---|---|---|
-| Day 1 | This scope document finished | Every `_…_` filled in |
-| Day 2 | Database tables and seed data | `SELECT` returns my rows |
-| Day 3 | Auth routes working in Postman | Register, login and a protected route |
-| Day 4 | Main resource CRUD in the API | All endpoints answer |
-| Day 5 | React pages for auth and the list | Log in from the browser |
-| Week 12 Day 1 | Edit, delete, search; deploy | Live link works |
-| Week 12 Day 5 | Demo Day | 5-minute demo rehearsed |
-
-## 12. Risks and how I handle them
-
-| Risk | Plan B |
+| User story | Acceptance check |
 |---|---|
-| The external API is down or limited | Save a sample JSON and use it as a fallback |
-| Deployment takes longer than planned | Deploy a "hello world" version on day 2 |
-| A feature takes too long | Move it to section 4 and keep the MVP |
+| As a visitor, I want to understand a word card before signing up. | A sample card displays a Hebrew word, optional transliteration and a Spanish or English translation. |
+| As a learner, I want my own collection. | I can create an account, sign in, create or rename a deck, and add, edit, filter or delete a card. A second account can access only its own decks. |
+| As a learner, I want to practise words I have difficulty recalling. | A session selects due cards. Revealing the answer and choosing a recall rating records one review and sets the next due time. |
+| As a returning learner, I want to see what I practised. | The dashboard shows the last seven days of reviews and the number of cards currently due. |
 
-## 13. Daily log
+The first demonstration uses synthetic vocabulary and two test accounts. Playback, CSV import and richer learning statistics are possible extensions. The proposed deliverable fits one learner working with their own decks.
 
-| Date | What I did | Next step |
-|---|---|---|
-| _DD-MM-YYYY_ | _…_ | _…_ |
+## Data, routes and screen flow
+
+| PostgreSQL table | Responsibility |
+|---|---|
+| users | Account ID, unique email, password hash and creation time. |
+| decks | Owner and deck title. |
+| cards | Deck, Hebrew, transliteration, translation, target language, review interval and next due time. |
+| reviews | Card, rating and timestamp. A review and the card's updated schedule are written in one transaction. |
+
+The proposed API has register and login routes, authenticated deck and card CRUD, a due-card query and a review submission. Ownership follows each card through its deck. A repeated review request should produce a single event. Writing the next review date in UTC allows tests to use a fixed clock.
+
+```mermaid
+flowchart LR
+  Start[Sample Hebrew card] --> Login[Sign in]
+  Login --> Deck[My decks]
+  Deck --> Edit[Add or edit a word]
+  Deck --> Due[Review due cards]
+  Due --> Reveal[Reveal and rate]
+  Reveal --> Progress[Weekly activity]
+```
+
+## Implementation plan
+
+| Milestone | Technical evidence |
+|---|---|
+| Establish the existing product baseline | Versioned feature inventory and a bounded vocabulary review design. |
+| Define the model and build the API | Schema, seed data and repeatable tests for account isolation and review scheduling. |
+| Build the client | Keyboard-accessible review with Hebrew RTL, English/Spanish text and useful empty states. |
+| Rehearse and deploy | Live URL for the deployed version, a short demo with synthetic data and an explanation of one scheduling decision. |
+
+React and TypeScript would drive the screens. Express and Node.js would expose the API, with PostgreSQL storing the learner's collection. Render is the proposed host, subject to a suitable course deployment being available. The review rule can use a small, documented interval table so each rating is explainable and testable.
+
+## Delivery evidence
+
+The proposed release includes a reproducible setup, synthetic seed data, an accessible deployed review flow, a short product demonstration and a technical walkthrough of ownership and scheduling.

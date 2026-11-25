@@ -10,6 +10,10 @@
 
 Harder fetch patterns in [fetchNinja.js](fetchNinja.js): a timeout, reading an API page by page, a cache, and a limit on how many requests run at once.
 
+## GIFs and promise timing
+
+Open the [category GIF form](../../DailyChallenge/GifsReference/index.html) for random results, individual removal and Delete All. [Local key setup](../../DailyChallenge/GifsReference/README.md) is shared with the GIF challenge. Run `node parallelResults.js` to compare three ways of observing the same two jobs. Collecting via `Promise.all` prints the values in input order after both finish. Independent `await` or `.then()` handlers print the faster result first. The delayed examples start with the slow timer but finish it second.
+
 ## ▶️ How to run
 
 Needs Node 18+ and an internet connection.

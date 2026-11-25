@@ -12,6 +12,8 @@ The source code for Generic Data.
 
 ## Contents
 
+- [api/](api/), [features/](features/), [types/](types/) and [store.ts](store.ts) provide typed fetches and shared Redux state.
+
 - [`components/`](components/)
 - [`hooks/`](hooks/)
 - [`App.tsx`](App.tsx)

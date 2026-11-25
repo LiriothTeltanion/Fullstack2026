@@ -8,11 +8,16 @@
 
 </div>
 
-The remote-learning TypeScript set, nine short exercises in one file.
+TypeScript fundamentals and small applications built with React and Redux Toolkit.
 
 ## Contents
 
 - [`ExercisesXP/`](ExercisesXP/): nine first TypeScript exercises, from typed functions to rest parameters
+- [`RecipeFinder/`](RecipeFinder/): React, TypeScript and Redux ingredient search with local recipes and a detail view
+
+- [Redux counter](ExercisesXP/redux-counter/) with typed increment and decrement actions.
+- [Gold · Todo list](ReduxPractice/ExercisesXPGold/) with dates, filters and local persistence.
+- [Ninja · Practice profile](ReduxPractice/ExercisesXPNinja/) with simulated requests and private routes.
 
 ---
 

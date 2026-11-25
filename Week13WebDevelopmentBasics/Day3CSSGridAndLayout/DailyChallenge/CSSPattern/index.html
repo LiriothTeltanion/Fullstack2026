@@ -1,50 +1,34 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="A tile pattern made with CSS Grid and simple shapes." />
-    <title>CSS Pattern · Grid Tiles</title>
+    <title>CSS Pattern</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main>
-      <h1>Grid Tiles</h1>
-      <p class="intro">
-        Sixteen tiles in a 4 × 4 grid. Each tile is one empty <code>div</code>; the shapes come from
-        <code>::before</code>, <code>border-radius</code> and <code>:nth-child()</code>.
-      </p>
-
-      <!-- The pattern is decoration, so screen readers get a short description instead -->
-      <div
-        class="pattern"
-        role="img"
-        aria-label="A four by four grid of circles, half circles, quarter circles and diamonds in navy, coral and gold"
-      >
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-      </div>
-
-      <ul class="legend">
-        <li><span class="swatch circle"></span> Circle: <code>border-radius: 50%</code></li>
-        <li><span class="swatch half"></span> Half circle: two rounded corners</li>
-        <li><span class="swatch quarter"></span> Quarter: one rounded corner</li>
-        <li><span class="swatch diamond"></span> Diamond: a rotated square</li>
-      </ul>
+    <main
+      class="pattern"
+      aria-label="Twelve yellow squares with black borders: four vertically on each side and four horizontally in the middle"
+    >
+      <section class="column" aria-label="Left column">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+      </section>
+      <section class="middle" aria-label="Middle row">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+      </section>
+      <section class="column" aria-label="Right column">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+      </section>
     </main>
   </body>
 </html>

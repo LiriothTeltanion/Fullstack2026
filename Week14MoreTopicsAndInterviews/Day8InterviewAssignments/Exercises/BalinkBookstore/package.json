@@ -1,0 +1,25 @@
+{
+  "name": "kevin-cusnir-bookstore-practice",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k \"npm:api\" \"npm:web\"",
+    "api": "node server/index.js",
+    "web": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.0",
+    "styled-components": "^6.1.19"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0",
+    "@vitejs/plugin-react": "^4.6.0",
+    "concurrently": "^9.2.0"
+  }
+}

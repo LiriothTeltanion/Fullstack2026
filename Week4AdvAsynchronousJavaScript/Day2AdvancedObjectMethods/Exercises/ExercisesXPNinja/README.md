@@ -10,6 +10,10 @@
 
 Classes, getters and setters, and a few helpers I wrote myself, in [objectMethodsNinja.js](objectMethodsNinja.js).
 
+## Constructor order
+
+Run `node birdConstructors.js`. The flamingo announces its color first, then the base class announces that it is a bird. The first statement uses its argument. Accessing `this` before `super()` would throw a ReferenceError. [Source](birdConstructors.js).
+
 ## ▶️ How to run
 
 ```bash

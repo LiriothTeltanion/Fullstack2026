@@ -8,30 +8,19 @@
 
 </div>
 
-A tiny solar system and three loading spinners, animated with CSS only. There's a "Pause animations" checkbox that works without JavaScript, and with reduced motion turned on in the system everything stays still.
+Eight keyboard-accessible CSS transition demonstrations: fade, color change, grow/shrink, rotation, square to circle, 3D shadow, swing and inset border.
 
 ## ▶️ How to run
 
-Open [index.html](index.html). Tick **Pause animations** to freeze everything, or turn on "reduce motion" in the OS settings and reload.
+Run npm run dev from the repository root and open this exercise's index.html. Hover a tile or focus it with Tab. Press the grow/shrink tile to see the shrinking state.
 
 ## 🎯 The challenge
 
-| Part | Animation |
-|---|---|
-| Sun | `glow` grows the `box-shadow` back and forth (`alternate`) |
-| Three planets | Each `.orbit` is a dashed circle that rotates with `spin`; the planet sits on its top edge, so turning the circle carries it around. Durations are 5s, 10s and 18s |
-| Moon | A small orbit inside the blue planet, spinning every 2s |
-| Stars | Six `radial-gradient` dots that `twinkle` by fading |
-| Loaders | A border spinner (`rotate`), three bouncing dots with `animation-delay`, and a pulse (`scale` + `opacity`) |
+[style.css](style.css) keeps transitions short. The swing uses a short keyframe sequence. Reduced-motion preferences disable movement.
 
-The pause uses `body:has(#pause:checked) * { animation-play-state: paused; }`. The reduced-motion block sets `animation: none` on everything.
+## Extras
 
-## 🧠 What I learned
-
-- Rotating a parent and leaving the child still is the easiest way to make something orbit
-- `animation-delay` on three identical dots is all a bouncing loader needs
-- `:has()` lets a checkbox control the whole page, which used to need JavaScript
-- A rotating square is wider at 45 degrees, so the page scrolled sideways on a phone until I gave `.space` `overflow: hidden` and pulled the outer orbit in a little
+The earlier orbit scene, pause control and three CSS loaders remain in [extras.html](extras.html).
 
 ---
 

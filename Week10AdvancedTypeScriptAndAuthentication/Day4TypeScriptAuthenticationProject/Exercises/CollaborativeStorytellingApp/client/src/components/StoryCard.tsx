@@ -6,6 +6,7 @@ interface StoryCardProps {
   currentUser: User;
   onSave: (id: number, changes: { title: string; content: string }) => Promise<void>;
   onDelete: (id: number) => Promise<void>;
+  onRemoveContributor: (id: number) => Promise<void>;
   onAddContributor: (id: number, username: string) => Promise<void>;
 }
 
@@ -15,6 +16,7 @@ export default function StoryCard({
   onSave,
   onDelete,
   onAddContributor,
+  onRemoveContributor,
 }: StoryCardProps) {
   const isAuthor = story.author.id === currentUser.id;
   const canEdit = isAuthor || story.contributors.some(user => user.id === currentUser.id);
@@ -71,7 +73,7 @@ export default function StoryCard({
             by {story.author.username}
             {story.contributors.length > 0 &&
               ` with ${story.contributors.map(user => user.username).join(", ")}`}{" "}
-            · updated {new Date(story.updatedAt).toLocaleString()}
+             - updated {new Date(story.updatedAt).toLocaleString()}
           </p>
           <p className="story-content">{story.content}</p>
           <div className="row">
@@ -86,6 +88,24 @@ export default function StoryCard({
             )}
           </div>
         </>
+      )}
+      {isAuthor && !editing && story.contributors.length > 0 && (
+        <ul className="plain">
+          {story.contributors.map(user => (
+            <li key={user.id}>
+              {user.username}{" "}
+              {user.contributionId !== undefined && (
+                <button
+                  type="button"
+                  className="secondary"
+                  onClick={() => onRemoveContributor(user.contributionId!)}
+                >
+                  Remove contributor
+                </button>
+              )}
+            </li>
+          ))}
+        </ul>
       )}
       {isAuthor && !editing && (
         <form className="row" onSubmit={invite} style={{ marginTop: 12 }}>

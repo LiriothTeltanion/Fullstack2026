@@ -3,65 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="A small blog layout that changes with media queries." />
-    <title>Media Queries · Travel Notes</title>
+    <meta
+      name="description"
+      content="A Thor feature and original Avengers team cards, with accessible page navigation."
+    />
+    <title>Thor · Media Queries</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="../../../Day1HTMLAndCSS/DailyChallenge/Avengers/style.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- The text of this badge comes from CSS and changes at each breakpoint -->
-    <p class="breakpoint" aria-hidden="true"></p>
-
-    <header class="masthead">
-      <h1>Travel Notes</h1>
-      <nav aria-label="Main">
-        <ul>
-          <li><a href="#posts">Posts</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="#thor">Thor</a></li>
+        <li><a href="#team">The team</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+    <header class="banner" id="thor">
+      <div class="featured-copy">
+        <h1>Thor</h1>
+        <p class="tagline">
+          Thor Odinson is the Asgardian god of thunder. With the hammer Mjolnir, he brings lightning
+          and strength to the Avengers.
+        </p>
+      </div>
     </header>
 
-    <div class="layout">
-      <main id="posts">
-        <article class="post" style="--tone: #f59e0b">
-          <h2>Sunrise over the Negev</h2>
-          <p>
-            The desert turns orange for about ten minutes. On a phone these cards stack in one
-            column, on a tablet they sit two by two, and on a wide screen the sidebar joins them.
-          </p>
-        </article>
-        <article class="post" style="--tone: #0ea5e9">
-          <h2>A day in Tel Aviv</h2>
-          <p>Beach in the morning, the market at noon and the old port at night.</p>
-        </article>
-        <article class="post" style="--tone: #10b981">
-          <h2>Hiking the Ramon crater</h2>
-          <p>Bring more water than you think. The trail has almost no shade.</p>
-        </article>
-        <article class="post" style="--tone: #a855f7">
-          <h2>Jerusalem stones</h2>
-          <p>Every building has the same pale stone, which glows gold late in the day.</p>
-        </article>
-      </main>
+    <main id="team">
+      <h2>The original Avengers</h2>
+      <ul class="team" aria-label="Team members">
+        <li class="hero-card" style="--hero: #c62828">
+          <span class="emblem" aria-hidden="true">IM</span>
+          <h2>Iron Man</h2>
+          <p class="real-name">Tony Stark</p>
+          <p>A genius engineer who built a powered suit of armor.</p>
+          <p class="power"><span>Power</span> Armor and repulsor beams</p>
+        </li>
+        <li class="hero-card" style="--hero: #1e5bd8">
+          <span class="emblem" aria-hidden="true">CA</span>
+          <h2>Captain America</h2>
+          <p class="real-name">Steve Rogers</p>
+          <p>A soldier made stronger by a serum, and the team's leader.</p>
+          <p class="power"><span>Power</span> Peak strength and a vibranium shield</p>
+        </li>
+        <li class="hero-card" style="--hero: #9e9e9e">
+          <span class="emblem" aria-hidden="true">T</span>
+          <h2>Thor</h2>
+          <p class="real-name">Thor Odinson</p>
+          <p>The god of thunder from Asgard.</p>
+          <p class="power"><span>Power</span> Lightning and the hammer Mjolnir</p>
+        </li>
+        <li class="hero-card" style="--hero: #455a64">
+          <span class="emblem" aria-hidden="true">BW</span>
+          <h2>Black Widow</h2>
+          <p class="real-name">Natasha Romanoff</p>
+          <p>A spy trained since childhood.</p>
+          <p class="power"><span>Power</span> Combat skills and gadgets</p>
+        </li>
+        <li class="hero-card" style="--hero: #2e7d32">
+          <span class="emblem" aria-hidden="true">H</span>
+          <h2>Hulk</h2>
+          <p class="real-name">Bruce Banner</p>
+          <p>A scientist who turns into a giant when he gets angry.</p>
+          <p class="power"><span>Power</span> Strength that grows with his anger</p>
+        </li>
+        <li class="hero-card" style="--hero: #6a1b9a">
+          <span class="emblem" aria-hidden="true">HE</span>
+          <h2>Hawkeye</h2>
+          <p class="real-name">Clint Barton</p>
+          <p>A marksman who never misses.</p>
+          <p class="power"><span>Power</span> Archery and trick arrows</p>
+        </li>
+      </ul>
+    </main>
 
-      <aside class="sidebar" id="about">
-        <h2>About this page</h2>
-        <p>
-          Resize the window and watch the badge in the corner. It names the media query that is
-          active.
-        </p>
-        <ul>
-          <li><strong>Phone:</strong> up to 599px</li>
-          <li><strong>Tablet:</strong> 600px to 899px</li>
-          <li><strong>Desktop:</strong> 900px and up</li>
-        </ul>
-        <p>The colors also follow the system light or dark setting.</p>
-      </aside>
-    </div>
-
-    <footer class="footer" id="contact">
-      <p>Made for the Media Queries daily challenge.</p>
+    <footer class="footer" id="about">
+      <p>A fan page for an HTML and CSS exercise. The characters belong to Marvel.</p>
+      <ul class="footer-links">
+        <li><a href="#thor">Back to Thor</a></li>
+        <li><a href="#team">Meet the team</a></li>
+        <li>
+          <a href="../../../Day1HTMLAndCSS/DailyChallenge/Avengers/index.html">Avengers exercise</a>
+        </li>
+        <li><a href="travel-notes.html">Original travel demo</a></li>
+      </ul>
     </footer>
   </body>
 </html>

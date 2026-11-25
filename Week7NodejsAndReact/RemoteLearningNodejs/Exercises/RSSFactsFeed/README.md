@@ -24,12 +24,12 @@ Open http://localhost:3000. The app needs internet access to download the feed. 
 
 | Route | What it does |
 |---|---|
-| `GET /` | All posts with title, date, a short summary and category tags |
+| `GET /` | All posts with title, creator when supplied, date, full plain-text content and category tags |
 | `GET /search` | Two forms: search by title and a category `<select>` |
 | `POST /search/title` | Posts whose title contains the text, ignoring case |
 | `POST /search/category` | Posts that have the chosen category |
 
-`services/feedService.js` downloads the feed and keeps it for 10 minutes, so searching does not download it again each time. The views use `partials/header.ejs`, `footer.ejs` and `post.ejs`, and `pages/error.ejs` shows a friendly page (status 502) when the feed cannot be reached.
+`services/feedService.js` uses Axios to fetch up to 3 MiB with a ten-second timeout, parses the XML with rss-parser and keeps it for 10 minutes, so searching does not download it again each time. Bootstrap is served locally. The views use `partials/head.ejs`, `partials/header.ejs`, `footer.ejs` and `post.ejs`, and `pages/error.ejs` shows a friendly page (status 502) when the feed cannot be reached.
 
 ## 🧠 What I learned
 

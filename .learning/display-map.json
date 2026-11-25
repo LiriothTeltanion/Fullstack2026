@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "LiriothTeltanion/Fullstack2026",
-  "last_reviewed": "2026-08-24",
+  "last_reviewed": "2026-11-25",
   "timezone": "Asia/Jerusalem",
   "policy": {
     "icons_are_display_only": true,
@@ -581,6 +581,12 @@
           "icon": "🚀",
           "title": "Day 7 — Mini-projects",
           "display_title": "🚀 Day 7 — Mini-projects"
+        },
+        {
+          "path": "Week14MoreTopicsAndInterviews/Day8InterviewAssignments",
+          "icon": "🧩",
+          "title": "Day 8 — Interview Assignments",
+          "display_title": "🧩 Day 8 — Interview Assignments"
         }
       ]
     }
