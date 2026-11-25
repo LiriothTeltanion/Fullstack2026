@@ -13,6 +13,7 @@ One daily challenge for Day 2.
 ## Contents
 
 - [`Pagination/`](Pagination/): splits a list into pages and moves between them
+- [`DNA/`](DNA/): DNA: to do (optional)
 
 ---
 

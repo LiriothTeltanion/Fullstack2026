@@ -15,6 +15,7 @@ Three levels of Day 2 practice. Each one is a single script I run from the termi
 - [`ExercisesXP/`](ExercisesXP/): 10 exercises, from set methods up to a sandwich order queue
 - [`ExercisesXPGold/`](ExercisesXPGold/): 9 exercises, including `extend()`, the alphabet split into vowels and a guessing game
 - [`ExercisesXPNinja/`](ExercisesXPNinja/): 4 exercises with a formula, number stats, a paragraph report and word counts
+- [`RemoteExerciseTrickyCounter/`](RemoteExerciseTrickyCounter/): Tricky Counter: to do (optional)
 
 ---
 

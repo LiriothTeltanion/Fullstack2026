@@ -17,6 +17,7 @@ Week one of the Developers Institute bootcamp was plain Python for me: 3.10 or n
 | [`Day3Dictionaries/`](Day3Dictionaries/) | `zip()` and `dict()`, nested data about Zara and Disney characters, two timed challenges and a Caesar cipher. |
 | [`Day4Functions/`](Day4Functions/) | Parameters, default values, `return` and scope, plus Solve the Matrix and the Coffee Shop Menu Manager. |
 | [`Day5MiniProject/`](Day5MiniProject/) | Tic-Tac-Toe, Hangman and some extra algorithm practice. |
+| [`RemoteLearningPython/`](RemoteLearningPython/) | Python: not started yet (0 required, 1 optional) |
 | [`CHEATSHEET.md`](CHEATSHEET.md) | My quick notes on the Python from this week. |
 
 ---

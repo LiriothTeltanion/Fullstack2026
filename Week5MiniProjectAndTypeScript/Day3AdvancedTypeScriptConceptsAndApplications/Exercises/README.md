@@ -13,6 +13,8 @@ Day 3 has a single exercise set.
 ## Contents
 
 - [`ExercisesXP/`](ExercisesXP/): `private` and `protected`, `readonly`, a subclass, static methods and an extended interface
+- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: to do (optional)
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: to do (optional)
 
 ---
 

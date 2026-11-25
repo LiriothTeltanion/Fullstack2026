@@ -8,11 +8,14 @@
 
 </div>
 
-Week 12 is for the second week of the final project. The brief has not been published yet.
+Finishing the capstone project and presenting it on Demo Day. I haven't reached this week yet, so every folder is ready but empty.
 
 ## Contents
 
-Nothing yet. The project will live here with its own README, source code, tests and docs once the brief is out. I will credit anyone who contributes.
+| Folder | Topic | Required | Optional |
+|---|---|---:|---:|
+| [`Day1CapstoneSubmission/`](Day1CapstoneSubmission/) | Capstone Submission | 1 | 0 |
+| [`Day5DemoDay/`](Day5DemoDay/) | Demo Day | 0 | 1 |
 
 ---
 

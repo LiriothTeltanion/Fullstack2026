@@ -15,6 +15,9 @@ Sorting, `LIMIT`, aliases and my first joins. I started on the Day 1 tables and 
 | Folder | What it is |
 |---|---|
 | [`Exercises/ExercisesXP/`](Exercises/ExercisesXP/) | 19 queries: 4 on `items` and `customers`, 15 on `dvdrental` |
+| [`DailyChallenge/SQLPuzzle/`](DailyChallenge/SQLPuzzle/) | SQL Puzzle: to do (required) |
+| [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | Exercises XP Gold: to do (optional) |
+| [`Exercises/ExercisesXPNinja/`](Exercises/ExercisesXPNinja/) | Exercises XP Ninja: to do (optional) |
 
 ---
 

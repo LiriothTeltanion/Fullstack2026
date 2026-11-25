@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-25
-Base HEAD: acf464e954fdf339b853ccea401009582faa3b61
-Source-index SHA-256 (generated outputs excluded): dbb3203dc39b883410c1787f80cc18cfeaaedb9aaab8bf4f5c6764b7e534971b
-Indexed files: 862
+Base HEAD: a0a7e1631c00f5c948d8dd0386d3811feb1e5c0a
+Source-index SHA-256 (generated outputs excluded): e6ceb314e80bf482250c74dd5efb0614bc3aeb779d10543750f05ade7ea8aa54
+Indexed files: 1091
 
 .
 ├── .github
@@ -247,6 +247,7 @@ Indexed files: 862
 │   │   │   ├── mini-project-vaccines-a94241f92f.svg
 │   │   │   ├── modules-e3d1c33ab5.svg
 │   │   │   ├── nodejs-app-and-npm-55f394adf0.svg
+│   │   │   ├── not-started.svg
 │   │   │   ├── npm-beginner-08778c1dcc.svg
 │   │   │   ├── oopquiz-92469ab711.svg
 │   │   │   ├── pagination-1cf902caf8.svg
@@ -288,6 +289,8 @@ Indexed files: 862
 │   │   │   ├── week10-advanced-typescript-and-authentication-62a9a9e0bd.svg
 │   │   │   ├── week11-final-project-887d3ee45a.svg
 │   │   │   ├── week12-final-project-ef4be5404c.svg
+│   │   │   ├── week13-web-development-basics-180ef0b274.svg
+│   │   │   ├── week14-more-topics-interview-prep-788f9abe3c.svg
 │   │   │   ├── week2-oop-f3122b8ed5.svg
 │   │   │   ├── week3-java-scriptand-dom-6198da8760.svg
 │   │   │   ├── week4-adv-asynchronous-java-script-9e969cfe32.svg
@@ -353,10 +356,162 @@ Indexed files: 862
 │   ├── validate_repository_structure.py
 │   └── verify_eslint_baseline.mjs
 ├── Week10AdvancedTypeScriptAndAuthentication
+│   ├── Day1UsingTypeScriptWithReact
+│   │   ├── DailyChallenge
+│   │   │   ├── TypeScriptReactTodo
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day2MiniProject
+│   │   ├── DailyChallenge
+│   │   │   ├── GenericData
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── PersonalBook
+│   │   │   │   └── README.md
+│   │   │   ├── RecipeBookApp
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day3Authentication
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day4TypeScriptAuthenticationProject
+│   │   ├── Exercises
+│   │   │   ├── AdvancedFunctionalities
+│   │   │   │   └── README.md
+│   │   │   ├── CollaborativeStorytellingApp
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── RemoteLearningAuthAndTypeScript
+│   │   ├── Exercises
+│   │   │   ├── AuthenticationProject
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
 │   └── README.md
 ├── Week11FinalProject
+│   ├── Day1FinalProjectScope
+│   │   ├── ProjectScope
+│   │   │   └── README.md
+│   │   └── README.md
 │   └── README.md
 ├── Week12FinalProject
+│   ├── Day1CapstoneSubmission
+│   │   ├── CapstoneProject
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day5DemoDay
+│   │   ├── DemoDayPresentation
+│   │   │   └── README.md
+│   │   └── README.md
+│   └── README.md
+├── Week13WebDevelopmentBasics
+│   ├── Day1HTMLAndCSS
+│   │   ├── DailyChallenge
+│   │   │   ├── Avengers
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── FirstHTMLPage
+│   │   │   │   └── README.md
+│   │   │   ├── LandingPage
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day2GitAndGitHub
+│   │   ├── DailyChallenge
+│   │   │   ├── CommandLine
+│   │   │   │   └── README.md
+│   │   │   ├── MediaQueries
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── LoginPage
+│   │   │   │   └── README.md
+│   │   │   ├── ShoppingWebsite
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day3CSSGridAndLayout
+│   │   ├── DailyChallenge
+│   │   │   ├── CSSPattern
+│   │   │   │   └── README.md
+│   │   │   ├── CSSPatternNinja
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── MyCV
+│   │   │   │   └── README.md
+│   │   │   ├── ThreeLandingPages
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day4Bootstrap
+│   │   ├── DailyChallenge
+│   │   │   ├── WildAndWackyVegetables
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── Components
+│   │   │   │   └── README.md
+│   │   │   ├── RecreateLandingPage
+│   │   │   │   └── README.md
+│   │   │   ├── RecreateLandingPage2
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day5CodingDay
+│   │   ├── DailyChallenge
+│   │   │   ├── CSSAnimation
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── PortfolioProject
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   └── README.md
+├── Week14MoreTopicsAndInterviews
+│   ├── Day1AWSAndJWT
+│   │   ├── Exercises
+│   │   │   ├── JWTWithPERN
+│   │   │   │   └── README.md
+│   │   │   ├── S3UploadsWithExpress
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day2DeployWithRender
+│   │   ├── Exercises
+│   │   │   ├── DeployReactAndNode
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day3FullStackDeployment
+│   │   ├── Exercises
+│   │   │   ├── DeployFullStackApp
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day7MiniProjects
+│   │   ├── Exercises
+│   │   │   ├── MemeGenerator
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
 │   └── README.md
 ├── Week1Python
 │   ├── Day1StartingwithPython
@@ -374,6 +529,8 @@ Indexed files: 862
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPNinja
 │   │   │   │   ├── exercisesxpninja.py
+│   │   │   │   └── README.md
+│   │   │   ├── RemoteExercisePasswordChecker
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
@@ -395,6 +552,8 @@ Indexed files: 862
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPNinja
 │   │   │   │   ├── exercisesxpninja.py
+│   │   │   │   └── README.md
+│   │   │   ├── RemoteExerciseTrickyCounter
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
@@ -419,6 +578,8 @@ Indexed files: 862
 │   │   │   │   └── xpninjacars.py
 │   │   │   ├── ExercisesXPPlus
 │   │   │   │   ├── exercisesxpplus.py
+│   │   │   │   └── README.md
+│   │   │   ├── RemoteExerciseListComprehension
 │   │   │   │   └── README.md
 │   │   │   ├── TimedChallenge1
 │   │   │   │   ├── README.md
@@ -484,9 +645,19 @@ Indexed files: 862
 │   │   │   │   │   └── words.py
 │   │   │   │   ├── main.py
 │   │   │   │   └── README.md
+│   │   │   ├── RemoteExerciseFindDuplicates
+│   │   │   │   └── README.md
+│   │   │   ├── RemoteExerciseOurFirstGUI
+│   │   │   │   └── README.md
 │   │   │   ├── TicTacToe
 │   │   │   │   ├── README.md
 │   │   │   │   └── tictactoe.py
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── RemoteLearningPython
+│   │   ├── Exercises
+│   │   │   ├── Fibonacci
+│   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── .gitignore
@@ -511,6 +682,8 @@ Indexed files: 862
 │   │   └── README.md
 │   ├── Day2OOPInheritanceEncapsulationPolymorphism
 │   │   ├── DailyChallenge
+│   │   │   ├── DNA
+│   │   │   │   └── README.md
 │   │   │   ├── Pagination
 │   │   │   │   ├── pagination.py
 │   │   │   │   └── README.md
@@ -548,6 +721,8 @@ Indexed files: 862
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPNinja
 │   │   │   │   ├── exercisesxpninjadunder.py
+│   │   │   │   └── README.md
+│   │   │   ├── RemoteExerciseExtendingList
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
@@ -839,6 +1014,8 @@ Indexed files: 862
 │   │   │   │   │   ├── index.html
 │   │   │   │   │   └── README.md
 │   │   │   │   └── README.md
+│   │   │   ├── OptionalJSExercises
+│   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
 │   └── README.md
@@ -865,6 +1042,10 @@ Indexed files: 862
 │   │   │   ├── ExercisesXPGold2
 │   │   │   │   ├── ArraysMethodsXPGold.ts
 │   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPNinja2
+│   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day2AdvancedObjectMethods
@@ -874,6 +1055,10 @@ Indexed files: 862
 │   │   ├── Exercises
 │   │   │   ├── ExercisesXP
 │   │   │   │   ├── ObjectsDestructuringClassesXP.ts
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPNinja
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
@@ -927,6 +1112,8 @@ Indexed files: 862
 │   │   │   │   ├── index_promises.html
 │   │   │   │   ├── promises.js
 │   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day5FetchAndAsyncAwait
@@ -940,6 +1127,10 @@ Indexed files: 862
 │   │   │   │   │   ├── config.example.js
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPNinja
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
@@ -976,6 +1167,10 @@ Indexed files: 862
 │   │   │   ├── ExercisesXP
 │   │   │   │   ├── ExercisesXP_Basics.ts
 │   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day3AdvancedTypeScriptConceptsAndApplications
@@ -985,6 +1180,10 @@ Indexed files: 862
 │   │   ├── Exercises
 │   │   │   ├── ExercisesXP
 │   │   │   │   ├── ExercisesXP_OOP.ts
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPNinja
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
@@ -1002,11 +1201,23 @@ Indexed files: 862
 │   │   │   │   ├── .gitignore
 │   │   │   │   ├── ExercisesXPGold.ts
 │   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── RemoteLearningTypeScript
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
 │   └── README.md
 ├── Week6DatabasesAndNodejs
 │   ├── Day1IntroductionToDatabases
+│   │   ├── DailyChallenge
+│   │   │   ├── Actors
+│   │   │   │   └── README.md
+│   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── ExercisesXP
 │   │   │   │   ├── .gitignore
@@ -1024,13 +1235,27 @@ Indexed files: 862
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day2DatabaseConcepts1
+│   │   ├── DailyChallenge
+│   │   │   ├── SQLPuzzle
+│   │   │   │   └── README.md
+│   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── ExercisesXP
 │   │   │   │   ├── README.md
 │   │   │   │   └── xp_sql_answers.sql
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day3DatabaseConcepts2
+│   │   ├── DailyChallenge
+│   │   │   ├── ItemsAndOrders
+│   │   │   │   └── README.md
+│   │   │   ├── TablesRelationships
+│   │   │   │   └── README.md
+│   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── ExercisesXP
 │   │   │   │   ├── README.md
@@ -1038,6 +1263,8 @@ Indexed files: 862
 │   │   │   ├── ExercisesXPGold
 │   │   │   │   ├── README.md
 │   │   │   │   └── xp_gold_dvdrental.sql
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day4NodejsIntroduction
@@ -1112,14 +1339,242 @@ Indexed files: 862
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── .gitignore
 │   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   └── README.md
+│   │   │   ├── MoreNodejsChallenges
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day5NodejsWebServer
+│   │   ├── DailyChallenge
+│   │   │   ├── EmojiGuessingGame
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
 │   └── README.md
 ├── Week7NodejsAndReact
+│   ├── Day1RoutesControllersAndMiddleware
+│   │   ├── DailyChallenge
+│   │   │   ├── TriviaQuizGame
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day2SQLQueryBuilder
+│   │   ├── DailyChallenge
+│   │   │   ├── RegistrationAndLogin
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day3MiniProject
+│   │   ├── DailyChallenge
+│   │   │   ├── TaskAPI2
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── MultiplayerStrategy
+│   │   │   │   └── README.md
+│   │   │   ├── NotesApp
+│   │   │   │   └── README.md
+│   │   │   ├── RealTimeChatApp
+│   │   │   │   └── README.md
+│   │   │   ├── TaskManagementAPI
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day4IntroductionToReact
+│   │   ├── DailyChallenge
+│   │   │   ├── ReactCarousel
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   └── README.md
+│   │   │   ├── LandingPageUsingReact
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day5ReactComponentsAndState
+│   │   ├── DailyChallenge
+│   │   │   ├── VotingApp
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold2
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── RemoteLearningNodejs
+│   │   ├── Exercises
+│   │   │   ├── RSSFactsFeed
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
 │   └── README.md
 ├── Week8React
+│   ├── Day1MultipleComponentsAndEvents
+│   │   ├── DailyChallenge
+│   │   │   ├── FormContainer
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ErrorBoundary
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXP
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day2AdvancedReact
+│   │   ├── DailyChallenge
+│   │   │   ├── DataAndServer
+│   │   │   │   └── README.md
+│   │   │   ├── Form
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   └── README.md
+│   │   │   ├── UsersAndPosts
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day3ReactAdvancedHooks
+│   │   ├── DailyChallenge
+│   │   │   ├── EnhancedTaskManager
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   └── README.md
+│   │   │   ├── HeroloAssignment
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day4MiniProject
+│   │   ├── DailyChallenge
+│   │   │   ├── Calculator
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── RandomQuoteGenerator
+│   │   │   │   └── README.md
+│   │   │   ├── SnapShot
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
 │   └── README.md
 ├── Week9Redux
+│   ├── Day2ReduxOverviewAndConcepts
+│   │   ├── DailyChallenge
+│   │   │   ├── PlannerApplication
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day3ReduxToolkitAppStructure
+│   │   ├── DailyChallenge
+│   │   │   ├── PlannerApplication
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day4ReduxToolkitAsync
+│   │   ├── DailyChallenge
+│   │   │   ├── AgeTracker
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── Day5ReduxMiniProject
+│   │   ├── DailyChallenge
+│   │   │   ├── ProductivityTracker
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   ├── Exercises
+│   │   │   ├── ExercisesXP
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPGold
+│   │   │   │   └── README.md
+│   │   │   ├── ExercisesXPNinja
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── RemoteLearningRedux
+│   │   ├── Exercises
+│   │   │   ├── EcommerceProductFilter
+│   │   │   │   └── README.md
+│   │   │   ├── MovieCollectionOrganizer
+│   │   │   │   └── README.md
+│   │   │   ├── TodoListManager
+│   │   │   │   └── README.md
+│   │   │   └── README.md
+│   │   └── README.md
 │   └── README.md
 ├── .editorconfig
 ├── .env.example

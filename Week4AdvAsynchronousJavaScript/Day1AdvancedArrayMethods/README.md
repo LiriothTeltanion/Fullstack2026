@@ -16,6 +16,8 @@ Array methods day: `find`, `sort`, `forEach`, `map`, `reduce` and `flat`. Most o
 |---|---|
 | [`Exercises/`](Exercises/) | The XP page (forms and JSON) and two XP Gold files on arrays |
 | [`DailyChallenge/`](DailyChallenge/) | Car Inventory in the browser and Go Wildcats in TypeScript |
+| [`Exercises/ExercisesXPNinja/`](Exercises/ExercisesXPNinja/) | Exercises XP Ninja: to do (optional) |
+| [`Exercises/ExercisesXPNinja2/`](Exercises/ExercisesXPNinja2/) | Exercises XP Ninja 2: to do (optional) |
 
 ---
 

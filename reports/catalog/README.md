@@ -6,11 +6,11 @@
 - `exercise_catalog_metadata.csv` — versioned structural labels and review-entry hints; semantic titles/goals/technologies are derived conservatively and do not prove runtime or assignment correctness.
 - `exercise_catalog.csv` — machine-readable canonical path catalog.
 - `file_inventory.csv` — indexed-blob inventory (self-entry intentionally excluded to avoid a recursive hash).
-- `tree.txt` — exact-case tree for 862 Git-indexed files.
+- `tree.txt` — exact-case tree for 1091 Git-indexed files.
 - `rename_plan.csv` — unapproved later-wave proposals only.
 - `catalog_manifest.json` — generation date, base HEAD, and stable source-index fingerprint.
 
-Generation basis: HEAD `acf464e954fdf339b853ccea401009582faa3b61` plus the staged source index fingerprint `sha256:dbb3203dc39b883410c1787f80cc18cfeaaedb9aaab8bf4f5c6764b7e534971b`.
+Generation basis: HEAD `a0a7e1631c00f5c948d8dd0386d3811feb1e5c0a` plus the staged source index fingerprint `sha256:e6ceb314e80bf482250c74dd5efb0614bc3aeb779d10543750f05ade7ea8aa54`.
 
 Regenerate with `python tools/refresh_structure_catalogs.py --repo . --write`; verify drift with `python tools/refresh_structure_catalogs.py --repo . --check`.
 

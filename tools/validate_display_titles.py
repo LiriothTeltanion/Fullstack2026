@@ -100,8 +100,8 @@ def validate(repo: Path) -> list[str]:
     infrastructure = manifest.get("infrastructure")
     policy = manifest.get("policy")
 
-    if not isinstance(weeks, list) or len(weeks) != 12:
-        errors.append("display map must define exactly twelve weeks")
+    if not isinstance(weeks, list) or len(weeks) != 14:
+        errors.append("display map must define exactly fourteen weeks")
         weeks = []
     if not isinstance(infrastructure, list):
         errors.append("display map infrastructure must be a list")
@@ -136,7 +136,7 @@ def validate(repo: Path) -> list[str]:
         else:
             errors.append(f"infrastructure entry must be an object: {entry!r}")
 
-    expected_week_ids = [f"week-{number}" for number in range(1, 13)]
+    expected_week_ids = [f"week-{number}" for number in range(1, 15)]
     actual_week_ids: list[str] = []
     week_paths: set[str] = set()
     mapped_day_paths: set[str] = set()
@@ -186,7 +186,7 @@ def validate(repo: Path) -> list[str]:
 
     if actual_week_ids != expected_week_ids:
         errors.append(
-            f"week display order must be numeric 1–12: found {actual_week_ids!r}"
+            f"week display order must be numeric 1–14: found {actual_week_ids!r}"
         )
 
     actual_top_level = {path for path in directories if "/" not in path}

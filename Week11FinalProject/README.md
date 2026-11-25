@@ -8,11 +8,13 @@
 
 </div>
 
-Week 11 is for the final project. The brief has not been published yet.
+The start of my final project: the scope comes first. I haven't reached this week yet, so every folder is ready but empty.
 
 ## Contents
 
-Nothing yet. The project will live here with its own README, source code, tests and docs once the brief is out. I will credit anyone who contributes.
+| Folder | Topic | Required | Optional |
+|---|---|---:|---:|
+| [`Day1FinalProjectScope/`](Day1FinalProjectScope/) | Final Project Scope | 1 | 0 |
 
 ---
 

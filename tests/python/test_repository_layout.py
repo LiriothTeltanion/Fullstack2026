@@ -20,6 +20,8 @@ CANONICAL_WEEK_ROOTS = (
     "Week10AdvancedTypeScriptAndAuthentication",
     "Week11FinalProject",
     "Week12FinalProject",
+    "Week13WebDevelopmentBasics",
+    "Week14MoreTopicsAndInterviews",
 )
 STRUCTURE_VALIDATOR = load_file(
     "fullstack2026_structure_validator",

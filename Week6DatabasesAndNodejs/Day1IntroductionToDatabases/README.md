@@ -17,6 +17,7 @@ The day I wrote my first PostgreSQL scripts: make a table, insert rows, then fil
 | [`Exercises/ExercisesXP/`](Exercises/ExercisesXP/) | `items` and `customers` tables and six filter queries |
 | [`Exercises/ExercisesXPPlus/`](Exercises/ExercisesXPPlus/) | A `students` table in the `bootcamp` database and `ILIKE` patterns |
 | [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | Three more `students` queries with `ORDER BY`, `LIMIT` and `OFFSET` |
+| [`DailyChallenge/Actors/`](DailyChallenge/Actors/) | Actors: to do (required) |
 
 ---
 
