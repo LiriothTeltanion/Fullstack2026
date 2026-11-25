@@ -43,6 +43,8 @@ On the page, the same form adds and edits: `startEdit()` fills it and puts the i
 
 ## 🧠 What I learned
 
+Run `npm test` from this folder to exercise the HTTP API with a temporary notes file. The suite creates ten notes at once and checks that each one survives with its own ID. It also covers malformed JSON and recovery after an unsuccessful update. A single server process serializes reads and writes, then replaces the JSON file atomically. The browser keeps the latest search result when responses arrive out of order.
+
 - One small `api()` helper in the browser handles the headers, the 204 case and the error messages for every call
 - Building the note cards with `createElement` and `textContent` is longer than `innerHTML`, but a note can never inject HTML
 - ISO dates can be sorted with `localeCompare`, so "newest first" needed no `Date` objects

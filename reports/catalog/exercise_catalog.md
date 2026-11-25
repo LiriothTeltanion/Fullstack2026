@@ -2,8 +2,8 @@
 
 > Regenerated from the exact Git index on `2026-11-25` by `tools/refresh_structure_catalogs.py`.
 
-- Base HEAD: `dadd23b404eaf78315438affbe780ba4863999f0`
-- Source-index fingerprint: `sha256:3ecfd245d70559b183b97c7f46f7714e65e7fe54f9627eeac26bd334d46e8b57` (generated outputs excluded)
+- Base HEAD: `f692aee2ccbf5d31a3e9928391fe58e65d105468`
+- Source-index fingerprint: `sha256:a7cf536a55537c6be883707469440b68a1be6f23eff55f969ee606dcaf3e48cc` (generated outputs excluded)
 
 This catalog proves repository presence and path integrity only. It does not prove that an exercise runs, that Kevin can explain it, or that it is mastered or portfolio-ready.
 
@@ -224,7 +224,7 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week6DatabasesAndNodejs/Day4NodejsIntroduction/Exercises/ExercisesXP/exercise-7-file-explorer` | Exercise | JSON \| JavaScript | 6 | present (canonical) | [source](<../../Week6DatabasesAndNodejs/Day4NodejsIntroduction/Exercises/ExercisesXP/exercise-7-file-explorer>); runtime unverified |
 | `Week6DatabasesAndNodejs/Day4NodejsIntroduction/Exercises/ExercisesXPGold` | Exercise | JSON \| JavaScript | 7 | present (canonical) | [source](<../../Week6DatabasesAndNodejs/Day4NodejsIntroduction/Exercises/ExercisesXPGold>); runtime unverified |
 | `Week6DatabasesAndNodejs/Day4NodejsIntroduction/Exercises/ExercisesXPNinja` | Exercise | JSON \| JavaScript | 8 | present (canonical) | [source](<../../Week6DatabasesAndNodejs/Day4NodejsIntroduction/Exercises/ExercisesXPNinja>); runtime unverified |
-| `Week6DatabasesAndNodejs/Day4NodejsIntroduction/Exercises/MoreNodejsChallenges` | Exercise | JSON \| JavaScript | 5 | present (canonical) | [source](<../../Week6DatabasesAndNodejs/Day4NodejsIntroduction/Exercises/MoreNodejsChallenges>); runtime unverified |
+| `Week6DatabasesAndNodejs/Day4NodejsIntroduction/Exercises/MoreNodejsChallenges` | Exercise | JSON \| JavaScript | 6 | present (canonical) | [source](<../../Week6DatabasesAndNodejs/Day4NodejsIntroduction/Exercises/MoreNodejsChallenges>); runtime unverified |
 | `Week6DatabasesAndNodejs/Day5NodejsWebServer/DailyChallenge/EmojiGuessingGame` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript | 11 | present (canonical) | [source](<../../Week6DatabasesAndNodejs/Day5NodejsWebServer/DailyChallenge/EmojiGuessingGame>); runtime unverified |
 | `Week6DatabasesAndNodejs/Day5NodejsWebServer/Exercises/ExercisesXP` | Exercise | CSS \| HTML \| JSON \| JavaScript | 16 | present (canonical) | [source](<../../Week6DatabasesAndNodejs/Day5NodejsWebServer/Exercises/ExercisesXP>); runtime unverified |
 | `Week6DatabasesAndNodejs/Day5NodejsWebServer/Exercises/ExercisesXPGold` | Exercise | JSON \| JavaScript | 4 | present (canonical) | [source](<../../Week6DatabasesAndNodejs/Day5NodejsWebServer/Exercises/ExercisesXPGold>); runtime unverified |
@@ -239,7 +239,7 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week7NodejsAndReact/Day2SQLQueryBuilder/Exercises/ExercisesXPNinja` | Exercise | JSON \| JavaScript | 12 | present (canonical) | [source](<../../Week7NodejsAndReact/Day2SQLQueryBuilder/Exercises/ExercisesXPNinja>); runtime unverified |
 | `Week7NodejsAndReact/Day3MiniProject/DailyChallenge/TaskAPI2` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript | 27 | present (canonical) | [source](<../../Week7NodejsAndReact/Day3MiniProject/DailyChallenge/TaskAPI2>); runtime unverified |
 | `Week7NodejsAndReact/Day3MiniProject/Exercises/MultiplayerStrategy` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 11 | present (canonical) | [source](<../../Week7NodejsAndReact/Day3MiniProject/Exercises/MultiplayerStrategy>); runtime unverified |
-| `Week7NodejsAndReact/Day3MiniProject/Exercises/NotesApp` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 16 | present (canonical) | [source](<../../Week7NodejsAndReact/Day3MiniProject/Exercises/NotesApp>); runtime unverified |
+| `Week7NodejsAndReact/Day3MiniProject/Exercises/NotesApp` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 18 | present (canonical) | [source](<../../Week7NodejsAndReact/Day3MiniProject/Exercises/NotesApp>); runtime unverified |
 | `Week7NodejsAndReact/Day3MiniProject/Exercises/RealTimeChatApp` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 8 | present (canonical) | [source](<../../Week7NodejsAndReact/Day3MiniProject/Exercises/RealTimeChatApp>); runtime unverified |
 | `Week7NodejsAndReact/Day3MiniProject/Exercises/TaskManagementAPI` | Mini Project | JSON \| JavaScript | 15 | present (canonical) | [source](<../../Week7NodejsAndReact/Day3MiniProject/Exercises/TaskManagementAPI>); runtime unverified |
 | `Week7NodejsAndReact/Day4IntroductionToReact/DailyChallenge/ReactCarousel` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript | 11 | present (canonical) | [source](<../../Week7NodejsAndReact/Day4IntroductionToReact/DailyChallenge/ReactCarousel>); runtime unverified |

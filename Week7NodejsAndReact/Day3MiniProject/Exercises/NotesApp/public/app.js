@@ -57,22 +57,30 @@ function renderNote(note) {
   remove.className = "danger";
   remove.addEventListener("click", async () => {
     if (!confirm(`Delete "${note.title}"?`)) return;
-    await api(`/${note.id}`, { method: "DELETE" });
-    loadNotes();
+    try {
+      await api(`/${note.id}`, { method: "DELETE" });
+      await loadNotes();
+    } catch (err) {
+      message.textContent = err.message;
+    }
   });
 
   li.append(title, body, date, document.createElement("br"), edit, " ", remove);
   return li;
 }
 
+// A slower earlier search must not replace the results for the current input.
+let latestLoad = 0;
 async function loadNotes() {
+  const request = ++latestLoad;
   try {
     const q = encodeURIComponent(search.value.trim());
     const notes = await api(q ? `?q=${q}` : "");
+    if (request !== latestLoad) return;
     list.replaceChildren(...notes.map(renderNote));
     message.textContent = notes.length ? "" : "No notes yet.";
   } catch (err) {
-    message.textContent = err.message;
+    if (request === latestLoad) message.textContent = err.message;
   }
 }
 

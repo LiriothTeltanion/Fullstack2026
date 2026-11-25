@@ -62,3 +62,12 @@ Unknown commands print the list of commands and exit with code 1.
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 Week 6 Day 4 - Introduction to Node.js - Exercise
+
+
+## 🧪 Command verification
+
+Run `npm test` or `node --test notes.test.js` from this directory. Each test copies the CLI and its store into a fresh temporary folder before running commands. The suite checks add, list, read, search and remove, case-insensitive duplicate titles, missing IDs and invalid commands.
+
+The command router checks that the command is an own property of its table. Names inherited from Object.prototype, such as `toString`, `constructor` and `__proto__`, receive the same command help and exit code 1 as any other unregistered command.
+
+Node.js 22.13 or newer within the 22.x line, or Node.js 24 and newer, matches the repository's toolchain. The checks exercise file persistence using temporary notes only.

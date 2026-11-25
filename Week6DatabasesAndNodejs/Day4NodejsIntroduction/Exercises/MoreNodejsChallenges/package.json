@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "notes": "node notes.js",
-    "list": "node notes.js list"
+    "list": "node notes.js list",
+    "test": "node --test notes.test.js"
   }
 }
