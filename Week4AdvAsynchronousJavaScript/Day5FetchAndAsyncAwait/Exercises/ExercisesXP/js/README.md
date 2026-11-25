@@ -1,58 +1,24 @@
 # Js
 
-<!-- NOVA:ULTIMATE:START -->
 <div align="center">
 
-<img src="../../../../../assets/readme/nova-folder-pulse.svg" width="100%" alt="Animated NOVA learning pulse">
+<img src="../../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-### Js
-
-<img src="../../../../../assets/readme/progress/js-976fc457b5.svg" width="100%" alt="Readiness status for Js">
-
-**Goal:** Build resilient asynchronous flows with HTTP requests, loading states, validation, and error handling.
+<img src="../../../../../assets/readme/progress/js-976fc457b5.svg" width="100%" alt="Progress card for Js">
 
 </div>
 
-## 🧭 NOVA Folder Guide
+JavaScript modules for this exercise.
 
-| Metric | Value |
-|---|---:|
-| Readiness | **80%** |
-| Files | 1 |
-| Source files | 1 |
-| Test files | 0 |
-| Text lines | 98 |
+## Contents
 
-### ▶️ Main paths
+- [`app.js`](app.js)
+- [`config.example.js`](config.example.js)
 
-- `Week4AdvAsynchronousJavaScript/Day5FetchAndAsyncAwait/Exercises/ExercisesXP/js/app.js`
+## Run
 
-### 🚀 Run
+From the repository root:
 
 ```bash
 node Week4AdvAsynchronousJavaScript/Day5FetchAndAsyncAwait/Exercises/ExercisesXP/js/app.js
 ```
-
-### 🟢 What is already strong
-
-- ✅ README documentation is generated and repeatable.
-- ✅ Contains 1 source file(s) across practical exercises or projects.
-- ✅ No Python syntax error was detected in this folder tree.
-- ✅ A likely runnable entry point was detected.
-
-### 🟠 What to improve next
-
-- ⚠️ No local unit test is present yet; repository-wide syntax checks still cover the sources.
-
-### 🧪 Validation
-
-```bash
-python tools/nova_quality_gate.py --repo . --strict
-python -m unittest discover -s tests/python -p "test_*.py" -v
-node tools/run_node_tests.mjs .
-```
-
-> The readiness value is a transparent repository heuristic, not a course grade and not proof that every interactive or external-API exercise was executed.
-
-<sub>Managed by NOVA Ultimate v2.0.0 · 2026-07-15T06:22:50+03:00</sub>
-<!-- NOVA:ULTIMATE:END -->

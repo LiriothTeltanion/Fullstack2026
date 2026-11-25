@@ -1,230 +1,24 @@
-# 💪 Build Up a String — Requirement-Aligned Exercise
-
-## 🛰️ Current evidence checkpoint — 2026-09-11
+# 💪 Build Up a String
 
 <div align="center">
 
-<img src="../../../../assets/readme/days/week1-day1-python-foundations.svg" width="100%" alt="Week 1 Day 1 Python foundations evidence map: XP 1–9, Gold 1–2, and Ninja 1–5 are repository-verified by 23 focused tests; the Daily Challenge matches the reviewed official prompt and passes 5 focused tests; learning and Octopus submission remain unverified.">
+<img src="../../../../assets/readme/days/week1-day1-python-foundations.svg" width="100%" alt="Week 1 Day 1 Python foundations map: Exercises XP 1–9, XP Gold 1–2 and XP Ninja 1–5 are covered by 23 tests, and the Daily Challenge by 5 more.">
 
 </div>
 
-> **Truth boundary:** the current Developers Institute Daily Challenge was reviewed read-only on 2026-09-11. This program matches its observable requirements and has verified repository behavior. Kevin's independent understanding, submission, checker response, instructor review, and grade remain `UNVERIFIED`.
+My solution to the Day 1 daily challenge, in [buildupastring.py](buildupastring.py).
 
-## Sanitized requirement map
+## 🔄 What it does
 
-The official item is titled **Build up a string**, carries a 2025-10-30 update label, and requires the following behavior without prescribing a larger architecture:
+1. Asks for a string.
+2. Checks the length: fewer than 10 characters prints "String not long enough.", more than 10 prints "String too long.", and exactly 10 prints "Perfect string" and continues.
+3. Prints the first and last characters.
+4. Uses a `for` loop to print the string growing one character per line.
+5. Bonus: prints a shuffled version with the same characters.
 
-1. accept one string and distinguish lengths below, above, and exactly ten;
-2. print the specified short, long, or perfect-length feedback;
-3. for a valid string, print its first and last characters;
-4. build and print every progressive prefix using a `for` loop; and
-5. optionally shuffle the characters while preserving the same multiset.
-
-This is a public-safe behavioral summary, not a copy of the authenticated course page.
-
-## Observed local behavior
-
-The current script:
-
-1. accepts a string from the terminal;
-2. stops with a clear message when its length is not exactly ten characters;
-3. prints the first and last characters for a valid input;
-4. prints each progressive prefix of the string; and
-5. prints a randomized permutation containing the same characters.
-
-| Check | State |
-|---|---|
-| Length boundaries 9, 10, and 11 | `VERIFIED` by local tests |
-| Progressive output | `VERIFIED` by local tests |
-| Shuffle length and character preservation | `VERIFIED` by local tests and deterministic doctest properties |
-| Full valid and invalid console paths | `VERIFIED` by local tests |
-| Current official prompt match | `VERIFIED` by read-only comparison on 2026-09-11 |
-| Octopus item visibility | `VERIFIED`; no submission action was performed |
-| Learning, submission, review, and grade | `UNVERIFIED` |
-
-## Run and test
-
-```powershell
-py -3.12 -B Week1Python/Day1StartingwithPython/DailyChallenge/BuildUpAString/buildupastring.py
-py -3.12 -B -m unittest discover -s tests/python -p "test_week1_day1_daily_challenge.py" -v
-py -3.12 -B -m doctest -v Week1Python/Day1StartingwithPython/DailyChallenge/BuildUpAString/buildupastring.py
-```
-
-Current evidence and limitations: [2026-09-11 official-alignment record](../../../../.learning/evidence/2026-09-11-week1-day1-daily-challenge-alignment.md). The earlier [local-only audit](../../../../.learning/evidence/2026-09-11-week1-day1-daily-challenge-local.md) is preserved as historical provenance.
-
-<details>
-<summary>Historical learning guide — retained for provenance, not current evidence</summary>
-
-# 💪 Daily Challenge — Build up a string
-
-<!-- NOVA:ULTIMATE:START -->
-<div align="center">
-
-[Preserved legacy folder pulse asset](../../../../assets/readme/nova-folder-pulse.svg)
-
-### Build Up AString
-
-[Preserved legacy heuristic asset](../../../../assets/readme/progress/build-up-astring-6c50c48a77.svg)
-
-**Goal:** Solve an independent daily challenge that reinforces the current lesson through focused problem solving.
-
-</div>
-
-## 🧭 NOVA Folder Guide
-
-| Metric | Value |
-|---|---:|
-| Readiness | **80%** |
-| Files | 3 |
-| Source files | 1 |
-| Test files | 0 |
-| Text lines | 345 |
-
-### ▶️ Main paths
-
-- `Week1Python/Day1StartingwithPython/DailyChallenge/BuildUpAString/buildupastring.py`
-
-### 🚀 Run
-
-```bash
-python Week1Python/Day1StartingwithPython/DailyChallenge/BuildUpAString/buildupastring.py
-```
-
-### 🟢 What is already strong
-
-- ✅ README documentation is generated and repeatable.
-- ✅ Contains 1 source file(s) across practical exercises or projects.
-- ✅ No Python syntax error was detected in this folder tree.
-- ✅ A likely runnable entry point was detected.
-
-### 🟠 What to improve next
-
-- ⚠️ No local unit test is present yet; repository-wide syntax checks still cover the sources.
-
-### 🧪 Validation
-
-```bash
-python tools/nova_quality_gate.py --repo . --strict
-python -m unittest discover -s tests/python -p "test_*.py" -v
-node tools/run_node_tests.mjs .
-```
-
-> The readiness value is a transparent repository heuristic, not a course grade and not proof that every interactive or external-API exercise was executed.
-
-<sub>Managed by NOVA Ultimate v2.0.0 · 2026-07-15T06:22:49+03:00</sub>
-<!-- NOVA:ULTIMATE:END -->
-
-**Author:** Kevin Cusnir "Lirioth"  
-**Course:** Fullstack Bootcamp 2026  
-**Last Updated:** October 18, 2025
-
-**A Python script that validates string input and performs step-by-step string analysis.**
-
-## 📊 Quick Stats
-- **⏰ Duration**: 20-30 minutes
-- **🎯 Difficulty**: 🟡 Intermediate
-- **📝 Skills**: String validation, loops, randomization
-- **✅ Prerequisites**: Completed ExercisesXP
-
----
-
-## 🎯 Learning Objectives
-
-By completing this challenge, you will:
-- ✅ Implement robust input validation
-- ✅ Master string indexing and slicing
-- ✅ Use loops for progressive string building
-- ✅ Apply random module for string shuffling
-- ✅ Create interactive user experiences
-
----
-
-## 🔄 What it does (step by step)
-1. **📝 Ask for input**: the script reads a string from the user.
-2. **📏 Length check (exactly 10)**  
-   - If length `< 10` ⇒ prints **"🔴 String not long enough."**  
-   - If length `> 10` ⇒ prints **"🔴 String too long."**  
-   - If length `== 10` ⇒ prints **"🟢 Perfect string"** and continues.
-3. **🔤 Show first & last characters** of the string.
-4. **🏗️ Build the string gradually**: prints the string character by character, growing one char per line.
-5. **🎲 Bonus**: creates a **jumbled (shuffled)** version of the string and prints it.
-
----
-
-## 🚀 How to run
-### Option A — 🖱️ Double click (if you have Python associated to `.py` files)
-- Save the code as `buildupastring.py`
-- Double click to run (on some systems it opens a console automatically).
-
-### Option B — 💻 Terminal
-```bash
-# macOS / Linux
-python3 buildupastring.py
-
-# Windows (sometimes python or py)
-python buildupastring.py
-# or
-py buildupastring.py
-```
-
-When prompted, type a string of **exactly 10 characters** and press Enter.
-
-## 🎨 Visual Example
-
-Let's see how it works with the input `"abcdefghij"`:
-
-**📏 Step 1: Validation** ✅
-```
-Input: "abcdefghij"
-Length: 10 characters ✓ Perfect!
-```
-
-**🔍 Step 2: Character Analysis**
-```
-First character: 'a'
-Last character:  'j'
-```
-
-**🏗️ Step 3: Build-Up Animation**
-```
-a           ← 1 character
-ab          ← 2 characters
-abc         ← 3 characters
-abcd        ← 4 characters
-abcde       ← 5 characters
-abcdef      ← 6 characters
-abcdefg     ← 7 characters
-abcdefgh    ← 8 characters
-abcdefghi   ← 9 characters
-abcdefghij  ← 10 characters (complete!)
-```
-
-**🎲 Step 4: Shuffle Magic**
-```
-Original:  abcdefghij
-Jumbled:   fdgijbaech  ← (random, varies each run)
-```
-
----
-
-## Example runs
-
-### 1) Too short ❌
-```
-Enter a string (must be exactly 10 characters): hello
-🔴 String not long enough.
-```
-
-### 2) Too long ❌
-```
-Enter a string (must be exactly 10 characters): hellothere!
-🔴 String too long.
-```
-
-### 3) Perfect (length 10) ✅
 ```
 Enter a string (must be exactly 10 characters): abcdefghij
-🟢 Perfect string
+Perfect string
 First character: a
 Last character: j
 a
@@ -237,94 +31,30 @@ abcdefg
 abcdefgh
 abcdefghi
 abcdefghij
-Jumbled string: fdgijbaech   <-- (your result will vary each time)
+Jumbled string: fdgijbaech
 ```
 
-## Notes / tweaks (optional)
-- If you want a **repeatable** jumbled result for testing, add this line before shuffling:
-  ```python
-  random.seed(0)
-  ```
-- You can replace `print` lines with formatted strings if you like:
-  ```python
-  print(f"First character: {s[0]}")
-  ```
-- If you want to **loop until correct length**, wrap the input logic in a `while True` and `break` when `len(s) == 10`.
+The jumbled string changes on every run.
 
----
+## ▶️ Run and test
 
-## 🚀 Challenge Variations
+From the repository root:
 
-Once you complete the basic challenge, try these extensions to level up! 🎯
-
-### 🥈 Gold Challenge
-**Accept strings of ANY length:**
-- For strings **< 10**: Suggest words to add to reach 10
-- For strings **> 10**: Show multiple ways to trim to exactly 10
-- Example:
-  ```python
-  Input: "hello" (5 chars)
-  Output: "Add 5 more characters to reach 10!"
-  Suggestions: "hello12345", "helloworld", "hello!!!!"
-  ```
-
-### 🥇 Ninja Challenge
-**Advanced string manipulation:**
-- **Reverse Build-Up**: Show string shrinking from full to single character
-- **Color Coding**: Mark first char in RED, last in BLUE (using ANSI colors)
-- **Anagram Generator**: Find all valid English words from jumbled letters
-- **Pattern Display**: Show alternating characters, vowels only, consonants only
-
-### 🏆 Master Challenge
-**Create an interactive string builder:**
-```python
-Menu:
-1. Build up
-2. Build down
-3. Reverse string
-4. Shuffle
-5. Find palindromes
-6. Exit
+```bash
+python Week1Python/Day1StartingwithPython/DailyChallenge/BuildUpAString/buildupastring.py
+python -m unittest discover -s tests/python -p "test_week1_day1_daily_challenge.py" -v
+python -m doctest -v Week1Python/Day1StartingwithPython/DailyChallenge/BuildUpAString/buildupastring.py
 ```
 
----
+5 tests in [tests/python/test_week1_day1_daily_challenge.py](../../../../tests/python/test_week1_day1_daily_challenge.py) check the 9, 10 and 11 character boundaries, the build-up output and that the shuffle keeps the same characters.
 
-## 💡 Extension Ideas
+## 💡 What I learned
 
-```python
-# Add repeatable shuffle for testing
-import random
-random.seed(42)  # Same shuffle every time
+- `s[0]` and `s[-1]` give the first and last characters.
+- Adding one character per loop step (`built += ch`) builds the prefixes.
+- `random.shuffle()` works on a list, so I convert the string to a list and join it back.
 
-# Visual progress bar
-def build_with_progress(text):
-    for i in range(len(text)):
-        progress = "█" * (i + 1) + "░" * (len(text) - i - 1)
-        print(f"{text[:i+1]:10} [{progress}]")
+## 👤 Author
 
-# Character frequency
-from collections import Counter
-freq = Counter(text)
-print(f"Most common: {freq.most_common(3)}")
-```
-
----
-
-## 📁 Files
-- `buildupastring.py` — Complete implementation
-- `README.md` — This documentation
-
----
-
-## 👤 About the Author
-
-**Kevin Cusnir "Lirioth"**  
-- 🎓 Fullstack Developer Student  
-- 💻 GitHub: [@Lirioth](https://github.com/Lirioth)  
-- 📧 Repository: [Fullstack2026](https://github.com/Lirioth/Fullstack2026)
-
----
-
-**Created with ❤️ for mastering string manipulation in Python**
-
-</details>
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)

@@ -1,4 +1,4 @@
-name: NOVA Quality Gate
+name: Quality Gate
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: nova-quality-${{ github.workflow }}-${{ github.ref }}
+  group: quality-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -50,7 +50,7 @@ jobs:
         run: npm run typecheck:anchor
 
       - name: Whole-repository quality gate
-        run: python tools/nova_quality_gate.py --repo . --strict
+        run: python tools/quality_gate.py --repo . --strict
 
       - name: Canonical repository structure
         run: npm run verify:structure:core

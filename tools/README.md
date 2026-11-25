@@ -1,60 +1,27 @@
 # Tools
 
-<!-- NOVA:ULTIMATE:START -->
 <div align="center">
 
-<img src="../assets/readme/nova-folder-pulse.svg" width="100%" alt="Animated NOVA learning pulse">
+<img src="../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-### Tools
-
-<img src="../assets/readme/progress/tools-0284c6ac58.svg" width="100%" alt="Readiness status for Tools">
-
-**Goal:** Document the purpose, contents, execution path, quality status, and next improvements for this learning folder.
+<img src="../assets/readme/progress/tools-0284c6ac58.svg" width="100%" alt="Progress card for Tools">
 
 </div>
 
-## 🧭 NOVA Folder Guide
+Scripts that keep the repository consistent. CI runs them on every pull request ([quality.yml](../.github/workflows/quality.yml)).
 
-| Metric | Value |
-|---|---:|
-| Readiness | **80%** |
-| Files | 4 |
-| Source files | 4 |
-| Test files | 0 |
-| Text lines | 2,281 |
-
-### ▶️ Main paths
-
-- `tools/nova_quality_gate.py`
-- `tools/nova_ultimate.py`
-
-### 🚀 Run
+| Script | What it does |
+|---|---|
+| [`quality_gate.py`](quality_gate.py) | Syntax, JSON, HTML, CSS, links and likely secrets across the repo (`npm run quality`) |
+| [`validate_repository_structure.py`](validate_repository_structure.py) | Folder paths, link casing, catalogs and secret checks |
+| [`refresh_structure_catalogs.py`](refresh_structure_catalogs.py) | Rebuilds the catalogs in `reports/nova/` (`npm run catalogs:refresh`) |
+| [`validate_readme_visuals.py`](validate_readme_visuals.py) | README images, manifest hashes and alt text |
+| [`validate_display_titles.py`](validate_display_titles.py) | Display titles for weeks and days |
+| [`learning_intake.py`](learning_intake.py) | Exercise intake queue (`npm run intake`) |
+| [`run_node_tests.mjs`](run_node_tests.mjs) | Runs the tests in `tests/js/` |
+| [`check_typescript_syntax.mjs`](check_typescript_syntax.mjs) | TypeScript syntax check for the quality gate |
+| [`verify_eslint_baseline.mjs`](verify_eslint_baseline.mjs) | Checks that ESLint findings match the known baseline |
 
 ```bash
-python tools/nova_quality_gate.py
-python tools/nova_ultimate.py
+python tools/quality_gate.py --repo . --strict
 ```
-
-### 🟢 What is already strong
-
-- ✅ README documentation is generated and repeatable.
-- ✅ Contains 4 source file(s) across practical exercises or projects.
-- ✅ No Python syntax error was detected in this folder tree.
-- ✅ A likely runnable entry point was detected.
-
-### 🟠 What to improve next
-
-- ⚠️ No local unit test is present yet; repository-wide syntax checks still cover the sources.
-
-### 🧪 Validation
-
-```bash
-python tools/nova_quality_gate.py --repo . --strict
-python -m unittest discover -s tests/python -p "test_*.py" -v
-node tools/run_node_tests.mjs .
-```
-
-> The readiness value is a transparent repository heuristic, not a course grade and not proof that every interactive or external-API exercise was executed.
-
-<sub>Managed by NOVA Ultimate v2.0.0 · 2026-07-15T06:22:47+03:00</sub>
-<!-- NOVA:ULTIMATE:END -->

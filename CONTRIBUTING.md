@@ -78,25 +78,20 @@ and reference-only maps may remain static.
 3. Confirm the topic branch before selecting files. Do not commit directly on
    `main`.
 4. Select only the files or lines that form one cohesive change.
-5. Click **Generate commit message with Copilot** when available.
-6. If the selection changes, regenerate the message. Copilot does not update an
-   existing suggestion automatically.
+5. Write the Summary and Description using the commit format below.
+6. If the selection changes, update the message so it still matches the
+   selected diff.
 7. Review every claim, especially commands and results. Replace unsupported
    claims with `NOT RUN`, `BLOCKED`, or `UNVERIFIED`.
 8. Commit locally and review the commit in **History**.
 9. Use **Publish branch** only when the topic branch has no upstream; otherwise
-   use **Push origin**. Automated agents require Kevin's explicit approval for
-   either remote action.
+   use **Push origin**. Both remote actions require Kevin's explicit approval.
 10. Open a pull request, complete the evidence template, and wait for
     `Syntax, security, docs and tests` to pass.
 11. Resolve review conversations and merge on GitHub. Use the documented
     pull-request-only bypass only to recover from a broken required workflow.
 12. Return to `main`, fetch/pull the merge, verify the post-merge workflow, and
     create a fresh branch for the next batch.
-
-GitHub Desktop Copilot commit generation requires eligible Copilot access. If
-the button is unavailable, copy the format below into the Summary and
-Description fields manually.
 
 ## Commit format
 
@@ -147,10 +142,6 @@ Known limitations
 
 - State remaining risks or "None known".
 
-AI assistance
-
-- Describe material assistance accurately, or write "None".
-
 Creative-Signature: Lirioth Teltanion
 ```
 
@@ -176,7 +167,7 @@ npm run lint:baseline
 npm run typecheck:anchor
 npm run verify:structure
 npm test
-python -B tools/nova_quality_gate.py --repo . --strict --no-write
+python -B tools/quality_gate.py --repo . --strict --no-write
 npm run lint
 git diff --check
 git diff --cached --check
@@ -191,12 +182,11 @@ recorded; it does not prove course mastery, production readiness, or impact.
 
 Review the complete diff before Commit, Publish branch, Push origin, opening a
 pull request, or merging. Direct pushes to `main` are not the normal workflow.
-Automated agents must not commit, push, merge, use the administrator bypass,
+No automated tool may commit, push, merge, use the administrator bypass,
 publish, deploy, close a pull request, delete a branch, or rewrite history
 without Kevin's explicit authorization.
 
 Official references:
 
 - [Committing and reviewing changes in GitHub Desktop](https://docs.github.com/en/desktop/making-changes-in-a-branch/committing-and-reviewing-changes-to-your-project-in-github-desktop)
-- [Configuring Copilot in GitHub Desktop](https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/configuring-copilot-in-github-desktop)
 - [Working with Git hooks in GitHub Desktop](https://docs.github.com/en/desktop/making-changes-in-a-branch/working-with-git-hooks-in-github-desktop)

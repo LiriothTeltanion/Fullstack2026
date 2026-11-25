@@ -25,8 +25,8 @@
     {
       "path": ".learning",
       "icon": "🎓",
-      "title": "Learning Evidence and Course State",
-      "display_title": "🎓 Learning Evidence and Course State"
+      "title": "Course Map and Intake",
+      "display_title": "🎓 Course Map and Intake"
     },
     {
       "path": "assets",
@@ -37,8 +37,8 @@
     {
       "path": "reports",
       "icon": "📊",
-      "title": "Audits and Evidence Reports",
-      "display_title": "📊 Audits and Evidence Reports"
+      "title": "Generated Reports",
+      "display_title": "📊 Generated Reports"
     },
     {
       "path": "tests",

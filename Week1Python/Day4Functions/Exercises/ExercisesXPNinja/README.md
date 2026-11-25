@@ -1,140 +1,45 @@
 # 🥷 Exercises XP Ninja - Expert Function Challenges
 
-<!-- NOVA:ULTIMATE:START -->
 <div align="center">
 
-<img src="../../../../assets/readme/nova-folder-pulse.svg" width="100%" alt="Animated NOVA learning pulse">
+<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-### Exercises XPNinja
-
-<img src="../../../../assets/readme/progress/exercises-xpninja-60b62c5837.svg" width="100%" alt="Readiness status for Exercises XPNinja">
-
-**Goal:** Extend the lesson with advanced algorithmic and creative problem-solving challenges.
+<img src="../../../../assets/readme/progress/exercises-xpninja-60b62c5837.svg" width="100%" alt="Progress card for Exercises XPNinja">
 
 </div>
 
-## 🧭 NOVA Folder Guide
+The harder Day 4 set, all in one file: building full names, translating to and from Morse code, printing text inside a star box, and writing insertion sort by hand.
 
-| Metric | Value |
-|---|---:|
-| Readiness | **80%** |
-| Files | 3 |
-| Source files | 1 |
-| Test files | 0 |
-| Text lines | 416 |
-
-### ▶️ Main paths
-
-- `Week1Python/Day4Functions/Exercises/ExercisesXPNinja/xpninjafunctionssingle.py`
-
-### 🚀 Run
+## ▶️ How to run
 
 ```bash
-python Week1Python/Day4Functions/Exercises/ExercisesXPNinja/xpninjafunctionssingle.py
-```
-
-### 🟢 What is already strong
-
-- ✅ README documentation is generated and repeatable.
-- ✅ Contains 1 source file(s) across practical exercises or projects.
-- ✅ No Python syntax error was detected in this folder tree.
-- ✅ A likely runnable entry point was detected.
-
-### 🟠 What to improve next
-
-- ⚠️ No local unit test is present yet; repository-wide syntax checks still cover the sources.
-
-### 🧪 Validation
-
-```bash
-python tools/nova_quality_gate.py --repo . --strict
-python -m unittest discover -s tests/python -p "test_*.py" -v
-node tools/run_node_tests.mjs .
-```
-
-> The readiness value is a transparent repository heuristic, not a course grade and not proof that every interactive or external-API exercise was executed.
-
-<sub>Managed by NOVA Ultimate v2.0.0 · 2026-07-15T06:22:49+03:00</sub>
-<!-- NOVA:ULTIMATE:END -->
-
-Four advanced exercises demonstrating professional-grade function design, string processing, and algorithm implementation.
-
-## 📊 Quick Stats
-
-- **Difficulty**: 🥇 Advanced  
-- **Time Required**: 120-180 minutes  
-- **Exercises**: 4 expert-level challenges  
-- **Concepts**: Smart capitalization, Morse code translation, box printing, sorting algorithms  
-- **Prerequisites**: ExercisesXP and ExercisesXPGold completed
-
-## 🎓 Learning Objectives
-
-- ✅ Implement smart string capitalization with special characters
-- ✅ Build bidirectional translation systems (English ⇄ Morse)
-- ✅ Create dynamic text formatting with variadic functions (`*args`)
-- ✅ Understand and implement the Insertion Sort algorithm
-- ✅ Apply strict validation and error handling
-- ✅ Design pure, testable functions
-
-## 🚀 Quick Start
-
-```bash
-cd Exercises/ExercisesXPNinja
 python xpninjafunctionssingle.py
 ```
 
-## 📋 Exercise Breakdown
+It runs a short demo for each of the four exercises.
 
-### 1️⃣ Full Name Builder 🧑‍🤝‍🧑
+## 📋 The exercises
 
-**Goal**: Build full names with optional middle names and smart capitalization.
+### 1. Full name builder 🧑‍🤝‍🧑
+`get_full_name()` takes keyword-only arguments and an optional middle name. `smart_cap()` fixes the capitalization, including hyphens and apostrophes.
 
-**Features**:
-- Handles hyphens and apostrophes (e.g., `o'connor-smith` → `O'Connor-Smith`)
-- Optional middle name parameter
-- Proper capitalization of all components
-
-**Example**:
 ```python
-get_full_name("john", "hooker", "lee")  # "John Hooker Lee"
-get_full_name("bruce", last_name="lee") # "Bruce Lee"
+get_full_name(first_name="john", middle_name="hooker", last_name="lee")  # 'John Hooker Lee'
+get_full_name(first_name="bruce", last_name="lee")                       # 'Bruce Lee'
+smart_cap("o'connor-smith")                                              # "O'Connor-Smith"
 ```
 
----
+### 2. Morse code translator 📻
+`text_to_morse()` and `morse_to_text()` use two dictionaries (one is the reverse of the other). Letters are separated by spaces and words by ` / `. Unsupported characters raise a `ValueError`.
 
-### 2️⃣ Morse Code Translator 📻
-
-**Goal**: Translate between English and Morse code with strict validation.
-
-**Features**:
-- Letters separated by spaces
-- Words separated by ` / `
-- Supports letters, numbers, and punctuation
-- Raises `ValueError` for unsupported characters
-
-**Examples**:
 ```python
 text_to_morse("SOS HELP 123")
 # '... --- ... / .... . .-.. .--. / .---- ..--- ...--'
-
-morse_to_text("... --- ... / .... . .-.. .--.")
-# 'SOS HELP'
 ```
 
-**Supported Characters**: A-Z, 0-9, common punctuation
+### 3. Box printer ⭐
+`box_printer(*strings)` accepts any number of strings, pads them to the longest one, prints the frame and also returns it.
 
----
-
-### 3️⃣ Box Printer ⭐
-
-**Goal**: Print text in a star-framed box with dynamic sizing.
-
-**Features**:
-- Accepts any number of strings with `*args`
-- Auto-adjusts width to longest string
-- Returns framed string for reusability
-
-**Example Output**:
 ```
 ******************
 * Hello          *
@@ -146,102 +51,25 @@ morse_to_text("... --- ... / .... . .-.. .--.")
 ******************
 ```
 
----
+### 4. Insertion sort 🧠
+`insertion_sort()` sorts the list in place, like sorting cards in your hand: bigger items shift right and the current one drops into its spot.
 
-### 4️⃣ Insertion Sort 🧠
-
-**Goal**: Implement the Insertion Sort algorithm in-place.
-
-**Algorithm**:
-- **Best Case**: O(n) when nearly sorted
-- **Average/Worst**: O(n²)
-- **Stable**: Maintains relative order of equal elements
-- **In-place**: Sorts without extra arrays
-
-**Example**:
-```python
-arr = [54, 26, 93, 17, 77, 31, 44, 55, 20]
-insertion_sort(arr)
-print(arr)  # [17, 20, 26, 31, 44, 54, 55, 77, 93]
+```
+Before: [54, 26, 93, 17, 77, 31, 44, 55, 20]
+After:  [17, 20, 26, 31, 44, 54, 55, 77, 93]
 ```
 
-**How It Works**: Like sorting playing cards in your hand - pick each card and insert it into its correct position.
+## 🧠 What I learned
+
+- `*args` lets a function take any number of arguments
+- A reversed dictionary (`{v: k for k, v in d.items()}`) gives a two-way lookup
+- Keyword-only parameters (after `*`) make calls easier to read
+- Insertion sort is O(n²) in the worst case but O(n) when the list is almost sorted
 
 ---
 
-## 💡 Key Concepts Demonstrated
+## 👤 Author
 
-### Variadic Functions
-```python
-def box_printer(*strings):
-    # Accepts any number of arguments
-    pass
-```
-
-### String Processing
-- Smart capitalization with `split()` and `join()`
-- Character mapping with dictionaries
-- Format string alignment
-
-### Error Handling
-```python
-if char not in morse_dict:
-    raise ValueError(f"Unsupported character: {char}")
-```
-
-### Algorithm Analysis
-- Time complexity: O(n²) for Insertion Sort
-- Space complexity: O(1) - in-place sorting
-- Stability considerations
-
----
-
-## 🔧 Troubleshooting
-
-| Issue | Solution |
-|-------|----------|
-| Capitalization issues | Check hyphen/apostrophe handling in `_cap_hyphen_apostrophe()` |
-| Morse translation fails | Verify character is in supported set |
-| Box width incorrect | Check padding calculation with longest string |
-| Sort not working | Ensure list is mutable (not tuple) |
-
-### Best Practices
-
-- **🧪 Test edge cases**: Empty strings, special characters, single elements
-- **✅ Validate input**: Raise errors early for invalid data
-- **📝 Document assumptions**: What characters are supported?
-- **🔧 Design for reuse**: Return values, don't just print
-
----
-
-## 🎯 Success Criteria
-
-- [ ] **Exercise 1**: Handle all capitalization cases correctly
-- [ ] **Exercise 2**: Translate bidirectionally without errors
-- [ ] **Exercise 3**: Box adapts to any number/length of strings
-- [ ] **Exercise 4**: Sort works on various array sizes and states
-- [ ] **Overall**: Code is clean, tested, and well-documented
-
----
-
-## 🚀 Next Steps
-
-1. ✅ Optimize Insertion Sort or try other algorithms (Merge Sort, Quick Sort)
-2. ✅ Extend Morse code to support more characters
-3. ✅ Add color to box printer output
-4. ✅ Implement unit tests for all functions
-5. ✅ Apply these patterns to the Daily Challenge
-
----
-
-## 📚 Additional Resources
-
-- [Sorting Algorithms Visualized](https://visualgo.net/en/sorting)
-- [Morse Code Standards](https://en.wikipedia.org/wiki/Morse_code)
-- [Python *args and **kwargs](https://realpython.com/python-kwargs-and-args/)
-
----
-
-**Author**: Kevin Cusnir 'Lirioth'  
-**Repository**: [Fullstack2026](https://github.com/Lirioth/Fullstack2026)  
-**Week 1 Day 4** - Functions - Exercises XP Ninja
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
+Week 1 Day 4 - Functions - Exercises XP Ninja

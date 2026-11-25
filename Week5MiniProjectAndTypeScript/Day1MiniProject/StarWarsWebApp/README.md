@@ -1,165 +1,31 @@
 # Star Wars Character Finder
 
-> Current evidence (2026-08-24): source present; browser/API behavior, accessibility, explanation, and mastery are unverified.
-
-<!-- NOVA:ULTIMATE:START -->
 <div align="center">
 
-<img src="../../../assets/readme/nova-folder-pulse.svg" width="100%" alt="Animated NOVA learning pulse">
+<img src="../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-### Star Wars Web App
-
-<img src="../../../assets/readme/progress/star-wars-web-app-63b913747f.svg" width="100%" alt="Readiness status for Star Wars Web App">
-
-**Goal:** Practice the Fetch API, async/await, DOM rendering, and loading/error handling with SWAPI.
+<img src="../../../assets/readme/progress/star-wars-web-app-63b913747f.svg" width="100%" alt="Progress card for Star Wars Web App">
 
 </div>
 
-## 🧭 NOVA Folder Guide
+A single-page app I built for the Week 5 Day 1 mini project. It uses the [Star Wars API (SWAPI)](https://www.swapi.tech/) to show a random character every time you click **Find Someone**: name, height, gender, birth year and home world.
 
-| Metric | Value |
-|---|---:|
-| Readiness | **80%** |
-| Files | 2 |
-| Source files | 1 |
-| Test files | 0 |
-| Text lines | 530 |
+## How to run
 
-### ▶️ Main paths
+No install needed. Open `index.html` in a modern browser and click the button. The HTML, CSS and JavaScript are all inside that one file.
 
-- `Week5MiniProjectAndTypeScript/Day1MiniProject/StarWarsWebApp/index.html`
+## How it works
 
-### 🚀 Run
+- `findRandomCharacter()` picks a random ID between 1 and 83 and coordinates everything.
+- `getCharacterData()` fetches the character, then `getHomeworldName()` makes a second request for the planet name.
+- `showLoading()`, `showError()` and `displayCharacter()` switch the UI between loading, error and result.
+- The button is disabled while loading so you can't fire several requests at once.
+- Network errors, missing characters and planet lookup failures all show: "Oh No! That person isn't available."
 
-```bash
-python -m http.server 8000
-```
+The styling is a black starry background, a card with golden borders, a spinner and a few animations, with media queries for small screens. Icons come from Font Awesome.
 
-### 🟢 What is already strong
+## What I learned
 
-- ✅ README documentation is generated and repeatable.
-- ✅ Contains 1 source file(s) across practical exercises or projects.
-- ✅ No Python syntax error was detected in this folder tree.
-- ✅ A likely runnable entry point was detected.
-
-### 🟠 What to improve next
-
-- ⚠️ No local unit test is present yet; repository-wide syntax checks still cover the sources.
-
-### 🧪 Validation
-
-```bash
-python tools/nova_quality_gate.py --repo . --strict
-python -m unittest discover -s tests/python -p "test_*.py" -v
-node tools/run_node_tests.mjs .
-```
-
-> The readiness value is a transparent repository heuristic, not a course grade and not proof that every interactive or external-API exercise was executed.
-
-<sub>Managed by NOVA Ultimate v2.0.0 · 2026-07-15T06:22:49+03:00</sub>
-<!-- NOVA:ULTIMATE:END -->
-
-A single-page web application that uses AJAX to fetch and display Star Wars character information.
-
-## Description
-
-This application consumes the Star Wars API (SWAPI) to display random character information from the saga. When clicking the "Find Someone" button, a random character is fetched and their information is displayed including name, height, gender, birth year, and home world.
-
-## Features
-
-- ✨ Star Wars themed interface with starry background
-- 🎲 Random character generation (83 characters available)
-- ⏳ Animated loading indicator with spinner
-- ⚠️ Error handling with appropriate messages
-- 📱 Responsive design for different screen sizes
-- 🚀 Use of async/await for asynchronous requests
-- 🌍 Fetching home planet name through additional API call
-
-## Technologies Used
-
-- HTML5
-- CSS3 (con animaciones y efectos)
-- JavaScript (ES6+)
-- Fetch API
-- Async/Await
-- SWAPI (Star Wars API): https://www.swapi.tech/
-- Font Awesome for icons
-
-## Project Structure
-
-```
-StarWarsWebApp/
-├── index.html      # HTML, CSS, and JavaScript are embedded here
-└── README.md       # This file
-```
-
-## Implemented Features
-
-### JavaScript embedded in `index.html`
-
-1. **DOM Element Retrieval**: References to necessary elements
-2. **Random ID Generation**: Function to get a number between 1-83
-3. **UI States**:
-   - `showLoading()`: Displays loading spinner
-   - `showError()`: Displays error message
-   - `displayCharacter()`: Displays character information
-4. **API Requests**:
-   - `getCharacterData()`: Fetches character data
-   - `getHomeworldName()`: Fetches home planet name
-   - `findRandomCharacter()`: Main function that coordinates the entire process
-
-### CSS embedded in `index.html`
-
-- Black background with animated stars effect
-- Information card with golden borders characteristic of Star Wars
-- Animations for logo, loading spinner, and button
-- Hover and active styles for better UX
-- Media queries for responsive design
-
-## How to Use
-
-1. Open `index.html` in your web browser
-2. Click the "Find Someone" button
-3. Watch the loading indicator while the information is being fetched
-4. The random character's information will be displayed
-5. Click again to get another character
-
-## Error Handling
-
-The application handles the following cases:
-- Network errors
-- Characters not available in the API
-- Issues fetching the home planet
-
-In case of error, the message displayed is: "Oh No! That person isn't available."
-
-## Demo
-
-The application displays:
-- **Star Wars Logo** with golden glow effect
-- **Information Card** with the following data:
-  - Character name
-  - Height
-  - Gender
-  - Birth Year
-  - Home World
-- **"Find Someone" Button** with hover effects and disabled state during loading
-
-## Installation
-
-No installation required. Simply open the `index.html` file in any modern browser.
-
-## Technical Notes
-
-- The SWAPI API contains 83 different characters
-- Async/await is used to handle promises in a more readable way
-- Two requests are made: one for the character and another to get the planet name
-- The button is disabled during loading to prevent multiple simultaneous requests
-
-## Author
-
-Project developed as part of the Mini Project for Day 1, Week 5 of the Fullstack 2026 bootcamp.
-
-## License
-
-This project is open source and available for educational purposes.
+- Using `fetch` with async/await instead of chained `.then()` calls
+- Chaining two dependent API requests
+- Handling loading and error states so the page never looks stuck

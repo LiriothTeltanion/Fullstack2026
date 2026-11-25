@@ -1,184 +1,36 @@
-# 🥉 Exercises XP — Verified Repository Behavior
-
-## 🛰️ Bounded evidence checkpoint — 2026-09-11
+# 🥉 Exercises XP — Python Basics
 
 <div align="center">
 
-<img src="../../../../assets/readme/days/week1-day1-python-foundations.svg" width="100%" alt="Week 1 Day 1 Python foundations evidence map: XP 1–9, Gold 1–2, and Ninja 1–5 are repository-verified by 23 focused tests; the Daily Challenge matches the reviewed official prompt and passes 5 focused tests; learning and Octopus submission remain unverified.">
+<img src="../../../../assets/readme/days/week1-day1-python-foundations.svg" width="100%" alt="Week 1 Day 1 Python foundations map: Exercises XP 1–9, XP Gold 1–2 and XP Ninja 1–5 are covered by 23 tests, and the Daily Challenge by 5 more.">
 
 </div>
 
-| Layer | State | Evidence boundary |
+Nine short exercises from Day 1, all in [exercisesxp.py](exercisesxp.py). Each one is its own function (`exercise_1()` to `exercise_9()`) and `main()` runs them in order.
+
+## 🧭 The exercises
+
+| # | Exercise | What it does |
 |---|---|---|
-| XP repository behavior | `VERIFIED` | [Ten focused tests](../../../../tests/python/test_week1_day1_exercises_xp.py) cover the nine supplied XP behaviors, including invalid numeric input and the strict 145/146 cm boundary. |
-| Gold repository behavior | `VERIFIED` | The separate [Gold guide](../ExercisesXPGold/) and [six-test suite](../../../../tests/python/test_week1_day1_exercises_xp_gold.py) cover Gold 1–2. |
-| Ninja repository behavior | `VERIFIED` | The separate [Ninja guide](../ExercisesXPNinja/) and [seven-test suite](../../../../tests/python/test_week1_day1_exercises_xp_ninja.py) cover Ninja 1–5. |
-| Daily Challenge | `VERIFIED` requirement alignment and repository behavior | A read-only source comparison plus [five tests](../../../../tests/python/test_week1_day1_daily_challenge.py) cover the official behavior. |
-| Kevin's understanding | `UNVERIFIED` | Requires Kevin's own explanation, a changed example, independent recreation, and an edge case. |
-| Octopus submission | `UNVERIFIED` | No submission, instructor review, or grade is asserted here. |
+| 1 | Hello World | Prints "Hello world" four times using `\n`. |
+| 2 | Some math | Calculates `(99**3) * 8` = 7762392. |
+| 3 | What is the output? | Compares values of different types; `"3" > 3` raises a `TypeError`, which I catch. |
+| 4 | Computer brand | Puts `computer_brand = "ASUS"` into a sentence. |
+| 5 | Your information | Builds a sentence from name, age and shoe size with `str()`. |
+| 6 | A & B | Prints "Hello World" if `a > b`. |
+| 7 | Odd or even | Reads a number and checks `n % 2`. |
+| 8 | What's your name? | Compares the input to my name after `.strip().lower()`. |
+| 9 | Tall enough to ride? | Uses `height > 145`, so 145 cm is not enough and 146 cm is. |
 
-Full evidence and commands: [XP record](../../../../.learning/evidence/2026-09-10-week1-day1-exercises-xp.md) · [Gold record](../../../../.learning/evidence/2026-09-11-week1-day1-exercises-xp-gold.md) · [Ninja record](../../../../.learning/evidence/2026-09-11-week1-day1-exercises-xp-ninja.md) · [Daily alignment record](../../../../.learning/evidence/2026-09-11-week1-day1-daily-challenge-alignment.md)
+Exercises 7 to 9 ask for input. A small `read_int()` helper keeps asking until it gets a whole number.
 
-<details>
-<summary>Historical repository snapshot — generated 2026-07-15</summary>
-
-<!-- NOVA:ULTIMATE:START -->
-<div align="center">
-
-### Exercises XP
-
-**Goal:** Practice the standard exercises that introduce the lesson's core concepts.
-
-</div>
-
-## 🧭 NOVA Folder Guide
-
-| Metric | Value |
-|---|---:|
-| Historical readiness heuristic | **80% · generated 2026-07-15** |
-| Files | 3 |
-| Source files | 1 |
-| Colocated test files | 0; one focused suite now lives under `tests/python/` |
-| Text lines | 524 |
-
-### ▶️ Main paths
-
-- `Week1Python/Day1StartingwithPython/Exercises/ExercisesXP/exercisesxp.py`
-
-### 🚀 Run
+## ▶️ Run
 
 ```bash
-python Week1Python/Day1StartingwithPython/Exercises/ExercisesXP/exercisesxp.py
-```
-
-### 🟢 What is already strong
-
-- ✅ README documentation is generated and repeatable.
-- ✅ Contains 1 source file(s) across practical exercises or projects.
-- ✅ No Python syntax error was detected in this folder tree.
-- ✅ A likely runnable entry point was detected.
-- ✅ Ten centralized tests now cover the nine supplied Exercises XP behaviors.
-
-### 🟠 What to improve next
-
-- ⚠️ Kevin's independent explanation and Octopus submission state remain unverified.
-
-### 🧪 Validation
-
-```bash
-python tools/nova_quality_gate.py --repo . --strict
-python -m unittest discover -s tests/python -p "test_*.py" -v
-node tools/run_node_tests.mjs .
-```
-
-> The readiness value is a transparent repository heuristic, not a course grade and not proof that every interactive or external-API exercise was executed.
-
-<sub>Managed by NOVA Ultimate v2.0.0 · 2026-07-15T06:22:49+03:00</sub>
-<!-- NOVA:ULTIMATE:END -->
-
-</details>
-
-**Author:** Kevin Cusnir<br>
-**Creative signature:** Lirioth Teltanion<br>
-**Course:** Fullstack Bootcamp 2026  
-**Local README originally updated:** October 18, 2025<br>
-**Evidence checkpoint reviewed:** September 11, 2026
-
-**Practice Python fundamentals through nine beginner-friendly exercises with a bounded automated safety net.**
-
-## 📊 Quick Stats
-- **⏰ Duration**: 45-60 minutes
-- **🎯 Difficulty**: 🟢 Beginner
-- **📝 Exercises**: 9
-- **✅ Prerequisites**: None (starts from scratch)
-
-## 🎯 Learning Objectives
-
-These exercises are designed to help you practice how to:
-- ✅ Practice basic `print()` formatting and escape sequences
-- ✅ Perform arithmetic operations with various operators
-- ✅ Understand type comparisons and boolean logic
-- ✅ Handle string concatenation and variable assignment
-- ✅ Implement conditional statements (if/elif/else)
-- ✅ Process user input with validation
-- ✅ Apply modulo operator for number analysis
-
----
-
-## 📋 Quick Reference Table
-
-| Exercise | Concept | Difficulty | Output Type | Key Learning |
-|----------|---------|------------|-------------|--------------|
-| 1 | Strings & newlines | 🟢 Easy | Text | `print()` and `\n` |
-| 2 | Operators | 🟢 Easy | Number | Exponentiation `**` |
-| 3 | Comparisons | 🟡 Medium | Booleans | Type comparisons |
-| 4 | Variables | 🟢 Easy | Text | String concatenation |
-| 5 | Type casting | 🟡 Medium | Text | `str()` conversion |
-| 6 | Conditionals | 🟢 Easy | Text | `if` statements |
-| 7 | Input + modulo | 🟡 Medium | Interactive | User input, `%` operator |
-| 8 | String methods | 🟡 Medium | Interactive | `.lower()`, `.strip()` |
-| 9 | Validation | 🟡 Medium | Interactive | Input validation |
-
----
-
-## 🧭 What this script covers
-
-1) **👋 Hello World (strings + newlines)**  
-   Prints "Hello world" four times, using `\n` for new lines.
-
-2) **🧮 Some Math (operators & precedence)**  
-   Calculates `(99**3) * 8` (power then multiply).
-
-3) **❓ What is the output? (comparisons & types)**  
-   - `5 < 3` → `False`  
-   - `3 == 3` → `True`  
-   - `3 == "3"` → `False` (different types)  
-   - `"3" > 3` → **⚠️ TypeError** in Python (you cannot compare `str` and `int`)  
-   - `"Hello" == "hello"` → `False` (string comparison is case-sensitive)
-
-4) **💻 Your computer brand (variables + string concatenation)**  
-   Uses `computer_brand = "ASUS"` and prints a sentence.
-
-5) **👤 Your information (variables + casting)**  
-   Builds a sentence with `name`, `age`, `shoe_size`. Uses `str(...)` to cast numbers when concatenating.
-
-6) **🔀 A & B (conditionals)**  
-   If `a > b`, prints `"Hello World"`.
-
-7) **🔢 Odd or Even (input + modulo)**  
-   Asks for a number and prints `Even` if `n % 2 == 0`, otherwise `Odd`.
-
-8) **🤝 What's your name? (input + normalization)**  
-   Compares the user’s input (lowercased and stripped) to `my_name`. If equal, prints a friendly message.
-
-9) **🎢 Tall enough to ride? (input + numeric compare)**  
-   Asks for height in cm and prints if you’re tall enough.  
-   > Requirement boundary: “over 145 cm” is strict. The code uses `height > 145`, so 145 cm does not qualify and 146 cm is the first qualifying whole-centimeter height.
-
----
-
-## 🚀 How to run
-
-### Option A — 🖱️ Double click (if `.py` is associated to Python)
-- Save the script as `exercisesxp.py`
-- Double click to run (your OS may open a console window).
-
-### Option B — 💻 Terminal
-```bash
-# macOS / Linux
-python3 exercisesxp.py
-
-# Windows
 python exercisesxp.py
-# or
-py exercisesxp.py
 ```
 
-You will be prompted for input in **📝 Exercises 7–9**.
-
----
-
-## 📸 Example session (short)
+Shortened sample run:
 
 ```
 Hello world
@@ -202,185 +54,21 @@ Enter your height in cm: 150
 You are tall enough to ride.
 ```
 
-> 💡 Your inputs may differ; this is only a quick sample.
+## 🧪 Tests
 
----
+10 tests in [tests/python/test_week1_day1_exercises_xp.py](../../../../tests/python/test_week1_day1_exercises_xp.py) cover these exercises, including invalid input and the 145/146 cm boundary. From the repository root:
 
-## 📋 **Exercise-by-Exercise Expected Outputs**
-
-<details>
-<summary>📋 Click to expand detailed outputs for each exercise</summary>
-
-### Exercise 1 - Hello World
-```
-Hello world
-Hello world
-Hello world
-Hello world
+```bash
+python -m unittest discover -s tests/python -p "test_week1_day1_exercises_xp.py" -v
 ```
 
-### Exercise 2 - Arithmetic
-```
-7762392
-```
-(Result of `(99³) × 8`)
+## 💡 What I learned
 
-### Exercise 3 - Comparisons
-```
-False
-True  
-False
-TypeError
-False
-```
+- `input()` returns text, so numbers need `int()` before any math or comparison.
+- Python won't compare `str` and `int` with `>`; it raises a `TypeError`.
+- "Over 145" is a strict `>`, not `>=`.
 
-### Exercise 4 - Computer Brand
-```
-I have a ASUS computer.
-```
+## 👤 Author
 
-### Exercise 5 - Personal Info
-```
-My name is Kevin, I'm 31 years old and my shoe size is 40.
-```
-
-### Exercise 6 - Comparison
-```
-Hello World
-```
-(Only prints if `a > b`)
-
-### Exercise 7 - Odd/Even
-```
-Enter a number: 7
-Odd
-```
-or
-```
-Enter a number: 10
-Even
-```
-
-### Exercise 8 - Name Match
-```
-What is your name? Alice
-Nice to meet you, Alice!
-```
-or
-```
-What is your name? Kevin
-Hey, we have the same name! :)
-```
-
-### Exercise 9 - Height Check
-```
-Enter your height in cm: 150
-You are tall enough to ride.
-```
-or
-```
-Enter your height in cm: 140
-You need to grow some more to ride.
-```
-
-</details>
-
----
-
----
-
-## 🧱 **Code Structure**
-
-The `exercisesxp.py` file contains:
-- **9 exercise functions**: `exercise_1()` through `exercise_9()`
-- **Helper function**: `read_int()` for validated integer input
-- **Main function**: Runs all exercises sequentially
-
-### 🔍 **Function Map**
-```python
-exercise_1()  → Hello World printing
-exercise_2()  → Arithmetic calculation
-exercise_3()  → Boolean comparisons  
-exercise_4()  → Variable usage
-exercise_5()  → String formatting
-exercise_6()  → Conditional logic
-exercise_7()  → Odd/Even detector (interactive)
-exercise_8()  → Name comparison (interactive)
-exercise_9()  → Height validation (interactive)
-```
-
----
-
-## 🐛 Troubleshooting
-
-### Common Issues & Solutions
-
-**❌ Problem:** `TypeError: '>' not supported between instances of 'str' and 'int'`  
-**✅ Solution:** Use `int(input("..."))` to convert user input to integer
-```python
-# Wrong:
-age = input("Enter age: ")  # This is a string!
-if age > 18:  # Error!
-
-# Correct:
-age = int(input("Enter age: "))  # Convert to integer
-if age > 18:  # Works!
-```
-
-**❌ Problem:** `ValueError: invalid literal for int() with base 10: 'abc'`  
-**✅ Solution:** User entered non-numeric text. Add validation:
-```python
-try:
-    number = int(input("Enter a number: "))
-except ValueError:
-    print("❌ Please enter a valid number")
-```
-
-**❌ Problem:** A height of exactly 145 cm is accepted
-
-**✅ Solution:** Use `>` for the strict “over 145 cm” requirement. At 145 cm, the rider still needs 1 cm; 146 cm qualifies.
-
-**❌ Problem:** Exercise 3 crashes on `"3" > 3`  
-**✅ Solution:** The code includes `try/except` to catch this TypeError safely
-
-**❌ Problem:** Name comparison doesn't work  
-**✅ Solution:** Use `.lower()` and `.strip()` for case-insensitive comparison:
-```python
-if user_input.strip().lower() == my_name.lower():
-    print("Same name!")
-```
-
----
-
-## 🎨 Customization tips (optional)
-
-- Change `computer_brand`, `name`, `age`, `shoe_size` to your values.  
-- Make Exercise 6 dynamic by asking the user for `a` and `b` with `input()` and `int(...)`.  
-- Exercise 8: use `f-strings` to format:  
-  ```python
-  print(f"Nice to meet you, {user_name}!")
-  ```
-- Exercise 9: Already handles non-integer input with `try/except ValueError` around `int(...)`.
-
----
-
-## 💡 Learning Tips
-
-1. **Run each exercise separately** to understand what it does
-2. **Try breaking the code** to see error messages
-3. **Experiment with different inputs** to test edge cases
-4. **Add your own print statements** to debug
-5. **Read error messages carefully** - they tell you what's wrong!
-
----
-
-## 👤 About the Author
-
-**Kevin Cusnir · Lirioth Teltanion**
-- 🎓 Fullstack Developer Student  
-- 💻 GitHub: [@LiriothTeltanion](https://github.com/LiriothTeltanion)<br>
-- 📧 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)
-
----
-
-**Created with ❤️ for learning Python fundamentals**
+**Kevin Cusnir 'Lirioth'**  
+Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)

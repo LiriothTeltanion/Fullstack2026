@@ -68,22 +68,9 @@ REQUIRED_PATHS = (
     ".github/pull_request_template.md",
     ".learning/course-map.yml",
     ".learning/display-map.json",
-    ".learning/OCTOPUS_INTAKE.md",
-    ".learning/PROGRESS.md",
-    ".learning/REVIEW_QUEUE.md",
-    ".learning/sessions/README.md",
-    ".learning/evidence/README.md",
     ".learning/intake/README.md",
     ".learning/intake/queue.json",
     ".learning/intake/exercise-intake.schema.json",
-    "reports/resume/BASELINE_2026-08-23.md",
-    "reports/resume/STRUCTURE_MAP.md",
-    "reports/resume/DUPLICATE_ANALYSIS.csv",
-    "reports/resume/TEST_COVERAGE_MAP.md",
-    "reports/resume/OPEN_WORK_TRIAGE.md",
-    "reports/resume/DECISION_LOG.md",
-    "reports/resume/CONSOLIDATION_RESULT.md",
-    "reports/resume/ACADEMY_ALIGNMENT_2026-08-24.md",
     "reports/nova/exercise_catalog_metadata.csv",
     "assets/readme/visual_manifest.json",
     "tools/validate_display_titles.py",
@@ -109,18 +96,9 @@ REMOVED_PATH_FRAGMENTS = (
     "AnagramChecker/readme.md",
 )
 
-# These files preserve evidence from earlier runs. They are deliberately not
-# treated as active navigation or configuration, but their recorded paths still
-# remain useful repository archaeology.
-HISTORICAL_TEXT_PATHS = {
-    "FINAL_README_INSTALL_REPORT.md",
-    "reports/nova/NOVA_UPDATE_REPORT.md",
-    "reports/resume/BASELINE_2026-08-23.md",
-    "reports/resume/CONSOLIDATION_RESULT.md",
-    "reports/resume/DECISION_LOG.md",
-    "reports/resume/DUPLICATE_ANALYSIS.csv",
-    "reports/resume/STRUCTURE_MAP.md",
-}
+# Text files exempt from link and removed-path scans. None are tracked today;
+# keep the hook so a future archived report can opt out explicitly.
+HISTORICAL_TEXT_PATHS: set[str] = set()
 
 # These active tools necessarily contain the removed strings as detector or
 # migration-input data. Only their self-describing constants are exempt; their
@@ -176,7 +154,7 @@ LEARNING_PATH_RE = re.compile(r"^\s*(?:-\s*)?path:\s*(.+?)\s*$", re.MULTILINE)
 HIGH_CONFIDENCE_SECRET_PATTERNS = (
     ("AWS access key", re.compile(r"\bAKIA[0-9A-Z]{16}\b")),
     ("GitHub token", re.compile(r"\bgh[pousr]_[A-Za-z0-9]{30,}\b")),
-    ("OpenAI-style secret key", re.compile(r"\bsk-[A-Za-z0-9_-]{20,}\b")),
+    ("sk-prefixed secret key", re.compile(r"\bsk-[A-Za-z0-9_-]{20,}\b")),
     ("private key material", re.compile(r"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----")),
 )
 
@@ -596,7 +574,7 @@ def main() -> int:
 
     missing_required = [path for path in REQUIRED_PATHS if path not in tracked]
     validation.check(
-        "agent and learning source of truth",
+        "learning source of truth",
         [f"missing tracked file: {path}" for path in missing_required],
         f"all {len(REQUIRED_PATHS)} required foundation files are indexed",
     )
