@@ -6,7 +6,15 @@ import {
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import { IS_PRODUCTION, JWT_SECRET, TOKEN_LIFETIME, TOKEN_MAX_AGE_MS } from "../settings.js";
-import { createUser, findUserById, findUserByUsername, toPublicUser } from "../models/userModel.js";
+import {
+  createUser,
+  findUserByEmail,
+  findUserById,
+  findUserByUsername,
+  isValidEmail,
+  normalizeEmail,
+  toPublicUser,
+} from "../models/userModel.js";
 
 const COOKIE_OPTIONS = { httpOnly: true, sameSite: "strict", secure: IS_PRODUCTION };
 const isText = value => typeof value === "string" && value.trim() !== "";
@@ -50,7 +58,7 @@ export async function refresh(req, res) {
 }
 
 export async function register(req, res) {
-  const { username, password } = req.body ?? {};
+  const { username, email, password } = req.body ?? {};
   if (!isText(username) || !isText(password)) {
     return res.status(400).json({ error: "Username and password are required" });
   }
@@ -60,17 +68,32 @@ export async function register(req, res) {
   if (password.length < 8) {
     return res.status(400).json({ error: "Password: at least 8 characters" });
   }
+  const normalizedEmail = normalizeEmail(email);
+  if (!isValidEmail(normalizedEmail)) {
+    return res.status(400).json({ error: "A valid email address is required" });
+  }
   if (await findUserByUsername(username)) {
     return res.status(409).json({ error: "That username is taken" });
   }
 
-  const user = await createUser(username, await bcrypt.hash(password, 10));
-  await sendSession(res, user, 201); // registering also logs you in
+  try {
+    const user = await createUser(username, await bcrypt.hash(password, 10), normalizedEmail);
+    await sendSession(res, user, 201); // registering also logs you in
+  } catch (error) {
+    if (error.status === 409) return res.status(409).json({ error: error.message });
+    throw error;
+  }
 }
 
 export async function login(req, res) {
-  const { username, password } = req.body ?? {};
-  const user = isText(username) ? await findUserByUsername(username) : undefined;
+  const { username, email, password } = req.body ?? {};
+  // Existing clients keep sending username; it may now also contain an email identifier.
+  const identifier = isText(username) ? username.trim() : isText(email) ? email.trim() : "";
+  const user = identifier.includes("@")
+    ? await findUserByEmail(identifier)
+    : identifier
+      ? await findUserByUsername(identifier)
+      : undefined;
   const ok = user && isText(password) && (await bcrypt.compare(password, user.passwordHash));
   if (!ok) return res.status(401).json({ error: "Wrong username or password" });
   await sendSession(res, user);

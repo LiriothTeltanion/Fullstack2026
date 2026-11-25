@@ -1,16 +1,16 @@
 # Structure Reports
 
-## Current catalog (2026-11-25)
+## Current catalog (2026-11-26)
 
 - [Canonical exercise catalog](exercise_catalog.md) — 276 exercise folders indexed from Git; a map of the code, not a test result.
 - `exercise_catalog_metadata.csv` — versioned structural labels and review-entry hints; semantic titles/goals/technologies are derived conservatively and do not prove runtime or assignment correctness.
 - `exercise_catalog.csv` — machine-readable canonical path catalog.
 - `file_inventory.csv` — indexed-blob inventory (self-entry intentionally excluded to avoid a recursive hash).
-- `tree.txt` — exact-case tree for 2924 Git-indexed files.
+- `tree.txt` — exact-case tree for 2940 Git-indexed files.
 - `rename_plan.csv` — unapproved later-wave proposals only.
 - `catalog_manifest.json` — generation date, base HEAD, and stable source-index fingerprint.
 
-Generation basis: HEAD `f692aee2ccbf5d31a3e9928391fe58e65d105468` plus the staged source index fingerprint `sha256:3fa018c2a2cfe8a8eccee92febf24a5eda7ccea154d70ca9ed5582b78101c8a4`.
+Generation basis: HEAD `112378df277b844da5f9bab471170caba7853b0e` plus the staged source index fingerprint `sha256:f7670ac0901c65a463033e54f9e1cd699e18aafd183c1ea8c9d8046a65b91135`.
 
 Regenerate with `python tools/refresh_structure_catalogs.py --repo . --write`; verify drift with `python tools/refresh_structure_catalogs.py --repo . --check`.
 

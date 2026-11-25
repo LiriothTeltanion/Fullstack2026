@@ -5,8 +5,10 @@ import pg from "pg";
 export const db = {
   users: [],
   stories: [],
+  comments: [],
   nextUserId: 1,
   nextStoryId: 1,
+  nextCommentId: 1,
   contributors: [],
   nextContributorId: 1,
   refreshSessions: new Map(),
@@ -19,7 +21,7 @@ if (!/^[a-z_][a-z0-9_]*$/.test(databaseSchema)) {
 // Qualify every relation explicitly; transaction poolers must not rely on SET search_path.
 export const tables = Object.freeze(
   Object.fromEntries(
-    ["users", "stories", "story_contributors", "refresh_sessions"].map(name => [
+    ["users", "stories", "story_comments", "story_contributors", "refresh_sessions"].map(name => [
       name,
       `"${databaseSchema}"."${name}"`,
     ])

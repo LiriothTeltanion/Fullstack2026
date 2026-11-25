@@ -1,22 +1,19 @@
 import { createAsyncThunk, createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import { api } from "./api";
 import type { Story, User } from "./types";
+import { sessionChanged } from "./authSlice";
 
 interface StoryState {
-  user: User | null;
-  accessToken: string | null;
-  checking: boolean;
   stories: Story[];
   loading: boolean;
+  loaded: boolean;
   error: string;
   requestId: string | null;
 }
 const initialState: StoryState = {
-  user: null,
-  accessToken: null,
-  checking: true,
   stories: [],
   loading: false,
+  loaded: false,
   error: "",
   requestId: null,
 };
@@ -24,42 +21,40 @@ const initialState: StoryState = {
 export const fetchStories = createAsyncThunk(
   "story/fetch",
   async () => (await api.stories()).stories,
-  { condition: (_, { getState }) => Boolean((getState() as { story: StoryState }).story.user) }
+  {
+    condition: (_, { getState }) =>
+      Boolean((getState() as { auth: { user: User | null } }).auth.user),
+  }
 );
 
 const storySlice = createSlice({
   name: "story",
   initialState,
   reducers: {
-    sessionChanged(state, action: PayloadAction<User | null>) {
-      state.user = action.payload;
-      if (!action.payload) state.accessToken = null;
-      state.stories = [];
-      state.error = "";
-      state.loading = false;
-      state.requestId = null;
-    },
-    accessTokenChanged(state, action: PayloadAction<string | null>) {
-      state.accessToken = action.payload;
-    },
-    sessionChecked(state) {
-      state.checking = false;
-    },
     errorChanged(state, action: PayloadAction<string>) {
       state.error = action.payload;
     },
   },
   extraReducers: builder => {
     builder
+      .addCase(sessionChanged, state => {
+        // Invalidate pending requests whenever accounts change or sign out.
+        state.stories = [];
+        state.error = "";
+        state.loading = false;
+        state.loaded = false;
+        state.requestId = null;
+      })
       .addCase(fetchStories.pending, (state, action) => {
         state.loading = true;
         state.error = "";
         state.requestId = action.meta.requestId;
       })
       .addCase(fetchStories.fulfilled, (state, action) => {
-        if (!state.user || state.requestId !== action.meta.requestId) return;
+        if (state.requestId !== action.meta.requestId) return;
         state.stories = action.payload;
         state.loading = false;
+        state.loaded = true;
         state.requestId = null;
       })
       .addCase(fetchStories.rejected, (state, action) => {
@@ -70,6 +65,5 @@ const storySlice = createSlice({
       });
   },
 });
-export const { sessionChanged, sessionChecked, errorChanged, accessTokenChanged } =
-  storySlice.actions;
+export const { errorChanged } = storySlice.actions;
 export default storySlice.reducer;
