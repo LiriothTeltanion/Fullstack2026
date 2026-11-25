@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 320" role="img" aria-labelledby="title desc">
+  <title id="title">Foam microphone windscreen</title>
+  <desc id="desc">A charcoal foam microphone windscreen with a rounded top and open lower sleeve. Original Riff Shop product illustration.</desc>
+  <defs><linearGradient id="paper" x2="1" y2="1"><stop stop-color="#fbe8d9"/><stop offset="1" stop-color="#f0d1b9"/></linearGradient></defs>
+  <rect width="512" height="320" fill="url(#paper)"/>
+  <circle cx="435" cy="57" r="92" fill="#fff7e9" opacity=".35"/>
+  <ellipse cx="256" cy="282" rx="135" ry="14" fill="#714d36" opacity=".13"/>
+  <path d="M169 143a87 87 0 0 1 174 0v91q-87 38-174 0z" fill="#35464d" stroke="#25363c" stroke-width="5"/><ellipse cx="256" cy="236" rx="87" ry="25" fill="#1e3037"/><ellipse cx="256" cy="236" rx="54" ry="13" fill="#101e24"/><g fill="#718086" opacity=".5"><circle cx="209" cy="104" r="3"/><circle cx="239" cy="84" r="3"/><circle cx="279" cy="93" r="3"/><circle cx="310" cy="123" r="3"/><circle cx="190" cy="151" r="3"/><circle cx="226" cy="136" r="3"/><circle cx="268" cy="147" r="3"/><circle cx="303" cy="170" r="3"/><circle cx="211" cy="186" r="3"/><circle cx="250" cy="199" r="3"/><circle cx="325" cy="207" r="3"/></g>
+</svg>

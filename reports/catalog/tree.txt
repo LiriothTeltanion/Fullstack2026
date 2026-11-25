@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-25
-Base HEAD: 5cbad6f68d82576480cd219f3e7a13ecb1765528
-Source-index SHA-256 (generated outputs excluded): 027878cde0f50b0dcd1d8d8828f326d1b892cd1c68a423b981d044bd7b5e143c
-Indexed files: 2925
+Base HEAD: 9bc93407a3436b464d942312073ed50c304d543d
+Source-index SHA-256 (generated outputs excluded): f6d92b46287a9bd5e9cec79f15ef6461786b8e552f1321b121f03d7da48b4c78
+Indexed files: 2945
 
 .
 ├── .github
@@ -953,10 +953,33 @@ Indexed files: 2925
 │   │   │   │   ├── README.md
 │   │   │   │   └── style.css
 │   │   │   ├── ShoppingWebsite
+│   │   │   │   ├── assets
+│   │   │   │   │   ├── fontawesome
+│   │   │   │   │   │   ├── guitar.svg
+│   │   │   │   │   │   ├── LICENSE.txt
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── products
+│   │   │   │   │   │   ├── cable.svg
+│   │   │   │   │   │   ├── capo.svg
+│   │   │   │   │   │   ├── cloth.svg
+│   │   │   │   │   │   ├── headphones.svg
+│   │   │   │   │   │   ├── metronome.svg
+│   │   │   │   │   │   ├── mic-stand.svg
+│   │   │   │   │   │   ├── music-stand.svg
+│   │   │   │   │   │   ├── picks.svg
+│   │   │   │   │   │   ├── pop-filter.svg
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── strap.svg
+│   │   │   │   │   │   ├── strings.svg
+│   │   │   │   │   │   ├── tuner.svg
+│   │   │   │   │   │   └── windscreen.svg
+│   │   │   │   │   └── README.md
 │   │   │   │   ├── account-demo.js
 │   │   │   │   ├── app.js
 │   │   │   │   ├── index.html
+│   │   │   │   ├── login-signup.css
 │   │   │   │   ├── login.html
+│   │   │   │   ├── products.css
 │   │   │   │   ├── products.html
 │   │   │   │   ├── README.md
 │   │   │   │   ├── signup.html

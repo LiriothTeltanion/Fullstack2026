@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 320" role="img" aria-labelledby="title desc">
+  <title id="title">Clip-on tuner</title>
+  <desc id="desc">A clip-on instrument tuner with a green display reading A 440 and a padded clamp. Original Riff Shop product illustration.</desc>
+  <defs><linearGradient id="paper" x2="1" y2="1"><stop stop-color="#fbe8d9"/><stop offset="1" stop-color="#f0d1b9"/></linearGradient></defs>
+  <rect width="512" height="320" fill="url(#paper)"/>
+  <circle cx="435" cy="57" r="92" fill="#fff7e9" opacity=".35"/>
+  <ellipse cx="256" cy="282" rx="135" ry="14" fill="#714d36" opacity=".13"/>
+  <g transform="rotate(-8 256 160)"><rect x="165" y="48" width="185" height="147" rx="22" fill="#2d424a" stroke="#1c3038" stroke-width="7"/><rect x="183" y="67" width="149" height="99" rx="8" fill="#b6d096"/><text x="257" y="132" text-anchor="middle" font-family="sans-serif" font-size="55" font-weight="bold" fill="#2e5141">A</text><text x="257" y="153" text-anchor="middle" font-family="monospace" font-size="15" fill="#2e5141">440 Hz</text><path d="M254 195v26" stroke="#2d424a" stroke-width="16"/><path d="m202 222 114-10 5 38-114 21z" fill="#405961" stroke="#263b43" stroke-width="6"/><path d="m211 261 99-17" stroke="#b5c2bd" stroke-width="12"/></g>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 320" role="img" aria-labelledby="title desc">
+  <title id="title">Woven guitar strap</title>
+  <desc id="desc">A rust-colored woven guitar strap with leather ends and a brass adjustment buckle. Original Riff Shop product illustration.</desc>
+  <defs><linearGradient id="paper" x2="1" y2="1"><stop stop-color="#fbe8d9"/><stop offset="1" stop-color="#f0d1b9"/></linearGradient></defs>
+  <rect width="512" height="320" fill="url(#paper)"/>
+  <circle cx="435" cy="57" r="92" fill="#fff7e9" opacity=".35"/>
+  <ellipse cx="256" cy="282" rx="135" ry="14" fill="#714d36" opacity=".13"/>
+  <path d="M139 68h87l125 170h-88z" fill="#b45d38" stroke="#75452d" stroke-width="5"/><path d="m161 69 124 168M181 69l124 168M203 69l124 168" stroke="#e8b17a" stroke-width="5"/><path d="m138 69-15-22q-7-21 14-26l29 1 30 47M309 239l20 39q12 21 32 5l18-21-29-23" fill="#513b2e"/><ellipse cx="145" cy="43" rx="5" ry="9" fill="#f3dac1"/><ellipse cx="351" cy="268" rx="5" ry="9" fill="#f3dac1"/><path d="m203 129 52-36 20 28-52 36z" fill="none" stroke="#c5a454" stroke-width="9"/>
+</svg>

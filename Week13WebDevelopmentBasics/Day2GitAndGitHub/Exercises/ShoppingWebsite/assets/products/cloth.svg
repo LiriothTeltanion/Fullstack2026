@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 320" role="img" aria-labelledby="title desc">
+  <title id="title">Microfiber polishing cloth</title>
+  <desc id="desc">A folded mustard-yellow microfiber polishing cloth with stitched edges. Original Riff Shop product illustration.</desc>
+  <defs><linearGradient id="paper" x2="1" y2="1"><stop stop-color="#fbe8d9"/><stop offset="1" stop-color="#f0d1b9"/></linearGradient></defs>
+  <rect width="512" height="320" fill="url(#paper)"/>
+  <circle cx="435" cy="57" r="92" fill="#fff7e9" opacity=".35"/>
+  <ellipse cx="256" cy="282" rx="135" ry="14" fill="#714d36" opacity=".13"/>
+  <path d="m132 97 200-29 52 165-206 36-47-27z" fill="#d6b15e" stroke="#a9843f" stroke-width="4"/><path d="m132 97 47 172 15-39-35-129M179 269l15-39 190 3" fill="#efcf7e" stroke="#a9843f" stroke-width="3"/><path d="m152 109 167-24 47 133-165 29z" fill="none" stroke="#f6dfa5" stroke-width="3" stroke-dasharray="5 6"/><path d="m208 128 100-15M215 149l99-15M222 170l99-15" stroke="#c5a04f" stroke-width="3" opacity=".6"/>
+</svg>

@@ -1,0 +1,152 @@
+/* Product-only styles. Inline-block keeps the introductory layout visible. */
+.filters button {
+  margin: 4px;
+  padding: 8px;
+}
+.filter.is-active {
+  background: #2b2118;
+  color: #fff;
+}
+.product-grid {
+  list-style: none;
+  padding: 0;
+  font-size: 0;
+}
+.product {
+  display: inline-block;
+  vertical-align: top;
+  width: 98%;
+  margin: 1%;
+  padding: 12px;
+  border: 1px solid #eadfd4;
+  background: #fff;
+  border-radius: 8px;
+  font-size: 16px;
+  transition:
+    box-shadow 0.18s,
+    transform 0.18s;
+}
+.product:hover,
+.product:focus-within {
+  box-shadow: 0 8px 18px #6e45251a;
+  transform: translateY(-3px);
+}
+.product-image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 8 / 5;
+  background: #fbe4d8;
+  border-radius: 4px;
+}
+.product-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.18s;
+}
+.product:hover .product-image img,
+.product:focus-within .product-image img {
+  transform: scale(1.04);
+}
+.product h3 {
+  min-height: 3em;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+.tag {
+  color: #6f6257;
+  margin: 8px 0;
+  font-size: 0.85rem;
+}
+.price {
+  font-weight: 700;
+  min-height: 3.5em;
+}
+.previous-price {
+  display: block;
+  color: #76685c;
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+.sale-label {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 3px 7px;
+  border-radius: 3px;
+  background: #76351e;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.add {
+  padding: 8px 10px;
+  background: #b4441a;
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+}
+.cart[hidden] {
+  display: none;
+}
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  width: min(100%, 420px);
+  height: 100vh;
+  overflow: auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: -4px 0 20px #0004;
+}
+.close {
+  float: right;
+}
+.cart-lines {
+  padding: 0;
+  list-style: none;
+}
+.cart-lines li {
+  margin-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+.cart-lines li span {
+  display: block;
+}
+/* The bonus breakpoint sequence: 1 / 2 / 4 / 6 items per row. */
+@media (min-width: 600px) {
+  .product {
+    width: 98%;
+  }
+}
+@media (min-width: 768px) {
+  .product {
+    width: 48%;
+  }
+}
+@media (min-width: 992px) {
+  .product {
+    width: 23%;
+  }
+}
+@media (min-width: 1200px) {
+  .product {
+    width: 14.666%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .product,
+  .product-image img {
+    transition: none;
+  }
+  .product:hover,
+  .product:focus-within,
+  .product:hover .product-image img,
+  .product:focus-within .product-image img {
+    transform: none;
+  }
+}

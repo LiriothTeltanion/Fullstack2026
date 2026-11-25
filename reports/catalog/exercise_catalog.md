@@ -2,8 +2,8 @@
 
 > Regenerated from the exact Git index on `2026-11-25` by `tools/refresh_structure_catalogs.py`.
 
-- Base HEAD: `5cbad6f68d82576480cd219f3e7a13ecb1765528`
-- Source-index fingerprint: `sha256:027878cde0f50b0dcd1d8d8828f326d1b892cd1c68a423b981d044bd7b5e143c` (generated outputs excluded)
+- Base HEAD: `9bc93407a3436b464d942312073ed50c304d543d`
+- Source-index fingerprint: `sha256:f6d92b46287a9bd5e9cec79f15ef6461786b8e552f1321b121f03d7da48b4c78` (generated outputs excluded)
 
 This catalog proves repository presence and path integrity only. It does not prove that an exercise runs, that Kevin can explain it, or that it is mastered or portfolio-ready.
 
@@ -33,7 +33,7 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week13WebDevelopmentBasics/Day2GitAndGitHub/DailyChallenge/CommandLine` | Daily Challenge | CSS \| HTML | 4 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day2GitAndGitHub/DailyChallenge/CommandLine>); runtime unverified |
 | `Week13WebDevelopmentBasics/Day2GitAndGitHub/DailyChallenge/MediaQueries` | Daily Challenge | CSS \| HTML | 6 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day2GitAndGitHub/DailyChallenge/MediaQueries>); runtime unverified |
 | `Week13WebDevelopmentBasics/Day2GitAndGitHub/Exercises/LoginPage` | Exercise | CSS \| HTML \| JavaScript | 4 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day2GitAndGitHub/Exercises/LoginPage>); runtime unverified |
-| `Week13WebDevelopmentBasics/Day2GitAndGitHub/Exercises/ShoppingWebsite` | Mini Project | CSS \| HTML \| JavaScript | 8 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day2GitAndGitHub/Exercises/ShoppingWebsite>); runtime unverified |
+| `Week13WebDevelopmentBasics/Day2GitAndGitHub/Exercises/ShoppingWebsite` | Mini Project | CSS \| HTML \| JavaScript | 28 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day2GitAndGitHub/Exercises/ShoppingWebsite>); runtime unverified |
 | `Week13WebDevelopmentBasics/Day3CSSGridAndLayout/DailyChallenge/CSSPattern` | Daily Challenge | CSS \| HTML | 3 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day3CSSGridAndLayout/DailyChallenge/CSSPattern>); runtime unverified |
 | `Week13WebDevelopmentBasics/Day3CSSGridAndLayout/DailyChallenge/CSSPatternNinja` | Daily Challenge | CSS \| HTML | 3 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day3CSSGridAndLayout/DailyChallenge/CSSPatternNinja>); runtime unverified |
 | `Week13WebDevelopmentBasics/Day3CSSGridAndLayout/Exercises/CSSLayout` | Exercise | CSS \| HTML | 3 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day3CSSGridAndLayout/Exercises/CSSLayout>); runtime unverified |
