@@ -1,4 +1,5 @@
 import express from "express";
+import rateLimit from "express-rate-limit";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -11,6 +12,19 @@ const clientDist = fileURLToPath(new URL("../client/dist", import.meta.url));
 
 export function createApp() {
   const app = express();
+  // Render puts one proxy in front of the app; this lets the limiter see the real client IP.
+  app.set("trust proxy", 1);
+
+  // Every IP gets at most 100 requests per 15 minutes, so one client can't flood the server.
+  app.use(
+    rateLimit({
+      windowMs: 15 * 60 * 1000,
+      limit: 100,
+      standardHeaders: "draft-7",
+      legacyHeaders: false,
+    })
+  );
+
   app.use(express.json());
 
   // Render calls this to check the service; it also pings the database

@@ -51,6 +51,7 @@ GET  /api/files/url?key=../secret → {"error":"Invalid key."}
 - The SDK finds `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` in the environment by itself, so the code has no keys
 - Signed URLs let a private bucket share one file for a few minutes
 - `window.open` after an `await` gets blocked as a popup, so the page opens the tab first and fills in the URL later
+- `express-rate-limit` allows each IP 100 requests per 15 minutes, and `safeFileName()` trims dashes with a loop instead of a regex, so a huge file name can't slow the server down
 
 ---
 

@@ -33,7 +33,7 @@ Choose a password: Password accepted. Strength: good
 
 | Function | What it does |
 |---|---|
-| `check_password(password)` | Returns the list of rules the password breaks: length 8+, an uppercase letter, a lowercase letter, a digit, a character from `SPECIAL_CHARACTERS`, and no spaces. An empty list means it passed. |
+| `missing_rules(password)` | Returns the list of rules the password breaks: length 8+, an uppercase letter, a lowercase letter, a digit, a character from `SPECIAL_CHARACTERS`, and no spaces. An empty list means it passed. |
 | `strength(password)` | `okay` under 10 characters, `good` from 10, `strong` from 14. |
 | `main()` | A `while True` loop that prints what is missing and only `break`s when the list is empty. |
 
@@ -42,6 +42,7 @@ Choose a password: Password accepted. Strength: good
 - `any(char.isdigit() for char in password)` answers "is there at least one?" without a counter
 - Returning the list of problems was more useful than `True`/`False`, because the user sees everything that is missing at once
 - Keeping the rule numbers in constants (`MIN_LENGTH`, `SPECIAL_CHARACTERS`) means one edit changes both the check and the message
+- The program prints the missing rules and the final verdict, never the password itself, so nothing secret ends up in a terminal log
 
 ---
 

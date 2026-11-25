@@ -58,6 +58,7 @@ The game ends after 30 moves or when the next player has no legal move. If a pla
 - The server is the only judge: a browser can send any move, but `move()` refuses the wrong turn or a blocked cell
 - `1 - player` is a short way to switch between player 0 and player 1
 - Sending the whole `state()` after each move is simpler than sending only what changed, and a 36-cell board is small enough for it
+- `express-rate-limit` guards the page Express serves (100 requests per 15 minutes per IP); the game moves go over the socket and don't count
 
 ---
 

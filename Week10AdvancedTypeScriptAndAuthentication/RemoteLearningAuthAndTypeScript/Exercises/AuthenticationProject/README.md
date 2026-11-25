@@ -62,6 +62,7 @@ The token is kept in `sessionStorage`, so it survives a refresh and is gone when
 - `ApiError` with a `status` field let the context log out only on a real 401, not on a network hiccup
 - Typing the context value as an interface made `useAuth()` give full autocomplete for `login`, `logout` and `user`
 - `RequireAuth` keeps the "is anyone logged in?" check in one component instead of in every page
+- `express-rate-limit` allows each IP 100 requests per 15 minutes (10 for register and login), and the email pattern can't backtrack, so a long fake address can't freeze the server
 
 ---
 

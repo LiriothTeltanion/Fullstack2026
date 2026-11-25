@@ -13,7 +13,7 @@ The extra auth features on top of a basic JWT login, written as an Express serve
 ## ▶️ How to run
 
 ```bash
-cp .env.example .env   # set both secrets
+cp .env.example .env   # set the three secrets
 npm install
 npm run dev            # tsx watch src/server.ts
 npm run typecheck      # tsc --noEmit
@@ -57,6 +57,7 @@ Users, refresh tokens and login failures live in memory, so a restart clears the
 - `declare module "express-serve-static-core"` adds `user` to Express's `Request` type, so `req.user` is typed in every route
 - Returning `void` and calling `return` after `res.json(...)` keeps the handlers' types clean in strict mode
 - Keying the login limiter by IP and username stops guessing on one account without locking out everyone behind the same network
+- The refresh cookie travels on its own, so `lusca.csrf()` (with `express-session`) refuses any POST or PATCH that lacks the token from `GET /api/csrf-token` in `x-csrf-token`, and `express-rate-limit` adds 100 requests per 15 minutes per IP (10 for register and login)
 
 ---
 

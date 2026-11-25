@@ -48,6 +48,7 @@ There is one game per server, which is fine for one player on localhost but mean
 - A POST with an empty answer gets a 400 instead of moving on to the next question
 - The browser script shows the result first and then asks for the next question, so the two `fetch()` calls stay in order
 - Keeping the game state in a module-level object is simple, but it would need sessions for real players
+- `express-rate-limit` in front of every route allows each IP 100 requests per 15 minutes and answers 429 after that, so one client can't flood the server
 
 ---
 

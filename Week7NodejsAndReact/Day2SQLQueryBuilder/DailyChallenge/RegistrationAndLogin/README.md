@@ -51,6 +51,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"username":"lirioth","pass
 - The login gives the same message for an unknown user and a wrong password, so it does not reveal which usernames exist
 - The `PUBLIC_FIELDS` list in the model makes sure no query returns the hash by mistake
 - I used `bcryptjs` (pure JavaScript, same API as `bcrypt`) so `npm install` needs no build tools on Windows
+- `express-rate-limit` allows each IP 100 requests per 15 minutes, and register and login get a stricter 10, which slows down password guessing
 
 ---
 

@@ -51,6 +51,7 @@ POST /api/world  {"post":""}  -> 400 {"error":"Please type something first."}
 - `express.json()` is what fills `req.body`; without it the POST arrives empty
 - Sending a 400 with an error message is easier to show in React than a crash
 - The client checks `response.ok` before deciding which message to print
+- `express-rate-limit` in front of every route allows each IP 100 requests per 15 minutes and answers 429 after that, so one client can't flood the server
 
 ---
 

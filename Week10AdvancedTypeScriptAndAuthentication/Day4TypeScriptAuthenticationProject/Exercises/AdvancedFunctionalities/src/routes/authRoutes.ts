@@ -1,5 +1,6 @@
 import bcrypt from "bcrypt";
 import { Router, type CookieOptions, type Response } from "express";
+import rateLimit from "express-rate-limit";
 import { config } from "../config.js";
 import { requireAuth } from "../middleware/auth.js";
 import { clearFailures, loginLimiter, recordFailure } from "../middleware/loginLimiter.js";
@@ -14,6 +15,15 @@ import type { User } from "../types.js";
 import { checkPassword, checkUsername, isText } from "../validation.js";
 
 const router = Router();
+
+// Register and login get a much smaller limit, which slows down password guessing.
+const authLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  limit: 10,
+  standardHeaders: "draft-7",
+  legacyHeaders: false,
+  message: { error: "Too many attempts, please try again in 15 minutes" },
+});
 
 // The refresh cookie is only sent to /api/auth, never to the other routes.
 const REFRESH_COOKIE: CookieOptions = {
@@ -31,7 +41,7 @@ function sendTokens(res: Response, user: User, status = 200): void {
   res.status(status).json({ user: publicUser(user), accessToken: createAccessToken(user) });
 }
 
-router.post("/register", async (req, res) => {
+router.post("/register", authLimiter, async (req, res) => {
   const { username, password } = req.body ?? {};
   if (!isText(username) || !isText(password)) {
     res.status(400).json({ error: "username and password are required" });
@@ -50,7 +60,7 @@ router.post("/register", async (req, res) => {
   sendTokens(res, user, 201);
 });
 
-router.post("/login", loginLimiter, async (req, res) => {
+router.post("/login", authLimiter, loginLimiter, async (req, res) => {
   const { username, password } = req.body ?? {};
   const user = isText(username) ? userStore.findByUsername(username) : undefined;
   const ok =

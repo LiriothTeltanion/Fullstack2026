@@ -9,10 +9,23 @@ import { BUCKET, PREFIX, s3 } from "../config/s3.js";
 
 // Turn "My Photo (1).PNG" into "my-photo-1.png" so the S3 key is clean
 function safeFileName(name) {
-  return name
+  // Keep the last 100 characters, so the extension survives a very long name
+  const clean = name
+    .slice(-100)
     .toLowerCase()
-    .replace(/[^a-z0-9.]+/g, "-")
-    .replace(/^-+|-+$/g, "");
+    .replace(/[^a-z0-9.]+/g, "-");
+  // Trim the dashes around every dot-separated part with indexes: a /-+$/ regex
+  // can take quadratic time on a long run of dashes, a loop never does
+  const trimmed = clean.split(".").map(trimDashes).filter(Boolean).join(".");
+  return trimmed || "file";
+}
+
+function trimDashes(part) {
+  let start = 0;
+  let end = part.length;
+  while (start < end && part[start] === "-") start++;
+  while (end > start && part[end - 1] === "-") end--;
+  return part.slice(start, end);
 }
 
 // Only keys inside our uploads/ folder can be read or deleted

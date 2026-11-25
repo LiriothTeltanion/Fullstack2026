@@ -48,6 +48,7 @@ The browser code in `public/app.js` writes every message with `textContent`, so 
 - A `Map` from `socket.id` to the user is enough to know who left on `disconnect`
 - The typing notice turns itself off after 1.2 seconds with `clearTimeout` and `setTimeout`
 - The client library comes from the server itself at `/socket.io/socket.io.js`, no CDN needed
+- `express-rate-limit` guards the page Express serves (100 requests per 15 minutes per IP); chat messages go over the socket and don't count
 
 ---
 

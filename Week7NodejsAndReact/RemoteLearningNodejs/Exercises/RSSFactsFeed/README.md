@@ -37,6 +37,7 @@ Open http://localhost:3000. The app needs internet access to download the feed. 
 - `express.urlencoded()` is what makes `req.body` work for normal HTML forms
 - A new `Set` over `flatMap()` gives the list of unique categories in one line
 - A short cache keeps the app fast and is polite to the website that serves the feed
+- `express-rate-limit` in front of every route allows each IP 100 requests per 15 minutes and answers 429 after that, so one client can't flood the server
 
 ---
 

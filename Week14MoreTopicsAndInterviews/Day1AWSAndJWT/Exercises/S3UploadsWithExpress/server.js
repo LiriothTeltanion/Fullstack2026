@@ -1,5 +1,6 @@
 import "dotenv/config";
 import express from "express";
+import rateLimit from "express-rate-limit";
 import { fileURLToPath } from "node:url";
 import { errorHandler } from "./middleware/errorHandler.js";
 import filesRouter from "./routes/files.js";
@@ -19,6 +20,17 @@ const PORT = process.env.PORT || 3000;
 
 // The path is built from this file, so it works no matter where node is started
 const publicDir = fileURLToPath(new URL("./public", import.meta.url));
+
+// Every IP gets at most 100 requests per 15 minutes, so one client can't flood the server.
+app.use(
+  rateLimit({
+    windowMs: 15 * 60 * 1000,
+    limit: 100,
+    standardHeaders: "draft-7",
+    legacyHeaders: false,
+  })
+);
+
 app.use(express.static(publicDir));
 app.use("/api/files", filesRouter);
 

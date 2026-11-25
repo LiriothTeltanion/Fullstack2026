@@ -54,6 +54,7 @@ The terminal shows one line per request, for example `POST /posts -> 400 (1 ms)`
 - `res.on("finish")` is the place to log the final status code, because it is not known before the handler runs
 - `next(error)` skips the normal handlers and jumps straight to the four-argument error handler
 - The API key comes from `.env` through `dotenv`, so the real value never goes into the code
+- `express-rate-limit` is one more global middleware: it allows each IP 100 requests per 15 minutes and answers 429 after that
 
 ---
 

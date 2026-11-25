@@ -50,6 +50,7 @@ curl http://localhost:3000/authors/2/books
 - The seed deletes `books` before `authors`, because the foreign key would block the other order
 - `leftJoin` keeps authors with zero books, a normal `join` would drop them
 - With the `pg` driver `count()` comes back as a string (`"2"`), so a client would need `Number()` before doing maths
+- Every route here runs a database query, so `express-rate-limit` allows each IP 100 requests per 15 minutes and answers 429 after that
 
 ---
 

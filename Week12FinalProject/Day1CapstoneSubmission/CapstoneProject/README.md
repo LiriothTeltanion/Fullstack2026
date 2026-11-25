@@ -64,6 +64,7 @@ The CRUD routes need PostgreSQL running to answer with data.
 - Parameterized queries (`$1`) keep user input out of the SQL string
 - A health route that also pings the database tells me in one request which half is down
 - The client never needs a full URL thanks to the Vite proxy, which also makes deploying behind one domain easier
+- `express-rate-limit` in front of every route allows each IP 100 requests per 15 minutes and answers 429 after that, so one client can't flood the server
 
 ---
 

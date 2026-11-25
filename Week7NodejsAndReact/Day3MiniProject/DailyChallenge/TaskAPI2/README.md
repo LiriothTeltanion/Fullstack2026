@@ -51,6 +51,7 @@ I also sent five `POST` requests at the same time: the stats went from 4 to 9 ta
 - Chaining every write on the previous promise is a simple lock for one process
 - Sorting by date strings works because ISO dates (`2026-11-27`) sort in the right order as text
 - A small `NotFound` error class let me reuse one helper for both `PUT` and `PATCH`
+- `express-rate-limit` in front of every route allows each IP 100 requests per 15 minutes and answers 429 after that, so one client can't flood the server
 
 ---
 

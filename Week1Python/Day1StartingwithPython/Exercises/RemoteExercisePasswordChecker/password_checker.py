@@ -7,8 +7,11 @@ SPECIAL_CHARACTERS = "!@#$%^&*?_-+=."
 MIN_LENGTH = 8
 
 
-def check_password(password):
-    """Return a list of the rules this password breaks (empty list = valid)."""
+def missing_rules(password):
+    """Return a list of the rules this password breaks (empty list = valid).
+
+    The list only holds rule descriptions, never the password, so it is safe to print.
+    """
     problems = []
     if len(password) < MIN_LENGTH:
         problems.append(f"at least {MIN_LENGTH} characters")
@@ -37,13 +40,14 @@ def strength(password):
 def main():
     while True:
         password = input("Choose a password: ")
-        problems = check_password(password)
+        problems = missing_rules(password)
         if not problems:
             break
         print("Not yet. It still needs:")
         for problem in problems:
             print(f"  - {problem}")
 
+    # Only the verdict is printed: the password itself never reaches the screen or a log.
     print(f"Password accepted. Strength: {strength(password)}")
 
 

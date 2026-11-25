@@ -43,6 +43,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"title":"Write the README"
 - Splitting routes and controllers keeps the route files to a handful of lines
 - `Number(req.params.id)` matters, because params are strings and `1 === "1"` is false
 - The data lives in memory, so a restart brings the seed todos and books back
+- `express-rate-limit` in front of every route allows each IP 100 requests per 15 minutes and answers 429 after that, so one client can't flood the server
 
 ---
 

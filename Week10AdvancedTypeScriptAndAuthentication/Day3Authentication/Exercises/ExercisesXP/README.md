@@ -58,6 +58,7 @@ POST /api/auth/logout, then GET /api/users → 401 {"error":"Please log in first
 - An httpOnly cookie can't be read by JavaScript in the page, which protects the token if a script ever gets injected
 - `toPublic(user)` is the only way users leave the model, so the hash can't slip into a response by accident
 - `router.use(verifyToken)` at the top of a router protects every route in it with one line
+- `express-rate-limit` allows each IP 100 requests per 15 minutes, and register and login get a stricter 10, which slows down password guessing
 
 ---
 

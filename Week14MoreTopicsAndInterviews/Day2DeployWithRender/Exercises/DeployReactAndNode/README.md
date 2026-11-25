@@ -46,6 +46,7 @@ On Render: **New > Blueprint**, choose the repository and point it at this folde
 - Vite bakes `VITE_` variables into the build, so changing `VITE_API_URL` means building the site again
 - A free web service sleeps, so the error message tells the user to try again while it wakes up
 - `sync: false` in the Blueprint makes Render ask for a value instead of storing it in Git
+- Behind Render's proxy `app.set("trust proxy", 1)` lets `express-rate-limit` count requests per real visitor (100 per 15 minutes) instead of per proxy
 
 ---
 

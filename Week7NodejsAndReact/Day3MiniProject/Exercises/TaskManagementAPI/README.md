@@ -47,6 +47,7 @@ curl -X POST -H "Content-Type: application/json" -d '{bad json' http://localhost
 - `new URL("../data/tasks.json", import.meta.url)` finds the file even if I start the server from another folder
 - `nextId()` uses the highest id plus one, so deleting a task never gives two tasks the same id
 - Express throws `entity.parse.failed` for bad JSON, and checking `err.type` lets me answer 400 instead of 500
+- Every route reads or writes the tasks file, so `express-rate-limit` allows each IP 100 requests per 15 minutes and answers 429 after that
 
 ---
 

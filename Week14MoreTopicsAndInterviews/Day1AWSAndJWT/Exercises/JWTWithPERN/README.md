@@ -52,6 +52,7 @@ On the client, `App.jsx` calls `/api/users/me` on load to find out if I'm still 
 - The same error for "no such user" and "wrong password" stops people from testing which emails exist
 - `userModel.js` lists the public columns once, so `password_hash` can't slip into a response by accident
 - Express 5 passes errors from async controllers to the error handler, and mine turns Postgres code `23505` into a 409
+- `express-rate-limit` allows each IP 100 requests per 15 minutes, and register and login get a stricter 10, which slows down password guessing
 
 ---
 

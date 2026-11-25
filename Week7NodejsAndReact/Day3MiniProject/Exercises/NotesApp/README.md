@@ -46,6 +46,7 @@ On the page, the same form adds and edits: `startEdit()` fills it and puts the i
 - Building the note cards with `createElement` and `textContent` is longer than `innerHTML`, but a note can never inject HTML
 - ISO dates can be sorted with `localeCompare`, so "newest first" needed no `Date` objects
 - `list.replaceChildren(...)` swaps the whole list in one step
+- Every API call reads or writes the notes file, so `express-rate-limit` allows each IP 100 requests per 15 minutes and answers 429 after that
 
 ---
 

@@ -1,6 +1,7 @@
 import "dotenv/config";
 import cookieParser from "cookie-parser";
 import express from "express";
+import rateLimit from "express-rate-limit";
 import { errorHandler } from "./middleware/errorHandler.js";
 import authRoutes from "./routes/authRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
@@ -12,6 +13,16 @@ if (!process.env.JWT_SECRET || !process.env.DATABASE_URL) {
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+// Every IP gets at most 100 requests per 15 minutes, so one client can't flood the server.
+app.use(
+  rateLimit({
+    windowMs: 15 * 60 * 1000,
+    limit: 100,
+    standardHeaders: "draft-7",
+    legacyHeaders: false,
+  })
+);
 
 app.use(express.json());
 app.use(cookieParser());

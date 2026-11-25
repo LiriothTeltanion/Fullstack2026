@@ -43,6 +43,7 @@ On Render: **New > Blueprint** with this folder's [render.yaml](render.yaml). It
 - `fromDatabase` in the Blueprint wires the connection string in, so the password never appears in the repo
 - With `NODE_ENV=production`, `npm install` skips dev dependencies, so the client build installs with `--include=dev` to get Vite
 - An `/api` 404 handler before the React fallback keeps a wrong API path from returning the HTML page
+- Behind Render's proxy `app.set("trust proxy", 1)` lets `express-rate-limit` count requests per real visitor (100 per 15 minutes) instead of per proxy
 
 ---
 

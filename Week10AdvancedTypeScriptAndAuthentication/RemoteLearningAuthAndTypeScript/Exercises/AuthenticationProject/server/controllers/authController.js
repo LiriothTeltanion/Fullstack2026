@@ -4,6 +4,13 @@ import { JWT_SECRET, TOKEN_LIFETIME } from "../settings.js";
 import { createUser, findByEmail, toPublic } from "../models/userModel.js";
 
 const isText = value => typeof value === "string" && value.trim() !== "";
+
+// No part of this pattern can match the same characters two ways (the name has no "@",
+// each domain label has no "."), so it runs in linear time even on a huge input.
+// The length check comes first anyway: 254 characters is the longest valid address.
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)+$/;
+const isEmail = value => value.length <= 254 && EMAIL_PATTERN.test(value);
+
 const signToken = user =>
   jwt.sign({ sub: String(user.id) }, JWT_SECRET, { expiresIn: TOKEN_LIFETIME });
 
@@ -12,7 +19,7 @@ export async function register(req, res) {
   if (!isText(name) || !isText(email) || !isText(password)) {
     return res.status(400).json({ error: "Name, email and password are required" });
   }
-  if (!/^\S+@\S+\.\S+$/.test(email)) {
+  if (!isEmail(email)) {
     return res.status(400).json({ error: "Please enter a valid email" });
   }
   if (password.length < 8) {

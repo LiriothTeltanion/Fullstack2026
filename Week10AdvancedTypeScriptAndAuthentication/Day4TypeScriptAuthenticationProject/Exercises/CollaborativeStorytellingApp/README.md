@@ -16,7 +16,7 @@ Two terminals, one for each half:
 
 ```bash
 cd server
-cp .env.example .env   # set JWT_SECRET
+cp .env.example .env   # set JWT_SECRET and SESSION_SECRET
 npm install
 npm run dev            # http://localhost:5000
 ```
@@ -68,6 +68,7 @@ noa  DELETE /api/stories/1               → 204
 - `request<T>()` gives every call a typed result, so `api.stories()` comes back as `{ stories: Story[] }`
 - A small `loadStory` middleware removed the same "find it or 404" block from three controllers
 - Reloading the list after each change kept the client simple, at the cost of one extra request
+- A cookie login needs CSRF protection: `lusca.csrf()` refuses changes without the token from `GET /api/csrf-token`, so `api.ts` fetches it once and sends it as `x-csrf-token`, and `express-rate-limit` adds 100 requests per 15 minutes per IP (10 for register and login)
 
 ---
 

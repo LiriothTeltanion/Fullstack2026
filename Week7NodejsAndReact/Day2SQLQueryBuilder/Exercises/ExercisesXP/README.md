@@ -51,6 +51,7 @@ Database errors go to a last error handler that answers 500.
 - `insert(...).returning("*")` hands back the new row with its `SERIAL` id, so no second query is needed
 - `del()` returns how many rows it removed, and 0 means the id did not exist
 - The model never sees `req` or `res`, so the same functions could be reused by a script
+- Every route here runs a database query, so `express-rate-limit` allows each IP 100 requests per 15 minutes and answers 429 after that
 
 ---
 
