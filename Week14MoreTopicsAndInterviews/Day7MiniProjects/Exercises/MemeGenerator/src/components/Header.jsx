@@ -1,14 +1,23 @@
+import { useState } from "react";
+import headerFallback from "../assets/header-fallback.svg";
+
 export default function Header() {
+  const [usingFallback, setUsingFallback] = useState(false);
   return (
     <header className="header">
       <img
         className="logo"
-        src="https://i.imgflip.com/1bij.jpg"
-        alt="One Does Not Simply meme"
+        src={
+          usingFallback
+            ? headerFallback
+            : "https://www.pngall.com/wp-content/uploads/2016/05/Trollface.png"
+        }
+        alt={usingFallback ? "Original smiling face icon" : "Trollface header illustration"}
         width="40"
         height="40"
+        referrerPolicy="no-referrer"
+        onError={() => setUsingFallback(true)}
       />
-      <h1>Meme Generator</h1>
       <p>Meme Generator</p>
     </header>
   );
