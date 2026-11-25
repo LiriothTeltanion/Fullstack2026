@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/readme/hero/root-banner.svg" width="100%" alt="Fullstack2026 twelve-week course map: Weeks 1–6 hold my exercises and projects; Weeks 7–12 are ready for the next lessons.">
+<img src="./assets/readme/hero/root-banner.svg" width="100%" alt="Fullstack2026 fourteen-week course map: Weeks 1–6 hold my exercises and projects; Weeks 7–14 are ready for the next lessons.">
 
 <br>
 

@@ -13,7 +13,7 @@
     {
       "asset_id": "course-observatory-hero",
       "path": "assets/readme/hero/root-banner.svg",
-      "sha256": "a590b818700454108b43ac461c6408a3459e173d5f6999a44d981b4cce3659ba",
+      "sha256": "6fdaf9867cbed3c50950b138d385d04aedb54106daa4000a84645754ecc35f29",
       "source_kind": "original_repository_svg_with_ai_assistance",
       "provenance": "Re-authored from the repository's earlier banner using the local Blue Obsidian visual contract and sanitized week-level evidence.",
       "new_or_reused": "materially_revised",
@@ -22,7 +22,7 @@
       "placement": "root README hero",
       "caption": "Twelve-week course observatory separating source-backed and scaffold-only roots.",
       "credit": "Kevin Cusnir / Lirioth Teltanion, with AI-assisted implementation",
-      "alt_text": "Fullstack2026 twelve-week course map: Weeks 1–6 hold my exercises and projects; Weeks 7–12 are ready for the next lessons.",
+      "alt_text": "Fullstack2026 fourteen-week course map: Weeks 1–6 hold my exercises and projects; Weeks 7–14 are ready for the next lessons.",
       "crop_safety": "full_canvas_required",
       "privacy_review": "passed_no_private_dashboard_data",
       "motion_required": true,

@@ -26,6 +26,7 @@ KIND_ORDER = ["🥉", "➕", "🥇", "🥷", "⏱️", "🧩", "🧪", "💪", "
 TITLE_RE = re.compile(r"^# (?P<emoji>🥉|➕|🥇|🥷|⏱️|🧩|🧪|💪|🌟|🎮) (?P<rest>.+)$")
 DAY_RE = re.compile(r"^(Day\d+|RemoteLearning)")
 NUMBER_RE = re.compile(r"(\d+)")
+ANY_TITLE_RE = re.compile(r"^# (?P<emoji>\S+) (?P<rest>.+)$")
 
 
 def tracked_files(repo: Path) -> list[str]:
@@ -87,57 +88,62 @@ def collect(repo: Path) -> dict:
     weeks: list[dict] = []
     for week in display["weeks"]:
         number = int(re.match(r"Week(\d+)", week["path"]).group(1))
-        days = []
-        for day in week.get("days", []):
-            days.append({"path": day["path"], "title": day["title"], "items": []})
-        weeks.append(
-            {
-                "number": number,
-                "path": week["path"],
-                "title": week["display_title"],
-                "days": days,
-            }
-        )
+        days = [{"path": day["path"], "title": day["title"], "items": []} for day in week.get("days", [])]
+        weeks.append({"number": number, "path": week["path"], "title": week["display_title"], "days": days})
     by_day = {day["path"]: day for week in weeks for day in week["days"]}
     total = demos = todo = 0
-    week_todo = {week["path"]: 0 for week in weeks}
     for readme in sorted(f for f in files if f.startswith("Week") and f.endswith("/README.md")):
         text = (repo / readme).read_text(encoding="utf-8")
-        if "**Status:** to do" in text:
-            todo += 1
-            week_todo[readme.split("/", 1)[0]] = week_todo.get(readme.split("/", 1)[0], 0) + 1
+        is_todo = "**Status:** to do" in text
+        if not is_todo and "## ▶️ How to run" not in text:
             continue
-        if "## ▶️ How to run" not in text:
-            continue
-        match = TITLE_RE.match(text.splitlines()[0])
+        first = text.splitlines()[0]
+        match = TITLE_RE.match(first) or ANY_TITLE_RE.match(first)
         if not match:
             continue
         folder = str(PurePosixPath(readme).parent)
-        parts = folder.split("/")
-        day_path = "/".join(parts[:2])
+        day_path = "/".join(folder.split("/")[:2])
         if day_path not in by_day:
             continue
-        has_demo = f"{folder}/index.html" in files
-        rest = match.group("rest")
-        kind, _, name = rest.partition(" - ")
+        kind, _, name = match.group("rest").partition(" - ")
         item = {
             "path": folder,
             "emoji": match.group("emoji"),
             "kind": kind.strip(),
             "name": (name or "").strip(),
-            "intro": first_paragraph(text),
-            "tags": technologies(folder, files, has_demo),
-            "demo": has_demo,
-            "needs_key": f"{folder}/config.example.js" in files
-            or any(f.startswith(folder + "/") and f.endswith("config.example.js") for f in files),
+            "todo": is_todo,
         }
+        if is_todo:
+            status = re.search(r"\*\*Status:\*\* to do · ([^\n]+)", text)
+            item.update(
+                {
+                    "intro": "Not done yet. The folder is ready for the code.",
+                    "tags": [],
+                    "demo": False,
+                    "needs_key": False,
+                    "status": status.group(1).strip() if status else "To do",
+                    "required": bool(status and "Required" in status.group(1)),
+                }
+            )
+            todo += 1
+        else:
+            has_demo = f"{folder}/index.html" in files
+            item.update(
+                {
+                    "intro": first_paragraph(text),
+                    "tags": technologies(folder, files, has_demo),
+                    "demo": has_demo,
+                    "needs_key": any(f.startswith(folder + "/") and f.endswith("config.example.js") for f in files),
+                }
+            )
+            total += 1
+            demos += has_demo
         by_day[day_path]["items"].append(item)
-        total += 1
-        demos += has_demo
     for day in by_day.values():
-        day["items"].sort(key=sort_key)
+        day["items"].sort(key=lambda entry: (entry["todo"],) + sort_key(entry))
     for week in weeks:
-        week["todo"] = week_todo.get(week["path"], 0)
+        week["done"] = sum(1 for day in week["days"] for item in day["items"] if not item["todo"])
+        week["todo"] = sum(1 for day in week["days"] for item in day["items"] if item["todo"])
     return {"weeks": weeks, "total": total, "demos": demos, "todo": todo}
 
 
@@ -147,24 +153,29 @@ def render_card(item: dict) -> str:
     tags = "".join(f'<li class="tag">{html.escape(tag)}</li>' for tag in item["tags"])
     search = " ".join([item["kind"], item["name"], item["intro"], " ".join(item["tags"]), item["path"]]).lower()
     filters = " ".join(tag.lower().replace("/", "-").replace(".", "") for tag in item["tags"])
+    filters += " todo" if item["todo"] else " done"
     if item["demo"]:
         filters += " demo"
     links = []
     if item["demo"]:
-        links.append(
-            f'<a class="btn btn-primary" href="{html.escape(item["path"])}/index.html">▶ Open demo</a>'
-        )
-    links.append(f'<a class="btn" href="{REPO_URL}/tree/main/{html.escape(item["path"])}">Code</a>')
-    links.append(f'<a class="btn" href="{REPO_URL}/blob/main/{html.escape(item["path"])}/README.md">README</a>')
-    note = '<p class="note">Needs your own API key in config.js</p>' if item["needs_key"] else ""
+        links.append(f'<a class="btn btn-primary" href="{html.escape(item["path"])}/index.html">▶ Open demo</a>')
+    if item["todo"]:
+        links.append(f'<a class="btn" href="{REPO_URL}/tree/main/{html.escape(item["path"])}">Folder</a>')
+        level = "required" if item["required"] else "optional"
+        badge = f'<p class="status {level}">📝 To do · {html.escape(item["status"])}</p>'
+        body = f'{badge}<p class="intro">{html.escape(item["intro"])}</p>'
+    else:
+        links.append(f'<a class="btn" href="{REPO_URL}/tree/main/{html.escape(item["path"])}">Code</a>')
+        links.append(f'<a class="btn" href="{REPO_URL}/blob/main/{html.escape(item["path"])}/README.md">README</a>')
+        note = '<p class="note">Needs your own API key in config.js</p>' if item["needs_key"] else ""
+        body = f'<p class="intro">{html.escape(item["intro"])}</p>{note}<ul class="tags" aria-label="Technologies">{tags}</ul>'
+    css = "card todo-card" if item["todo"] else "card"
     return (
-        f'<article class="card" data-search="{html.escape(search)}" data-filters="{html.escape(filters)}">'
+        f'<article class="{css}" data-search="{html.escape(search)}" data-filters="{html.escape(filters)}">'
         f'<header class="card-head"><span class="kind-emoji" aria-hidden="true">{item["emoji"]}</span>'
         f'<div><h4>{html.escape(title)}</h4>'
         + (f'<p class="kind">{html.escape(subtitle)}</p>' if subtitle else "")
-        + f'</div></header><p class="intro">{html.escape(item["intro"])}</p>{note}'
-        f'<ul class="tags" aria-label="Technologies">{tags}</ul>'
-        f'<div class="actions">{"".join(links)}</div></article>'
+        + f'</div></header>{body}<div class="actions">{"".join(links)}</div></article>'
     )
 
 
@@ -173,38 +184,29 @@ def render(data: dict) -> str:
     sections = []
     for week in data["weeks"]:
         anchor = f"week-{week['number']}"
-        count = sum(len(day["items"]) for day in week["days"])
-        nav.append(
-            f'<li><a href="#{anchor}">{html.escape(week["title"].split(" — ")[0])}</a></li>'
-        )
-        if count == 0:
-            sections.append(
-                f'<section class="week upcoming" id="{anchor}" aria-labelledby="{anchor}-title">'
-                f'<h2 id="{anchor}-title">{html.escape(week["title"])}</h2>'
-                f'<p class="upcoming-note">Coming up. {week["todo"]} {"folder is" if week["todo"] == 1 else "folders are"} ready for these lessons.</p></section>'
-            )
-            continue
+        nav.append(f'<li><a href="#{anchor}">{html.escape(week["title"].split(" — ")[0])}</a></li>')
         days = []
         for day in week["days"]:
             if not day["items"]:
                 continue
             cards = "".join(render_card(item) for item in day["items"])
+            done = sum(1 for item in day["items"] if not item["todo"])
+            left = len(day["items"]) - done
+            meta = f'<span class="day-meta">{done} done' + (f" · {left} to do" if left else "") + "</span>"
             days.append(
-                f'<div class="day"><h3>{html.escape(day["title"])}</h3><div class="grid">{cards}</div></div>'
+                f'<div class="day"><h3>{html.escape(day["title"])} {meta}</h3><div class="grid">{cards}</div></div>'
             )
+        badges = f' <span class="count">{week["done"]}</span>' if week["done"] else ""
+        badges += f' <span class="todo">{week["todo"]} to do</span>' if week["todo"] else ""
         sections.append(
             f'<section class="week" id="{anchor}" aria-labelledby="{anchor}-title">'
-            f'<h2 id="{anchor}-title">{html.escape(week["title"])} <span class="count">{count}</span>'
-            + (f' <span class="todo">{week["todo"]} to do</span>' if week["todo"] else "")
-            + "</h2>"
-            + "".join(days)
-            + "</section>"
+            f'<h2 id="{anchor}-title">{html.escape(week["title"])}{badges}</h2>' + "".join(days) + "</section>"
         )
     return (
         TEMPLATE.replace("{{TOTAL}}", str(data["total"]))
         .replace("{{DEMOS}}", str(data["demos"]))
         .replace("{{TODO}}", str(data["todo"]))
-        .replace("{{WEEKS_WITH_WORK}}", str(sum(1 for w in data["weeks"] if any(d["items"] for d in w["days"]))))
+        .replace("{{WEEKS}}", str(len(data["weeks"])))
         .replace("{{NAV}}", "".join(nav))
         .replace("{{SECTIONS}}", "".join(sections))
         .replace("{{REPO}}", REPO_URL)
@@ -282,8 +284,12 @@ main { padding: 8px 0 40px; }
 .btn { display: inline-block; padding: 7px 12px; border-radius: 10px; border: 1px solid var(--line); color: var(--text); text-decoration: none; font-size: .88rem; }
 .btn:hover { border-color: var(--cyan-2); }
 .btn-primary { background: linear-gradient(90deg, var(--cyan-2), #4f46e5); border-color: transparent; color: #fff; font-weight: 650; }
-.upcoming { opacity: .75; }
-.upcoming-note { color: var(--muted); margin: 0; }
+.todo-card { background: linear-gradient(180deg, rgba(19,27,61,.55), rgba(14,20,48,.55)); border-style: dashed; }
+.todo-card h4 { color: #cfd5f5; }
+.status { margin: 0; font-size: .82rem; font-weight: 600; }
+.status.required { color: var(--amber); }
+.status.optional { color: var(--violet); }
+.day-meta { font-size: .8rem; color: var(--muted); font-weight: 500; margin-left: 6px; }
 .empty { text-align: center; color: var(--muted); padding: 40px 0; }
 footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--muted); text-align: center; font-size: .92rem; }
 :focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
@@ -304,13 +310,13 @@ footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--m
 <body>
 <a class="skip" href="#exercises">Skip to the exercises</a>
 <div class="wrap hero">
-  <img src="assets/readme/hero/root-banner.svg" alt="Fullstack2026 twelve-week course map: Weeks 1–6 hold my exercises and projects; Weeks 7–12 are ready for the next lessons." width="1200" height="420">
+  <img src="assets/readme/hero/root-banner.svg" alt="Fullstack2026 fourteen-week course map: Weeks 1–6 hold my exercises and projects; Weeks 7–14 are ready for the next lessons." width="1200" height="420">
   <h1><span>Fullstack2026</span> · Exercise Showcase</h1>
-  <p>Every exercise, daily challenge and mini project from my Developers Institute full-stack bootcamp. Browser projects open as live demos; Python, Node.js and SQL work links to the code and its README.</p>
+  <p>Every exercise, daily challenge and mini project from my Developers Institute full-stack bootcamp, all fourteen weeks, day by day. Browser projects open as live demos; Python, Node.js and SQL work links to the code and its README. Dashed cards are the ones I still have to do.</p>
   <ul class="stats">
     <li><strong>{{TOTAL}}</strong> exercises</li>
     <li><strong>{{DEMOS}}</strong> live demos</li>
-    <li><strong>{{WEEKS_WITH_WORK}}</strong> weeks with code</li>
+    <li><strong>{{WEEKS}}</strong> weeks</li>
     <li><strong>{{TODO}}</strong> still to do</li>
   </ul>
   <ul class="weeknav" aria-label="Jump to a week">{{NAV}}</ul>
@@ -323,6 +329,8 @@ footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--m
     </label>
     <div class="chips" role="group" aria-label="Filter by technology">
       <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+      <button class="chip" type="button" data-filter="done" aria-pressed="false">✅ Done</button>
+      <button class="chip" type="button" data-filter="todo" aria-pressed="false">📝 To do</button>
       <button class="chip" type="button" data-filter="demo" aria-pressed="false">▶ Live demos</button>
       <button class="chip" type="button" data-filter="python" aria-pressed="false">Python</button>
       <button class="chip" type="button" data-filter="javascript" aria-pressed="false">JavaScript</button>
@@ -346,7 +354,7 @@ footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--m
 <script>
 (() => {
   const cards = [...document.querySelectorAll(".card")];
-  const weeks = [...document.querySelectorAll(".week:not(.upcoming)")];
+  const weeks = [...document.querySelectorAll(".week")];
   const days = [...document.querySelectorAll(".day")];
   const input = document.getElementById("q");
   const chips = [...document.querySelectorAll(".chip")];
@@ -365,8 +373,7 @@ footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--m
     }
     for (const day of days) day.hidden = !day.querySelector(".card:not([hidden])");
     for (const week of weeks) week.hidden = !week.querySelector(".card:not([hidden])");
-    for (const upcoming of document.querySelectorAll(".upcoming")) upcoming.hidden = filter !== "all" || words.length > 0;
-    count.textContent = shown + " of " + cards.length + " exercises";
+    count.textContent = shown + " of " + cards.length + " cards";
     empty.hidden = shown !== 0;
   }
   input.addEventListener("input", apply);
