@@ -7,7 +7,11 @@ Note: This module prints nothing; it exposes a clean OOP API for the UI. ✅
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from pathlib import Path
 from typing import Dict, List, Set
+
+# The word list shipped next to this file, found from any working folder. 📦
+BUNDLED_WORDS = Path(__file__).with_name("words.txt")
 
 
 def _normalize(word: str) -> str:
@@ -23,7 +27,7 @@ def _signature(word: str) -> str:
 @dataclass
 class AnagramChecker:
     """Loads a word list and answers anagram queries. 📚✨"""
-    wordlist_path: str = "words.txt"
+    wordlist_path: str = str(BUNDLED_WORDS)
     words: Set[str] = field(init=False, default_factory=set)         # all valid words (UPPERCASE) 📖
     index: Dict[str, List[str]] = field(init=False, default_factory=dict)  # signature -> words 🗂️
 
@@ -42,17 +46,9 @@ class AnagramChecker:
                     if tok:
                         self.words.add(tok)
         except FileNotFoundError:
-            # Optional fallback to a system dictionary path (best effort). 🛟
-            fallback = "/usr/share/dict/words"
-            try:
-                with open(fallback, "r", encoding="utf-8", errors="ignore") as f:
-                    for line in f:
-                        tok = _normalize(line)
-                        if tok:
-                            self.words.add(tok)
-            except Exception:
-                # Leave set empty; UI may inform the user about missing list. 🚫
-                self.words = set()
+            # No system dictionary fallback (/usr/share/dict/words doesn't exist on Windows).
+            # Leave the set empty; the UI tells the user which file is missing. 🚫
+            self.words = set()
 
     def _build_index(self) -> None:
         """Map each signature to its word bucket for fast anagram lookup. ⚡"""

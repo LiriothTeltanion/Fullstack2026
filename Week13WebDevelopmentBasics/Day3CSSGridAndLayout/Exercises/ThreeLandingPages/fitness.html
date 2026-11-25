@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Iron Hour: a gym landing page with a bento grid." />
+    <title>Iron Hour · Gym</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="fitness">
+    <header class="bar">
+      <a class="brand" href="index.html">IRON HOUR</a>
+      <a class="back" href="index.html">All pages</a>
+    </header>
+
+    <main>
+      <!-- Layout 2: a bento grid placed with grid-template-areas -->
+      <section class="bento" aria-label="About the gym">
+        <div class="b-main">
+          <h1>One hour. Every muscle.</h1>
+          <p>Small group training, six people per coach.</p>
+          <a class="cta" href="#plans">Book a free class</a>
+        </div>
+        <div class="b-stat b-stat-1"><strong>45</strong><span>classes a week</span></div>
+        <div class="b-stat b-stat-2"><strong>6</strong><span>people per coach</span></div>
+        <div class="b-hours">
+          <h2>Hours</h2>
+          <p>Sun–Thu 06:00–22:00<br />Fri 07:00–14:00</p>
+        </div>
+        <div class="b-classes">
+          <h2>Classes</h2>
+          <ul>
+            <li>Strength</li>
+            <li>Kettlebells</li>
+            <li>Mobility</li>
+            <li>Boxing</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="plans" class="plans-row" aria-labelledby="plans-title">
+        <h2 id="plans-title">Plans</h2>
+        <div class="plan">
+          <h3>Drop-in</h3>
+          <p>40 ₪ per class</p>
+        </div>
+        <div class="plan">
+          <h3>Monthly</h3>
+          <p>290 ₪, unlimited</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">Iron Hour is a made-up gym for a CSS Grid exercise.</footer>
+  </body>
+</html>

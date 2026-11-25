@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trivia Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="card">
+      <h1>Trivia Quiz</h1>
+      <p id="progress"></p>
+      <h2 id="question">Loading...</h2>
+
+      <form id="answer-form">
+        <label for="answer">Your answer</label>
+        <input id="answer" name="answer" autocomplete="off" required />
+        <button type="submit">Submit</button>
+      </form>
+
+      <p id="feedback" aria-live="polite"></p>
+      <p id="score"></p>
+      <button id="reset" type="button">Start over</button>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,314 @@
+/* Dark "night studio" theme built with Flexbox only */
+:root {
+  --bg: #0d1021;
+  --surface: #161a33;
+  --text: #e8eaf6;
+  --muted: #a5abc9;
+  --accent: #ff4fa3;
+  --accent-2: #38d9f5;
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: radial-gradient(circle at 80% 0%, #2a1a4a 0, var(--bg) 55%);
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--accent-2);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: #000;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: min(1100px, 100% - 2rem);
+  margin: 0 auto;
+  padding: 1.25rem 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.logo-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--accent);
+}
+
+.nav ul {
+  display: flex;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--muted);
+}
+
+.nav a:hover {
+  color: var(--text);
+}
+
+main {
+  width: min(1100px, 100% - 2rem);
+  margin: 0 auto;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 0;
+}
+
+.hero-text {
+  flex: 1 1 420px;
+}
+
+.eyebrow {
+  color: var(--accent-2);
+  font-weight: 600;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.15;
+  margin: 0.5rem 0 1rem;
+}
+
+.hero-text p {
+  color: var(--muted);
+  max-width: 55ch;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #12051d;
+}
+
+.btn-ghost {
+  border: 2px solid var(--muted);
+}
+
+.hero-card {
+  flex: 1 1 280px;
+  max-width: 360px;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid #2c3160;
+  text-align: center;
+}
+
+.timer {
+  margin: 0;
+  font-size: 3.5rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent-2);
+}
+
+.timer-label {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+/* Little bar chart drawn with flex items */
+.bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 120px;
+}
+
+.bars span {
+  flex: 1;
+  height: var(--h);
+  border-radius: 6px 6px 0 0;
+  background: linear-gradient(var(--accent), var(--accent-2));
+}
+
+/* Sections */
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.25rem;
+}
+
+.features,
+.how,
+.plans {
+  padding: 2.5rem 0;
+}
+
+.feature-list,
+.plan-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.feature,
+.plan {
+  flex: 1 1 250px;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.feature h3 {
+  margin-top: 0;
+  color: var(--accent-2);
+}
+
+.feature p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.steps li {
+  flex: 1 1 220px;
+  padding: 1.25rem;
+  border-left: 4px solid var(--accent);
+  background: var(--surface);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  counter-increment: step;
+}
+
+.steps li::before {
+  content: counter(step) ". ";
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.plan h3 {
+  margin: 0;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.price span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.plan ul {
+  flex: 1;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+.plan .btn {
+  text-align: center;
+}
+
+.plan-featured {
+  border: 2px solid var(--accent);
+}
+
+.footer {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .btn {
+    transition: none;
+  }
+
+  .btn:hover {
+    transform: none;
+  }
+}

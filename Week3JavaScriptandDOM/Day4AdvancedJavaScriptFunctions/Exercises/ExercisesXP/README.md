@@ -20,7 +20,7 @@ The client wants a large juice, containing orange, ginger, spinach, apple, lemon
 
 ## 🎯 The challenge
 
-1. **Scope**: five snippets, each with my prediction in a comment. I commented out the `alert` calls so the page doesn't pop up five times. `scopeSummary()` lists the answers on the page.
+1. **Scope**: five snippets, each with my prediction in a comment. I commented out the `alert` calls so the page doesn't pop up five times. `scopeSummary()` lists the answers on the page, one per line.
 2. **Ternary**: `winBattle` as an arrow function and `experiencePoints = winBattle() ? 10 : 1`.
 3. **Is it a string?**: `isString(val)` returns `true` only for strings.
 4. **Find the sum**: the one-line arrow `add(x, y)`.
@@ -28,8 +28,6 @@ The client wants a large juice, containing orange, ginger, spinach, apple, lemon
 6. **Fortune teller**: a self-invoking function writes `You will be a Developer in Reykjavik, and married to Alex with 2 kids.`
 7. **Welcome**: another self-invoking function puts `Kevin` and the initial `K` in the navbar.
 8. **Juice Bar**: `makeJuiceV1()` logs one sentence. `makeJuice()` collects 6 ingredients in an array its inner functions share and writes the final sentence.
-
-Small thing I noticed later: `scopeSummary()` joins with `"\n"`, so the page shows a literal `\n` between the lines instead of breaking them.
 
 More notes are in [README_Advanced_JS.md](README_Advanced_JS.md).
 

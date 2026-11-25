@@ -1,0 +1,10 @@
+{
+  "name": "more-nodejs-challenges",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "notes": "node notes.js",
+    "list": "node notes.js list"
+  }
+}

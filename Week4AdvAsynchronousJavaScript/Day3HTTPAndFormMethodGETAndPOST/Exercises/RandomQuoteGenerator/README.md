@@ -27,7 +27,7 @@ Open `index.html` in a browser, or run `npm run dev` from the repository root an
 
 A new quote gets the highest `id` plus one. The filter is case-insensitive and matches part of a name; **Clear** removes it.
 
-One thing I noticed: quote 0 is rendered on load without setting `lastIndex`, so the first **Generate Quote** can show it again.
+Quote 0 shows on load and `lastIndex` starts at 0 too, so the first **Generate Quote** always brings a different quote.
 
 ## 🧠 What I learned
 

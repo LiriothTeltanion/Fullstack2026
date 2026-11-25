@@ -8,13 +8,13 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+The exercises for this day.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/): Exercises XP: to do (required)
-- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: to do (optional)
-- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: to do (optional)
+- [`ExercisesXP/`](ExercisesXP/): Exercises XP: counter and todo reducers in one store
+- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: shopping cart with selectors and coupon codes
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: logger middleware and undo/redo notes
 
 ---
 

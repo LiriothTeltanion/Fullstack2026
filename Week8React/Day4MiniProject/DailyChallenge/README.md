@@ -8,11 +8,11 @@
 
 </div>
 
-The daily challenges for this day. None of them are done yet.
+A small calculator with input checks.
 
 ## Contents
 
-- [`Calculator/`](Calculator/): Calculator: to do (required)
+- [`Calculator/`](Calculator/): Calculator: four operations with input checks and a short history
 
 ---
 

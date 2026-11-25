@@ -8,13 +8,13 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+The exercises for this day.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/): Exercises XP: to do (required)
-- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: to do (optional)
-- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: to do (optional)
+- [`ExercisesXP/`](ExercisesXP/): Exercises XP: expense tracker with totals per category
+- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: timed Redux quiz with a score
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: Kanban board saved by a custom middleware
 
 ---
 

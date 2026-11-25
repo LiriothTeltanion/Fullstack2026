@@ -8,11 +8,11 @@
 
 </div>
 
-The daily challenges for this day. None of them are done yet.
+A voting app where one array in state drives the whole page.
 
 ## Contents
 
-- [`VotingApp/`](VotingApp/): Voting App: to do (required)
+- [`VotingApp/`](VotingApp/): Voting App: vote for four languages with live bars and a leader
 
 ---
 

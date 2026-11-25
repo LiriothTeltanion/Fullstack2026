@@ -8,11 +8,11 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+One remote-learning project: an RSS reader rendered with EJS.
 
 ## Contents
 
-- [`RSSFactsFeed/`](RSSFactsFeed/): RSS Facts Feed: to do (required)
+- [`RSSFactsFeed/`](RSSFactsFeed/): RSS Facts Feed: EJS pages for an RSS feed with title and category search
 
 ---
 

@@ -4,19 +4,33 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for Exercises XP Gold">
+<img src="../../../../assets/readme/progress/week8-day3-exercises-xp-gold-0d372418b4.svg" width="100%" alt="Progress card for Exercises XP Gold">
 
 </div>
 
-Still on my list. When I solve it, the solution and how to run it go in this folder.
+A shopping cart that combines `useReducer` with `useContext`, plus two custom hooks I can reuse later: `useLocalStorage` and `usePrevious`.
 
-**Status:** to do · Optional extra · 8 XP
+## ▶️ How to run
 
-## 📝 Plan
+```bash
+npm install
+npm run dev
+```
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+Vite prints a local address (usually `http://localhost:5173`); I open it in the browser.
+
+## 🎯 The challenge
+
+1. **Shopping cart**: `CartProvider` runs `cartReducer` with three actions. `add` raises the quantity if the product is already there, `decrease` removes it at zero and `clear` empties the cart. `ProductList` and `Cart` both read the cart with `useCart()`, and the total in ₪ is calculated in the provider.
+2. **useLocalStorage**: works like `useState` but reads the first value from `localStorage` and saves every change. `NoteSaver` uses it, so the note is still there after a reload.
+3. **usePrevious**: stores the last value in a ref after each render. `PreviousValue` shows "Now" and "Before" for a counter.
+
+## 🧠 What I learned
+
+- Context plus a reducer works like a tiny store that any component under the provider can use
+- Passing a function to `useState` reads `localStorage` only once, on the first render
+- A ref keeps a value between renders without starting a new render when it changes
+- Wrapping storage in `try/catch` keeps the app working when the browser blocks it
 
 ---
 

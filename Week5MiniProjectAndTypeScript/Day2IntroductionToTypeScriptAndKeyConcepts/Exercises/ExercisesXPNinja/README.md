@@ -4,19 +4,47 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for Exercises XP Ninja">
+<img src="../../../../assets/readme/progress/exercises-xp-ninja-293fdd1ff8.svg" width="100%" alt="Progress card for Exercises XP Ninja">
 
 </div>
 
-I haven't started this one yet. The code and my notes will go here when I do it.
+The Ninja set in [ExercisesXPNinja.ts](ExercisesXPNinja.ts) goes one step further: generics, a discriminated union, overloads and safe parsing of `unknown`.
 
-**Status:** to do · Optional extra · 4 XP
+## ▶️ How to run
 
-## 📝 Plan
+```bash
+node ExercisesXPNinja.ts
+npx tsc --strict --noEmit ExercisesXPNinja.ts
+```
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+```
+1. alpha 0
+2. circle: 12.57
+2. rectangle: 12.00
+2. triangle: 15.00
+3. { c: [ 'cat', 'cow', 'crow' ], d: [ 'dog', 'duck' ] }
+4. 42 haha
+5. Keyboard costs 250 {"name":"Keyboard","price":250}
+5. not a product: {"name":"Mouse"}
+5. invalid JSON: not json
+```
+
+## 🎯 The challenge
+
+| Exercise | What it does |
+|---|---|
+| 1. `firstOrDefault<T>(items, fallback)` | Returns the same type it receives |
+| 2. `area(shape: Shape)` | `kind` tells the `switch` which fields exist (radius, width/height, base/height) |
+| 3. `groupBy<T>(items, getKey)` | Returns `Record<string, T[]>`; `??=` creates each group the first time |
+| 4. `double()` | Two overload signatures: a number gives a number, a string gives a string |
+| 5. `isProduct(value): value is Product` | A type guard for the result of `JSON.parse()`, which is `unknown` |
+
+## 🧠 What I learned
+
+- With a discriminated union I never cast; checking `shape.kind` is enough
+- Overloads let the caller get `number` or `string` back, not the wider `number | string`
+- Typing the parsed JSON as `unknown` forces a check before I can read `.name`
+- `catch {}` without a variable is allowed when I don't need the error
 
 ---
 

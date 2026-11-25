@@ -4,19 +4,33 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for Exercises XP Ninja">
+<img src="../../../../assets/readme/progress/week8-day3-exercises-xp-ninja-c316c82dc3.svg" width="100%" alt="Progress card for Exercises XP Ninja">
 
 </div>
 
-Not done yet. This folder is ready for the code, and the README will grow once it works.
+Three experiments with the performance hooks: `useMemo` around a heavy calculation, `React.memo` with and without `useCallback`, and a `useDebounce` hook for a search box.
 
-**Status:** to do · Optional extra · 4 XP
+## ▶️ How to run
 
-## 📝 Plan
+```bash
+npm install
+npm run dev
+```
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+Vite prints a local address (usually `http://localhost:5173`); I open it in the browser.
+
+## 🎯 The challenge
+
+1. **useMemo**: `PrimeFinder` runs `primesUpTo(limit)` (a sieve of Eratosthenes in `src/utils/primes.js`) inside `useMemo`. Changing the limit recalculates and shows the time; toggling the box color re-renders without recounting. With Node, `primesUpTo(20000)` returns 2262 primes and the last one is 19997.
+2. **React.memo and useCallback**: two memoized `CounterButton`s count their own renders. Typing in the input re-renders the parent, and only the button whose `onClick` is not wrapped in `useCallback` renders again.
+3. **useDebounce**: `useDebounce(value, 500)` returns the value only after it stops changing. `DebouncedSearch` counts its requests, so I can see one request per pause instead of one per key.
+
+## 🧠 What I learned
+
+- `useMemo` only helps when the work is heavy and the dependencies change less often than the render
+- `memo` compares props, and a new arrow function on every render counts as a new prop
+- Debouncing is a timer that the effect cleanup cancels on every new keystroke
+- Building the list with `push` instead of spreading a new array each time kept the sieve fast
 
 ---
 

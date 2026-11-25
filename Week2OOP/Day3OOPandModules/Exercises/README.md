@@ -15,7 +15,7 @@ Dunder methods and modules, in three levels of difficulty.
 - [`ExercisesXP/`](ExercisesXP/): `Currency` operators, random strings, dates, minutes lived and fake users
 - [`ExercisesXPGold/`](ExercisesXPGold/): next holiday, space age, regex and a password generator
 - [`ExercisesXPNinja/`](ExercisesXPNinja/): comparable temperature classes and a `QuantumParticle`
-- [`RemoteExerciseExtendingList/`](RemoteExerciseExtendingList/): Extending List: to do (optional)
+- [`RemoteExerciseExtendingList/`](RemoteExerciseExtendingList/): `TypedList` and `NumberList`, two subclasses of `list` used from another module
 
 ---
 

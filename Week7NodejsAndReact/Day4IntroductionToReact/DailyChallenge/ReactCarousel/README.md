@@ -4,19 +4,41 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for React Carousel">
+<img src="../../../../assets/readme/progress/react-carousel-e189d68837.svg" width="100%" alt="Progress card for React Carousel">
 
 </div>
 
-Still on my list. When I solve it, the solution and how to run it go in this folder.
+An image-style carousel built without a library. Four slides (Hong Kong, Macao, Japan and Las Vegas) move with arrows, dots, thumbnails or the keyboard, and they also play on their own.
 
-**Status:** to do · Required for the course · 15 XP
+## ▶️ How to run
 
-## 📝 Plan
+```bash
+npm install
+npm run dev
+```
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+Open the address Vite prints (usually http://localhost:5173).
+
+## 🎯 The challenge
+
+`components/Carousel.jsx` keeps one number in state, `index`, and everything else follows from it:
+
+| Feature | How it works |
+|---|---|
+| Sliding | All slides sit in one row and the row moves with `translateX(-index * 100%)` |
+| Arrows and keys | `next()` and `prev()` call `goTo(i)`, which wraps around with `%` |
+| Dots and thumbnails | Clicking one calls `goTo(i)`; the active one gets the `active` class |
+| Autoplay | A `useEffect` starts a 4-second timer after each change and clears it on cleanup |
+| Pause | `onMouseEnter` and `onMouseLeave` switch the `paused` state |
+
+Each slide is a CSS gradient with a caption (from `slides.js`), so there are no image files to download. With reduced motion turned on, the slide changes without the animation.
+
+## 🧠 What I learned
+
+- `(i + slides.length) % slides.length` makes "previous" from the first slide land on the last one
+- Returning `clearTimeout` from `useEffect` stops old timers from stacking up
+- Restarting the timer on every `index` change means a manual click also resets the countdown
+- `aria-hidden` on the slides that are off screen keeps screen readers on the visible one
 
 ---
 

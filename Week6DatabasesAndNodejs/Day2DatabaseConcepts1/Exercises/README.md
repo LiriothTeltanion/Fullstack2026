@@ -13,8 +13,8 @@ Everything for Day 2 is in one SQL file.
 ## Contents
 
 - [`ExercisesXP/`](ExercisesXP/): sorting and `LIMIT` on `items` and `customers`, then aliases, `DISTINCT`, joins and `NOT EXISTS` on `dvdrental`
-- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: to do (optional)
-- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: to do (optional)
+- [`ExercisesXPGold/`](ExercisesXPGold/): a small music store with sorting, aliases, `DISTINCT` and joins
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): seven `dvdrental` questions with `GROUP BY`, `HAVING` and subqueries
 
 ---
 

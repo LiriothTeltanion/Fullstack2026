@@ -1,0 +1,283 @@
+/* Deep-space theme */
+:root {
+  --space: #05060f;
+  --text: #e6e9f5;
+  --muted: #9aa0bd;
+  --sun: #ffb703;
+  --size: min(90vw, 460px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at 50% 30%, #141a3a, var(--space) 70%);
+  min-height: 100vh;
+}
+
+main {
+  width: min(900px, 100% - 2rem);
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 7vw, 3.5rem);
+  letter-spacing: 0.15em;
+}
+
+.intro p,
+.note {
+  color: var(--muted);
+}
+
+code {
+  color: var(--sun);
+}
+
+.pause {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid #2a3160;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.pause:focus-within {
+  outline: 3px solid var(--sun);
+  outline-offset: 2px;
+}
+
+/* ---------- The solar system ---------- */
+.space {
+  position: relative;
+  width: var(--size);
+  aspect-ratio: 1;
+  margin: 2rem auto;
+  /* A turning orbit box is wider at 45 degrees; hiding the overflow stops a sideways scrollbar */
+  overflow: hidden;
+}
+
+.stars {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(1px 1px at 10% 20%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 80% 10%, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 30% 80%, #cdd6ff 50%, transparent 51%),
+    radial-gradient(1px 1px at 90% 70%, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 55% 35%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 20% 55%, #fff 50%, transparent 51%);
+  animation: twinkle 4s ease-in-out infinite alternate;
+}
+
+.sun {
+  position: absolute;
+  inset: 40%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #fff3b0, var(--sun) 45%, #fb5607);
+  box-shadow: 0 0 40px 10px rgba(255, 183, 3, 0.45);
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+/* Each orbit is a circle centered on the sun. Rotating the circle carries the planet around. */
+.orbit {
+  position: absolute;
+  border: 1px dashed rgba(154, 160, 189, 0.3);
+  border-radius: 50%;
+  animation: spin linear infinite;
+}
+
+.orbit-1 {
+  inset: 30%;
+  animation-duration: 5s;
+}
+
+.orbit-2 {
+  inset: 18%;
+  animation-duration: 10s;
+}
+
+.orbit-3 {
+  /* 6% leaves room for the big planet, so it is never cut off */
+  inset: 6%;
+  animation-duration: 18s;
+}
+
+/* The planet sits on the top edge of its orbit */
+.planet {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.planet-1 {
+  width: 14px;
+  height: 14px;
+  background: #e76f51;
+}
+
+.planet-2 {
+  width: 26px;
+  height: 26px;
+  background: radial-gradient(circle at 30% 30%, #8ecae6, #219ebc 60%, #023047);
+}
+
+.planet-3 {
+  width: 36px;
+  height: 36px;
+  background: radial-gradient(circle at 30% 30%, #f4d58d, #bf9b30);
+  box-shadow: 0 0 0 4px rgba(244, 213, 141, 0.25);
+}
+
+.moon-orbit {
+  position: absolute;
+  inset: -12px;
+  animation: spin 2s linear infinite;
+}
+
+.moon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #d9d9d9;
+  transform: translateX(-50%);
+}
+
+/* ---------- Loaders ---------- */
+.loaders h2 {
+  font-size: 1.2rem;
+  color: var(--muted);
+}
+
+.loader-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+figure {
+  margin: 0;
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+}
+
+figcaption {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #262d55;
+  border-top-color: var(--sun);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+  height: 48px;
+  align-items: center;
+}
+
+.dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #8ecae6;
+  animation: bounce 0.9s ease-in-out infinite;
+}
+
+.dots span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.dots span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.pulse {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #e76f51;
+  animation: pulse 1.4s ease-out infinite;
+}
+
+/* ---------- Keyframes ---------- */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes glow {
+  to {
+    box-shadow: 0 0 70px 20px rgba(255, 183, 3, 0.6);
+  }
+}
+
+@keyframes twinkle {
+  to {
+    opacity: 0.4;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.6);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+/* The pause checkbox freezes every animation on the page */
+body:has(#pause:checked) *,
+body:has(#pause:checked) *::before,
+body:has(#pause:checked) *::after {
+  animation-play-state: paused;
+}
+
+/* Respect the system setting: no movement at all */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+  }
+
+  .pulse {
+    opacity: 0.8;
+  }
+}

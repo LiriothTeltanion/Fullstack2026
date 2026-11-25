@@ -8,7 +8,7 @@
 
 </div>
 
-Using TypeScript with React. Nothing is done here yet; each folder below is ready for my code.
+Using TypeScript with React. These are the exercises and challenges for this day.
 
 ## Contents
 

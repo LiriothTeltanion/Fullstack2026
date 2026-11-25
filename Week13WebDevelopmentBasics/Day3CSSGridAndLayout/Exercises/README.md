@@ -8,12 +8,12 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+Two CSS Grid layouts: my CV and three landing pages that share one stylesheet.
 
 ## Contents
 
-- [`MyCV/`](MyCV/): My CV: to do (optional)
-- [`ThreeLandingPages/`](ThreeLandingPages/): Three Landing Pages: to do (optional)
+- [`MyCV/`](MyCV/): My CV: a one-page CV built with named grid areas
+- [`ThreeLandingPages/`](ThreeLandingPages/): Three Landing Pages: a bakery, a gym and a tour company, each with its own grid layout
 
 ---
 

@@ -1,0 +1,9 @@
+{
+  "name": "day5-web-server-xp-ninja",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node static-server.js"
+  }
+}

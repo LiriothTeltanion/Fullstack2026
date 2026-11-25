@@ -106,8 +106,10 @@ const morse = `{
   "@": ".--.-.",
   "(": "-.--.",
   ")": "-.--.-",
-  " ": "/"  // allow spaces between words → slash for readability
+  " ": "/"
 }`;
+// The space maps to "/" so words stay readable. JSON does not allow comments,
+// so this note lives outside the string.
 
 // 1) Convert JSON string to JS object
 const toJs = () =>
@@ -145,7 +147,7 @@ const toMorse = morseJS =>
 // 3) Join with line breaks and display on the page
 const joinWords = morseArr => {
   const out = document.getElementById("morseOut");
-  out.textContent = morseArr.join("\\n");
+  out.textContent = morseArr.join("\n");
 };
 
 // Hook the Translate button to the chained flow

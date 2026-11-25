@@ -57,6 +57,8 @@ function makeMarioJSON(withDebugger = false) {
     debugger;
   }
 
+  console.log("Compact JSON:", jsonText); // the one-line version goes to the console
+
   const out = document.getElementById("marioOutput");
   out.textContent = pretty; // show the pretty version
 }

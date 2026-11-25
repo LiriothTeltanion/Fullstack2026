@@ -8,11 +8,11 @@
 
 </div>
 
-The daily challenges for this day. None of them are done yet.
+A solar system and three loaders made only with CSS keyframes.
 
 ## Contents
 
-- [`CSSAnimation/`](CSSAnimation/): CSS Animation: to do (required)
+- [`CSSAnimation/`](CSSAnimation/): CSS Animation: a CSS-only solar system and three loaders
 
 ---
 

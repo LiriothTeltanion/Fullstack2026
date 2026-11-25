@@ -44,9 +44,7 @@ Exercises 3 to 6 change on every run. Without Faker, exercise 7 just prints the 
 4. **Current date** - `date.today()` in ISO format
 5. **Time until January 1st** - subtracts now from next year's January 1st and splits the `timedelta` into days, hours, minutes and seconds
 6. **Minutes lived** - `strptime` reads `1994-06-16`, and `total_seconds() // 60` gives the minutes
-7. **Faker** - `generate_users(n)` returns dicts with `name`, `address` and `language_code`
-
-One leftover bug: `.replace("\n", ", ")` looks for a backslash and an `n`, not a newline, so addresses still print on two lines.
+7. **Faker** - `generate_users(n)` returns dicts with `name`, `address` and `language_code`. `.replace("\n", ", ")` turns Faker's two-line address into one line, like `109 Rubio Landing, North Anthonyside, MH 13108`
 
 ## 🧠 What I learned
 

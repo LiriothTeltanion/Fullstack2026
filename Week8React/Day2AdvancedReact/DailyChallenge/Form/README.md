@@ -4,19 +4,35 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for Form">
+<img src="../../../../assets/readme/progress/form-25fc858ae4.svg" width="100%" alt="Progress card for Form">
 
 </div>
 
-Not done yet. This folder is ready for the code, and the README will grow once it works.
+A sign-up form with client-side validation. Errors show only after I leave a field (or press "Sign up"), and a valid form resets and greets the new user.
 
-**Status:** to do · Optional extra · 15 XP
+## ▶️ How to run
 
-## 📝 Plan
+```bash
+npm install
+npm run dev
+```
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+Vite prints a local address (usually `http://localhost:5173`); I open it in the browser.
+
+## 🎯 The challenge
+
+| Part | What it does |
+|---|---|
+| `validate(values)` | In `src/validate.js`. Returns one message per broken rule: username under 3 characters, an email that fails the regex, a password without 8 characters and a digit, a confirmation that does not match, terms not accepted |
+| `SignUpForm` | Keeps `values`, `touched` and `submitted` in state. Errors are recalculated on every render; `show(name)` hides them until the field was touched |
+| `Field` | A reusable label, input and error message, with `aria-invalid` so a broken field gets a red border |
+
+## 🧠 What I learned
+
+- Errors do not need their own state when I can calculate them from the values
+- A `touched` object stops the form from shouting at the user before they type
+- `noValidate` turns off the browser bubbles so my own messages are the only ones
+- Pulling the input markup into `Field` removed a lot of repeated JSX
 
 ---
 

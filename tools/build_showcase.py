@@ -82,6 +82,12 @@ def sort_key(item: dict) -> tuple:
     return (emoji_rank, numbers, item["path"].lower())
 
 
+def is_bundled_app(index: Path) -> bool:
+    """True for Vite apps whose index.html loads src/main.jsx or .tsx (they need a build first)."""
+    text = index.read_text(encoding="utf-8", errors="ignore")
+    return bool(re.search(r"src=\"/?src/main\.(jsx|tsx|ts|js)\"", text))
+
+
 def collect(repo: Path) -> dict:
     files = tracked_files(repo)
     display = json.loads((repo / ".learning/display-map.json").read_text(encoding="utf-8"))
@@ -127,7 +133,7 @@ def collect(repo: Path) -> dict:
             )
             todo += 1
         else:
-            has_demo = f"{folder}/index.html" in files
+            has_demo = f"{folder}/index.html" in files and not is_bundled_app(repo / folder / "index.html")
             item.update(
                 {
                     "intro": first_paragraph(text),
@@ -202,8 +208,15 @@ def render(data: dict) -> str:
             f'<section class="week" id="{anchor}" aria-labelledby="{anchor}-title">'
             f'<h2 id="{anchor}-title">{html.escape(week["title"])}{badges}</h2>' + "".join(days) + "</section>"
         )
+    page = TEMPLATE
+    if data["todo"] == 0:
+        page = page.replace("    <li><strong>{{TODO}}</strong> still to do</li>\n", "")
+        page = page.replace(
+            '      <button class="chip" type="button" data-filter="todo" aria-pressed="false">📝 To do</button>\n', ""
+        )
+        page = page.replace(" Dashed cards are the ones I still have to do.", "")
     return (
-        TEMPLATE.replace("{{TOTAL}}", str(data["total"]))
+        page.replace("{{TOTAL}}", str(data["total"]))
         .replace("{{DEMOS}}", str(data["demos"]))
         .replace("{{TODO}}", str(data["todo"]))
         .replace("{{WEEKS}}", str(len(data["weeks"])))
@@ -310,7 +323,7 @@ footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--m
 <body>
 <a class="skip" href="#exercises">Skip to the exercises</a>
 <div class="wrap hero">
-  <img src="assets/readme/hero/root-banner.svg" alt="Fullstack2026 fourteen-week course map: Weeks 1–6 hold my exercises and projects; Weeks 7–14 are ready for the next lessons." width="1200" height="420">
+  <img src="assets/readme/hero/root-banner.svg" alt="Fullstack2026 fourteen-week course map: Weeks 1–6 hold my Python, JavaScript, TypeScript, SQL and Node.js work; Weeks 7–14 hold the React, Redux, TypeScript and web projects." width="1200" height="420">
   <h1><span>Fullstack2026</span> · Exercise Showcase</h1>
   <p>Every exercise, daily challenge and mini project from my Developers Institute full-stack bootcamp, all fourteen weeks, day by day. Browser projects open as live demos; Python, Node.js and SQL work links to the code and its README. Dashed cards are the ones I still have to do.</p>
   <ul class="stats">

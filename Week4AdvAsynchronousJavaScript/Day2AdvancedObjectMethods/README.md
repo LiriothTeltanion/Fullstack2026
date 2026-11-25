@@ -16,8 +16,8 @@ Objects in TypeScript: destructuring, `Object.entries`, classes with `extends`, 
 |---|---|
 | [`Exercises/`](Exercises/) | Exercises XP: six object and class exercises in one file |
 | [`DailyChallenge/`](DailyChallenge/) | Creating Objects: a `Video` class and seven instances |
-| [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | Exercises XP Gold: to do (optional) |
-| [`Exercises/ExercisesXPNinja/`](Exercises/ExercisesXPNinja/) | Exercises XP Ninja: to do (optional) |
+| [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | query strings, inverted maps, shallow vs deep copies and `Object.freeze` |
+| [`Exercises/ExercisesXPNinja/`](Exercises/ExercisesXPNinja/) | a `Temperature` class, `deepEqual`, `pick`/`omit` and hidden properties |
 
 ---
 

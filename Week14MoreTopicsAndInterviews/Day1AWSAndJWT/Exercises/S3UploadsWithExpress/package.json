@@ -1,0 +1,22 @@
+{
+  "name": "s3-uploads-with-express",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Upload files to Amazon S3 from an Express server with Multer and the AWS SDK v3.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1177.0",
+    "@aws-sdk/s3-request-presigner": "^3.1177.0",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "multer": "^2.5.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  padding: 2rem max(3vw, calc((100vw - 720px) / 2));
+}
+
+main.light {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+main.dark {
+  background: #0b1029;
+  color: #f8fafc;
+}
+
+section {
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  background: rgb(127 127 127 / 0.12);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.row input {
+  width: 8rem;
+}
+
+input,
+select {
+  padding: 0.45rem;
+  border-radius: 8px;
+  border: 1px solid #94a3b8;
+}
+
+button {
+  padding: 0.45rem 0.9rem;
+  border: 0;
+  border-radius: 8px;
+  background: #0e7490;
+  color: #fff;
+  cursor: pointer;
+}
+
+output {
+  font-weight: 800;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.35rem 0;
+}
+
+.bought {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.theme-toggle {
+  margin-bottom: 1rem;
+}

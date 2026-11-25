@@ -8,11 +8,11 @@
 
 </div>
 
-The daily challenges for this day. None of them are done yet.
+Day 1 ends with a small trivia game run by an Express router.
 
 ## Contents
 
-- [`TriviaQuizGame/`](TriviaQuizGame/): Trivia Quiz Game: to do (required)
+- [`TriviaQuizGame/`](TriviaQuizGame/): Trivia Quiz Game: five-question quiz API with a fetch page and score
 
 ---
 

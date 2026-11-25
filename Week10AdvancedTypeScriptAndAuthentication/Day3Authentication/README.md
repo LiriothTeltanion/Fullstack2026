@@ -8,7 +8,7 @@
 
 </div>
 
-Authentication. Nothing is done here yet; each folder below is ready for my code.
+Authentication. These are the exercises and challenges for this day.
 
 ## Contents
 

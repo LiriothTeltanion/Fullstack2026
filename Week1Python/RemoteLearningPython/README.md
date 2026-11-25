@@ -8,7 +8,7 @@
 
 </div>
 
-Python. Nothing is done here yet; each folder below is ready for my code.
+Extra Python practice from the remote-learning material: one Fibonacci exercise.
 
 ## Contents
 

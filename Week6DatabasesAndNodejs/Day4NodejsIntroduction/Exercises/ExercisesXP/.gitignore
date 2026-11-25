@@ -1,3 +1,7 @@
 node_modules/
 *.log
 .DS_Store
+
+# Files the exercises write when they run
+exercise-3-file-manager-commonjs/output/
+exercise-7-file-explorer/file-explorer/destination.txt

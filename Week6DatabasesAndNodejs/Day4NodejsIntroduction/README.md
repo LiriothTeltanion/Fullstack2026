@@ -16,9 +16,9 @@ My first day with Node.js: `require` and `import`, npm packages (`chalk`, `lodas
 |---|---|
 | [`Exercises/ExercisesXP/`](Exercises/ExercisesXP/) | Seven small exercises, each in its own folder |
 | [`DailyChallenge/NodejsAppAndNPM/`](DailyChallenge/NodejsAppAndNPM/) | Three tasks and a script that combines a greeting module, `chalk` and `fs` |
-| [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | Exercises XP Gold: to do (optional) |
-| [`Exercises/ExercisesXPNinja/`](Exercises/ExercisesXPNinja/) | Exercises XP Ninja: to do (optional) |
-| [`Exercises/MoreNodejsChallenges/`](Exercises/MoreNodejsChallenges/) | More Node.js Challenges: to do (optional) |
+| [`Exercises/ExercisesXPGold/`](Exercises/ExercisesXPGold/) | `os`, `path`, `events`, `fs/promises` and a command-line calculator |
+| [`Exercises/ExercisesXPNinja/`](Exercises/ExercisesXPNinja/) | a stream word counter, a folder tree, a logger module and a countdown |
+| [`Exercises/MoreNodejsChallenges/`](Exercises/MoreNodejsChallenges/) | a command-line notes app saved in a JSON file |
 
 ---
 

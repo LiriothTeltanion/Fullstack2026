@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #0b1029;
+  color: #f8fafc;
+}
+
+main {
+  width: min(94vw, 900px);
+  margin: 2rem auto;
+}
+
+h2 {
+  border-bottom: 2px solid #06b6d4;
+  padding-bottom: 0.3rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  padding: 1.25rem;
+  border-radius: 14px;
+  background: #1e293b;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0b1029;
+}
+
+.card a,
+.social a {
+  color: #67e8f9;
+}
+
+.planets {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.planets li {
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  background: #1e293b;
+}
+
+.social {
+  display: flex;
+  gap: 1.5rem;
+}

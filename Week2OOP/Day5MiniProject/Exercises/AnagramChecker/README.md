@@ -15,7 +15,7 @@ Type a word and the program tells you if it's in the word list, then shows every
 From this folder:
 
 ```bash
-python anagrams.py                  # uses words.txt here
+python anagrams.py                  # uses the words.txt next to the script
 python anagrams.py path/to/words.txt
 ```
 
@@ -46,7 +46,7 @@ Input like `hello world` is refused, and `q`, `quit` or `exit` ends the program.
 - [`anagrams.py`](anagrams.py) is the menu. It accepts one word of letters only and lowercases the anagrams for display
 - [`words.txt`](words.txt) is a small list of 49 words. A bigger list can be passed as an argument
 
-Without the file it falls back to `/usr/share/dict/words`, which Windows doesn't have.
+The default list is found with `Path(__file__).with_name("words.txt")`, so the script works from any folder and on any OS. If a list is missing or empty, it prints `Word list not found or empty:` with the path and exits with code 2.
 
 ## 🧠 What I learned
 

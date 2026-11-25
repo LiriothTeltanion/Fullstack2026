@@ -1,0 +1,143 @@
+:root {
+  font-family: "Segoe UI", system-ui, Arial, sans-serif;
+  line-height: 1.5;
+  color: #1f2933;
+  background-color: #f4f6fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid #3b5bdb;
+  border-radius: 6px;
+  padding: 0.4rem 0.9rem;
+  background: #3b5bdb;
+  color: #fff;
+}
+
+button:hover {
+  background: #364fc7;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+input,
+select,
+textarea {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #b8c1d1;
+  border-radius: 6px;
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #dde3ee;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.muted {
+  color: #6b7280;
+}
+
+.error {
+  color: #c92a2a;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+.narrow {
+  max-width: 560px;
+}
+
+.task-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.task-form input {
+  flex: 1;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0 0.5rem;
+}
+
+.chip {
+  background: #e7ebf5;
+  color: #1f2933;
+  border-color: #e7ebf5;
+  padding: 0.2rem 0.6rem;
+  margin-left: 0.25rem;
+  text-transform: capitalize;
+}
+
+.chip.active,
+.chip:hover {
+  background: #3b5bdb;
+  color: #fff;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #eef1f6;
+}
+
+.task .text,
+.task .edit {
+  flex: 1;
+}
+
+.task.done .text {
+  text-decoration: line-through;
+  color: #9aa5b1;
+}

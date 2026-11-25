@@ -14,7 +14,7 @@ Two exercise sets, both single `.ts` files that Node can run directly.
 
 - [`ExercisesXP/`](ExercisesXP/): intersection types, a `typeof` guard, assertion vs conversion, generic constraints
 - [`ExercisesXPGold/`](ExercisesXPGold/): an `in` guard on an intersection, generic conversion, and the `Box` and `Queue` classes
-- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: to do (optional)
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): conditional types, class type guards, `ReturnType` and template literal types
 
 ---
 

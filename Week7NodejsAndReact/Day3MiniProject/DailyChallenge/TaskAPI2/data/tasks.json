@@ -1,0 +1,6 @@
+[
+  { "id": 1, "title": "Plan the week", "priority": "high", "dueDate": "2026-11-27", "completed": false },
+  { "id": 2, "title": "Review Knex joins", "priority": "medium", "dueDate": "2026-11-28", "completed": true },
+  { "id": 3, "title": "Clean the desk", "priority": "low", "dueDate": null, "completed": false },
+  { "id": 4, "title": "Finish the Task API", "priority": "high", "dueDate": "2026-11-26", "completed": false }
+]

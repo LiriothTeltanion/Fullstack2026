@@ -8,11 +8,11 @@
 
 </div>
 
-The daily challenges for this day. None of them are done yet.
+The daily challenges for this day.
 
 ## Contents
 
-- [`ProductivityTracker/`](ProductivityTracker/): Productivity Tracker: to do (required)
+- [`ProductivityTracker/`](ProductivityTracker/): Productivity Tracker: tasks by category with progress bars
 
 ---
 

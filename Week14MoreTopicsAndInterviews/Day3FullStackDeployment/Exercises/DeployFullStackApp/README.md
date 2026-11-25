@@ -4,19 +4,45 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for Deploy a Full-stack App">
+<img src="../../../../assets/readme/progress/deploy-full-stack-app-256e5ddf99.svg" width="100%" alt="Progress card for Deploy a Full-stack App">
 
 </div>
 
-Still on my list. When I solve it, the solution and how to run it go in this folder.
+A guestbook deployed as one Render web service plus a free Render PostgreSQL database. Express answers the `/api` routes and also serves the built React files, so the whole app lives on one URL and needs no CORS.
 
-**Status:** to do · Optional extra
+## ▶️ How to run
 
-## 📝 Plan
+Locally, with a PostgreSQL database called `guestbook`:
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+```bash
+cp .env.example .env     # set DATABASE_URL
+npm install
+npm run build            # installs the client and builds it into client/dist
+npm start                # runs the migrations, then serves everything on :3000
+```
+
+For hot reload while coding, run `npm run dev` (API) and `npm run dev:client` (Vite on 5173, proxying `/api`).
+
+On Render: **New > Blueprint** with this folder's [render.yaml](render.yaml). It creates `guestbook-db` and passes its `connectionString` to the web service as `DATABASE_URL`.
+
+## 🎯 The challenge
+
+| Endpoint | What it does |
+|---|---|
+| `GET /api/health` | Runs `select 1` so the health check also proves the database answers |
+| `GET /api/messages` | The latest 50 messages, newest first |
+| `POST /api/messages` | Trims `name` and `text`, requires both, limits them to 40 and 280 characters |
+| `DELETE /api/messages/:id` | 204, or 404 if the id doesn't exist |
+| any other `GET` | `client/dist/index.html`, so React handles the page |
+
+`server.js` calls `db.migrate.latest()` before listening, because the free plan has no pre-deploy step. The migration in `server/migrations/` creates the `messages` table. On the client, `MessageForm` shows how many characters are left and `MessageList` shows each note with its date and a Delete button.
+
+## 🧠 What I learned
+
+- Serving the React build from Express means one service, one URL and no CORS settings
+- `fromDatabase` in the Blueprint wires the connection string in, so the password never appears in the repo
+- With `NODE_ENV=production`, `npm install` skips dev dependencies, so the client build installs with `--include=dev` to get Vite
+- An `/api` 404 handler before the React fallback keeps a wrong API path from returning the HTML page
 
 ---
 

@@ -12,7 +12,7 @@ Just one function, `myMove()`, which the button's click calls. It needs the box 
 
 ## Contents
 
-- [`app.js`](app.js): reads the current `left`, computes the 350px limit and steps the box with a 1 ms interval
+- [`app.js`](app.js): reads the current `left`, computes the 350px limit, goes back to the left if the box is already there and steps the box with a 1 ms interval
 
 ---
 

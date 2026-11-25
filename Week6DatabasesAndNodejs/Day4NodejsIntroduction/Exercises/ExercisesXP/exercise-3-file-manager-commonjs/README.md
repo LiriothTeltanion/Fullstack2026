@@ -21,11 +21,11 @@ node app.js
 ```
 ✅ Read: …/Hello World.txt
 💡 Content of 'Hello World.txt': Hello World !!
-✅ Wrote: …/Bye World.txt
+✅ Wrote: …/output/Bye World.txt
 ⚙️  Done.
 ```
 
-`Bye World.txt` starts as `Bye World !!` in the repo, and after one run it says `Writing to the file`. So running it changes a tracked file.
+The script writes into `output/Bye World.txt`, which `writeFile` creates on the first run. The `output/` folder is git-ignored, so the `Bye World.txt` next to `app.js` keeps its `Bye World !!` and running the demo doesn't change any tracked file.
 
 ## 🎯 The challenge
 
@@ -33,7 +33,7 @@ node app.js
 |---|---|
 | `readFile(filePath)` | Reads a UTF-8 file with `fs.promises`, logs the full path and returns the text |
 | `writeFile(filePath, content)` | Makes any missing folders with `mkdir({ recursive: true })`, then writes the text |
-| `main()` in `app.js` | Reads `Hello World.txt`, prints it trimmed and writes `Writing to the file` into `Bye World.txt` |
+| `main()` in `app.js` | Reads `Hello World.txt`, prints it trimmed and writes `Writing to the file` into `output/Bye World.txt` |
 
 Both helpers log the error and throw it again, and `main().catch()` turns that into exit code 1.
 
@@ -43,6 +43,7 @@ Both helpers log the error and throw it again, and `main().catch()` turns that i
 - `path.resolve("./Hello World.txt")` depends on where I run `node`, which is why the folder matters
 - Logging and then re-throwing lets the helper explain the problem while `app.js` decides to stop
 - `writeFile` replaces the whole file; it doesn't add to the end
+- Writing generated files into an ignored folder keeps `git status` clean after a demo run
 
 ---
 

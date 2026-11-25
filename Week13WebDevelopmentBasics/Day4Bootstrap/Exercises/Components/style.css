@@ -1,0 +1,30 @@
+/* Only the carousel slides need custom CSS; everything else is Bootstrap */
+.carousel-item {
+  height: 260px;
+}
+
+.slide-1 {
+  background: linear-gradient(135deg, #4f46e5, #0ea5e9);
+}
+
+.slide-2 {
+  background: linear-gradient(135deg, #db2777, #f59e0b);
+}
+
+.slide-3 {
+  background: linear-gradient(135deg, #059669, #84cc16);
+}
+
+.slide-text {
+  display: grid;
+  place-content: center;
+  height: 100%;
+  padding: 0 4rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+.slide-text h3 {
+  margin: 0;
+}

@@ -28,7 +28,7 @@ node read-directory.js
 - source.txt
 ```
 
-`destination.txt` isn't in the repository. The first `copy-file.js` run creates it, which is why it shows up in the list afterwards.
+`destination.txt` isn't in the repository. The first `copy-file.js` run creates it, which is why it shows up in the list afterwards. It is git-ignored (in the `.gitignore` of `ExercisesXP/`), so the copy never shows up as a change.
 
 ## 🎯 The challenge
 

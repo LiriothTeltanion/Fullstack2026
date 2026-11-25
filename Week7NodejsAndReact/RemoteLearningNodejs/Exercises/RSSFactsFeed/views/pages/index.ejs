@@ -1,0 +1,7 @@
+<%- include("../partials/header", { title }) %>
+<h1><%= title %></h1>
+<p><%= posts.length %> posts in the feed.</p>
+<% posts.forEach((post) => { %>
+  <%- include("../partials/post", { post }) %>
+<% }) %>
+<%- include("../partials/footer") %>

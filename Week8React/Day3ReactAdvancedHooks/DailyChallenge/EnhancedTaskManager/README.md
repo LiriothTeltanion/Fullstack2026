@@ -4,19 +4,37 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for Enhanced Task Manager">
+<img src="../../../../assets/readme/progress/enhanced-task-manager-22503cfe49.svg" width="100%" alt="Progress card for Enhanced Task Manager">
 
 </div>
 
-I haven't started this one yet. The code and my notes will go here when I do it.
+A task manager where every change goes through one reducer: add, complete, edit in place, delete, filter and clear the completed ones. The tasks survive a page reload.
 
-**Status:** to do · Required for the course · 15 XP
+## ▶️ How to run
 
-## 📝 Plan
+```bash
+npm install
+npm run dev
+```
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+Vite prints a local address (usually `http://localhost:5173`); I open it in the browser.
+
+## 🎯 The challenge
+
+| Part | What it does |
+|---|---|
+| `taskReducer` | Handles `ADD_TASK`, `TOGGLE_TASK`, `EDIT_TASK`, `DELETE_TASK`, `CLEAR_COMPLETED` and `SET_FILTER` |
+| `TaskProvider` | Shares `state` and `dispatch` through context and saves `state.tasks` to `localStorage` |
+| `TaskForm` | Adds a task and uses a ref to keep the cursor in the input |
+| `TaskItem` | Checkbox to complete, double-click or "Edit" to rename; Enter saves, Escape cancels, an empty name keeps the old one |
+| `FilterBar` | All / Active / Completed buttons, the number of tasks left and "Clear completed" |
+
+## 🧠 What I learned
+
+- With all the actions in one reducer, the components only describe what happened
+- `useRef` plus an effect on `editing` focuses the edit box exactly when it appears
+- The visible list is filtered at render time, so the filter never changes the saved tasks
+- Saving only `state.tasks` means the filter starts at "all" on every visit
 
 ---
 

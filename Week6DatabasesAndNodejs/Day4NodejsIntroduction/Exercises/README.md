@@ -13,9 +13,9 @@ Day 4's Node.js exercises are all in one XP set.
 ## Contents
 
 - [`ExercisesXP/`](ExercisesXP/): seven small exercises on modules, npm packages and `fs`
-- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: to do (optional)
-- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: to do (optional)
-- [`MoreNodejsChallenges/`](MoreNodejsChallenges/): More Node.js Challenges: to do (optional)
+- [`ExercisesXPGold/`](ExercisesXPGold/): `os`, `path`, `events`, `fs/promises` and a command-line calculator
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): a stream word counter, a folder tree, a logger module and a countdown
+- [`MoreNodejsChallenges/`](MoreNodejsChallenges/): a command-line notes app saved in a JSON file
 
 ---
 

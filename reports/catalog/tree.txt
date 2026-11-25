@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-25
-Base HEAD: d30a5851a7e1a02d86f9c4efcee9a274b6a96c37
-Source-index SHA-256 (generated outputs excluded): 0ffd7f8b7ada25a0a5dc3c827df0336cae27c78aa4f3474520cf515baa775815
-Indexed files: 1091
+Base HEAD: 7787296d8b2e0bc65905cfd276c2352d7a92884f
+Source-index SHA-256 (generated outputs excluded): 2170e5748f9f2fe641802a8c4236c060e7d5484abe976525ba0158b0abad0034
+Indexed files: 2519
 
 .
 ├── .github
@@ -25,36 +25,49 @@ Indexed files: 1091
 │   │   ├── days
 │   │   │   └── week1-day1-python-foundations.svg
 │   │   ├── hero
+│   │   │   ├── course-journey.svg
 │   │   │   ├── footer-pulse.svg
 │   │   │   ├── readiness-live.svg
 │   │   │   ├── roadmap-horizon.svg
 │   │   │   ├── root-banner.svg
 │   │   │   ├── six-weeks-journey.svg
-│   │   │   ├── stack-galaxy.svg
-│   │   │   └── twelve-week-journey.svg
+│   │   │   └── stack-galaxy.svg
 │   │   ├── progress
+│   │   │   ├── actors-deac7f3275.svg
 │   │   │   ├── advanced-algorithm-911e3731b7.svg
+│   │   │   ├── advanced-functionalities-2c9611fff0.svg
+│   │   │   ├── age-tracker-449779a6f6.svg
 │   │   │   ├── air-management-2c6b6fc9f2.svg
 │   │   │   ├── anagram-checker-8fdcf3b2c3.svg
 │   │   │   ├── assets-3685e330ec.svg
+│   │   │   ├── authentication-project-40db85cf1f.svg
+│   │   │   ├── avengers-c54b237b88.svg
 │   │   │   ├── bubble-sort-dc81cde00f.svg
 │   │   │   ├── build-up-astring-6c50c48a77.svg
 │   │   │   ├── caesar-cypher-c2aae16993.svg
+│   │   │   ├── calculator-ca1a1853e1.svg
+│   │   │   ├── capstone-project-4e7d999ecf.svg
 │   │   │   ├── car-inventory-0e0706421a.svg
 │   │   │   ├── challenges-48c4324ce8.svg
 │   │   │   ├── challenges1-e9520d5915.svg
 │   │   │   ├── challenges2-e9acc2f59e.svg
 │   │   │   ├── circle-97d878cfe4.svg
 │   │   │   ├── coffee-shop-menu-manager-7c0ffee001.svg
+│   │   │   ├── collaborative-storytelling-app-9853b7f4f0.svg
+│   │   │   ├── command-line-1bd7563286.svg
+│   │   │   ├── components-a2e3dc5e45.svg
 │   │   │   ├── css-301984da57.svg
 │   │   │   ├── css-472e2fb5e8.svg
 │   │   │   ├── css-5401dbb63d.svg
 │   │   │   ├── css-5815e2ea50.svg
 │   │   │   ├── css-6f50f81572.svg
 │   │   │   ├── css-8f2369139b.svg
+│   │   │   ├── css-animation-206ecab86f.svg
 │   │   │   ├── css-b03f5587c2.svg
 │   │   │   ├── css-b8bc638ed6.svg
 │   │   │   ├── css-f7795260be.svg
+│   │   │   ├── css-pattern-a0ff29acce.svg
+│   │   │   ├── css-pattern-ninja-9952634912.svg
 │   │   │   ├── currency-converter-e742522f43.svg
 │   │   │   ├── daily-challenge-018a6493ca.svg
 │   │   │   ├── daily-challenge-0c9d6debb5.svg
@@ -84,6 +97,7 @@ Indexed files: 1091
 │   │   │   ├── daily-challenge-not-bad-d1c834c9ea.svg
 │   │   │   ├── daily-challenge-planets-bcd2f51b89.svg
 │   │   │   ├── daily-challenge-stars-45167b388e.svg
+│   │   │   ├── data-and-server-e5349de563.svg
 │   │   │   ├── day1-advanced-array-methods-316a98efce.svg
 │   │   │   ├── day1-introduction-to-databases-31fe17d428.svg
 │   │   │   ├── day1-introductionto-java-script-064c40b384.svg
@@ -112,8 +126,17 @@ Indexed files: 1091
 │   │   │   ├── day5-mini-project-85eec3f012.svg
 │   │   │   ├── day5-mini-project-a3284c88c2.svg
 │   │   │   ├── day5-mini-project-e4f4b5beef.svg
+│   │   │   ├── demo-day-e07e8c6071.svg
+│   │   │   ├── deploy-full-stack-app-256e5ddf99.svg
+│   │   │   ├── deploy-react-and-node-068bfe1620.svg
 │   │   │   ├── dictionaries-9a26300e0f.svg
+│   │   │   ├── dna-adcd5507e8.svg
 │   │   │   ├── drumset-mini-613bae1cac.svg
+│   │   │   ├── ecommerce-product-filter-1ca4a441b2.svg
+│   │   │   ├── emoji-guessing-game-8629c0e7ba.svg
+│   │   │   ├── emoji-guessing-game-public-6d7d5ea350.svg
+│   │   │   ├── enhanced-task-manager-22503cfe49.svg
+│   │   │   ├── error-boundary-ff6a97dd05.svg
 │   │   │   ├── exercise-1-commonjs-products-8faee08461.svg
 │   │   │   ├── exercise-2-esm-average-age-c4dc30ec36.svg
 │   │   │   ├── exercise-3-file-manager-commonjs-d81ac35c81.svg
@@ -159,6 +182,7 @@ Indexed files: 1091
 │   │   │   ├── exercises-f88932dca5.svg
 │   │   │   ├── exercises-fa5e90116e.svg
 │   │   │   ├── exercises-xp-01b16c7b23.svg
+│   │   │   ├── exercises-xp-06df44602a.svg
 │   │   │   ├── exercises-xp-0ff82fe9a6.svg
 │   │   │   ├── exercises-xp-1913cdd331.svg
 │   │   │   ├── exercises-xp-19dd687672.svg
@@ -170,18 +194,68 @@ Indexed files: 1091
 │   │   │   ├── exercises-xp-337d5c9753.svg
 │   │   │   ├── exercises-xp-33f9f32714.svg
 │   │   │   ├── exercises-xp-44a220fa48.svg
+│   │   │   ├── exercises-xp-474339af91.svg
 │   │   │   ├── exercises-xp-4b75acb0a5.svg
+│   │   │   ├── exercises-xp-51674a7a2e.svg
+│   │   │   ├── exercises-xp-51c0396f38.svg
+│   │   │   ├── exercises-xp-674dca5eab.svg
 │   │   │   ├── exercises-xp-6babf4344d.svg
 │   │   │   ├── exercises-xp-7736123bb3.svg
 │   │   │   ├── exercises-xp-773fa7fe22.svg
+│   │   │   ├── exercises-xp-7d98bc44b9.svg
 │   │   │   ├── exercises-xp-80340752f0.svg
+│   │   │   ├── exercises-xp-886dc2f5bf.svg
 │   │   │   ├── exercises-xp-a81d7fbf59.svg
 │   │   │   ├── exercises-xp-ae3b3197a6.svg
 │   │   │   ├── exercises-xp-b86ef38f1a.svg
+│   │   │   ├── exercises-xp-bc13520ee3.svg
+│   │   │   ├── exercises-xp-c99055f596.svg
+│   │   │   ├── exercises-xp-cac365f6ad.svg
 │   │   │   ├── exercises-xp-d1fe555080.svg
+│   │   │   ├── exercises-xp-e7dadf6f50.svg
 │   │   │   ├── exercises-xp-e8ff4d5aaf.svg
+│   │   │   ├── exercises-xp-f1073a3dd2.svg
 │   │   │   ├── exercises-xp-f1817611e4.svg
 │   │   │   ├── exercises-xp-fbf0813a52.svg
+│   │   │   ├── exercises-xp-gold-1bdf261c68.svg
+│   │   │   ├── exercises-xp-gold-2-b20c74ca42.svg
+│   │   │   ├── exercises-xp-gold-23b7b4ef3f.svg
+│   │   │   ├── exercises-xp-gold-27760a2713.svg
+│   │   │   ├── exercises-xp-gold-35133ce8fc.svg
+│   │   │   ├── exercises-xp-gold-36cff1d247.svg
+│   │   │   ├── exercises-xp-gold-4dcb795fa3.svg
+│   │   │   ├── exercises-xp-gold-56309ae690.svg
+│   │   │   ├── exercises-xp-gold-73a87761c4.svg
+│   │   │   ├── exercises-xp-gold-7caf59b311.svg
+│   │   │   ├── exercises-xp-gold-84f0ce2f85.svg
+│   │   │   ├── exercises-xp-gold-86538d6c64.svg
+│   │   │   ├── exercises-xp-gold-8c886ba1b8.svg
+│   │   │   ├── exercises-xp-gold-9f2a65a52f.svg
+│   │   │   ├── exercises-xp-gold-b71bef363f.svg
+│   │   │   ├── exercises-xp-gold-d591b175be.svg
+│   │   │   ├── exercises-xp-gold-e7ef168aba.svg
+│   │   │   ├── exercises-xp-gold-e8f20dfa16.svg
+│   │   │   ├── exercises-xp-ninja-03304cc28f.svg
+│   │   │   ├── exercises-xp-ninja-0eb2fcc494.svg
+│   │   │   ├── exercises-xp-ninja-2-252d140554.svg
+│   │   │   ├── exercises-xp-ninja-21e604b507.svg
+│   │   │   ├── exercises-xp-ninja-293fdd1ff8.svg
+│   │   │   ├── exercises-xp-ninja-3f9e681215.svg
+│   │   │   ├── exercises-xp-ninja-42f647a6da.svg
+│   │   │   ├── exercises-xp-ninja-438eedfc6a.svg
+│   │   │   ├── exercises-xp-ninja-5a8ffe5199.svg
+│   │   │   ├── exercises-xp-ninja-5f794058c0.svg
+│   │   │   ├── exercises-xp-ninja-6b71930383.svg
+│   │   │   ├── exercises-xp-ninja-790e620bbd.svg
+│   │   │   ├── exercises-xp-ninja-7e4172b922.svg
+│   │   │   ├── exercises-xp-ninja-8f96f995dd.svg
+│   │   │   ├── exercises-xp-ninja-94f2036b0b.svg
+│   │   │   ├── exercises-xp-ninja-b99d67cee1.svg
+│   │   │   ├── exercises-xp-ninja-cca4dc3b82.svg
+│   │   │   ├── exercises-xp-ninja-cf3fee40c2.svg
+│   │   │   ├── exercises-xp-ninja-e3c5d7d5d3.svg
+│   │   │   ├── exercises-xp-ninja-public-41d2d9b573.svg
+│   │   │   ├── exercises-xp-public-526932f388.svg
 │   │   │   ├── exercises-xp1-6a9e6acad2.svg
 │   │   │   ├── exercises-xp2-c93a4cd711.svg
 │   │   │   ├── exercises-xpanimations-b19d556380.svg
@@ -217,14 +291,24 @@ Indexed files: 1091
 │   │   │   ├── exercises-xpninja-efd1a61847.svg
 │   │   │   ├── exercises-xpplus-677f7b4b10.svg
 │   │   │   ├── exercises-xpplus-a44867596e.svg
+│   │   │   ├── extending-list-fd0b7b438e.svg
+│   │   │   ├── fibonacci-0de74eae6c.svg
 │   │   │   ├── file-explorer-e9539c8176.svg
 │   │   │   ├── files-8fe81ea7e0.svg
+│   │   │   ├── final-project-scope-8a23d69b9f.svg
+│   │   │   ├── find-duplicates-7728bb5a54.svg
+│   │   │   ├── first-html-page-3e2eb86a0e.svg
+│   │   │   ├── form-25fc858ae4.svg
+│   │   │   ├── form-container-a111c61821.svg
+│   │   │   ├── generic-data-650cfbb801.svg
 │   │   │   ├── github-4c40eab00f.svg
 │   │   │   ├── go-wildcats-a2d75a34e0.svg
 │   │   │   ├── gold-happy-birthday-051524da32.svg
 │   │   │   ├── groceries-a9b8627c73.svg
 │   │   │   ├── hangman-b986853f16.svg
+│   │   │   ├── herolo-assignment-3393c34021.svg
 │   │   │   ├── htmlform-73d95fe81c.svg
+│   │   │   ├── items-and-orders-1bc3c53c60.svg
 │   │   │   ├── js-0cd4cb0b37.svg
 │   │   │   ├── js-29ec2b00e3.svg
 │   │   │   ├── js-3cf1d71bde.svg
@@ -239,51 +323,94 @@ Indexed files: 1091
 │   │   │   ├── js-dc50386d56.svg
 │   │   │   ├── js-e6227183df.svg
 │   │   │   ├── js-f89a1b20d0.svg
+│   │   │   ├── jwt-with-pern-24af6d6313.svg
+│   │   │   ├── landing-page-ba705bface.svg
+│   │   │   ├── landing-page-using-react-2d98e17ad5.svg
 │   │   │   ├── letters-f1db44c3f7.svg
 │   │   │   ├── list-and-strings-c081f54eec.svg
+│   │   │   ├── list-comprehension-bc26f715c0.svg
+│   │   │   ├── login-page-2c7a1a7f11.svg
 │   │   │   ├── math-app-06109cb6e4.svg
+│   │   │   ├── media-queries-b10ac13875.svg
+│   │   │   ├── meme-generator-58dea808d6.svg
 │   │   │   ├── mini-project-coloring-game-5320641e49.svg
 │   │   │   ├── mini-project-createa-sign-in-form-ba63e6bf9c.svg
 │   │   │   ├── mini-project-vaccines-a94241f92f.svg
 │   │   │   ├── modules-e3d1c33ab5.svg
+│   │   │   ├── more-nodejs-challenges-a4901fe2b4.svg
+│   │   │   ├── movie-collection-organizer-22921149d9.svg
+│   │   │   ├── multiplayer-strategy-5e8bcfb685.svg
+│   │   │   ├── my-cv-9e6238a45e.svg
 │   │   │   ├── nodejs-app-and-npm-55f394adf0.svg
-│   │   │   ├── not-started.svg
+│   │   │   ├── notes-app-1218b18800.svg
 │   │   │   ├── npm-beginner-08778c1dcc.svg
 │   │   │   ├── oopquiz-92469ab711.svg
+│   │   │   ├── optional-js-exercises-bef4a26f1e.svg
+│   │   │   ├── optional-js-exercises-css-53ea237331.svg
+│   │   │   ├── optional-js-exercises-js-20bef4f24d.svg
+│   │   │   ├── our-first-gui-d963cd6c83.svg
 │   │   │   ├── pagination-1cf902caf8.svg
+│   │   │   ├── password-checker-7cc7fb5b0f.svg
+│   │   │   ├── personal-book-b27d96629a.svg
+│   │   │   ├── planner-application-9e6c113399.svg
+│   │   │   ├── planner-application-eeab6b44bd.svg
 │   │   │   ├── play-with-words-ccce75e27c.svg
 │   │   │   ├── pokedex-0fed258102.svg
+│   │   │   ├── portfolio-project-d91408e7b5.svg
+│   │   │   ├── productivity-tracker-724252d0dd.svg
 │   │   │   ├── python-4a960de9ce.svg
+│   │   │   ├── random-quote-generator-5cbf382e88.svg
 │   │   │   ├── random-quote-generator-fdaba25419.svg
+│   │   │   ├── react-carousel-e189d68837.svg
 │   │   │   ├── readme-9453d23d46.svg
+│   │   │   ├── real-time-chat-app-0204c11b5a.svg
+│   │   │   ├── recipe-book-app-f6132aba66.svg
+│   │   │   ├── recreate-landing-page-2-ad662830a6.svg
+│   │   │   ├── recreate-landing-page-e93f48638f.svg
+│   │   │   ├── registration-and-login-cff500c436.svg
 │   │   │   ├── remote-learning-jsand-dom-815ac22973.svg
 │   │   │   ├── remote-learning-oop-03b612090b.svg
 │   │   │   ├── rock-paper-scissors-37d39eddc9.svg
+│   │   │   ├── rss-facts-feed-8960529c68.svg
+│   │   │   ├── s3-uploads-with-express-faa98115f8.svg
+│   │   │   ├── shopping-website-a42400536b.svg
+│   │   │   ├── snap-shot-fea6e0e67e.svg
 │   │   │   ├── solve-the-matrix-4caca0648d.svg
 │   │   │   ├── sounds-2df62309e0.svg
+│   │   │   ├── sql-puzzle-34764f485e.svg
 │   │   │   ├── src-1961a64603.svg
 │   │   │   ├── src-66a533bc61.svg
 │   │   │   ├── src-a434c98586.svg
 │   │   │   ├── src-a542c6e722.svg
 │   │   │   ├── star-wars-web-app-63b913747f.svg
+│   │   │   ├── tables-relationships-e6198e35e7.svg
 │   │   │   ├── task-1-ea89997211.svg
 │   │   │   ├── task-2-fdb5b7dbaa.svg
 │   │   │   ├── task-3-a8f915097a.svg
+│   │   │   ├── task-api-2-9b5ed6c833.svg
+│   │   │   ├── task-management-api-8db9fe8dfa.svg
 │   │   │   ├── tell-the-story-cd3ae5ebb9.svg
 │   │   │   ├── tests-04d13fd0aa.svg
 │   │   │   ├── tests-0c695b6ae8.svg
 │   │   │   ├── text-analysis-721b11fc6e.svg
+│   │   │   ├── three-landing-pages-78487ddab9.svg
 │   │   │   ├── tic-tac-toe-ed49f2ef4e.svg
 │   │   │   ├── timed-challenge1-11eb650428.svg
 │   │   │   ├── timed-challenge1-761d03d053.svg
 │   │   │   ├── timed-challenge2-a4265f7705.svg
 │   │   │   ├── todo-app-fd921d256b.svg
 │   │   │   ├── todo-list-1254c9044b.svg
+│   │   │   ├── todo-list-manager-50b0331772.svg
 │   │   │   ├── tools-0284c6ac58.svg
 │   │   │   ├── translator-31054dc2af.svg
+│   │   │   ├── tricky-counter-c56e7b7f08.svg
+│   │   │   ├── trivia-quiz-game-8ad79cd087.svg
 │   │   │   ├── true-or-false-1764d91f98.svg
+│   │   │   ├── typescript-react-todo-67ba5a53dd.svg
 │   │   │   ├── union-type-validator-805b55c1bb.svg
 │   │   │   ├── user-info-cc666f7b51.svg
+│   │   │   ├── users-and-posts-ebd02a6d9b.svg
+│   │   │   ├── voting-app-63cef48748.svg
 │   │   │   ├── weather-app-3ec8010478.svg
 │   │   │   ├── week1-python-6dd83c5ba0.svg
 │   │   │   ├── week10-advanced-typescript-and-authentication-62a9a9e0bd.svg
@@ -297,8 +424,18 @@ Indexed files: 1091
 │   │   │   ├── week5-mini-project-and-type-script-e3ca5bd6e9.svg
 │   │   │   ├── week6-databases-and-nodejs-4095c435e8.svg
 │   │   │   ├── week7-node-js-and-react-dd2882c4f4.svg
+│   │   │   ├── week8-day1-exercises-xp-86643213df.svg
+│   │   │   ├── week8-day1-exercises-xp-gold-9b977f725f.svg
+│   │   │   ├── week8-day1-exercises-xp-ninja-75eb3622ea.svg
+│   │   │   ├── week8-day2-exercises-xp-8f1d7d136c.svg
+│   │   │   ├── week8-day2-exercises-xp-gold-1da1db5b93.svg
+│   │   │   ├── week8-day2-exercises-xp-ninja-baf3b194e5.svg
+│   │   │   ├── week8-day3-exercises-xp-c4d151861f.svg
+│   │   │   ├── week8-day3-exercises-xp-gold-0d372418b4.svg
+│   │   │   ├── week8-day3-exercises-xp-ninja-c316c82dc3.svg
 │   │   │   ├── week8-react-1b6380f990.svg
 │   │   │   ├── week9-redux-f6ec485707.svg
+│   │   │   ├── wild-and-wacky-vegetables-e022ac05dc.svg
 │   │   │   ├── words-in-the-stars-47bf0873fc.svg
 │   │   │   └── workflows-93d7c4b837.svg
 │   │   ├── cosmic-banner.svg
@@ -359,46 +496,292 @@ Indexed files: 1091
 │   ├── Day1UsingTypeScriptWithReact
 │   │   ├── DailyChallenge
 │   │   │   ├── TypeScriptReactTodo
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── TodoForm.tsx
+│   │   │   │   │   │   ├── TodoItem.tsx
+│   │   │   │   │   │   └── TodoList.tsx
+│   │   │   │   │   ├── App.tsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.tsx
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── types.ts
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   ├── tsconfig.json
+│   │   │   │   └── vite.config.ts
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── ExercisesXP
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── Counter.tsx
+│   │   │   │   │   │   ├── Greeting.tsx
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── SignupForm.tsx
+│   │   │   │   │   │   ├── UserCard.tsx
+│   │   │   │   │   │   └── UserList.tsx
+│   │   │   │   │   ├── App.tsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.tsx
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── types.ts
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   ├── tsconfig.json
+│   │   │   │   └── vite.config.ts
 │   │   │   ├── ExercisesXPGold
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── ShoppingList.tsx
+│   │   │   │   │   │   └── ThemeToggle.tsx
+│   │   │   │   │   ├── context
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── ThemeContext.tsx
+│   │   │   │   │   ├── hooks
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── useLocalStorage.ts
+│   │   │   │   │   ├── state
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── shoppingReducer.ts
+│   │   │   │   │   ├── App.tsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.tsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   ├── tsconfig.json
+│   │   │   │   └── vite.config.ts
 │   │   │   ├── ExercisesXPNinja
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── DataTable.tsx
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── Select.tsx
+│   │   │   │   │   ├── data
+│   │   │   │   │   │   ├── countries.json
+│   │   │   │   │   │   ├── guards.ts
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.tsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.tsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   ├── tsconfig.json
+│   │   │   │   └── vite.config.ts
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day2MiniProject
 │   │   ├── DailyChallenge
 │   │   │   ├── GenericData
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── DataFetcher.tsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── hooks
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── useData.ts
+│   │   │   │   │   ├── App.tsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.tsx
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── types.ts
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   ├── tsconfig.json
+│   │   │   │   └── vite.config.ts
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── PersonalBook
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── BookForm.tsx
+│   │   │   │   │   │   ├── List.tsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.tsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.tsx
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── types.ts
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   ├── tsconfig.json
+│   │   │   │   └── vite.config.ts
 │   │   │   ├── RecipeBookApp
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── RecipeCard.tsx
+│   │   │   │   │   │   └── RecipeForm.tsx
+│   │   │   │   │   ├── hooks
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── useRecipes.ts
+│   │   │   │   │   ├── models
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── recipe.ts
+│   │   │   │   │   │   └── storage.ts
+│   │   │   │   │   ├── App.tsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.tsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   ├── tsconfig.json
+│   │   │   │   └── vite.config.ts
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day3Authentication
 │   │   ├── Exercises
 │   │   │   ├── ExercisesXP
-│   │   │   │   └── README.md
+│   │   │   │   ├── controllers
+│   │   │   │   │   ├── authController.js
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── usersController.js
+│   │   │   │   ├── middleware
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── verifyToken.js
+│   │   │   │   ├── models
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── userModel.js
+│   │   │   │   ├── routes
+│   │   │   │   │   ├── authRoutes.js
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── usersRoutes.js
+│   │   │   │   ├── .env.example
+│   │   │   │   ├── app.js
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   ├── requests.http
+│   │   │   │   ├── server.js
+│   │   │   │   └── settings.js
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day4TypeScriptAuthenticationProject
 │   │   ├── Exercises
 │   │   │   ├── AdvancedFunctionalities
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── middleware
+│   │   │   │   │   │   ├── auth.ts
+│   │   │   │   │   │   ├── loginLimiter.ts
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── routes
+│   │   │   │   │   │   ├── adminRoutes.ts
+│   │   │   │   │   │   ├── authRoutes.ts
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── app.ts
+│   │   │   │   │   ├── config.ts
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── server.ts
+│   │   │   │   │   ├── store.ts
+│   │   │   │   │   ├── tokens.ts
+│   │   │   │   │   ├── types.ts
+│   │   │   │   │   └── validation.ts
+│   │   │   │   ├── .env.example
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   ├── requests.http
+│   │   │   │   └── tsconfig.json
 │   │   │   ├── CollaborativeStorytellingApp
+│   │   │   │   ├── client
+│   │   │   │   │   ├── src
+│   │   │   │   │   │   ├── components
+│   │   │   │   │   │   │   ├── AuthForm.tsx
+│   │   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   │   ├── StoryCard.tsx
+│   │   │   │   │   │   │   └── StoryForm.tsx
+│   │   │   │   │   │   ├── api.ts
+│   │   │   │   │   │   ├── App.tsx
+│   │   │   │   │   │   ├── index.css
+│   │   │   │   │   │   ├── main.tsx
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── types.ts
+│   │   │   │   │   ├── index.html
+│   │   │   │   │   ├── package.json
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── tsconfig.json
+│   │   │   │   │   └── vite.config.ts
+│   │   │   │   ├── server
+│   │   │   │   │   ├── controllers
+│   │   │   │   │   │   ├── authController.js
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── storiesController.js
+│   │   │   │   │   ├── middleware
+│   │   │   │   │   │   ├── loadStory.js
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── requireAuth.js
+│   │   │   │   │   ├── models
+│   │   │   │   │   │   ├── db.js
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── storyModel.js
+│   │   │   │   │   │   └── userModel.js
+│   │   │   │   │   ├── routes
+│   │   │   │   │   │   ├── authRoutes.js
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── storiesRoutes.js
+│   │   │   │   │   ├── .env.example
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   ├── package.json
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── server.js
+│   │   │   │   │   └── settings.js
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── RemoteLearningAuthAndTypeScript
 │   │   ├── Exercises
 │   │   │   ├── AuthenticationProject
+│   │   │   │   ├── client
+│   │   │   │   │   ├── src
+│   │   │   │   │   │   ├── auth
+│   │   │   │   │   │   │   ├── AuthContext.tsx
+│   │   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   │   └── RequireAuth.tsx
+│   │   │   │   │   │   ├── pages
+│   │   │   │   │   │   │   ├── AuthPage.tsx
+│   │   │   │   │   │   │   ├── ProfilePage.tsx
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── api.ts
+│   │   │   │   │   │   ├── App.tsx
+│   │   │   │   │   │   ├── index.css
+│   │   │   │   │   │   ├── main.tsx
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── types.ts
+│   │   │   │   │   ├── index.html
+│   │   │   │   │   ├── package.json
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── tsconfig.json
+│   │   │   │   │   └── vite.config.ts
+│   │   │   │   ├── server
+│   │   │   │   │   ├── controllers
+│   │   │   │   │   │   ├── authController.js
+│   │   │   │   │   │   ├── profileController.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── middleware
+│   │   │   │   │   │   ├── authenticate.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── models
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── userModel.js
+│   │   │   │   │   ├── routes
+│   │   │   │   │   │   ├── authRoutes.js
+│   │   │   │   │   │   ├── profileRoutes.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── .env.example
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   ├── package.json
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── server.js
+│   │   │   │   │   └── settings.js
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
@@ -406,16 +789,55 @@ Indexed files: 1091
 ├── Week11FinalProject
 │   ├── Day1FinalProjectScope
 │   │   ├── ProjectScope
-│   │   │   └── README.md
+│   │   │   ├── README.md
+│   │   │   └── SCOPE.md
 │   │   └── README.md
 │   └── README.md
 ├── Week12FinalProject
 │   ├── Day1CapstoneSubmission
 │   │   ├── CapstoneProject
+│   │   │   ├── client
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── ItemForm.jsx
+│   │   │   │   │   │   ├── ItemList.jsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── api.js
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
+│   │   │   ├── server
+│   │   │   │   ├── controllers
+│   │   │   │   │   ├── itemsController.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── db
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── schema.sql
+│   │   │   │   ├── middleware
+│   │   │   │   │   ├── errorHandler.js
+│   │   │   │   │   ├── notFound.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── models
+│   │   │   │   │   ├── itemsModel.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── routes
+│   │   │   │   │   ├── items.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── .env.example
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── server.js
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day5DemoDay
 │   │   ├── DemoDayPresentation
+│   │   │   ├── PRESENTATION.md
 │   │   │   └── README.md
 │   │   └── README.md
 │   └── README.md
@@ -423,65 +845,107 @@ Indexed files: 1091
 │   ├── Day1HTMLAndCSS
 │   │   ├── DailyChallenge
 │   │   │   ├── Avengers
-│   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   └── style.css
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── FirstHTMLPage
-│   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   └── style.css
 │   │   │   ├── LandingPage
-│   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   └── style.css
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day2GitAndGitHub
 │   │   ├── DailyChallenge
 │   │   │   ├── CommandLine
-│   │   │   │   └── README.md
+│   │   │   │   ├── commands.sh
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   └── style.css
 │   │   │   ├── MediaQueries
-│   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   └── style.css
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── LoginPage
-│   │   │   │   └── README.md
+│   │   │   │   ├── app.js
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   └── style.css
 │   │   │   ├── ShoppingWebsite
-│   │   │   │   └── README.md
+│   │   │   │   ├── app.js
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   └── style.css
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day3CSSGridAndLayout
 │   │   ├── DailyChallenge
 │   │   │   ├── CSSPattern
-│   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   └── style.css
 │   │   │   ├── CSSPatternNinja
-│   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   └── style.css
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── MyCV
-│   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   └── style.css
 │   │   │   ├── ThreeLandingPages
-│   │   │   │   └── README.md
+│   │   │   │   ├── bakery.html
+│   │   │   │   ├── fitness.html
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   ├── style.css
+│   │   │   │   └── travel.html
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day4Bootstrap
 │   │   ├── DailyChallenge
 │   │   │   ├── WildAndWackyVegetables
-│   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   └── style.css
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── Components
-│   │   │   │   └── README.md
+│   │   │   │   ├── app.js
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   └── style.css
 │   │   │   ├── RecreateLandingPage
-│   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   └── style.css
 │   │   │   ├── RecreateLandingPage2
-│   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   └── style.css
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day5CodingDay
 │   │   ├── DailyChallenge
 │   │   │   ├── CSSAnimation
-│   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   └── style.css
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── PortfolioProject
-│   │   │   │   └── README.md
+│   │   │   │   ├── app.js
+│   │   │   │   ├── index.html
+│   │   │   │   ├── README.md
+│   │   │   │   └── style.css
 │   │   │   └── README.md
 │   │   └── README.md
 │   └── README.md
@@ -489,27 +953,170 @@ Indexed files: 1091
 │   ├── Day1AWSAndJWT
 │   │   ├── Exercises
 │   │   │   ├── JWTWithPERN
+│   │   │   │   ├── client
+│   │   │   │   │   ├── src
+│   │   │   │   │   │   ├── components
+│   │   │   │   │   │   │   ├── AuthForm.jsx
+│   │   │   │   │   │   │   ├── Profile.jsx
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── api.js
+│   │   │   │   │   │   ├── App.css
+│   │   │   │   │   │   ├── App.jsx
+│   │   │   │   │   │   ├── main.jsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── index.html
+│   │   │   │   │   ├── package.json
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── vite.config.js
+│   │   │   │   ├── server
+│   │   │   │   │   ├── controllers
+│   │   │   │   │   │   ├── authController.js
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── userController.js
+│   │   │   │   │   ├── db
+│   │   │   │   │   │   ├── db.js
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── schema.sql
+│   │   │   │   │   ├── middleware
+│   │   │   │   │   │   ├── errorHandler.js
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── verifyToken.js
+│   │   │   │   │   ├── models
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── userModel.js
+│   │   │   │   │   ├── routes
+│   │   │   │   │   │   ├── authRoutes.js
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── userRoutes.js
+│   │   │   │   │   ├── .env.example
+│   │   │   │   │   ├── package.json
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── server.js
 │   │   │   │   └── README.md
 │   │   │   ├── S3UploadsWithExpress
-│   │   │   │   └── README.md
+│   │   │   │   ├── config
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── s3.js
+│   │   │   │   ├── controllers
+│   │   │   │   │   ├── filesController.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── middleware
+│   │   │   │   │   ├── errorHandler.js
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── upload.js
+│   │   │   │   ├── public
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   ├── index.html
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── style.css
+│   │   │   │   ├── routes
+│   │   │   │   │   ├── files.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── .env.example
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── server.js
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day2DeployWithRender
 │   │   ├── Exercises
 │   │   │   ├── DeployReactAndNode
-│   │   │   │   └── README.md
+│   │   │   │   ├── client
+│   │   │   │   │   ├── src
+│   │   │   │   │   │   ├── components
+│   │   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   │   ├── ServerStatus.jsx
+│   │   │   │   │   │   │   └── TipCard.jsx
+│   │   │   │   │   │   ├── App.css
+│   │   │   │   │   │   ├── App.jsx
+│   │   │   │   │   │   ├── main.jsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── .env.example
+│   │   │   │   │   ├── index.html
+│   │   │   │   │   ├── package.json
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── vite.config.js
+│   │   │   │   ├── server
+│   │   │   │   │   ├── controllers
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── tipsController.js
+│   │   │   │   │   ├── data
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── tips.js
+│   │   │   │   │   ├── routes
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── tipsRoutes.js
+│   │   │   │   │   ├── .env.example
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   ├── package.json
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── server.js
+│   │   │   │   ├── README.md
+│   │   │   │   └── render.yaml
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day3FullStackDeployment
 │   │   ├── Exercises
 │   │   │   ├── DeployFullStackApp
-│   │   │   │   └── README.md
+│   │   │   │   ├── client
+│   │   │   │   │   ├── src
+│   │   │   │   │   │   ├── components
+│   │   │   │   │   │   │   ├── MessageForm.jsx
+│   │   │   │   │   │   │   ├── MessageList.jsx
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── App.css
+│   │   │   │   │   │   ├── App.jsx
+│   │   │   │   │   │   ├── main.jsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── index.html
+│   │   │   │   │   ├── package.json
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── vite.config.js
+│   │   │   │   ├── server
+│   │   │   │   │   ├── controllers
+│   │   │   │   │   │   ├── messagesController.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── db
+│   │   │   │   │   │   ├── knex.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── middleware
+│   │   │   │   │   │   ├── errorHandler.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── migrations
+│   │   │   │   │   │   ├── 20261125120000_create_messages.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── models
+│   │   │   │   │   │   ├── messageModel.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── routes
+│   │   │   │   │   │   ├── messagesRoutes.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── server.js
+│   │   │   │   ├── .env.example
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── render.yaml
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day7MiniProjects
 │   │   ├── Exercises
 │   │   │   ├── MemeGenerator
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── Header.jsx
+│   │   │   │   │   │   ├── MemeForm.jsx
+│   │   │   │   │   │   ├── MemePreview.jsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.css
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   └── README.md
 │   │   └── README.md
 │   └── README.md
@@ -531,6 +1138,7 @@ Indexed files: 1091
 │   │   │   │   ├── exercisesxpninja.py
 │   │   │   │   └── README.md
 │   │   │   ├── RemoteExercisePasswordChecker
+│   │   │   │   ├── password_checker.py
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
@@ -554,7 +1162,8 @@ Indexed files: 1091
 │   │   │   │   ├── exercisesxpninja.py
 │   │   │   │   └── README.md
 │   │   │   ├── RemoteExerciseTrickyCounter
-│   │   │   │   └── README.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── tricky_counter.py
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day3Dictionaries
@@ -580,6 +1189,7 @@ Indexed files: 1091
 │   │   │   │   ├── exercisesxpplus.py
 │   │   │   │   └── README.md
 │   │   │   ├── RemoteExerciseListComprehension
+│   │   │   │   ├── list_comprehension.py
 │   │   │   │   └── README.md
 │   │   │   ├── TimedChallenge1
 │   │   │   │   ├── README.md
@@ -646,8 +1256,10 @@ Indexed files: 1091
 │   │   │   │   ├── main.py
 │   │   │   │   └── README.md
 │   │   │   ├── RemoteExerciseFindDuplicates
+│   │   │   │   ├── find_duplicates.py
 │   │   │   │   └── README.md
 │   │   │   ├── RemoteExerciseOurFirstGUI
+│   │   │   │   ├── first_gui.py
 │   │   │   │   └── README.md
 │   │   │   ├── TicTacToe
 │   │   │   │   ├── README.md
@@ -657,6 +1269,7 @@ Indexed files: 1091
 │   ├── RemoteLearningPython
 │   │   ├── Exercises
 │   │   │   ├── Fibonacci
+│   │   │   │   ├── fibonacci.py
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
@@ -683,6 +1296,7 @@ Indexed files: 1091
 │   ├── Day2OOPInheritanceEncapsulationPolymorphism
 │   │   ├── DailyChallenge
 │   │   │   ├── DNA
+│   │   │   │   ├── dna.py
 │   │   │   │   └── README.md
 │   │   │   ├── Pagination
 │   │   │   │   ├── pagination.py
@@ -723,6 +1337,8 @@ Indexed files: 1091
 │   │   │   │   ├── exercisesxpninjadunder.py
 │   │   │   │   └── README.md
 │   │   │   ├── RemoteExerciseExtendingList
+│   │   │   │   ├── extended_list.py
+│   │   │   │   ├── main.py
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
@@ -1015,6 +1631,15 @@ Indexed files: 1091
 │   │   │   │   │   └── README.md
 │   │   │   │   └── README.md
 │   │   │   ├── OptionalJSExercises
+│   │   │   │   ├── css
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── style.css
+│   │   │   │   ├── js
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   ├── demo.js
+│   │   │   │   │   ├── exercises.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
@@ -1043,8 +1668,10 @@ Indexed files: 1091
 │   │   │   │   ├── ArraysMethodsXPGold.ts
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPNinja
+│   │   │   │   ├── arrayMethodsNinja.js
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPNinja2
+│   │   │   │   ├── arrayMethodsNinja2.js
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
@@ -1057,8 +1684,10 @@ Indexed files: 1091
 │   │   │   │   ├── ObjectsDestructuringClassesXP.ts
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPGold
+│   │   │   │   ├── objectMethodsGold.js
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPNinja
+│   │   │   │   ├── objectMethodsNinja.js
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
@@ -1113,6 +1742,7 @@ Indexed files: 1091
 │   │   │   │   ├── promises.js
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPGold
+│   │   │   │   ├── asyncGold.js
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
@@ -1129,8 +1759,10 @@ Indexed files: 1091
 │   │   │   │   ├── index.html
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPGold
+│   │   │   │   ├── fetchGold.js
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPNinja
+│   │   │   │   ├── fetchNinja.js
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
@@ -1168,8 +1800,10 @@ Indexed files: 1091
 │   │   │   │   ├── ExercisesXP_Basics.ts
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPGold
+│   │   │   │   ├── ExercisesXPGold.ts
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPNinja
+│   │   │   │   ├── ExercisesXPNinja.ts
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
@@ -1182,8 +1816,10 @@ Indexed files: 1091
 │   │   │   │   ├── ExercisesXP_OOP.ts
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPGold
+│   │   │   │   ├── ExercisesXPGold.ts
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPNinja
+│   │   │   │   ├── ExercisesXPNinja.ts
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
@@ -1202,12 +1838,14 @@ Indexed files: 1091
 │   │   │   │   ├── ExercisesXPGold.ts
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPNinja
+│   │   │   │   ├── ExercisesXPNinja.ts
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── RemoteLearningTypeScript
 │   │   ├── Exercises
 │   │   │   ├── ExercisesXP
+│   │   │   │   ├── ExercisesXP.ts
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
@@ -1216,6 +1854,7 @@ Indexed files: 1091
 │   ├── Day1IntroductionToDatabases
 │   │   ├── DailyChallenge
 │   │   │   ├── Actors
+│   │   │   │   ├── actors.sql
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   ├── Exercises
@@ -1237,24 +1876,29 @@ Indexed files: 1091
 │   ├── Day2DatabaseConcepts1
 │   │   ├── DailyChallenge
 │   │   │   ├── SQLPuzzle
-│   │   │   │   └── README.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── sql_puzzle.sql
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── ExercisesXP
 │   │   │   │   ├── README.md
 │   │   │   │   └── xp_sql_answers.sql
 │   │   │   ├── ExercisesXPGold
-│   │   │   │   └── README.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── xp_gold_music_store.sql
 │   │   │   ├── ExercisesXPNinja
-│   │   │   │   └── README.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── xp_ninja_dvdrental.sql
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day3DatabaseConcepts2
 │   │   ├── DailyChallenge
 │   │   │   ├── ItemsAndOrders
+│   │   │   │   ├── items_and_orders.sql
 │   │   │   │   └── README.md
 │   │   │   ├── TablesRelationships
-│   │   │   │   └── README.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── tables_relationships.sql
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── ExercisesXP
@@ -1264,7 +1908,8 @@ Indexed files: 1091
 │   │   │   │   ├── README.md
 │   │   │   │   └── xp_gold_dvdrental.sql
 │   │   │   ├── ExercisesXPNinja
-│   │   │   │   └── README.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── xp_ninja_dvdrental.sql
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day4NodejsIntroduction
@@ -1340,25 +1985,70 @@ Indexed files: 1091
 │   │   │   │   ├── .gitignore
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPGold
-│   │   │   │   └── README.md
+│   │   │   │   ├── calculator.js
+│   │   │   │   ├── events-demo.js
+│   │   │   │   ├── json-store.js
+│   │   │   │   ├── package.json
+│   │   │   │   ├── path-explorer.js
+│   │   │   │   ├── README.md
+│   │   │   │   └── system-info.js
 │   │   │   ├── ExercisesXPNinja
-│   │   │   │   └── README.md
+│   │   │   │   ├── countdown.js
+│   │   │   │   ├── logger.js
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   ├── sample.txt
+│   │   │   │   ├── tree.js
+│   │   │   │   ├── use-logger.js
+│   │   │   │   └── word-count.js
 │   │   │   ├── MoreNodejsChallenges
+│   │   │   │   ├── .gitignore
+│   │   │   │   ├── notes.js
+│   │   │   │   ├── notesStore.js
+│   │   │   │   ├── package.json
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day5NodejsWebServer
 │   │   ├── DailyChallenge
 │   │   │   ├── EmojiGuessingGame
-│   │   │   │   └── README.md
+│   │   │   │   ├── public
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   ├── index.html
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── style.css
+│   │   │   │   ├── game.js
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── server.js
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── ExercisesXP
+│   │   │   │   ├── public
+│   │   │   │   │   ├── index.html
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── dateUtils.js
+│   │   │   │   ├── ex1-hello-server.js
+│   │   │   │   ├── ex2-html-server.js
+│   │   │   │   ├── ex3-json-routes.js
+│   │   │   │   ├── ex4-static-page.js
+│   │   │   │   ├── ex5-date-server.js
+│   │   │   │   ├── package.json
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPGold
-│   │   │   │   └── README.md
+│   │   │   │   ├── httpHelpers.js
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── server.js
 │   │   │   ├── ExercisesXPNinja
-│   │   │   │   └── README.md
+│   │   │   │   ├── public
+│   │   │   │   │   ├── about.html
+│   │   │   │   │   ├── index.html
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── style.css
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── static-server.js
 │   │   │   └── README.md
 │   │   └── README.md
 │   └── README.md
@@ -1366,81 +2056,427 @@ Indexed files: 1091
 │   ├── Day1RoutesControllersAndMiddleware
 │   │   ├── DailyChallenge
 │   │   │   ├── TriviaQuizGame
-│   │   │   │   └── README.md
+│   │   │   │   ├── controllers
+│   │   │   │   │   ├── quizController.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── data
+│   │   │   │   │   ├── questions.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── public
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   ├── index.html
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── style.css
+│   │   │   │   ├── routes
+│   │   │   │   │   ├── quiz.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── .env.example
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── server.js
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── ExercisesXP
-│   │   │   │   └── README.md
+│   │   │   │   ├── controllers
+│   │   │   │   │   ├── booksController.js
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── todosController.js
+│   │   │   │   ├── middleware
+│   │   │   │   │   ├── logger.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── routes
+│   │   │   │   │   ├── books.js
+│   │   │   │   │   ├── index.js
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── todos.js
+│   │   │   │   ├── .env.example
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── server.js
 │   │   │   ├── ExercisesXPGold
-│   │   │   │   └── README.md
+│   │   │   │   ├── controllers
+│   │   │   │   │   ├── postsController.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── middleware
+│   │   │   │   │   ├── checkApiKey.js
+│   │   │   │   │   ├── errorHandler.js
+│   │   │   │   │   ├── notFound.js
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── requestTime.js
+│   │   │   │   │   └── validatePost.js
+│   │   │   │   ├── routes
+│   │   │   │   │   ├── posts.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── .env.example
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── server.js
 │   │   │   ├── ExercisesXPNinja
-│   │   │   │   └── README.md
+│   │   │   │   ├── controllers
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── usersController.js
+│   │   │   │   ├── data
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── users.js
+│   │   │   │   ├── middleware
+│   │   │   │   │   ├── rateLimit.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── routes
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── users.js
+│   │   │   │   ├── .env.example
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── server.js
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day2SQLQueryBuilder
 │   │   ├── DailyChallenge
 │   │   │   ├── RegistrationAndLogin
-│   │   │   │   └── README.md
+│   │   │   │   ├── config
+│   │   │   │   │   ├── db.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── controllers
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── userController.js
+│   │   │   │   ├── db
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── schema.sql
+│   │   │   │   ├── models
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── userModel.js
+│   │   │   │   ├── routes
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── userRouter.js
+│   │   │   │   ├── .env.example
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── server.js
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── ExercisesXP
-│   │   │   │   └── README.md
+│   │   │   │   ├── controllers
+│   │   │   │   │   ├── booksController.js
+│   │   │   │   │   ├── postsController.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── db
+│   │   │   │   │   ├── db.js
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── schema.sql
+│   │   │   │   ├── models
+│   │   │   │   │   ├── booksModel.js
+│   │   │   │   │   ├── postsModel.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── routes
+│   │   │   │   │   ├── books.js
+│   │   │   │   │   ├── posts.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── .env.example
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── server.js
 │   │   │   ├── ExercisesXPGold
+│   │   │   │   ├── db
+│   │   │   │   │   ├── db.js
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── schema.sql
+│   │   │   │   ├── .env.example
+│   │   │   │   ├── package.json
+│   │   │   │   ├── queries.js
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPNinja
-│   │   │   │   └── README.md
+│   │   │   │   ├── db
+│   │   │   │   │   ├── db.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── migrations
+│   │   │   │   │   ├── 20261125090000_create_authors.js
+│   │   │   │   │   ├── 20261125090100_create_books.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── seeds
+│   │   │   │   │   ├── 01_authors_and_books.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── .env.example
+│   │   │   │   ├── knexfile.js
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── server.js
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day3MiniProject
 │   │   ├── DailyChallenge
 │   │   │   ├── TaskAPI2
-│   │   │   │   └── README.md
+│   │   │   │   ├── controllers
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── tasksController.js
+│   │   │   │   ├── data
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── tasks.json
+│   │   │   │   ├── middleware
+│   │   │   │   │   ├── errorHandler.js
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── validateTask.js
+│   │   │   │   ├── models
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── taskStore.js
+│   │   │   │   ├── routes
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── tasks.js
+│   │   │   │   ├── .env.example
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── server.js
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── MultiplayerStrategy
-│   │   │   │   └── README.md
+│   │   │   │   ├── game
+│   │   │   │   │   ├── demo.js
+│   │   │   │   │   ├── Game.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── public
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   ├── index.html
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── style.css
+│   │   │   │   ├── .env.example
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── server.js
 │   │   │   ├── NotesApp
-│   │   │   │   └── README.md
+│   │   │   │   ├── controllers
+│   │   │   │   │   ├── notesController.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── data
+│   │   │   │   │   ├── notes.json
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── models
+│   │   │   │   │   ├── notesModel.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── public
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   ├── index.html
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── style.css
+│   │   │   │   ├── routes
+│   │   │   │   │   ├── notes.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── .env.example
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── server.js
 │   │   │   ├── RealTimeChatApp
-│   │   │   │   └── README.md
+│   │   │   │   ├── public
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   ├── index.html
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── style.css
+│   │   │   │   ├── .env.example
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── server.js
 │   │   │   ├── TaskManagementAPI
-│   │   │   │   └── README.md
+│   │   │   │   ├── controllers
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── tasksController.js
+│   │   │   │   ├── data
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── tasks.json
+│   │   │   │   ├── models
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── taskModel.js
+│   │   │   │   ├── routes
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── tasks.js
+│   │   │   │   ├── .env.example
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── server.js
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day4IntroductionToReact
 │   │   ├── DailyChallenge
 │   │   │   ├── ReactCarousel
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── Carousel.jsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── slides.js
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── ExercisesXP
-│   │   │   │   └── README.md
+│   │   │   │   ├── public
+│   │   │   │   │   ├── atom.svg
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── Exercise.css
+│   │   │   │   │   │   ├── Exercise.jsx
+│   │   │   │   │   │   ├── HelloJsx.jsx
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── UserFavoriteAnimals.jsx
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   ├── ExercisesXPGold
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── Card.jsx
+│   │   │   │   │   │   ├── PlanetList.jsx
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── SocialMedia.jsx
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── data.js
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   ├── LandingPageUsingReact
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── Contact.jsx
+│   │   │   │   │   │   ├── Features.jsx
+│   │   │   │   │   │   ├── Footer.jsx
+│   │   │   │   │   │   ├── Hero.jsx
+│   │   │   │   │   │   ├── Navbar.jsx
+│   │   │   │   │   │   ├── Pricing.jsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day5ReactComponentsAndState
 │   │   ├── DailyChallenge
 │   │   │   ├── VotingApp
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── LanguageRow.jsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── ExercisesXP
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── Car.jsx
+│   │   │   │   │   │   ├── Color.jsx
+│   │   │   │   │   │   ├── Events.jsx
+│   │   │   │   │   │   ├── Garage.jsx
+│   │   │   │   │   │   ├── Phone.jsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   ├── ExercisesXPGold
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── Counter.jsx
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── ShowHide.jsx
+│   │   │   │   │   │   └── SignupForm.jsx
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   ├── ExercisesXPGold2
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── Calculator.jsx
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── ShoppingList.jsx
+│   │   │   │   │   │   └── ThemeToggle.jsx
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   ├── ExercisesXPNinja
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── QuoteBox.jsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   ├── quotes.js
+│   │   │   │   │   ├── randomPick.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── RemoteLearningNodejs
 │   │   ├── Exercises
 │   │   │   ├── RSSFactsFeed
-│   │   │   │   └── README.md
+│   │   │   │   ├── controllers
+│   │   │   │   │   ├── feedController.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── public
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── style.css
+│   │   │   │   ├── routes
+│   │   │   │   │   ├── feed.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── services
+│   │   │   │   │   ├── feedService.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── views
+│   │   │   │   │   ├── pages
+│   │   │   │   │   │   ├── error.ejs
+│   │   │   │   │   │   ├── index.ejs
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── search.ejs
+│   │   │   │   │   ├── partials
+│   │   │   │   │   │   ├── footer.ejs
+│   │   │   │   │   │   ├── header.ejs
+│   │   │   │   │   │   ├── post.ejs
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── .env.example
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── server.js
 │   │   │   └── README.md
 │   │   └── README.md
 │   └── README.md
@@ -1448,63 +2484,373 @@ Indexed files: 1091
 │   ├── Day1MultipleComponentsAndEvents
 │   │   ├── DailyChallenge
 │   │   │   ├── FormContainer
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── FormComponent.jsx
+│   │   │   │   │   │   ├── FormContainer.jsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── ErrorBoundary
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── BuggyCounter.jsx
+│   │   │   │   │   │   ├── ErrorBoundary.jsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   ├── ExercisesXP
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── Car.jsx
+│   │   │   │   │   │   ├── Color.jsx
+│   │   │   │   │   │   ├── Events.jsx
+│   │   │   │   │   │   ├── Garage.jsx
+│   │   │   │   │   │   ├── Phone.jsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   ├── ExercisesXPGold
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── Accordion.jsx
+│   │   │   │   │   │   ├── LikeButton.jsx
+│   │   │   │   │   │   ├── LikeCounter.jsx
+│   │   │   │   │   │   ├── Panel.jsx
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── TemperatureConverter.jsx
+│   │   │   │   │   │   └── TemperatureInput.jsx
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   ├── ExercisesXPNinja
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── MouseTracker.jsx
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── StarRating.jsx
+│   │   │   │   │   │   └── Tabs.jsx
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day2AdvancedReact
 │   │   ├── DailyChallenge
 │   │   │   ├── DataAndServer
+│   │   │   │   ├── client
+│   │   │   │   │   ├── src
+│   │   │   │   │   │   ├── App.jsx
+│   │   │   │   │   │   ├── index.css
+│   │   │   │   │   │   ├── main.jsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── index.html
+│   │   │   │   │   ├── package.json
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── vite.config.js
+│   │   │   │   ├── server
+│   │   │   │   │   ├── routes
+│   │   │   │   │   │   ├── api.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── .env.example
+│   │   │   │   │   ├── package.json
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── server.js
 │   │   │   │   └── README.md
 │   │   │   ├── Form
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── Field.jsx
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── SignUpForm.jsx
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── validate.js
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── ExercisesXP
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── ErrorBoundary.jsx
+│   │   │   │   │   │   ├── Example1.jsx
+│   │   │   │   │   │   ├── Example2.jsx
+│   │   │   │   │   │   ├── Example3.jsx
+│   │   │   │   │   │   ├── PostList.jsx
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── WebhookPost.jsx
+│   │   │   │   │   ├── data
+│   │   │   │   │   │   ├── complexData.json
+│   │   │   │   │   │   ├── posts.json
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── screens
+│   │   │   │   │   │   ├── HomeScreen.jsx
+│   │   │   │   │   │   ├── ProfileScreen.jsx
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── ShopScreen.jsx
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── .env.example
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   ├── ExercisesXPGold
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── Child.jsx
+│   │   │   │   │   │   ├── ColorWithHooks.jsx
+│   │   │   │   │   │   ├── FavoriteColor.jsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   ├── ExercisesXPNinja
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── PagedPosts.jsx
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── TodoPreview.jsx
+│   │   │   │   │   │   └── UserSearch.jsx
+│   │   │   │   │   ├── hooks
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── useFetch.js
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   ├── UsersAndPosts
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── UserList.jsx
+│   │   │   │   │   │   └── UserPosts.jsx
+│   │   │   │   │   ├── api.js
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day3ReactAdvancedHooks
 │   │   ├── DailyChallenge
 │   │   │   ├── EnhancedTaskManager
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── FilterBar.jsx
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── TaskForm.jsx
+│   │   │   │   │   │   ├── TaskItem.jsx
+│   │   │   │   │   │   └── TaskList.jsx
+│   │   │   │   │   ├── context
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── TaskContext.jsx
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── ExercisesXP
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── CharacterCounter.jsx
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── ThemeSwitcher.jsx
+│   │   │   │   │   │   └── TodoList.jsx
+│   │   │   │   │   ├── context
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── ThemeContext.jsx
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   ├── ExercisesXPGold
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── Cart.jsx
+│   │   │   │   │   │   ├── NoteSaver.jsx
+│   │   │   │   │   │   ├── PreviousValue.jsx
+│   │   │   │   │   │   ├── ProductList.jsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── context
+│   │   │   │   │   │   ├── CartContext.jsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── hooks
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── useLocalStorage.js
+│   │   │   │   │   │   └── usePrevious.js
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   ├── ExercisesXPNinja
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── DebouncedSearch.jsx
+│   │   │   │   │   │   ├── PrimeFinder.jsx
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── RenderCounter.jsx
+│   │   │   │   │   ├── hooks
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── useDebounce.js
+│   │   │   │   │   ├── utils
+│   │   │   │   │   │   ├── primes.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   ├── HeroloAssignment
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── api
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── weather.js
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── ForecastList.jsx
+│   │   │   │   │   │   ├── Header.jsx
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── SearchBar.jsx
+│   │   │   │   │   ├── context
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── WeatherContext.jsx
+│   │   │   │   │   ├── pages
+│   │   │   │   │   │   ├── Favorites.jsx
+│   │   │   │   │   │   ├── Home.jsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── utils
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── weatherCodes.js
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day4MiniProject
 │   │   ├── DailyChallenge
 │   │   │   ├── Calculator
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── utils
+│   │   │   │   │   │   ├── calculate.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── RandomQuoteGenerator
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── QuoteBox.jsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── utils
+│   │   │   │   │   │   ├── random.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   ├── quotes.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   ├── SnapShot
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── api
+│   │   │   │   │   │   ├── pexels.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── Gallery.jsx
+│   │   │   │   │   │   ├── Header.jsx
+│   │   │   │   │   │   ├── Navigation.jsx
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── SearchForm.jsx
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── .env.example
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   └── README.md
 │   │   └── README.md
 │   └── README.md
@@ -1512,67 +2858,448 @@ Indexed files: 1091
 │   ├── Day2ReduxOverviewAndConcepts
 │   │   ├── DailyChallenge
 │   │   │   ├── PlannerApplication
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── DayPicker.jsx
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── TaskForm.jsx
+│   │   │   │   │   │   ├── TaskItem.jsx
+│   │   │   │   │   │   └── TaskList.jsx
+│   │   │   │   │   ├── redux
+│   │   │   │   │   │   ├── dates.js
+│   │   │   │   │   │   ├── plannerReducer.js
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── store.js
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── ExercisesXP
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── ActionHistory.jsx
+│   │   │   │   │   │   ├── Counter.jsx
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── TodoList.jsx
+│   │   │   │   │   ├── redux
+│   │   │   │   │   │   ├── actions.js
+│   │   │   │   │   │   ├── actionTypes.js
+│   │   │   │   │   │   ├── counterReducer.js
+│   │   │   │   │   │   ├── historyReducer.js
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── store.js
+│   │   │   │   │   │   └── todosReducer.js
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   ├── ExercisesXPGold
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── Cart.jsx
+│   │   │   │   │   │   ├── CouponForm.jsx
+│   │   │   │   │   │   ├── ProductList.jsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── data
+│   │   │   │   │   │   ├── products.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── redux
+│   │   │   │   │   │   ├── cartReducer.js
+│   │   │   │   │   │   ├── couponReducer.js
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── selectors.js
+│   │   │   │   │   │   └── store.js
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   ├── ExercisesXPNinja
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── NoteBoard.jsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── redux
+│   │   │   │   │   │   ├── logger.js
+│   │   │   │   │   │   ├── notesReducer.js
+│   │   │   │   │   │   ├── persistence.js
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── store.js
+│   │   │   │   │   │   └── undoable.js
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day3ReduxToolkitAppStructure
 │   │   ├── DailyChallenge
 │   │   │   ├── PlannerApplication
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── app
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── storage.js
+│   │   │   │   │   │   └── store.js
+│   │   │   │   │   ├── features
+│   │   │   │   │   │   ├── planner
+│   │   │   │   │   │   │   ├── dates.js
+│   │   │   │   │   │   │   ├── DayTasks.jsx
+│   │   │   │   │   │   │   ├── plannerSlice.js
+│   │   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   │   └── WeekStrip.jsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── ExercisesXP
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── app
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── store.js
+│   │   │   │   │   ├── features
+│   │   │   │   │   │   ├── counter
+│   │   │   │   │   │   │   ├── Counter.jsx
+│   │   │   │   │   │   │   ├── counterSlice.js
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── todos
+│   │   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   │   ├── Todos.jsx
+│   │   │   │   │   │   │   └── todosSlice.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   ├── ExercisesXPGold
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── app
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── store.js
+│   │   │   │   │   ├── features
+│   │   │   │   │   │   ├── books
+│   │   │   │   │   │   │   ├── BookForm.jsx
+│   │   │   │   │   │   │   ├── BookList.jsx
+│   │   │   │   │   │   │   ├── booksSlice.js
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── filters
+│   │   │   │   │   │   │   ├── filtersSlice.js
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   ├── ExercisesXPNinja
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── app
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── store.js
+│   │   │   │   │   ├── features
+│   │   │   │   │   │   ├── posts
+│   │   │   │   │   │   │   ├── PostItem.jsx
+│   │   │   │   │   │   │   ├── PostsPage.jsx
+│   │   │   │   │   │   │   ├── postsSlice.js
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── users
+│   │   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   │   ├── UserFilter.jsx
+│   │   │   │   │   │   │   └── usersSlice.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day4ReduxToolkitAsync
 │   │   ├── DailyChallenge
 │   │   │   ├── AgeTracker
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── app
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── store.js
+│   │   │   │   │   ├── features
+│   │   │   │   │   │   ├── age
+│   │   │   │   │   │   │   ├── ageSlice.js
+│   │   │   │   │   │   │   ├── AgeTracker.jsx
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── ExercisesXP
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── app
+│   │   │   │   │   │   ├── api.js
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── store.js
+│   │   │   │   │   ├── features
+│   │   │   │   │   │   ├── posts
+│   │   │   │   │   │   │   ├── PostsList.jsx
+│   │   │   │   │   │   │   ├── postsSlice.js
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── users
+│   │   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   │   └── usersSlice.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   ├── ExercisesXPGold
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── app
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── store.js
+│   │   │   │   │   ├── features
+│   │   │   │   │   │   ├── directory
+│   │   │   │   │   │   │   ├── Directory.jsx
+│   │   │   │   │   │   │   ├── directorySlice.js
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   ├── ExercisesXPNinja
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── app
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── store.js
+│   │   │   │   │   ├── features
+│   │   │   │   │   │   ├── todos
+│   │   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   │   ├── TodoApp.jsx
+│   │   │   │   │   │   │   └── todosApi.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day5ReduxMiniProject
 │   │   ├── DailyChallenge
 │   │   │   ├── ProductivityTracker
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── app
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── store.js
+│   │   │   │   │   ├── features
+│   │   │   │   │   │   ├── categories
+│   │   │   │   │   │   │   ├── categoriesSlice.js
+│   │   │   │   │   │   │   ├── CategoryBar.jsx
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── tasks
+│   │   │   │   │   │   │   ├── ProgressPanel.jsx
+│   │   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   │   ├── TaskItem.jsx
+│   │   │   │   │   │   │   ├── TaskList.jsx
+│   │   │   │   │   │   │   └── tasksSlice.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── ExercisesXP
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── app
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── store.js
+│   │   │   │   │   ├── features
+│   │   │   │   │   │   ├── expenses
+│   │   │   │   │   │   │   ├── CategorySummary.jsx
+│   │   │   │   │   │   │   ├── ExpenseForm.jsx
+│   │   │   │   │   │   │   ├── ExpenseList.jsx
+│   │   │   │   │   │   │   ├── expensesSlice.js
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   ├── ExercisesXPGold
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── app
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── store.js
+│   │   │   │   │   ├── data
+│   │   │   │   │   │   ├── questions.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── features
+│   │   │   │   │   │   ├── quiz
+│   │   │   │   │   │   │   ├── Quiz.jsx
+│   │   │   │   │   │   │   ├── quizSlice.js
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   ├── ExercisesXPNinja
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── app
+│   │   │   │   │   │   ├── persist.js
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── store.js
+│   │   │   │   │   ├── features
+│   │   │   │   │   │   ├── board
+│   │   │   │   │   │   │   ├── Board.jsx
+│   │   │   │   │   │   │   ├── boardSlice.js
+│   │   │   │   │   │   │   ├── Column.jsx
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── RemoteLearningRedux
 │   │   ├── Exercises
 │   │   │   ├── EcommerceProductFilter
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── app
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── store.js
+│   │   │   │   │   ├── data
+│   │   │   │   │   │   ├── products.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── features
+│   │   │   │   │   │   ├── filters
+│   │   │   │   │   │   │   ├── FilterPanel.jsx
+│   │   │   │   │   │   │   ├── filtersSlice.js
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── products
+│   │   │   │   │   │   │   ├── ProductGrid.jsx
+│   │   │   │   │   │   │   ├── productsSlice.js
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   ├── MovieCollectionOrganizer
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── app
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── store.js
+│   │   │   │   │   ├── features
+│   │   │   │   │   │   ├── filters
+│   │   │   │   │   │   │   ├── FilterBar.jsx
+│   │   │   │   │   │   │   ├── filtersSlice.js
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── movies
+│   │   │   │   │   │   │   ├── MovieForm.jsx
+│   │   │   │   │   │   │   ├── MovieList.jsx
+│   │   │   │   │   │   │   ├── moviesSlice.js
+│   │   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   ├── TodoListManager
-│   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── app
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── store.js
+│   │   │   │   │   ├── features
+│   │   │   │   │   │   ├── todos
+│   │   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   │   ├── TodoItem.jsx
+│   │   │   │   │   │   │   ├── TodoManager.jsx
+│   │   │   │   │   │   │   └── todosSlice.js
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── index.css
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   └── README.md
 │   │   └── README.md
 │   └── README.md

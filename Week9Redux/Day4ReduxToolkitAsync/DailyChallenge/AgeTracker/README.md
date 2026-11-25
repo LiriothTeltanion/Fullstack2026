@@ -4,19 +4,36 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for Age Tracker">
+<img src="../../../../assets/readme/progress/age-tracker-449779a6f6.svg" width="100%" alt="Progress card for Age Tracker">
 
 </div>
 
-I haven't started this one yet. The code and my notes will go here when I do it.
+An age counter where every click goes through an async thunk. Each thunk waits one second before it changes the age, so I could see the `pending` and `fulfilled` steps and show a spinner in between.
 
-**Status:** to do · Required for the course · 15 XP
+## ▶️ How to run
 
-## 📝 Plan
+```bash
+npm install
+npm run dev
+```
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+## 🎯 The challenge
+
+| Piece | What it does |
+|---|---|
+| `ageUpAsync` | `createAsyncThunk` that waits 1 s and returns `1` |
+| `ageDownAsync` | Same with `-1`, plus a `condition` that cancels it when the age is already 0 |
+| `ageSlice` | `extraReducers` set `loading` on `pending` and add the payload on `fulfilled` |
+| `AgeTracker` | Shows the age and a spinner, and disables both buttons while `loading` is true |
+
+The spinner slows down a lot when the system asks for reduced motion.
+
+## 🧠 What I learned
+
+- `createAsyncThunk` dispatches `pending` and `fulfilled` actions by itself, and the slice handles them in `extraReducers` with the builder
+- The value returned from the thunk becomes `action.payload` in the `fulfilled` case
+- `condition` stops a thunk before anything is dispatched, a nicer guard than checking inside the reducer
+- `reducers: {}` can stay empty when every change comes from thunks
 
 ---
 

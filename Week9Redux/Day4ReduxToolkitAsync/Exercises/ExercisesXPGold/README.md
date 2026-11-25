@@ -4,19 +4,34 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for Exercises XP Gold">
+<img src="../../../../assets/readme/progress/exercises-xp-gold-23b7b4ef3f.svg" width="100%" alt="Progress card for Exercises XP Gold">
 
 </div>
 
-I haven't started this one yet. The code and my notes will go here when I do it.
+A user directory: click a user and their posts load from JSONPlaceholder. Each user's posts are stored by id, so clicking them again later costs no request, and a click on another user cancels a request that is still running.
 
-**Status:** to do · Optional extra · 8 XP
+## ▶️ How to run
 
-## 📝 Plan
+```bash
+npm install
+npm run dev
+```
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+Needs internet access for `jsonplaceholder.typicode.com`.
+
+## 🎯 The challenge
+
+1. **Users thunk.** `fetchUsers` loads the list once, when `usersStatus` is still `idle`.
+2. **Posts per user.** `fetchPostsByUser(userId)` stores results in `postsByUser[userId]` with their own `status`, `items`, `error` and the `requestId` that started them. The reducers read the user id from `action.meta.arg`.
+3. **Cache with `condition`.** The thunk is skipped when that user's posts are already loaded.
+4. **Cancelling.** The effect returns `() => promise.abort()` and the thunk passes `signal` to `fetch`. Results from an older request are ignored because their `requestId` no longer matches.
+
+## 🧠 What I learned
+
+- `action.meta.arg` gives every case reducer the argument the thunk was called with, so one thunk can fill many entries
+- `condition` is a cheap cache: no network call and no actions at all when it returns `false`
+- The promise from `dispatch(thunk())` has an `abort()` method, which fits right into a `useEffect` cleanup
+- Comparing `requestId` matters in development: `StrictMode` runs the effect twice, and the aborted first request must not wipe out the second one
 
 ---
 

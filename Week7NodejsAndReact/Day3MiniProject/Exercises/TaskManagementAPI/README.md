@@ -4,19 +4,49 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for Task Management API">
+<img src="../../../../assets/readme/progress/task-management-api-8db9fe8dfa.svg" width="100%" alt="Progress card for Task Management API">
 
 </div>
 
-Not done yet. This folder is ready for the code, and the README will grow once it works.
+A REST API for tasks that saves everything in `data/tasks.json`, so the tasks survive a restart without a database. It has full CRUD, input checks and clear error messages.
 
-**Status:** to do · Required for the course · 50 XP
+## ▶️ How to run
 
-## 📝 Plan
+```bash
+npm install
+npm run dev
+```
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{"title":"Write the README","description":"How to run and endpoints"}' http://localhost:3000/tasks
+curl -X PUT -H "Content-Type: application/json" -d '{"completed":"yes"}' http://localhost:3000/tasks/2
+curl -X POST -H "Content-Type: application/json" -d '{bad json' http://localhost:3000/tasks
+```
+
+```
+{"id":3,"title":"Write the README","description":"How to run and endpoints","completed":false}
+{"error":"completed must be true or false"}
+{"error":"The request body is not valid JSON"}
+```
+
+## 🎯 The challenge
+
+| Route | What it does |
+|---|---|
+| `GET /tasks` | All tasks from the JSON file |
+| `GET /tasks/:id` | One task or 404 |
+| `POST /tasks` | Needs a non-empty `title`; `description` and `completed` are optional |
+| `PUT /tasks/:id` | Changes only the fields that were sent, with the same type checks |
+| `DELETE /tasks/:id` | Removes the task and saves the file |
+
+`models/taskModel.js` is the only file that touches the disk (`readTasks`, `saveTasks`, `nextId`). The error handler in `server.js` turns broken JSON into a 400 and file problems into a 500.
+
+## 🧠 What I learned
+
+- `fs/promises` with `await` keeps the file code as readable as normal code
+- `new URL("../data/tasks.json", import.meta.url)` finds the file even if I start the server from another folder
+- `nextId()` uses the highest id plus one, so deleting a task never gives two tasks the same id
+- Express throws `entity.parse.failed` for bad JSON, and checking `err.type` lets me answer 400 instead of 500
 
 ---
 

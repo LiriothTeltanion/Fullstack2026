@@ -7,7 +7,11 @@ Note: Delegates all logic to `AnagramChecker`; handles I/O, validation, and form
 from __future__ import annotations
 
 import sys
-from anagramchecker import AnagramChecker, _normalize
+from anagramchecker import BUNDLED_WORDS, AnagramChecker, _normalize
+
+# The banner and messages use emoji; make them safe on Windows consoles.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
 
 
 BANNER = r"""
@@ -21,10 +25,11 @@ def _is_single_alpha_token(s: str) -> bool:
     return bool(s) and (" " not in s) and s.isalpha()
 
 
-def run(wordlist_path: str = "words.txt") -> int:
+def run(wordlist_path: str = str(BUNDLED_WORDS)) -> int:
     checker = AnagramChecker(wordlist_path=wordlist_path)
     if not checker.words:
-        print("Word list not found or empty. Please supply a valid words.txt.")
+        print(f"Word list not found or empty: {wordlist_path}")
+        print("Please supply a valid words.txt (one word per line).")
         return 2
 
     print(BANNER)
@@ -51,6 +56,6 @@ def run(wordlist_path: str = "words.txt") -> int:
         print()
 
 if __name__ == "__main__":
-    # Allow optional path: `python anagrams.py /path/to/words.txt`
-    path = sys.argv[1] if len(sys.argv) > 1 else "words.txt"
+    # Allow optional path: `python anagrams.py /path/to/words.txt` (default: the bundled words.txt)
+    path = sys.argv[1] if len(sys.argv) > 1 else str(BUNDLED_WORDS)
     raise SystemExit(run(path))

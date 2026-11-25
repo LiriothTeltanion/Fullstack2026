@@ -1,0 +1,22 @@
+{
+  "name": "guestbook-fullstack",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Full-stack guestbook: React client served by Express, data in PostgreSQL, deployed on Render.",
+  "scripts": {
+    "dev": "node --watch server/server.js",
+    "dev:client": "npm run dev --prefix client",
+    "build": "npm install --prefix client --include=dev && npm run build --prefix client",
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "knex": "^3.3.0",
+    "pg": "^8.23.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

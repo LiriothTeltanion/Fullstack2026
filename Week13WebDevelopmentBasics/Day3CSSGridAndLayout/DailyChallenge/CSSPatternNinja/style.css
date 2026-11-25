@@ -1,0 +1,167 @@
+/* Gallery-white theme, so the primary colors stand out */
+:root {
+  --paper: #f7f5ef;
+  --ink: #111111;
+  --red: #d62828;
+  --blue: #1d3fa6;
+  --yellow: #f6c90e;
+  --coral: #ff6f59;
+  --muted: #555555;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.top {
+  width: min(1100px, 100% - 2rem);
+  margin: 0 auto;
+  padding: 2.5rem 0 1rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 3rem);
+  letter-spacing: -0.02em;
+}
+
+.top p {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  width: min(1100px, 100% - 2rem);
+  margin: 1.5rem auto 3rem;
+}
+
+.piece {
+  margin: 0;
+}
+
+.piece > div {
+  aspect-ratio: 1;
+  border: 8px solid var(--ink);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+figcaption {
+  margin-top: 0.75rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+code {
+  font-family: Consolas, monospace;
+  color: var(--ink);
+  background: #e9e5da;
+  padding: 0 0.25em;
+}
+
+/* 1. Mondrian: black gaps become the painted lines */
+.mondrian {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr 1fr 0.5fr;
+  grid-template-areas:
+    "red   red   w1"
+    "w2    blue  w3"
+    "yellow w4   w3"
+    "yellow black w5";
+  gap: 8px;
+  background: var(--ink);
+}
+
+/* Every block whose class starts with "m-white" */
+[class^="m-white"] {
+  background: #fbfaf6;
+}
+
+.m-red {
+  grid-area: red;
+  background: var(--red);
+}
+
+.m-white-1 {
+  grid-area: w1;
+}
+
+.m-white-2 {
+  grid-area: w2;
+}
+
+.m-blue {
+  grid-area: blue;
+  background: var(--blue);
+}
+
+.m-white-3 {
+  grid-area: w3;
+}
+
+.m-yellow {
+  grid-area: yellow;
+  background: var(--yellow);
+}
+
+.m-white-4 {
+  grid-area: w4;
+}
+
+.m-black {
+  grid-area: black;
+  background: var(--ink);
+}
+
+.m-white-5 {
+  grid-area: w5;
+}
+
+/* 2. Checkerboard: a conic gradient paints one 2x2 tile, the browser repeats it */
+.checker {
+  background: repeating-conic-gradient(var(--ink) 0 25%, #ffffff 0 50%) 0 0 / 40px 40px;
+  transform: rotate(-4deg);
+}
+
+/* 3. Waves: two circle layers, the second shifted by half a tile */
+.waves {
+  --size: 48px;
+  background:
+    radial-gradient(circle at 50% 0, transparent 60%, #2a6fdb 61%, #2a6fdb 70%, transparent 71%) 0
+      0 / var(--size) var(--size),
+    radial-gradient(circle at 50% 0, transparent 60%, #7fb3ff 61%, #7fb3ff 70%, transparent 71%)
+      calc(var(--size) / 2) calc(var(--size) / 2) / var(--size) var(--size),
+    #eaf2ff;
+}
+
+/* 4. Diagonals: a 6 x 6 grid. Cells 1, 8, 15 ... 36 form one diagonal, 6, 11, 16 ... 31 the other */
+.diagonal {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4px;
+  padding: 4px;
+  background: var(--ink);
+}
+
+.diagonal span {
+  background: #ffffff;
+}
+
+.diagonal span:nth-child(7n + 1) {
+  background: var(--coral);
+}
+
+.diagonal span:nth-child(5n + 6):not(:last-child) {
+  background: var(--blue);
+}

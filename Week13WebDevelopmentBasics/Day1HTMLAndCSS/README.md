@@ -8,7 +8,7 @@
 
 </div>
 
-HTML and CSS. Nothing is done here yet; each folder below is ready for my code.
+HTML and CSS. These are the exercises and challenges for this day.
 
 ## Contents
 

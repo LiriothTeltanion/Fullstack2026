@@ -8,7 +8,7 @@
 
 </div>
 
-Two promise chains in `daily_promises_morse.js`: one upper-cases and sorts a list of words, the other is meant to turn text into Morse code.
+Two promise chains in `daily_promises_morse.js`: one upper-cases and sorts a list of words, the other turns text into Morse code.
 
 ## ▶️ How to run
 
@@ -20,6 +20,20 @@ The third test button resolves with:
 ["APPLE","BANANA","KIWI","MELON","PEAR"]
 ```
 
+Typing `Hi there!` and pressing **Translate** prints one code per line (the space becomes `/`):
+
+```
+....
+..
+/
+-
+....
+.
+.-.
+.
+-.-.--
+```
+
 ## 🎯 The challenge
 
 | Function | What it does |
@@ -28,11 +42,9 @@ The third test button resolves with:
 | `sortWords(arr)` | Resolves with a sorted copy when there are more than 4 words, otherwise rejects |
 | `toJs()` | Parses the `morse` JSON string into an object |
 | `toMorse(morseJS)` | Reads the text box (or asks with `prompt`) and resolves with one code per character, or rejects on an unknown one |
-| `joinWords(morseArr)` | Joins the codes and writes them into `#morseOut` |
+| `joinWords(morseArr)` | Joins the codes with line breaks and writes them into `#morseOut` |
 
 Test 1 rejects (a number in the list), test 2 rejects (only three words), test 3 resolves.
-
-The Morse part is still broken. The `morse` string ends with a `//` comment, which JSON does not allow, so **Translate** always shows `Invalid Morse JSON.`. After that, `joinWords` would join with the text `\n` instead of a real line break.
 
 ## 🧠 What I learned
 

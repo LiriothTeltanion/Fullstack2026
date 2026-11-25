@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Optional JS Exercises</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>Optional JS Exercises</h1>
+      <p class="hint">Type a word or a sentence, pick an exercise and press Run.</p>
+
+      <form id="exercise-form" class="card">
+        <label for="text-input">Text</label>
+        <input id="text-input" type="text" placeholder="Never odd or even" autocomplete="off" />
+
+        <label for="exercise-select">Exercise</label>
+        <select id="exercise-select">
+          <option value="reverse">1. Reverse the text</option>
+          <option value="vowels">2. Count the vowels</option>
+          <option value="capitalize">3. Capitalize every word</option>
+          <option value="longest">4. Longest word</option>
+          <option value="palindrome">5. Palindrome check</option>
+          <option value="chunks">6. Words in groups of 3</option>
+        </select>
+
+        <button type="submit">Run</button>
+      </form>
+
+      <p id="output" class="output" aria-live="polite"></p>
+    </main>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

@@ -8,7 +8,7 @@
 
 </div>
 
-Coding Day. Nothing is done here yet; each folder below is ready for my code.
+Coding Day. These are the exercises and challenges for this day.
 
 ## Contents
 

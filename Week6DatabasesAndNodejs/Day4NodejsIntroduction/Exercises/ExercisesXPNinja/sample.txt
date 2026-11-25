@@ -1,0 +1,5 @@
+Node reads files without blocking the rest of the program.
+A stream reads a file piece by piece, so even a big file fits in memory.
+The readline module turns a stream into lines, one line at a time.
+I count the lines, the words and the words I use the most in this file.
+The file is small, but the same code works for a file of any size.

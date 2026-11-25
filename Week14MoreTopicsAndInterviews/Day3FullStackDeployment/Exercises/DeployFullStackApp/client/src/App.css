@@ -1,0 +1,117 @@
+:root {
+  --bg: #fdfaf4;
+  --card: #ffffff;
+  --text: #292524;
+  --muted: #78716c;
+  --accent: #0f766e;
+  --error: #b91c1c;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  width: min(620px, 100% - 2rem);
+  margin: 3rem auto;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.6rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.error {
+  color: var(--error);
+}
+
+.card {
+  padding: 1.25rem;
+  border: 1px solid #e7e0d4;
+  border-radius: 14px;
+  background: var(--card);
+}
+
+.form {
+  display: grid;
+  gap: 0.9rem;
+  margin: 1.5rem 0 2rem;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #d6cfc3;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 400;
+  resize: vertical;
+}
+
+button {
+  justify-self: start;
+  padding: 0.65rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+}
+
+button.link {
+  padding: 0;
+  background: none;
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-decoration: underline;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: 3px solid #5eead4;
+  outline-offset: 2px;
+}
+
+.messages {
+  display: grid;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.message-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.message-head time {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.messages p {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}

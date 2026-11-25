@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Crumb and Co.: a bakery landing page." />
+    <title>Crumb &amp; Co. · Bakery</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bakery">
+    <header class="bar">
+      <a class="brand" href="index.html">Crumb &amp; Co.</a>
+      <a class="back" href="index.html">All pages</a>
+    </header>
+
+    <main>
+      <!-- Layout 1: two columns for the hero, then three equal columns -->
+      <section class="bakery-hero">
+        <div>
+          <h1>Bread baked before sunrise</h1>
+          <p>Sourdough, challah on Fridays and croissants that sell out by nine.</p>
+          <a class="cta" href="#menu">See the menu</a>
+        </div>
+        <div class="bakery-art" aria-hidden="true">🥖</div>
+      </section>
+
+      <section id="menu" aria-labelledby="menu-title">
+        <h2 id="menu-title">Today's menu</h2>
+        <ul class="menu-grid">
+          <li>
+            <span aria-hidden="true">🍞</span>
+            <h3>Country sourdough</h3>
+            <p>24 ₪</p>
+          </li>
+          <li>
+            <span aria-hidden="true">🥐</span>
+            <h3>Butter croissant</h3>
+            <p>12 ₪</p>
+          </li>
+          <li>
+            <span aria-hidden="true">🥯</span>
+            <h3>Sesame bagel</h3>
+            <p>9 ₪</p>
+          </li>
+          <li>
+            <span aria-hidden="true">🍰</span>
+            <h3>Cheesecake slice</h3>
+            <p>22 ₪</p>
+          </li>
+          <li>
+            <span aria-hidden="true">🥨</span>
+            <h3>Pretzel</h3>
+            <p>10 ₪</p>
+          </li>
+          <li>
+            <span aria-hidden="true">☕</span>
+            <h3>Black coffee</h3>
+            <p>11 ₪</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="foot">Open Sunday to Friday, 06:30 to 14:00.</footer>
+  </body>
+</html>

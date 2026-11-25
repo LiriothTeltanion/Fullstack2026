@@ -42,14 +42,14 @@ games won: 0 games lost: 1
 1. **Concatenate lists**: no `+` allowed, so I copy `a` with `list(a)` and call `.extend(b)` on the copy.
 2. **Multiples of 5 and 7**: every number from 1500 to 2500 where `n % 5 == 0 and n % 7 == 0`.
 3. **Check the index**: looks up a name in a list of game characters (Samus, Cortana, Link…) and prints its first index, or `name not found`.
-4. **Greatest number**: three `int(input())` calls and `max(x, y, z)`.
+4. **Greatest number**: three numbers read with `ask_int()`, which asks again until the answer is a whole number, then `max(x, y, z)`.
 5. **The alphabet**: each letter is checked against `"aeiou"`, so `y` ends up as a consonant.
 6. **Words and letters**: 7 words and one character, then `.find()` tells me the first position in each word or says it isn't there.
 7. **Min, max, sum**: for 1 to 1,000,000. I skipped building a million-item list and used `n * (n + 1) // 2`.
 8. **List and tuple**: splits comma-separated input, strips spaces and prints it as a list and as a tuple.
 9. **Guessing game**: a guess from 1 to 9 against `random.randint(1, 9)`, `q` to quit. Text prints `invalid` and 0 or 10 prints `out of range`; neither counts as a game.
 
-Exercises 3, 4, 6, 8 and 9 ask for input. Exercise 4 has no validation, so typing a word there crashes with `ValueError`.
+Exercises 3, 4, 6, 8 and 9 ask for input. In exercise 4 a word instead of a number prints `Please enter a whole number.` and the same question comes back.
 
 ## 🧠 What I learned
 

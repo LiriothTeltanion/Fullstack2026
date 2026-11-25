@@ -8,12 +8,12 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+The exercises for this day.
 
 ## Contents
 
-- [`CollaborativeStorytellingApp/`](CollaborativeStorytellingApp/): Collaborative Storytelling App: to do (required)
-- [`AdvancedFunctionalities/`](AdvancedFunctionalities/): Advanced Functionalities: to do (optional)
+- [`CollaborativeStorytellingApp/`](CollaborativeStorytellingApp/): Collaborative Storytelling App: shared stories, React + TS client and Express JWT API
+- [`AdvancedFunctionalities/`](AdvancedFunctionalities/): Advanced Functionalities: refresh-token rotation, roles and a login limiter in TypeScript
 
 ---
 

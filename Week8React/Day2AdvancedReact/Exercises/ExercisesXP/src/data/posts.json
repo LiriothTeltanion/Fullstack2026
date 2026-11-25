@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "Learning React",
+    "content": "Components are just functions that return JSX."
+  },
+  {
+    "id": 2,
+    "title": "Props and state",
+    "content": "Props come from the parent, state belongs to the component."
+  },
+  {
+    "id": 3,
+    "title": "Routing",
+    "content": "React Router swaps components without reloading the page."
+  }
+]

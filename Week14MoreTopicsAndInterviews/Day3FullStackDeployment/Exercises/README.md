@@ -8,11 +8,11 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+A full-stack guestbook deployed as one Render service with PostgreSQL.
 
 ## Contents
 
-- [`DeployFullStackApp/`](DeployFullStackApp/): Deploy a Full-stack App: to do (optional)
+- [`DeployFullStackApp/`](DeployFullStackApp/): Deploy a Full-stack App: a guestbook where Express serves React and stores notes in PostgreSQL
 
 ---
 

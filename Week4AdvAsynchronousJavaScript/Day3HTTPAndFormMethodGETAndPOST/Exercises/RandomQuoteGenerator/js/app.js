@@ -194,5 +194,6 @@ btnNext.addEventListener("click", () => showFiltered(filteredPos + 1));
 
 /** ------- Initial render ------- */
 render(0);
+lastIndex = 0; // quote 0 is on screen, so the first Generate Quote picks another one
 updateFilterStatus();
 metrics.textContent = "";

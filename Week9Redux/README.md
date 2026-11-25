@@ -8,7 +8,7 @@
 
 </div>
 
-Redux and Redux Toolkit, from the basic concepts to async logic. I haven't reached this week yet, so every folder is ready but empty.
+Redux and Redux Toolkit, from slices and the store to async thunks. 19 exercises in total.
 
 ## Contents
 

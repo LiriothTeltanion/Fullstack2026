@@ -8,11 +8,11 @@
 
 </div>
 
-Demo Day. Nothing is done here yet; each folder below is ready for my code.
+My outline for presenting the capstone on Demo Day.
 
 ## Contents
 
-- [`DemoDayPresentation/`](DemoDayPresentation/): Demo Day: to do (optional)
+- [`DemoDayPresentation/`](DemoDayPresentation/): Demo Day: 5-minute talk and live demo outline
 
 ---
 

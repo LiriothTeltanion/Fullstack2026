@@ -8,14 +8,14 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+Components, props and events, practised in four small Vite apps.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/): Exercises XP: to do (required)
-- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: to do (optional)
-- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: to do (optional)
-- [`ErrorBoundary/`](ErrorBoundary/): Error Boundary: to do (optional)
+- [`ExercisesXP/`](ExercisesXP/): Exercises XP: props, state, events and a first useEffect
+- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: lifting state up: likes, accordion, temperature converter
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: tabs, hover star rating and a mouse tracker
+- [`ErrorBoundary/`](ErrorBoundary/): Error Boundary: three crash simulations caught by error boundaries
 
 ---
 

@@ -8,13 +8,13 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+Knex practice on PostgreSQL, from CRUD models to migrations and seeds.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/): Exercises XP: to do (required)
-- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: to do (optional)
-- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: to do (optional)
+- [`ExercisesXP/`](ExercisesXP/): Exercises XP: blog and books CRUD on PostgreSQL with Knex models
+- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: joins, sums, ILIKE search and a stock transaction
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: Knex migrations, seeds and an authors and books API
 
 ---
 

@@ -4,19 +4,58 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for Optional JS Exercises">
+<img src="../../../../assets/readme/progress/optional-js-exercises-bef4a26f1e.svg" width="100%" alt="Progress card for Optional JS Exercises">
 
 </div>
 
-I haven't started this one yet. The code and my notes will go here when I do it.
+Six string exercises with a small page around them. The functions live in [`js/exercises.js`](js/exercises.js) and never touch the DOM, so the page and a terminal demo share the same code.
 
-**Status:** to do · Optional extra · 20 XP
+## ▶️ How to run
 
-## 📝 Plan
+The page loads its script as an ES module, which browsers block on `file://`, so I serve the folder:
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+```bash
+python -m http.server 8000
+```
+
+Then open `http://localhost:8000`, type a sentence, pick an exercise and press **Run**. To see every function at once in the terminal:
+
+```bash
+node js/demo.js
+```
+
+```
+1. reverseString: tpircSavaJ
+2. countVowels: 11
+3. capitalizeWords: The Quick Brown Fox Jumps Over The Lazy Dog
+4. longestWord: quick
+5. isPalindrome: true false
+6. chunkWords: [
+  [ 'the', 'quick', 'brown', 'fox' ],
+  [ 'jumps', 'over', 'the', 'lazy' ],
+  [ 'dog' ]
+]
+```
+
+## 🎯 The challenge
+
+| Function | What it does |
+|---|---|
+| `reverseString(text)` | Builds the string backwards with a `for` loop, no `.reverse()` |
+| `countVowels(text)` | Counts `a e i o u` after `toLowerCase()` |
+| `capitalizeWords(text)` | Uppercases the first letter of every word and lowercases the rest |
+| `longestWord(text)` | Returns the longest word; on a tie the first one wins (`quick` beats `brown` and `jumps`) |
+| `isPalindrome(text)` | Removes everything except letters and digits, then compares with the reversed text |
+| `chunkWords(text, size)` | Splits the words into groups with `slice()` |
+
+[`js/app.js`](js/app.js) maps each `<option>` value to a function in a `runners` object and writes the answer into an `aria-live` paragraph.
+
+## 🧠 What I learned
+
+- Keeping the functions free of `document` let me run the same file in Node with `demo.js`
+- `<script type="module">` needs a server, which is why double-clicking `index.html` showed nothing
+- An object of functions (`runners[select.value]`) replaced a six-branch `if` chain
+- `replace(/[^a-z0-9]/g, "")` is what makes "Never odd or even" count as a palindrome
 
 ---
 

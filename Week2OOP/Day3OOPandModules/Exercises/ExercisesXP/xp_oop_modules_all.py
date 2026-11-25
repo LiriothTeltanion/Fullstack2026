@@ -168,7 +168,7 @@ def generate_users(n):
     for _ in range(n):
         user = {
             "name": fake.name(),                                  # 🪪 Fake full name
-            "address": fake.address().replace("\\n", ", "),       # 🏠 One-line address
+            "address": fake.address().replace("\n", ", "),        # 🏠 One-line address
             "language_code": fake.language_code()                 # 🗣️ e.g., 'en', 'he'
         }
         users.append(user)

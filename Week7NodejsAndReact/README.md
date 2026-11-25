@@ -8,7 +8,7 @@
 
 </div>
 
-Express routes and middleware, SQL query builders, then the first steps in React. I haven't reached this week yet, so every folder is ready but empty.
+Express routes and middleware, SQL query builders, then the first steps in React. Every exercise folder has its code and a README on how to run it.
 
 ## Contents
 

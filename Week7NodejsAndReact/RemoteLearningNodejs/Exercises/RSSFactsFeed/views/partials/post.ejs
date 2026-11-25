@@ -1,0 +1,8 @@
+<article class="post">
+  <h2><a href="<%= post.link %>" target="_blank" rel="noopener"><%= post.title %></a></h2>
+  <p class="date"><%= post.date %></p>
+  <p><%= post.summary %></p>
+  <% if (post.categories.length) { %>
+    <p class="tags"><% post.categories.forEach((category) => { %><span><%= category %></span><% }) %></p>
+  <% } %>
+</article>

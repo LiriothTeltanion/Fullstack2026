@@ -4,19 +4,36 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for Exercises XP Ninja">
+<img src="../../../../assets/readme/progress/exercises-xp-ninja-42f647a6da.svg" width="100%" alt="Progress card for Exercises XP Ninja">
 
 </div>
 
-Still on my list. When I solve it, the solution and how to run it go in this folder.
+Six multi-table questions on `dvdrental` in [xp_ninja_dvdrental.sql](xp_ninja_dvdrental.sql), each one walking through three to five tables.
 
-**Status:** to do · Optional extra · 4 XP
+## ▶️ How to run
 
-## 📝 Plan
+Only on the `dvdrental` sample database:
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+```bash
+psql -d dvdrental -f xp_ninja_dvdrental.sql
+```
+
+## 🎯 The challenge
+
+| Query | Question | Tables |
+|---|---|---|
+| 1 | Top 5 categories by number of rentals | `category`, `film_category`, `inventory`, `rental` |
+| 2 | Revenue per store | `payment`, `rental`, `inventory` |
+| 3 | Customers who rented from at least 15 different categories (`COUNT(DISTINCT ...)`) | `customer`, `rental`, `inventory`, `film_category` |
+| 4 | Pairs of actors in at least 6 films together | `film_actor` joined with itself, then `actor` twice |
+| 5 | Each customer's latest rental with `ROW_NUMBER() OVER (PARTITION BY ...)` | `rental`, `customer`, `inventory`, `film` |
+| 6 | Late returns: kept more days than `rental_duration` | `rental`, `inventory`, `film` |
+
+## 🧠 What I learned
+
+- In the self-join, `fa2.actor_id > fa1.actor_id` keeps each pair once and skips an actor paired with himself
+- A window function numbers rows inside each customer, and `rn = 1` picks the newest
+- Casting timestamps with `::date` and subtracting gives whole days, which is what `rental_duration` counts
 
 ---
 

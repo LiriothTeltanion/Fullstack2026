@@ -1,0 +1,134 @@
+/* Synthwave colors on top of Bootstrap's dark theme */
+:root {
+  --pink: #ff2e97;
+  --cyan: #2de2e6;
+  --night: #0d0221;
+}
+
+body {
+  background-color: var(--night);
+}
+
+.navbar-glass {
+  background: rgba(13, 2, 33, 0.75);
+  backdrop-filter: blur(8px);
+}
+
+.neon-text {
+  color: #fff;
+  text-shadow:
+    0 0 8px var(--pink),
+    0 0 24px var(--pink);
+}
+
+.letter-wide {
+  letter-spacing: 0.3em;
+  color: var(--cyan);
+}
+
+/* Hero: a sun made with a striped gradient, and a perspective grid floor */
+.cover {
+  position: relative;
+  min-height: 100vh;
+  padding: 6rem 0 4rem;
+  overflow: hidden;
+  background: linear-gradient(180deg, #0d0221 0%, #261447 55%, #541388 100%);
+}
+
+.cover::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 30%;
+  width: min(420px, 80vw);
+  aspect-ratio: 1;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  /* Top layer: thin dark stripes. Bottom layer: the yellow-to-pink sun. */
+  background:
+    repeating-linear-gradient(180deg, transparent 0 18px, #261447 18px 22px),
+    linear-gradient(180deg, #ffd319, #ff2975);
+  opacity: 0.45;
+}
+
+/* Keep the hero text above the sun and the grid */
+.cover > .container {
+  z-index: 1;
+}
+
+.cover::after {
+  content: "";
+  position: absolute;
+  left: -50%;
+  right: -50%;
+  bottom: 0;
+  height: 35%;
+  background:
+    linear-gradient(transparent 95%, var(--cyan) 95%) 0 0 / 100% 40px,
+    linear-gradient(90deg, transparent 97%, var(--cyan) 97%) 0 0 / 60px 100%;
+  transform: perspective(300px) rotateX(60deg);
+  transform-origin: bottom;
+  opacity: 0.5;
+  animation: grid-scroll 3s linear infinite;
+}
+
+@keyframes grid-scroll {
+  to {
+    background-position:
+      0 40px,
+      0 0;
+  }
+}
+
+.btn-neon {
+  --bs-btn-bg: var(--pink);
+  --bs-btn-border-color: var(--pink);
+  --bs-btn-color: #fff;
+  --bs-btn-hover-bg: #e0157d;
+  --bs-btn-hover-border-color: #e0157d;
+  --bs-btn-hover-color: #fff;
+  box-shadow: 0 0 18px rgba(255, 46, 151, 0.55);
+}
+
+.artist-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 160px;
+  padding: 1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(45, 226, 230, 0.35);
+  background: linear-gradient(160deg, rgba(255, 46, 151, 0.25), rgba(45, 226, 230, 0.1));
+}
+
+.artist-card span {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.artist-card small {
+  color: var(--cyan);
+}
+
+.schedule {
+  background: #140534;
+}
+
+.schedule .table {
+  --bs-table-bg: transparent;
+}
+
+.ticket {
+  background: #160733;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.ticket-vip {
+  border: 2px solid var(--pink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cover::after {
+    animation: none;
+  }
+}

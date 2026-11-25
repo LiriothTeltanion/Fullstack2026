@@ -8,11 +8,11 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+The remote-learning TypeScript set, nine short exercises in one file.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/): Exercises XP: to do (optional)
+- [`ExercisesXP/`](ExercisesXP/): nine first TypeScript exercises, from typed functions to rest parameters
 
 ---
 

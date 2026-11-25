@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A login page built with HTML form validation and CSS." />
+    <title>Log in · Study Hub</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="card">
+      <div class="brand" aria-hidden="true">SH</div>
+      <h1>Welcome back</h1>
+      <p class="subtitle">Log in to Study Hub to continue your lessons.</p>
+
+      <!-- This page has no server: app.js stops the submit and shows a message instead -->
+      <form id="login-form" class="form">
+        <label for="email">Email</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          autocomplete="email"
+          placeholder="you@example.com"
+          required
+        />
+
+        <label for="password">Password</label>
+        <div class="password-row">
+          <input
+            id="password"
+            name="password"
+            type="password"
+            autocomplete="current-password"
+            minlength="8"
+            required
+            aria-describedby="password-hint"
+          />
+          <button type="button" id="toggle-password" class="toggle" aria-pressed="false">
+            Show
+          </button>
+        </div>
+        <p id="password-hint" class="hint">At least 8 characters.</p>
+
+        <div class="row">
+          <label class="checkbox"><input type="checkbox" name="remember" /> Remember me</label>
+          <a href="#" class="link">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="submit">Log in</button>
+        <p id="message" class="message" role="status" aria-live="polite"></p>
+      </form>
+
+      <p class="signup">New here? <a href="#" class="link">Create an account</a></p>
+    </main>
+  </body>
+</html>

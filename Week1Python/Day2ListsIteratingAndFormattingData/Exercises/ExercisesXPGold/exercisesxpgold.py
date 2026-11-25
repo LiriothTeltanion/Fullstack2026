@@ -68,11 +68,20 @@ def exercise_3_check_index() -> None:
 
 
 # Exercise 4: Greatest Number
+def ask_int(prompt: str) -> int:
+    """Keep asking until the user types a whole number."""
+    while True:
+        try:
+            return int(input(prompt))
+        except ValueError:
+            print("Please enter a whole number.")
+
+
 def exercise_4_greatest_number() -> None:
     """Find the maximum of three user-provided numbers."""
-    x = int(input("Enter 1st number: "))
-    y = int(input("Enter 2nd number: "))
-    z = int(input("Enter 3rd number: "))
+    x = ask_int("Enter 1st number: ")
+    y = ask_int("Enter 2nd number: ")
+    z = ask_int("Enter 3rd number: ")
     print("The greatest number is:", max(x, y, z))
 
 

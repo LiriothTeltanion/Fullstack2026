@@ -1,0 +1,23 @@
+### Works with the VS Code "REST Client" extension. The login cookie is kept between requests.
+@base = http://localhost:5000/api
+
+### Register
+POST {{base}}/auth/register
+Content-Type: application/json
+
+{ "username": "kevin", "email": "kevin@example.com", "password": "superSecret1" }
+
+### Login (sets the httpOnly "token" cookie and also returns the token)
+POST {{base}}/auth/login
+Content-Type: application/json
+
+{ "username": "kevin", "password": "superSecret1" }
+
+### Who am I? (protected)
+GET {{base}}/auth/me
+
+### All users (protected)
+GET {{base}}/users
+
+### Logout
+POST {{base}}/auth/logout

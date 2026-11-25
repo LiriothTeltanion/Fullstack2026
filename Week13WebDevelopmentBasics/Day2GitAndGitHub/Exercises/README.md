@@ -8,12 +8,12 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+A shop with a working cart and a login form, both plain HTML, CSS and a little JavaScript.
 
 ## Contents
 
-- [`ShoppingWebsite/`](ShoppingWebsite/): Shopping Website: to do (required)
-- [`LoginPage/`](LoginPage/): Login Page: to do (optional)
+- [`ShoppingWebsite/`](ShoppingWebsite/): Shopping Website: a music gear shop with filters and a cart saved in localStorage
+- [`LoginPage/`](LoginPage/): Login Page: a login form with built-in validation and a show-password button
 
 ---
 

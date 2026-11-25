@@ -8,7 +8,7 @@
 
 </div>
 
-Extra topics (AWS S3, JWT, deploying with Render) and interview prep. I haven't reached this week yet, so every folder is ready but empty.
+Extra topics: file uploads to S3, JWT with the PERN stack, deploying on Render and a meme generator. 5 exercises in total.
 
 ## Contents
 

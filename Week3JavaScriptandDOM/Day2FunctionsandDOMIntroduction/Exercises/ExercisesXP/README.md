@@ -26,7 +26,7 @@ Sum: 5313
 2. **Shopping List**: `myBill()` adds up the price of each item that is in stock and takes 1 off its stock. Apples are at 0, so the total is `$5.5`.
 3. **What's in my wallet?**: `changeEnough(price, [quarters, dimes, nickels, pennies])` gives `true`, `false`, `true` for the three samples.
 4. **Vacations Costs**: `hotelCost`, `planeRideCost` (London 183, Paris 220, anywhere else 300) and `rentalCarCost` (40 a day, 5% off after 10 days). `totalVacationCost()` asks for every value and keeps asking until the answer is valid.
-5. **Users**: rename `Pete` to `Richard`, remove `Sarah`, rename the first item of each list to `Kevin`, add classes and styles, then alert `Hello Kevin and Kevin`. There is still a bug here: the "hide Dan" step looks in the first list, but Dan is in the second one, so he stays visible.
+5. **Users**: rename `Pete` to `Richard`, remove `Sarah`, rename the first item of each list to `Kevin`, hide `Dan` (he is in the second list), add classes and styles, then alert `Hello Kevin and Kevin`.
 6. **Change the navbar**: change the id to `socialNetworkNavigation`, add a `Logout` item and print the text of the first and last links.
 7. **My Book List**: render two books with a 100px cover. A book I already read gets red text.
 

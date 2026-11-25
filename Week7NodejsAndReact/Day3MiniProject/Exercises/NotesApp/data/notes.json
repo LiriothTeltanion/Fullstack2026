@@ -1,0 +1,8 @@
+[
+  {
+    "id": 1,
+    "title": "Express static files",
+    "body": "express.static(\"public\") serves the page, the API lives under /api.",
+    "updatedAt": "2026-11-25T09:00:00.000Z"
+  }
+]

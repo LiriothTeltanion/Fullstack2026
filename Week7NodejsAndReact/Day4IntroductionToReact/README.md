@@ -8,7 +8,7 @@
 
 </div>
 
-Introduction to React. Nothing is done here yet; each folder below is ready for my code.
+Introduction to React. JSX, props and lists, a landing page and a carousel, all on Vite.
 
 ## Contents
 

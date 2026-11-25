@@ -8,7 +8,7 @@
 
 </div>
 
-Self-learning week on HTML, CSS, Git, CSS Grid and Bootstrap. I haven't reached this week yet, so every folder is ready but empty.
+Self-learning week on HTML, CSS, Git, CSS Grid, Bootstrap and animation. 17 exercises in total.
 
 ## Contents
 

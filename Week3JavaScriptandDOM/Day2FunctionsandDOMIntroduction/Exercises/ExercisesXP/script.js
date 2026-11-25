@@ -204,9 +204,9 @@ function ex5() {
   div.style.backgroundColor = "lightblue";
   div.style.padding = "10px";
 
-  // Hide the <li> that contains the text node “Dan” (last <li> of first <ul> originally)
-  const liDan = firstList.querySelector("li:last-child");
-  if (liDan && /dan/i.test(liDan.textContent)) liDan.style.display = "none";
+  // Hide the <li> that contains the text node “Dan” (it lives in the second <ul>)
+  const liDan = [...secondList.querySelectorAll("li")].find(li => li.textContent.trim() === "Dan");
+  if (liDan) liDan.style.display = "none";
 
   // Add a border to the <li> that contains “Richard” (second <li> of the first <ul> after rename)
   const liRichard = firstList.querySelector("li:nth-child(2)");

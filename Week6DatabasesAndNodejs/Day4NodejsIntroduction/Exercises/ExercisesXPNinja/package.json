@@ -1,0 +1,12 @@
+{
+  "name": "day4-node-xp-ninja",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "words": "node word-count.js sample.txt",
+    "tree": "node tree.js .",
+    "logger": "node use-logger.js",
+    "countdown": "node countdown.js 3"
+  }
+}

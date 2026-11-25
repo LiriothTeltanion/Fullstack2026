@@ -1,0 +1,16 @@
+{
+  "name": "rss-facts-feed",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.0",
+    "ejs": "^7.0.2",
+    "express": "^4.21.2",
+    "rss-parser": "^3.13.0"
+  }
+}

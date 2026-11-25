@@ -8,7 +8,7 @@
 
 </div>
 
-Multiple Components and Events. Nothing is done here yet; each folder below is ready for my code.
+Multiple Components and Events. These are the exercises and challenges for this day.
 
 ## Contents
 

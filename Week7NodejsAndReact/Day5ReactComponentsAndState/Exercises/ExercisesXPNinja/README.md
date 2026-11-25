@@ -4,19 +4,40 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for Exercises XP Ninja">
+<img src="../../../../assets/readme/progress/exercises-xp-ninja-8f96f995dd.svg" width="100%" alt="Progress card for Exercises XP Ninja">
 
 </div>
 
-I haven't started this one yet. The code and my notes will go here when I do it.
+A random quote machine. Every click shows a new programming quote and paints the page in a new color, and neither the quote nor the color repeats twice in a row.
 
-**Status:** to do · Optional extra · 4 XP
+## ▶️ How to run
 
-## 📝 Plan
+```bash
+npm install
+npm run dev
+```
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+Open the address Vite prints (usually http://localhost:5173).
+
+## 🎯 The challenge
+
+| File | What it does |
+|---|---|
+| `quotes.js` | Six quotes with their authors and six colors |
+| `randomPick.js` | `randomOtherIndex(length, current)` picks a random index that is not the current one |
+| `App.jsx` | Keeps `quoteIndex`, `colorIndex` and a `seen` counter in state; `nextQuote()` updates all three |
+| `components/QuoteBox.jsx` | Shows the quote and author in the current color and the "New quote" button |
+
+The background, text and button fade between colors with CSS transitions, which are turned off for reduced motion.
+
+I checked `randomOtherIndex` with 1000 picks in a row: 0 repeats, and with a list of one item it returns 0 instead of looping forever.
+
+## 🧠 What I learned
+
+- Storing indexes instead of whole quote objects keeps the state small
+- `useState(() => ...)` runs the random start only once, not on every render
+- The `while` loop needed the `length < 2` guard, or a one-item list would never finish
+- A color in state can drive inline styles in several components at once
 
 ---
 

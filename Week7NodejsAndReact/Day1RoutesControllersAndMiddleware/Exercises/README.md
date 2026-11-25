@@ -8,13 +8,13 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+Three Express servers, from a first router up to my own rate limiter.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/): Exercises XP: to do (required)
-- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: to do (optional)
-- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: to do (optional)
+- [`ExercisesXP/`](ExercisesXP/): Exercises XP: home and about pages, todo and books APIs with controllers
+- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: validation, API key, 404 and error-handling middleware
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: my own rate limiter, query paging and router.param()
 
 ---
 

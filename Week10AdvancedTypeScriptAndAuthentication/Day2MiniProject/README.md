@@ -8,7 +8,7 @@
 
 </div>
 
-Mini-project. Nothing is done here yet; each folder below is ready for my code.
+Mini-project. These are the exercises and challenges for this day.
 
 ## Contents
 

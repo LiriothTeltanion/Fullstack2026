@@ -4,19 +4,37 @@
 
 <img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
 
-<img src="../../../../assets/readme/progress/not-started.svg" width="100%" alt="Progress card for Productivity Tracker">
+<img src="../../../../assets/readme/progress/productivity-tracker-724252d0dd.svg" width="100%" alt="Progress card for Productivity Tracker">
 
 </div>
 
-Not done yet. This folder is ready for the code, and the README will grow once it works.
+A task tracker grouped by category, with a progress bar for each category. The filtering and the percentages come from memoized selectors, and the list rows use `memo` with `useCallback` handlers.
 
-**Status:** to do · Required for the course · 15 XP
+## ▶️ How to run
 
-## 📝 Plan
+```bash
+npm install
+npm run dev
+```
 
-- [ ] Read the task on the course platform and write it down in my own words
-- [ ] Write the code in this folder
-- [ ] Fill in How to run, The challenge, Tests and What I learned, like the finished exercises
+## 🎯 The challenge
+
+| Piece | What it does |
+|---|---|
+| `categoriesSlice` | Three starting categories, `categoryAdded` and `categorySelected` (the filter, `"all"` by default) |
+| `tasksSlice` | `taskAdded(title, categoryId)`, `taskToggled`, `taskEdited`, `taskDeleted` |
+| `selectVisibleTasks` | Tasks of the selected category, built with `createSelector` |
+| `selectCompletedCount` | Done tasks among the visible ones |
+| `selectProgressByCategory` | `{ name, total, done, percent }` for every category |
+| `TaskList` + `TaskItem` | The add form (with a category menu when "All" is selected) and memoized rows |
+| `ProgressPanel` | One `role="progressbar"` bar per category |
+
+## 🧠 What I learned
+
+- A selector can combine data from two slices, which is how the tasks get filtered by a category chosen in another slice
+- `memo` alone didn't help until the handlers were wrapped in `useCallback`, because a new arrow function counts as a new prop
+- `selectCompletedCount` builds on `selectVisibleTasks`, so the header count always follows the filter
+- Guarding the division (`own.length ? … : 0`) keeps an empty category at 0 % instead of `NaN`
 
 ---
 

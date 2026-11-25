@@ -8,7 +8,7 @@
 
 </div>
 
-React Components and State. Nothing is done here yet; each folder below is ready for my code.
+React Components and State. useState, events, controlled forms, useEffect and a voting app.
 
 ## Contents
 

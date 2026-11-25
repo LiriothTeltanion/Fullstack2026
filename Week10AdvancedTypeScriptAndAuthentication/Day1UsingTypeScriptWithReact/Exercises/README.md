@@ -8,13 +8,13 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+The exercises for this day.
 
 ## Contents
 
-- [`ExercisesXP/`](ExercisesXP/): Exercises XP: to do (required)
-- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: to do (optional)
-- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: to do (optional)
+- [`ExercisesXP/`](ExercisesXP/): Exercises XP: typed props, state, lists and form events
+- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: typed reducer, theme context and useLocalStorage<T>
+- [`ExercisesXPNinja/`](ExercisesXPNinja/): Exercises XP Ninja: generic sortable table, select and a type guard
 
 ---
 

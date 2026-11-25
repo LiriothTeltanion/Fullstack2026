@@ -8,11 +8,11 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+An Express API and a React site set up to deploy on Render.
 
 ## Contents
 
-- [`DeployReactAndNode/`](DeployReactAndNode/): Deploy React and Node with Render: to do (optional)
+- [`DeployReactAndNode/`](DeployReactAndNode/): Deploy React and Node with Render: an Express API and a React static site described in render.yaml
 
 ---
 

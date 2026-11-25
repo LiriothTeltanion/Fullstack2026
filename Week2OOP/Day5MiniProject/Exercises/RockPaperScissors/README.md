@@ -42,9 +42,12 @@ The computer's pick is random, so your result will vary.
   | `get_game_result(user, computer)` | `"win"`, `"loss"` or `"draw"`, using a dict of what beats what |
   | `play()` | One round: both picks, the printed result, and the result returned |
 
-- [`rockpaperscissors.py`](rockpaperscissors.py) is the menu: play, show the scores, or quit with a summary of wins, losses and draws
+- [`rockpaperscissors.py`](rockpaperscissors.py) is the menu: play, show the scores, or quit with a summary of wins, losses and draws. "Show scores" and quitting share `print_results()`; only quitting passes `final=True`, which prints `=== Final Results ===` and `Thanks for playing!`
 
-A small quirk: "Show scores" reuses the same `print_results()` as quitting, so it prints `=== Final Results ===` and `Thanks for playing!` even though the game goes on.
+```text
+=== Scores so far ===
+Wins: 0  |  Losses: 1  |  Draws: 0
+```
 
 ## 🧠 What I learned
 

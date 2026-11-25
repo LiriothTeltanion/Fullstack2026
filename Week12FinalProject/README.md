@@ -8,7 +8,7 @@
 
 </div>
 
-Finishing the capstone project and presenting it on Demo Day. I haven't reached this week yet, so every folder is ready but empty.
+The capstone starter and my Demo Day presentation. 2 exercises in total.
 
 ## Contents
 

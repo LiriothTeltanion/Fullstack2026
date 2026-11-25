@@ -1,0 +1,194 @@
+/* Clean light CV. The page is one grid with named areas. */
+:root {
+  --page: #eef1f5;
+  --paper: #ffffff;
+  --side: #1e2a3a;
+  --side-text: #dbe4ef;
+  --text: #1f2933;
+  --muted: #5f6b7a;
+  --accent: #0f766e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: clamp(0rem, 3vw, 2rem);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  line-height: 1.55;
+  color: var(--text);
+  background: var(--page);
+}
+
+/* Phone: one column, the sidebar goes under the header */
+.cv {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "side"
+    "main";
+  max-width: 980px;
+  margin: 0 auto;
+  background: var(--paper);
+  box-shadow: 0 10px 30px rgba(31, 41, 51, 0.12);
+}
+
+/* Wider screens: sidebar on the left, header across the top */
+@media (min-width: 760px) {
+  .cv {
+    grid-template-columns: 280px 1fr;
+    grid-template-areas:
+      "header header"
+      "side   main";
+  }
+}
+
+.cv-header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 2rem;
+  border-bottom: 4px solid var(--accent);
+}
+
+.initials {
+  display: grid;
+  place-items: center;
+  width: 84px;
+  height: 84px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+}
+
+.role {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.cv-side {
+  grid-area: side;
+  padding: 1.5rem 2rem;
+  background: var(--side);
+  color: var(--side-text);
+}
+
+.cv-main {
+  grid-area: main;
+  padding: 1.5rem 2rem 2rem;
+}
+
+h2 {
+  margin: 1.25rem 0 0.5rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.cv-side h2 {
+  color: #5eead4;
+}
+
+.cv-side section:first-child h2,
+.cv-main section:first-child h2 {
+  margin-top: 0;
+}
+
+.plain {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.plain li {
+  margin-bottom: 0.3rem;
+}
+
+.cv-side a {
+  color: #fff;
+  word-break: break-all;
+}
+
+a:focus-visible {
+  outline: 3px solid #5eead4;
+  outline-offset: 2px;
+}
+
+/* Skill chips wrap on their own with a small auto grid */
+.chips {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chips li {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #3b4c63;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border-left: 3px solid #d5dde6;
+}
+
+.entry h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.where {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.entry p:last-child {
+  margin: 0.25rem 0 0;
+}
+
+/* Print as a clean one-page CV */
+@media print {
+  body {
+    padding: 0;
+    background: #fff;
+  }
+
+  .cv {
+    box-shadow: none;
+    grid-template-columns: 220px 1fr;
+    grid-template-areas:
+      "header header"
+      "side   main";
+  }
+
+  .cv-side {
+    background: #f3f5f8;
+    color: var(--text);
+  }
+
+  .cv-side a {
+    color: var(--text);
+  }
+}

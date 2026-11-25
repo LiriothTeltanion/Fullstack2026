@@ -18,9 +18,8 @@ Open `index.html` in a browser (or use `npm run dev` from the repo root and open
 
 - `myMove()` first clears an animation that is already running, so two intervals never stack.
 - It reads where the box is now with `getComputedStyle` and works out the limit: container width minus box width (400 − 50 = 350px).
+- If the box is already at the edge, it jumps back to `left: 0` so the next click slides it again.
 - `setInterval(..., 1)` adds 1px to `left` each tick and clears itself once the box reaches the limit.
-
-Unlike the Day 3 version, this one doesn't reset to the left. The box stays at the edge, so a second click there does nothing.
 
 ## 🧠 What I learned
 

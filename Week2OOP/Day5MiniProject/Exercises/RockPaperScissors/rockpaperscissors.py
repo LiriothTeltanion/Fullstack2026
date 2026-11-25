@@ -24,14 +24,15 @@ def get_user_menu_choice() -> str:
     return picked
 
 
-def print_results(results: Dict[str, int]) -> None:
-    """Pretty-print the score dictionary. 🧾"""
+def print_results(results: Dict[str, int], final: bool = False) -> None:
+    """Pretty-print the score dictionary. The goodbye lines only show when quitting. 🧾"""
     wins = results.get("win", 0)
     losses = results.get("loss", 0)
     draws = results.get("draw", 0)
-    print("\n=== Final Results ===")
+    print("\n=== Final Results ===" if final else "\n=== Scores so far ===")
     print(f"Wins: {wins}  |  Losses: {losses}  |  Draws: {draws}")
-    print("Thanks for playing! 🙏")
+    if final:
+        print("Thanks for playing! 🙏")
 
 
 def main() -> None:
@@ -45,7 +46,7 @@ def main() -> None:
         elif choice == "s":
             print_results(results)
         elif choice == "q":
-            print_results(results)
+            print_results(results, final=True)
             break
 
 

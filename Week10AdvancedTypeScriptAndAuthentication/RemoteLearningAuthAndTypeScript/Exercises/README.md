@@ -8,11 +8,11 @@
 
 </div>
 
-The exercises for this day. None of them are done yet.
+The exercises for this day.
 
 ## Contents
 
-- [`AuthenticationProject/`](AuthenticationProject/): Authentication and TypeScript Project: to do (optional)
+- [`AuthenticationProject/`](AuthenticationProject/): Authentication and TypeScript Project: login and a protected profile with a typed auth context
 
 ---
 

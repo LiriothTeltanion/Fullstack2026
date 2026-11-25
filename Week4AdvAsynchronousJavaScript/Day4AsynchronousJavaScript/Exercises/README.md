@@ -13,7 +13,7 @@ One XP set with three promise exercises.
 ## Contents
 
 - [`ExercisesXP/`](ExercisesXP/): `compareToTen`, a promise that waits 4 seconds, and `Promise.resolve` / `Promise.reject`
-- [`ExercisesXPGold/`](ExercisesXPGold/): Exercises XP Gold: to do (optional)
+- [`ExercisesXPGold/`](ExercisesXPGold/): sequential vs parallel waits, a timeout, `allSettled` and retry
 
 ---
 

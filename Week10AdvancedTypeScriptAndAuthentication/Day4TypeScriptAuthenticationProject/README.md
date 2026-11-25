@@ -8,7 +8,7 @@
 
 </div>
 
-TypeScript and Authentication Project. Nothing is done here yet; each folder below is ready for my code.
+TypeScript and Authentication Project. These are the exercises and challenges for this day.
 
 ## Contents
 

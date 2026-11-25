@@ -1,0 +1,29 @@
+# Render Blueprint: a free PostgreSQL database and one Node web service that
+# serves both the API and the built React files. Create it with New > Blueprint
+# and set the Blueprint path to this file. rootDir is relative to the repo root.
+databases:
+  - name: guestbook-db
+    plan: free
+    databaseName: guestbook
+    user: guestbook
+
+services:
+  - type: web
+    name: guestbook
+    runtime: node
+    plan: free
+    rootDir: Week14MoreTopicsAndInterviews/Day3FullStackDeployment/Exercises/DeployFullStackApp
+    # Installs the server packages, then builds React into client/dist
+    buildCommand: npm install && npm run build
+    # server.js runs the Knex migrations before it starts listening
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: guestbook-db
+          property: connectionString

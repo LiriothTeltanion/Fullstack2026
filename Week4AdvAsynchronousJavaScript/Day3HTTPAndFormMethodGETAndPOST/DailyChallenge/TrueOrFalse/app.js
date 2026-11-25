@@ -61,7 +61,8 @@ function parseToken(token) {
 const rawInput = document.getElementById("rawInput");
 const customOutput = document.getElementById("customOutput");
 document.getElementById("runCustom").addEventListener("click", () => {
-  const parts = rawInput.value.split(",");
+  // Skip empty pieces (like after a trailing comma): Number("") would turn them into 0
+  const parts = rawInput.value.split(",").filter(part => part.trim() !== "");
   const values = parts.map(parseToken);
 
   const result = allTruthy(...values);

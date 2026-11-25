@@ -8,7 +8,7 @@
 
 </div>
 
-SQL Query Builder. Nothing is done here yet; each folder below is ready for my code.
+SQL Query Builder. Knex on PostgreSQL: models, joins, transactions, migrations and a login with bcrypt.
 
 ## Contents
 

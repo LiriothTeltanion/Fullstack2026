@@ -1,0 +1,13 @@
+{
+  "name": "day5-web-server-xp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "ex1": "node ex1-hello-server.js",
+    "ex2": "node ex2-html-server.js",
+    "ex3": "node ex3-json-routes.js",
+    "ex4": "node ex4-static-page.js",
+    "ex5": "node ex5-date-server.js"
+  }
+}

@@ -15,6 +15,12 @@ function myMove() {
   let pos = parseInt(getComputedStyle(box).left, 10) || 0;
   const max = container.clientWidth - box.clientWidth; // 400 - 50 = 350
 
+  // Already at the edge: go back to the left and slide again
+  if (pos >= max) {
+    pos = 0;
+    box.style.left = "0px";
+  }
+
   moveInterval = setInterval(() => {
     if (pos >= max) {
       clearInterval(moveInterval);

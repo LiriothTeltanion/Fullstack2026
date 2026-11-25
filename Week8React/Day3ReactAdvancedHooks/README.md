@@ -8,7 +8,7 @@
 
 </div>
 
-React Advanced Hooks. Nothing is done here yet; each folder below is ready for my code.
+React Advanced Hooks. These are the exercises and challenges for this day.
 
 ## Contents
 

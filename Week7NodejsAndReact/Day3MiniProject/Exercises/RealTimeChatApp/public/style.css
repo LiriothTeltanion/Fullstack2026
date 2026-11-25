@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: system-ui, sans-serif;
+  background: #0b1029;
+  color: #f8fafc;
+}
+
+.panel {
+  width: min(94vw, 560px);
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: #1e293b;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#messages {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem;
+  height: 50vh;
+  overflow-y: auto;
+  background: #0f172a;
+  border-radius: 10px;
+}
+
+#messages li {
+  margin: 0.35rem 0;
+}
+
+.system {
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.time {
+  color: #64748b;
+  font-size: 0.8rem;
+}
+
+#message-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+input {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #475569;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-radius: 8px;
+  background: #06b6d4;
+  color: #0b1029;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#typing {
+  min-height: 1.2em;
+  margin: 0;
+  color: #67e8f9;
+  font-size: 0.85rem;
+}

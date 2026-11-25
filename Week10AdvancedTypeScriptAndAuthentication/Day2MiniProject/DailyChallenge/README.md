@@ -8,11 +8,11 @@
 
 </div>
 
-The daily challenges for this day. None of them are done yet.
+The daily challenges for this day.
 
 ## Contents
 
-- [`GenericData/`](GenericData/): Generic Data: to do (required)
+- [`GenericData/`](GenericData/): Generic Data: one DataFetcher<T> for users, posts and todos
 
 ---
 

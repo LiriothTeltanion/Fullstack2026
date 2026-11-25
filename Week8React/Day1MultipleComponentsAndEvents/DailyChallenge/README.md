@@ -8,11 +8,11 @@
 
 </div>
 
-The daily challenges for this day. None of them are done yet.
+One form built with the container and presentational pattern.
 
 ## Contents
 
-- [`FormContainer/`](FormContainer/): Form Container: to do (required)
+- [`FormContainer/`](FormContainer/): Form Container: container and presentational travel form with a query string
 
 ---
 
