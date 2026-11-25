@@ -1,5 +1,5 @@
 import { randomUUID } from "node:crypto";
-import { db, pool, usePostgres } from "./db.js";
+import { db, pool, usePostgres, tables } from "./db.js";
 
 const lifetime = 7 * 24 * 60 * 60 * 1000;
 function newSession(userId) {
@@ -10,11 +10,10 @@ export async function createRefreshSession(userId) {
   const item = newSession(userId);
   if (!usePostgres) db.refreshSessions.set(item.id, item);
   else
-    await pool.query("INSERT INTO refresh_sessions (id, user_id, expires_at) VALUES ($1, $2, $3)", [
-      item.id,
-      userId,
-      item.expiresAt,
-    ]);
+    await pool.query(
+      `INSERT INTO ${tables.refresh_sessions} (id, user_id, expires_at) VALUES ($1, $2, $3)`,
+      [item.id, userId, item.expiresAt]
+    );
   return item;
 }
 
@@ -32,7 +31,7 @@ export async function rotateRefreshSession(id) {
   try {
     await client.query("BEGIN");
     const current = await client.query(
-      "SELECT * FROM refresh_sessions WHERE id = $1 AND expires_at > CURRENT_TIMESTAMP FOR UPDATE",
+      `SELECT * FROM ${tables.refresh_sessions} WHERE id = $1 AND expires_at > CURRENT_TIMESTAMP FOR UPDATE`,
       [id]
     );
     if (!current.rows.length) {
@@ -40,9 +39,9 @@ export async function rotateRefreshSession(id) {
       return undefined;
     }
     const replacement = newSession(current.rows[0].user_id);
-    await client.query("DELETE FROM refresh_sessions WHERE id = $1", [id]);
+    await client.query(`DELETE FROM ${tables.refresh_sessions} WHERE id = $1`, [id]);
     await client.query(
-      "INSERT INTO refresh_sessions (id, user_id, expires_at) VALUES ($1, $2, $3)",
+      `INSERT INTO ${tables.refresh_sessions} (id, user_id, expires_at) VALUES ($1, $2, $3)`,
       [replacement.id, replacement.userId, replacement.expiresAt]
     );
     await client.query("COMMIT");
@@ -57,5 +56,5 @@ export async function rotateRefreshSession(id) {
 
 export async function deleteRefreshSession(id) {
   if (!usePostgres) db.refreshSessions.delete(id);
-  else await pool.query("DELETE FROM refresh_sessions WHERE id = $1", [id]);
+  else await pool.query(`DELETE FROM ${tables.refresh_sessions} WHERE id = $1`, [id]);
 }

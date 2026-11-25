@@ -1,11 +1,11 @@
 /** @typedef {import("../../shared/types").Story} PublicStory */
-import { db, pool, usePostgres } from "./db.js";
+import { db, pool, usePostgres, tables } from "./db.js";
 import { findUserById } from "./userModel.js";
 
 async function fromRow(row) {
   if (!row) return undefined;
   const result = await pool.query(
-    "SELECT user_id FROM story_contributors WHERE story_id = $1 ORDER BY user_id",
+    `SELECT user_id FROM ${tables.story_contributors} WHERE story_id = $1 ORDER BY user_id`,
     [row.id]
   );
   return {
@@ -21,21 +21,23 @@ async function fromRow(row) {
 
 export async function listStories() {
   if (!usePostgres) return [...db.stories].sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
-  const result = await pool.query("SELECT * FROM stories ORDER BY updated_at DESC, id DESC");
+  const result = await pool.query(
+    `SELECT * FROM ${tables.stories} ORDER BY updated_at DESC, id DESC`
+  );
   return Promise.all(result.rows.map(fromRow));
 }
 
 export async function findStory(id) {
   if (!Number.isSafeInteger(id) || id < 1) return undefined;
   if (!usePostgres) return db.stories.find(story => story.id === id);
-  const result = await pool.query("SELECT * FROM stories WHERE id = $1", [id]);
+  const result = await pool.query(`SELECT * FROM ${tables.stories} WHERE id = $1`, [id]);
   return fromRow(result.rows[0]);
 }
 
 export async function createStory({ title, content, authorId }) {
   if (usePostgres) {
     const result = await pool.query(
-      "INSERT INTO stories (title, content, author_id) VALUES ($1, $2, $3) RETURNING *",
+      `INSERT INTO ${tables.stories} (title, content, author_id) VALUES ($1, $2, $3) RETURNING *`,
       [title, content, authorId]
     );
     return fromRow(result.rows[0]);
@@ -60,7 +62,7 @@ export async function updateStory(story, changes) {
     return story;
   }
   const result = await pool.query(
-    "UPDATE stories SET title = $1, content = $2, updated_at = CURRENT_TIMESTAMP WHERE id = $3 RETURNING *",
+    `UPDATE ${tables.stories} SET title = $1, content = $2, updated_at = CURRENT_TIMESTAMP WHERE id = $3 RETURNING *`,
     [changes.title ?? story.title, changes.content ?? story.content, story.id]
   );
   const updated = await fromRow(result.rows[0]);
@@ -78,7 +80,7 @@ export async function deleteStory(id) {
     db.contributors = db.contributors.filter(item => item.storyId !== id);
     return;
   }
-  await pool.query("DELETE FROM stories WHERE id = $1", [id]);
+  await pool.query(`DELETE FROM ${tables.stories} WHERE id = $1`, [id]);
 }
 
 export async function inviteContributor(story, userId) {
@@ -90,7 +92,7 @@ export async function inviteContributor(story, userId) {
     return story;
   }
   const result = await pool.query(
-    "INSERT INTO story_contributors (story_id, user_id) VALUES ($1, $2) ON CONFLICT DO NOTHING RETURNING user_id",
+    `INSERT INTO ${tables.story_contributors} (story_id, user_id) VALUES ($1, $2) ON CONFLICT DO NOTHING RETURNING user_id`,
     [story.id, userId]
   );
   if (!result.rows.length) {
@@ -128,7 +130,7 @@ export async function toPublicStory(story) {
 export async function listContributors(storyId) {
   if (usePostgres) {
     const result = await pool.query(
-      "SELECT c.id, c.user_id, u.username FROM story_contributors c JOIN users u ON u.id = c.user_id WHERE c.story_id = $1 ORDER BY c.id",
+      `SELECT c.id, c.user_id, u.username FROM ${tables.story_contributors} c JOIN ${tables.users} u ON u.id = c.user_id WHERE c.story_id = $1 ORDER BY c.id`,
       [storyId]
     );
     return result.rows.map(row => ({ id: row.id, userId: row.user_id, username: row.username }));
@@ -146,14 +148,14 @@ export async function listContributors(storyId) {
 
 export async function findContributor(id) {
   if (!usePostgres) return db.contributors.find(item => item.id === id);
-  const result = await pool.query("SELECT * FROM story_contributors WHERE id = $1", [id]);
+  const result = await pool.query(`SELECT * FROM ${tables.story_contributors} WHERE id = $1`, [id]);
   const row = result.rows[0];
   return row && { id: row.id, userId: row.user_id, storyId: row.story_id };
 }
 
 export async function removeContributor(item) {
   if (usePostgres) {
-    await pool.query("DELETE FROM story_contributors WHERE id = $1", [item.id]);
+    await pool.query(`DELETE FROM ${tables.story_contributors} WHERE id = $1`, [item.id]);
   } else {
     db.contributors = db.contributors.filter(row => row.id !== item.id);
     const story = db.stories.find(row => row.id === item.storyId);

@@ -79,3 +79,53 @@ For separate frontend and backend hosts, forward the frontend's /api path to the
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 Week 10 Day 4 - TypeScript and Authentication Project - Mini Project
+
+## Hosted demo and reproducible deployment
+
+Live demo: [Collaborative Storytelling](https://fullstack2026-storytelling.vercel.app). The [API health endpoint](https://fullstack2026-storytelling-api.vercel.app/api/health) checks database connectivity. These Vercel deployments are a working demo; the course's separate Render Web Service and Static Site deployment remains pending verification. No Render URL is claimed here yet.
+
+The repository-relative exercise root is:
+
+```text
+Week10AdvancedTypeScriptAndAuthentication/Day4TypeScriptAuthenticationProject/Exercises/CollaborativeStorytellingApp
+```
+
+| Service         | Root relative to the exercise | Install / build           | Start / publish                                 |
+| --------------- | ----------------------------- | ------------------------- | ----------------------------------------------- |
+| Express backend | `server`                      | `npm ci --omit=dev`       | `npm start` (`node server.js`), provider `PORT` |
+| React frontend  | `client`                      | `npm ci && npm run build` | Static directory `dist`                         |
+
+On Render, prefix each root above with the full exercise path. Enable access to files outside the frontend root because `client/src` imports `../shared/types.ts` relative to the client project. On Vercel this is `sourceFilesOutsideRootDirectory: true`. The frontend production build uses TypeScript followed by Vite.
+
+The browser always calls relative `/api/*` URLs. Forward those paths to the backend **before** the SPA fallback, preserving the complete `/api` path and request cookies. For example, Render Static Site rules should list `/api/*` → `https://<this-app-backend>.onrender.com/api/*` as a rewrite, then `/*` → `/index.html` as a rewrite. Replace only the dedicated backend placeholder after verifying its URL. The checked-in [Vercel configuration](client/vercel.json) points to this app's verified Vercel backend. The frontend needs no database or signing secrets.
+
+Backend environment names:
+
+- `NODE_ENV=production`, `STORAGE_MODE=postgres`, `DATABASE_SCHEMA=storytelling`.
+- `DATABASE_URL`: a dedicated restricted PostgreSQL login through the transaction pooler; never an administrative connection.
+- `JWT_SECRET` and `SESSION_SECRET`: independent long random signing secrets kept in the hosting secret store.
+- `DATABASE_SSL=true` and, when required by the provider certificate chain, `DATABASE_CA_CERT` containing the official CA PEM. Certificate verification stays enabled. `NODE_EXTRA_CA_CERTS` is also supported by Node itself; `PGSSLROOTCERT` is not read by this application.
+- `TRUST_PROXY=1` only behind the provider's trusted HTTPS ingress; `PORT` comes from the host.
+
+Initialize a fresh database with an owner connection using `npm run db:setup`; it creates tables inside the validated `DATABASE_SCHEMA` in one transaction. Then deploy with a separate runtime login. The hosted private schema uses RLS plus narrowly scoped grants: users are selectable/insertable, story and HTTP-session rows support their normal CRUD operations, contributor and refresh rows support select/insert/delete, and refresh IDs allow row locking for atomic rotation. Runtime roles cannot create schema objects, delete users, or provision credentials. Public database API roles have no access to this schema. API routes enforce author/collaborator permissions for each signed-in user.
+
+HTTP/CSRF sessions persist in PostgreSQL across backend instances and restarts; refresh sessions also persist there. Cookies are HttpOnly, Secure in production, and SameSite=Strict, so same-origin forwarding is required. Expired HTTP sessions are rejected immediately. Automatic pruning timers are disabled for serverless compatibility; database-owner maintenance can periodically remove expired `http_sessions` rows. Request rate limits are per process, not a global distributed quota.
+
+Both hosting demos and the dedicated database use verified free plans. Free quotas and provider suspension/cold starts still apply; this is a coursework demo, not an uptime guarantee. Never enable a paid upgrade to reproduce it without a separate spending decision.
+
+## Verification
+
+```sh
+cd server
+npm ci
+npm test
+npm audit
+cd ../client
+npm ci
+npm run build
+npm audit
+```
+
+The server tests exercise the real session-store SQL against disposable embedded PostgreSQL (PGlite), including database close/reopen persistence, expiry, touch, deletion and explicit pruning. They never use a configured `DATABASE_URL`. Separate deployment QA verified real TLS PostgreSQL connections and HTTPS registration/login, story creation, author/collaborator restrictions, refresh rotation/replay rejection, deletion and logout. This bounded QA does not establish availability or load capacity.
+
+Built with AI-assisted tooling; I reviewed, tested and can explain every change.
