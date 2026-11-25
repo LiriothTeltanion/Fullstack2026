@@ -1,77 +1,14 @@
 # 🎮 Hangman Game# 🎮 Hangman Game# 🎮 Mini-Project #2 — Hangman (Python) ✨
 
-<!-- NOVA:ULTIMATE:START -->
-<div align="center">
-
-<img src="../../../../assets/readme/nova-folder-pulse.svg" width="100%" alt="Animated NOVA learning pulse">
-
-### Hangman
-
-<img src="../../../../assets/readme/progress/hangman-b986853f16.svg" width="100%" alt="Readiness status for Hangman">
-
-**Goal:** Build and test a state-driven word game with input validation and reusable domain logic.
-
-</div>
-
-## 🧭 NOVA Folder Guide
-
-| Metric | Value |
-|---|---:|
-| Readiness | **80%** |
-| Files | 6 |
-| Source files | 4 |
-| Test files | 0 |
-| Text lines | 974 |
-
-### ▶️ Main paths
-
-- `Week1Python/Day5MiniProject/Exercises/Hangman/main.py`
-
-### 🚀 Run
-
-```bash
-python Week1Python/Day5MiniProject/Exercises/Hangman/main.py
-```
-
-### 🟢 What is already strong
-
-- ✅ README documentation is generated and repeatable.
-- ✅ Contains 4 source file(s) across practical exercises or projects.
-- ✅ No Python syntax error was detected in this folder tree.
-- ✅ A likely runnable entry point was detected.
-
-### 🟠 What to improve next
-
-- ⚠️ No local unit test is present yet; repository-wide syntax checks still cover the sources.
-
-### 🧪 Validation
-
-```bash
-python tools/nova_quality_gate.py --repo . --strict
-python -m unittest discover -s tests/python -p "test_*.py" -v
-node tools/run_node_tests.mjs .
-```
-
-> The readiness value is a transparent repository heuristic, not a course grade and not proof that every interactive or external-API exercise was executed.
-
-<sub>Managed by NOVA Ultimate v2.0.0 · 2026-07-15T06:22:49+03:00</sub>
-<!-- NOVA:ULTIMATE:END -->
-
 **Author:** Kevin Cusnir "Lirioth"  
 
 **Course:** Fullstack Bootcamp 2026  
 
 **Last Updated:** October 19, 2025A fully playable terminal-based Hangman game implementing conditionals, loops, functions, and modular programming concepts.Learn and practice **Conditionals, Loops, Functions, and Modules** by building a fully playable **Hangman** game in the terminal.  
 
-
-
 A fully playable terminal-based Hangman game implementing conditionals, loops, functions, and modular programming concepts. Learn and practice **Conditionals, Loops, Functions, and Modules** by building a complete **Hangman** game in the terminal.English-only code & comments ✅ — Emoji-rich README ✅ — Simple to run ✅
 
-
-
 ## 📊 Quick Stats## 📊 Quick Stats
-
-
 
 | Metric | Value |## 📂 Structure
 
@@ -115,11 +52,7 @@ A fully playable terminal-based Hangman game implementing conditionals, loops, f
 
 - [🎯 Extension Ideas](#-extension-ideas)## 🚀 Run
 
-
-
 ## 🎯 Learning ObjectivesBy completing this project, you will:```bash
-
-
 
 By completing this project, you will:python3 main.py
 
@@ -139,15 +72,9 @@ By completing this project, you will:python3 main.py
 
 - ✅ **Handle edge cases** like repeated guesses and invalid input- ✅ **Practice OOP principles** with the `HangmanGame` class- Wrong? A new body part is added (6 total).  
 
-
-
 ---- ✅ **Master input validation** accepting only single letters- No repeated guesses allowed.  
 
-
-
 ## 📂 Project Structure- ✅ **Work with ASCII art** for visual feedback- Spaces and punctuation in phrases are shown as-is.  
-
-
 
 ```
 
@@ -200,8 +127,6 @@ cd Exercises/Hangman
 python main.py## 🚀 How to RunIncludes the starter list (e.g., `correction`, `python`, `credit card`, `south`, etc.). You can add more in `src/words.py`.
 
 ```
-
-
 
 ### What You'll See
 
@@ -341,11 +266,7 @@ Round 7: Word: "pytho*" → Guess 'n' → "python" ✅ 🎉 YOU WIN!| **Import e
 
 ---| **Repeated guess allowed** | Verify `guessed` set is tracking correctly in `game.py` |
 
-
-
 ## 🏗️ Code Architecture## 🎓 Concepts Demonstrated
-
-
 
 ### Data Flow Diagram1. **Object-Oriented Programming**
 
@@ -427,7 +348,7 @@ class HangmanGame:- ✅ **Full type hints** on all functions and methods
 
         **Kevin Cusnir 'Lirioth'**  
 
-    def is_lost() -> bool:Repository: [Fullstack2026](https://github.com/Lirioth/Fullstack2026)  
+    def is_lost() -> bool:Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 
         """Check if 6 wrong guesses reached"""Week 1 Day 5 - Mini Project
 
@@ -438,7 +359,6 @@ class HangmanGame:- ✅ **Full type hints** on all functions and methods
         """Return ASCII art for current wrong count"""
 
 ```*Have fun and happy hacking!* ✨🐍
-
 
 ### Module Interactions
 
@@ -762,7 +682,7 @@ This project demonstrates professional coding practices:
 ---
 
 **Author:** Kevin Cusnir "Lirioth"  
-**Repository:** [Fullstack2026](https://github.com/Lirioth/Fullstack2026)  
+**Repository:** [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 **Week 1 Day 5** - Mini Project - Hangman
 
 ---

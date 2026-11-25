@@ -6,6 +6,14 @@ does not reinterpret early work as production-ready code.
 
 ## [Unreleased]
 
+### Removed
+
+- Stopped publishing local planning notes, review records, generated audit
+  reports, the README generator and its unused progress graphics. They stay on
+  Kevin's machines; earlier commits keep the published history.
+- Removed the generated folder-guide blocks from folder READMEs. Folders that
+  only had the generated block now list their contents and run commands.
+
 ### Added
 
 - Added source-safe Week 1 Day 1 evidence records and focused regression suites
@@ -17,6 +25,9 @@ does not reinterpret early work as production-ready code.
 
 ### Changed
 
+- Renamed `tools/nova_quality_gate.py` to `tools/quality_gate.py`.
+- Translated the Week 2 Day 4 exercises README to English and pointed old
+  repository links at `github.com/LiriothTeltanion`.
 - Synchronized the root, Week 1, Day 1, Exercises, XP, Gold, Ninja, and Daily
   guides around the same dated evidence boundary while preserving the July 2026
   readiness metrics, explanatory text, and underlying generated assets as

@@ -30,7 +30,7 @@ The example is a proposed intake pattern, not an official project architecture.
 
 - [ ] Confirm whether Week 12 continues the Week 11 project and capture the exact requirements.
 - [ ] Record final milestones, presentation, deployment, and submission evidence separately.
-- [ ] Preserve Kevin's authored work and disclose material AI assistance.
+- [ ] Preserve Kevin's authored work and credit any outside contribution.
 - [ ] Verify accessibility, responsive behavior, security boundaries, tests, and build.
 - [ ] Document known limitations and a reproducible demo path.
 - [ ] Promote to `portfolio` only after the bounded release evidence exists.

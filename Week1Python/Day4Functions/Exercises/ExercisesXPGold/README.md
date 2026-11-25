@@ -1,77 +1,14 @@
 # 🥈 Exercises XP Gold - Advanced Function Techniques# 🥇 Exercises XP Gold - Advanced Function Techniques# 🥈 XP Gold — Functions (Short & Simple)
 
-<!-- NOVA:ULTIMATE:START -->
-<div align="center">
-
-<img src="../../../../assets/readme/nova-folder-pulse.svg" width="100%" alt="Animated NOVA learning pulse">
-
-### Exercises XPGold
-
-<img src="../../../../assets/readme/progress/exercises-xpgold-0aa5d263c3.svg" width="100%" alt="Readiness status for Exercises XPGold">
-
-**Goal:** Reinforce the lesson with intermediate scenarios, validation, and stronger edge-case handling.
-
-</div>
-
-## 🧭 NOVA Folder Guide
-
-| Metric | Value |
-|---|---:|
-| Readiness | **80%** |
-| Files | 3 |
-| Source files | 1 |
-| Test files | 0 |
-| Text lines | 770 |
-
-### ▶️ Main paths
-
-- `Week1Python/Day4Functions/Exercises/ExercisesXPGold/xpgoldfunctions.py`
-
-### 🚀 Run
-
-```bash
-python Week1Python/Day4Functions/Exercises/ExercisesXPGold/xpgoldfunctions.py
-```
-
-### 🟢 What is already strong
-
-- ✅ README documentation is generated and repeatable.
-- ✅ Contains 1 source file(s) across practical exercises or projects.
-- ✅ No Python syntax error was detected in this folder tree.
-- ✅ A likely runnable entry point was detected.
-
-### 🟠 What to improve next
-
-- ⚠️ No local unit test is present yet; repository-wide syntax checks still cover the sources.
-
-### 🧪 Validation
-
-```bash
-python tools/nova_quality_gate.py --repo . --strict
-python -m unittest discover -s tests/python -p "test_*.py" -v
-node tools/run_node_tests.mjs .
-```
-
-> The readiness value is a transparent repository heuristic, not a course grade and not proof that every interactive or external-API exercise was executed.
-
-<sub>Managed by NOVA Ultimate v2.0.0 · 2026-07-15T06:22:49+03:00</sub>
-<!-- NOVA:ULTIMATE:END -->
-
 **Author:** Kevin Cusnir "Lirioth"  
 
 **Course:** Fullstack Bootcamp 2026  
 
 **Last Updated:** October 19, 2025Three challenging exercises covering age calculation, mathematical series, and statistical simulation with dice.This repo contains a tiny Python script solving **three function-based exercises**:
 
-
-
 Three challenging exercises covering age calculation with datetime, mathematical series summation, and statistical simulation with dice rolling.
 
-
-
 ## 📊 Quick Stats## 📊 Quick Stats1) **⏰ When will I retire?**  
-
-
 
 - **⏰ Duration**: 60-90 minutes   - Hard-coded today: **2025-09-16** (as the exercise requests).  
 
@@ -129,15 +66,11 @@ By completing these exercises, you will:
 
 **Difficulty**: 🟡 Intermediate
 
-
-
 **Retirement Rules**:
 
 - **Men**: Retire at age 67## 🚀 Quick Start## 🚀 How to run
 
 - **Women**: Retire at age 62
-
-
 
 **Task**:
 
@@ -150,8 +83,6 @@ By completing these exercises, you will:
 4. Get user input: gender (m/f) and date of birth (yyyy/mm/dd)
 
 5. Display retirement eligibilitypython xpgoldfunctions.py```
-
-
 
 **Expected Output**:```
 
@@ -175,15 +106,11 @@ You cannot retire yet.
 
 ```Calculate age and retirement eligibility (men: 67, women: 62)## Example session (one possible run)
 
-
-
 **Solution Approach**:
 
 ```python
 
 from datetime import date### 2️⃣ Series Sum 🧮```
-
-
 
 def get_age(year, month, day):Calculate X + XX + XXX + XXXX (e.g., 3 + 33 + 333 + 3333 = 3702)=== Exercise 1 ===
 
@@ -235,8 +162,6 @@ def get_age(year, month, day):Calculate X + XX + XXX + XXXX (e.g., 3 + 33 + 333 
 
 ```
 
-
-
 def can_retire(gender, dob):---
 
     """
@@ -249,7 +174,7 @@ def can_retire(gender, dob):---
 
         gender (str): 'm' for male, 'f' for female
 
-        dob (str): Date of birth in 'yyyy/mm/dd' format**Repository**: [Fullstack2026](https://github.com/Lirioth/Fullstack2026)  > - Retirement ages used: men 67, women 62 (as stated in the prompt).
+        dob (str): Date of birth in 'yyyy/mm/dd' format**Repository**: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  > - Retirement ages used: men 67, women 62 (as stated in the prompt).
 
         
 
@@ -268,7 +193,6 @@ def can_retire(gender, dob):---
         return age >= 62
     else:
         raise ValueError("Gender must be 'm' or 'f'")
-
 
 # Main execution
 gender = input("Gender (m/f): ")
@@ -391,7 +315,6 @@ def series_sum(x):
     #     total += int(str(x) * i)
     # return total
 
-
 # Main execution
 x = int(input("Enter a digit X: "))
 result = series_sum(x)
@@ -489,7 +412,6 @@ def throw_dice():
     """
     return random.randint(1, 6)
 
-
 def throw_until_doubles():
     """
     Throw two dice until they show the same number.
@@ -507,7 +429,6 @@ def throw_until_doubles():
         if die1 == die2:
             return throws
 
-
 def main():
     """Run 100 trials and calculate statistics."""
     trials = 100
@@ -524,7 +445,6 @@ def main():
     # Display results
     print(f"Total throws: {total_throws}")
     print(f"Average throws to reach doubles: {average:.2f}")
-
 
 # Run the simulation
 if __name__ == "__main__":
@@ -725,5 +645,5 @@ python xpgoldfunctions.py
 ---
 
 **Author:** Kevin Cusnir "Lirioth"  
-**Repository:** [Fullstack2026](https://github.com/Lirioth/Fullstack2026)  
+**Repository:** [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 **Week 1 Day 4** - Functions - Exercises XP Gold

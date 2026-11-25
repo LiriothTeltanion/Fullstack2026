@@ -37,12 +37,6 @@
 
 - <!-- Link evidence or write "NOT APPLICABLE". -->
 
-## AI assistance
-
-<!-- Describe material AI assistance accurately, or write "None". -->
-
-- <!-- Describe assistance or write "None". -->
-
 ## Creative signature
 
 `Lirioth Teltanion` / `@LiriothTeltanion`

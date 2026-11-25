@@ -1,142 +1,81 @@
 # 🛠️ Day 4 Exercises - Python File I/O, JSON and API
 
-<!-- NOVA:ULTIMATE:START -->
-<div align="center">
+## 🎯 Exercise Goals
 
-<img src="../../../assets/readme/nova-folder-pulse.svg" width="100%" alt="Animated NOVA learning pulse">
-
-### Exercises
-
-<img src="../../../assets/readme/progress/exercises-6b1d3135e0.svg" width="100%" alt="Readiness status for Exercises">
-
-**Goal:** Build resilient asynchronous flows with HTTP requests, loading states, validation, and error handling.
-
-</div>
-
-## 🧭 NOVA Folder Guide
-
-| Metric | Value |
-|---|---:|
-| Readiness | **80%** |
-| Files | 17 |
-| Source files | 7 |
-| Test files | 0 |
-| Text lines | 1,027 |
-
-### ▶️ Main paths
-
-- `Week2OOP/Day4PythonFileIOJSONandAPI/Exercises/ExercisesXP/xp_files_json_all.py`
-- `Week2OOP/Day4PythonFileIOJSONandAPI/Exercises/ExercisesXPGold/giphyexercises.py`
-- `Week2OOP/Day4PythonFileIOJSONandAPI/Exercises/ExercisesXPGold/menueditor.py`
-
-### 🚀 Run
-
-```bash
-python Week2OOP/Day4PythonFileIOJSONandAPI/Exercises/ExercisesXP/xp_files_json_all.py
-python Week2OOP/Day4PythonFileIOJSONandAPI/Exercises/ExercisesXPGold/giphyexercises.py
-python Week2OOP/Day4PythonFileIOJSONandAPI/Exercises/ExercisesXPGold/menueditor.py
-```
-
-### 🟢 What is already strong
-
-- ✅ README documentation is generated and repeatable.
-- ✅ Contains 7 source file(s) across practical exercises or projects.
-- ✅ No Python syntax error was detected in this folder tree.
-- ✅ A likely runnable entry point was detected.
-
-### 🟠 What to improve next
-
-- ⚠️ No local unit test is present yet; repository-wide syntax checks still cover the sources.
-
-### 🧪 Validation
-
-```bash
-python tools/nova_quality_gate.py --repo . --strict
-python -m unittest discover -s tests/python -p "test_*.py" -v
-node tools/run_node_tests.mjs .
-```
-
-> The readiness value is a transparent repository heuristic, not a course grade and not proof that every interactive or external-API exercise was executed.
-
-<sub>Managed by NOVA Ultimate v2.0.0 · 2026-07-15T06:22:48+03:00</sub>
-<!-- NOVA:ULTIMATE:END -->
-
-## 🎯 Objetivos de los Ejercicios
-
-Estos ejercicios te ayudarán a dominar:
-- 📁 **Lectura y escritura de archivos** en diferentes formatos
-- 📊 **Procesamiento de datos CSV** y validación
-- 🔄 **Serialización y deserialización JSON** avanzada
-- 🌐 **Consumo de APIs REST** y manejo de respuestas
-- 🛡️ **Manejo de errores y validación de datos externos**
+These exercises help you master:
+- 📁 **Reading and writing files** in different formats
+- 📊 **Processing and validating CSV data**
+- 🔄 **Advanced JSON serialization and deserialization**
+- 🌐 **Consuming REST APIs** and handling their responses
+- 🛡️ **Handling errors and validating external data**
 
 ---
 
-## 🥉 Exercise 1: Sistema de Análisis de Datos CSV
+## 🥉 Exercise 1: CSV Data Analysis System
 
-### 📊 Descripción
-Desarrolla un sistema que lea archivos CSV, procese los datos y genere reportes estadísticos.
+### 📊 Description
+Build a system that reads CSV files, processes the data, and produces statistical reports.
 
-### 📋 Requisitos
-- Leer un archivo CSV con pandas y con el módulo csv estándar
-- Validar y transformar tipos de datos (int, float, date)
-- Calcular estadísticas básicas (suma, promedio, máximo, mínimo, mediana)
-- Filtrar datos por condiciones (ej: ventas > 1000)
-- Exportar resultados a un nuevo archivo CSV
-
----
-
-## 🥈 Exercise 2: Aggregador de Noticias desde APIs
-
-### 🌐 Descripción
-Crea un script que consuma una API pública de noticias, procese los resultados y los almacene en JSON.
-
-### 📋 Requisitos
-- Usar requests para hacer GET a una API de noticias (ej: NewsAPI, GNews, etc.)
-- Procesar la respuesta y extraer campos clave (título, fuente, fecha, resumen)
-- Guardar los resultados en un archivo JSON
-- Implementar manejo de errores y reintentos
-- Permitir búsqueda por palabra clave y paginación
+### 📋 Requirements
+- Read a CSV file with pandas and with the standard `csv` module
+- Validate and convert data types (int, float, date)
+- Calculate basic statistics (sum, average, maximum, minimum, median)
+- Filter rows by conditions (for example: sales > 1000)
+- Export the results to a new CSV file
 
 ---
 
-## 🥇 Exercise 3: Sistema de Backup y Sincronización
+## 🥈 Exercise 2: News Aggregator from APIs
 
-### 💾 Descripción
-Desarrolla un sistema que realice backups automáticos de archivos y sincronización entre carpetas.
+### 🌐 Description
+Write a script that calls a public news API, processes the results, and stores them as JSON.
 
-### 📋 Requisitos
-- Crear backups de archivos con timestamp
-- Sincronizar archivos entre dos carpetas (copiar solo los nuevos o modificados)
-- Registrar logs de operaciones en un archivo de texto
-- Validar integridad de archivos (hash MD5/SHA256)
-- Manejar errores de permisos y espacio insuficiente
-
----
-
-## 💪 Exercise 4: Pipeline de Procesamiento de Datos
-
-### 🔄 Descripción
-Implementa un pipeline completo que lea datos de CSV, los transforme, los combine con datos de una API y exporte el resultado en JSON.
-
-### 📋 Requisitos
-- Leer y limpiar datos de un archivo CSV
-- Consumir una API para enriquecer los datos (ej: obtener información adicional por ID)
-- Validar y transformar los datos combinados
-- Exportar el resultado final a un archivo JSON
-- Manejar errores y registrar el proceso
+### 📋 Requirements
+- Use `requests` to send GET requests to a news API (for example: NewsAPI, GNews)
+- Process the response and extract the key fields (title, source, date, summary)
+- Save the results to a JSON file
+- Handle errors and retry failed requests
+- Support keyword search and pagination
 
 ---
 
-## ✅ Criterios de Evaluación
-- [ ] Lectura y escritura de archivos robusta
-- [ ] Procesamiento y validación de datos CSV
-- [ ] Serialización/deserialización JSON avanzada
-- [ ] Consumo de APIs con manejo de errores
-- [ ] Logging y documentación clara
+## 🥇 Exercise 3: Backup and Sync System
+
+### 💾 Description
+Build a system that creates automatic file backups and keeps two folders in sync.
+
+### 📋 Requirements
+- Create timestamped backups of files
+- Sync files between two folders (copy only new or modified files)
+- Log every operation to a text file
+- Check file integrity (MD5/SHA256 hash)
+- Handle permission errors and insufficient disk space
 
 ---
 
-**💡 Consejo**: Siempre valida los datos externos antes de procesarlos. Implementa logs para rastrear errores y resultados.
+## 💪 Exercise 4: Data Processing Pipeline
 
-**🎯 Meta**: Cada ejercicio debe demostrar integración real de datos externos y manejo profesional de archivos y APIs.
+### 🔄 Description
+Implement a complete pipeline that reads CSV data, transforms it, enriches it with data from an API, and exports the result as JSON.
+
+### 📋 Requirements
+- Read and clean data from a CSV file
+- Call an API to enrich the data (for example: fetch extra details by ID)
+- Validate and transform the combined data
+- Export the final result to a JSON file
+- Handle errors and log the process
+
+---
+
+## ✅ Evaluation Criteria
+- [ ] Robust file reading and writing
+- [ ] CSV processing and validation
+- [ ] Advanced JSON serialization/deserialization
+- [ ] API calls with error handling
+- [ ] Logging and clear documentation
+
+---
+
+**💡 Tip**: Always validate external data before processing it. Add logs to trace errors and results.
+
+**🎯 Target**: Each exercise should show real integration of external data and careful handling of files and APIs.

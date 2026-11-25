@@ -31,7 +31,7 @@ The example is a proposed intake pattern, not an official project architecture.
 - [ ] Capture the exact brief, constraints, rubric, milestones, and submission destination.
 - [ ] Decide individual or team ownership from the official source.
 - [ ] Record architecture decisions and explicit exclusions.
-- [ ] Preserve Kevin's authored work and disclose material AI assistance.
+- [ ] Preserve Kevin's authored work and credit any outside contribution.
 - [ ] Add accessible UX states, tests, run instructions, and limitations.
 - [ ] Record reproducible verification without claiming deployment before evidence.
 
