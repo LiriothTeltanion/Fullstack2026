@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daily Challenge: Gifs</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <header>
+        <h1>🎞️ Random GIF by category</h1>
+        <p class="muted">
+          Type a category, get one random GIF. Delete them one by one or all at once.
+        </p>
+      </header>
+
+      <form id="gif-form" class="search" autocomplete="off">
+        <label for="category">Category</label>
+        <input
+          id="category"
+          name="category"
+          type="text"
+          placeholder="sun, cats, coffee…"
+          required
+        />
+        <button type="submit" class="btn">Search</button>
+        <button type="button" id="delete-all" class="btn danger">DELETE ALL</button>
+      </form>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+
+      <section id="gifs" class="gifs" aria-label="GIFs"></section>
+    </main>
+    <script src="js/config.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

@@ -12,7 +12,7 @@ A text field that only accepts letters. If I type or paste numbers or symbols, t
 
 ## ▶️ How to run
 
-Open `index.html` in a browser (or run `npm run dev` from the repo root and open this folder at `http://localhost:8000/`), then type in the field.
+Open `index.html` in a browser (or run `npm run dev` from the repo root and go to `http://localhost:8000/Week3JavaScriptandDOM/Day3LearningDOMEvents/DailyChallenge/Letters/`), then type in the field.
 
 ```
 Typed:  abc123!de

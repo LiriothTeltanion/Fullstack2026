@@ -14,6 +14,7 @@ A notes app in two halves: an Express API under `/api/notes` that saves to `data
 
 ```bash
 npm install
+cp .env.example .env   # optional: it only sets PORT, 3000 by default
 npm run dev
 ```
 

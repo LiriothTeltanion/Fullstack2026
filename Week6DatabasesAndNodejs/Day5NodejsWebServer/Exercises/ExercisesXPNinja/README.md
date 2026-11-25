@@ -16,7 +16,7 @@ My own static file server, [static-server.js](static-server.js). It serves the f
 node static-server.js
 ```
 
-Open `http://localhost:3020`. The terminal logs every request; this is part of what I got while testing with `curl`:
+Open `http://localhost:3020` (`PORT=4000 node static-server.js` picks another port). The terminal logs every request; this is part of what I got while testing with `curl`:
 
 ```
 GET / -> 200 (2.6 ms)

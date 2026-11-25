@@ -12,7 +12,7 @@ The page asks me for a sentence. If it has `not` and later `bad`, everything fro
 
 ## ▶️ How to run
 
-Open `index.html` in a browser (or run `npm run dev` from the repo root and open this folder at `http://localhost:8000/`), then click **Run**.
+Open `index.html` in a browser (or run `npm run dev` from the repo root and go to `http://localhost:8000/Week3JavaScriptandDOM/Day1IntroductiontoJavaScript/DailyChallenge/DailyChallengeNotBad/`), then click **Run**.
 
 ```
 Input:  The movie is not that bad, I like it

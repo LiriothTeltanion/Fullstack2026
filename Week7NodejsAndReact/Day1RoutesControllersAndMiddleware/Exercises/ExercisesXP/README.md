@@ -14,6 +14,7 @@ Three small routers on one Express server: two HTML pages, a todo API and a book
 
 ```bash
 npm install
+cp .env.example .env   # optional: it only sets PORT, 3000 by default
 npm run dev
 ```
 

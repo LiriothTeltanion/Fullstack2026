@@ -16,7 +16,7 @@ One server, [server.js](server.js), that reads query strings, parses POST bodies
 node server.js
 ```
 
-It listens on `http://localhost:3010`. Calls I made with `curl`:
+It listens on `http://localhost:3010`, and `PORT=4000 node server.js` picks another port. Calls I made with `curl`:
 
 ```
 GET    /greet?name=Kevin&lang=es  -> 200 {"message":"Hola, Kevin"}

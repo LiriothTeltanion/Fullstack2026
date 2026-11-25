@@ -12,7 +12,7 @@ A Sign In form and a Sign Up form sit side by side, and a red panel covers one o
 
 ## ▶️ How to run
 
-Open `index.html` in a browser (or run `npm run dev` from the repo root and open this folder at `http://localhost:8000/`). `js/app.js` needs `document`, so it only works in the browser, not with `node`.
+Open `index.html` in a browser (or run `npm run dev` from the repo root and go to `http://localhost:8000/Week3JavaScriptandDOM/Day3LearningDOMEvents/Exercises/MiniProjectCreateaSignInForm/`). `js/app.js` needs `document`, so it only works in the browser, not with `node`.
 
 ## 🎯 The challenge
 

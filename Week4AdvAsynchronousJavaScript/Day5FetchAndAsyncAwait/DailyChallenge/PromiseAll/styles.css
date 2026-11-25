@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  background: #0b1029;
+  color: #f8fafc;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.muted {
+  color: #94a3b8;
+}
+
+.cities {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+fieldset {
+  display: grid;
+  gap: 6px;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+input {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+.btn {
+  grid-column: 1 / -1;
+  padding: 12px;
+  border: 0;
+  border-radius: 10px;
+  background: #f59e0b;
+  color: #1c1917;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn:focus-visible,
+input:focus-visible {
+  outline: 3px solid #fcd34d;
+  outline-offset: 2px;
+}
+
+.result {
+  display: block;
+  margin-top: 20px;
+  white-space: pre-line;
+  font-size: 1.1rem;
+}

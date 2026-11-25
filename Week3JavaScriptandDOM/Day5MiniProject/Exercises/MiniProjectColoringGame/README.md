@@ -12,7 +12,7 @@ A pixel drawing board. I pick a color, hold the mouse button down and drag acros
 
 ## ▶️ How to run
 
-Open `index.html` in a browser (or run `npm run dev` from the repo root and open this folder at `http://localhost:8000/`).
+Open `index.html` in a browser (or run `npm run dev` from the repo root and go to `http://localhost:8000/Week3JavaScriptandDOM/Day5MiniProject/Exercises/MiniProjectColoringGame/`).
 
 ## 🎯 The challenge
 

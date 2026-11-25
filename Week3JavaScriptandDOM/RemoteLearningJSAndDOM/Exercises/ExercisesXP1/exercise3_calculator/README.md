@@ -12,7 +12,7 @@ A pocket calculator: the four operations, a sign key, percent, and the memory ke
 
 ## ▶️ How to run
 
-Open `index.html` in a browser (or run `npm run dev` from the repo root and open this folder at `http://localhost:8000/`). `js/app.js` needs the page, so it does not run with `node`.
+Open `index.html` in a browser (or run `npm run dev` from the repo root and go to `http://localhost:8000/Week3JavaScriptandDOM/RemoteLearningJSAndDOM/Exercises/ExercisesXP1/exercise3_calculator/`). `js/app.js` needs the page, so it does not run with `node`.
 
 ```
 7 + 5 × 2 =   →  24   (each operator works on the running total)

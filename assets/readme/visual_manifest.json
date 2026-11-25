@@ -38,7 +38,7 @@
     {
       "asset_id": "twelve-week-evidence-map",
       "path": "assets/readme/hero/course-journey.svg",
-      "sha256": "736478eed87f890e754dc1b257d41ff26ae1233eba37a1b166e6191a4f248bfb",
+      "sha256": "e2cb5e6ad50a883a7e1c2a0538e247ebcd87678891062667802686c10034651c",
       "source_kind": "original_repository_svg_with_ai_assistance",
       "provenance": "Created from Kevin-supplied week-level course titles; no authenticated screenshot or private progress data is embedded.",
       "new_or_reused": "new",

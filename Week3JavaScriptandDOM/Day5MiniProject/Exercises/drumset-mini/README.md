@@ -12,7 +12,7 @@ A drum kit in the browser. There are nine pads, and each one plays its sound whe
 
 ## ▶️ How to run
 
-Open `index.html` in a browser (or run `npm run dev` from the repo root and open this folder at `http://localhost:8000/`). Press `A S D F G H J K L` or click the pads. The nine `.wav` files are already in `sounds/`.
+Open `index.html` in a browser (or run `npm run dev` from the repo root and go to `http://localhost:8000/Week3JavaScriptandDOM/Day5MiniProject/Exercises/drumset-mini/`). Press `A S D F G H J K L` or click the pads. The nine `.wav` files are already in `sounds/`.
 
 ## 🎯 The challenge
 

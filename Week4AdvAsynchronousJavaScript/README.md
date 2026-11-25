@@ -18,7 +18,7 @@ The fourth week of the bootcamp. It opens with array and object methods, moves o
 | [`Day2AdvancedObjectMethods/`](Day2AdvancedObjectMethods/) | Destructuring, `Object.entries`, classes and object references |
 | [`Day3HTTPAndFormMethodGETAndPOST/`](Day3HTTPAndFormMethodGETAndPOST/) | GET and POST forms, query strings, JSON and a quote app |
 | [`Day4AsynchronousJavaScript/`](Day4AsynchronousJavaScript/) | Making promises and chaining them |
-| [`Day5FetchAndAsyncAwait/`](Day5FetchAndAsyncAwait/) | `fetch` and async/await against Giphy and SWAPI |
+| [`Day5FetchAndAsyncAwait/`](Day5FetchAndAsyncAwait/) | `fetch` and async/await against Giphy and SWAPI, plus the Gifs and Promise.all() daily challenges |
 
 ---
 

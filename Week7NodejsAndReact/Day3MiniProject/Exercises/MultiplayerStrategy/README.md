@@ -14,6 +14,7 @@
 
 ```bash
 npm install
+cp .env.example .env   # optional: it only sets PORT, 3000 by default
 npm run dev
 ```
 

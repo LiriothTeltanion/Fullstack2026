@@ -12,7 +12,7 @@ My little solar system. Every planet is a colored circle with its name in it, an
 
 ## ▶️ How to run
 
-Open `planets.html` in a browser (or run `npm run dev` from the repo root and open this folder at `http://localhost:8000/`). There is no build step.
+Open `planets.html` in a browser (or run `npm run dev` from the repo root and go to `http://localhost:8000/Week3JavaScriptandDOM/Day2FunctionsandDOMIntroduction/DailyChallenge/DailyChallengePlanets/planets.html`). There is no build step.
 
 ## 🎯 The challenge
 

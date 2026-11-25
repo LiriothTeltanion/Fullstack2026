@@ -17,6 +17,9 @@ does not reinterpret early work as production-ready code.
 
 ### Added
 
+- Added the Week 4 Day 5 daily challenges (Gifs and Promise.all()) and the
+  Week 14 Day 7 Search Book App, with READMEs and progress cards. The showcase
+  now lists 264 exercises.
 - Added solutions, READMEs and progress cards for every remaining course
   exercise in Weeks 1-14, optional ones included (133 exercises), plus index
   READMEs for every project subfolder. The showcase now lists 261 exercises

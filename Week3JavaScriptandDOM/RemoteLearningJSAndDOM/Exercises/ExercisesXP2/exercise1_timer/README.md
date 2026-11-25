@@ -12,7 +12,7 @@ The same three-part timer task as on Day 3, done again for the remote session: a
 
 ## ▶️ How to run
 
-Open `index.html` in a browser (or run `npm run dev` from the repo root and open this folder at `http://localhost:8000/`). The timers start on load. `js/app.js` needs the page, so it does not run with `node`.
+Open `index.html` in a browser (or run `npm run dev` from the repo root and go to `http://localhost:8000/Week3JavaScriptandDOM/RemoteLearningJSAndDOM/Exercises/ExercisesXP2/exercise1_timer/`). The timers start on load. `js/app.js` needs the page, so it does not run with `node`.
 
 ## 🎯 The challenge
 

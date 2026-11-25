@@ -8,11 +8,12 @@
 
 </div>
 
-A meme generator in React.
+Two React mini projects: a meme generator and a book search app.
 
 ## Contents
 
 - [`MemeGenerator/`](MemeGenerator/): Meme Generator: a React meme maker using the Imgflip templates
+- [`SearchBookApp/`](SearchBookApp/): Search Book App: Google Books search with a filter, newest books first
 
 ---
 
