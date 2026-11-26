@@ -23,15 +23,15 @@ The lifecycle messages go to the browser console.
 
 ## 🎯 The challenge
 
-1. **Lifecycle methods**: `FavoriteColor` starts red, and `componentDidMount` switches it to yellow after one second. `shouldComponentUpdate` blocks re-renders while the "Allow updates" box is unchecked, `getSnapshotBeforeUpdate` returns the old color and `componentDidUpdate` logs the change.
-2. **Unmounting**: the "Delete" button removes `Child`, and its `componentWillUnmount` shows an alert before it disappears.
+1. **Lifecycle methods**: `FavoriteColor` starts red, and `componentDidMount` switches it to yellow after one second. `shouldComponentUpdate` blocks re-renders while the "Allow updates" box is unchecked, `getSnapshotBeforeUpdate` reads the previously visible color from a DOM ref and `componentDidUpdate` logs the visible change. State may still change while rendering is blocked; re-enabling updates compares against the text the reader actually saw.
+2. **Unmounting**: the "Delete" button marks an intentional removal and unmounts `Child`. `Child.componentWillUnmount` consumes that marker and announces `Child` once. Cleanup without an explicit Delete only logs; development StrictMode can replay supported setup/cleanup lifecycles, so no deletion alert is tied to those replays.
 3. **The same with hooks**: `ColorWithHooks` does the timer with `useEffect(..., [])` and a cleanup, and logs each change with a second effect that depends on `favoriteColor`.
 
 ## 🧠 What I learned
 
-- `componentDidMount` runs once after the first render, like an effect with an empty array
+- `componentDidMount` sets up mount work, like an effect with an empty array. Development StrictMode can replay setup and cleanup to expose missing cleanup; production mounts do not include that development replay
 - Returning `false` from `shouldComponentUpdate` skips the render even when the state changed
-- The value returned by `getSnapshotBeforeUpdate` arrives as the third argument of `componentDidUpdate`
+- The DOM snapshot returned by `getSnapshotBeforeUpdate` arrives as the third argument of `componentDidUpdate`, preserving the visible transition even after skipped renders
 - Clearing the timer on unmount avoids setting state on a component that is gone
 
 ---

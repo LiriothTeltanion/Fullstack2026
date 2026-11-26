@@ -144,3 +144,9 @@ th button {
   color: var(--text);
   padding: 0;
 }
+
+/* Confine the table's intrinsic width to its own keyboard-scrollable region. */
+.table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+}

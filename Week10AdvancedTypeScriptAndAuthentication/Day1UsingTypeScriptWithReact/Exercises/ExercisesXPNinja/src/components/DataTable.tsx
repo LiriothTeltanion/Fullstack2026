@@ -40,39 +40,42 @@ export default function DataTable<T>({ rows, columns, getRowId }: DataTableProps
     sort?.key === key ? (sort.direction === "asc" ? " ▲" : " ▼") : "";
 
   return (
-    <table>
-      <thead>
-        <tr>
-          {columns.map(column => (
-            <th
-              key={String(column.key)}
-              aria-sort={
-                sort?.key === column.key
-                  ? sort.direction === "asc"
-                    ? "ascending"
-                    : "descending"
-                  : "none"
-              }
-            >
-              <button onClick={() => toggleSort(column.key)}>
-                {column.header}
-                {arrow(column.key)}
-              </button>
-            </th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {sorted.map(row => (
-          <tr key={getRowId(row)}>
+    <div className="table-scroll" role="region" aria-label="Sortable data table" tabIndex={0}>
+      <table>
+        <thead>
+          <tr>
             {columns.map(column => (
-              <td key={String(column.key)}>
-                {column.render ? column.render(row) : String(row[column.key])}
-              </td>
+              <th
+                key={String(column.key)}
+                scope="col"
+                aria-sort={
+                  sort?.key === column.key
+                    ? sort.direction === "asc"
+                      ? "ascending"
+                      : "descending"
+                    : "none"
+                }
+              >
+                <button onClick={() => toggleSort(column.key)}>
+                  {column.header}
+                  {arrow(column.key)}
+                </button>
+              </th>
             ))}
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {sorted.map(row => (
+            <tr key={getRowId(row)}>
+              {columns.map(column => (
+                <td key={String(column.key)}>
+                  {column.render ? column.render(row) : String(row[column.key])}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }

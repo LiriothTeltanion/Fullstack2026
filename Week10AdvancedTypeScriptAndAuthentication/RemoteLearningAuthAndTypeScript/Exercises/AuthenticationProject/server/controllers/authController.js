@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { JWT_SECRET, TOKEN_LIFETIME } from "../settings.js";
+import { JWT_SECRET, TOKEN_LIFETIME, TOKEN_ISSUER } from "../settings.js";
 import { createUser, findByEmail, toPublic } from "../models/userModel.js";
 
 const isText = value => typeof value === "string" && value.trim() !== "";
@@ -12,7 +12,10 @@ const EMAIL_PATTERN = /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)+$/;
 const isEmail = value => value.length <= 254 && EMAIL_PATTERN.test(value);
 
 const signToken = user =>
-  jwt.sign({ sub: String(user.id) }, JWT_SECRET, { expiresIn: TOKEN_LIFETIME });
+  jwt.sign({ sub: String(user.id) }, JWT_SECRET, {
+    expiresIn: TOKEN_LIFETIME,
+    issuer: TOKEN_ISSUER,
+  });
 
 export async function register(req, res) {
   const { name, email, password } = req.body ?? {};

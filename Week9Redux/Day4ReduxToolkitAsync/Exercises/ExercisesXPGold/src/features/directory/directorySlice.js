@@ -8,8 +8,16 @@ async function getJson(url, signal) {
   return response.json();
 }
 
-export const fetchUsers = createAsyncThunk("directory/fetchUsers", () =>
-  getJson(`${API_URL}/users`)
+export const fetchUsers = createAsyncThunk(
+  "directory/fetchUsers",
+  (_, { signal }) => getJson(`${API_URL}/users`, signal),
+  {
+    // Read the live store so two effects cannot start the same initial request.
+    condition: (_, { getState }) => {
+      const { usersStatus } = getState().directory;
+      return usersStatus === "idle" || usersStatus === "failed";
+    },
+  }
 );
 
 export const fetchPostsByUser = createAsyncThunk(

@@ -17,6 +17,12 @@ npm install
 npm run dev
 ```
 
+Add a card, move it to **Doing**, and reload to see it in the same column.
+If a previous save has missing columns or stale references, the board restores
+each readable card once and puts unassigned cards in **To do**. Opening the
+page leaves the saved copy untouched. The next board edit saves the restored
+layout. Run `npm test` to check these recovery cases without a browser.
+
 ## 🎯 The challenge
 
 1. **Board shape.** `cards` is a lookup by id and `columns` keeps only ordered id lists, so a card is stored once.

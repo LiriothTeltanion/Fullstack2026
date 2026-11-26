@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-26
-Base HEAD: e85c0dbb19e687983cfbcd58fd905e2dc0076274
-Source-index SHA-256 (generated outputs excluded): 08360c9b799052fe301bef512a7e46101856e89633af9e97b5fd2357bc98c67e
-Indexed files: 3195
+Base HEAD: 9a3c5cd35e5a66d90ced54a79bf788f77d00b722
+Source-index SHA-256 (generated outputs excluded): ee15dca5598a9c331a1ef86c7768ebdab57ffbaa5c9f94bbd9047dd2d7af14fb
+Indexed files: 3203
 
 .
 ├── .github
@@ -888,6 +888,7 @@ Indexed files: 3195
 │   │   │   │   │   │   ├── profileRoutes.js
 │   │   │   │   │   │   └── README.md
 │   │   │   │   │   ├── .env.example
+│   │   │   │   │   ├── account-flow.test.js
 │   │   │   │   │   ├── app.js
 │   │   │   │   │   ├── package.json
 │   │   │   │   │   ├── README.md
@@ -1809,6 +1810,7 @@ Indexed files: 3195
 │   │   │   │   └── rockpaperscissors.py
 │   │   │   ├── WeatherApp
 │   │   │   │   ├── README.md
+│   │   │   │   ├── test_weatherapp.py
 │   │   │   │   ├── weatherapp.py
 │   │   │   │   └── weathergui.py
 │   │   │   └── README.md
@@ -3034,6 +3036,7 @@ Indexed files: 3195
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -3633,8 +3636,12 @@ Indexed files: 3195
 │   │   │   │   │   │   ├── README.md
 │   │   │   │   │   │   └── SearchForm.jsx
 │   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── gallerySettings.js
 │   │   │   │   │   ├── index.css
 │   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── gallery-settings.test.js
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── .env.example
 │   │   │   │   ├── index.html
@@ -3907,6 +3914,7 @@ Indexed files: 3195
 │   │   │   │   │   ├── index.css
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── directory.test.js
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
@@ -4032,6 +4040,7 @@ Indexed files: 3195
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package.json
+│   │   │   │   ├── persist.test.js
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
 │   │   │   └── README.md

@@ -30,7 +30,7 @@ python weathergui.py
   | Function | What it does |
   |---|---|
   | `current_weather_at_place(owm, place)` | Status, temperature in °C, wind, sunrise and sunset for a `City,CC` string |
-  | `find_city_id(owm, query)` / `current_weather_at_id(owm, id)` | Looks up a city ID through geocoding, then gets the weather for that ID |
+  | `find_city_id(owm, query)` / `current_weather_at_id(owm, id)` | Looks up a city ID in PyOWM's bundled registry, then gets the weather for that ID |
   | `forecast_at_place`, `forecast_at_id`, `forecast_at_coords` | The 5-day forecast in 3-hour steps, by name, ID or coordinates |
   | `air_quality_by_place(owm, place)` | Air quality index from 1 (Good) to 5 (Very Poor) plus pollutant levels in μg/m³ |
 
@@ -45,6 +45,24 @@ The names come from the brief, so `plot_temperatures()` actually draws humidity.
 - `make_owm()` reads the key from `OWM_API_KEY`, so nothing secret is written in the files
 - Forecast times arrive in UTC, and I convert them to local time before grouping by day, or the days come out shifted
 - `ax.bar()` plus one `ax.text()` per bar is all the chart needs
+
+## 🧪 Verification
+
+Run the regression checks from this folder after installing the dependencies above:
+
+```bash
+python -m unittest -v test_weatherapp
+```
+
+Seven tests cover city ID lookup, country filtering, unknown cities, current weather
+by ID, forecasts by name/ID/coordinates, air quality, missing configuration and the
+interactive output. They use real PyOWM managers and synthetic HTTP responses.
+The local city registry supplies IDs because direct geocoding returns coordinates
+without an ID. If air quality is unavailable, the app skips that observation.
+
+Verified on 2026-11-26 with Python 3.14.7 and PyOWM 3.5.0. Live weather calls require
+an authorized OpenWeatherMap key and service access. These regression checks run
+without a key or external requests.
 
 ---
 

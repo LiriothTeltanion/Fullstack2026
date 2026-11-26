@@ -12,13 +12,13 @@ A Thor feature with original CSS lightning and hammer artwork, list-based naviga
 
 ## ▶️ How to run
 
-No build step. Open [index.html](index.html) in a browser, or serve the folder:
+After cloning Fullstack2026, you can open the local [index.html](index.html) directly. For an HTTP preview, run this command from the **repository root** so both days are available.
 
 ```bash
-python -m http.server 8000
+python -m http.server 8000 --bind 127.0.0.1
 ```
 
-The page also links to the Day 2 version, so serve the repository root to keep that relative link available. No deployment is needed for this exercise.
+Open the [Day 1 preview](http://127.0.0.1:8000/Week13WebDevelopmentBasics/Day1HTMLAndCSS/DailyChallenge/Avengers/index.html). Choose **Responsive version** in the footer to visit Day 2.
 
 ## 🎯 The challenge
 
