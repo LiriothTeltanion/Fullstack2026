@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-26
-Base HEAD: 571329220c3aae89cd09f64fcf1e9e7e812a6ff1
-Source-index SHA-256 (generated outputs excluded): 267306b226c5a6114291ac503e892eb96a3eadd3dabad7af88358deb54aca29c
-Indexed files: 3068
+Base HEAD: 87a2a896a6bbff9b447dbba9558cdcf148940332
+Source-index SHA-256 (generated outputs excluded): ec74d587383027eff45bc2b0a8a4aebc9cd2077aa252ebcfc1f76dc256584578
+Indexed files: 3075
 
 .
 ├── .github
@@ -2562,10 +2562,17 @@ Indexed files: 3068
 │   │   │   │   ├── README.md
 │   │   │   │   └── server.js
 │   │   │   ├── ExercisesXPGold
+│   │   │   │   ├── account-routes.js
+│   │   │   │   ├── express-practice.js
+│   │   │   │   ├── express-practice.test.js
 │   │   │   │   ├── httpHelpers.js
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
+│   │   │   │   ├── post-routes.js
 │   │   │   │   ├── README.md
-│   │   │   │   └── server.js
+│   │   │   │   ├── server.js
+│   │   │   │   ├── start-express.js
+│   │   │   │   └── todo-routes.js
 │   │   │   ├── ExercisesXPNinja
 │   │   │   │   ├── public
 │   │   │   │   │   ├── about.html

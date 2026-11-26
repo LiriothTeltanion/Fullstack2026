@@ -4,6 +4,14 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "practice": "node start-express.js",
+    "test": "node --test express-practice.test.js",
     "start": "node server.js"
+  },
+  "dependencies": {
+    "axios": "1.21.1",
+    "bcrypt": "6.0.0",
+    "express": "5.3.0",
+    "jsonwebtoken": "9.0.3"
   }
 }
