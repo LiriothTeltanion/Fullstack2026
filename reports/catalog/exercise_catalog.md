@@ -2,8 +2,8 @@
 
 > Regenerated from the exact Git index on `2026-11-26` by `tools/refresh_structure_catalogs.py`.
 
-- Base HEAD: `a48d1cddf58bfc3714e1c09888df4924e49c939a`
-- Source-index fingerprint: `sha256:681ce192fa33d678e893314312a4b94ad4f679ad743b721335055307c962fc7d` (generated outputs excluded)
+- Base HEAD: `c8fbe2254795a8357fcc0567c08855facd1d5488`
+- Source-index fingerprint: `sha256:c3bca4e1e2301b46a85a19279e6ec310b2a8e2aa83a0f6e59518bd08c3299000` (generated outputs excluded)
 
 This catalog proves repository presence and path integrity only. It does not prove that an exercise runs, that Kevin can explain it, or that it is mastered or portfolio-ready.
 
@@ -269,7 +269,7 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week8React/Day3ReactAdvancedHooks/Exercises/ExercisesXP` | Exercise | CSS \| HTML \| JSON \| JavaScript | 16 | present (canonical) | [source](<../../Week8React/Day3ReactAdvancedHooks/Exercises/ExercisesXP>); runtime unverified |
 | `Week8React/Day3ReactAdvancedHooks/Exercises/ExercisesXPGold` | Exercise | CSS \| HTML \| JSON \| JavaScript | 26 | present (canonical) | [source](<../../Week8React/Day3ReactAdvancedHooks/Exercises/ExercisesXPGold>); runtime unverified |
 | `Week8React/Day3ReactAdvancedHooks/Exercises/ExercisesXPNinja` | Exercise | CSS \| HTML \| JSON \| JavaScript | 16 | present (canonical) | [source](<../../Week8React/Day3ReactAdvancedHooks/Exercises/ExercisesXPNinja>); runtime unverified |
-| `Week8React/Day3ReactAdvancedHooks/Exercises/HeroloAssignment` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 21 | present (canonical) | [source](<../../Week8React/Day3ReactAdvancedHooks/Exercises/HeroloAssignment>); runtime unverified |
+| `Week8React/Day3ReactAdvancedHooks/Exercises/HeroloAssignment` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 27 | present (canonical) | [source](<../../Week8React/Day3ReactAdvancedHooks/Exercises/HeroloAssignment>); runtime unverified |
 | `Week8React/Day4MiniProject/DailyChallenge/Calculator` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript | 13 | present (canonical) | [source](<../../Week8React/Day4MiniProject/DailyChallenge/Calculator>); runtime unverified |
 | `Week8React/Day4MiniProject/Exercises/RandomQuoteGenerator` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 13 | present (canonical) | [source](<../../Week8React/Day4MiniProject/Exercises/RandomQuoteGenerator>); runtime unverified |
 | `Week8React/Day4MiniProject/Exercises/SnapShot` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 16 | present (canonical) | [source](<../../Week8React/Day4MiniProject/Exercises/SnapShot>); runtime unverified |

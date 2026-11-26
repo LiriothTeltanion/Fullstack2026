@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-26
-Base HEAD: a48d1cddf58bfc3714e1c09888df4924e49c939a
-Source-index SHA-256 (generated outputs excluded): 681ce192fa33d678e893314312a4b94ad4f679ad743b721335055307c962fc7d
-Indexed files: 3188
+Base HEAD: c8fbe2254795a8357fcc0567c08855facd1d5488
+Source-index SHA-256 (generated outputs excluded): c3bca4e1e2301b46a85a19279e6ec310b2a8e2aa83a0f6e59518bd08c3299000
+Indexed files: 3194
 
 .
 ├── .github
@@ -3555,7 +3555,8 @@ Indexed files: 3188
 │   │   │   │   │   │   ├── ForecastList.jsx
 │   │   │   │   │   │   ├── Header.jsx
 │   │   │   │   │   │   ├── README.md
-│   │   │   │   │   │   └── SearchBar.jsx
+│   │   │   │   │   │   ├── SearchBar.jsx
+│   │   │   │   │   │   └── WeatherAttribution.jsx
 │   │   │   │   │   ├── context
 │   │   │   │   │   │   ├── README.md
 │   │   │   │   │   │   └── WeatherContext.jsx
@@ -3570,10 +3571,15 @@ Indexed files: 3188
 │   │   │   │   │   ├── index.css
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── .env.example
+│   │   │   │   ├── accuweather.server.js
+│   │   │   │   ├── accuweather.test.js
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
-│   │   │   │   └── vite.config.js
+│   │   │   │   ├── server.js
+│   │   │   │   ├── vite.config.js
+│   │   │   │   └── weather-proxy.server.js
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── Day4MiniProject

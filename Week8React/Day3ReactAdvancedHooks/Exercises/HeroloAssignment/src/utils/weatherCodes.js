@@ -14,6 +14,13 @@ export function describeWeather(code) {
   return groups.find(group => group.codes.includes(code)) || { label: "Unknown", icon: "❔" };
 }
 
+// AccuWeather's icon numbers are not WMO codes; its adapter supplies a phrase.
+export function describeForecast(condition) {
+  return condition.description
+    ? { label: condition.description, icon: condition.icon || "🌡️" }
+    : describeWeather(condition.code);
+}
+
 export function dayName(isoDate) {
   return new Date(`${isoDate}T12:00:00`).toLocaleDateString("en-US", { weekday: "short" });
 }
