@@ -10,6 +10,18 @@
 
 Three exercises about lifting state up: the parent keeps the data and the children only report events back with callback props.
 
+The set list preview adds a fourth exercise in error recovery. A class-based React error boundary catches a missing track list during rendering. A class-based modal opens a native dialog that you can dismiss by keyboard or pointer.
+
+### Try the recovery flow
+
+1. Like a fruit and note its count.
+2. Select **Open missing set list**. A dialog explains why the preview is unavailable.
+3. Press **Escape** or choose **Return to rehearsal**. The three tracks reappear, focus returns to the opener, and the fruit keeps its count.
+
+Only the track list is inside the boundary. Changing its key after recovery creates a fresh boundary with valid data while preserving state in the other exercises.
+
+To run the recovery tests, install the dependencies, run `npx playwright install chromium`, then run `npm test`. The tests run the production build and exercise both ways of dismissing the dialog, keyboard focus, and the like count across repeated failures.
+
 ## ▶️ How to run
 
 ```bash

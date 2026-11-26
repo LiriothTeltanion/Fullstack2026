@@ -109,3 +109,73 @@ input[aria-invalid="true"] {
   border-color: #8ce99a;
   background: #ebfbee;
 }
+
+/* Country autocomplete keeps the existing form palette and narrow layout. */
+.country-picker {
+  border-top: 4px solid #3b5bdb;
+}
+.eyebrow {
+  color: #364fc7;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.country-input-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.35rem;
+}
+.country-input-row input {
+  width: 100%;
+  min-width: 0;
+}
+.country-options-frame {
+  position: relative;
+}
+#country-options {
+  position: absolute;
+  top: 0.3rem;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  margin: 0;
+  padding: 0.25rem;
+  max-height: 13rem;
+  overflow-y: auto;
+  list-style: none;
+  background: #fff;
+  border: 1px solid #8999bc;
+  border-radius: 6px;
+  box-shadow: 0 8px 20px #1f29331f;
+}
+#country-options[hidden] {
+  display: none;
+}
+#country-options [role="option"] {
+  padding: 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#country-options [role="option"]:hover,
+#country-options .active {
+  background: #e7edff;
+  color: #203eaa;
+}
+.country-status {
+  min-height: 3rem;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+.country-help {
+  font-size: 0.85rem;
+}
+:focus-visible {
+  outline: 3px solid #263fad;
+  outline-offset: 3px;
+}
+@media (max-width: 380px) {
+  .country-picker {
+    padding: 0.85rem;
+  }
+}

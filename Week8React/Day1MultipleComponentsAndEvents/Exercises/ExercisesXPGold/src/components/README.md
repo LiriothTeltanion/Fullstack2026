@@ -13,6 +13,9 @@ The React components for Exercises XP Gold.
 ## Contents
 
 - [`Accordion.jsx`](Accordion.jsx)
+- [`ErrorBoundary.jsx`](ErrorBoundary.jsx) catches rendering errors in the track list.
+- [`Modal.jsx`](Modal.jsx) manages the native dialog lifecycle.
+- [`SetListPreview.jsx`](SetListPreview.jsx) demonstrates recovery with a rehearsal set.
 - [`LikeButton.jsx`](LikeButton.jsx)
 - [`LikeCounter.jsx`](LikeCounter.jsx)
 - [`Panel.jsx`](Panel.jsx)

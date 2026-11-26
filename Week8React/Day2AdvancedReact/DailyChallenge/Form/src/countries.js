@@ -1,0 +1,68 @@
+// A locally authored demonstration list of country names, not an exhaustive catalog.
+export const countries = Object.freeze([
+  "Argentina",
+  "Australia",
+  "Austria",
+  "Belgium",
+  "Brazil",
+  "Canada",
+  "Chile",
+  "China",
+  "Colombia",
+  "Costa Rica",
+  "Czechia",
+  "Denmark",
+  "Egypt",
+  "Estonia",
+  "Finland",
+  "France",
+  "Germany",
+  "Ghana",
+  "Greece",
+  "Hungary",
+  "Iceland",
+  "India",
+  "Indonesia",
+  "Ireland",
+  "Israel",
+  "Italy",
+  "Japan",
+  "Kenya",
+  "Latvia",
+  "Lebanon",
+  "Lithuania",
+  "Mexico",
+  "Morocco",
+  "Nepal",
+  "Netherlands",
+  "New Zealand",
+  "Nigeria",
+  "Norway",
+  "Peru",
+  "Poland",
+  "Portugal",
+  "Romania",
+  "Singapore",
+  "South Africa",
+  "South Korea",
+  "Spain",
+  "Sweden",
+  "Switzerland",
+  "Thailand",
+  "Turkey",
+  "Ukraine",
+  "United Kingdom",
+  "United States",
+  "Uruguay",
+  "Venezuela",
+  "Vietnam",
+]);
+
+// Normalize only for matching; preserve the authored spelling in the input/list.
+const normalize = value => value.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase();
+
+export function filterCountries(query, items = countries) {
+  const search = normalize(query.trim());
+  if (!search) return [];
+  return items.filter(country => normalize(country).startsWith(search));
+}

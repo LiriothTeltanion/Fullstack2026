@@ -1,11 +1,14 @@
 import LikeCounter from "./components/LikeCounter.jsx";
 import Accordion from "./components/Accordion.jsx";
 import TemperatureConverter from "./components/TemperatureConverter.jsx";
+import SetListPreview from "./components/SetListPreview.jsx";
 
 function App() {
   return (
     <main className="page">
       <h1>Week 8 Day 1 · Exercises XP Gold</h1>
+
+      <SetListPreview />
 
       <section className="card">
         <h2>Exercise 1 · Lifting state up</h2>
