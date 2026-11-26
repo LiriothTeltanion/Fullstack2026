@@ -1,0 +1,11 @@
+{
+  "name": "fetch-state-browser-tests",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "node useFetch.browser.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.65.1"
+  }
+}
