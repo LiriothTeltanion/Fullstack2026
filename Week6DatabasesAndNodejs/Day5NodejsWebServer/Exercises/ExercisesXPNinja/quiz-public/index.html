@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Web Basics Quiz</title>
+    <link rel="stylesheet" href="/quiz.css" />
+    <script src="/quiz.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <p>Node.js practice</p>
+      <a href="/static-demo">Original static demo</a>
+    </header>
+    <main>
+      <h1>Web Basics Quiz</h1>
+      <p>Five questions. One answer per question.</p>
+      <p id="error" role="alert" hidden></p>
+      <section id="quiz" aria-label="Quiz" aria-busy="false">
+        <p id="progress">Start a new quiz to begin.</p>
+        <p id="score">Score: 0 / 5</p>
+        <form id="answer-form" hidden>
+          <fieldset id="choices"><legend id="question" tabindex="-1"></legend></fieldset>
+          <button id="submit" type="submit" disabled>Submit answer</button>
+        </form>
+        <div id="feedback" role="status" tabindex="-1" hidden></div>
+        <button id="next" type="button" hidden>Next question</button>
+        <h2 id="result" tabindex="-1" hidden></h2>
+        <button id="restart" type="button">Start quiz</button>
+      </section>
+      <p class="note">
+        Progress stays in this server's memory for 30 minutes of inactivity. Restarting the server
+        clears it.
+      </p>
+      <noscript><p>This quiz needs JavaScript. Enable it to answer questions.</p></noscript>
+    </main>
+  </body>
+</html>

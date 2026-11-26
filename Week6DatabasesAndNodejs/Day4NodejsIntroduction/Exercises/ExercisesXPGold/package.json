@@ -4,10 +4,17 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "practice": "node examples.js",
+    "test": "node --test practice.test.js",
     "system": "node system-info.js",
     "paths": "node path-explorer.js",
     "events": "node events-demo.js",
     "store": "node json-store.js",
     "calc": "node calculator.js 12 x 3.5"
+  },
+  "dependencies": {
+    "@faker-js/faker": "10.6.0",
+    "axios": "1.21.1",
+    "date-fns": "4.4.0"
   }
 }
