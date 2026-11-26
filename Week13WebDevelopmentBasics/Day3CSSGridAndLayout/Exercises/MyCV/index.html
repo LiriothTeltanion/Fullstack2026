@@ -8,9 +8,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to CV content</a>
     <div class="cv">
       <header class="cv-header">
-        <div class="initials" aria-hidden="true">KC</div>
+        <img
+          class="initials"
+          src="assets/kevin-monogram.svg"
+          width="84"
+          height="84"
+          alt="Kevin Cusnir initials"
+        />
         <div>
           <h1>Kevin Cusnir</h1>
           <p class="role">Full-stack web developer in training</p>
@@ -27,9 +34,32 @@
                 href="https://github.com/LiriothTeltanion"
                 target="_blank"
                 rel="noopener noreferrer"
-                >github.com/LiriothTeltanion</a
+                ><img
+                  class="social-icon"
+                  src="assets/fontawesome/github.svg"
+                  width="20"
+                  height="20"
+                  alt=""
+                />
+                GitHub · LiriothTeltanion</a
               >
             </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/kevin-cusnir-883173b4/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img
+                  class="social-icon"
+                  src="assets/fontawesome/linkedin-in.svg"
+                  width="20"
+                  height="20"
+                  alt=""
+                />
+                LinkedIn · Kevin Cusnir</a
+              >
+            </li>
+            <li><a href="#contact">Prepare a message</a></li>
           </ul>
         </section>
 
@@ -60,7 +90,7 @@
         </section>
       </aside>
 
-      <main class="cv-main">
+      <main class="cv-main" id="main" tabindex="-1">
         <section>
           <h2>Profile</h2>
           <p>
@@ -87,6 +117,22 @@
             <h3>Drum Set</h3>
             <p class="where">JavaScript · DOM events · audio</p>
             <p>Nine drum pads that play a sound on a key press or a click.</p>
+            <figure class="project-preview">
+              <img
+                src="assets/drumset-preview.jpg"
+                width="1000"
+                height="620"
+                alt="Kevin's Drumset project with nine labeled keyboard drum pads, from A to L"
+                loading="lazy"
+              />
+              <figcaption>
+                Actual local capture of the
+                <a
+                  href="../../../../Week3JavaScriptandDOM/Day5MiniProject/Exercises/drumset-mini/index.html"
+                  >Drumset interface</a
+                >. No performance or audio claim is implied by the screenshot.
+              </figcaption>
+            </figure>
           </article>
           <article class="entry">
             <h3>Star Wars Web App</h3>
@@ -104,7 +150,79 @@
           <h2>Interests</h2>
           <p>Music production, guitar and piano, history documentaries and game lore.</p>
         </section>
+
+        <section id="contact" aria-labelledby="contact-title">
+          <h2 id="contact-title">Start a professional conversation</h2>
+          <p id="contact-help">
+            Prepare a message to Kevin, then copy it and open his LinkedIn profile. You send it
+            yourself; this page does not send or collect messages.
+          </p>
+          <p class="privacy-note">
+            The draft stays in this browser tab's session storage when available. Avoid sensitive
+            information. Clear it when finished.
+          </p>
+          <form id="contact-form" novalidate aria-describedby="contact-help">
+            <label for="contact-name">Your name</label>
+            <input
+              id="contact-name"
+              type="text"
+              required
+              maxlength="160"
+              autocomplete="name"
+              aria-describedby="name-error"
+            />
+            <p class="field-error" id="name-error"></p>
+            <label for="contact-message">Your message</label>
+            <textarea
+              id="contact-message"
+              required
+              maxlength="4000"
+              rows="5"
+              aria-describedby="message-hint message-error"
+            ></textarea>
+            <p class="field-hint" id="message-hint">
+              1–2000 characters. Include the opportunity or question you would like to discuss.
+            </p>
+            <p class="field-error" id="message-error"></p>
+            <div class="form-actions">
+              <button id="prepare-message" type="submit" disabled>Prepare message</button>
+              <button id="clear-draft" type="button" disabled>Clear draft</button>
+            </div>
+          </form>
+          <p id="contact-status" role="status" aria-live="polite"></p>
+          <div id="prepared-message" hidden>
+            <label for="message-copy">Prepared message — review before sending</label>
+            <textarea id="message-copy" rows="7" readonly></textarea>
+            <div class="form-actions">
+              <button id="copy-message" type="button">Copy message</button>
+              <a
+                class="contact-link"
+                href="https://www.linkedin.com/in/kevin-cusnir-883173b4/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Open Kevin's LinkedIn (new tab)</a
+              >
+            </div>
+            <p>
+              LinkedIn may require sign-in or restrict messaging. No message is sent until you
+              complete it there.
+            </p>
+          </div>
+          <noscript
+            ><p>
+              Message preparation requires JavaScript. You can still
+              <a
+                href="https://www.linkedin.com/in/kevin-cusnir-883173b4/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >open Kevin's LinkedIn profile</a
+              >
+              and write a message there.
+            </p></noscript
+          >
+        </section>
       </main>
     </div>
+    <script type="module" src="contact.js"></script>
   </body>
 </html>

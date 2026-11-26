@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-26
-Base HEAD: b9d710ef08184291f7e3a915009d40157a80c749
-Source-index SHA-256 (generated outputs excluded): eb701fd5d7cd5e158e8e128e6e4153139457c287d30486b9ced7a640d4c5a69d
-Indexed files: 3123
+Base HEAD: d4746d211bb0d493eeb9172ff5123629c1bcd6ed
+Source-index SHA-256 (generated outputs excluded): 19d305e041ad67d79f080c6a2a39e22c1aa76e1978c767e8a9f72e4e6b47beb7
+Indexed files: 3132
 
 .
 ├── .github
@@ -1048,6 +1048,17 @@ Indexed files: 3123
 │   │   │   │   ├── README.md
 │   │   │   │   └── style.css
 │   │   │   ├── MyCV
+│   │   │   │   ├── assets
+│   │   │   │   │   ├── fontawesome
+│   │   │   │   │   │   ├── github.svg
+│   │   │   │   │   │   ├── LICENSE.txt
+│   │   │   │   │   │   ├── linkedin-in.svg
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── drumset-preview.jpg
+│   │   │   │   │   ├── kevin-monogram.svg
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── contact.js
+│   │   │   │   ├── contact.test.js
 │   │   │   │   ├── index.html
 │   │   │   │   ├── README.md
 │   │   │   │   └── style.css
