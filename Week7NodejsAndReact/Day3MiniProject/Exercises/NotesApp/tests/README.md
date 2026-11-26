@@ -1,16 +1,21 @@
-# Notes CLI tests
+# Notes regression tests
 
-Run `npm test` from the NotesApp directory after `npm ci`. Each behavior test runs
-the real `node app` command in separate Node processes and supplies a notes file
-inside its own disposable operating-system temporary directory. No private notes
-or default user file are read. An explicit preload guard rejects network calls
-in each CLI child command. The normal test runner remains available for future
-HTTP tests that need a disposable loopback server; it has no global network
-preload. Use `npm run test:cli` to select just the CLI suite.
+From the NotesApp directory, install the locked dependencies with `npm ci` and run `npm test` to exercise both interfaces.
 
-Coverage includes add/list/read/remove persistence, Unicode/multiline bodies,
-duplicate and missing titles, invalid commands/options, required arguments,
-read-only help/list, title matching, corrupt-file retention, writer-lock retention
-and preservation of the existing web demo's JSON fixture. Tests remove only their
-own verified temporary directories. The suite does not start the Express server
-or establish that a course chapter has been submitted or approved.
+## CLI
+
+Run `npm run test:cli` to select the command-line suite. Each test starts the real
+`node app` command in a separate process with a disposable notes file. A preload
+guard rejects network calls in each CLI child. The suite checks add, list, read and
+remove across processes, Unicode and multiline text, duplicate or missing titles,
+invalid commands and options, title matching, read-only help and list, corrupt files,
+writer locks, and preservation of the web demo fixture.
+
+## HTTP API
+
+Run `node --test tests/notes-http.test.js` to select the HTTP suite. It starts the real
+Express app on a loopback port in a temporary copy with its own data file. Tests
+cover CRUD, invalid input, concurrent writes, valid snapshots during saves,
+malformed JSON, and recovery after internal errors. Each suite cleans up its own
+temporary data. The server serializes mutations within one process. Multiple server
+processes would need shared transactional storage.

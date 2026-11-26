@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 320" role="img" aria-labelledby="title desc">
+  <title id="title">Guitar picks</title>
+  <desc id="desc">Three rounded triangular guitar picks in burnt orange, cream and dark teal. Original Riff Shop product illustration.</desc>
+  <defs><linearGradient id="paper" x2="1" y2="1"><stop stop-color="#fbe8d9"/><stop offset="1" stop-color="#f0d1b9"/></linearGradient></defs>
+  <rect width="512" height="320" fill="url(#paper)"/>
+  <circle cx="435" cy="57" r="92" fill="#fff7e9" opacity=".35"/>
+  <ellipse cx="256" cy="282" rx="135" ry="14" fill="#714d36" opacity=".13"/>
+  <g stroke="#573b30" stroke-width="4"><path d="M112 94q64-25 117 12q15 19-15 75l-43 67q-14 19-27-2L95 139q-10-32 17-45" fill="#d28d57" transform="rotate(-15 160 170)"/><path d="M204 68q64-18 113 10q23 13 5 57l-55 113q-13 26-29 1l-56-106q-24-49 22-75" fill="#f8dfaa"/><path d="M300 104q57-22 105 9q26 18 5 53l-61 87q-14 17-27-3l-46-96q-14-35 24-50" fill="#35635f"/></g><g fill="#fff8ea" opacity=".8"><circle cx="354" cy="151" r="8"/><circle cx="376" cy="156" r="5"/></g>
+</svg>

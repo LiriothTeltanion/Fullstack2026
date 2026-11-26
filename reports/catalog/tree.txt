@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-26
-Base HEAD: aaf83fe9647680fa02d3ef664ac14fdc3a7c4cf4
-Source-index SHA-256 (generated outputs excluded): 8eb1ba67049f8922487f73924fe1060716c785522045fbf73523fbda676fec3e
-Indexed files: 2972
+Base HEAD: cc9e872d554c8c2e5a5b1fbdb48b705b03b8fa7a
+Source-index SHA-256 (generated outputs excluded): b9d0413bace848cf82192540a88f4b25abe45f8e3fad02d6a5120ccf133a5fa3
+Indexed files: 3000
 
 .
 ├── .github
@@ -555,6 +555,9 @@ Indexed files: 2972
 │   │   │   │   │   ├── main.tsx
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   └── types.ts
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── components.test.js
+│   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
@@ -977,10 +980,33 @@ Indexed files: 2972
 │   │   │   │   ├── README.md
 │   │   │   │   └── style.css
 │   │   │   ├── ShoppingWebsite
+│   │   │   │   ├── assets
+│   │   │   │   │   ├── fontawesome
+│   │   │   │   │   │   ├── guitar.svg
+│   │   │   │   │   │   ├── LICENSE.txt
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── products
+│   │   │   │   │   │   ├── cable.svg
+│   │   │   │   │   │   ├── capo.svg
+│   │   │   │   │   │   ├── cloth.svg
+│   │   │   │   │   │   ├── headphones.svg
+│   │   │   │   │   │   ├── metronome.svg
+│   │   │   │   │   │   ├── mic-stand.svg
+│   │   │   │   │   │   ├── music-stand.svg
+│   │   │   │   │   │   ├── picks.svg
+│   │   │   │   │   │   ├── pop-filter.svg
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── strap.svg
+│   │   │   │   │   │   ├── strings.svg
+│   │   │   │   │   │   ├── tuner.svg
+│   │   │   │   │   │   └── windscreen.svg
+│   │   │   │   │   └── README.md
 │   │   │   │   ├── account-demo.js
 │   │   │   │   ├── app.js
 │   │   │   │   ├── index.html
+│   │   │   │   ├── login-signup.css
 │   │   │   │   ├── login.html
+│   │   │   │   ├── products.css
 │   │   │   │   ├── products.html
 │   │   │   │   ├── README.md
 │   │   │   │   ├── signup.html
@@ -2452,6 +2478,7 @@ Indexed files: 2972
 │   │   │   │   ├── calendar.js
 │   │   │   │   ├── calendar.test.js
 │   │   │   │   ├── notes.js
+│   │   │   │   ├── notes.test.js
 │   │   │   │   ├── notesStore.js
 │   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
@@ -2747,6 +2774,7 @@ Indexed files: 2972
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── tests
 │   │   │   │   │   ├── notes-cli.test.js
+│   │   │   │   │   ├── notes-http.test.js
 │   │   │   │   │   ├── offline-guard.cjs
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── .env.example
@@ -3444,6 +3472,9 @@ Indexed files: 2972
 │   │   │   │   │   ├── index.css
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── store.test.js
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
@@ -3703,6 +3734,9 @@ Indexed files: 2972
 │   │   │   │   │   ├── index.css
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── selectors.test.js
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md

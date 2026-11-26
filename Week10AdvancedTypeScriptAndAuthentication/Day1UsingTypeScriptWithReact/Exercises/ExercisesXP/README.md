@@ -21,11 +21,15 @@ npm run dev
 
 ## 🎯 The challenge
 
-1. **Greeting.** `GreetingProps` has a required `name` and an optional `age`, and the age only shows when it is passed.
-2. **Counter.** `useState<number>(start)` with a `start` prop that defaults to 0.
+1. **Greeting.** `GreetingProps` has required `name` and `messageCount` props and an optional `age`. It displays the unread-message count and only shows age when supplied.
+2. **Counter.** `useState<number>(start)` with a `start` prop that defaults to 0. A typed `none | increment | decrement` state records the last action and announces it in a status region.
 3. **UserCard.** Optional name, age and role props default to Anonymous, 0 and Member. An omitted age displays Age not provided. The earlier User object and highlight props remain supported.
 4. **UserList.** useEffect fetches https://jsonplaceholder.typicode.com/users, with typed state, loading, HTTP/shape errors and cleanup cancellation. Local signup examples remain visible separately.
 5. **SignupForm.** `ChangeEvent<HTMLInputElement>`, `ChangeEvent<HTMLSelectElement>` and `FormEvent<HTMLFormElement>`, and an `onAdd` prop typed as `(user: Omit<User, "id">) => void`.
+
+## Verification
+
+Run `npm test` for the actual application entry rendered in a local DOM: greeting counts, preserved optional age, the initial counter value, increment/decrement and last-action updates, optional UserCard defaults and the existing user list with a synthetic fetch response. No external API is contacted by the test. `npm run typecheck` checks strict prop/state types; `npm run build` also builds the production bundle.
 
 ## 🧠 What I learned
 

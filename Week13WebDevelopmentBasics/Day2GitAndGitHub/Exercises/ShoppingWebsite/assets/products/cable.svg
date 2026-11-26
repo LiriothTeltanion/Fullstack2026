@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 320" role="img" aria-labelledby="title desc">
+  <title id="title">Instrument cable</title>
+  <desc id="desc">A coiled black instrument cable with two silver quarter-inch jack plugs. Original Riff Shop product illustration.</desc>
+  <defs><linearGradient id="paper" x2="1" y2="1"><stop stop-color="#fbe8d9"/><stop offset="1" stop-color="#f0d1b9"/></linearGradient></defs>
+  <rect width="512" height="320" fill="url(#paper)"/>
+  <circle cx="435" cy="57" r="92" fill="#fff7e9" opacity=".35"/>
+  <ellipse cx="256" cy="282" rx="135" ry="14" fill="#714d36" opacity=".13"/>
+  <g fill="none" stroke="#28353c" stroke-width="12"><ellipse cx="256" cy="174" rx="116" ry="72"/><ellipse cx="256" cy="174" rx="98" ry="60"/><ellipse cx="256" cy="174" rx="80" ry="48"/><path d="M145 156q-64-46-28-85M365 188q58 35 48 77"/></g><g transform="rotate(-17 122 73)"><rect x="107" y="52" width="30" height="50" rx="7" fill="#4d5d67"/><path d="M113 23h18v33h-18z" fill="#bfcbd0"/><path d="M113 34h18M113 44h18" stroke="#263d48" stroke-width="4"/></g><g transform="rotate(18 410 257)"><rect x="396" y="233" width="30" height="39" rx="6" fill="#4d5d67"/><path d="M402 268h18v31h-18z" fill="#bfcbd0"/><path d="M402 280h18M402 290h18" stroke="#263d48" stroke-width="4"/></g>
+</svg>

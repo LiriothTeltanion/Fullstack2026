@@ -23,8 +23,8 @@ export default function App() {
       <h1>TypeScript with React</h1>
       <section className="card">
         <h2>1. Greeting</h2>
-        <Greeting name="Kevin" />
-        <Greeting name="Maya" age={29} />
+        <Greeting name="Kevin" messageCount={3} />
+        <Greeting name="Maya" messageCount={0} age={29} />
       </section>
       <section className="card">
         <h2>2. Counter</h2>

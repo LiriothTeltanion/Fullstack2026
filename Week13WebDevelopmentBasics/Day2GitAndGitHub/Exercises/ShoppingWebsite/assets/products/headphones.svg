@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 320" role="img" aria-labelledby="title desc">
+  <title id="title">Closed-back headphones</title>
+  <desc id="desc">Closed-back studio headphones with padded headband and two copper-trimmed ear cups. Original Riff Shop product illustration.</desc>
+  <defs><linearGradient id="paper" x2="1" y2="1"><stop stop-color="#fbe8d9"/><stop offset="1" stop-color="#f0d1b9"/></linearGradient></defs>
+  <rect width="512" height="320" fill="url(#paper)"/>
+  <circle cx="435" cy="57" r="92" fill="#fff7e9" opacity=".35"/>
+  <ellipse cx="256" cy="282" rx="135" ry="14" fill="#714d36" opacity=".13"/>
+  <path d="M146 182v-35a110 110 0 0 1 220 0v35" fill="none" stroke="#28353c" stroke-width="28"/><path d="M159 137a98 98 0 0 1 194 0" fill="none" stroke="#6e7b80" stroke-width="11"/><g fill="#32464e" stroke="#1f2f36" stroke-width="6"><rect x="125" y="149" width="69" height="112" rx="29"/><rect x="318" y="149" width="69" height="112" rx="29"/></g><g fill="#b2784f"><rect x="140" y="162" width="26" height="84" rx="13"/><rect x="346" y="162" width="26" height="84" rx="13"/></g><path d="M373 259q-3 23-48 23" fill="none" stroke="#28353c" stroke-width="7"/>
+</svg>

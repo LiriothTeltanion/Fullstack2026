@@ -9,11 +9,21 @@
     />
     <title>Riff Shop · Products</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="products.css" rel="stylesheet" />
     <script src="app.js" defer></script>
   </head>
   <body>
     <header class="site-header">
-      <a class="logo" href="#top">Riff<span>Shop</span></a>
+      <a class="logo" href="index.html" aria-label="Riff Shop home"
+        ><img
+          class="brand-icon"
+          src="assets/fontawesome/guitar.svg"
+          alt=""
+          aria-hidden="true"
+          width="28"
+          height="28"
+        />Riff<span>Shop</span></a
+      >
       <a class="products-link" href="products.html">Products</a>
       <button
         type="button"
@@ -24,6 +34,9 @@
       >
         Cart <span class="badge" id="cart-count">0</span>
       </button>
+      <nav class="account-links" aria-label="Account navigation">
+        <a href="login.html">Log in</a><a href="signup.html">Create an account</a>
+      </nav>
     </header>
 
     <main id="top">

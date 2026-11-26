@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 320" role="img" aria-labelledby="title desc">
+  <title id="title">Trigger capo</title>
+  <desc id="desc">A black spring trigger capo with silver hinge and padded jaws. Original Riff Shop product illustration.</desc>
+  <defs><linearGradient id="paper" x2="1" y2="1"><stop stop-color="#fbe8d9"/><stop offset="1" stop-color="#f0d1b9"/></linearGradient></defs>
+  <rect width="512" height="320" fill="url(#paper)"/>
+  <circle cx="435" cy="57" r="92" fill="#fff7e9" opacity=".35"/>
+  <ellipse cx="256" cy="282" rx="135" ry="14" fill="#714d36" opacity=".13"/>
+  <g transform="rotate(-18 260 160)" stroke="#29323a" stroke-linejoin="round"><path d="M164 81h195v34H195v94h-31z" fill="#323d45" stroke-width="8"/><path d="M191 122h131v24H191z" fill="#bd8855" stroke-width="5"/><path d="m202 160 85-33 49 99-29 17-47-69-58 28z" fill="#4d5b64" stroke-width="8"/><path d="M184 177q-42 55-5 93l31-20q-22-18 7-58" fill="#323d45" stroke-width="8"/><circle cx="204" cy="162" r="18" fill="#d4dbde" stroke-width="7"/><path d="m194 155 19 14" stroke="#6a757b" stroke-width="4"/></g>
+</svg>

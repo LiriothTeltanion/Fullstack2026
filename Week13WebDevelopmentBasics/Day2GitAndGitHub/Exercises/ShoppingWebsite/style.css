@@ -1,4 +1,4 @@
-/* Basic CSS layout for this introductory assignment: floats and inline-block. */
+/* Shared basic layout: floats in the header, block content, no flex or grid. */
 * {
   box-sizing: border-box;
 }
@@ -18,7 +18,8 @@ button {
   cursor: pointer;
 }
 button:focus-visible,
-a:focus-visible {
+a:focus-visible,
+input:focus-visible {
   outline: 3px solid #b4441a;
   outline-offset: 3px;
 }
@@ -38,14 +39,29 @@ a:focus-visible {
 .logo span {
   color: #b4441a;
 }
+.brand-icon {
+  width: 1.15em;
+  height: 1.15em;
+  margin-right: 0.3em;
+  vertical-align: -0.17em;
+}
 .products-link,
-.cart-button {
+.cart-button,
+.account-links {
   float: right;
   margin-left: 16px;
   padding: 6px 12px;
 }
-.products-link {
+.products-link,
+.account-links a {
   color: #2b2118;
+}
+.account-links {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.account-links a + a {
+  margin-left: 12px;
 }
 main {
   width: 92%;
@@ -59,47 +75,6 @@ main {
   color: white;
   border-radius: 8px;
 }
-.filters button {
-  margin: 4px;
-  padding: 8px;
-}
-.filter.is-active {
-  background: #2b2118;
-  color: #fff;
-}
-.product-grid {
-  list-style: none;
-  padding: 0;
-  font-size: 0;
-}
-.product {
-  display: inline-block;
-  vertical-align: top;
-  width: 31.333%;
-  margin: 1%;
-  padding: 16px;
-  border: 1px solid #eadfd4;
-  background: #fff;
-  border-radius: 8px;
-  font-size: 16px;
-}
-.product-image {
-  min-height: 90px;
-  text-align: center;
-  padding: 20px;
-  font-size: 3rem;
-  background: #fbe4d8;
-}
-.product h3 {
-  min-height: 3em;
-}
-.tag {
-  color: #6f6257;
-}
-.price {
-  font-weight: 700;
-}
-.add,
 .checkout {
   padding: 8px 14px;
   background: #b4441a;
@@ -107,70 +82,20 @@ main {
   border: 0;
   border-radius: 4px;
 }
-.cart[hidden] {
-  display: none;
-}
-.cart {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 20;
-  width: min(100%, 420px);
-  height: 100vh;
-  overflow: auto;
-  padding: 20px;
-  background: #fff;
-  box-shadow: -4px 0 20px #0004;
-}
-.close {
-  float: right;
-}
-.cart-lines {
-  padding: 0;
-  list-style: none;
-}
-.cart-lines li {
-  margin-bottom: 12px;
-  border-bottom: 1px solid #ddd;
-  padding: 10px 0;
-}
-.cart-lines li span {
-  display: block;
-}
 .site-footer {
   clear: both;
   text-align: center;
   padding: 20px;
   background: #fff;
 }
-@media (max-width: 650px) {
-  .product {
-    width: 48%;
-  }
-}
-@media (max-width: 400px) {
-  .product {
-    width: 98%;
-  }
+@media (max-width: 599px) {
   .products-link,
-  .cart-button {
+  .cart-button,
+  .account-links {
     margin-left: 4px;
     padding: 6px;
   }
-}
-
-.account-form {
-  max-width: 420px;
-  padding: 20px;
-  background: white;
-  border: 1px solid #eadfd4;
-}
-.account-form label {
-  display: block;
-  margin-bottom: 14px;
-}
-.account-form input {
-  display: block;
-  width: 100%;
-  padding: 8px;
+  .account-links {
+    clear: right;
+  }
 }

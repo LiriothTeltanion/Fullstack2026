@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 320" role="img" aria-labelledby="title desc">
+  <title id="title">Digital metronome</title>
+  <desc id="desc">A compact digital metronome showing 76 beats per minute with tempo controls. Original Riff Shop product illustration.</desc>
+  <defs><linearGradient id="paper" x2="1" y2="1"><stop stop-color="#fbe8d9"/><stop offset="1" stop-color="#f0d1b9"/></linearGradient></defs>
+  <rect width="512" height="320" fill="url(#paper)"/>
+  <circle cx="435" cy="57" r="92" fill="#fff7e9" opacity=".35"/>
+  <ellipse cx="256" cy="282" rx="135" ry="14" fill="#714d36" opacity=".13"/>
+  <rect x="153" y="42" width="206" height="235" rx="26" fill="#2c464c" stroke="#1d3036" stroke-width="6"/><rect x="174" y="69" width="164" height="97" rx="8" fill="#d2d7ad"/><text x="256" y="132" text-anchor="middle" font-family="monospace" font-size="60" fill="#34453f">76</text><text x="256" y="154" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#34453f">BEATS / MINUTE</text><circle cx="256" cy="216" r="29" fill="#b9653c"/><path d="m249 202 20 14-20 14z" fill="#fff4dc"/><circle cx="195" cy="216" r="13" fill="#a1b2b1"/><circle cx="317" cy="216" r="13" fill="#a1b2b1"/><path d="M188 216h14M310 216h14M317 209v14" stroke="#2c464c" stroke-width="3"/>
+</svg>

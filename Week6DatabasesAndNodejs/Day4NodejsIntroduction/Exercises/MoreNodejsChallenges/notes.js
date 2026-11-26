@@ -45,7 +45,7 @@ const commands = {
   },
 };
 
-if (!commands[command]) {
+if (!Object.hasOwn(commands, command)) {
   console.log("Commands: add, list, read, search, remove");
   process.exitCode = 1;
 } else {
