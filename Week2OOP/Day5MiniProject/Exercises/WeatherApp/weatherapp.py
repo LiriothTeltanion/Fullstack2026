@@ -10,6 +10,7 @@ Note:
 from __future__ import annotations
 
 import os
+from contextlib import closing
 from datetime import datetime, timezone
 from typing import Any, Dict, Iterable, List, Optional, Tuple
 
@@ -90,17 +91,20 @@ def current_weather_at_id(owm: OWM, city_id: int) -> Dict[str, Any]:
 
 # ---------------------- Geocoding 🔎 ----------------------
 def find_city_id(owm: OWM, query: str, *, country: Optional[str] = None) -> Optional[int]:
-    """Use OWM geocoding to find a city ID for a query (optionally filter by country). 🧭"""
-    gm = owm.geocoding_manager()
-    results = gm.geocode(query, limit=5)
+    """Find a city ID in PyOWM's local registry, optionally filtered by country. 🧭"""
+    # Direct geocoding returns coordinates without city IDs. The bundled registry
+    # supports ID-based weather queries without an extra API request.
+    query = query.strip()
+    registry = owm.city_id_registry()
+    with closing(registry.connection):
+        results = registry.ids_for(
+            query, country=country.strip().upper() if country else None, matching="like"
+        )
     if not results:
         return None
-    if country:
-        results = [r for r in results if (r.country or "").lower() == country.lower()]
-        if not results:
-            return None
-    # Take the first match
-    return getattr(results[0], "id", None)
+    # Prefer Paris over Villeparisis while retaining substring searches.
+    city = next((row for row in results if row[1].casefold() == query.casefold()), results[0])
+    return city[0]
 
 
 # ---------------------- Forecasts 📅 ----------------------
@@ -137,6 +141,8 @@ def air_quality_by_place(owm: OWM, place: str) -> Optional[Dict[str, Any]]:
     loc = matches[0]
     apm = owm.airpollution_manager()
     aq = apm.air_quality_at_coords(loc.lat, loc.lon)
+    if aq is None:
+        return None
     # PyOWM exposes EU AQI and pollutant micrograms/m^3
     data = {
         "place": f"{loc.name},{loc.country}",
