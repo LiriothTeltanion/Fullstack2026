@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-26
-Base HEAD: d4746d211bb0d493eeb9172ff5123629c1bcd6ed
-Source-index SHA-256 (generated outputs excluded): 19d305e041ad67d79f080c6a2a39e22c1aa76e1978c767e8a9f72e4e6b47beb7
-Indexed files: 3132
+Base HEAD: bae0b244d75cbd9f0ebc58d3e02d0ad42143863f
+Source-index SHA-256 (generated outputs excluded): 8b2c0c1e10ce38f271fdbb0061e7817a4bbf23569a7eda025042e37dfd813db5
+Indexed files: 3148
 
 .
 ├── .github
@@ -2973,16 +2973,24 @@ Indexed files: 3132
 │   │   │   ├── ExercisesXPGold
 │   │   │   │   ├── src
 │   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── BootstrapCard.jsx
 │   │   │   │   │   │   ├── Card.jsx
 │   │   │   │   │   │   ├── PlanetList.jsx
 │   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── SixPlanetList.jsx
 │   │   │   │   │   │   └── SocialMedia.jsx
 │   │   │   │   │   ├── App.jsx
 │   │   │   │   │   ├── data.js
+│   │   │   │   │   ├── exercise.css
 │   │   │   │   │   ├── index.css
 │   │   │   │   │   ├── main.jsx
+│   │   │   │   │   ├── OriginalExercises.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── components.test.js
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -3074,15 +3082,25 @@ Indexed files: 3132
 │   │   │   ├── ExercisesXPNinja
 │   │   │   │   ├── src
 │   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── LiveClock.jsx
 │   │   │   │   │   │   ├── QuoteBox.jsx
-│   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── ValidationForm.jsx
 │   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── clockTicker.js
+│   │   │   │   │   ├── formValidation.js
 │   │   │   │   │   ├── index.css
 │   │   │   │   │   ├── main.jsx
+│   │   │   │   │   ├── practice.css
+│   │   │   │   │   ├── PracticeApp.jsx
 │   │   │   │   │   ├── quotes.js
 │   │   │   │   │   ├── randomPick.js
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── practice.test.js
+│   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
