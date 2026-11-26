@@ -1,6 +1,6 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
 import { loadCatalog, localCatalog } from "./api.js";
-import { cleanCart, cartLines, totalCents } from "./cart.js";
+import { cleanCart, cartLines, totalCents, changeQuantity } from "./cart.js";
 import { text } from "./i18n.js";
 const Context = createContext(null);
 function restoreCart() {
@@ -17,6 +17,8 @@ export function BookstoreProvider({ children }) {
   const [cart, setCart] = useState(restoreCart),
     [language, setLanguage] = useState("en"),
     [notice, setNotice] = useState("");
+  const [saveFailed, setSaveFailed] = useState(false);
+  const previousCart = useRef(cart);
   useEffect(() => {
     let active = true;
     setStatus("loading");
@@ -35,9 +37,14 @@ export function BookstoreProvider({ children }) {
     };
   }, [reload]);
   useEffect(() => {
+    if (cart === previousCart.current) return;
+    previousCart.current = cart;
     try {
       localStorage.setItem("readroom-cart", JSON.stringify(cart));
-    } catch {}
+      setSaveFailed(false);
+    } catch {
+      setSaveFailed(true);
+    }
   }, [cart]);
   useEffect(() => {
     document.documentElement.lang = language;
@@ -49,13 +56,7 @@ export function BookstoreProvider({ children }) {
     setNotice(text[language].saved);
   };
   const change = (bookId, storeId, quantity) =>
-    setCart(current =>
-      current.map(line =>
-        line.bookId === bookId && line.storeId === storeId
-          ? { ...line, quantity: Math.min(99, Math.max(1, Math.floor(Number(quantity)) || 1)) }
-          : line
-      )
-    );
+    setCart(current => changeQuantity(current, bookId, storeId, quantity));
   const remove = (bookId, storeId) =>
     setCart(current => current.filter(line => line.bookId !== bookId || line.storeId !== storeId));
   return (
@@ -74,7 +75,7 @@ export function BookstoreProvider({ children }) {
         language,
         setLanguage,
         t: key => text[language][key] ?? key,
-        notice,
+        notice: saveFailed ? text[language].saveFailed : notice,
         localCatalog,
       }}
     >

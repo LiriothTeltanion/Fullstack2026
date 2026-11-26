@@ -16,6 +16,8 @@ export const text = {
     empty: "Your cart is empty.",
     browse: "Browse bookshops",
     quantity: "Quantity",
+    quantityError: "Enter a whole quantity from 1 to 99. The previous quantity is unchanged.",
+    saveFailed: "Your cart changes are available in this tab, but the browser could not save them.",
     remove: "Remove",
     total: "Total",
     checkout: "Finalize order",
@@ -59,6 +61,10 @@ export const text = {
     empty: "Tu carrito está vacío.",
     browse: "Explorar librerías",
     quantity: "Cantidad",
+    quantityError:
+      "Introduce una cantidad entera del 1 al 99. La cantidad anterior no ha cambiado.",
+    saveFailed:
+      "Los cambios del carrito están disponibles en esta pestaña, pero el navegador no pudo guardarlos.",
     remove: "Quitar",
     total: "Total",
     checkout: "Finalizar pedido",

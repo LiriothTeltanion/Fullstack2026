@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { createFixtureServer } from "../server/index.js";
 import { validateOrder } from "../server/orders.js";
-import { cleanCart, cartLines, totalCents } from "../src/cart.js";
+import { cleanCart, cartLines, totalCents, parseQuantity, changeQuantity } from "../src/cart.js";
 import { books, stores } from "../server/catalog.js";
 const valid = {
   firstName: "Practice",
@@ -35,6 +35,32 @@ test("server validates customer, quantities, store membership and authoritative 
   ])
     assert.ok(validateOrder(body).error);
   assert.equal(validateOrder(valid).order.amount, 36);
+});
+
+test("quantity drafts accept supported whole numbers without coercing empty or invalid values", () => {
+  for (const [value, expected] of [
+    [1, 1],
+    [99, 99],
+    ["2", 2],
+    ["1e1", 10],
+  ])
+    assert.equal(parseQuantity(value), expected);
+  for (const value of ["", " ", "1.5", 0, 100, -1, Infinity, NaN, null, false, [], [2], {}])
+    assert.equal(parseQuantity(value), null);
+});
+
+test("only a valid committed quantity changes the exact book and store pair", () => {
+  const original = [
+    { bookId: "ab", storeId: "c", quantity: 2 },
+    { bookId: "a", storeId: "bc", quantity: 3 },
+  ];
+  for (const value of ["", "1.5", 0, 100])
+    assert.equal(changeQuantity(original, "ab", "c", value), original);
+  const changed = changeQuantity(original, "ab", "c", "4");
+  assert.equal(changed[0].quantity, 4);
+  assert.equal(changed[1], original[1]);
+  assert.equal(original[0].quantity, 2);
+  assert.equal(changeQuantity(original, "missing", "c", 2), original);
 });
 test("HTTP catalog, order UUID, reload, idempotent retry, conflict and negative paths", async () => {
   const server = createFixtureServer();
