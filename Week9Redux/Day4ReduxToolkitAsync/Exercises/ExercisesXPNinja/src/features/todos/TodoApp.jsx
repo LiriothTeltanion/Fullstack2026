@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useId, useRef, useState } from "react";
 import {
   useAddTodoMutation,
   useDeleteTodoMutation,
@@ -12,12 +12,39 @@ export default function TodoApp() {
   const [toggleTodo] = useToggleTodoMutation();
   const [deleteTodo] = useDeleteTodoMutation();
   const [title, setTitle] = useState("");
+  const [error, setError] = useState(null);
+  const input = useRef(null);
+  const editRevision = useRef(0);
+  const pendingAdd = useRef(false);
+  const errorId = useId();
 
-  const handleSubmit = event => {
+  const handleSubmit = async event => {
     event.preventDefault();
-    if (!title.trim()) return;
-    addTodo(title.trim());
+    if (pendingAdd.current) return;
+    if (!title.trim()) {
+      setError({ kind: "input", message: "Enter a todo with at least one non-space character." });
+      input.current?.focus();
+      return;
+    }
+    const submittedDraft = title;
+    const submittedRevision = editRevision.current;
+    pendingAdd.current = true;
+    setError(null);
     setTitle("");
+    try {
+      await addTodo(submittedDraft.trim()).unwrap();
+    } catch {
+      // Restore the failed draft only if the user has not typed a newer one.
+      const hasNewerDraft = editRevision.current !== submittedRevision;
+      setTitle(current => (hasNewerDraft ? current : submittedDraft));
+      setError({
+        kind: "request",
+        message: "Could not add the todo. Review the current draft and try again.",
+      });
+      if (!hasNewerDraft) input.current?.focus();
+    } finally {
+      pendingAdd.current = false;
+    }
   };
 
   if (isLoading) return <div className="spinner" role="status" aria-label="Loading todos" />;
@@ -31,11 +58,20 @@ export default function TodoApp() {
 
   return (
     <section className="card">
-      <form className="row" onSubmit={handleSubmit}>
+      <form className="row" onSubmit={handleSubmit} noValidate>
         <input
+          ref={input}
           value={title}
-          onChange={event => setTitle(event.target.value)}
+          onChange={event => {
+            editRevision.current += 1;
+            setTitle(event.target.value);
+            setError(null);
+          }}
           aria-label="New todo"
+          aria-describedby={error ? errorId : undefined}
+          aria-invalid={error?.kind === "input" || undefined}
+          required
+          dir="auto"
         />
         <button type="submit" disabled={isAdding}>
           Add
@@ -44,6 +80,11 @@ export default function TodoApp() {
           Refetch
         </button>
       </form>
+      {error && (
+        <p className="error" id={errorId} role="alert">
+          {error.message}
+        </p>
+      )}
       <ul className="plain">
         {todos.map(todo => (
           <li key={todo.id}>

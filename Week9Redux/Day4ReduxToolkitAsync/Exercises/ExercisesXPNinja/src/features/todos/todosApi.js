@@ -16,16 +16,23 @@ export const todosApi = createApi({
         method: "POST",
         body: { title, completed: false, userId: 1 },
       }),
-      async onQueryStarted(title, { dispatch, queryFulfilled }) {
-        const patch = dispatch(
+      async onQueryStarted(title, { dispatch, queryFulfilled, requestId }) {
+        // Each optimistic creation has its own identity, even when requests overlap.
+        const optimisticId = requestId;
+        dispatch(
           todosApi.util.updateQueryData("getTodos", undefined, draft => {
-            draft.unshift({ id: Date.now(), title, completed: false, userId: 1 });
+            draft.unshift({ id: optimisticId, title, completed: false, userId: 1 });
           })
         );
         try {
           await queryFulfilled;
         } catch {
-          patch.undo(); // the server said no, so take the new todo back out
+          // Remove only this failed creation; inverse array patches could undo a newer success.
+          dispatch(
+            todosApi.util.updateQueryData("getTodos", undefined, draft =>
+              draft.filter(todo => todo.id !== optimisticId)
+            )
+          );
         }
       },
     }),
