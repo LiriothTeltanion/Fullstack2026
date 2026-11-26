@@ -1,45 +1,63 @@
-# 🧪 Exercise - Components
+# Components · responsive Bootstrap layout
 
-<div align="center">
+A small, accessible Bootstrap layout with fixed navigation, a full-width hero,
+three responsive columns and working disclosure controls. The sign-in-shaped
+form is a **local demonstration**: use made-up values; it does not authenticate,
+read field values, save them, or send a request.
 
-<img src="../../../../assets/readme/folder-pulse.svg" width="100%" alt="Animated learning pulse">
+## Run
 
-<img src="../../../../assets/readme/progress/components-a2e3dc5e45.svg" width="100%" alt="Progress card for Components">
+From this directory, run `python -m http.server 8000 --bind 127.0.0.1`, then open
+<http://127.0.0.1:8000>. The main page needs no package install or internet access.
+Its Bootstrap 5.3.3 stylesheet is vendored with its MIT license.
 
-</div>
+- Fixed navbar: three section links, About initially active, Contact demo badge,
+  a keyboard-operable dropdown and a right-aligned desktop demo form.
+- Full-width introduction with a primary link to the examples.
+- Three columns, each with an original inline icon and a working detail button;
+  the third includes a New badge.
+- At smaller widths the navigation collapses and the columns stack. Text zoom,
+  a skip link, focus outlines, descriptive labels and reduced motion are supported.
+- Clicking the demo form button, or submitting with the keyboard, clears the
+  fields and displays an explanation. No credentials are read or stored. The
+  page's Content Security Policy also blocks connections and form navigation.
 
-A dark-mode tour of Bootstrap 5 components on one page. I added each component from the docs and changed its content, so I could see which ones work with classes alone and which need a line of JavaScript.
+## Tests
 
-## ▶️ How to run
+```sh
+npm ci
+npm test
+npm run test:browser
+```
 
-Open [index.html](index.html) with an internet connection (Bootstrap comes from jsDelivr). Dark mode is one attribute: `data-bs-theme="dark"` on `<html>`.
+The browser suite uses Playwright and a temporary loopback-only static server.
+Set `BROWSER_EXECUTABLE` to a local Chromium/Edge executable, or install a
+Playwright Chromium browser with `npx playwright install chromium`. An existing
+Playwright installation can be supplied through `PLAYWRIGHT_MODULE_PATH`.
+The suite rejects external requests and checks the layout, keyboard dropdown,
+mobile menu, details, fixed header, form privacy, and original-file hashes.
+[Tests and boundaries](tests/README.md) explain the fixtures.
 
-## 🎯 The challenge
+## Preserved original gallery
 
-| Component | Notes |
-|---|---|
-| Navbar | Collapses into a toggler below `lg`, `sticky-top` |
-| Alert | `alert-dismissible` with a `btn-close`, closes with no code of mine |
-| Buttons and badges | Solid, outline, and a notification badge placed with `position-absolute` |
-| Tooltip | Needs `new bootstrap.Tooltip(element)` in [app.js](app.js) |
-| Progress | A 75% bar with the ARIA values on the wrapper |
-| Cards | Three cards in `row-cols-md-3` |
-| Carousel | Three gradient slides with indicators and arrows; it never moves on its own |
-| Tabs and accordion | Both driven by `data-bs-toggle` |
-| Modal | Opens from a button with `data-bs-target="#demoModal"` |
-| Toast | `bootstrap.Toast.getOrCreateInstance(...).show()` on a button click |
+[gallery.html](gallery.html) is a byte-for-byte copy of the previous `index.html`
+from repository commit `148d3797160d758ecaf35e894b478f6b36b9f4c3`.
+Its SHA-256 is `1b873b932e7fc24afe2ec6ef68805d9af5c930877c2b547e48d72cbe3afb5c7a`.
+The original [app.js](app.js), [style.css](style.css), and historical
+[gallery documentation](GALLERY.md) are preserved. The new entry uses separate
+`layout.js` and `layout.css`, so it does not change the older experiment.
 
-## 🧠 What I learned
+**Gallery limitation:** the historical file retains its original CDN stylesheet
+and Bootstrap bundle URLs. Opening it requires internet access. The offline and
+no-network checks apply to the new main layout, not to that preserved artifact.
+No source course prompt, credentials, remote account or academic status is
+included in this exercise.
 
-- Most components start themselves from `data-bs-*` attributes, but tooltips and toasts are opt-in and need JavaScript
-- `/* global bootstrap */` tells ESLint that the `bootstrap` object comes from the CDN script
-- The bundle file includes Popper, which tooltips need to position themselves
-- Gradients make good stand-in slides when I have no photos to use
+## Explain it
 
----
+Compare a fixed header with a sticky header; then explain why a form-shaped
+layout can demonstrate validation and accessibility without creating an account
+or transmitting anything. Try the page at 390 px and 1280 px with the network
+turned off.
 
-## 👤 Author
-
-**Kevin Cusnir 'Lirioth'**  
-Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
-Week 13 Day 4 - Bootstrap - Exercise
+Built with AI-assisted tooling; I reviewed, tested and can explain every change.

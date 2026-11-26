@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A tour of Bootstrap 5 components on one page." />
+    <title>Bootstrap Components</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 1. Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="#">Components</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+          aria-controls="nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#buttons">Buttons</a></li>
+            <li class="nav-item"><a class="nav-link" href="#cards">Cards</a></li>
+            <li class="nav-item"><a class="nav-link" href="#carousel">Carousel</a></li>
+            <li class="nav-item"><a class="nav-link" href="#interactive">Interactive</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container py-4">
+      <h1 class="display-6 fw-bold">Bootstrap 5 components</h1>
+      <p class="text-body-secondary">
+        Navbar, alerts, buttons, cards, a carousel and more, almost all wired with classes and data
+        attributes.
+      </p>
+
+      <!-- 2. Alerts -->
+      <div class="alert alert-info alert-dismissible fade show" role="alert">
+        <strong>Heads up.</strong> This alert closes with the × button, no custom JavaScript needed.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+
+      <!-- 3. Buttons and badges -->
+      <section id="buttons" class="mb-5" aria-labelledby="buttons-title">
+        <h2 id="buttons-title" class="h4">Buttons and badges</h2>
+        <div class="d-flex flex-wrap gap-2 mb-3">
+          <button type="button" class="btn btn-primary">Primary</button>
+          <button type="button" class="btn btn-success">Success</button>
+          <button type="button" class="btn btn-outline-warning">Outline</button>
+          <button
+            type="button"
+            class="btn btn-danger"
+            data-bs-toggle="tooltip"
+            data-bs-title="I'm a tooltip"
+          >
+            Hover me
+          </button>
+          <button type="button" class="btn btn-secondary position-relative">
+            Inbox
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+            >
+              4 <span class="visually-hidden">unread messages</span>
+            </span>
+          </button>
+        </div>
+        <!-- 4. Progress -->
+        <div
+          class="progress mb-2"
+          role="progressbar"
+          aria-label="Course progress"
+          aria-valuenow="75"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <div class="progress-bar bg-success" style="width: 75%">75%</div>
+        </div>
+      </section>
+
+      <!-- 5. Cards in a responsive grid -->
+      <section id="cards" class="mb-5" aria-labelledby="cards-title">
+        <h2 id="cards-title" class="h4">Cards</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-header">HTML</div>
+              <div class="card-body">
+                <h3 class="card-title h5">Structure</h3>
+                <p class="card-text">Headings, sections and forms.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 border-info">
+              <div class="card-header">CSS</div>
+              <div class="card-body">
+                <h3 class="card-title h5">Layout</h3>
+                <p class="card-text">Flexbox, Grid and media queries.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-header">Bootstrap</div>
+              <div class="card-body">
+                <h3 class="card-title h5">Speed</h3>
+                <p class="card-text">Ready-made pieces with a 12-column grid.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Carousel with colored slides instead of photos -->
+      <section id="carousel" class="mb-5" aria-labelledby="carousel-title">
+        <h2 id="carousel-title" class="h4">Carousel</h2>
+        <div id="demoCarousel" class="carousel slide rounded overflow-hidden">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#demoCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#demoCarousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#demoCarousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active slide-1">
+              <div class="slide-text">
+                <h3>Slide one</h3>
+                <p>Use the arrows or the dots.</p>
+              </div>
+            </div>
+            <div class="carousel-item slide-2">
+              <div class="slide-text">
+                <h3>Slide two</h3>
+                <p>It never moves on its own.</p>
+              </div>
+            </div>
+            <div class="carousel-item slide-3">
+              <div class="slide-text">
+                <h3>Slide three</h3>
+                <p>Gradients stand in for photos.</p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#demoCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#demoCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- 7-10. Tabs, accordion, modal and toast -->
+      <section id="interactive" class="mb-5" aria-labelledby="interactive-title">
+        <h2 id="interactive-title" class="h4">Interactive pieces</h2>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <ul class="nav nav-tabs" id="tabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="tab-a"
+                  data-bs-toggle="tab"
+                  data-bs-target="#pane-a"
+                  type="button"
+                  role="tab"
+                  aria-controls="pane-a"
+                  aria-selected="true"
+                >
+                  Tabs
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="tab-b"
+                  data-bs-toggle="tab"
+                  data-bs-target="#pane-b"
+                  type="button"
+                  role="tab"
+                  aria-controls="pane-b"
+                  aria-selected="false"
+                >
+                  Second tab
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content border border-top-0 rounded-bottom p-3">
+              <div
+                class="tab-pane fade show active"
+                id="pane-a"
+                role="tabpanel"
+                aria-labelledby="tab-a"
+              >
+                Tabs swap content without reloading.
+              </div>
+              <div class="tab-pane fade" id="pane-b" role="tabpanel" aria-labelledby="tab-b">
+                This is the second pane.
+              </div>
+            </div>
+
+            <div class="accordion mt-4" id="acc">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#acc-1"
+                    aria-expanded="false"
+                    aria-controls="acc-1"
+                  >
+                    What does data-bs-toggle do?
+                  </button>
+                </h3>
+                <div id="acc-1" class="accordion-collapse collapse" data-bs-parent="#acc">
+                  <div class="accordion-body">
+                    It tells Bootstrap's JavaScript which component to wire up.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 d-flex flex-column align-items-start gap-3">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#demoModal"
+            >
+              Open the modal
+            </button>
+            <button type="button" class="btn btn-outline-light" id="toastButton">
+              Show a toast
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div
+      class="modal fade"
+      id="demoModal"
+      tabindex="-1"
+      aria-labelledby="demoModalTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title h5" id="demoModalTitle">A Bootstrap modal</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">Focus moves into the modal and Escape closes it.</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div id="demoToast" class="toast" role="status" aria-live="polite" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto">Components</strong>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="toast-body">Toasts need two lines of JavaScript to appear.</div>
+      </div>
+    </div>
+
+    <footer class="border-top py-3 text-center text-body-secondary">
+      <small>Week 13 · Day 4 · Bootstrap</small>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
