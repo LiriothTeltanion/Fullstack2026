@@ -136,7 +136,14 @@ export default function StoryCard({
           </button>
         </form>
       )}
-      {detailView && <StoryComments key={story.id} storyId={story.id} />}
+      {detailView && (
+        <StoryComments
+          key={`${story.id}:${currentUser.id}`}
+          storyId={story.id}
+          currentUser={currentUser}
+          storyAuthorId={story.author.id}
+        />
+      )}
     </article>
   );
 }

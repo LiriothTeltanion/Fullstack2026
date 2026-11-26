@@ -10,3 +10,10 @@ are confined to a newly created directory below the OS temporary directory.
 The fixture adapter implements the `pg.Pool.query` boundary; it does not exercise
 the native PostgreSQL TCP/TLS driver. Hosted deployment QA verifies that driver
 separately. This suite never connects to `DATABASE_URL`.
+
+
+The comments fixtures also exercise author-only editing, comment/story-author
+deletion, collaborator and unrelated-reader denial, story scoping, Unicode
+boundaries, invalid edits without mutation and stale IDs. Model writes repeat
+the identity predicate. The hosted lifecycle migration is repeatable, limits
+UPDATE to the body column and keeps browser/database API roles denied.

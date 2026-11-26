@@ -26,3 +26,14 @@
   overflow-wrap: anywhere;
   white-space: pre-wrap;
 }
+
+.comment-actions {
+  margin-block: 0.5rem;
+}
+.story-comments textarea {
+  width: 100%;
+  min-height: 6rem;
+}
+.story-comments .row {
+  flex-wrap: wrap;
+}

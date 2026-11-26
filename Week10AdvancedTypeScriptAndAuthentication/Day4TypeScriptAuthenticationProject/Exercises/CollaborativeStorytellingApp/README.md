@@ -129,3 +129,87 @@ npm audit
 The server tests exercise the real session-store SQL against disposable embedded PostgreSQL (PGlite), including database close/reopen persistence, expiry, touch, deletion and explicit pruning. They never use a configured `DATABASE_URL`. Separate deployment QA verified real TLS PostgreSQL connections and HTTPS registration/login, story creation, author/collaborator restrictions, refresh rotation/replay rejection, deletion and logout. This bounded QA does not establish availability or load capacity.
 
 Built with AI-assisted tooling; I reviewed, tested and can explain every change.
+
+
+## Comment lifecycle extension
+
+This extension preserves the existing comment JSON and authenticated GET/POST routes.
+It adds the following story-scoped operations:
+
+| Operation | Route | Permission |
+| --- | --- | --- |
+| Read | `GET /api/stories/:id/comments` | Signed-in readers |
+| Create | `POST /api/stories/:id/comments` | Signed-in readers; identity comes from JWT |
+| Edit | `PATCH /api/stories/:id/comments/:commentId` | Comment author only |
+| Delete | `DELETE /api/stories/:id/comments/:commentId` | Comment author or story author |
+
+Editing accepts `{ "body": "Updated text" }`. The normalized body must contain
+1–2000 Unicode code points. IDs, authorship, story ownership and the original
+creation timestamp cannot be changed through this operation. Collaborators may
+continue the story but gain no permission to edit or moderate another person's
+comment. The write repeats its ownership and story checks in SQL, independently
+of the controller's authorization check. Missing or stale comments return 404;
+known comments belonging to another person return 403. Deleting again returns
+404 rather than pretending the comment still exists.
+
+The reader offers edit/save/cancel and an explicit delete/keep confirmation.
+Failed edits retain the draft; failed deletions retain the comment and confirmation.
+Successful edits and cancellations restore focus, and successful deletion moves
+focus to the new-comment field. Discussion state is scoped to both the story and
+signed-in user. Responses from an unmounted discussion cannot populate another
+story or account. Comments remain rendered as text, including punctuation and
+multilingual content.
+
+### Database rollout
+
+Fresh local databases already have the required comment columns; no data rewrite
+is needed. On an existing hosted database, the database owner must apply
+[`story-comment-lifecycle-hosted.sql`](server/db/migrations/story-comment-lifecycle-hosted.sql)
+**after** the existing comment migration to enable editing and deletion in the deployed API.
+It is repeatable and grants only `UPDATE (body)` and `DELETE` on comments to the
+two existing backend roles. It preserves RLS and the denial of direct browser-role
+access. Application identity is enforced by authenticated API routes, not by an
+individual browser database role. Runtime credentials must remain private.
+
+This source change does not execute a hosted migration or deploy the extension.
+The comments lifecycle, migration grants, role matrix, Unicode boundaries,
+invalid updates, wrong-story IDs and stale writes are exercised by `cd server && npm test`
+against both disposable in-memory storage and embedded PostgreSQL/PGlite.
+PGlite coverage does not verify a native PostgreSQL TCP/TLS connection or production.
+The client is checked with `cd client && npm run build`; route parsing tests run
+with `node --test tests/routes.test.mjs` in the client directory.
+
+This is a bounded comments extension. Comment disabling, reactions, WebSockets,
+version history and the remaining advanced chapter features are not implemented
+by this change, and passing these tests does not certify an entire optional rubric.
+
+### Deployment documentation correction — 2026-11-26
+
+The earlier paragraph describing Render verification as pending is historical.
+The dedicated Render frontend is [Collaborative Storytelling on Render](https://fullstack2026-storytelling.onrender.com)
+and its backend health URL is [Render API health](https://lirioth-fullstack2026-storytelling-api.onrender.com/api/health).
+The Vercel links above remain an alternative demo. All use the same relative `/api`
+contract. These URLs identify the existing deployment; the new lifecycle extension
+still requires publication, the owner-applied migration and deployment QA.
+Auth state is now owned by `authSlice.ts`; `storySlice.ts` owns the story collection.
+
+
+### Compatibility before hosted grants
+
+`GET /api/stories/comment-capabilities` is an authenticated, non-cacheable
+capability read. It checks the actual PostgreSQL connection role's `UPDATE(body)`
+and `DELETE` privileges in one small query. No environment flag, cached deployment
+state or secret is returned. Existing comment GET/POST response shapes are unchanged.
+The reader makes one extra capability request per discussion load; if an older API
+does not provide it, read/create continue and edit/delete controls stay hidden.
+An authorized direct mutation returns a generic 503 when its capability is absent;
+identity/ownership violations still return 401/403. A permission revocation racing
+with a write is also converted to that generic response, without database details.
+
+Consequently this compatible source may deploy before the hosted migration:
+existing readers can still list/post comments. After the database owner grants the
+permissions, reload the page to discover them; no new deployment or server restart
+is required. Each mutation independently rechecks the effective role. The API role
+still has to satisfy the existing RLS policy; the capability endpoint does not grant
+anything or replace per-user authorization. The PGlite HTTP fixture tests the same
+running server first with SELECT/INSERT only, then with added UPDATE(body)/DELETE.

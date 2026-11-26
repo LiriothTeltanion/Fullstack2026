@@ -2,8 +2,8 @@
 
 > Regenerated from the exact Git index on `2026-11-26` by `tools/refresh_structure_catalogs.py`.
 
-- Base HEAD: `7f04d10ec0cad029a7586bf6b385a20b89509544`
-- Source-index fingerprint: `sha256:12e5b4b7fc1a37779306c02ce4065a57c2df180e49c9b822d106b4d6b69ed4bc` (generated outputs excluded)
+- Base HEAD: `b9d710ef08184291f7e3a915009d40157a80c749`
+- Source-index fingerprint: `sha256:eb701fd5d7cd5e158e8e128e6e4153139457c287d30486b9ced7a640d4c5a69d` (generated outputs excluded)
 
 This catalog proves repository presence and path integrity only. It does not prove that an exercise runs, that Kevin can explain it, or that it is mastered or portfolio-ready.
 
@@ -24,7 +24,7 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week10AdvancedTypeScriptAndAuthentication/Day2MiniProject/Exercises/RecipeBookApp` | Mini Project | CSS \| HTML \| JSON \| JavaScript \| TypeScript | 23 | present (canonical) | [source](<../../Week10AdvancedTypeScriptAndAuthentication/Day2MiniProject/Exercises/RecipeBookApp>); runtime unverified |
 | `Week10AdvancedTypeScriptAndAuthentication/Day3Authentication/Exercises/ExercisesXP` | Exercise | JSON \| JavaScript | 23 | present (canonical) | [source](<../../Week10AdvancedTypeScriptAndAuthentication/Day3Authentication/Exercises/ExercisesXP>); runtime unverified |
 | `Week10AdvancedTypeScriptAndAuthentication/Day4TypeScriptAuthenticationProject/Exercises/AdvancedFunctionalities` | Mini Project | JSON \| TypeScript | 19 | present (canonical) | [source](<../../Week10AdvancedTypeScriptAndAuthentication/Day4TypeScriptAuthenticationProject/Exercises/AdvancedFunctionalities>); runtime unverified |
-| `Week10AdvancedTypeScriptAndAuthentication/Day4TypeScriptAuthenticationProject/Exercises/CollaborativeStorytellingApp` | Mini Project | CSS \| HTML \| JSON \| JavaScript \| SQL \| TypeScript | 68 | present (canonical) | [source](<../../Week10AdvancedTypeScriptAndAuthentication/Day4TypeScriptAuthenticationProject/Exercises/CollaborativeStorytellingApp>); runtime unverified |
+| `Week10AdvancedTypeScriptAndAuthentication/Day4TypeScriptAuthenticationProject/Exercises/CollaborativeStorytellingApp` | Mini Project | CSS \| HTML \| JSON \| JavaScript \| SQL \| TypeScript | 69 | present (canonical) | [source](<../../Week10AdvancedTypeScriptAndAuthentication/Day4TypeScriptAuthenticationProject/Exercises/CollaborativeStorytellingApp>); runtime unverified |
 | `Week10AdvancedTypeScriptAndAuthentication/RemoteLearningAuthAndTypeScript/Exercises/AuthenticationProject` | Exercise | CSS \| HTML \| JSON \| JavaScript \| TypeScript | 34 | present (canonical) | [source](<../../Week10AdvancedTypeScriptAndAuthentication/RemoteLearningAuthAndTypeScript/Exercises/AuthenticationProject>); runtime unverified |
 | `Week12FinalProject/Day1CapstoneSubmission/CapstoneProject` | Exercise | CSS \| HTML \| JSON \| JavaScript \| SQL | 32 | present (canonical) | [source](<../../Week12FinalProject/Day1CapstoneSubmission/CapstoneProject>); runtime unverified |
 | `Week13WebDevelopmentBasics/Day1HTMLAndCSS/DailyChallenge/Avengers` | Daily Challenge | CSS \| HTML | 3 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day1HTMLAndCSS/DailyChallenge/Avengers>); runtime unverified |
@@ -234,7 +234,7 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/DailyChallenge/TriviaQuizGame` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript | 14 | present (canonical) | [source](<../../Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/DailyChallenge/TriviaQuizGame>); runtime unverified |
 | `Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/Exercises/ExercisesXP` | Exercise | JSON \| JavaScript | 16 | present (canonical) | [source](<../../Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/Exercises/ExercisesXP>); runtime unverified |
 | `Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/Exercises/ExercisesXPGold` | Exercise | JSON \| JavaScript | 17 | present (canonical) | [source](<../../Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/Exercises/ExercisesXPGold>); runtime unverified |
-| `Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/Exercises/ExercisesXPNinja` | Exercise | JSON \| JavaScript | 12 | present (canonical) | [source](<../../Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/Exercises/ExercisesXPNinja>); runtime unverified |
+| `Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/Exercises/ExercisesXPNinja` | Exercise | CSS \| HTML \| JSON \| JavaScript | 21 | present (canonical) | [source](<../../Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/Exercises/ExercisesXPNinja>); runtime unverified |
 | `Week7NodejsAndReact/Day2SQLQueryBuilder/DailyChallenge/RegistrationAndLogin` | Daily Challenge | JSON \| JavaScript \| SQL | 14 | present (canonical) | [source](<../../Week7NodejsAndReact/Day2SQLQueryBuilder/DailyChallenge/RegistrationAndLogin>); runtime unverified |
 | `Week7NodejsAndReact/Day2SQLQueryBuilder/Exercises/ExercisesXP` | Exercise | JSON \| JavaScript \| SQL | 16 | present (canonical) | [source](<../../Week7NodejsAndReact/Day2SQLQueryBuilder/Exercises/ExercisesXP>); runtime unverified |
 | `Week7NodejsAndReact/Day2SQLQueryBuilder/Exercises/ExercisesXPGold` | Exercise | JSON \| JavaScript \| SQL | 7 | present (canonical) | [source](<../../Week7NodejsAndReact/Day2SQLQueryBuilder/Exercises/ExercisesXPGold>); runtime unverified |

@@ -21,3 +21,13 @@ This comments-only migration does not alter users or backfill account data.
 Older accounts may retain a null email under the general schema; new-account
 email validation is handled separately by authentication. No credentials or
 project-specific service identifiers belong in this directory.
+
+
+### Comment lifecycle
+
+Apply `story-comment-lifecycle-hosted.sql` as the database owner after
+`story-comments-hosted.sql`. It grants backend-only `UPDATE(body)`/`DELETE`
+without changing existing rows, public roles or RLS. The application supplies
+per-user authorization; the shared runtime login is not an end-user identity.
+Both migrations are executed twice by the disposable PGlite comments fixture.
+No test connects to a configured or hosted database.

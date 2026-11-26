@@ -44,7 +44,8 @@ export async function exerciseComments(t, mode) {
   }
 
   const { default: app } = await import("../app.js");
-  const { createComment, listComments } = await import("../models/commentModel.js");
+  const { createComment, listComments, updateComment, deleteComment } =
+    await import("../models/commentModel.js");
   const server = app.listen(0, "127.0.0.1");
   await once(server, "listening");
   const origin = "http://127.0.0.1:" + server.address().port;
@@ -259,6 +260,200 @@ export async function exerciseComments(t, mode) {
       });
     }
 
+    await t.test(
+      "only comment authors edit; story authors moderate deletion, not other people's words",
+      async () => {
+        const collaborator = await register("comment_collaborator");
+        await request(
+          author,
+          "/stories/" + story.id + "/contributors",
+          "POST",
+          { username: collaborator.user.username },
+          201
+        );
+        const original = (await request(reader, endpoint, "POST", { body: "Editable draft." }, 201))
+          .comment;
+        const target = endpoint + "/" + original.id;
+        await request(author, target, "PATCH", { body: "Not my words." }, 403);
+        await request(collaborator, target, "PATCH", { body: "Not my words." }, 403);
+        await request(collaborator, target, "DELETE", undefined, 403);
+        await request(guest, target, "PATCH", { body: "Guest change." }, 401);
+        await request(guest, target, "DELETE", undefined, 401);
+        const updated = (
+          await request(reader, target, "PATCH", {
+            body: "  Revised words.  ",
+            authorId: author.user.id,
+            storyId: other.id,
+          })
+        ).comment;
+        assertComment(updated, story.id, reader, "Revised words.");
+        assert.equal(updated.createdAt, original.createdAt);
+        if (database) {
+          await database.close();
+          database = new PGlite(directory);
+          assert.deepEqual(
+            (await request(reader, endpoint)).comments.find(item => item.id === original.id),
+            updated
+          );
+        }
+
+        const outsider = (await request(author, endpoint, "POST", { body: "Author comment." }, 201))
+          .comment;
+        await request(reader, endpoint + "/" + outsider.id, "DELETE", undefined, 403);
+        await request(author, target, "DELETE", undefined, 204);
+        await request(reader, target, "PATCH", { body: "Too late." }, 404);
+        await request(reader, target, "DELETE", undefined, 404);
+        await request(author, endpoint + "/" + outsider.id, "DELETE", undefined, 204);
+      }
+    );
+    await t.test("invalid edits preserve content and separate discussions", async () => {
+      const original = (await request(reader, endpoint, "POST", { body: "Keep this text." }, 201))
+        .comment;
+      const target = endpoint + "/" + original.id;
+      for (const body of [null, 7, " ", "x".repeat(2001), "🎸".repeat(2001), "a\0b"]) {
+        await request(reader, target, "PATCH", { body }, 400);
+      }
+      await request(
+        reader,
+        "/stories/" + other.id + "/comments/" + original.id,
+        "PATCH",
+        { body: "Wrong story." },
+        404
+      );
+      await request(
+        author,
+        "/stories/" + other.id + "/comments/" + original.id,
+        "DELETE",
+        undefined,
+        404
+      );
+      for (const id of ["0", "1.5", "9007199254740992"]) {
+        await request(reader, endpoint + "/" + id, "DELETE", undefined, 404);
+      }
+      assert.deepEqual(
+        (await request(reader, endpoint)).comments.find(item => item.id === original.id),
+        original
+      );
+      const unicode = "🎸".repeat(2000);
+      assertComment(
+        (await request(reader, target, "PATCH", { body: unicode })).comment,
+        story.id,
+        reader,
+        unicode
+      );
+      await request(reader, target, "DELETE", undefined, 204);
+    });
+    await t.test("model writes recheck story and actor, including stale IDs", async () => {
+      const original = await createComment({
+        storyId: story.id,
+        authorId: reader.user.id,
+        body: "Atomic permissions.",
+      });
+      const args = { storyId: story.id, commentId: original.id, userId: author.user.id };
+      assert.equal(await updateComment({ ...args, body: "Denied edit." }), undefined);
+      assert.equal(await deleteComment({ ...args, storyId: other.id }), false);
+      assert.equal(await deleteComment({ ...args, userId: 999999 }), false);
+      assert.equal(await deleteComment({ ...args, userId: reader.user.id }), true);
+      assert.equal(
+        await updateComment({ ...args, userId: reader.user.id, body: "Stale edit." }),
+        undefined
+      );
+      assert.equal(await deleteComment(args), false);
+    });
+    await t.test("concurrent duplicate deletion has exactly one winner", async () => {
+      const comment = await createComment({
+        storyId: story.id,
+        authorId: reader.user.id,
+        body: "Delete once.",
+      });
+      const args = { storyId: story.id, commentId: comment.id, userId: reader.user.id };
+      const outcomes = await Promise.all([deleteComment(args), deleteComment(args)]);
+      assert.deepEqual(outcomes.sort(), [false, true]);
+      assert.ok(!(await listComments(story.id)).some(item => item.id === comment.id));
+    });
+
+    await t.test("capabilities are authenticated and preserve the legacy GET shape", async () => {
+      assert.deepEqual(await request(reader, "/stories/comment-capabilities"), {
+        edit: true,
+        delete: true,
+      });
+      await request(guest, "/stories/comment-capabilities", "GET", undefined, 401);
+      assert.deepEqual(Object.keys(await request(reader, endpoint)), ["comments"]);
+    });
+
+    if (database) {
+      await t.test(
+        "effective runtime-role grants enable mutations without redeployment; read/post remain available before grants",
+        async () => {
+          const original = await createComment({
+            storyId: story.id,
+            authorId: reader.user.id,
+            body: "Read/create baseline.",
+          });
+          const target = endpoint + "/" + original.id;
+          await database.exec(`CREATE ROLE comments_runtime_fixture;
+          GRANT USAGE ON SCHEMA comments_fixture TO comments_runtime_fixture;
+          GRANT SELECT ON ${tables.users}, ${tables.stories}, ${tables.story_contributors} TO comments_runtime_fixture;
+          GRANT SELECT, INSERT ON ${tables.story_comments} TO comments_runtime_fixture;
+          GRANT USAGE ON ALL SEQUENCES IN SCHEMA comments_fixture TO comments_runtime_fixture;
+          GRANT ALL ON comments_fixture.http_sessions TO comments_runtime_fixture;
+          SET ROLE comments_runtime_fixture;`);
+          try {
+            assert.equal(
+              (await database.query("SELECT current_user AS actor")).rows[0].actor,
+              "comments_runtime_fixture"
+            );
+            assert.deepEqual(await request(reader, "/stories/comment-capabilities"), {
+              edit: false,
+              delete: false,
+            });
+            assert.ok(
+              (await request(reader, endpoint)).comments.some(item => item.id === original.id)
+            );
+            const added = (
+              await request(reader, endpoint, "POST", { body: "Posting remains available." }, 201)
+            ).comment;
+            for (const method of ["PATCH", "DELETE"]) {
+              const failure = await request(
+                reader,
+                target,
+                method,
+                method === "PATCH" ? { body: "Not available." } : undefined,
+                503
+              );
+              assert.match(failure.error, /currently unavailable/);
+              assert.ok(
+                !failure.error.includes("role") &&
+                  !failure.error.includes("permission") &&
+                  !failure.error.includes("SQL")
+              );
+            }
+            await request(author, target, "PATCH", { body: "Still forbidden." }, 403);
+            assert.equal(
+              (await request(reader, endpoint)).comments.find(item => item.id === original.id).body,
+              original.body
+            );
+            await database.exec(
+              `RESET ROLE; GRANT UPDATE(body), DELETE ON ${tables.story_comments} TO comments_runtime_fixture; SET ROLE comments_runtime_fixture;`
+            );
+            assert.deepEqual(await request(reader, "/stories/comment-capabilities"), {
+              edit: true,
+              delete: true,
+            });
+            assert.equal(
+              (await request(reader, target, "PATCH", { body: "Enabled without restart." })).comment
+                .body,
+              "Enabled without restart."
+            );
+            await request(reader, target, "DELETE", undefined, 204);
+            await request(reader, endpoint + "/" + added.id, "DELETE", undefined, 204);
+          } finally {
+            await database.exec("RESET ROLE");
+          }
+        }
+      );
+    }
+
     await t.test("deleting a story cascades only its own discussion", async () => {
       const separate = "/stories/" + other.id + "/comments";
       await request(reader, separate, "POST", { body: "Keep this discussion." }, 201);
@@ -341,6 +536,56 @@ export async function exerciseComments(t, mode) {
               );
             } finally {
               await database.exec("RESET ROLE");
+            }
+          }
+          const lifecycle = await readFile(
+            new URL("../db/migrations/story-comment-lifecycle-hosted.sql", import.meta.url),
+            "utf8"
+          );
+          await database.exec(lifecycle);
+          await database.exec(lifecycle);
+          for (const role of ["storytelling_runtime", "storytelling_render"]) {
+            await database.exec("SET ROLE " + role);
+            try {
+              await database.query("UPDATE storytelling.story_comments SET body=$1 WHERE body=$2", [
+                role + " updated",
+                role + " fixture",
+              ]);
+              assert.equal(
+                (
+                  await database.query(
+                    "SELECT body FROM storytelling.story_comments WHERE body=$1",
+                    [role + " updated"]
+                  )
+                ).rows.length,
+                1
+              );
+              await assert.rejects(
+                database.query("UPDATE storytelling.story_comments SET author_id=1"),
+                error => error.code === "42501"
+              );
+              await database.query("DELETE FROM storytelling.story_comments WHERE body=$1", [
+                role + " updated",
+              ]);
+              await database.query(
+                "INSERT INTO storytelling.story_comments(story_id,author_id,body) VALUES (1,1,$1)",
+                [role + " retained"]
+              );
+            } finally {
+              await database.exec("RESET ROLE");
+            }
+          }
+          for (const role of ["anon", "authenticated", "service_role"]) {
+            for (const privilege of ["SELECT", "INSERT", "UPDATE", "DELETE"]) {
+              assert.equal(
+                (
+                  await database.query(
+                    "SELECT has_table_privilege($1,'storytelling.story_comments',$2) AS allowed",
+                    [role, privilege]
+                  )
+                ).rows[0].allowed,
+                false
+              );
             }
           }
           assert.equal(
