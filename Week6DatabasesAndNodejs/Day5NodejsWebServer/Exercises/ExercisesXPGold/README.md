@@ -20,6 +20,8 @@ Install the locked packages with `npm ci`. Run `npm run practice` to start the E
 
 The three routers are independent. Passwords are hashed with bcrypt. A signed token expires after 15 minutes. Users, the signing key and todos live in memory for a single practice session. Restarting clears that session. Use synthetic credentials when trying the example.
 
+Account routes share a limit of ten requests per client IP per minute. Once that budget is used, the API returns HTTP 429 and a `Retry-After` header. Posts and todos are independent of this limit.
+
 Example todo round trip in PowerShell, with the practice server running:
 
 ```powershell

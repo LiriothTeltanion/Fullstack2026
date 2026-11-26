@@ -1,4 +1,5 @@
 import { Router } from "express";
+import { rateLimit } from "express-rate-limit";
 import { randomBytes, randomUUID } from "node:crypto";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
@@ -8,12 +9,19 @@ export function accountRoutes() {
   const users = new Map();
   const signingKey = randomBytes(32);
   const issuer = "week6-account-practice";
+  const accountLimit = rateLimit({
+    windowMs: 60_000,
+    limit: 10,
+    standardHeaders: "draft-8",
+    legacyHeaders: false,
+    message: { error: "Too many account requests. Try again in a minute." },
+  });
   router.use((_req, res, next) => {
     res.set("Cache-Control", "no-store");
     next();
   });
 
-  router.post("/register", async (req, res) => {
+  router.post("/register", accountLimit, async (req, res) => {
     const { username, password } = req.body ?? {};
     if (
       typeof username !== "string" ||
@@ -38,7 +46,7 @@ export function accountRoutes() {
     return res.status(201).json({ id: user.id, username: user.username });
   });
 
-  router.post("/login", async (req, res) => {
+  router.post("/login", accountLimit, async (req, res) => {
     const { username, password } = req.body ?? {};
     const key = typeof username === "string" ? username.trim().toLowerCase() : "";
     const user = users.get(key);
@@ -59,7 +67,7 @@ export function accountRoutes() {
     return res.json({ token, tokenType: "Bearer", expiresInSeconds: 900 });
   });
 
-  router.get("/profile", (req, res) => {
+  router.get("/profile", accountLimit, (req, res) => {
     const token = /^Bearer (\S+)$/i.exec(req.get("Authorization") ?? "")?.[1];
     if (!token) return res.sendStatus(401);
     try {

@@ -118,3 +118,13 @@ test("todos keep stable IDs and a boolean completion flag throughout CRUD", asyn
   assert.equal((await request("POST", "/todos", { title: "Encore" })).data.id, 2);
   assert.equal((await request("POST", "/todos", { title: " " })).status, 400);
 });
+
+test("account routes share a request budget without limiting unrelated exercises", async t => {
+  const request = await setup(t);
+  for (let i = 0; i < 10; i++) {
+    assert.equal((await request("GET", "/auth/profile")).status, 401);
+  }
+  assert.equal((await request("POST", "/auth/login", {})).status, 429);
+  assert.equal((await request("POST", "/auth/register", {})).status, 429);
+  assert.equal((await request("GET", "/todos")).status, 200);
+});
