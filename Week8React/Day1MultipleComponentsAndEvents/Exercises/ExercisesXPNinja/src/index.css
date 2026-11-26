@@ -118,3 +118,158 @@ textarea {
   place-items: center;
   user-select: none;
 }
+
+/* Compass practice is scoped so the preserved original gallery keeps its style. */
+.practice-switch {
+  max-width: 1040px;
+  margin: 1.25rem auto;
+  padding: 0 1rem;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.practice-switch button {
+  background: #fff;
+  color: #163558;
+  border-color: #9caec5;
+}
+.practice-switch button[aria-pressed="true"] {
+  background: #123d75;
+  color: #fff;
+  border-color: #123d75;
+}
+button:focus-visible {
+  outline: 3px solid #e49b2e;
+  outline-offset: 4px;
+}
+.compass-page {
+  max-width: 1040px;
+  background: #101f33;
+  color: #eaf2ff;
+  border-radius: 24px;
+  margin-bottom: 2rem;
+  padding: clamp(1.2rem, 4vw, 3rem);
+}
+.clock-heading h1 {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+.clock-heading p {
+  margin: 0.5rem 0 2rem;
+  color: #b8cce6;
+}
+.clock-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.9fr);
+  gap: clamp(1.25rem, 4vw, 3rem);
+  align-items: center;
+}
+.clock-face {
+  text-align: center;
+  min-width: 0;
+}
+.clock-face svg {
+  display: block;
+  width: min(100%, 360px);
+  margin: 0 auto 1rem;
+  overflow: visible;
+}
+.dial-rim {
+  fill: #132a46;
+  stroke: #59789e;
+  stroke-width: 1;
+}
+.dial-inner {
+  fill: #0a182b;
+  stroke: #4c6b91;
+  stroke-width: 1;
+}
+.major-tick {
+  stroke: #d9e9ff;
+  stroke-width: 2;
+}
+.minor-tick {
+  stroke: #7490b3;
+  stroke-width: 1;
+}
+.cardinal-labels {
+  fill: #cde0fa;
+  font-size: 13px;
+  font-weight: 700;
+}
+.compass-rose {
+  fill: #23456b;
+  opacity: 0.6;
+}
+.hour-hand {
+  stroke: #edf5ff;
+  stroke-width: 7;
+  stroke-linecap: round;
+}
+.minute-hand {
+  stroke: #93c4ff;
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+.second-hand {
+  stroke: #f6bb65;
+  stroke-width: 2;
+}
+.second-tip,
+.dial-pin {
+  fill: #f6bb65;
+}
+.clock-time {
+  display: block;
+  font-size: clamp(2.1rem, 6vw, 3rem);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+}
+.clock-date {
+  margin: 0.65rem 0 0.25rem;
+}
+.clock-zone {
+  color: #b8cce6;
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+  margin-top: 0.25rem;
+}
+.clock-details h2 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+.clock-details > p {
+  color: #b8cce6;
+}
+.clock-fields {
+  margin: 1.5rem 0;
+}
+.clock-fields div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid #36506e;
+}
+.clock-fields dt {
+  text-transform: capitalize;
+  color: #b8cce6;
+}
+.clock-fields dd {
+  margin: 0;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.clock-note {
+  font-size: 0.9rem;
+}
+@media (max-width: 640px) {
+  .clock-grid {
+    grid-template-columns: 1fr;
+  }
+  .compass-page {
+    border-radius: 0;
+  }
+}
