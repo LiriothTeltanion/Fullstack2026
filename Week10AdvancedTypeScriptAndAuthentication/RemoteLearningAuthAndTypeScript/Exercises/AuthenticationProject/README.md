@@ -12,12 +12,16 @@ Sign up, log in and edit a protected profile. The Express server hands out a JWT
 
 ## ▶️ How to run
 
+From the `AuthenticationProject` folder, open **two terminals**. Keep the server running in the first:
+
 ```bash
 cd server
 cp .env.example .env   # set JWT_SECRET
 npm install
 npm run dev            # http://localhost:5000
 ```
+
+In the second terminal, start again from `AuthenticationProject`:
 
 ```bash
 cd client
@@ -29,12 +33,12 @@ npm run dev            # http://localhost:5173, /api goes to the server
 
 **Server** (`server/`)
 
-| Endpoint | What it does |
-|---|---|
+| Endpoint                  | What it does                                                                     |
+| ------------------------- | -------------------------------------------------------------------------------- |
 | `POST /api/auth/register` | Name, email and an 8+ character password; bcrypt hash; answers `{ token, user }` |
-| `POST /api/auth/login` | Checks the password and answers `{ token, user }` (1 hour token) |
-| `GET /api/profile` | Protected by `authenticate`, which reads `Authorization: Bearer <token>` |
-| `PUT /api/profile` | Updates `name` and `bio` (cut to 280 characters) |
+| `POST /api/auth/login`    | Checks the password and answers `{ token, user }` (1 hour token)                 |
+| `GET /api/profile`        | Protected by `authenticate`, which reads `Authorization: Bearer <token>`         |
+| `PUT /api/profile`        | Updates `name` and `bio` (cut to 280 characters)                                 |
 
 A quick run against the dev server:
 
@@ -47,14 +51,22 @@ GET  /api/profile        (made-up token)   → 401 Token expired or invalid
 
 **Client** (`client/`, React + TypeScript)
 
-| Piece | What it does |
-|---|---|
-| `api.ts` | Generic `request<T>()` and an `ApiError` class that keeps the HTTP status |
-| `AuthContext` | `user`, `token`, `loading`, `login`, `register`, `logout`; checks a saved token with `/api/profile` on load |
-| `RequireAuth` | Shows its children to a logged-in user, or the `fallback` (the login page) |
-| `AuthPage` / `ProfilePage` | One form that switches between log in and sign up, and the profile editor |
+| Piece                      | What it does                                                                                                |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `api.ts`                   | Generic `request<T>()` and an `ApiError` class that keeps the HTTP status                                   |
+| `AuthContext`              | `user`, `token`, `loading`, `login`, `register`, `logout`; checks a saved token with `/api/profile` on load |
+| `RequireAuth`              | Shows its children to a logged-in user, or the `fallback` (the login page)                                  |
+| `AuthPage` / `ProfilePage` | One form that switches between log in and sign up, and the profile editor                                   |
 
 The token is kept in `sessionStorage`, so it survives a refresh and is gone when the tab closes. A page script could still read it, which is the trade-off against the httpOnly cookie I used in the Day 4 project.
+
+## Local data and profile behavior
+
+Accounts and profiles live only in the server process's memory. Restarting the server loses them; create an account again after a restart. Each process also has its own random JWT issuer, so a previous process's saved session is no longer accepted, even when `JWT_SECRET` stays the same. The client explains an unavailable saved session (401/404); a temporary connection failure keeps the saved session and offers **Retry session**.
+
+A supplied profile name must be nonblank text. An invalid name returns 400 without changing the bio. Bio-only updates and clearing the bio are supported. The editor preserves failed values, shows an associated name error, and displays normalized server values after a successful save. You can keep editing during a save. Save is disabled until the current request finishes, and duplicate submits are ignored. Newer field edits are preserved with a reminder that they are not saved yet; once Save is enabled again, press it again to save those edits. Responses from a session that has been logged out or replaced are ignored.
+
+From `server`, run `npm test` for local account/profile and restart-lifetime regressions. From `client`, run `npm run typecheck` and `npm run build`.
 
 ## 🧠 What I learned
 

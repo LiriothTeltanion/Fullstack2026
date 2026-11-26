@@ -21,7 +21,7 @@ npm run dev
 
 Vite prints a local address (usually `http://localhost:5173`); I open it in the browser.
 
-Without the key the app still opens and explains what is missing.
+Without the key the app still opens and explains what is missing. Blank values and the unchanged example value `your-pexels-api-key` count as missing; configured keys are trimmed before use.
 
 ## 🎯 The challenge
 
@@ -34,6 +34,12 @@ Without the key the app still opens and explains what is missing.
 | `Gallery` | Reads `query` from the URL, fetches the photos and shows loading, error, "No images found" or the grid with the photographer's name |
 
 Known limit: a `VITE_` variable ends up inside the built JavaScript, so the key is visible to anyone who opens the site. For a public deploy the request should go through a small server.
+
+## URL handling and regression checks
+
+Category URLs and existing `/search/<term>` links remain supported, including an optional trailing slash. Searches encode the term once; the gallery reads and decodes the original URL segment once so literal percent sequences such as `%2F` and Unicode retain their meaning. A malformed percent escape displays an error instead of making a photo request; entering a valid search recovers normally. Direct links and browser back/forward use the same URL-derived state.
+
+Run `npm test` for URL decoding and key-configuration regression tests, then `npm run build` for the production bundle.
 
 ## 🧠 What I learned
 

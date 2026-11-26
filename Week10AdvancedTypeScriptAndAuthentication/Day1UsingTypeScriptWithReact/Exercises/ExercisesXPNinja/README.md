@@ -24,6 +24,10 @@ npm run dev
 3. **Type guard.** `isCountry(value: unknown): value is Country` checks every field. `parseCountries` reads `countries.json` as raw text and drops the broken row (one row has `"population": "lots"`).
 4. **Generic `Select<T>`.** `onChange` returns a `T` (here a continent), not the string from the DOM.
 
+## Small-screen table access
+
+On narrow screens, scroll the table horizontally to see Population. With a keyboard, press Tab to focus the table region, then use the left and right arrow keys to scroll.
+
 ## 🧠 What I learned
 
 - Writing `function DataTable<T>(...)` lets TypeScript infer `T` from the `rows` prop, so `<DataTable rows={rows} ...>` needs no explicit type

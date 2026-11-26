@@ -1,4 +1,6 @@
-const API_KEY = import.meta.env.VITE_PEXELS_API_KEY;
+import { normalizeApiKey } from "../gallerySettings.js";
+
+const API_KEY = normalizeApiKey(import.meta.env.VITE_PEXELS_API_KEY);
 
 export const hasApiKey = Boolean(API_KEY);
 

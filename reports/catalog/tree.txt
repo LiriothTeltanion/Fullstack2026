@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-26
-Base HEAD: 3e04acf208f34c9b3a4c9f2537d434d2cc21b011
-Source-index SHA-256 (generated outputs excluded): 3418ecd0ed1ac39f2c28bb76363bf04e01f48e58ebf45eb18b4f3ec6506ea28a
-Indexed files: 3194
+Base HEAD: 8391ed3956b01b181b4f43548eab3b46f13cf9b8
+Source-index SHA-256 (generated outputs excluded): ae1707215c293e47abb2f5d5a54c5943aa7a7bd7e8623f6f865f01490b2e5a71
+Indexed files: 3201
 
 .
 ├── .github
@@ -888,6 +888,7 @@ Indexed files: 3194
 │   │   │   │   │   │   ├── profileRoutes.js
 │   │   │   │   │   │   └── README.md
 │   │   │   │   │   ├── .env.example
+│   │   │   │   │   ├── account-flow.test.js
 │   │   │   │   │   ├── app.js
 │   │   │   │   │   ├── package.json
 │   │   │   │   │   ├── README.md
@@ -3035,6 +3036,7 @@ Indexed files: 3194
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -3632,8 +3634,12 @@ Indexed files: 3194
 │   │   │   │   │   │   ├── README.md
 │   │   │   │   │   │   └── SearchForm.jsx
 │   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── gallerySettings.js
 │   │   │   │   │   ├── index.css
 │   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── gallery-settings.test.js
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── .env.example
 │   │   │   │   ├── index.html
@@ -3906,6 +3912,7 @@ Indexed files: 3194
 │   │   │   │   │   ├── index.css
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── directory.test.js
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
@@ -4031,6 +4038,7 @@ Indexed files: 3194
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package.json
+│   │   │   │   ├── persist.test.js
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
 │   │   │   └── README.md
