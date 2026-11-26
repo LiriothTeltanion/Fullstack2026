@@ -2,11 +2,13 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addNote, deleteNote } from "../redux/notesReducer.js";
 import { redo, undo } from "../redux/undoable.js";
+import { getRecoveryNotice } from "../redux/persistence.js";
 
 export default function NoteBoard() {
   const { past, present, future } = useSelector(state => state.notes);
   const dispatch = useDispatch();
   const [text, setText] = useState("");
+  const [recoveryNotice] = useState(getRecoveryNotice);
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -17,6 +19,7 @@ export default function NoteBoard() {
 
   return (
     <section className="card">
+      {recoveryNotice && <p role="status">{recoveryNotice}</p>}
       <form className="row" onSubmit={handleSubmit}>
         <input
           value={text}

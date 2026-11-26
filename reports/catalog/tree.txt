@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-26
-Base HEAD: adbdaf997abc820d298e43013a07d7945ed37962
-Source-index SHA-256 (generated outputs excluded): 412dbb33cff8a0d026ed5edee2324cabb7d70076698aba094b1b046174a3c4f3
-Indexed files: 3165
+Base HEAD: 949efe16aae55ae42266df4663fd01c873ff0571
+Source-index SHA-256 (generated outputs excluded): 74b7a2903e18b10fbbb66f2f406b57dddd665b4c158904cc3db95f3a75a3cafa
+Indexed files: 3174
 
 .
 ├── .github
@@ -468,6 +468,8 @@ Indexed files: 3165
 │   │       ├── package.json
 │   │       ├── playwright.config.js
 │   │       ├── README.md
+│   │       ├── redux-day3.checks.js
+│   │       ├── redux-day3.config.js
 │   │       └── state.spec.js
 │   ├── js
 │   │   ├── book_list.test.mjs
@@ -3396,6 +3398,12 @@ Indexed files: 3165
 │   │   │   │   │   ├── index.css
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── .gitignore
+│   │   │   │   │   ├── package-lock.json
+│   │   │   │   │   ├── package.json
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── useFetch.browser.cjs
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
@@ -3690,6 +3698,7 @@ Indexed files: 3165
 │   │   │   │   │   ├── index.css
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── cart.test.js
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
@@ -3711,6 +3720,7 @@ Indexed files: 3165
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── notes.test.js
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js

@@ -19,6 +19,32 @@ npm run dev
 
 The two coupon codes that work are `SAVE10` and `STUDENT15`.
 
+## Editing quantities safely
+
+The quantity field keeps a local draft. Clear it, enter a replacement, then choose
+**Update** or press Enter. The saved quantity and totals change only after a valid
+whole quantity is confirmed. An empty or fractional draft shows an associated error
+and keeps the cart line. Confirming zero removes the product; the separate Remove
+button also remains available. Adding the same product updates the saved quantity
+and synchronizes its editor.
+
+The Redux reducer rejects non-finite, fractional and unsafe quantities as a second
+boundary. Valid integer action behavior, including removal below one, is preserved.
+
+## Run the regression tests
+
+```bash
+npm install --no-package-lock
+npm test
+npm run build
+```
+
+`cart.test.js` checks immutable cart actions, whole-quantity updates, invalid inputs,
+the safe integer boundary, coupons and derived totals. To try the browser regression,
+add a Notebook, clear its quantity, submit the empty draft, then enter 10 and press
+Enter. The item should stay present while editing and only then change to 10. Apply
+`save10` to see the discount update, and confirm quantity 0 to remove the line.
+
 ## 🎯 The challenge
 
 1. **Cart reducer.** `cartReducer` adds a product (or adds 1 to its quantity if it is already there), removes it, sets a quantity and clears the cart. A quantity below 1 removes the line.
@@ -40,3 +66,5 @@ The two coupon codes that work are `SAVE10` and `STUDENT15`.
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 Week 9 Day 2 - Redux Overview and Concepts - Exercises XP Gold
+
+Built with AI-assisted tooling; I reviewed, tested and can explain every change.

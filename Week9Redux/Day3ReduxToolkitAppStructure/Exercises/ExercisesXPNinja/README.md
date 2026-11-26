@@ -24,6 +24,32 @@ npm run dev
 3. **Selector with an argument.** `selectPostsByUser(state, userId)` is a `createSelector` that filters by author, or returns every post for `"all"`.
 4. **Reacting to another slice.** `extraReducers` in the posts slice listens for `userRemoved`, so deleting a user also deletes all of their posts.
 
+## Post validation and regression checks
+
+New posts and edited posts must contain non-space text. An invalid attempt shows
+an associated error and returns focus to the affected input. A blank Save keeps
+the editor open with its current draft; it does not silently discard the edit or
+change the stored post. Correcting the text clears the message, and a valid Save
+keeps the existing trimming behavior. Adding, filtering, ordering, deleting posts
+and the user-deletion cascade retain their original behavior.
+
+The existing [React browser runner](../../../../tests/browser/react-state/README.md)
+has reproducible Gold/Ninja regressions in `redux-day3.checks.js`. Install both D3
+apps with `npm install --no-package-lock` in each exercise directory, then from
+the repository root run:
+
+```sh
+cd tests/browser/react-state
+npm ci
+npx playwright install chromium
+npm test -- --config redux-day3.config.js
+```
+
+The suite builds the production apps on loopback ports 43177/43178, which must be
+free. Set `PLAYWRIGHT_CHANNEL=msedge` for an installed Edge browser. Both 320 px
+and 1280 px cases cover blank new/edited text, preserved edits, focus and error
+associations, keyboard/Unicode recovery, targeted deletion and user cascade.
+
 ## 🧠 What I learned
 
 - Normalized state is `ids` plus an `entities` lookup object, which makes "find by id" instant instead of a loop

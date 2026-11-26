@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useId, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectUserById } from "../users/usersSlice.js";
 import { postRemoved, postUpdated } from "./postsSlice.js";
@@ -8,27 +8,49 @@ export default function PostItem({ post }) {
   const dispatch = useDispatch();
   const [isEditing, setIsEditing] = useState(false);
   const [draft, setDraft] = useState(post.text);
+  const [error, setError] = useState("");
+  const input = useRef(null);
+  const errorId = useId();
 
   const save = () => {
-    if (draft.trim()) dispatch(postUpdated({ id: post.id, text: draft.trim() }));
+    // An invalid Save keeps the editor and draft available for correction.
+    if (!draft.trim()) {
+      setError("Enter post text with at least one non-space character.");
+      input.current?.focus();
+      return;
+    }
+    dispatch(postUpdated({ id: post.id, text: draft.trim() }));
+    setError("");
     setIsEditing(false);
   };
 
   return (
     <li>
-      <span>
+      <span className="post-content">
         <strong>{author?.name ?? "Unknown"}:</strong>{" "}
         {isEditing ? (
           <input
+            ref={input}
             value={draft}
-            onChange={event => setDraft(event.target.value)}
+            onChange={event => {
+              setDraft(event.target.value);
+              if (event.target.value.trim()) setError("");
+            }}
             aria-label="Edit post"
+            dir="auto"
+            aria-invalid={Boolean(error) || undefined}
+            aria-describedby={error ? errorId : undefined}
           />
         ) : (
           post.text
         )}
+        {error && (
+          <span className="error edit-error" id={errorId} role="alert">
+            {error}
+          </span>
+        )}
       </span>
-      <span className="row">
+      <span className="row post-actions">
         {isEditing ? (
           <button onClick={save}>Save</button>
         ) : (

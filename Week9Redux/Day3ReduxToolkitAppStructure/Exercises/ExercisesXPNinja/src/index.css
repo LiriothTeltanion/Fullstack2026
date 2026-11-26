@@ -121,6 +121,31 @@ ul.plain li {
   color: var(--danger);
 }
 
+.post-error {
+  flex-basis: 100%;
+  margin: 0;
+}
+
+.edit-error {
+  display: block;
+  font-size: 0.875rem;
+}
+
+.post-content {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.post-content input {
+  width: 100%;
+  min-width: 0;
+}
+
+.post-actions {
+  flex: 0 0 auto;
+}
+
 .big {
   font-size: 2.5rem;
   font-weight: 700;

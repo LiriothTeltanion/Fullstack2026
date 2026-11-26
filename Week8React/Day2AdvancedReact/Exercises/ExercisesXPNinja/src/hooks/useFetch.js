@@ -12,6 +12,8 @@ export function useFetch(url) {
 
     async function load() {
       setLoading(true);
+      // A new request must not present a previous success beside its own error.
+      setData(null);
       setError(null);
       try {
         const response = await fetch(url);
