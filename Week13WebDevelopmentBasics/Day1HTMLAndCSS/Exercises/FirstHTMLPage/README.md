@@ -1,4 +1,4 @@
-# 🧪 Exercise - First HTML Page
+# 🐾 The domestic cat and the lion
 
 <div align="center">
 
@@ -8,36 +8,39 @@
 
 </div>
 
-My first page written by hand, from the doctype down to the footer. It's a short "about me" with headings, two kinds of lists, a quote, a table and a link. The only picture is an inline SVG badge with my initials, so the folder needs no image files.
+A semantic HTML article about the characteristics and behavior of domestic cats and lions. An internal link moves to the lion section, and a comparison table connects the two animals through shared traits and different habits.
 
-## ▶️ How to run
+## ▶️ Open the pages
 
-Double-click [index.html](index.html), or run `python -m http.server 8000` here and open `http://localhost:8000`.
+Open [index.html](index.html) directly, or serve this directory.
 
-## 🎯 The challenge
+```bash
+python -m http.server 8000 --bind 127.0.0.1
+```
 
-| Part | What I used |
-|---|---|
-| Page skeleton | `header`, `main` with five `section`s, `footer`, and a "Skip to content" link |
-| About me | An inline `svg` inside a `figure` with a `figcaption`, floated right |
-| What I've learned | An ordered list `ol` |
-| Music I code to | An unordered list `ul` and a `blockquote` with its own small footer |
-| HTML tags table | `table` with `caption`, `thead`, `th scope="col"` and `tbody` |
-| Find me | An external link with `target="_blank"` and `rel="noopener noreferrer"` |
+Visit `http://127.0.0.1:8000/` for the article and `http://127.0.0.1:8000/about.html` for the preserved original page.
 
-[style.css](style.css) gives it a light "paper" look: a cream background, white sections with rounded corners and a serif font.
+## 🧩 Page structure
 
-## 🧠 What I learned
+| File | Purpose |
+| --- | --- |
+| [index.html](index.html) | Domestic cat and lion sections, local navigation and the comparison table |
+| [cats.css](cats.css) | Responsive article layout layered over the original paper theme |
+| [style.css](style.css) | Original shared typography, colors and basic page layout |
+| [about.html](about.html) | The original About me HTML, preserved byte for byte |
+| [about-README.md](about-README.md) | Earlier explanation and reflections, with its opening link updated to the preserved page |
 
-- Each `section` has `aria-labelledby` pointing at its own `h2`, so screen readers announce real section names
-- A `caption` names the table, and `scope="col"` tells the browser which cells are headers
-- A floated badge sticks out of its section, so a `::after` with `clear: both` closes each section below it
-- `width: min(720px, 100% - 2rem)` keeps the text readable on a wide screen and still leaves a gap on a phone
+The article uses named sections and native links. The lion anchor is `#lion`. The table has a caption, column headers and row headers with explicit scope. All text, anchors and table relationships are available without CSS or JavaScript. The page uses local styles and system fonts, with no external image, font or script requests.
 
----
+## 🧪 Manual checks
+
+- At desktop, 375 px and 320 px widths, read both animal sections and the full comparison table.
+- Navigate with Tab and Enter, including Skip to content, Jump to the lion and the link to the original page.
+- Disable styles and confirm the heading order, lion link and table headers remain usable.
+- Open about.html and check the original content and style still load.
 
 ## 👤 Author
 
-**Kevin Cusnir 'Lirioth'**  
-Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
-Week 13 Day 1 - HTML and CSS - Exercise
+Kevin Cusnir · [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)
+
+AI-assisted implementation and browser testing.

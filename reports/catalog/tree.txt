@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-26
-Base HEAD: fc4233822bb18cab28b93a5df1cfd5c8e8969b54
-Source-index SHA-256 (generated outputs excluded): ac0744229662eefb4d9ad9c122f3c14f2b1965487ec65d9505f81b0545694453
-Indexed files: 3033
+Base HEAD: d87c63847b368d693196c99c66866c383d898f36
+Source-index SHA-256 (generated outputs excluded): 520a1cf08fef5e0cfe28252e97b1e1ce393bf06756a77b965279a729ab335d6d
+Indexed files: 3036
 
 .
 ├── .github
@@ -949,6 +949,9 @@ Indexed files: 3033
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── FirstHTMLPage
+│   │   │   │   ├── about-README.md
+│   │   │   │   ├── about.html
+│   │   │   │   ├── cats.css
 │   │   │   │   ├── index.html
 │   │   │   │   ├── README.md
 │   │   │   │   └── style.css
