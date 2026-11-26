@@ -8,6 +8,32 @@
 
 </div>
 
+## Run the three Express exercises
+
+Install the locked packages with `npm ci`. Run `npm run practice` to start the Express API on `http://127.0.0.1:3100`. The original native HTTP exercise still runs separately with `npm start`.
+
+| Exercise | Requests to try | Behavior |
+| --- | --- | --- |
+| External posts | `GET /posts`, `GET /posts/1`, `POST /posts`, `PUT /posts/1`, `DELETE /posts/1` | Axios forwards requests to JSONPlaceholder. For a write, send a nonempty `title` and `body` plus a positive integer `userId`. Missing posts and upstream outages produce different responses. |
+| Accounts | `POST /auth/register`, `POST /auth/login`, `GET /auth/profile` | Register a synthetic username and password. Log in with the same credentials, then send the returned token in `Authorization: Bearer <token>` to read your profile. |
+| Todos | `GET /todos`, `POST /todos`, `GET /todos/1`, `PATCH /todos/1`, `PUT /todos/1`, `DELETE /todos/1` | Create a task with a `title`. The optional `completed` field is a boolean and defaults to `false`. Patch one field or replace the full task with PUT. |
+
+The three routers are independent. Passwords are hashed with bcrypt. A signed token expires after 15 minutes. Users, the signing key and todos live in memory for a single practice session. Restarting clears that session. Use synthetic credentials when trying the example.
+
+Account routes share a limit of ten requests per client IP per minute. Once that budget is used, the API returns HTTP 429 and a `Retry-After` header. Posts and todos are independent of this limit.
+
+Example todo round trip in PowerShell, with the practice server running:
+
+```powershell
+$api = 'http://127.0.0.1:3100'
+$task = Invoke-RestMethod "$api/todos" -Method Post -ContentType 'application/json' -Body '{"title":"Rehearse"}'
+Invoke-RestMethod "$api/todos/$($task.id)" -Method Patch -ContentType 'application/json' -Body '{"completed":true}'
+```
+
+The post provider simulates writes and does not retain them between requests. See the [JSONPlaceholder guide](https://jsonplaceholder.typicode.com/guide/). Run `npm test` for offline HTTP integration tests covering post requests and errors, concurrent registration, login and profile retrieval, and todo creation through deletion. The tests use an in-process stand-in for the external posts API.
+
+## Original native HTTP exercise
+
 One server, [server.js](server.js), that reads query strings, parses POST bodies and runs a small todo API in memory. The body parsing lives in [httpHelpers.js](httpHelpers.js).
 
 ## ▶️ How to run

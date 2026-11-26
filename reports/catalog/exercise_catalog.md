@@ -2,8 +2,8 @@
 
 > Regenerated from the exact Git index on `2026-11-26` by `tools/refresh_structure_catalogs.py`.
 
-- Base HEAD: `571329220c3aae89cd09f64fcf1e9e7e812a6ff1`
-- Source-index fingerprint: `sha256:267306b226c5a6114291ac503e892eb96a3eadd3dabad7af88358deb54aca29c` (generated outputs excluded)
+- Base HEAD: `87a2a896a6bbff9b447dbba9558cdcf148940332`
+- Source-index fingerprint: `sha256:ec74d587383027eff45bc2b0a8a4aebc9cd2077aa252ebcfc1f76dc256584578` (generated outputs excluded)
 
 This catalog proves repository presence and path integrity only. It does not prove that an exercise runs, that Kevin can explain it, or that it is mastered or portfolio-ready.
 
@@ -228,7 +228,7 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week6DatabasesAndNodejs/Day5NodejsWebServer/DailyChallenge/EmojiGuessingGame` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript | 11 | present (canonical) | [source](<../../Week6DatabasesAndNodejs/Day5NodejsWebServer/DailyChallenge/EmojiGuessingGame>); runtime unverified |
 | `Week6DatabasesAndNodejs/Day5NodejsWebServer/Exercises/CreateYourFirstHttpServer` | Exercise | JSON \| JavaScript | 5 | present (canonical) | [source](<../../Week6DatabasesAndNodejs/Day5NodejsWebServer/Exercises/CreateYourFirstHttpServer>); runtime unverified |
 | `Week6DatabasesAndNodejs/Day5NodejsWebServer/Exercises/ExercisesXP` | Exercise | CSS \| HTML \| JSON \| JavaScript | 16 | present (canonical) | [source](<../../Week6DatabasesAndNodejs/Day5NodejsWebServer/Exercises/ExercisesXP>); runtime unverified |
-| `Week6DatabasesAndNodejs/Day5NodejsWebServer/Exercises/ExercisesXPGold` | Exercise | JSON \| JavaScript | 4 | present (canonical) | [source](<../../Week6DatabasesAndNodejs/Day5NodejsWebServer/Exercises/ExercisesXPGold>); runtime unverified |
+| `Week6DatabasesAndNodejs/Day5NodejsWebServer/Exercises/ExercisesXPGold` | Exercise | JSON \| JavaScript | 11 | present (canonical) | [source](<../../Week6DatabasesAndNodejs/Day5NodejsWebServer/Exercises/ExercisesXPGold>); runtime unverified |
 | `Week6DatabasesAndNodejs/Day5NodejsWebServer/Exercises/ExercisesXPNinja` | Exercise | CSS \| HTML \| JSON \| JavaScript | 18 | present (canonical) | [source](<../../Week6DatabasesAndNodejs/Day5NodejsWebServer/Exercises/ExercisesXPNinja>); runtime unverified |
 | `Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/DailyChallenge/TriviaQuizGame` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript | 14 | present (canonical) | [source](<../../Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/DailyChallenge/TriviaQuizGame>); runtime unverified |
 | `Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/Exercises/ExercisesXP` | Exercise | JSON \| JavaScript | 16 | present (canonical) | [source](<../../Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/Exercises/ExercisesXP>); runtime unverified |
