@@ -1,0 +1,14 @@
+{
+  "name": "compass-clock-tests",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "node --test clock.test.js browser.test.cjs",
+    "test:unit": "node --test clock.test.js",
+    "test:browser": "node --test browser.test.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.65.1"
+  }
+}
