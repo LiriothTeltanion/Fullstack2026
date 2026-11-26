@@ -56,6 +56,12 @@ button {
   margin-top: 0.5rem;
 }
 
+button:disabled {
+  background: #475569;
+  color: #e2e8f0;
+  cursor: default;
+}
+
 .hint {
   color: #94a3b8;
   font-size: 0.9rem;

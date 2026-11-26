@@ -69,3 +69,29 @@ select:focus-visible {
 .note {
   color: #4b626c;
 }
+
+.modes {
+  border: 1px solid #799a9e;
+  border-radius: 10px;
+  margin: 0;
+  padding: 10px;
+}
+.modes legend {
+  padding: 0 8px;
+}
+.modes button {
+  display: block;
+  width: 100%;
+  margin: 6px 0;
+  padding: 9px 12px;
+  border: 2px solid #799a9e;
+  border-radius: 7px;
+  background: #fff;
+  color: #20333c;
+  cursor: pointer;
+}
+.modes button[aria-pressed="true"] {
+  border-color: #20333c;
+  background: #20333c;
+  color: #fff;
+}

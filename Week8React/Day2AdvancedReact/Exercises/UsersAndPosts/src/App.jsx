@@ -1,6 +1,12 @@
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-import UserList from "./components/UserList.jsx";
-import UserPosts from "./components/UserPosts.jsx";
+import { BrowserRouter, Link, Route, Routes, useParams } from "react-router-dom";
+import UsersList from "./components/UsersList.jsx";
+import PostList from "./components/PostList.jsx";
+
+// Router hooks stay in this small adapter; the data-loading exercise uses classes.
+function PostsRoute() {
+  const { userId } = useParams();
+  return <PostList userId={userId} />;
+}
 
 function App() {
   return (
@@ -10,8 +16,8 @@ function App() {
           <Link to="/">Users and Posts</Link>
         </h1>
         <Routes>
-          <Route path="/" element={<UserList />} />
-          <Route path="/users/:userId" element={<UserPosts />} />
+          <Route path="/" element={<UsersList />} />
+          <Route path="/users/:userId" element={<PostsRoute />} />
           <Route path="*" element={<p>Page not found.</p>} />
         </Routes>
       </main>

@@ -109,3 +109,17 @@ h4 {
   margin: 0 0 0.4rem;
   text-transform: capitalize;
 }
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #9c4b00;
+  outline-offset: 4px;
+}
+.card {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 350px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

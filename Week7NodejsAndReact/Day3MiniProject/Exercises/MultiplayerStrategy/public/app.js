@@ -3,10 +3,28 @@ const socket = io();
 const board = document.querySelector("#board");
 const statusEl = document.querySelector("#status");
 const roleEl = document.querySelector("#role");
+const moveButtons = document.querySelectorAll("[data-dir]");
+const restartButton = document.querySelector("#restart");
 const NAMES = ["A", "B"];
 let myRole = null;
+let gameState = null;
+
+function canPlay() {
+  return socket.connected && myRole !== null && gameState !== null;
+}
+
+function canMove() {
+  return canPlay() && !gameState.over && gameState.current === myRole;
+}
+
+function updateControls() {
+  for (const button of moveButtons) button.disabled = !canMove();
+  restartButton.disabled = !canPlay();
+}
 
 function render(state) {
+  gameState = state;
+  updateControls();
   board.innerHTML = "";
   if (!state) return;
 
@@ -32,25 +50,39 @@ function render(state) {
 }
 
 function sendMove(direction) {
-  socket.emit("game:move", direction);
+  // A move belongs to this game. Never replay it in a new game after reconnecting.
+  if (canMove()) socket.volatile.emit("game:move", direction);
 }
 
-document.querySelectorAll("[data-dir]").forEach(button => {
+moveButtons.forEach(button => {
   button.addEventListener("click", () => sendMove(button.dataset.dir));
 });
 
 const KEYS = { ArrowUp: "up", ArrowDown: "down", ArrowLeft: "left", ArrowRight: "right" };
 document.addEventListener("keydown", event => {
-  if (KEYS[event.key]) {
+  if (KEYS[event.key] && canMove()) {
     event.preventDefault();
     sendMove(KEYS[event.key]);
   }
 });
 
-document.querySelector("#restart").addEventListener("click", () => socket.emit("game:restart"));
+restartButton.addEventListener("click", () => {
+  if (canPlay()) socket.volatile.emit("game:restart");
+});
+
+function showDisconnected() {
+  myRole = null;
+  roleEl.textContent = "";
+  render(null);
+  statusEl.textContent = "Disconnected. Waiting to reconnect…";
+}
+
+socket.on("disconnect", showDisconnected);
+socket.on("connect_error", showDisconnected);
 
 socket.on("game:role", role => {
   myRole = role;
+  updateControls();
   roleEl.textContent = role === null ? "You are watching" : `You are Player ${NAMES[role]}`;
 });
 socket.on("game:state", render);
