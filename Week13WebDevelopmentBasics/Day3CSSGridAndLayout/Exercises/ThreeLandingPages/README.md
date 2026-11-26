@@ -16,12 +16,12 @@ Open [index.html](index.html) and pick a page. The folder works as one static si
 
 ## 🎯 The challenge
 
-| Page | Layout |
-|---|---|
-| [bakery.html](bakery.html) · Crumb & Co. | Hero in two columns (`3fr 2fr`) with a round bread "photo", then a menu grid with `repeat(auto-fill, minmax(200px, 1fr))` |
-| [fitness.html](fitness.html) · Iron Hour | A dark bento grid placed with `grid-template-areas`: a big main tile, two stat tiles, hours and classes. It turns into a 2-column grid on phones |
-| [travel.html](travel.html) · Desert Trails | The hero spans rows 1 and 2, and the trip cards start on row 2, so they overlap the bottom of the hero |
-| [index.html](index.html) · hub | Three colored cards in an auto-fit grid |
+| Page                                       | Layout                                                                                                                                           |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [bakery.html](bakery.html) · Crumb & Co.   | Hero in two columns (`3fr 2fr`) with a round bread "photo", then a menu grid with `repeat(auto-fill, minmax(200px, 1fr))`                        |
+| [fitness.html](fitness.html) · Iron Hour   | A dark bento grid placed with `grid-template-areas`: a big main tile, two stat tiles, hours and classes. It turns into a 2-column grid on phones |
+| [travel.html](travel.html) · Desert Trails | The hero spans rows 1 and 2, and the trip cards start on row 2, so they overlap the bottom of the hero                                           |
+| [index.html](index.html) · hub             | Three colored cards in an auto-fit grid                                                                                                          |
 
 ## 🧠 What I learned
 
@@ -37,3 +37,9 @@ Open [index.html](index.html) and pick a page. The folder works as one static si
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 Week 13 Day 3 - CSS Grid and Layout - Exercise
+
+## Responsive travel cards and regression tests
+
+Above 700px, the travel cards keep their three explicit columns and overlap the hero. At 700px and below, every card uses column one and flows after the hero. The mobile selector matches the specificity of the desktop `:nth-of-type` rules so the second/third cards cannot create implicit off-screen columns.
+
+The local [browser regression suite](tests/README.md) checks navigation and layout at desktop, tablet and narrow phone widths. It includes a reproduction against the previous CSS; no external services or booking requests are involved.

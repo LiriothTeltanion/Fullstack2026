@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-26
-Base HEAD: fe14eac3264ae7bb2438d78765d86b25ca15d175
-Source-index SHA-256 (generated outputs excluded): 58b6bb21c170f104f53d08cf65c987af3d586d40b2a0dcecabc12d39231a59ad
-Indexed files: 3177
+Base HEAD: 213cb1b9c55d03e52a9578443cf22b5556ef6ffb
+Source-index SHA-256 (generated outputs excluded): 59cdfe0dc3441f31874991f37ae81f603006725f5e2da63cfd9f7e83c3a63ebc
+Indexed files: 3187
 
 .
 ├── .github
@@ -466,13 +466,17 @@ Indexed files: 3177
 │   │       ├── .gitignore
 │   │       ├── package-lock.json
 │   │       ├── package.json
+│   │       ├── performance-hooks.checks.js
+│   │       ├── performance-hooks.config.js
 │   │       ├── playwright.config.js
 │   │       ├── README.md
 │   │       ├── redux-day3.checks.js
 │   │       ├── redux-day3.config.js
 │   │       ├── redux-query.checks.js
 │   │       ├── redux-query.config.js
-│   │       └── state.spec.js
+│   │       ├── state.spec.js
+│   │       ├── typed-shopping.checks.js
+│   │       └── typed-shopping.config.js
 │   ├── js
 │   │   ├── book_list.test.mjs
 │   │   ├── calculator.test.mjs
@@ -1075,6 +1079,12 @@ Indexed files: 3177
 │   │   │   │   ├── README.md
 │   │   │   │   └── style.css
 │   │   │   ├── ThreeLandingPages
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── .gitignore
+│   │   │   │   │   ├── layout.browser.cjs
+│   │   │   │   │   ├── package-lock.json
+│   │   │   │   │   ├── package.json
+│   │   │   │   │   └── README.md
 │   │   │   │   ├── bakery.html
 │   │   │   │   ├── fitness.html
 │   │   │   │   ├── index.html
@@ -1350,6 +1360,7 @@ Indexed files: 3177
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   └── style.css
 │   │   │   │   ├── .env.example
+│   │   │   │   ├── coordinates.test.js
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md

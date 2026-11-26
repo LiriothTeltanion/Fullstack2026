@@ -12,7 +12,11 @@ interface ThemeContextValue {
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useLocalStorage<Theme>("gold-theme", "dark");
+  const [theme, setTheme] = useLocalStorage<Theme>(
+    "gold-theme",
+    "dark",
+    (saved): saved is Theme => saved === "dark" || saved === "light"
+  );
 
   useEffect(() => {
     document.body.classList.toggle("light", theme === "light");

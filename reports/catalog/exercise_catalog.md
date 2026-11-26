@@ -2,8 +2,8 @@
 
 > Regenerated from the exact Git index on `2026-11-26` by `tools/refresh_structure_catalogs.py`.
 
-- Base HEAD: `fe14eac3264ae7bb2438d78765d86b25ca15d175`
-- Source-index fingerprint: `sha256:58b6bb21c170f104f53d08cf65c987af3d586d40b2a0dcecabc12d39231a59ad` (generated outputs excluded)
+- Base HEAD: `213cb1b9c55d03e52a9578443cf22b5556ef6ffb`
+- Source-index fingerprint: `sha256:59cdfe0dc3441f31874991f37ae81f603006725f5e2da63cfd9f7e83c3a63ebc` (generated outputs excluded)
 
 This catalog proves repository presence and path integrity only. It does not prove that an exercise runs, that Kevin can explain it, or that it is mastered or portfolio-ready.
 
@@ -38,7 +38,7 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week13WebDevelopmentBasics/Day3CSSGridAndLayout/DailyChallenge/CSSPatternNinja` | Daily Challenge | CSS \| HTML | 3 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day3CSSGridAndLayout/DailyChallenge/CSSPatternNinja>); runtime unverified |
 | `Week13WebDevelopmentBasics/Day3CSSGridAndLayout/Exercises/CSSLayout` | Exercise | CSS \| HTML | 3 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day3CSSGridAndLayout/Exercises/CSSLayout>); runtime unverified |
 | `Week13WebDevelopmentBasics/Day3CSSGridAndLayout/Exercises/MyCV` | Exercise | CSS \| HTML \| JavaScript | 12 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day3CSSGridAndLayout/Exercises/MyCV>); runtime unverified |
-| `Week13WebDevelopmentBasics/Day3CSSGridAndLayout/Exercises/ThreeLandingPages` | Exercise | CSS \| HTML | 6 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day3CSSGridAndLayout/Exercises/ThreeLandingPages>); runtime unverified |
+| `Week13WebDevelopmentBasics/Day3CSSGridAndLayout/Exercises/ThreeLandingPages` | Exercise | CSS \| HTML \| JSON \| JavaScript | 11 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day3CSSGridAndLayout/Exercises/ThreeLandingPages>); runtime unverified |
 | `Week13WebDevelopmentBasics/Day4Bootstrap/DailyChallenge/WildAndWackyVegetables` | Daily Challenge | CSS \| HTML \| JavaScript | 5 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day4Bootstrap/DailyChallenge/WildAndWackyVegetables>); runtime unverified |
 | `Week13WebDevelopmentBasics/Day4Bootstrap/Exercises/Components` | Exercise | CSS \| HTML \| JSON \| JavaScript | 17 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day4Bootstrap/Exercises/Components>); runtime unverified |
 | `Week13WebDevelopmentBasics/Day4Bootstrap/Exercises/RecreateLandingPage` | Exercise | CSS \| HTML \| JavaScript | 3 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day4Bootstrap/Exercises/RecreateLandingPage>); runtime unverified |
@@ -52,7 +52,7 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week14MoreTopicsAndInterviews/Day2DeployWithRender/Exercises/DeployReactAndNode` | Exercise | CSS \| HTML \| JSON \| JavaScript | 25 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day2DeployWithRender/Exercises/DeployReactAndNode>); runtime unverified |
 | `Week14MoreTopicsAndInterviews/Day3FullStackDeployment/Exercises/DeployFullStackApp` | Exercise | CSS \| HTML \| JSON \| JavaScript | 30 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day3FullStackDeployment/Exercises/DeployFullStackApp>); runtime unverified |
 | `Week14MoreTopicsAndInterviews/Day7MiniProjects/DailyChallenge/LoginAndRegister` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript \| SQL | 28 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day7MiniProjects/DailyChallenge/LoginAndRegister>); runtime unverified |
-| `Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/GoogleMap` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 11 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/GoogleMap>); runtime unverified |
+| `Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/GoogleMap` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 12 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/GoogleMap>); runtime unverified |
 | `Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/MemeGenerator` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 20 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/MemeGenerator>); runtime unverified |
 | `Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/ReactCalculator` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 12 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/ReactCalculator>); runtime unverified |
 | `Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/SearchBookApp` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 15 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/SearchBookApp>); runtime unverified |

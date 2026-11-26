@@ -21,7 +21,21 @@ npm run dev
 
 1. **Typed `useReducer`.** `shoppingReducer` takes an `Action` union (`added`, `toggled`, `removed`, `clearedBought`). A `never` check in `default` makes the compiler complain if a case is missing. The list is loaded lazily with `useReducer(shoppingReducer, [], loadItems)` and saved on every change.
 2. **Typed context.** `ThemeContext` is `createContext<ThemeContextValue | null>(null)`, and `useTheme()` throws when it is used outside `<ThemeProvider>`, so callers never deal with `null`.
-3. **Generic hook.** `useLocalStorage<T>(key, initialValue)` reads and writes JSON and returns `[value, setValue] as const`. The theme and the name field both use it.
+3. **Generic hook.** `useLocalStorage<T>(key, initialValue, isValid)` validates stored JSON before returning a typed value and setter. The name field accepts strings. The theme accepts `dark` and `light`.
+
+### Saved lists and recovery
+
+The app keeps valid items in order when a saved list contains a damaged row. If an older save gives two rows the same ID, both remain editable independently. The app writes the recovered list on the next edit. If the browser refuses that write, a message explains that edits are available for this tab.
+
+To run the mobile and desktop browser checks from the repository root:
+
+```sh
+npm --prefix Week10AdvancedTypeScriptAndAuthentication/Day1UsingTypeScriptWithReact/Exercises/ExercisesXPGold install --no-package-lock
+cd tests/browser/react-state
+npm ci
+npx playwright install chromium
+npm test -- --config typed-shopping.config.js
+```
 
 ## 🧠 What I learned
 
