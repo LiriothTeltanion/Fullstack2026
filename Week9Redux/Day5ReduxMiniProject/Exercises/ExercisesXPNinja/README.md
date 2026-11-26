@@ -23,6 +23,12 @@ each readable card once and puts unassigned cards in **To do**. Opening the
 page leaves the saved copy untouched. The next board edit saves the restored
 layout. Run `npm test` to check these recovery cases without a browser.
 
+With a keyboard, Tab to a card's movement arrow and press Enter or Space. After
+the card moves, focus follows the same card and movement direction. At the first
+or last column, focus moves to its available return arrow. This uses the card ID,
+so repeated titles work too. Creating a card or restoring a saved board leaves
+focus where the browser placed it.
+
 ## 🎯 The challenge
 
 1. **Board shape.** `cards` is a lookup by id and `columns` keeps only ordered id lists, so a card is stored once.
