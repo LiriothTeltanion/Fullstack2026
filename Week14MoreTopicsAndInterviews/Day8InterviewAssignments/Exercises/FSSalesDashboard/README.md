@@ -41,3 +41,9 @@ Deleting a company also removes its meetings after explicit confirmation. Dates 
 [Assignment source](https://github.com/devtlv/studentsGitHub/blob/master/JS/Week10-ProjectsWeek/FS%20Developer%20Exam.pdf) · [Node SQLite reference](https://nodejs.org/api/sqlite.html)
 
 Created 2026-11-25, Asia/Jerusalem.
+
+## Checking account isolation and persistence
+
+Run `npm test` from this directory. The six integration tests start the real HTTP server with temporary SQLite storage. They cover account access, company and meeting changes, isolation between accounts, monthly statistics, rejection of invalid dates, cascade confirmation and persistence across a server restart.
+
+For a browser check, create a practice company, add two meetings on different days in one month, then open **Meeting Statistics**. Each day should account for half of that month's meetings. Sign out and use a second practice account to check that its company and meeting lists start empty.

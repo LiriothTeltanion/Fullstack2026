@@ -61,3 +61,18 @@ Created 2026-11-25, Asia/Jerusalem.
 ## Verification on 2026-11-25
 
 Twelve API tests passed using an isolated SQLite test database selected explicitly with MEMES_USE_SQLITE=1. Django system checks passed, and makemigrations --check --dry-run reported no schema changes. PostgreSQL and Docker runtime verification are pending on a host with those services available.
+
+## PostgreSQL verification · 2026-11-26
+
+All 12 API tests passed with PostgreSQL 17.12. On a fresh database, Django applied every migration, reported zero system-check issues and found no migration drift. The suite used a separate test database and removed it after checking authentication, pagination, template defaults, database constraints, rating updates, random selection and top-ten ordering.
+
+To repeat the check, point the `POSTGRES_*` variables at a disposable local PostgreSQL database, leave `MEMES_USE_SQLITE` unset and use a role that can create the test database. Run these commands from the directory containing `manage.py`:
+
+```bash
+python manage.py check
+python manage.py makemigrations --check --dry-run
+python manage.py migrate --noinput
+python manage.py test --verbosity 2
+```
+
+This run used the native PostgreSQL server on a private Unix socket. The Docker Compose startup path still awaits a separate check.
