@@ -2,8 +2,8 @@
 
 > Regenerated from the exact Git index on `2026-11-26` by `tools/refresh_structure_catalogs.py`.
 
-- Base HEAD: `adbdaf997abc820d298e43013a07d7945ed37962`
-- Source-index fingerprint: `sha256:412dbb33cff8a0d026ed5edee2324cabb7d70076698aba094b1b046174a3c4f3` (generated outputs excluded)
+- Base HEAD: `7c0414c0f7e850aef1005548edf9e38c9def10fe`
+- Source-index fingerprint: `sha256:71d2b26c0a43c6c295bb954296a8fae6aa46c28a4a326cdebbc783a06052fad1` (generated outputs excluded)
 
 This catalog proves repository presence and path integrity only. It does not prove that an exercise runs, that Kevin can explain it, or that it is mastered or portfolio-ready.
 
@@ -263,7 +263,7 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week8React/Day2AdvancedReact/DailyChallenge/Form` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript | 18 | present (canonical) | [source](<../../Week8React/Day2AdvancedReact/DailyChallenge/Form>); runtime unverified |
 | `Week8React/Day2AdvancedReact/Exercises/ExercisesXP` | Exercise | CSS \| HTML \| JSON \| JavaScript | 25 | present (canonical) | [source](<../../Week8React/Day2AdvancedReact/Exercises/ExercisesXP>); runtime unverified |
 | `Week8React/Day2AdvancedReact/Exercises/ExercisesXPGold` | Exercise | CSS \| HTML \| JSON \| JavaScript | 12 | present (canonical) | [source](<../../Week8React/Day2AdvancedReact/Exercises/ExercisesXPGold>); runtime unverified |
-| `Week8React/Day2AdvancedReact/Exercises/ExercisesXPNinja` | Exercise | CSS \| HTML \| JSON \| JavaScript | 14 | present (canonical) | [source](<../../Week8React/Day2AdvancedReact/Exercises/ExercisesXPNinja>); runtime unverified |
+| `Week8React/Day2AdvancedReact/Exercises/ExercisesXPNinja` | Exercise | CSS \| HTML \| JSON \| JavaScript | 19 | present (canonical) | [source](<../../Week8React/Day2AdvancedReact/Exercises/ExercisesXPNinja>); runtime unverified |
 | `Week8React/Day2AdvancedReact/Exercises/UsersAndPosts` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 17 | present (canonical) | [source](<../../Week8React/Day2AdvancedReact/Exercises/UsersAndPosts>); runtime unverified |
 | `Week8React/Day3ReactAdvancedHooks/DailyChallenge/EnhancedTaskManager` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript | 17 | present (canonical) | [source](<../../Week8React/Day3ReactAdvancedHooks/DailyChallenge/EnhancedTaskManager>); runtime unverified |
 | `Week8React/Day3ReactAdvancedHooks/Exercises/ExercisesXP` | Exercise | CSS \| HTML \| JSON \| JavaScript | 16 | present (canonical) | [source](<../../Week8React/Day3ReactAdvancedHooks/Exercises/ExercisesXP>); runtime unverified |
@@ -275,8 +275,8 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week8React/Day4MiniProject/Exercises/SnapShot` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 16 | present (canonical) | [source](<../../Week8React/Day4MiniProject/Exercises/SnapShot>); runtime unverified |
 | `Week9Redux/Day2ReduxOverviewAndConcepts/DailyChallenge/PlannerApplication` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript | 19 | present (canonical) | [source](<../../Week9Redux/Day2ReduxOverviewAndConcepts/DailyChallenge/PlannerApplication>); runtime unverified |
 | `Week9Redux/Day2ReduxOverviewAndConcepts/Exercises/ExercisesXP` | Exercise | CSS \| HTML \| JSON \| JavaScript | 21 | present (canonical) | [source](<../../Week9Redux/Day2ReduxOverviewAndConcepts/Exercises/ExercisesXP>); runtime unverified |
-| `Week9Redux/Day2ReduxOverviewAndConcepts/Exercises/ExercisesXPGold` | Exercise | CSS \| HTML \| JSON \| JavaScript | 19 | present (canonical) | [source](<../../Week9Redux/Day2ReduxOverviewAndConcepts/Exercises/ExercisesXPGold>); runtime unverified |
-| `Week9Redux/Day2ReduxOverviewAndConcepts/Exercises/ExercisesXPNinja` | Exercise | CSS \| HTML \| JSON \| JavaScript | 16 | present (canonical) | [source](<../../Week9Redux/Day2ReduxOverviewAndConcepts/Exercises/ExercisesXPNinja>); runtime unverified |
+| `Week9Redux/Day2ReduxOverviewAndConcepts/Exercises/ExercisesXPGold` | Exercise | CSS \| HTML \| JSON \| JavaScript | 20 | present (canonical) | [source](<../../Week9Redux/Day2ReduxOverviewAndConcepts/Exercises/ExercisesXPGold>); runtime unverified |
+| `Week9Redux/Day2ReduxOverviewAndConcepts/Exercises/ExercisesXPNinja` | Exercise | CSS \| HTML \| JSON \| JavaScript | 17 | present (canonical) | [source](<../../Week9Redux/Day2ReduxOverviewAndConcepts/Exercises/ExercisesXPNinja>); runtime unverified |
 | `Week9Redux/Day3ReduxToolkitAppStructure/DailyChallenge/PlannerApplication` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript | 17 | present (canonical) | [source](<../../Week9Redux/Day3ReduxToolkitAppStructure/DailyChallenge/PlannerApplication>); runtime unverified |
 | `Week9Redux/Day3ReduxToolkitAppStructure/Exercises/ExercisesXP` | Exercise | CSS \| HTML \| JSON \| JavaScript | 17 | present (canonical) | [source](<../../Week9Redux/Day3ReduxToolkitAppStructure/Exercises/ExercisesXP>); runtime unverified |
 | `Week9Redux/Day3ReduxToolkitAppStructure/Exercises/ExercisesXPGold` | Exercise | CSS \| HTML \| JSON \| JavaScript | 17 | present (canonical) | [source](<../../Week9Redux/Day3ReduxToolkitAppStructure/Exercises/ExercisesXPGold>); runtime unverified |
