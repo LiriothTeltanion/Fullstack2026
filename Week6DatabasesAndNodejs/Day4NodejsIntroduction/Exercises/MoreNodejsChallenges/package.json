@@ -4,8 +4,12 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "calendar": "node calendar-cli.js",
+    "test": "node --test",
     "notes": "node notes.js",
-    "list": "node notes.js list",
-    "test": "node --test notes.test.js"
+    "list": "node notes.js list"
+  },
+  "dependencies": {
+    "date-holidays": "3.39.2"
   }
 }

@@ -12,7 +12,7 @@ export default class MemeGenerator extends Component {
     name: "One Does Not Simply",
     fontSize: 40,
     color: "#ffffff",
-    templates: [],
+    allMemeImgs: [],
     loading: true,
     error: "",
     imageError: "",
@@ -37,7 +37,7 @@ export default class MemeGenerator extends Component {
         );
         if (!usable.length) throw new Error("No meme templates are available.");
         // Keep the required initial image until the user presses Gen.
-        this.setState({ templates: usable, loading: false, error: "" });
+        this.setState({ allMemeImgs: usable, loading: false, error: "" });
       })
       .catch(error => {
         if (!controller.signal.aborted) {
@@ -59,9 +59,9 @@ export default class MemeGenerator extends Component {
   };
 
   pickRandomImage = () => {
-    const { templates } = this.state;
-    if (!templates.length) return;
-    const random = templates[Math.floor(Math.random() * templates.length)];
+    const { allMemeImgs } = this.state;
+    if (!allMemeImgs.length) return;
+    const random = allMemeImgs[Math.floor(Math.random() * allMemeImgs.length)];
     this.setState({ randomImage: random.url, name: random.name || "Meme", imageError: "" });
   };
 
@@ -72,7 +72,7 @@ export default class MemeGenerator extends Component {
           meme={this.state}
           onChange={this.handleChange}
           onRandom={this.pickRandomImage}
-          disabled={!this.state.templates.length}
+          disabled={!this.state.allMemeImgs.length}
         />
         <div className="preview-panel">
           <p role="status">{this.state.loading ? "Loading templates…" : ""}</p>

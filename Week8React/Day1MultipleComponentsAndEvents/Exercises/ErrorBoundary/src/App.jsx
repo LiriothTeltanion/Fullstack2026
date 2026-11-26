@@ -1,38 +1,58 @@
-import BuggyCounter from "./components/BuggyCounter.jsx";
+import { useEffect, useState } from "react";
 import ErrorBoundary from "./components/ErrorBoundary.jsx";
+import CounterDemo from "./CounterDemo.jsx";
+import ImageColumn from "./components/ImageColumn.jsx";
+import TextColumn from "./components/TextColumn.jsx";
 
 function App() {
+  const [view, setView] = useState(() =>
+    window.location.hash === "#counters" ? "counters" : "practice"
+  );
+  useEffect(() => {
+    const update = () => setView(window.location.hash === "#counters" ? "counters" : "practice");
+    window.addEventListener("hashchange", update);
+    return () => window.removeEventListener("hashchange", update);
+  }, []);
   return (
-    <main className="page">
-      <h1>Week 8 Day 1 · Error Boundary</h1>
-      <p className="muted">Each counter crashes when it reaches 5.</p>
-
-      <section className="card">
-        <h2>Simulation 1 · two counters, one boundary</h2>
-        <p className="muted">When one crashes, both disappear.</p>
-        <ErrorBoundary>
-          <BuggyCounter />
-          <BuggyCounter />
-        </ErrorBoundary>
-      </section>
-
-      <section className="card">
-        <h2>Simulation 2 · one boundary each</h2>
-        <p className="muted">When one crashes, the other keeps working.</p>
-        <ErrorBoundary>
-          <BuggyCounter />
-        </ErrorBoundary>
-        <ErrorBoundary>
-          <BuggyCounter />
-        </ErrorBoundary>
-      </section>
-
-      <section className="card">
-        <h2>Simulation 3 · no boundary here</h2>
-        <p className="muted">The error climbs up to the boundary around the whole app.</p>
-        <BuggyCounter />
-      </section>
-    </main>
+    <>
+      <header className="practice-header">
+        <div className="practice-brand">Error boundaries</div>
+        <nav aria-label="Practice demos">
+          <a href="#practice" aria-current={view === "practice" ? "page" : undefined}>
+            Paragraph boundary
+          </a>
+          <a href="#counters" aria-current={view === "counters" ? "page" : undefined}>
+            Counter simulations
+          </a>
+        </nav>
+      </header>
+      {view === "counters" ? (
+        <CounterDemo />
+      ) : (
+        <main className="practice-page">
+          <div className="practice-intro">
+            <h1>
+              One paragraph.
+              <br />A smaller blast radius.
+            </h1>
+            <p>
+              A rendering error should interrupt as little of the page as possible. Load the images,
+              break the paragraph, then recover it.
+            </p>
+          </div>
+          <div className="practice-columns">
+            <ImageColumn />
+            <ErrorBoundary fallback="The text column could not render.">
+              <TextColumn />
+            </ErrorBoundary>
+          </div>
+          <p className="practice-footnote">
+            The paragraph has its own boundary. Event-handler errors are handled explicitly where
+            they happen.
+          </p>
+        </main>
+      )}
+    </>
   );
 }
 
