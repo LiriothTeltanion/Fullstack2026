@@ -62,13 +62,22 @@ io.on("connection", socket => {
 
   socket.on("chat:typing", isTyping => {
     const user = users.get(socket.id);
-    if (user) socket.to(user.room).emit("chat:typing", { username: user.username, isTyping });
+    if (user)
+      socket
+        .to(user.room)
+        .emit("chat:typing", { userId: socket.id, username: user.username, isTyping });
   });
 
   socket.on("disconnect", () => {
     const user = users.get(socket.id);
     if (!user) return;
     users.delete(socket.id);
+    // Stop only this participant's notice, including when their tab closes abruptly.
+    socket.to(user.room).emit("chat:typing", {
+      userId: socket.id,
+      username: user.username,
+      isTyping: false,
+    });
     io.to(user.room).emit("chat:system", { text: `${user.username} left`, time: time() });
     io.to(user.room).emit("room:users", usersIn(user.room));
   });

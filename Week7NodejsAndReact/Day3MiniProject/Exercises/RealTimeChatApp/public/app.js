@@ -15,6 +15,27 @@ let session = null;
 let requestedSocketId = null;
 let confirmedSocketId = null;
 let typingTimer;
+// Socket IDs distinguish participants even if they choose the same display name.
+const typingUsers = new Map();
+
+function renderTyping() {
+  const names = [...typingUsers.values()].map(user => user.username);
+  typingEl.textContent = names.length
+    ? `${names.join(", ")} ${names.length === 1 ? "is" : "are"} typing...`
+    : "";
+}
+
+function stopTyping(userId) {
+  clearTimeout(typingUsers.get(userId)?.timer);
+  typingUsers.delete(userId);
+  renderTyping();
+}
+
+function clearTypingUsers() {
+  for (const user of typingUsers.values()) clearTimeout(user.timer);
+  typingUsers.clear();
+  renderTyping();
+}
 sendButton.disabled = true;
 
 // A transport reconnect has a new socket. Join before enabling message submission.
@@ -34,7 +55,7 @@ socket.on("disconnect", () => {
   sendButton.disabled = true;
   joinButton.disabled = Boolean(session);
   clearTimeout(typingTimer);
-  typingEl.textContent = "";
+  clearTypingUsers();
 });
 
 // textContent (not innerHTML) so nobody can inject HTML through a message.
@@ -85,8 +106,16 @@ socket.on("chat:message", ({ username, text, time }) => {
 
 socket.on("chat:system", ({ text, time }) => addLine(text, time, "system"));
 
-socket.on("chat:typing", ({ username, isTyping }) => {
-  typingEl.textContent = isTyping ? `${username} is typing...` : "";
+socket.on("chat:typing", ({ userId, username, isTyping }) => {
+  // The username fallback keeps the notice usable with an older server payload.
+  const identity = userId ?? username;
+  stopTyping(identity);
+  if (!isTyping) return;
+  typingUsers.set(identity, {
+    username,
+    timer: setTimeout(() => stopTyping(identity), 1200),
+  });
+  renderTyping();
 });
 
 socket.on("room:users", names => {
@@ -112,6 +141,7 @@ socket.on("room:users", names => {
 });
 
 socket.on("chat:error", text => {
+  clearTypingUsers();
   session = null;
   requestedSocketId = null;
   confirmedSocketId = null;
