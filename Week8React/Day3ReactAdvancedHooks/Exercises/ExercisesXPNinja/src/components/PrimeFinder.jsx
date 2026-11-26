@@ -1,8 +1,10 @@
 import { useMemo, useState } from "react";
-import { primesUpTo } from "../utils/primes.js";
+import { MAX_LIMIT, primesUpTo } from "../utils/primes.js";
 
 function PrimeFinder() {
-  const [limit, setLimit] = useState(20000);
+  const [draft, setDraft] = useState("20000");
+  const limit = Number(draft);
+  const valid = Number.isInteger(limit) && limit >= 2 && limit <= MAX_LIMIT;
   const [darkBox, setDarkBox] = useState(false);
 
   // Only recalculated when limit changes, not when the box color changes.
@@ -19,14 +21,18 @@ function PrimeFinder() {
         <input
           type="number"
           min="2"
-          max="200000"
-          value={limit}
-          onChange={event => setLimit(Math.min(200000, Number(event.target.value) || 2))}
+          max={MAX_LIMIT}
+          step="1"
+          value={draft}
+          aria-invalid={!valid}
+          aria-describedby="prime-result"
+          onChange={event => setDraft(event.target.value)}
         />
       </label>
-      <p>
-        Found {result.primes.length} primes in {result.ms} ms. The last one is{" "}
-        {result.primes.at(-1)}.
+      <p id="prime-result" role="status">
+        {valid
+          ? `Found ${result.primes.length} primes in ${result.ms} ms. The last one is ${result.primes.at(-1)}.`
+          : `Enter a whole number from 2 to ${MAX_LIMIT}.`}
       </p>
       <button onClick={() => setDarkBox(!darkBox)}>Toggle box color</button>
       <p className="muted">Toggling the color re-renders without recounting.</p>

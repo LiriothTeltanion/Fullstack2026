@@ -3,7 +3,11 @@ import ThemeToggle from "./components/ThemeToggle";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 
 export default function App() {
-  const [name, setName] = useLocalStorage("gold-name", "");
+  const [name, setName] = useLocalStorage(
+    "gold-name",
+    "",
+    (saved): saved is string => typeof saved === "string"
+  );
 
   return (
     <main>

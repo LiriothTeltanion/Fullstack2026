@@ -14,6 +14,38 @@ Set VITE_GOOGLE_MAPS_API_KEY to your own browser-restricted Maps JavaScript API 
 
 A missing key leaves the coordinate form usable and explains the configuration. Invalid coordinates, SDK loading and authorization errors have visible states.
 
+## Coordinate validation and recovery
+
+Latitude accepts -90 through 90 and longitude accepts -180 through 180, including
+zero and both endpoints. Ordinary decimal/scientific numeric text is supported.
+The shared parser rejects blank, non-finite, out-of-range or nonnumeric values;
+booleans, arrays and null cannot silently become a different location.
+
+Submitting an invalid field focuses it, marks it as invalid and associates it
+with the announced error. Editing that field clears its previous error, and
+Enter submits the corrected coordinates. The last valid location and Google
+Maps link stay unchanged until both values are valid. These form interactions
+also work without a Maps key.
+
+## Reproducible checks
+
+```sh
+npm test
+npm run build
+```
+
+The native Node tests cover geographic boundaries, decimal/scientific input,
+missing fields, non-finite values and unwanted JavaScript coercion. They require
+no credentials or service calls. To try keyboard recovery, submit latitude 91,
+correct it to -90, clear longitude, then enter -180 and press Enter. Focus and
+the associated error identify each field to correct; the selected location
+updates only after the final valid submission.
+
+The production form was checked in Edge at 320, 390 and 1440 px with external
+requests blocked. This verifies the no-key form and navigation-link behavior;
+Google's live SDK, tiles, key authorization and quotas require a configured key
+and are separate integration checks.
+
 ## 🎯 The challenge
 
 [coordinates.js](src/coordinates.js) validates finite latitude -90..90 and longitude -180..180. [MapCanvas.jsx](src/MapCanvas.jsx) loads Google Maps, centers it and renders MarkerF. The initial location is the public city center of Beer Sheva.

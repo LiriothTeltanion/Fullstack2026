@@ -1,11 +1,17 @@
 import { useEffect, useState } from "react";
 
 // Exercise 3: a generic hook. T is inferred from the initial value.
-export function useLocalStorage<T>(key: string, initialValue: T) {
+export function useLocalStorage<T>(
+  key: string,
+  initialValue: T,
+  isValid: (saved: unknown) => saved is T
+) {
   const [value, setValue] = useState<T>(() => {
     try {
       const saved = localStorage.getItem(key);
-      return saved === null ? initialValue : (JSON.parse(saved) as T);
+      if (saved === null) return initialValue;
+      const parsed: unknown = JSON.parse(saved);
+      return isValid(parsed) ? parsed : initialValue;
     } catch {
       return initialValue;
     }

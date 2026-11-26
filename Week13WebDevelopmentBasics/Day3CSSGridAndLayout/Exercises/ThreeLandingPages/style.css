@@ -386,9 +386,10 @@ main {
   }
 
   .travel-hero,
-  .trip {
+  .trip:nth-of-type(n) {
+    /* Match the desktop placement specificity so every card uses column one. */
     grid-row: auto;
-    grid-column: auto;
+    grid-column: 1;
   }
 
   .travel-hero {

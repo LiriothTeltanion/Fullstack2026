@@ -25,6 +25,18 @@ Vite prints a local address (usually `http://localhost:5173`); I open it in the 
 2. **React.memo and useCallback**: two memoized `CounterButton`s count their own renders. Typing in the input re-renders the parent, and only the button whose `onClick` is not wrapped in `useCallback` renders again.
 3. **useDebounce**: `useDebounce(value, 500)` returns the value only after it stops changing. `DebouncedSearch` counts its requests, so I can see one request per pause instead of one per key.
 
+Try an empty, fractional or negative limit, then enter `10`. The prime finder keeps the input editable and reports four primes, ending in seven. In the search box, changing the query cancels the previous request. A failed request offers a retry with the same search text, while a successful empty result displays “No matching users.”
+
+The browser regression checks use a local response fixture for the search service. From the repository root:
+
+```sh
+npm --prefix Week8React/Day3ReactAdvancedHooks/Exercises/ExercisesXPNinja install --no-package-lock
+cd tests/browser/react-state
+npm ci
+npx playwright install chromium
+npm test -- --config performance-hooks.config.js
+```
+
 ## 🧠 What I learned
 
 - `useMemo` only helps when the work is heavy and the dependencies change less often than the render

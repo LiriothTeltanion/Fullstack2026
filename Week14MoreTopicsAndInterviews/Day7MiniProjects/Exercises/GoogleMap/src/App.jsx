@@ -1,23 +1,27 @@
-import { useState } from "react";
+import { useId, useRef, useState } from "react";
 import MapCanvas from "./MapCanvas.jsx";
-import { parseCoordinates } from "./coordinates.js";
+import { coordinateFields, parseCoordinates } from "./coordinates.js";
 
 const cityCenter = { lat: 31.2518, lng: 34.7913 };
 export default function App() {
   const [latitude, setLatitude] = useState(String(cityCenter.lat));
   const [longitude, setLongitude] = useState(String(cityCenter.lng));
   const [center, setCenter] = useState(cityCenter);
-  const [error, setError] = useState("");
+  const [error, setError] = useState(null);
+  const formId = useId();
+  const inputs = useRef({});
+  const errorId = `${formId}-error`;
   const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY?.trim() ?? "";
   const configured = apiKey && !apiKey.startsWith("replace-");
   function handleSubmit(event) {
     event.preventDefault();
     const result = parseCoordinates(latitude, longitude);
     if (result.error) {
-      setError(result.error);
+      setError(result);
+      inputs.current[result.field]?.focus();
       return;
     }
-    setError("");
+    setError(null);
     setCenter(result);
   }
 
@@ -28,36 +32,36 @@ export default function App() {
         Choose latitude and longitude to center the map and move its marker.
       </p>
       <form className="row g-3 mb-3" onSubmit={handleSubmit} noValidate>
-        <div className="col-md-5">
-          <label htmlFor="latitude" className="form-label">
-            Latitude
-          </label>
-          <input
-            id="latitude"
-            className="form-control"
-            type="number"
-            step="any"
-            min="-90"
-            max="90"
-            value={latitude}
-            onChange={event => setLatitude(event.target.value)}
-          />
-        </div>
-        <div className="col-md-5">
-          <label htmlFor="longitude" className="form-label">
-            Longitude
-          </label>
-          <input
-            id="longitude"
-            className="form-control"
-            type="number"
-            step="any"
-            min="-180"
-            max="180"
-            value={longitude}
-            onChange={event => setLongitude(event.target.value)}
-          />
-        </div>
+        {coordinateFields.map(({ name, label, min, max }) => {
+          const invalid = error?.field === name;
+          return (
+            <div className="col-md-5" key={name}>
+              <label htmlFor={`${formId}-${name}`} className="form-label">
+                {label}
+              </label>
+              <input
+                ref={element => {
+                  inputs.current[name] = element;
+                }}
+                id={`${formId}-${name}`}
+                name={name}
+                className={`form-control${invalid ? " is-invalid" : ""}`}
+                type="number"
+                step="any"
+                min={min}
+                max={max}
+                required
+                aria-invalid={invalid || undefined}
+                aria-describedby={invalid ? errorId : undefined}
+                value={name === "latitude" ? latitude : longitude}
+                onChange={event => {
+                  (name === "latitude" ? setLatitude : setLongitude)(event.target.value);
+                  if (invalid) setError(null);
+                }}
+              />
+            </div>
+          );
+        })}
         <div className="col-md-2 align-self-end">
           <button type="submit" className="btn btn-primary w-100">
             Show location
@@ -65,8 +69,8 @@ export default function App() {
         </div>
       </form>
       {error && (
-        <p role="alert" className="alert alert-danger">
-          {error}
+        <p id={errorId} role="alert" className="alert alert-danger">
+          {error.error}
         </p>
       )}
       <p role="status">

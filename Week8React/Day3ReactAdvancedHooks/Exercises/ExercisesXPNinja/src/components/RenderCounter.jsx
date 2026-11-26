@@ -24,6 +24,7 @@ function RenderCounter() {
     <div>
       <p>Count: {count}</p>
       <input
+        aria-label="Parent render input"
         placeholder="Type here to re-render the parent"
         value={text}
         onChange={event => setText(event.target.value)}
