@@ -23,7 +23,14 @@ export default function SetListPreview() {
     <section className="card">
       <h2>Set list preview</h2>
       <p>Open the missing set list to see how the preview recovers from a render error.</p>
-      <button type="button" onClick={() => setUnavailable(true)}>
+      <button
+        type="button"
+        onClick={event => {
+          // A native dialog restores the element focused when it opened.
+          event.currentTarget.focus({ preventScroll: true });
+          setUnavailable(true);
+        }}
+      >
         Open missing set list
       </button>
       {/* A fresh boundary retries the preview with valid data after dismissal. */}

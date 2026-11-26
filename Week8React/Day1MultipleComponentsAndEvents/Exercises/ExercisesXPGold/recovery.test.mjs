@@ -29,7 +29,13 @@ for (const dismiss of ["button", "Escape"]) {
       const recover = dialog.getByRole("button", { name: "Return to rehearsal" });
       // A second cycle also exercises remounting after a successful recovery.
       for (let attempt = 0; attempt < 2; attempt += 1) {
-        await opener.click();
+        if (attempt === 0) {
+          await opener.click();
+        } else {
+          // Assistive activation can dispatch a click without moving DOM focus.
+          await page.getByRole("button", { name: /Apple/ }).focus();
+          await opener.evaluate(element => element.click());
+        }
         await dialog.waitFor();
         assert.ok(await dialog.evaluate(element => element.matches(":modal")));
         assert.ok(await recover.evaluate(element => element === document.activeElement));
