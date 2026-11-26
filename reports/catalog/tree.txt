@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-26
-Base HEAD: 7f04d10ec0cad029a7586bf6b385a20b89509544
-Source-index SHA-256 (generated outputs excluded): 12e5b4b7fc1a37779306c02ce4065a57c2df180e49c9b822d106b4d6b69ed4bc
-Indexed files: 3113
+Base HEAD: b9d710ef08184291f7e3a915009d40157a80c749
+Source-index SHA-256 (generated outputs excluded): eb701fd5d7cd5e158e8e128e6e4153139457c287d30486b9ced7a640d4c5a69d
+Indexed files: 3123
 
 .
 ├── .github
@@ -788,6 +788,7 @@ Indexed files: 3113
 │   │   │   │   │   ├── db
 │   │   │   │   │   │   ├── migrations
 │   │   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   │   ├── story-comment-lifecycle-hosted.sql
 │   │   │   │   │   │   │   └── story-comments-hosted.sql
 │   │   │   │   │   │   ├── init.js
 │   │   │   │   │   │   ├── README.md
@@ -2711,10 +2712,21 @@ Indexed files: 3113
 │   │   │   │   ├── middleware
 │   │   │   │   │   ├── rateLimit.js
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── public
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   ├── greeting-validation.js
+│   │   │   │   │   ├── index.html
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── style.css
 │   │   │   │   ├── routes
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   └── users.js
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── greeting.test.js
+│   │   │   │   │   └── README.md
 │   │   │   │   ├── .env.example
+│   │   │   │   ├── app.js
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── server.js

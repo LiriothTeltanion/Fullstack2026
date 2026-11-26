@@ -102,10 +102,18 @@ export const api = {
   updateStory: (id: number, changes: Partial<Pick<Story, "title" | "content">>) =>
     request<{ story: Story }>(`/stories/${id}`, "PATCH", changes),
   deleteStory: (id: number) => request<void>(`/stories/${id}`, "DELETE"),
+  commentCapabilities: () =>
+    request<{ edit: boolean; delete: boolean }>("/stories/comment-capabilities"),
   comments: (storyId: number) =>
     request<{ comments: StoryComment[] }>(`/stories/${storyId}/comments`),
   addComment: (storyId: number, body: string) =>
     request<{ comment: StoryComment }>(`/stories/${storyId}/comments`, "POST", { body }),
+  updateComment: (storyId: number, commentId: number, body: string) =>
+    request<{ comment: StoryComment }>(`/stories/${storyId}/comments/${commentId}`, "PATCH", {
+      body,
+    }),
+  deleteComment: (storyId: number, commentId: number) =>
+    request<void>(`/stories/${storyId}/comments/${commentId}`, "DELETE"),
   addContributor: (id: number, username: string) =>
     request<{ story: Story }>(`/stories/${id}/contributors`, "POST", { username }),
 };

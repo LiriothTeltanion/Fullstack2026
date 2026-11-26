@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Choose an emoji and make a friendly greeting with Express." />
+    <title>Hello, you · Emoji greeting</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <span class="hello-mark" aria-hidden="true">👋</span>
+        <a class="api-link" href="/users">Explore the users API</a>
+      </header>
+      <h1>A little hello.<br />A little personality.</h1>
+      <p class="intro">Add your name, pick an emoji, and let the server say hello.</p>
+
+      <form id="greeting-form" method="post" action="/greeting">
+        <label for="name" class="field-label">Your name</label>
+        <input
+          id="name"
+          name="name"
+          autocomplete="given-name"
+          maxlength="60"
+          required
+          aria-describedby="name-hint"
+        />
+        <p class="hint" id="name-hint">
+          Up to 60 characters. Accented names and Hebrew are welcome.
+        </p>
+
+        <fieldset>
+          <legend>Choose your greeting emoji</legend>
+          <div class="emoji-options">
+            <label
+              ><input type="radio" name="emoji" value="👋" checked required /><span
+                aria-hidden="true"
+                >👋</span
+              >Wave</label
+            >
+            <label
+              ><input type="radio" name="emoji" value="😊" /><span aria-hidden="true">😊</span
+              >Smile</label
+            >
+            <label
+              ><input type="radio" name="emoji" value="☀️" /><span aria-hidden="true">☀️</span
+              >Sunshine</label
+            >
+            <label
+              ><input type="radio" name="emoji" value="🎉" /><span aria-hidden="true">🎉</span
+              >Celebrate</label
+            >
+            <label
+              ><input type="radio" name="emoji" value="🚀" /><span aria-hidden="true">🚀</span
+              >Rocket</label
+            >
+            <label
+              ><input type="radio" name="emoji" value="💙" /><span aria-hidden="true">💙</span>Blue
+              heart</label
+            >
+          </div>
+        </fieldset>
+
+        <p id="error" class="error" role="alert"></p>
+        <div class="actions">
+          <button type="submit">Make my greeting</button>
+          <button type="reset" class="secondary">Start again</button>
+        </div>
+        <p id="greeting" class="greeting" role="status" aria-live="polite" dir="auto"></p>
+      </form>
+      <footer>
+        Your name is used for this response only. Nothing is saved or sent to another service.
+      </footer>
+    </main>
+  </body>
+</html>

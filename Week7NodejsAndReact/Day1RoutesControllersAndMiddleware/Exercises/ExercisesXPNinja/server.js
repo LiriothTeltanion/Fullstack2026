@@ -1,16 +1,13 @@
-// Exercises XP Ninja: my own rate limiter, query filters and router.param().
-import express from "express";
-import rateLimit from "./middleware/rateLimit.js";
-import usersRouter from "./routes/users.js";
+// Start the greeting form and the original users API through the normal entry point.
+import { createApp } from "./app.js";
 
-const app = express();
-const PORT = process.env.PORT || 3000;
+const app = createApp();
+const PORT = Number(process.env.PORT ?? 3000);
 
-// Exercise 1: at most 5 requests per IP every 10 seconds.
-app.use(rateLimit({ windowMs: 10_000, max: 5 }));
+if (!Number.isInteger(PORT) || PORT < 0 || PORT > 65535) {
+  throw new Error("PORT must be an integer from 0 to 65535.");
+}
 
-app.use("/users", usersRouter);
-
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+const server = app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${server.address().port}`);
 });

@@ -88,3 +88,93 @@ export async function createComment({ storyId, authorId, body }) {
     throw error;
   }
 }
+
+/** Look up a comment within its story; a comment ID never selects another discussion. */
+export async function findComment(storyId, commentId) {
+  if (!Number.isSafeInteger(commentId) || commentId < 1) return undefined;
+  if (!usePostgres) {
+    const comment = db.comments.find(item => item.storyId === storyId && item.id === commentId);
+    return (
+      comment &&
+      toPublicComment({
+        ...comment,
+        authorUsername: db.users.find(user => user.id === comment.authorId)?.username ?? "unknown",
+      })
+    );
+  }
+  const result = await pool.query(
+    `SELECT c.id, c.story_id, c.author_id, c.body, c.created_at,
+            u.username AS author_username
+     FROM ${tables.story_comments} c JOIN ${tables.users} u ON u.id = c.author_id
+     WHERE c.story_id = $1 AND c.id = $2`,
+    [storyId, commentId]
+  );
+  return result.rows[0] && toPublicComment(fromRow(result.rows[0]));
+}
+
+/** Recheck identity in the write itself, including after a concurrent deletion. */
+export async function updateComment({ storyId, commentId, userId, body }) {
+  if (!usePostgres) {
+    const comment = db.comments.find(
+      item => item.storyId === storyId && item.id === commentId && item.authorId === userId
+    );
+    if (!comment) return undefined;
+    comment.body = body;
+    return findComment(storyId, commentId);
+  }
+  const result = await pool.query(
+    `WITH changed AS (
+       UPDATE ${tables.story_comments} SET body = $4
+       WHERE story_id = $1 AND id = $2 AND author_id = $3
+       RETURNING id, story_id, author_id, body, created_at
+     )
+     SELECT c.id, c.story_id, c.author_id, c.body, c.created_at,
+            u.username AS author_username
+     FROM changed c JOIN ${tables.users} u ON u.id = c.author_id`,
+    [storyId, commentId, userId, body]
+  );
+  return result.rows[0] && toPublicComment(fromRow(result.rows[0]));
+}
+
+/** Story authors may moderate by deleting; collaborator status grants no comment rights. */
+export async function deleteComment({ storyId, commentId, userId }) {
+  if (!usePostgres) {
+    const index = db.comments.findIndex(
+      item =>
+        item.storyId === storyId &&
+        item.id === commentId &&
+        (item.authorId === userId ||
+          db.stories.some(story => story.id === storyId && story.authorId === userId))
+    );
+    if (index < 0) return false;
+    db.comments.splice(index, 1);
+    return true;
+  }
+  const result = await pool.query(
+    `DELETE FROM ${tables.story_comments} c
+     WHERE c.story_id = $1 AND c.id = $2
+       AND (c.author_id = $3 OR EXISTS (
+         SELECT 1 FROM ${tables.stories} s WHERE s.id = c.story_id AND s.author_id = $3
+       )) RETURNING c.id`,
+    [storyId, commentId, userId]
+  );
+  return result.rows.length > 0;
+}
+
+/** One small uncached query uses the connection's effective role, not an env flag.
+ * Rechecking lets a database-owner grant take effect without another deployment.
+ */
+export async function commentCapabilities() {
+  if (!usePostgres) return { edit: true, delete: true };
+  try {
+    const result = await pool.query(
+      `SELECT has_column_privilege(current_user, $1, 'body', 'UPDATE') AS edit,
+              has_table_privilege(current_user, $1, 'DELETE') AS delete`,
+      [tables.story_comments]
+    );
+    return { edit: result.rows[0]?.edit === true, delete: result.rows[0]?.delete === true };
+  } catch {
+    // Capability discovery must fail closed, without leaking database details.
+    return { edit: false, delete: false };
+  }
+}
