@@ -5,124 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="My first HTML page: a short page about me and what I'm learning."
+      content="An introduction to the domestic cat and the lion, with a comparison of their characteristics and behavior."
     />
-    <title>My First HTML Page</title>
+    <title>The domestic cat and the lion</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="cats.css" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-
-    <header class="site-header">
-      <p class="eyebrow">Week 13 · Day 1</p>
-      <h1>Hi, I'm Kevin</h1>
-      <p class="lead">This is my first page written by hand, from the doctype to the footer.</p>
+    <header class="site-header" id="top" tabindex="-1">
+      <p class="eyebrow">Cats, close to home and in the wild</p>
+      <h1>The domestic cat and the lion</h1>
+      <p class="lead">Two members of the cat family with different ways of life.</p>
+      <nav aria-label="On this page">
+        <ul>
+          <li><a href="#domestic-cat">The domestic cat</a></li>
+          <li><a href="#lion">Jump to the lion</a></li>
+          <li><a href="#comparison">Compare them</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <main id="main">
-      <section aria-labelledby="about-title">
-        <h2 id="about-title">About me</h2>
-        <figure class="avatar">
-          <!-- Inline SVG, so the page works without any image file -->
-          <svg viewBox="0 0 120 120" role="img" aria-labelledby="avatar-title">
-            <title id="avatar-title">A round badge with my initials, KC</title>
-            <circle cx="60" cy="60" r="56" fill="#1d4ed8" />
-            <text
-              x="60"
-              y="74"
-              text-anchor="middle"
-              font-size="40"
-              font-family="Georgia, serif"
-              fill="#fff"
-            >
-              KC
-            </text>
-          </svg>
-          <figcaption>My initials stand in for a photo.</figcaption>
-        </figure>
+    <main id="main" tabindex="-1">
+      <section id="domestic-cat" aria-labelledby="cat-title" tabindex="-1">
+        <h2 id="cat-title">The domestic cat</h2>
         <p>
-          I'm a student in the <strong>Developers Institute</strong> full-stack bootcamp. I started
-          with Python, moved on to JavaScript and the DOM, and now I'm going back to the basics of
-          <em>HTML</em> and <em>CSS</em>.
+          The domestic cat is a small member of the cat family that lives alongside people. It may
+          spend its day exploring, sleeping, grooming and playing. Even a well-fed cat can show
+          hunting behaviors such as stalking and pouncing.
         </p>
-        <p>
-          I speak Spanish, English and Hebrew, so I care about pages that work in more than one
-          language.
-        </p>
-      </section>
-
-      <section aria-labelledby="learned-title">
-        <h2 id="learned-title">What I've learned so far</h2>
-        <ol>
-          <li>Python: functions, classes and files</li>
-          <li>JavaScript: the DOM, events and <code>fetch</code></li>
-          <li>Databases with SQL and a first Node.js server</li>
-          <li>React components and state</li>
-        </ol>
-      </section>
-
-      <section aria-labelledby="music-title">
-        <h2 id="music-title">Music I code to</h2>
+        <h3>Characteristics</h3>
         <ul>
-          <li>Synthwave</li>
-          <li>Post-hardcore</li>
-          <li>Blackgaze</li>
+          <li>Whiskers help a cat sense nearby objects.</li>
+          <li>Most claws can retract when they are not being used.</li>
+          <li>Sharp teeth and a flexible body help it catch small prey.</li>
         </ul>
-        <blockquote>
-          <p>Good structure first, then style.</p>
-          <footer>My own rule for this week</footer>
-        </blockquote>
+        <h3>Behavior</h3>
+        <p>
+          Cats communicate through body posture, scent and sounds. An upright tail, flattened ears
+          or a hiss can each convey something different. Many cats hunt on their own, while cats
+          living near one another may form social groups.
+        </p>
+        <p class="section-link"><a href="#lion">Meet a larger relative, the lion</a></p>
       </section>
 
-      <section aria-labelledby="tags-title">
-        <h2 id="tags-title">HTML tags on this page</h2>
+      <section id="lion" aria-labelledby="lion-title" tabindex="-1">
+        <h2 id="lion-title">The lion</h2>
+        <p>
+          The lion is a large wild cat. Lions share familiar feline behaviors, including grooming,
+          resting and stalking prey, but their size and social life set them apart from the domestic
+          cats that live with people.
+        </p>
+        <h3>Characteristics</h3>
+        <ul>
+          <li>A muscular body and powerful jaws help a lion tackle large prey.</li>
+          <li>Adult males often have a mane around the head and neck.</li>
+          <li>Its tawny coat blends into dry grass and open landscapes.</li>
+        </ul>
+        <h3>Behavior</h3>
+        <p>
+          Lions often live in groups called prides. Pride members may rest together, groom one
+          another and cooperate when hunting. Roaring helps them communicate over longer distances
+          and signal their presence to other lions.
+        </p>
+        <p class="section-link"><a href="#comparison">See their similarities and differences</a></p>
+      </section>
+
+      <section id="comparison" aria-labelledby="comparison-title" tabindex="-1">
+        <h2 id="comparison-title">How they compare</h2>
         <table>
           <caption>
-            A few of the tags I used and why
+            Characteristics and behavior of the domestic cat and lion
           </caption>
           <thead>
             <tr>
-              <th scope="col">Tag</th>
-              <th scope="col">What it is for</th>
+              <th scope="col">Trait</th>
+              <th scope="col">Domestic cat</th>
+              <th scope="col">Lion</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><code>&lt;header&gt;</code></td>
-              <td>The title area at the top</td>
+              <th scope="row">Size</th>
+              <td>Small enough to live comfortably in many homes.</td>
+              <td>A large, muscular wild cat.</td>
             </tr>
             <tr>
-              <td><code>&lt;section&gt;</code></td>
-              <td>A group of content with its own heading</td>
+              <th scope="row">Habitat</th>
+              <td>Homes and areas close to people.</td>
+              <td>Wild habitats including grasslands and open woodland.</td>
             </tr>
             <tr>
-              <td><code>&lt;figure&gt;</code></td>
-              <td>An image with a caption</td>
+              <th scope="row">Hunting</th>
+              <td>Usually hunts small prey alone.</td>
+              <td>Can hunt large prey alone or with other lions.</td>
             </tr>
             <tr>
-              <td><code>&lt;table&gt;</code></td>
-              <td>Data in rows and columns, like this one</td>
+              <th scope="row">Social life</th>
+              <td>Varies between independent living and social groups.</td>
+              <td>Often lives with other lions in a pride.</td>
+            </tr>
+            <tr>
+              <th scope="row">Signals</th>
+              <td>Uses meows, purrs, scent and body language.</td>
+              <td>Uses roars, other calls, scent and body language.</td>
             </tr>
           </tbody>
         </table>
       </section>
-
-      <section aria-labelledby="links-title">
-        <h2 id="links-title">Find me</h2>
-        <p>
-          All my bootcamp code lives in my
-          <a
-            href="https://github.com/LiriothTeltanion/Fullstack2026"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Fullstack2026 repository</a
-          >.
-        </p>
-      </section>
     </main>
 
     <footer class="site-footer">
-      <p>&copy; 2026 Kevin Cusnir</p>
+      <a href="#top">Back to the top</a>
+      <a href="about.html">Read the original About me page</a>
     </footer>
   </body>
 </html>

@@ -2,8 +2,8 @@
 
 > Regenerated from the exact Git index on `2026-11-26` by `tools/refresh_structure_catalogs.py`.
 
-- Base HEAD: `fc4233822bb18cab28b93a5df1cfd5c8e8969b54`
-- Source-index fingerprint: `sha256:ac0744229662eefb4d9ad9c122f3c14f2b1965487ec65d9505f81b0545694453` (generated outputs excluded)
+- Base HEAD: `d87c63847b368d693196c99c66866c383d898f36`
+- Source-index fingerprint: `sha256:520a1cf08fef5e0cfe28252e97b1e1ce393bf06756a77b965279a729ab335d6d` (generated outputs excluded)
 
 This catalog proves repository presence and path integrity only. It does not prove that an exercise runs, that Kevin can explain it, or that it is mastered or portfolio-ready.
 
@@ -28,7 +28,7 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week10AdvancedTypeScriptAndAuthentication/RemoteLearningAuthAndTypeScript/Exercises/AuthenticationProject` | Exercise | CSS \| HTML \| JSON \| JavaScript \| TypeScript | 34 | present (canonical) | [source](<../../Week10AdvancedTypeScriptAndAuthentication/RemoteLearningAuthAndTypeScript/Exercises/AuthenticationProject>); runtime unverified |
 | `Week12FinalProject/Day1CapstoneSubmission/CapstoneProject` | Exercise | CSS \| HTML \| JSON \| JavaScript \| SQL | 32 | present (canonical) | [source](<../../Week12FinalProject/Day1CapstoneSubmission/CapstoneProject>); runtime unverified |
 | `Week13WebDevelopmentBasics/Day1HTMLAndCSS/DailyChallenge/Avengers` | Daily Challenge | CSS \| HTML | 3 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day1HTMLAndCSS/DailyChallenge/Avengers>); runtime unverified |
-| `Week13WebDevelopmentBasics/Day1HTMLAndCSS/Exercises/FirstHTMLPage` | Exercise | CSS \| HTML | 3 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day1HTMLAndCSS/Exercises/FirstHTMLPage>); runtime unverified |
+| `Week13WebDevelopmentBasics/Day1HTMLAndCSS/Exercises/FirstHTMLPage` | Exercise | CSS \| HTML | 6 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day1HTMLAndCSS/Exercises/FirstHTMLPage>); runtime unverified |
 | `Week13WebDevelopmentBasics/Day1HTMLAndCSS/Exercises/LandingPage` | Exercise | CSS \| HTML | 3 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day1HTMLAndCSS/Exercises/LandingPage>); runtime unverified |
 | `Week13WebDevelopmentBasics/Day2GitAndGitHub/DailyChallenge/CommandLine` | Daily Challenge | CSS \| HTML | 4 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day2GitAndGitHub/DailyChallenge/CommandLine>); runtime unverified |
 | `Week13WebDevelopmentBasics/Day2GitAndGitHub/DailyChallenge/MediaQueries` | Daily Challenge | CSS \| HTML | 6 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day2GitAndGitHub/DailyChallenge/MediaQueries>); runtime unverified |

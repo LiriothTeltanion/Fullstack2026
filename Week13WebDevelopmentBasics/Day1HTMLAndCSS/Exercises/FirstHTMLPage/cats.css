@@ -1,0 +1,110 @@
+/* The article extends the original paper theme without changing the About page. */
+:root {
+  --accent: #245440;
+}
+
+.site-header {
+  padding-top: clamp(2rem, 7vw, 4rem);
+}
+
+.site-header h1 {
+  max-width: 15ch;
+  font-weight: 400;
+  line-height: 1.15;
+  margin-block: 0.6rem 1rem;
+}
+
+.site-header nav {
+  margin-top: 1.5rem;
+  font-family: system-ui, sans-serif;
+  font-size: 0.95rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.2rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav a,
+.site-footer a {
+  display: inline-block;
+  padding-block: 0.5rem;
+}
+
+h3 {
+  font-family: system-ui, sans-serif;
+  font-size: 0.95rem;
+  margin-block: 1.5rem 0.5rem;
+}
+
+section {
+  padding: clamp(0.9rem, 4vw, 1.5rem);
+  scroll-margin-top: 1rem;
+}
+
+section:target {
+  border-color: var(--accent);
+}
+
+section:focus-visible,
+main:focus-visible,
+header:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+section p:last-child {
+  margin-bottom: 0;
+}
+
+.section-link {
+  margin-top: 1.5rem;
+}
+
+table {
+  table-layout: fixed;
+  font-size: clamp(0.875rem, 2.2vw, 1rem);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+caption {
+  font-size: 0.95rem;
+  padding-bottom: 1rem;
+}
+
+th,
+td {
+  padding: 0.7rem 0.4rem;
+  vertical-align: top;
+}
+
+thead th:first-child {
+  width: 24%;
+}
+
+thead th {
+  border-bottom: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+tbody th {
+  font-size: 1em;
+}
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+}
+
+@media (max-width: 480px) {
+  thead th:first-child {
+    width: 28%;
+  }
+}
