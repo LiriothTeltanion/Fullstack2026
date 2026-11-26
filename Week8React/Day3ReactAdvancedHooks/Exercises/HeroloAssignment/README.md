@@ -10,6 +10,10 @@
 
 My take on the Herolo weather home assignment: search a city, see the current weather and a 5-day forecast, save favorites, and switch between °C/°F and light/dark.
 
+[Open the live weather app](https://fullstack2026-herolo.onrender.com/) · [Browse the exercise source](https://github.com/LiriothTeltanion/Fullstack2026/tree/main/Week8React/Day3ReactAdvancedHooks/Exercises/HeroloAssignment)
+
+The demo opens on Tel Aviv using Open-Meteo. Try adding the city to Favorites, reloading the page and opening its forecast again. The AccuWeather option requires an active key on the host.
+
 The original no-key mode uses Open-Meteo, so it still runs straight after `npm install`. The provider selector also supports AccuWeather through a same-origin Node proxy: its account key stays on the server, never in the browser bundle. Both modes keep the existing city search, favorites, unit switch and theme.
 
 ## ▶️ How to run
