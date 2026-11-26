@@ -164,7 +164,7 @@ test("class meme generator preserves the initial image, edits overlays and handl
           await mount();
           await reply(data, ok);
           assert.equal(image().src, initial);
-          assert.equal(document.querySelector("button").disabled, true);
+          assert.equal(document.querySelector("button").textContent, "Retry templates");
           assert.ok(document.querySelector('[role="alert"]'));
           await fill("topText", "Still editable");
           assert.equal(document.querySelector(".meme h2").textContent, "Still editable");
@@ -176,13 +176,45 @@ test("class meme generator preserves the initial image, edits overlays and handl
       await act(async () => rejectRequest(new Error("Network unavailable")));
       assert.match(document.querySelector('[role="alert"]').textContent, /Network unavailable/);
       assert.equal(image().src, initial);
-      assert.equal(document.querySelector("button").disabled, true);
+      assert.equal(document.querySelector("button").textContent, "Retry templates");
       await fill("bottomText", "Editable during network failure");
       assert.equal(
         document.querySelectorAll(".meme h2")[1].textContent,
         "Editable during network failure"
       );
     });
+    await t.test(
+      "retry preserves the draft and focus and requests templates only once",
+      async () => {
+        await mount();
+        await reply({}, false);
+        await fill("topText", "Keep my caption");
+        await fill("fontSize", "52");
+        const action = document.querySelector("button");
+        assert.equal(action.textContent, "Retry templates");
+        action.focus();
+        const previousCount = requests.length;
+        await act(async () => {
+          action.click();
+          action.click();
+        });
+        assert.equal(requests.length, previousCount + 1);
+        assert.equal(action.getAttribute("aria-disabled"), "true");
+        assert.equal(document.activeElement, action);
+        await reply({
+          success: true,
+          data: { memes: [{ url: "https://example.com/recovered.jpg" }] },
+        });
+        assert.equal(document.activeElement, action);
+        assert.equal(action.textContent, "Gen");
+        assert.equal(document.querySelector('[role="alert"]'), null);
+        assert.equal(image().src, initial);
+        await act(async () => action.click());
+        assert.equal(image().src, "https://example.com/recovered.jpg");
+        assert.equal(document.querySelector(".meme h2").textContent, "Keep my caption");
+        assert.equal(document.querySelector('input[name="fontSize"]').value, "52");
+      }
+    );
     await t.test("unmount aborts the request and ignores a late reply", async () => {
       await mount();
       const request = requests.at(-1);

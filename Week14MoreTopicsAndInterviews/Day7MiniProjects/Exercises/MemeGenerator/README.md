@@ -70,6 +70,11 @@ claim to keep those photos available offline.
 
 The initial `randomImage` is `https://i.imgflip.com/1bij.jpg`. Loading templates preserves it until the **Gen** button is pressed. HTTP errors, invalid/empty collections and network failures leave this image and its editable text available; image load failures are announced separately. The request is aborted on unmount. Generation is disabled until templates are available.
 
+If the template request fails, the **Gen** button changes to **Retry templates**.
+Press it to reload the list in place. Both captions, their size and color stay
+as you set them. Once loading succeeds, the same button becomes **Gen** again
+and keeps keyboard focus. The preview changes when you choose to generate.
+
 ## 🧠 What I learned
 
 - One change handler can serve every input when each input's `name` matches a key in the state object
@@ -78,7 +83,10 @@ The initial `randomImage` is `https://i.imgflip.com/1bij.jpg`. Loading templates
 - I wrapped the image and texts in their own `.meme-frame` so the caption under the image doesn't push the bottom text up
 - Downloading the finished meme would need a canvas, and the Imgflip images may block that, so this version only previews it
 
-## Verification · 2026-11-25
+## Verification · 2026-11-26
+
+The retry test covers a double click during loading, keyboard focus after
+recovery and the edited caption and size on the newly generated template.
 
 `npm test` mounts the real components in a DOM environment with API fixtures to verify the initial image remains unchanged after loading, live text/style controls, random generation, error feedback and lifecycle cleanup. `npm run build` creates the production bundle. Imgflip remains an external service; the application reports its failure rather than claiming offline image storage.
 
