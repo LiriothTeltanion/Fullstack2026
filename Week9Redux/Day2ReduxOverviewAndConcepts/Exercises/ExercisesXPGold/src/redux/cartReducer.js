@@ -18,6 +18,7 @@ export default function cartReducer(state = [], action) {
     case ADD_ITEM: {
       const existing = state.find(item => item.id === action.payload.id);
       if (existing) {
+        if (existing.quantity >= Number.MAX_SAFE_INTEGER) return state;
         return state.map(item =>
           item.id === existing.id ? { ...item, quantity: item.quantity + 1 } : item
         );
@@ -28,6 +29,10 @@ export default function cartReducer(state = [], action) {
       return state.filter(item => item.id !== action.payload);
     case SET_QUANTITY: {
       const { id, quantity } = action.payload;
+      // Quantity input is a draft until confirmed; invalid values must not make
+      // fractional/NaN totals or accidentally remove an existing cart line.
+      if (!Number.isSafeInteger(quantity)) return state;
+      if (!state.some(item => item.id === id)) return state;
       if (quantity < 1) {
         return state.filter(item => item.id !== id);
       }

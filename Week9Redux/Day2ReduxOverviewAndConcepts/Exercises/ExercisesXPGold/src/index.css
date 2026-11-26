@@ -121,6 +121,22 @@ ul.plain li {
   color: var(--danger);
 }
 
+.quantity-editor input {
+  width: 5rem;
+}
+.quantity-editor .error {
+  max-width: 24ch;
+  margin: 0.4rem 0;
+}
+@media (max-width: 540px) {
+  ul.plain li {
+    flex-wrap: wrap;
+  }
+  ul.plain li > .row {
+    width: 100%;
+  }
+}
+
 .big {
   font-size: 2.5rem;
   font-weight: 700;
