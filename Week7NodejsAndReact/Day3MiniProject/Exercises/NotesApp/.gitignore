@@ -1,0 +1,4 @@
+# Local terminal notes and the atomic-write/lock artifacts they may create.
+data/cli-notes.json
+data/cli-notes.json.lock
+data/cli-notes.json.tmp-*
