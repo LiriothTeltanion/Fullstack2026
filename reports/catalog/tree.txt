@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-26
-Base HEAD: a7234c84ef03ad22077d3753ee76a9c827a74095
-Source-index SHA-256 (generated outputs excluded): 9149ab39433d96b2353a8f0a024ddac05e033b2e29f805f7497ad3860cb7216f
-Indexed files: 2956
+Base HEAD: 08af7a28024462267444e32b08168deee1c418ef
+Source-index SHA-256 (generated outputs excluded): 7a8b5bfe392492acec9322255cf7b2162e4ac5be38a25d5fab88c738bad457f0
+Indexed files: 2968
 
 .
 ├── .github
@@ -2472,6 +2472,13 @@ Indexed files: 2956
 │   │   │   │   └── server.js
 │   │   │   └── README.md
 │   │   ├── Exercises
+│   │   │   ├── CreateYourFirstHttpServer
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── http.test.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── simple-server.js
 │   │   │   ├── ExercisesXP
 │   │   │   │   ├── data
 │   │   │   │   │   ├── dataService.js
@@ -2734,7 +2741,15 @@ Indexed files: 2956
 │   │   │   │   ├── routes
 │   │   │   │   │   ├── notes.js
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── notes-cli.test.js
+│   │   │   │   │   ├── offline-guard.cjs
+│   │   │   │   │   └── README.md
 │   │   │   │   ├── .env.example
+│   │   │   │   ├── .gitignore
+│   │   │   │   ├── app.js
+│   │   │   │   ├── notes.js
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── server.js
