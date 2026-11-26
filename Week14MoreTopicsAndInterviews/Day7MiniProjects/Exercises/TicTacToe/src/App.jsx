@@ -23,19 +23,28 @@ export default function App() {
   return (
     <main>
       <h1>Tic Tac Toe</h1>
-      <label>
-        Play mode{" "}
-        <select
-          value={mode}
-          onChange={event => {
-            setMode(event.target.value);
-            setBoard(newBoard());
-          }}
-        >
-          <option value="human">Two players</option>
-          <option value="computer">Against the computer</option>
-        </select>
-      </label>
+      <fieldset className="modes">
+        <legend>Play mode</legend>
+        {[
+          ["human", "Two players"],
+          ["computer", "Against the computer"],
+        ].map(([value, label]) => (
+          <button
+            key={value}
+            type="button"
+            aria-pressed={mode === value}
+            aria-controls="game-board"
+            onClick={() => {
+              // Re-selecting the active mode must not erase an ongoing round.
+              if (mode === value) return;
+              setMode(value);
+              setBoard(newBoard());
+            }}
+          >
+            {label}
+          </button>
+        ))}
+      </fieldset>
       <p role="status" aria-live="polite">
         {result
           ? result + " wins!"
@@ -45,7 +54,7 @@ export default function App() {
               ? "Computer is choosing..."
               : turn + "'s turn"}
       </p>
-      <section className="board" aria-label="Tic Tac Toe board">
+      <section id="game-board" className="board" aria-label="Tic Tac Toe board">
         {board.map((value, index) => (
           <button
             key={index}

@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-26
-Base HEAD: 29d0923e2a3434f1315483b5aa8c6de7a9715159
-Source-index SHA-256 (generated outputs excluded): 65ca7b3168ca61114d7509c12d3427ee2d7959c50656ddf967d507ee920936fc
-Indexed files: 3081
+Base HEAD: ced98feb68a5949ba893b52b27a96a954b5bd218
+Source-index SHA-256 (generated outputs excluded): 39f7ec2ef984c56f0fcc2e3b378512bf888b1b194b8fbb516addaaef4d1e146d
+Indexed files: 3102
 
 .
 ├── .github
@@ -1341,6 +1341,21 @@ Indexed files: 3081
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
+│   │   │   ├── ReactCalculator
+│   │   │   │   ├── src
+│   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── calculator.js
+│   │   │   │   │   ├── main.jsx
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── style.css
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── calculator.test.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   └── vite.config.js
 │   │   │   ├── SearchBookApp
 │   │   │   │   ├── src
 │   │   │   │   │   ├── components
@@ -1366,7 +1381,11 @@ Indexed files: 3081
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   └── style.css
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── game.test.js
+│   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
@@ -2809,6 +2828,7 @@ Indexed files: 3081
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   └── style.css
 │   │   │   │   ├── .env.example
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── server.js
@@ -3308,15 +3328,21 @@ Indexed files: 3081
 │   │   │   ├── UsersAndPosts
 │   │   │   │   ├── src
 │   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── PostList.jsx
 │   │   │   │   │   │   ├── README.md
 │   │   │   │   │   │   ├── UserList.jsx
-│   │   │   │   │   │   └── UserPosts.jsx
+│   │   │   │   │   │   ├── UserPosts.jsx
+│   │   │   │   │   │   └── UsersList.jsx
 │   │   │   │   │   ├── api.js
 │   │   │   │   │   ├── App.jsx
 │   │   │   │   │   ├── index.css
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── api.test.js
+│   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js

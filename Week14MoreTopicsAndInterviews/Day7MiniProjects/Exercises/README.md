@@ -14,6 +14,7 @@ React projects for working with external services, forms and game state. Each fo
 
 - [GoogleMap/](GoogleMap/) — Mini Project - Google Map
 - [MemeGenerator/](MemeGenerator/) — Mini Project - Meme Generator
+- [ReactCalculator/](ReactCalculator/) — Number/operator keypad and React class state
 - [SearchBookApp/](SearchBookApp/) — Mini Project - Search Book App
 - [TicTacToe/](TicTacToe/) — Mini Project - Tic Tac Toe
 
