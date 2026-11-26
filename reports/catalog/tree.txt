@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-26
-Base HEAD: 949efe16aae55ae42266df4663fd01c873ff0571
-Source-index SHA-256 (generated outputs excluded): 74b7a2903e18b10fbbb66f2f406b57dddd665b4c158904cc3db95f3a75a3cafa
-Indexed files: 3174
+Base HEAD: fe14eac3264ae7bb2438d78765d86b25ca15d175
+Source-index SHA-256 (generated outputs excluded): 58b6bb21c170f104f53d08cf65c987af3d586d40b2a0dcecabc12d39231a59ad
+Indexed files: 3177
 
 .
 ├── .github
@@ -470,6 +470,8 @@ Indexed files: 3174
 │   │       ├── README.md
 │   │       ├── redux-day3.checks.js
 │   │       ├── redux-day3.config.js
+│   │       ├── redux-query.checks.js
+│   │       ├── redux-query.config.js
 │   │       └── state.spec.js
 │   ├── js
 │   │   ├── book_list.test.mjs
@@ -3905,6 +3907,7 @@ Indexed files: 3174
 │   │   │   │   │   ├── index.css
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── addTodo.test.js
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md

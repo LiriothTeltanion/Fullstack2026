@@ -2,8 +2,8 @@
 
 > Regenerated from the exact Git index on `2026-11-26` by `tools/refresh_structure_catalogs.py`.
 
-- Base HEAD: `949efe16aae55ae42266df4663fd01c873ff0571`
-- Source-index fingerprint: `sha256:74b7a2903e18b10fbbb66f2f406b57dddd665b4c158904cc3db95f3a75a3cafa` (generated outputs excluded)
+- Base HEAD: `fe14eac3264ae7bb2438d78765d86b25ca15d175`
+- Source-index fingerprint: `sha256:58b6bb21c170f104f53d08cf65c987af3d586d40b2a0dcecabc12d39231a59ad` (generated outputs excluded)
 
 This catalog proves repository presence and path integrity only. It does not prove that an exercise runs, that Kevin can explain it, or that it is mastered or portfolio-ready.
 
@@ -284,7 +284,7 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week9Redux/Day4ReduxToolkitAsync/DailyChallenge/AgeTracker` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript | 14 | present (canonical) | [source](<../../Week9Redux/Day4ReduxToolkitAsync/DailyChallenge/AgeTracker>); runtime unverified |
 | `Week9Redux/Day4ReduxToolkitAsync/Exercises/ExercisesXP` | Exercise | CSS \| HTML \| JSON \| JavaScript | 18 | present (canonical) | [source](<../../Week9Redux/Day4ReduxToolkitAsync/Exercises/ExercisesXP>); runtime unverified |
 | `Week9Redux/Day4ReduxToolkitAsync/Exercises/ExercisesXPGold` | Exercise | CSS \| HTML \| JSON \| JavaScript | 14 | present (canonical) | [source](<../../Week9Redux/Day4ReduxToolkitAsync/Exercises/ExercisesXPGold>); runtime unverified |
-| `Week9Redux/Day4ReduxToolkitAsync/Exercises/ExercisesXPNinja` | Exercise | CSS \| HTML \| JSON \| JavaScript | 14 | present (canonical) | [source](<../../Week9Redux/Day4ReduxToolkitAsync/Exercises/ExercisesXPNinja>); runtime unverified |
+| `Week9Redux/Day4ReduxToolkitAsync/Exercises/ExercisesXPNinja` | Exercise | CSS \| HTML \| JSON \| JavaScript | 15 | present (canonical) | [source](<../../Week9Redux/Day4ReduxToolkitAsync/Exercises/ExercisesXPNinja>); runtime unverified |
 | `Week9Redux/Day5ReduxMiniProject/DailyChallenge/ProductivityTracker` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript | 22 | present (canonical) | [source](<../../Week9Redux/Day5ReduxMiniProject/DailyChallenge/ProductivityTracker>); runtime unverified |
 | `Week9Redux/Day5ReduxMiniProject/Exercises/ExercisesXP` | Exercise | CSS \| HTML \| JSON \| JavaScript | 19 | present (canonical) | [source](<../../Week9Redux/Day5ReduxMiniProject/Exercises/ExercisesXP>); runtime unverified |
 | `Week9Redux/Day5ReduxMiniProject/Exercises/ExercisesXPGold` | Exercise | CSS \| HTML \| JSON \| JavaScript | 16 | present (canonical) | [source](<../../Week9Redux/Day5ReduxMiniProject/Exercises/ExercisesXPGold>); runtime unverified |
