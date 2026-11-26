@@ -164,6 +164,49 @@ input:user-invalid {
   color: var(--muted);
 }
 
+.profiles-label {
+  margin: 1.5rem 0 0.65rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.social-link {
+  display: inline-flex;
+  flex: 1 1 8rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  background: #f1f5f9;
+}
+
+.social-link:focus-visible {
+  outline-color: var(--primary);
+}
+
+.social-link img {
+  flex: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .submit {
     transition: none;

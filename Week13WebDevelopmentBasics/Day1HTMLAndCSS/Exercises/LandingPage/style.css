@@ -104,7 +104,14 @@ main {
   flex-wrap: wrap;
   align-items: center;
   gap: 2rem;
-  padding: 3rem 0;
+  padding: clamp(1.25rem, 4vw, 3.5rem);
+  border-radius: var(--radius);
+  background-color: var(--surface);
+  background-image:
+    linear-gradient(100deg, rgb(8 11 26 / 96%), rgb(8 11 26 / 83%) 45%, rgb(8 11 26 / 38%)),
+    url("assets/polymoog.webp");
+  background-position: center, center 55%;
+  background-size: cover;
 }
 
 .hero-text {
@@ -225,6 +232,12 @@ section h2 {
 .feature h3 {
   margin-top: 0;
   color: var(--accent-2);
+}
+
+.feature-icon {
+  display: block;
+  margin-bottom: 1rem;
+  filter: invert(1);
 }
 
 .feature p {
