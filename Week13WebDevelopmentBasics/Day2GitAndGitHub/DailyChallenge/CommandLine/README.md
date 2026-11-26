@@ -10,6 +10,15 @@
 
 Two parts. [commands.sh](commands.sh) practices the terminal for real: it builds a small site folder, copies, renames and deletes files, then makes the folder a Git repository with one commit. [index.html](index.html) is my cheat sheet of those commands, styled like a terminal.
 
+## Find the first published exercise
+
+The [original Week1/Day1 folder](https://github.com/LiriothTeltanion/Fullstack2026/tree/b0a6d0b04d8fe489d9793d7bcf9f184f9d73bc22/Week1/Day1) contains a short Python REPL transcript. The [current Week 1, Day 1 folder](../../../../Week1Python/Day1StartingwithPython/README.md) holds the reorganized exercises. To inspect the original snapshot from any directory in a full clone:
+
+```sh
+git ls-tree b0a6d0b04d8fe489d9793d7bcf9f184f9d73bc22:Week1/Day1
+git show b0a6d0b04d8fe489d9793d7bcf9f184f9d73bc22:Week1/Day1/Day1.py
+```
+
 ## ▶️ How to run
 
 The script works inside a temporary folder made with `mktemp -d` and deletes it at the end, so it never touches my own files:
@@ -39,6 +48,8 @@ my-site/js/app.js
 ```
 
 The cheat sheet is a static page: open [index.html](index.html).
+
+Run `bash commands.sh` from this exercise directory. The practice commit uses a temporary Git repository, even when an IDE or parent process supplies its own Git index. On success or failure, the script removes the directory it created.
 
 ## 🎯 The challenge
 
