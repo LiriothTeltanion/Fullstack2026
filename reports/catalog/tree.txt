@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-26
-Base HEAD: fb54f43fc2ad7e3b2bba6d72c04d2f4b892410ec
-Source-index SHA-256 (generated outputs excluded): 99cc4c3fe388c054f201c953fded1133f5511a10065af59cd8cc8877c15bc437
-Indexed files: 3102
+Base HEAD: 7f04d10ec0cad029a7586bf6b385a20b89509544
+Source-index SHA-256 (generated outputs excluded): 12e5b4b7fc1a37779306c02ce4065a57c2df180e49c9b822d106b4d6b69ed4bc
+Indexed files: 3113
 
 .
 ├── .github
@@ -956,6 +956,13 @@ Indexed files: 3102
 │   │   │   │   ├── README.md
 │   │   │   │   └── style.css
 │   │   │   ├── LandingPage
+│   │   │   │   ├── assets
+│   │   │   │   │   ├── chart-line.svg
+│   │   │   │   │   ├── FONT-AWESOME-LICENSE.txt
+│   │   │   │   │   ├── polymoog.webp
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── stopwatch.svg
+│   │   │   │   │   └── tags.svg
 │   │   │   │   ├── index.html
 │   │   │   │   ├── README.md
 │   │   │   │   └── style.css
@@ -978,6 +985,13 @@ Indexed files: 3102
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── LoginPage
+│   │   │   │   ├── assets
+│   │   │   │   │   ├── fontawesome
+│   │   │   │   │   │   ├── github.svg
+│   │   │   │   │   │   ├── LICENSE.txt
+│   │   │   │   │   │   ├── linkedin-in.svg
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   └── README.md
 │   │   │   │   ├── app.js
 │   │   │   │   ├── index.html
 │   │   │   │   ├── README.md

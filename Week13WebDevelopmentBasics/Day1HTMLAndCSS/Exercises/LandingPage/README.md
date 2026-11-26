@@ -12,7 +12,7 @@ A landing page for Practice Pulse, a practice timer for musicians that I made up
 
 ## ▶️ How to run
 
-Open [index.html](index.html) in a browser. It's two static files, so dropping the folder on Netlify Drop is enough to put it online.
+Open [index.html](index.html) directly in a browser. Keep the stylesheet and the `assets` folder alongside it. The page and its images work offline. To publish a static preview, upload the entire exercise folder.
 
 ## 🎯 The challenge
 
@@ -23,6 +23,8 @@ Open [index.html](index.html) in a browser. It's two static files, so dropping t
 5. **Dark theme.** Colors live in `:root` variables, the page background is a `radial-gradient`, and smooth scrolling and hover lifts turn off under `prefers-reduced-motion`.
 
 ## 🧠 What I learned
+
+The hero layers a dark gradient over a local photograph of a Polymoog synthesizer. If the photo cannot load, the background color and gradient keep the text legible. Each feature has a decorative Font Awesome icon and a visible heading. See the [asset credits and licenses](assets/README.md).
 
 - `flex: 1 1 <width>` plus `flex-wrap: wrap` gives a responsive row of cards without a single media query
 - A bar chart can be plain `span`s with `align-items: flex-end` and a percentage height
