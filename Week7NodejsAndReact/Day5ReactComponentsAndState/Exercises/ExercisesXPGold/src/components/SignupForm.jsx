@@ -10,12 +10,20 @@ export default function SignupForm() {
   // One handler for all fields: the input's name says which key to update.
   function handleChange(event) {
     const { name, value, type, checked } = event.target;
+    if (name === "name") event.target.setCustomValidity("");
     setForm(current => ({ ...current, [name]: type === "checkbox" ? checked : value }));
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-    setSent(form);
+    const name = form.name.trim();
+    if (!name) {
+      const field = event.currentTarget.elements.namedItem("name");
+      field.setCustomValidity("Enter a name with at least one non-space character.");
+      field.reportValidity();
+      return;
+    }
+    setSent({ ...form, name });
     setForm(empty);
   }
 
@@ -23,7 +31,7 @@ export default function SignupForm() {
     <>
       <form onSubmit={handleSubmit}>
         <label>
-          Name <input name="name" value={form.name} onChange={handleChange} required />
+          Name <input name="name" dir="auto" value={form.name} onChange={handleChange} required />
         </label>
         <label>
           Email{" "}
@@ -44,20 +52,23 @@ export default function SignupForm() {
             checked={form.newsletter}
             onChange={handleChange}
           />{" "}
-          Send me the newsletter
+          Include the newsletter in my preview
         </label>
-        <button type="submit">Sign up</button>
+        <button type="submit">Preview signup</button>
       </form>
 
       <p className="preview">
         Live preview: {form.name || "(no name)"} · {form.email || "(no email)"} · {form.language}
         {form.newsletter ? " · newsletter" : ""}
       </p>
-      {sent && (
-        <p>
-          Thanks {sent.name}, you are signed up with {sent.email}.
-        </p>
-      )}
+      <p role="status">
+        {sent && (
+          <>
+            Signup preview for <bdi>{sent.name}</bdi> · <bdi>{sent.email}</bdi> · {sent.language}
+            {sent.newsletter ? " · newsletter included" : " · no newsletter"}.
+          </>
+        )}
+      </p>
     </>
   );
 }

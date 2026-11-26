@@ -1,0 +1,147 @@
+/* Scoped form layout preserves the original calculator, list and theme rules. */
+main {
+  box-sizing: border-box;
+}
+.practice-intro {
+  max-width: 55ch;
+  margin-bottom: 2rem;
+}
+.practice-intro h1 {
+  margin: 0 0 0.7rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+.practice-intro p,
+.practice-card > p {
+  line-height: 1.6;
+}
+.forms-grid {
+  display: grid;
+  gap: 1rem;
+}
+.practice-card {
+  min-width: 0;
+  margin: 0;
+}
+.practice-card h2 {
+  margin-top: 0;
+}
+.practice-card .field {
+  display: grid;
+  gap: 0.45rem;
+  margin: 1rem 0;
+}
+.practice-card input:not([type="checkbox"], [type="radio"]),
+.practice-card select,
+.practice-card textarea {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  font: inherit;
+  color: #0f172a;
+  background: #fff;
+  padding: 0.65rem;
+}
+.practice-card textarea {
+  resize: vertical;
+  border: 1px solid #94a3b8;
+  border-radius: 8px;
+}
+.practice-card fieldset {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #94a3b8;
+  border-radius: 8px;
+}
+.practice-card legend {
+  padding: 0 0.3rem;
+}
+.choice {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0.6rem 0;
+  line-height: 1.5;
+}
+.choice input {
+  flex: 0 0 auto;
+  width: 1.15rem;
+  height: 1.15rem;
+  accent-color: #0e7490;
+}
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+.form-actions button {
+  min-height: 44px;
+  font: inherit;
+}
+.form-actions .secondary {
+  background: #475569;
+}
+.field-error {
+  margin: 0;
+  color: #a51c30;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.dark .field-error {
+  color: #ffbac4;
+}
+[aria-invalid="true"] {
+  border-color: #a51c30 !important;
+  border-width: 2px !important;
+}
+.form-result {
+  margin-top: 1rem;
+  overflow-wrap: anywhere;
+}
+.form-result dl {
+  display: grid;
+  gap: 0.4rem;
+}
+.form-result dt {
+  font-weight: 600;
+}
+.form-result dd {
+  margin: 0 0 0.5rem;
+  white-space: pre-wrap;
+}
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #0e7490;
+  outline-offset: 3px;
+}
+.dark :focus-visible {
+  outline-color: #67e8f9;
+}
+@media (min-width: 1000px) {
+  main.light,
+  main.dark {
+    padding-inline: max(3vw, calc((100vw - 1120px) / 2));
+  }
+  .forms-grid {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 420px) {
+  main.light,
+  main.dark {
+    padding: 1.25rem 0.75rem;
+  }
+  main section {
+    padding: 1rem;
+  }
+  .row input {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .list li {
+    gap: 0.5rem;
+    overflow-wrap: anywhere;
+  }
+}

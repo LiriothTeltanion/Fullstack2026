@@ -1,0 +1,11 @@
+{
+  "name": "react-forms-browser-tests",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node browser-qa.js"
+  },
+  "devDependencies": {
+    "playwright": "1.61.1"
+  }
+}

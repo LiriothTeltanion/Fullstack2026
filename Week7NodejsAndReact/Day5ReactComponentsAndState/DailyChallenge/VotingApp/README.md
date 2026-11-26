@@ -29,6 +29,10 @@ Open the address Vite prints (usually http://localhost:5173).
 
 The leader (or leaders, on a tie) gets a green outline, and the bars show each language's share of all votes.
 
+The result also includes a numeric percentage and the text **Leading** or **Tied for lead**. Each vote button has a language-specific accessible name. The total is announced after voting and resetting. On narrow screens the bar and percentage share a separate line below the vote button.
+
+To check the behavior with a keyboard, press Tab to reach the first vote button and Enter to vote for Php. Tab to Python and press Space. Both should show **50%** and **Tied for lead**. Vote for Python again to see it lead with **67%** and a total of three votes. Reset returns all counts to zero and clears the leader labels.
+
 ## 🧠 What I learned
 
 - To change one vote I build a new array with `map()` and a new object with `{ ...lang, votes: lang.votes + 1 }`

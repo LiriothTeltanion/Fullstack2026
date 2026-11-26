@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-26
-Base HEAD: bae0b244d75cbd9f0ebc58d3e02d0ad42143863f
-Source-index SHA-256 (generated outputs excluded): 8b2c0c1e10ce38f271fdbb0061e7817a4bbf23569a7eda025042e37dfd813db5
-Indexed files: 3148
+Base HEAD: 8779434b32d844cf71689c81939bdf4883c1e3f1
+Source-index SHA-256 (generated outputs excluded): fe62fe9dffb4145cc77d4abdcad9fb52ba9245c26988daa111c46088fed47a1b
+Indexed files: 3163
 
 .
 ├── .github
@@ -461,6 +461,14 @@ Indexed files: 3148
 │       ├── rename_plan.csv
 │       └── tree.txt
 ├── tests
+│   ├── browser
+│   │   └── react-state
+│   │       ├── .gitignore
+│   │       ├── package-lock.json
+│   │       ├── package.json
+│   │       ├── playwright.config.js
+│   │       ├── README.md
+│   │       └── state.spec.js
 │   ├── js
 │   │   ├── book_list.test.mjs
 │   │   ├── calculator.test.mjs
@@ -3070,10 +3078,20 @@ Indexed files: 3148
 │   │   │   │   │   │   ├── Calculator.jsx
 │   │   │   │   │   │   ├── README.md
 │   │   │   │   │   │   ├── ShoppingList.jsx
+│   │   │   │   │   │   ├── StateForms.jsx
 │   │   │   │   │   │   └── ThemeToggle.jsx
 │   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── forms.css
+│   │   │   │   │   ├── formState.js
 │   │   │   │   │   ├── index.css
 │   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── .gitignore
+│   │   │   │   │   ├── browser-qa.js
+│   │   │   │   │   ├── forms.test.js
+│   │   │   │   │   ├── package-lock.json
+│   │   │   │   │   ├── package.json
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package.json

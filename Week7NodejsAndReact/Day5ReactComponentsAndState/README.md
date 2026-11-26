@@ -14,6 +14,7 @@ React Components and State. useState, events, controlled forms, useEffect and a 
 
 - [`Exercises/`](Exercises/)
 - [`DailyChallenge/`](DailyChallenge/)
+- [Browser checks for voting and signup](../../tests/browser/react-state/README.md)
 
 ---
 

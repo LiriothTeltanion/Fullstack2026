@@ -20,6 +20,7 @@ export default function App() {
 
   const total = languages.reduce((sum, lang) => sum + lang.votes, 0);
   const topVotes = Math.max(...languages.map(lang => lang.votes));
+  const tiedForLead = topVotes > 0 && languages.filter(lang => lang.votes === topVotes).length > 1;
 
   return (
     <main>
@@ -31,11 +32,14 @@ export default function App() {
             language={lang}
             percent={total ? Math.round((lang.votes / total) * 100) : 0}
             leading={total > 0 && lang.votes === topVotes}
+            tiedForLead={tiedForLead}
             onVote={addVote}
           />
         ))}
       </ul>
-      <p className="total">Total votes: {total}</p>
+      <p className="total" role="status">
+        Total votes: {total}
+      </p>
       <button
         className="reset"
         onClick={() => setLanguages(startingLanguages)}
