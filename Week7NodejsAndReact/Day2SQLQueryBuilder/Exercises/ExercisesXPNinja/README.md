@@ -15,6 +15,7 @@ This time the tables are not created with a `.sql` file. Knex migrations build t
 ```bash
 cp .env.example .env     # point it at an empty PostgreSQL database
 npm install
+npm test                 # HTTP validation regressions; no database needed
 npm run migrate          # knex migrate:latest
 npm run seed             # knex seed:run
 npm run dev
@@ -36,13 +37,34 @@ curl http://localhost:3000/authors/2/books
 2. **Seed** (`seeds/01_authors_and_books.js`): empties both tables, inserts three authors with `returning("id")` and uses those ids for five books.
 3. **API** (`server.js`):
 
-| Route | What it does |
-|---|---|
-| `GET /authors` | Every author with a book count (`leftJoin`, `count`, `groupBy`) |
-| `GET /authors/:id/books` | One author and their books by year, or 404 |
-| `POST /books` | Adds a book, `title` and `author_id` required |
+| Route                    | What it does                                                    |
+| ------------------------ | --------------------------------------------------------------- |
+| `GET /authors`           | Every author with a book count (`leftJoin`, `count`, `groupBy`) |
+| `GET /authors/:id/books` | One author and their books by year, or 404                      |
+| `POST /books`            | Adds a book, `title` and `author_id` required                   |
 
 `knexfile.js` is shared by the CLI and by `db/db.js`, so the connection is written once.
+
+## HTTP input validation
+
+`app.js` constructs the Express application; `server.js` remains the normal entry point
+and injects the existing Knex connection. The migrations, seed and SQL queries are unchanged.
+
+`POST /books` accepts a JSON object with a non-blank string `title` (up to 200 Unicode
+characters) and a positive PostgreSQL integer `author_id`. The optional `year` may be
+an integer or null. Ordinary integer strings remain accepted for form clients; valid
+title text is stored as entered. Missing bodies, malformed JSON, invalid types and
+out-of-range integers receive 400 before insertion. `GET /authors/:id/books` also
+rejects malformed author IDs with 400. A valid ID that has no author returns 404,
+including a book insert rejected by the specific `books_author_id_foreign` constraint.
+Other database failures retain the existing 500 response and private server logging.
+
+The [HTTP regression suite](books-http.test.js) uses an observed database boundary and
+checks that rejected input cannot insert records. It also covers numeric-string
+compatibility, the exact Unicode length boundary, recovery after malformed JSON and
+the distinction between missing authors and internal database failures. Run `npm test`
+without a database or environment file; each case uses an ephemeral loopback server.
+These boundary tests supplement, rather than replace, PostgreSQL migration/seed/API checks.
 
 ## 🧠 What I learned
 
