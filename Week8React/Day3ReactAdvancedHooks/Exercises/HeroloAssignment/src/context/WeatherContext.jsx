@@ -1,15 +1,14 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
+import { parseWeatherPreferences } from "./preferences.js";
 
 const WeatherContext = createContext(null);
 const STORAGE_KEY = "herolo-weather";
 
-const defaults = { favorites: [], unit: "C", dark: false };
-
 function load() {
   try {
-    return { ...defaults, ...JSON.parse(localStorage.getItem(STORAGE_KEY)) };
+    return parseWeatherPreferences(localStorage.getItem(STORAGE_KEY));
   } catch {
-    return defaults;
+    return parseWeatherPreferences(null);
   }
 }
 

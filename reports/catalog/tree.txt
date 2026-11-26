@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-26
-Base HEAD: 8391ed3956b01b181b4f43548eab3b46f13cf9b8
-Source-index SHA-256 (generated outputs excluded): ae1707215c293e47abb2f5d5a54c5943aa7a7bd7e8623f6f865f01490b2e5a71
-Indexed files: 3201
+Base HEAD: 9a3c5cd35e5a66d90ced54a79bf788f77d00b722
+Source-index SHA-256 (generated outputs excluded): ee15dca5598a9c331a1ef86c7768ebdab57ffbaa5c9f94bbd9047dd2d7af14fb
+Indexed files: 3203
 
 .
 ├── .github
@@ -3560,6 +3560,7 @@ Indexed files: 3201
 │   │   │   │   │   │   ├── SearchBar.jsx
 │   │   │   │   │   │   └── WeatherAttribution.jsx
 │   │   │   │   │   ├── context
+│   │   │   │   │   │   ├── preferences.js
 │   │   │   │   │   │   ├── README.md
 │   │   │   │   │   │   └── WeatherContext.jsx
 │   │   │   │   │   ├── pages
@@ -3578,6 +3579,7 @@ Indexed files: 3201
 │   │   │   │   ├── accuweather.test.js
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package.json
+│   │   │   │   ├── preferences.test.js
 │   │   │   │   ├── README.md
 │   │   │   │   ├── server.js
 │   │   │   │   ├── vite.config.js
