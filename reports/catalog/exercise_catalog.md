@@ -2,8 +2,8 @@
 
 > Regenerated from the exact Git index on `2026-11-26` by `tools/refresh_structure_catalogs.py`.
 
-- Base HEAD: `64827ede21fa636aca880c1c85c3e419e6d72ca4`
-- Source-index fingerprint: `sha256:1621540d1a31465efa28bb154162b979ee1e513b8c1e3b83aefe2d58f1078e43` (generated outputs excluded)
+- Base HEAD: `9375706e211effc8e5ae3b5cb9bbc76f714b93ff`
+- Source-index fingerprint: `sha256:a242cda951529785f7348a49f30afa9a507837066683b7f6fab3301937389865` (generated outputs excluded)
 
 This catalog proves repository presence and path integrity only. It does not prove that an exercise runs, that Kevin can explain it, or that it is mastered or portfolio-ready.
 
@@ -256,10 +256,10 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week8React/Day1MultipleComponentsAndEvents/DailyChallenge/FormContainer` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript | 11 | present (canonical) | [source](<../../Week8React/Day1MultipleComponentsAndEvents/DailyChallenge/FormContainer>); runtime unverified |
 | `Week8React/Day1MultipleComponentsAndEvents/Exercises/ErrorBoundary` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 23 | present (canonical) | [source](<../../Week8React/Day1MultipleComponentsAndEvents/Exercises/ErrorBoundary>); runtime unverified |
 | `Week8React/Day1MultipleComponentsAndEvents/Exercises/ExercisesXP` | Exercise | CSS \| HTML \| JSON \| JavaScript | 19 | present (canonical) | [source](<../../Week8React/Day1MultipleComponentsAndEvents/Exercises/ExercisesXP>); runtime unverified |
-| `Week8React/Day1MultipleComponentsAndEvents/Exercises/ExercisesXPGold` | Exercise | CSS \| HTML \| JSON \| JavaScript | 15 | present (canonical) | [source](<../../Week8React/Day1MultipleComponentsAndEvents/Exercises/ExercisesXPGold>); runtime unverified |
+| `Week8React/Day1MultipleComponentsAndEvents/Exercises/ExercisesXPGold` | Exercise | CSS \| HTML \| JSON \| JavaScript | 20 | present (canonical) | [source](<../../Week8React/Day1MultipleComponentsAndEvents/Exercises/ExercisesXPGold>); runtime unverified |
 | `Week8React/Day1MultipleComponentsAndEvents/Exercises/ExercisesXPNinja` | Exercise | CSS \| HTML \| JSON \| JavaScript | 12 | present (canonical) | [source](<../../Week8React/Day1MultipleComponentsAndEvents/Exercises/ExercisesXPNinja>); runtime unverified |
 | `Week8React/Day2AdvancedReact/DailyChallenge/DataAndServer` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript | 21 | present (canonical) | [source](<../../Week8React/Day2AdvancedReact/DailyChallenge/DataAndServer>); runtime unverified |
-| `Week8React/Day2AdvancedReact/DailyChallenge/Form` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript | 12 | present (canonical) | [source](<../../Week8React/Day2AdvancedReact/DailyChallenge/Form>); runtime unverified |
+| `Week8React/Day2AdvancedReact/DailyChallenge/Form` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript | 17 | present (canonical) | [source](<../../Week8React/Day2AdvancedReact/DailyChallenge/Form>); runtime unverified |
 | `Week8React/Day2AdvancedReact/Exercises/ExercisesXP` | Exercise | CSS \| HTML \| JSON \| JavaScript | 25 | present (canonical) | [source](<../../Week8React/Day2AdvancedReact/Exercises/ExercisesXP>); runtime unverified |
 | `Week8React/Day2AdvancedReact/Exercises/ExercisesXPGold` | Exercise | CSS \| HTML \| JSON \| JavaScript | 12 | present (canonical) | [source](<../../Week8React/Day2AdvancedReact/Exercises/ExercisesXPGold>); runtime unverified |
 | `Week8React/Day2AdvancedReact/Exercises/ExercisesXPNinja` | Exercise | CSS \| HTML \| JSON \| JavaScript | 14 | present (canonical) | [source](<../../Week8React/Day2AdvancedReact/Exercises/ExercisesXPNinja>); runtime unverified |
