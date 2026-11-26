@@ -121,6 +121,22 @@ ul.plain li {
   color: var(--danger);
 }
 
+.form-field {
+  display: grid;
+  flex: 1 1 180px;
+  min-width: 0;
+  gap: 4px;
+}
+
+.form-field input {
+  width: 100%;
+  min-width: 0;
+}
+
+.field-error {
+  font-size: 0.875rem;
+}
+
 .big {
   font-size: 2.5rem;
   font-weight: 700;
