@@ -46,6 +46,11 @@ requests blocked. This verifies the no-key form and navigation-link behavior;
 Google's live SDK, tiles, key authorization and quotas require a configured key
 and are separate integration checks.
 
+On 26 November 2026, the app also passed a live check on localhost with a Google
+Maps Demo Key. Entering `51.5074, -0.1278` centered the map and its marker on
+London. Submitting latitude `91` displayed a validation error and kept the last
+valid location and marker. You can repeat this check with your own demo key.
+
 ## 🎯 The challenge
 
 [coordinates.js](src/coordinates.js) validates finite latitude -90..90 and longitude -180..180. [MapCanvas.jsx](src/MapCanvas.jsx) loads Google Maps, centers it and renders MarkerF. The initial location is the public city center of Beer Sheva.

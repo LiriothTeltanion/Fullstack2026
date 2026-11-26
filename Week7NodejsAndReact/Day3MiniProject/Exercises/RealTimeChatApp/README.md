@@ -33,13 +33,13 @@ chat:system {"text":"Ariel left"}
 
 ## 🎯 The challenge
 
-| Event | Direction | What it does |
-|---|---|---|
-| `join` | browser → server | Saves `{ username, room }` for the socket and calls `socket.join(room)` |
-| `chat:message` | both ways | The server trims the text (max 500 characters), adds the time and sends it to the room |
-| `chat:typing` | both ways | Tells the others in the room that someone is typing |
-| `chat:system` | server → browser | Welcome, joined and left notices |
-| `room:users` | server → browser | The list of names in the room |
+| Event          | Direction        | What it does                                                                           |
+| -------------- | ---------------- | -------------------------------------------------------------------------------------- |
+| `join`         | browser → server | Saves `{ username, room }` for the socket and calls `socket.join(room)`                |
+| `chat:message` | both ways        | The server trims the text (max 500 characters), adds the time and sends it to the room |
+| `chat:typing`  | both ways        | Tells the others in the room that someone is typing                                    |
+| `chat:system`  | server → browser | Welcome, joined and left notices                                                       |
+| `room:users`   | server → browser | The list of names in the room                                                          |
 
 The browser code in `public/app.js` writes every message with `textContent`, so the `<b>hi</b>` above shows up as plain text instead of bold HTML.
 
@@ -48,6 +48,7 @@ The browser code in `public/app.js` writes every message with `textContent`, so 
 - `io.to(room).emit` reaches everyone in the room, `socket.to(room).emit` everyone except the sender
 - A `Map` from `socket.id` to the user is enough to know who left on `disconnect`
 - The typing notice turns itself off after 1.2 seconds with `clearTimeout` and `setTimeout`
+- Typing notices track each connected participant separately. The server includes a socket-scoped `userId` alongside the existing `username` and `isTyping` fields. Leaving stops only that participant's notice, and the receiving page expires each notice after 1.2 seconds without another typing event. Disconnecting the receiving page clears its local notices.
 - The client library comes from the server itself at `/socket.io/socket.io.js`, no CDN needed
 - `express-rate-limit` guards the page Express serves (100 requests per 15 minutes per IP); chat messages go over the socket and don't count
 
