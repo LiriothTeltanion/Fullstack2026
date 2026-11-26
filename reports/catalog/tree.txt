@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-26
-Base HEAD: d8f37db9c517edc93c113fa6c112823bec654118
-Source-index SHA-256 (generated outputs excluded): 0d07a2d63e4212754da60c1e738ef343a8a38fb99ebac289e065b04315e50f0b
-Indexed files: 3212
+Base HEAD: 595b409ac2c219711b7b58fe92988b257ca3ba97
+Source-index SHA-256 (generated outputs excluded): 0bea23fa1d53b1112d5b8dbf5e9f730df7335cbb92499222c56759901f10b513
+Indexed files: 3213
 
 .
 ├── .github
@@ -500,6 +500,7 @@ Indexed files: 3212
 │   │   ├── test_optional_file_and_guess.py
 │   │   ├── test_readme_visuals.py
 │   │   ├── test_repository_layout.py
+│   │   ├── test_showcase_technologies.py
 │   │   ├── test_tictactoe.py
 │   │   ├── test_timer.py
 │   │   ├── test_week1_day1_daily_challenge.py

@@ -2,8 +2,8 @@
 
 > Regenerated from the exact Git index on `2026-11-26` by `tools/refresh_structure_catalogs.py`.
 
-- Base HEAD: `d8f37db9c517edc93c113fa6c112823bec654118`
-- Source-index fingerprint: `sha256:0d07a2d63e4212754da60c1e738ef343a8a38fb99ebac289e065b04315e50f0b` (generated outputs excluded)
+- Base HEAD: `595b409ac2c219711b7b58fe92988b257ca3ba97`
+- Source-index fingerprint: `sha256:0bea23fa1d53b1112d5b8dbf5e9f730df7335cbb92499222c56759901f10b513` (generated outputs excluded)
 
 This catalog proves repository presence and path integrity only. It does not prove that an exercise runs, that Kevin can explain it, or that it is mastered or portfolio-ready.
 
