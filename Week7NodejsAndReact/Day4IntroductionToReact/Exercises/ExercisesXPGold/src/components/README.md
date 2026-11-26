@@ -15,6 +15,8 @@ The React components for Exercises XP Gold.
 - [`Card.jsx`](Card.jsx)
 - [`PlanetList.jsx`](PlanetList.jsx)
 - [`SocialMedia.jsx`](SocialMedia.jsx)
+- [`BootstrapCard.jsx`](BootstrapCard.jsx): default Bootstrap card view, using the existing profile props.
+- [`SixPlanetList.jsx`](SixPlanetList.jsx): the six-item exercise view, separate from the original eight-planet component.
 
 ---
 

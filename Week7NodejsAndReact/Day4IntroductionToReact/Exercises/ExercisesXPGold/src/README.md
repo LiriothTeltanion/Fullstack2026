@@ -17,6 +17,8 @@ The source code for Exercises XP Gold.
 - [`data.js`](data.js)
 - [`index.css`](index.css)
 - [`main.jsx`](main.jsx)
+- [`OriginalExercises.jsx`](OriginalExercises.jsx): preserved custom-component comparison.
+- [`exercise.css`](exercise.css): narrow Bootstrap/legacy isolation and accessibility styles.
 
 ---
 

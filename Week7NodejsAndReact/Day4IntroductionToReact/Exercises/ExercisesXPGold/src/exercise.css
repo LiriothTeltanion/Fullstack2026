@@ -1,0 +1,103 @@
+/* Keep the original stylesheet intact; these narrow overrides isolate its card variant. */
+.exercise-shell {
+  width: min(94vw, 1100px);
+  margin: 2rem auto;
+}
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.bootstrap-card.card {
+  padding: 0;
+  gap: 0;
+  background: var(--bs-card-bg);
+  border-radius: var(--bs-card-border-radius);
+  color: var(--bs-body-color);
+}
+.bootstrap-card .btn {
+  color: var(--bs-btn-color);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.profile-initials {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  flex: none;
+  border-radius: 50%;
+  color: #0b1029;
+  font-weight: 800;
+}
+.planet-exercise {
+  padding: 0;
+}
+.original-examples {
+  padding: 1.25rem;
+  border: 1px solid #46546b;
+  border-radius: 0.75rem;
+}
+.original-examples summary {
+  cursor: pointer;
+  margin-bottom: 0;
+}
+.original-examples .social {
+  flex-wrap: wrap;
+}
+.original-examples {
+  line-height: normal;
+}
+.original-examples .card {
+  color: #f8fafc;
+  border: 0;
+}
+.original-examples .card h3 {
+  font-size: 1.17em;
+  font-weight: 700;
+  line-height: normal;
+  margin: 1em 0;
+}
+.original-examples .card p {
+  margin: 1em 0;
+}
+.original-examples .planets {
+  margin-block: 1em;
+}
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  padding: 0.75rem;
+  background: #fff;
+  color: #0b1029;
+  z-index: 2;
+}
+.skip-link:focus {
+  left: 0;
+}
+a:focus-visible,
+.bootstrap-card .btn:focus-visible,
+summary:focus-visible,
+main:focus-visible {
+  outline: 3px solid #67e8f9;
+  outline-offset: 4px;
+}
+@media (max-width: 420px) {
+  .original-examples {
+    padding: 0.8rem;
+  }
+  .original-examples .cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}

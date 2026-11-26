@@ -2,8 +2,8 @@
 
 > Regenerated from the exact Git index on `2026-11-26` by `tools/refresh_structure_catalogs.py`.
 
-- Base HEAD: `d4746d211bb0d493eeb9172ff5123629c1bcd6ed`
-- Source-index fingerprint: `sha256:19d305e041ad67d79f080c6a2a39e22c1aa76e1978c767e8a9f72e4e6b47beb7` (generated outputs excluded)
+- Base HEAD: `bae0b244d75cbd9f0ebc58d3e02d0ad42143863f`
+- Source-index fingerprint: `sha256:8b2c0c1e10ce38f271fdbb0061e7817a4bbf23569a7eda025042e37dfd813db5` (generated outputs excluded)
 
 This catalog proves repository presence and path integrity only. It does not prove that an exercise runs, that Kevin can explain it, or that it is mastered or portfolio-ready.
 
@@ -246,13 +246,13 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week7NodejsAndReact/Day3MiniProject/Exercises/TaskManagementAPI` | Mini Project | JSON \| JavaScript | 15 | present (canonical) | [source](<../../Week7NodejsAndReact/Day3MiniProject/Exercises/TaskManagementAPI>); runtime unverified |
 | `Week7NodejsAndReact/Day4IntroductionToReact/DailyChallenge/ReactCarousel` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript | 11 | present (canonical) | [source](<../../Week7NodejsAndReact/Day4IntroductionToReact/DailyChallenge/ReactCarousel>); runtime unverified |
 | `Week7NodejsAndReact/Day4IntroductionToReact/Exercises/ExercisesXP` | Exercise | CSS \| HTML \| JSON \| JavaScript | 15 | present (canonical) | [source](<../../Week7NodejsAndReact/Day4IntroductionToReact/Exercises/ExercisesXP>); runtime unverified |
-| `Week7NodejsAndReact/Day4IntroductionToReact/Exercises/ExercisesXPGold` | Exercise | CSS \| HTML \| JSON \| JavaScript | 13 | present (canonical) | [source](<../../Week7NodejsAndReact/Day4IntroductionToReact/Exercises/ExercisesXPGold>); runtime unverified |
+| `Week7NodejsAndReact/Day4IntroductionToReact/Exercises/ExercisesXPGold` | Exercise | CSS \| HTML \| JSON \| JavaScript | 20 | present (canonical) | [source](<../../Week7NodejsAndReact/Day4IntroductionToReact/Exercises/ExercisesXPGold>); runtime unverified |
 | `Week7NodejsAndReact/Day4IntroductionToReact/Exercises/LandingPageUsingReact` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 15 | present (canonical) | [source](<../../Week7NodejsAndReact/Day4IntroductionToReact/Exercises/LandingPageUsingReact>); runtime unverified |
 | `Week7NodejsAndReact/Day5ReactComponentsAndState/DailyChallenge/VotingApp` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript | 10 | present (canonical) | [source](<../../Week7NodejsAndReact/Day5ReactComponentsAndState/DailyChallenge/VotingApp>); runtime unverified |
 | `Week7NodejsAndReact/Day5ReactComponentsAndState/Exercises/ExercisesXP` | Exercise | CSS \| HTML \| JSON \| JavaScript | 14 | present (canonical) | [source](<../../Week7NodejsAndReact/Day5ReactComponentsAndState/Exercises/ExercisesXP>); runtime unverified |
 | `Week7NodejsAndReact/Day5ReactComponentsAndState/Exercises/ExercisesXPGold` | Exercise | CSS \| HTML \| JSON \| JavaScript | 13 | present (canonical) | [source](<../../Week7NodejsAndReact/Day5ReactComponentsAndState/Exercises/ExercisesXPGold>); runtime unverified |
 | `Week7NodejsAndReact/Day5ReactComponentsAndState/Exercises/ExercisesXPGold2` | Exercise | CSS \| HTML \| JSON \| JavaScript | 12 | present (canonical) | [source](<../../Week7NodejsAndReact/Day5ReactComponentsAndState/Exercises/ExercisesXPGold2>); runtime unverified |
-| `Week7NodejsAndReact/Day5ReactComponentsAndState/Exercises/ExercisesXPNinja` | Exercise | CSS \| HTML \| JSON \| JavaScript | 12 | present (canonical) | [source](<../../Week7NodejsAndReact/Day5ReactComponentsAndState/Exercises/ExercisesXPNinja>); runtime unverified |
+| `Week7NodejsAndReact/Day5ReactComponentsAndState/Exercises/ExercisesXPNinja` | Exercise | CSS \| HTML \| JSON \| JavaScript | 21 | present (canonical) | [source](<../../Week7NodejsAndReact/Day5ReactComponentsAndState/Exercises/ExercisesXPNinja>); runtime unverified |
 | `Week7NodejsAndReact/RemoteLearningNodejs/Exercises/RSSFactsFeed` | Mini Project | CSS \| JSON \| JavaScript | 22 | present (canonical) | [source](<../../Week7NodejsAndReact/RemoteLearningNodejs/Exercises/RSSFactsFeed>); runtime unverified |
 | `Week8React/Day1MultipleComponentsAndEvents/DailyChallenge/FormContainer` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript | 11 | present (canonical) | [source](<../../Week8React/Day1MultipleComponentsAndEvents/DailyChallenge/FormContainer>); runtime unverified |
 | `Week8React/Day1MultipleComponentsAndEvents/Exercises/ErrorBoundary` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 23 | present (canonical) | [source](<../../Week8React/Day1MultipleComponentsAndEvents/Exercises/ErrorBoundary>); runtime unverified |
