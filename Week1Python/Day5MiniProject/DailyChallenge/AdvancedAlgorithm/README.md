@@ -22,6 +22,9 @@ python main.py --n 10000 --target 5000 --sample 5
 ```
 
 `--low` and `--high` change the range of the numbers, 0 to 10,000 by default.
+Both bounds are inclusive. Set `--sample 0` to hide the examples while keeping
+the actual pair counts. An empty dataset (`--n 0`) is valid. A negative dataset
+size or reversed bounds produce a command-line usage error.
 
 ```
 === Two-Sum Pairs Finder ===
@@ -46,7 +49,7 @@ The goal is the list of different value pairs `(a, b)` with `a + b = target` and
 | Function | What it does |
 |---|---|
 | `make_dataset(n, low, high, seed)` | Fills a list with `random.randint(low, high)` and returns it with the target. A seed makes the list repeatable. |
-| `find_value_pairs_hash(nums, target)` | O(n). A `Counter` of all values, then for each different `a` I check if `target - a` exists and multiply the two counts. If `a` is exactly half the target it needs at least two copies, and the count is `c × (c - 1) / 2`. Only this version gives the index-pair total. |
+| `find_value_pairs_hash(nums, target)` | O(n + u log u) expected time for n numbers and u distinct values. I count the values, sort the distinct keys, then look up each complement. Different values contribute the product of their counts. For equal values the contribution is `c × (c - 1) / 2`. Only this version gives the index-pair total. |
 | `find_value_pairs_two_pointer(nums, target)` | O(n log n). Sorts a copy, starts one pointer at each end and moves the left one up when the sum is too small and the right one down when it's too big. Returns the value pairs only. |
 
 ```python

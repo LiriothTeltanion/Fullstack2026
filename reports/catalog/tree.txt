@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-26
-Base HEAD: 44ce0b1108364908c2774df4b8b0d1b3f1bd6cdb
-Source-index SHA-256 (generated outputs excluded): bd05b68d3011d3761318556c807be81885d9d3588b5e5c074db0c4b38fb272ba
-Indexed files: 3210
+Base HEAD: deefd4eec65cc3e1651eee7d6d19f107b4dd934f
+Source-index SHA-256 (generated outputs excluded): c2db43f8d9ebc85ce13f625eec4c7c4e764d5a9750cae841e3de4ebb432e9e79
+Indexed files: 3211
 
 .
 ├── .github
@@ -492,6 +492,7 @@ Indexed files: 3210
 │   ├── python
 │   │   ├── _loader.py
 │   │   ├── README.md
+│   │   ├── test_advanced_algorithm_cli.py
 │   │   ├── test_circle.py
 │   │   ├── test_display_titles.py
 │   │   ├── test_hangman.py

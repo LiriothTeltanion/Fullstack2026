@@ -2,12 +2,12 @@
 Advanced Algorithm - Two-Sum Pairs Finder
 =========================================
 CLI runner: generate 20k numbers and find all pairs summing to target.
-Implements both hash-map O(n) and two-pointer O(n log n) approaches.
+Supports frequency counting and a sorted two-pointer scan.
 
 Author: Kevin Cusnir 'Lirioth'
 Repository: Fullstack2026
 Week 1 Day 5 - Mini Project
-Python Version: 3.8+
+Python Version: 3.10+
 """
 import argparse, time
 from src.demodata import make_dataset
@@ -21,8 +21,12 @@ def main():
     ap.add_argument("--low", type=int, default=0, help="Minimum random value (default: 0)")
     ap.add_argument("--high", type=int, default=10000, help="Maximum random value (default: 10000)")
     ap.add_argument("--algo", choices=["hash", "two-pointer"], default="hash", help="Algorithm to use (default: hash)")
-    ap.add_argument("--sample", type=int, default=10, help="How many sample pairs to print (default: 10)")
+    ap.add_argument("--sample", type=int, default=10, help="Maximum pairs to display; 0 shows only totals (default: 10)")
     args = ap.parse_args()
+    if args.n < 0:
+        ap.error("--n must be zero or greater")
+    if args.low > args.high:
+        ap.error("--low must be less than or equal to --high")
 
     nums, default_target = make_dataset(n=args.n, low=args.low, high=args.high, seed=args.seed)
     target = args.target if args.target is not None else default_target
@@ -45,14 +49,12 @@ def main():
         print(f"Total index-pairs (with multiplicities): {total_index_pairs}")
     print(f"Time: {dt:.2f} ms\n")
 
-    # Print samples nicely
-    sample = pairs[:max(0, args.sample)]
-    if sample:
-        print("Sample pairs:")
-        for a, b in sample:
-            print(f"- {a} and {b} sum to {target}")
-    else:
+    if not pairs:
         print("No pairs found.")
+    elif args.sample > 0:
+        print("Sample pairs:")
+        for a, b in pairs[:args.sample]:
+            print(f"- {a} and {b} sum to {target}")
 
 if __name__ == "__main__":
     main()

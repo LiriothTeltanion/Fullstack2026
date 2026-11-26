@@ -2,13 +2,13 @@
 Advanced Algorithm - Pair Finding Module
 =========================================
 Efficient algorithms for finding pairs that sum to target value.
-Implements both hash-based O(n) and two-pointer O(n log n) approaches.
+Counts frequencies and sorts distinct keys, or sorts all inputs for a two-pointer scan.
 Returns unique value pairs and total index-pair counts.
 
 Author: Kevin Cusnir 'Lirioth'
 Repository: Fullstack2026
 Week 1 Day 5 - Mini Project
-Python Version: 3.8+
+Python Version: 3.10+
 """
 from collections import Counter
 from typing import Iterable, List, Tuple
