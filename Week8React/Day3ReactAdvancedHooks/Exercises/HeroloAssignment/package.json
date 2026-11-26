@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "start": "node --env-file-if-exists=.env.local server.js",
-    "test": "node --test accuweather.test.js"
+    "test": "node --test accuweather.test.js preferences.test.js"
   },
   "dependencies": {
     "react": "^18.3.1",
