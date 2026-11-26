@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-26
-Base HEAD: 922499df7b80cdbb162aede652d255d1b34cb8ae
-Source-index SHA-256 (generated outputs excluded): 83dfcd6707216657e701a4337012375a31ae0235a21ac21f1f48e9f74d2f235e
-Indexed files: 3209
+Base HEAD: 44ce0b1108364908c2774df4b8b0d1b3f1bd6cdb
+Source-index SHA-256 (generated outputs excluded): bd05b68d3011d3761318556c807be81885d9d3588b5e5c074db0c4b38fb272ba
+Indexed files: 3210
 
 .
 ├── .github
@@ -896,7 +896,8 @@ Indexed files: 3209
 │   │   │   │   │   ├── package.json
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   ├── server.js
-│   │   │   │   │   └── settings.js
+│   │   │   │   │   ├── settings.js
+│   │   │   │   │   └── user-model.test.js
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md

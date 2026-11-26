@@ -32,6 +32,9 @@ export async function register(req, res) {
     return res.status(409).json({ error: "An account with that email already exists" });
   }
   const user = createUser({ name, email, passwordHash: await bcrypt.hash(password, 10) });
+  if (!user) {
+    return res.status(409).json({ error: "An account with that email already exists" });
+  }
   res.status(201).json({ token: signToken(user), user: toPublic(user) });
 }
 

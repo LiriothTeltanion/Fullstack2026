@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js",
-    "test": "node --test account-flow.test.js"
+    "test": "node --test account-flow.test.js user-model.test.js"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",

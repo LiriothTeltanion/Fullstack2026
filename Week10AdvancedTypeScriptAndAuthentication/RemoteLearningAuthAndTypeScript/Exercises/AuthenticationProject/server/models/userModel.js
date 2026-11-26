@@ -6,10 +6,13 @@ export const findByEmail = email => users.find(user => user.email === email.trim
 export const findById = id => users.find(user => user.id === id);
 
 export function createUser({ name, email, passwordHash }) {
+  const normalizedEmail = email.trim().toLowerCase();
+  // Check and insert synchronously: duplicates return no user and consume no ID.
+  if (findByEmail(normalizedEmail)) return undefined;
   const user = {
     id: nextId++,
     name: name.trim(),
-    email: email.trim().toLowerCase(),
+    email: normalizedEmail,
     passwordHash,
     bio: "",
     joinedAt: new Date().toISOString(),
