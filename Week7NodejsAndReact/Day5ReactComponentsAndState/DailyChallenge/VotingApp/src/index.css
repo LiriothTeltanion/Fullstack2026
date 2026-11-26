@@ -72,6 +72,58 @@ button:disabled {
   color: #94a3b8;
 }
 
+.share {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 4ch;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.percentage {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.leader-label {
+  display: block;
+  color: #86efac;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+button {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+button:focus-visible {
+  outline: 3px solid #f8fafc;
+  outline-offset: 3px;
+}
+
+@media (max-width: 30rem) {
+  .row {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .row button {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .share {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .bar span {
     transition: none;

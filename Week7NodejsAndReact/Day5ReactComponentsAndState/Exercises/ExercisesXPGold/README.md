@@ -22,8 +22,10 @@ Open the address Vite prints (usually http://localhost:5173).
 ## 🎯 The challenge
 
 1. **Counter** (`Counter.jsx`): `min` and `max` arrive as props (0 and 10). The minus and plus buttons are disabled at the limits, and a note appears when the count reaches the maximum.
-2. **Controlled form** (`SignupForm.jsx`): name, email, a language `<select>` and a newsletter checkbox, all in one `form` state object. A live preview line updates on every keystroke, and submitting shows a thank-you line and clears the form.
+2. **Controlled form** (`SignupForm.jsx`): name, email, a language `<select>` and a newsletter checkbox, all in one `form` state object. A live preview updates as you type. A valid submission displays the completed preview and clears the inputs.
 3. **Mount and unmount** (`ShowHide.jsx`): a button adds or removes the `Child` component. The child's `useEffect` writes "Child mounted", and its cleanup writes "Child unmounted" into a numbered log.
+
+**Try the controlled form.** Enter a few spaces in Name, a valid email and a favorite language. Choosing **Preview signup** returns focus to Name and preserves the draft. Replace the spaces with a name and try again. The preview shows the trimmed name, email, language and newsletter choice. The exercise runs in the browser and sends no account or newsletter request.
 
 ## 🧠 What I learned
 
