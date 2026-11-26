@@ -63,3 +63,15 @@ The terminal shows one line per request, for example `POST /posts -> 400 (1 ms)`
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 Week 7 Day 1 - Routes, Controllers and Middleware - Exercises XP Gold
+
+## Blog post contract and verification
+
+The in-memory blog exposes `title`, `content` and an ISO 8601 `timestamp` on
+seeded and newly created posts. The timestamp records creation and stays unchanged
+when a post is updated. Restarting the server restores the original seed data.
+The middleware examples above remain available alongside the blog routes.
+
+Run `npm test` after installing dependencies. The regression starts the actual
+Express server on a temporary local port and exercises list, create, retrieve,
+update and delete, timestamp preservation, invalid input, missing records and the
+DELETE authorization guard. It uses a fictional local key and no external service.

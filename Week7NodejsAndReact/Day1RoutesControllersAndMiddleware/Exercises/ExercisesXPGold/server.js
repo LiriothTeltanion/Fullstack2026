@@ -37,6 +37,6 @@ app.get("/broken", () => {
 app.use(notFound);
 app.use(errorHandler); // error handlers go last and take four arguments
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+const server = app.listen(PORT, process.env.HOST, () => {
+  console.log(`Server running on http://localhost:${server.address().port}`);
 });

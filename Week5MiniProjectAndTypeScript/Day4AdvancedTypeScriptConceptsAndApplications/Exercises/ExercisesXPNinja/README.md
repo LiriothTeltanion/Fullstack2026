@@ -50,3 +50,29 @@ npx tsc --strict --noEmit ExercisesXPNinja.ts
 **Kevin Cusnir 'Lirioth'**  
 Repository: [Fullstack2026](https://github.com/LiriothTeltanion/Fullstack2026)  
 Week 5 Day 4 - Advanced TypeScript Concepts and Applications - Exercises XP Ninja
+
+## Generic collection exercises
+
+[genericCollections.ts](genericCollections.ts) adds three independent examples:
+
+- `Container<T>` adds, removes and lists objects. Use an intersection such as
+  `{ name: string } & { id: number }` as its type argument.
+- `Response<T>` describes a decoded API response. `parseResponse<T>()` returns
+  its payload with a type assertion. This assertion does not validate untrusted
+  JSON; a real API consumer must validate that data before using it.
+- `Repository<T>` adds, retrieves and lists typed values. Empty and invalid
+  positions return `undefined`. List methods return an array snapshot rather
+  than exposing the internal array.
+
+The earlier conditional-type examples remain in `ExercisesXPNinja.ts`.
+
+```bash
+node genericCollections.examples.ts
+node --test genericCollections.test.mjs
+npx tsc --strict --noEmit --target ES2022 --module nodenext --allowImportingTsExtensions genericCollections.ts genericCollections.examples.ts
+```
+
+The examples demonstrate intersection objects, response payloads and a string
+repository. Three expected compile errors also check missing intersection fields,
+incorrect repository values and an incomplete response. Runtime tests cover removal,
+empty and invalid indexes, different payload types and defensive array snapshots.

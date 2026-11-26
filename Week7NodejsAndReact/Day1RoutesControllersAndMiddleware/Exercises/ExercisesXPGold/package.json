@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "test": "node --test tests/post-api.test.js",
     "start": "node server.js",
     "dev": "node --watch server.js"
   },

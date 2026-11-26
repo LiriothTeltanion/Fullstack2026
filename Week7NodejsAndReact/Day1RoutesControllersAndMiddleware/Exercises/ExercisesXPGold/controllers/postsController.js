@@ -2,6 +2,8 @@ const posts = [
   { id: 1, title: "Middleware order", content: "app.use runs top to bottom." },
   { id: 2, title: "next()", content: "Forget it and the request hangs." },
 ];
+// Seeded and newly submitted posts expose the same creation-time contract.
+for (const post of posts) post.timestamp = new Date().toISOString();
 let nextId = 3;
 
 function findIndex(id) {
@@ -25,6 +27,7 @@ export function getPost(req, res, next) {
 
 export function createPost(req, res) {
   const post = { id: nextId++, title: req.body.title.trim(), content: req.body.content.trim() };
+  post.timestamp = new Date().toISOString();
   posts.push(post);
   res.status(201).json(post);
 }

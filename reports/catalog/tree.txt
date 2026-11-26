@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-26
-Base HEAD: 87a2a896a6bbff9b447dbba9558cdcf148940332
-Source-index SHA-256 (generated outputs excluded): ec74d587383027eff45bc2b0a8a4aebc9cd2077aa252ebcfc1f76dc256584578
-Indexed files: 3075
+Base HEAD: 29d0923e2a3434f1315483b5aa8c6de7a9715159
+Source-index SHA-256 (generated outputs excluded): 65ca7b3168ca61114d7509c12d3427ee2d7959c50656ddf967d507ee920936fc
+Indexed files: 3081
 
 .
 ├── .github
@@ -2237,6 +2237,9 @@ Indexed files: 3075
 │   │   │   │   └── README.md
 │   │   │   ├── ExercisesXPNinja
 │   │   │   │   ├── ExercisesXPNinja.ts
+│   │   │   │   ├── genericCollections.examples.ts
+│   │   │   │   ├── genericCollections.test.mjs
+│   │   │   │   ├── genericCollections.ts
 │   │   │   │   └── README.md
 │   │   │   └── README.md
 │   │   └── README.md
@@ -2657,7 +2660,11 @@ Indexed files: 3075
 │   │   │   │   ├── routes
 │   │   │   │   │   ├── posts.js
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── post-api.test.js
+│   │   │   │   │   └── README.md
 │   │   │   │   ├── .env.example
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── server.js

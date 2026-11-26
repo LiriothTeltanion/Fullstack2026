@@ -2,8 +2,8 @@
 
 > Regenerated from the exact Git index on `2026-11-26` by `tools/refresh_structure_catalogs.py`.
 
-- Base HEAD: `87a2a896a6bbff9b447dbba9558cdcf148940332`
-- Source-index fingerprint: `sha256:ec74d587383027eff45bc2b0a8a4aebc9cd2077aa252ebcfc1f76dc256584578` (generated outputs excluded)
+- Base HEAD: `29d0923e2a3434f1315483b5aa8c6de7a9715159`
+- Source-index fingerprint: `sha256:65ca7b3168ca61114d7509c12d3427ee2d7959c50656ddf967d507ee920936fc` (generated outputs excluded)
 
 This catalog proves repository presence and path integrity only. It does not prove that an exercise runs, that Kevin can explain it, or that it is mastered or portfolio-ready.
 
@@ -197,7 +197,7 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week5MiniProjectAndTypeScript/Day4AdvancedTypeScriptConceptsAndApplications/DailyChallenge` | Daily Challenge | TypeScript | 3 | present (canonical) | [source](<../../Week5MiniProjectAndTypeScript/Day4AdvancedTypeScriptConceptsAndApplications/DailyChallenge>); runtime unverified |
 | `Week5MiniProjectAndTypeScript/Day4AdvancedTypeScriptConceptsAndApplications/Exercises/ExercisesXP` | Exercise | TypeScript | 3 | present (canonical) | [source](<../../Week5MiniProjectAndTypeScript/Day4AdvancedTypeScriptConceptsAndApplications/Exercises/ExercisesXP>); runtime unverified |
 | `Week5MiniProjectAndTypeScript/Day4AdvancedTypeScriptConceptsAndApplications/Exercises/ExercisesXPGold` | Exercise | TypeScript | 3 | present (canonical) | [source](<../../Week5MiniProjectAndTypeScript/Day4AdvancedTypeScriptConceptsAndApplications/Exercises/ExercisesXPGold>); runtime unverified |
-| `Week5MiniProjectAndTypeScript/Day4AdvancedTypeScriptConceptsAndApplications/Exercises/ExercisesXPNinja` | Exercise | TypeScript | 2 | present (canonical) | [source](<../../Week5MiniProjectAndTypeScript/Day4AdvancedTypeScriptConceptsAndApplications/Exercises/ExercisesXPNinja>); runtime unverified |
+| `Week5MiniProjectAndTypeScript/Day4AdvancedTypeScriptConceptsAndApplications/Exercises/ExercisesXPNinja` | Exercise | JavaScript \| TypeScript | 5 | present (canonical) | [source](<../../Week5MiniProjectAndTypeScript/Day4AdvancedTypeScriptConceptsAndApplications/Exercises/ExercisesXPNinja>); runtime unverified |
 | `Week5MiniProjectAndTypeScript/RemoteLearningTypeScript/Exercises/ExercisesXP` | Exercise | CSS \| HTML \| JSON \| JavaScript \| TypeScript | 28 | present (canonical) | [source](<../../Week5MiniProjectAndTypeScript/RemoteLearningTypeScript/Exercises/ExercisesXP>); runtime unverified |
 | `Week5MiniProjectAndTypeScript/RemoteLearningTypeScript/Exercises/RecipeFinder` | Exercise | CSS \| HTML \| JSON \| JavaScript \| TypeScript | 21 | present (canonical) | [source](<../../Week5MiniProjectAndTypeScript/RemoteLearningTypeScript/Exercises/RecipeFinder>); runtime unverified |
 | `Week5MiniProjectAndTypeScript/RemoteLearningTypeScript/Exercises/ReduxPractice` | Exercise | CSS \| HTML \| JSON \| JavaScript \| TypeScript | 27 | present (canonical) | [source](<../../Week5MiniProjectAndTypeScript/RemoteLearningTypeScript/Exercises/ReduxPractice>); runtime unverified |
@@ -232,7 +232,7 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week6DatabasesAndNodejs/Day5NodejsWebServer/Exercises/ExercisesXPNinja` | Exercise | CSS \| HTML \| JSON \| JavaScript | 18 | present (canonical) | [source](<../../Week6DatabasesAndNodejs/Day5NodejsWebServer/Exercises/ExercisesXPNinja>); runtime unverified |
 | `Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/DailyChallenge/TriviaQuizGame` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript | 14 | present (canonical) | [source](<../../Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/DailyChallenge/TriviaQuizGame>); runtime unverified |
 | `Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/Exercises/ExercisesXP` | Exercise | JSON \| JavaScript | 16 | present (canonical) | [source](<../../Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/Exercises/ExercisesXP>); runtime unverified |
-| `Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/Exercises/ExercisesXPGold` | Exercise | JSON \| JavaScript | 14 | present (canonical) | [source](<../../Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/Exercises/ExercisesXPGold>); runtime unverified |
+| `Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/Exercises/ExercisesXPGold` | Exercise | JSON \| JavaScript | 17 | present (canonical) | [source](<../../Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/Exercises/ExercisesXPGold>); runtime unverified |
 | `Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/Exercises/ExercisesXPNinja` | Exercise | JSON \| JavaScript | 12 | present (canonical) | [source](<../../Week7NodejsAndReact/Day1RoutesControllersAndMiddleware/Exercises/ExercisesXPNinja>); runtime unverified |
 | `Week7NodejsAndReact/Day2SQLQueryBuilder/DailyChallenge/RegistrationAndLogin` | Daily Challenge | JSON \| JavaScript \| SQL | 14 | present (canonical) | [source](<../../Week7NodejsAndReact/Day2SQLQueryBuilder/DailyChallenge/RegistrationAndLogin>); runtime unverified |
 | `Week7NodejsAndReact/Day2SQLQueryBuilder/Exercises/ExercisesXP` | Exercise | JSON \| JavaScript \| SQL | 16 | present (canonical) | [source](<../../Week7NodejsAndReact/Day2SQLQueryBuilder/Exercises/ExercisesXP>); runtime unverified |
