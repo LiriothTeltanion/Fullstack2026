@@ -2,8 +2,8 @@
 
 > Regenerated from the exact Git index on `2026-11-26` by `tools/refresh_structure_catalogs.py`.
 
-- Base HEAD: `54a1c496bd1b09ca878693fa1876d2c80646af15`
-- Source-index fingerprint: `sha256:504e74417793b0df95ffc9ac95917883148bf8d7a4106d15669b77fd2b469ed7` (generated outputs excluded)
+- Base HEAD: `0303ccac982653aff73e1c7a9a5d35cbd626b0a1`
+- Source-index fingerprint: `sha256:8d56baa5bdb4c075f4ba71beec4527b4ca18140261a4102e41c3ad5345e183c1` (generated outputs excluded)
 
 This catalog proves repository presence and path integrity only. It does not prove that an exercise runs, that Kevin can explain it, or that it is mastered or portfolio-ready.
 
@@ -40,7 +40,7 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week13WebDevelopmentBasics/Day3CSSGridAndLayout/Exercises/MyCV` | Exercise | CSS \| HTML | 3 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day3CSSGridAndLayout/Exercises/MyCV>); runtime unverified |
 | `Week13WebDevelopmentBasics/Day3CSSGridAndLayout/Exercises/ThreeLandingPages` | Exercise | CSS \| HTML | 6 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day3CSSGridAndLayout/Exercises/ThreeLandingPages>); runtime unverified |
 | `Week13WebDevelopmentBasics/Day4Bootstrap/DailyChallenge/WildAndWackyVegetables` | Daily Challenge | CSS \| HTML \| JavaScript | 5 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day4Bootstrap/DailyChallenge/WildAndWackyVegetables>); runtime unverified |
-| `Week13WebDevelopmentBasics/Day4Bootstrap/Exercises/Components` | Exercise | CSS \| HTML \| JavaScript | 4 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day4Bootstrap/Exercises/Components>); runtime unverified |
+| `Week13WebDevelopmentBasics/Day4Bootstrap/Exercises/Components` | Exercise | CSS \| HTML \| JSON \| JavaScript | 17 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day4Bootstrap/Exercises/Components>); runtime unverified |
 | `Week13WebDevelopmentBasics/Day4Bootstrap/Exercises/RecreateLandingPage` | Exercise | CSS \| HTML \| JavaScript | 3 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day4Bootstrap/Exercises/RecreateLandingPage>); runtime unverified |
 | `Week13WebDevelopmentBasics/Day4Bootstrap/Exercises/RecreateLandingPage2` | Exercise | CSS \| HTML \| JavaScript | 3 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day4Bootstrap/Exercises/RecreateLandingPage2>); runtime unverified |
 | `Week13WebDevelopmentBasics/Day4Bootstrap/Exercises/StartupLandingPage` | Exercise | CSS \| HTML \| JavaScript | 6 | present (canonical) | [source](<../../Week13WebDevelopmentBasics/Day4Bootstrap/Exercises/StartupLandingPage>); runtime unverified |
