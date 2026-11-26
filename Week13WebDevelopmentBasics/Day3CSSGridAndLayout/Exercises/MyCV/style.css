@@ -169,6 +169,133 @@ a:focus-visible {
 }
 
 /* Print as a clean one-page CV */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  padding: 0.75rem;
+  color: #fff;
+  background: #0f766e;
+  z-index: 2;
+}
+.skip-link:focus {
+  left: 0;
+}
+.social-icon {
+  vertical-align: middle;
+  margin-right: 0.35rem;
+  filter: invert(1);
+}
+.project-preview {
+  margin: 1rem 0 0;
+}
+.project-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  background: #1e2a3a;
+}
+.project-preview figcaption {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0.4rem;
+}
+.cv-header,
+.cv-main,
+.cv-side {
+  min-width: 0;
+}
+#contact {
+  border-top: 1px solid #d5dde6;
+  margin-top: 2rem;
+  padding-top: 0.5rem;
+}
+#contact label {
+  display: block;
+  font-weight: 600;
+  margin-top: 0.75rem;
+}
+#contact input,
+#contact textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #667480;
+  border-radius: 6px;
+  font: inherit;
+  color: var(--text);
+  background: #fff;
+}
+#contact textarea {
+  resize: vertical;
+}
+#contact [aria-invalid="true"] {
+  border-color: #a32222;
+  border-width: 2px;
+}
+#contact :is(input, textarea, button, a):focus-visible {
+  outline: 3px solid #0f766e;
+  outline-offset: 3px;
+}
+.field-error {
+  color: #a32222;
+  font-weight: 600;
+  margin: 0.2rem 0;
+}
+.field-error:empty {
+  display: none;
+}
+.field-hint,
+.privacy-note {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+#contact button,
+.contact-link {
+  padding: 0.65rem 0.9rem;
+  border: 2px solid #0f766e;
+  border-radius: 6px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  background: #0f766e;
+  color: white;
+  text-decoration: none;
+}
+#contact button[type="button"] {
+  color: #0f766e;
+  background: white;
+}
+#contact button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+#contact-status {
+  min-height: 1.5em;
+  font-weight: 600;
+}
+[hidden] {
+  display: none !important;
+}
+@media (max-width: 420px) {
+  .cv-header {
+    padding: 1.5rem;
+    gap: 1rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .cv-main,
+  .cv-side {
+    padding: 1.5rem;
+  }
+}
 @media print {
   body {
     padding: 0;
@@ -190,5 +317,12 @@ a:focus-visible {
 
   .cv-side a {
     color: var(--text);
+  }
+  #contact,
+  .skip-link {
+    display: none;
+  }
+  .social-icon {
+    filter: none;
   }
 }
