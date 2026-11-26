@@ -4,7 +4,7 @@ import AuthPage from "./pages/AuthPage";
 import ProfilePage from "./pages/ProfilePage";
 
 export default function App() {
-  const { user, logout } = useAuth();
+  const { user, token, logout, sessionMessage } = useAuth();
 
   return (
     <main>
@@ -16,6 +16,7 @@ export default function App() {
           </button>
         )}
       </nav>
+      {sessionMessage && !token && <p role="status">{sessionMessage}</p>}
       <RequireAuth fallback={<AuthPage />}>
         <ProfilePage />
       </RequireAuth>

@@ -1,16 +1,28 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { hasApiKey, searchPhotos } from "../api/pexels.js";
+import { getPhotoQuery } from "../gallerySettings.js";
 
 function Gallery() {
   // The same component serves /mountain and /search/anything.
-  const { query } = useParams();
+  const { pathname } = useLocation();
+  const query = getPhotoQuery(pathname);
+  const queryError =
+    query === null
+      ? "This URL contains invalid percent encoding. Try another search."
+      : !query.trim()
+        ? "Enter a search term."
+        : "";
   const [photos, setPhotos] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
   useEffect(() => {
-    if (!hasApiKey) return;
+    if (!hasApiKey || queryError) {
+      setLoading(false);
+      setError("");
+      return;
+    }
     let ignore = false;
     setLoading(true);
     setError("");
@@ -21,8 +33,9 @@ function Gallery() {
     return () => {
       ignore = true;
     };
-  }, [query]);
+  }, [query, queryError]);
 
+  if (queryError) return <p className="error" role="alert">{queryError}</p>;
   if (loading) return <p className="muted">Loading {query} pictures…</p>;
   if (error) return <p className="error">{error}</p>;
 

@@ -51,6 +51,14 @@ The browser code in `public/app.js` writes every message with `textContent`, so 
 - The client library comes from the server itself at `/socket.io/socket.io.js`, no CDN needed
 - `express-rate-limit` guards the page Express serves (100 requests per 15 minutes per IP); chat messages go over the socket and don't count
 
+## Connection and room behavior
+
+- Room names are trimmed and limited to 20 characters. A blank room joins general, and the heading shows that normalized name.
+- The page retains its username and room in memory and rejoins once when Socket.IO establishes a new connection. The server confirms room membership before Send becomes available.
+- The initial join form stays visible while connection or room confirmation is pending. Its Join button prevents repeat submissions.
+- Sending is disabled while disconnected. A draft stays in the message field, ready to send after the room has been rejoined.
+- The join form and chat panel alternate their visible state. The panel includes its padding within the mobile width.
+
 ---
 
 ## 👤 Author

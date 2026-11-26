@@ -2,6 +2,8 @@
 // node queries.js        -> runs them on PostgreSQL and prints the rows
 // node queries.js --dry  -> only prints the SQL that Knex builds (no database needed)
 import db from "./db/db.js";
+import { resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 
 // 1. Products under 60, cheapest first
 export const cheapProducts = () =>
@@ -19,27 +21,36 @@ export const orderDetails = () =>
     .select("o.id", "c.name as customer", "p.name as product", "o.quantity")
     .orderBy("o.id");
 
-// 4. How much each customer spent (groupBy + sum)
+// 4. Keep distinct customer identities, including customers without any orders.
 export const spendingPerCustomer = () =>
-  db("orders as o")
-    .join("customers as c", "c.id", "o.customer_id")
-    .join("products as p", "p.id", "o.product_id")
-    .select("c.name")
-    .sum({ total: db.raw("p.price * o.quantity") })
-    .groupBy("c.name")
-    .orderBy("total", "desc");
+  db("customers as c")
+    .leftJoin("orders as o", "c.id", "o.customer_id")
+    .leftJoin("products as p", "p.id", "o.product_id")
+    .select("c.id", "c.name")
+    .select(db.raw("COALESCE(SUM(?? * ??), 0) AS ??", ["p.price", "o.quantity", "total"]))
+    .groupBy("c.id", "c.name")
+    .orderBy("total", "desc")
+    .orderBy("c.id");
 
 // 5. Case-insensitive search by name
 export const searchProducts = text => db("products").select("name").whereILike("name", `%${text}%`);
 
 // 6. Place an order: insert it and lower the stock, all or nothing.
-export function placeOrder(customerId, productId, quantity) {
+export async function placeOrder(customerId, productId, quantity) {
+  if (!Number.isSafeInteger(quantity) || quantity < 1) {
+    throw new RangeError("Quantity must be a positive safe integer");
+  }
+
   return db.transaction(async trx => {
-    const product = await trx("products").where({ id: productId }).first();
-    if (!product || product.stock < quantity) {
+    // Reserve stock only when enough is available, using one conditional update.
+    const updated = await trx("products")
+      .where({ id: productId })
+      .where("stock", ">=", quantity)
+      .decrement("stock", quantity)
+      .returning("id");
+    if (updated.length === 0) {
       throw new Error("Not enough stock");
     }
-    await trx("products").where({ id: productId }).decrement("stock", quantity);
     const [order] = await trx("orders")
       .insert({ customer_id: customerId, product_id: productId, quantity })
       .returning("*");
@@ -47,15 +58,14 @@ export function placeOrder(customerId, productId, quantity) {
   });
 }
 
-const exercises = [
-  ["1. Products under 60", cheapProducts()],
-  ["2. Tech and home products", productsIn(["tech", "home"])],
-  ["3. Order details", orderDetails()],
-  ["4. Spending per customer", spendingPerCustomer()],
-  ['5. Search "co"', searchProducts("co")],
-];
-
 async function main() {
+  const exercises = [
+    ["1. Products under 60", cheapProducts()],
+    ["2. Tech and home products", productsIn(["tech", "home"])],
+    ["3. Order details", orderDetails()],
+    ["4. Spending per customer", spendingPerCustomer()],
+    ['5. Search "co"', searchProducts("co")],
+  ];
   const dryRun = process.argv.includes("--dry");
   for (const [title, query] of exercises) {
     console.log(`\n${title}`);
@@ -75,8 +85,11 @@ async function main() {
   await db.destroy();
 }
 
-main().catch(async err => {
-  console.error(err.message);
-  await db.destroy();
-  process.exitCode = 1;
-});
+// Importing these query helpers leaves execution and connection cleanup to the caller.
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  main().catch(async err => {
+    console.error(err.message);
+    await db.destroy();
+    process.exitCode = 1;
+  });
+}

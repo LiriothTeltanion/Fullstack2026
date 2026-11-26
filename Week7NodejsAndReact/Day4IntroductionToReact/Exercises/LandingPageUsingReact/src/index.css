@@ -144,3 +144,27 @@ body {
   text-align: center;
   color: var(--muted);
 }
+
+/* Form feedback stays next to its field and visible to keyboard users. */
+.form-error {
+  margin: 0;
+  color: #fca5a5;
+  font-size: 0.9rem;
+}
+
+.contact [aria-invalid="true"] {
+  border: 2px solid #fca5a5;
+}
+
+.demo-note {
+  color: var(--muted);
+}
+
+.contact-status {
+  color: var(--accent-soft);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-soft);
+  outline-offset: 3px;
+}

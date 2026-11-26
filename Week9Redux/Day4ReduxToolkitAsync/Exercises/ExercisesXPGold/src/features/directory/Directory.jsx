@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   fetchPostsByUser,
@@ -11,6 +11,7 @@ export default function Directory() {
   const { users, usersStatus, selectedUserId } = useSelector(state => state.directory);
   const entry = useSelector(selectSelectedEntry);
   const dispatch = useDispatch();
+  const [postsAttempt, setPostsAttempt] = useState(0);
 
   useEffect(() => {
     if (usersStatus === "idle") dispatch(fetchUsers());
@@ -21,7 +22,7 @@ export default function Directory() {
     if (selectedUserId === null) return undefined;
     const promise = dispatch(fetchPostsByUser(selectedUserId));
     return () => promise.abort();
-  }, [selectedUserId, dispatch]);
+  }, [selectedUserId, postsAttempt, dispatch]);
 
   return (
     <div className="layout">
@@ -30,7 +31,17 @@ export default function Directory() {
         {usersStatus === "loading" && (
           <div className="spinner" role="status" aria-label="Loading users" />
         )}
-        {usersStatus === "failed" && <p className="error">Could not load users.</p>}
+        {usersStatus === "failed" && (
+          <>
+            <p className="error" role="alert">
+              Could not load users.
+            </p>
+            <button onClick={() => dispatch(fetchUsers())}>Retry users</button>
+          </>
+        )}
+        {usersStatus === "succeeded" && users.length === 0 && (
+          <p className="muted">No users found.</p>
+        )}
         <ul className="plain">
           {users.map(user => (
             <li key={user.id}>
@@ -51,8 +62,18 @@ export default function Directory() {
         {entry?.status === "loading" && (
           <div className="spinner" role="status" aria-label="Loading posts" />
         )}
-        {entry?.status === "failed" && <p className="error">{entry.error}</p>}
-        {entry?.status === "succeeded" && (
+        {entry?.status === "failed" && (
+          <>
+            <p className="error" role="alert">
+              Could not load posts. {entry.error}
+            </p>
+            <button onClick={() => setPostsAttempt(attempt => attempt + 1)}>Retry posts</button>
+          </>
+        )}
+        {entry?.status === "succeeded" && entry.items.length === 0 && (
+          <p className="muted">This user has no posts.</p>
+        )}
+        {entry?.status === "succeeded" && entry.items.length > 0 && (
           <ol>
             {entry.items.map(post => (
               <li key={post.id}>{post.title}</li>

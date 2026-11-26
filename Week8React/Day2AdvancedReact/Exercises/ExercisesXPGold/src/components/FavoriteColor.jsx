@@ -1,9 +1,10 @@
-import { Component } from "react";
+import { Component, createRef } from "react";
 
 class FavoriteColor extends Component {
   constructor(props) {
     super(props);
     this.state = { favoriteColor: "red", allowUpdate: true };
+    this.visibleColor = createRef();
   }
 
   componentDidMount() {
@@ -18,8 +19,9 @@ class FavoriteColor extends Component {
     return nextState.allowUpdate || this.state.allowUpdate !== nextState.allowUpdate;
   }
 
-  getSnapshotBeforeUpdate(prevProps, prevState) {
-    return prevState.favoriteColor;
+  getSnapshotBeforeUpdate() {
+    // State can change while rendering is blocked; the DOM still holds the last visible color.
+    return this.visibleColor.current?.textContent ?? "";
   }
 
   componentDidUpdate(prevProps, prevState, previousColor) {
@@ -42,7 +44,7 @@ class FavoriteColor extends Component {
     return (
       <div>
         <h3 style={{ color: favoriteColor === "yellow" ? "#b08900" : favoriteColor }}>
-          My Favorite Color is {favoriteColor}
+          My Favorite Color is <span ref={this.visibleColor}>{favoriteColor}</span>
         </h3>
         <button onClick={this.changeColor}>Change color</button>{" "}
         <label>

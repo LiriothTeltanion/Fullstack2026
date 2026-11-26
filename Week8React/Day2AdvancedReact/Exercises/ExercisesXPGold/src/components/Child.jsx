@@ -2,7 +2,13 @@ import { Component } from "react";
 
 class Child extends Component {
   componentWillUnmount() {
-    alert("The component named Header is about to be unmounted.");
+    console.log("Child componentWillUnmount: cleanup");
+    const { deleteRequested } = this.props;
+    if (deleteRequested?.current) {
+      // Consume the explicit Delete intent before announcing the actual unmount.
+      deleteRequested.current = false;
+      alert("The component named Child is about to be unmounted.");
+    }
   }
 
   render() {

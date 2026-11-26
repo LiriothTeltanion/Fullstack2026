@@ -19,6 +19,11 @@ npm run dev
 
 Needs internet access for `jsonplaceholder.typicode.com`.
 
+Select a user to see their posts. If a request fails, use **Retry users** or
+**Retry posts** to try again on the same screen. An empty result has its own
+message. Run `npm test` to check duplicate user loads and recovery from a
+temporary server error without contacting the API.
+
 ## 🎯 The challenge
 
 1. **Users thunk.** `fetchUsers` loads the list once, when `usersStatus` is still `idle`.

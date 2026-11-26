@@ -1,10 +1,17 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import FavoriteColor from "./components/FavoriteColor.jsx";
 import Child from "./components/Child.jsx";
 import ColorWithHooks from "./components/ColorWithHooks.jsx";
 
 function App() {
   const [show, setShow] = useState(true);
+  const deleteRequested = useRef(false);
+
+  const deleteChild = () => {
+    // Let Child announce only an intentional removal, never a development cleanup replay.
+    deleteRequested.current = true;
+    setShow(false);
+  };
 
   return (
     <main className="page">
@@ -18,8 +25,8 @@ function App() {
 
       <section className="card">
         <h2>Exercise 2 · Unmounting</h2>
-        {show && <Child />}
-        <button onClick={() => setShow(false)} disabled={!show}>
+        {show && <Child deleteRequested={deleteRequested} />}
+        <button onClick={deleteChild} disabled={!show}>
           Delete
         </button>
       </section>
