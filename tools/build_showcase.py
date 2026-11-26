@@ -59,18 +59,38 @@ def first_paragraph(text: str) -> str:
     return paragraph
 
 
-def technologies(folder: str, files: list[str], has_demo: bool) -> list[str]:
-    inside = [f for f in files if f.startswith(folder + "/")]
-    suffixes = {PurePosixPath(f).suffix.lower() for f in inside}
+def technologies(repo: Path, folder: str, files: list[str], has_demo: bool) -> list[str]:
+    inside = [PurePosixPath(f[len(folder) + 1:]) for f in files if f.startswith(folder + "/")]
+    suffixes = {path.suffix.lower() for path in inside}
+    dependencies: set[str] = set()
+    runs_node = False
+    for path in inside:
+        if path.name != "package.json" or {"tests", "test", "__tests__", "fixtures"} & set(path.parts[:-1]):
+            continue
+        manifest = json.loads((repo / folder / path).read_text(encoding="utf-8-sig"))
+        dependencies.update(manifest.get("dependencies", {}))
+        scripts = manifest.get("scripts", {})
+        # A production server may use only Node built-ins. A test runner or bundler
+        # alone does not make a React exercise a Node application.
+        runs_node |= any(scripts.get(name, "").startswith("node ") for name in ("start", "server", "api"))
+    has_react = "react" in dependencies
     tags: list[str] = []
     if ".py" in suffixes:
         tags.append("Python")
-    if ".ts" in suffixes:
+    if {".ts", ".tsx"} & suffixes:
         tags.append("TypeScript")
     if ".sql" in suffixes:
         tags.append("SQL")
-    if {".js", ".mjs", ".cjs"} & suffixes:
+    if has_react:
+        tags.append("React")
+        if ".jsx" in suffixes or any(path.suffix == ".js" and "src" in path.parts for path in inside):
+            tags.append("JavaScript")
+        if runs_node or {"express", "fastify", "koa"} & dependencies:
+            tags.append("Node.js")
+    elif {".js", ".mjs", ".cjs"} & suffixes:
         tags.append("JavaScript" if has_demo else "Node.js")
+    if {"redux", "@reduxjs/toolkit", "react-redux"} & dependencies:
+        tags.append("Redux")
     if ".html" in suffixes:
         tags.append("HTML/CSS")
     return tags or ["Notes"]
@@ -137,7 +157,7 @@ def collect(repo: Path) -> dict:
             item.update(
                 {
                     "intro": first_paragraph(text),
-                    "tags": technologies(folder, files, has_demo),
+                    "tags": technologies(repo, folder, files, has_demo),
                     "demo": has_demo,
                     "needs_key": any(f.startswith(folder + "/") and f.endswith("config.example.js") for f in files),
                 }
@@ -348,6 +368,8 @@ footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--m
       <button class="chip" type="button" data-filter="python" aria-pressed="false">Python</button>
       <button class="chip" type="button" data-filter="javascript" aria-pressed="false">JavaScript</button>
       <button class="chip" type="button" data-filter="typescript" aria-pressed="false">TypeScript</button>
+      <button class="chip" type="button" data-filter="react" aria-pressed="false">React</button>
+      <button class="chip" type="button" data-filter="redux" aria-pressed="false">Redux</button>
       <button class="chip" type="button" data-filter="nodejs" aria-pressed="false">Node.js</button>
       <button class="chip" type="button" data-filter="sql" aria-pressed="false">SQL</button>
     </div>

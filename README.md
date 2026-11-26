@@ -9,7 +9,7 @@
 [![Last commit](https://img.shields.io/github/last-commit/LiriothTeltanion/Fullstack2026?style=for-the-badge&logo=git)](https://github.com/LiriothTeltanion/Fullstack2026/commits/main)
 [![Repo size](https://img.shields.io/github/repo-size/LiriothTeltanion/Fullstack2026?style=for-the-badge&logo=github)](https://github.com/LiriothTeltanion/Fullstack2026)
 [![License](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)](LICENSE)
-[![Course map](https://img.shields.io/badge/Course%20map-12%20weeks-8b5cf6?style=for-the-badge)](.learning/course-map.yml)
+[![Course map](https://img.shields.io/badge/Course%20map-14%20weeks-8b5cf6?style=for-the-badge)](.learning/course-map.yml)
 [![Tests](https://img.shields.io/badge/Tests-Python%20%26%20Node-06b6d4?style=for-the-badge)](tests/)
 [![Security](https://img.shields.io/badge/Security-policy-f59e0b?style=for-the-badge)](SECURITY.md)
 [![Live showcase](https://img.shields.io/badge/Live-exercise%20showcase-06b6d4?style=for-the-badge&logo=netlify)](https://kevincusnir.netlify.app)
@@ -175,7 +175,7 @@ The [course map](.learning/course-map.yml) lists every week and day, and the [di
 
 ## 🌟 Project highlights
 
-Every exercise is also on the [live showcase](https://kevincusnir.netlify.app), where the browser projects open as demos.
+In the [exercise showcase](https://kevincusnir.netlify.app), choose **React** or **Redux** and type a project name to narrow the list. Each card links to the exercise on GitHub. Static browser exercises also have an **Open demo** button.
 
 | Project | Technologies | What I practiced |
 |---|---|---|
