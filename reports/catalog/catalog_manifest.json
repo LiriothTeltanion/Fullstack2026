@@ -2,9 +2,9 @@
   "schema_version": 2,
   "generated_on": "2026-11-26",
   "generator": "tools/refresh_structure_catalogs.py",
-  "base_head": "922499df7b80cdbb162aede652d255d1b34cb8ae",
-  "source_index_sha256": "83dfcd6707216657e701a4337012375a31ae0235a21ac21f1f48e9f74d2f235e",
-  "source_index_file_count": 3202,
+  "base_head": "44ce0b1108364908c2774df4b8b0d1b3f1bd6cdb",
+  "source_index_sha256": "bd05b68d3011d3761318556c807be81885d9d3588b5e5c074db0c4b38fb272ba",
+  "source_index_file_count": 3203,
   "fingerprint_excludes": [
     "reports/catalog/catalog_manifest.json",
     "reports/catalog/exercise_catalog.csv",

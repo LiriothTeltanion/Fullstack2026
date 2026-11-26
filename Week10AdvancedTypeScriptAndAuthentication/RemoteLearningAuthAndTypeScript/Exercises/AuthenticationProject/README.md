@@ -64,6 +64,8 @@ The token is kept in `sessionStorage`, so it survives a refresh and is gone when
 
 Accounts and profiles live only in the server process's memory. Restarting the server loses them; create an account again after a restart. Each process also has its own random JWT issuer, so a previous process's saved session is no longer accepted, even when `JWT_SECRET` stays the same. The client explains an unavailable saved session (401/404); a temporary connection failure keeps the saved session and offers **Retry session**.
 
+Within one server process, user insertion synchronously enforces a unique trimmed, lowercase email; a duplicate registration returns 409 without replacing the account or consuming a user ID.
+
 A supplied profile name must be nonblank text. An invalid name returns 400 without changing the bio. Bio-only updates and clearing the bio are supported. The editor preserves failed values, shows an associated name error, and displays normalized server values after a successful save. You can keep editing during a save. Save is disabled until the current request finishes, and duplicate submits are ignored. Newer field edits are preserved with a reminder that they are not saved yet; once Save is enabled again, press it again to save those edits. Responses from a session that has been logged out or replaced are ignored.
 
 From `server`, run `npm test` for local account/profile and restart-lifetime regressions. From `client`, run `npm run typecheck` and `npm run build`.
