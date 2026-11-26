@@ -2,28 +2,44 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getForecast } from "../api/weather.js";
 import { useWeather } from "../context/WeatherContext.jsx";
-import { describeWeather } from "../utils/weatherCodes.js";
+import { describeForecast } from "../utils/weatherCodes.js";
+import WeatherAttribution from "../components/WeatherAttribution.jsx";
 
 function FavoriteCard({ city, unit }) {
   const navigate = useNavigate();
-  const [current, setCurrent] = useState(null);
+  const [result, setCurrent] = useState(null);
+  const current = result?.city === city && result.unit === unit ? result.data : null;
+  const [error, setError] = useState(false);
 
   useEffect(() => {
+    let ignore = false;
+    setCurrent(null);
+    setError(false);
     getForecast(city, unit)
-      .then(data => setCurrent(data.current))
-      .catch(() => setCurrent(null));
+      .then(data => {
+        if (!ignore) setCurrent({ data: data.current, city, unit });
+      })
+      .catch(() => {
+        if (!ignore) setError(true);
+      });
+    return () => {
+      ignore = true;
+    };
   }, [city, unit]);
 
   return (
     <button className="card favorite" onClick={() => navigate("/", { state: { city } })}>
       <strong>{city.name}</strong>
       <span className="muted">{city.country}</span>
+      <span className="muted">
+        {city.provider === "accuweather" ? "AccuWeather" : "Open-Meteo"}
+      </span>
       {current ? (
         <span className="big">
-          {describeWeather(current.code).icon} {current.temperature}°{unit}
+          {describeForecast(current).icon} {current.temperature}°{unit}
         </span>
       ) : (
-        <span className="muted">Loading…</span>
+        <span className="muted">{error ? "Weather unavailable; open to retry." : "Loading…"}</span>
       )}
     </button>
   );
@@ -41,6 +57,9 @@ function Favorites() {
       {favorites.map(city => (
         <FavoriteCard key={city.id} city={city} unit={unit} />
       ))}
+      {favorites.some(city => city.provider === "accuweather") && (
+        <WeatherAttribution provider="accuweather" />
+      )}
     </div>
   );
 }
