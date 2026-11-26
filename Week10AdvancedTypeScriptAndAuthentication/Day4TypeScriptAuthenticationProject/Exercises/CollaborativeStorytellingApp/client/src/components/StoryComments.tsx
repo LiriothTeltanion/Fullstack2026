@@ -1,6 +1,6 @@
 import { useEffect, useId, useRef, useState, type FormEvent } from "react";
 import { api } from "../api";
-import type { StoryComment, User } from "../types";
+import type { StoryComment, User, CommentSettings } from "../types";
 import "./StoryComments.css";
 
 interface DiscussionProps {
@@ -189,6 +189,9 @@ function Discussion({ storyId, currentUser, storyAuthorId }: DiscussionProps) {
   const headingId = useId();
   const inputId = useId();
   const [capabilities, setCapabilities] = useState({ edit: false, delete: false });
+  const [settings, setSettings] = useState<CommentSettings | null>(null);
+  const [changingSettings, setChangingSettings] = useState(false);
+  const [settingsError, setSettingsError] = useState("");
   const [comments, setComments] = useState<StoryComment[]>([]);
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState("");
@@ -211,12 +214,14 @@ function Discussion({ storyId, currentUser, storyAuthorId }: DiscussionProps) {
     setLoadError("");
     Promise.all([
       api.comments(storyId),
+      api.commentSettings(storyId).catch(() => null),
       api.commentCapabilities().catch(() => ({ edit: false, delete: false })),
     ])
-      .then(([{ comments }, available]) => {
+      .then(([{ comments }, currentSettings, available]) => {
         if (active) {
           setComments(comments);
           setCapabilities(available);
+          setSettings(currentSettings);
         }
       })
       .catch((error: unknown) => {
@@ -234,7 +239,7 @@ function Discussion({ storyId, currentUser, storyAuthorId }: DiscussionProps) {
   async function post(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const body = draft.trim();
-    if (!body || posting) return;
+    if (!body || posting || changingSettings || !settings?.commentsOpen) return;
     setPosting(true);
     setPostError("");
     setAnnouncement("");
@@ -246,10 +251,42 @@ function Discussion({ storyId, currentUser, storyAuthorId }: DiscussionProps) {
       setAnnouncement("Comment added.");
       requestAnimationFrame(() => input.current?.focus());
     } catch (error) {
-      if (alive.current)
+      if (alive.current) {
         setPostError(error instanceof Error ? error.message : "Could not post your comment.");
+        if (error instanceof Error && "status" in error && error.status === 409) {
+          const latest = await api.commentSettings(storyId).catch(() => null);
+          if (alive.current) setSettings(latest);
+        }
+      }
     } finally {
       if (alive.current) setPosting(false);
+    }
+  }
+
+  async function updateSettings(refresh = false) {
+    if (!settings || (!refresh && !settings.canChange) || changingSettings || posting) return;
+    setChangingSettings(true);
+    setSettingsError("");
+    try {
+      const updated = await (refresh
+        ? api.commentSettings(storyId)
+        : api.changeCommentSettings(storyId, !settings.commentsOpen));
+      if (alive.current) {
+        setSettings(updated);
+        if (updated.commentsOpen) setPostError("");
+        setAnnouncement(
+          updated.commentsOpen
+            ? "New comments are open."
+            : "New comments are closed. Existing comments remain available."
+        );
+      }
+    } catch (error) {
+      if (alive.current)
+        setSettingsError(
+          error instanceof Error ? error.message : "Could not change comment settings."
+        );
+    } finally {
+      if (alive.current) setChangingSettings(false);
     }
   }
 
@@ -269,9 +306,55 @@ function Discussion({ storyId, currentUser, storyAuthorId }: DiscussionProps) {
       )}
       {!loading && !loadError && (
         <>
+          {!settings && (
+            <div>
+              <p role="alert" className="error">
+                Could not check whether new comments are open. Your draft is preserved.
+              </p>
+              <button type="button" className="secondary" onClick={() => setAttempt(n => n + 1)}>
+                Retry comment settings
+              </button>
+            </div>
+          )}
+          {settings?.supported && (
+            <div className="stack">
+              <p>
+                {settings.commentsOpen
+                  ? "New comments are open."
+                  : "New comments are closed. Existing comments remain available."}
+              </p>
+              {currentUser.id === storyAuthorId && settings.canChange && (
+                <button
+                  type="button"
+                  className="secondary"
+                  aria-disabled={changingSettings || posting}
+                  onClick={() => updateSettings()}
+                >
+                  {changingSettings
+                    ? "Updating comment settings…"
+                    : settings.commentsOpen
+                      ? "Close new comments"
+                      : "Reopen new comments"}
+                </button>
+              )}
+              <button
+                type="button"
+                className="secondary"
+                aria-disabled={changingSettings || posting}
+                onClick={() => updateSettings(true)}
+              >
+                Refresh comment settings
+              </button>
+              {settingsError && (
+                <p role="alert" className="error">
+                  {settingsError}
+                </p>
+              )}
+            </div>
+          )}
           {(!capabilities.edit || !capabilities.delete) && (
             <p className="muted">
-              Some comment actions are unavailable right now. You can still read and post comments.
+              Some comment actions are unavailable right now. Existing comments remain readable.
             </p>
           )}
           {comments.length === 0 ? (
@@ -317,7 +400,10 @@ function Discussion({ storyId, currentUser, storyAuthorId }: DiscussionProps) {
               </p>
             )}
             <div>
-              <button type="submit" disabled={posting || !draft.trim()}>
+              <button
+                type="submit"
+                disabled={posting || changingSettings || !settings?.commentsOpen || !draft.trim()}
+              >
                 {posting ? "Posting…" : "Post comment"}
               </button>
             </div>

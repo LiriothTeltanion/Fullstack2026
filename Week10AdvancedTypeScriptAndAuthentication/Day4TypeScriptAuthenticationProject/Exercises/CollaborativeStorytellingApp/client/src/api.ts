@@ -1,4 +1,4 @@
-import type { Story, StoryComment, User } from "./types";
+import type { Story, StoryComment, User, CommentSettings } from "./types";
 
 let readAccessToken: () => string | null = () => null;
 let writeAccessToken: (token: string | null) => void = () => {};
@@ -69,7 +69,9 @@ async function request<T>(path: string, method = "GET", body?: unknown, retry = 
     return request<T>(path, method, body, false);
   }
   if (!response.ok) {
-    throw new Error(error ?? `Request failed (${response.status})`);
+    throw Object.assign(new Error(error ?? `Request failed (${response.status})`), {
+      status: response.status,
+    });
   }
   return data as T;
 }
@@ -104,6 +106,15 @@ export const api = {
   deleteStory: (id: number) => request<void>(`/stories/${id}`, "DELETE"),
   commentCapabilities: () =>
     request<{ edit: boolean; delete: boolean }>("/stories/comment-capabilities"),
+  commentSettings: (storyId: number) =>
+    request<CommentSettings>(`/stories/${storyId}/comment-settings`).catch((error: unknown) => {
+      // A previous API has no settings route and keeps the original open discussion.
+      if (error instanceof Error && "status" in error && error.status === 404)
+        return { supported: false, commentsOpen: true, canChange: false };
+      throw error;
+    }),
+  changeCommentSettings: (storyId: number, commentsOpen: boolean) =>
+    request<CommentSettings>(`/stories/${storyId}/comment-settings`, "PATCH", { commentsOpen }),
   comments: (storyId: number) =>
     request<{ comments: StoryComment[] }>(`/stories/${storyId}/comments`),
   addComment: (storyId: number, body: string) =>

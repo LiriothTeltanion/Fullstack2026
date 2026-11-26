@@ -1,3 +1,4 @@
+import { readCommentSettings, changeCommentSettings } from "../models/commentSettingsModel.js";
 import {
   createComment,
   listComments,
@@ -26,7 +27,13 @@ export async function postComment(req, res) {
     return res.status(400).json({ error: "A comment needs between 1 and 2000 characters" });
   }
   // Identity always comes from the authenticated request, never from JSON fields.
-  const comment = await createComment({ storyId: req.story.id, authorId: req.user.id, body });
+  let comment;
+  try {
+    comment = await createComment({ storyId: req.story.id, authorId: req.user.id, body });
+  } catch (error) {
+    if (error.status === 503) return settingsUnavailable(res);
+    throw error;
+  }
   if (!comment) return res.status(404).json({ error: "Story not found" });
   res.status(201).json({ comment });
 }
@@ -84,6 +91,42 @@ export async function getCommentCapabilities(req, res) {
 
 function unavailable(res) {
   return res.status(503).json({
-    error: "This comment action is currently unavailable. You can still read and add comments.",
+    error: "This comment action is currently unavailable. You can still read existing comments.",
   });
+}
+
+export async function getCommentSettings(req, res) {
+  let settings;
+  try {
+    settings = await readCommentSettings(req.story.id);
+  } catch (error) {
+    if (error.status === 503) return settingsUnavailable(res);
+    throw error;
+  }
+  if (!settings) return res.status(404).json({ error: "Story not found" });
+  res
+    .set("Cache-Control", "no-store")
+    .json({ ...settings, canChange: settings.canChange && req.story.authorId === req.user.id });
+}
+
+export async function patchCommentSettings(req, res) {
+  if (req.story.authorId !== req.user.id)
+    return res.status(403).json({ error: "Only the story author can change comment settings" });
+  if (typeof req.body?.commentsOpen !== "boolean")
+    return res.status(400).json({ error: "commentsOpen must be a boolean" });
+  let settings;
+  try {
+    settings = await changeCommentSettings(req.story.id, req.user.id, req.body.commentsOpen);
+  } catch (error) {
+    if (error.status === 503) return settingsUnavailable(res);
+    throw error;
+  }
+  if (!settings) return res.status(404).json({ error: "Story no longer exists" });
+  res.set("Cache-Control", "no-store").json(settings);
+}
+
+function settingsUnavailable(res) {
+  return res
+    .status(503)
+    .json({ error: "Comment settings are unavailable. Please try again later." });
 }

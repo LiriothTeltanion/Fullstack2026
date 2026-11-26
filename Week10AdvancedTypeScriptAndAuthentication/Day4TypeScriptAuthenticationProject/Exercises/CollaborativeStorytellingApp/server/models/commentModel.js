@@ -1,5 +1,11 @@
 /** @typedef {import("../../shared/types").StoryComment} PublicComment */
 import { db, pool, tables, usePostgres } from "./db.js";
+import {
+  commentSettingsCapabilities,
+  lockDiscussion,
+  commentsClosed,
+  commentsUnavailable,
+} from "./commentSettingsModel.js";
 
 /** Return only the public author identity, never an account's password or email. */
 function toPublicComment(comment) {
@@ -52,7 +58,9 @@ export async function listComments(storyId) {
 /** @returns {Promise<PublicComment | undefined>} */
 export async function createComment({ storyId, authorId, body }) {
   if (!usePostgres) {
-    if (!db.stories.some(story => story.id === storyId)) return undefined;
+    const story = db.stories.find(item => item.id === storyId);
+    if (!story) return undefined;
+    if (story.commentsOpen === false) throw commentsClosed();
     const comment = {
       id: db.nextCommentId++,
       storyId,
@@ -66,9 +74,26 @@ export async function createComment({ storyId, authorId, body }) {
       authorUsername: db.users.find(user => user.id === authorId)?.username ?? "unknown",
     });
   }
+  const capability = await commentSettingsCapabilities();
+  if (capability.supported && !capability.readable) throw commentsUnavailable();
+  let client;
   try {
+    if (capability.supported) {
+      client = await pool.connect();
+      await client.query("BEGIN");
+      await lockDiscussion(client, storyId);
+      const state = await client.query(
+        `SELECT comments_open FROM ${tables.stories} WHERE id = $1`,
+        [storyId]
+      );
+      if (!state.rows.length) {
+        await client.query("COMMIT");
+        return undefined;
+      }
+      if (state.rows[0].comments_open === false) throw commentsClosed();
+    }
     // The existence check is part of the write, not a separate read/write race.
-    const result = await pool.query(
+    const result = await (client ?? pool).query(
       `WITH inserted AS (
          INSERT INTO ${tables.story_comments} (story_id, author_id, body)
          SELECT id, $2, $3 FROM ${tables.stories} WHERE id = $1
@@ -79,13 +104,19 @@ export async function createComment({ storyId, authorId, body }) {
        FROM inserted c JOIN ${tables.users} u ON u.id = c.author_id`,
       [storyId, authorId, body]
     );
+    if (client) await client.query("COMMIT");
     return result.rows[0] && toPublicComment(fromRow(result.rows[0]));
   } catch (error) {
+    if (client) await client.query("ROLLBACK");
+    if (capability.supported && (error.code === "42501" || error.code === "42703"))
+      throw commentsUnavailable();
     // A story can also disappear while PostgreSQL is checking its foreign key.
     if (error.code === "23503" && error.constraint === "story_comments_story_id_fkey") {
       return undefined;
     }
     throw error;
+  } finally {
+    client?.release();
   }
 }
 
