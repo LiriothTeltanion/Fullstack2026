@@ -1,0 +1,14 @@
+{
+  "images": [
+    {
+      "src": "images/quiet-harbor.svg",
+      "title": "Quiet harbor",
+      "alt": "Original geometric illustration of a blue harbor, a small sailboat and a warm sunrise"
+    },
+    {
+      "src": "images/night-studio.svg",
+      "title": "Night studio",
+      "alt": "Original geometric illustration of a music studio with a keyboard, a monitor and a glowing blue window"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "error-boundary-browser-tests",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "test": "node --test browser.test.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.65.1"
+  }
+}

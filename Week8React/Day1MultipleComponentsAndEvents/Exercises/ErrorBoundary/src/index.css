@@ -101,3 +101,190 @@ textarea {
   max-height: 160px;
   overflow: auto;
 }
+
+/* The practice and the preserved counter simulations share only the base controls. */
+.practice-header {
+  background: #122b42;
+  color: #fff;
+  padding: 1.1rem max(1.25rem, calc((100vw - 1120px) / 2));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.practice-brand {
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+}
+.practice-brand span {
+  color: #a4d6df;
+  margin-left: 0.7rem;
+}
+.practice-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.2rem;
+}
+.practice-header a {
+  color: #d6e7f3;
+  text-underline-offset: 0.4rem;
+  padding: 0.35rem 0;
+}
+.practice-header a[aria-current] {
+  color: #fff;
+  font-weight: 700;
+  text-decoration-thickness: 3px;
+}
+.practice-page {
+  max-width: 1160px;
+  margin: auto;
+  padding: 3rem 1.25rem 2rem;
+}
+.practice-intro {
+  max-width: 750px;
+  margin-bottom: 2.3rem;
+}
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.13em;
+  font-weight: 800;
+  color: #356373;
+}
+.practice-intro h1 {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  color: #122b42;
+  margin: 1rem 0;
+}
+.practice-intro > p:last-child {
+  font-size: 1.1rem;
+  color: #465866;
+  max-width: 650px;
+}
+.practice-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+.practice-card {
+  background: #fff;
+  border: 1px solid #d4dfe7;
+  border-radius: 16px;
+  padding: 1.6rem;
+  min-width: 0;
+  box-shadow: 0 8px 24px #122b4208;
+}
+.practice-card h2 {
+  font-size: 1.65rem;
+  line-height: 1.2;
+  color: #122b42;
+  margin: 0.5rem 0 1rem;
+}
+.practice-card > p:not(.eyebrow) {
+  color: #465866;
+}
+.practice-card button {
+  min-height: 44px;
+  padding: 0.65rem 0.95rem;
+  font-weight: 600;
+}
+.practice-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.3rem;
+}
+.practice-card .secondary {
+  background: #fff;
+  color: #274b9c;
+  border-color: #9bb2db;
+}
+.practice-card .secondary:hover {
+  background: #eef3fc;
+}
+.paragraph-slot {
+  margin-top: 1.5rem;
+  min-width: 0;
+}
+.object-paragraph {
+  background: #edf5f6;
+  padding: 1.2rem;
+  border-left: 4px solid #407a84;
+  font-family: ui-monospace, monospace;
+  overflow-wrap: anywhere;
+}
+.event-status {
+  font-size: 0.9rem;
+  min-height: 3em;
+  margin-bottom: 0;
+}
+.illustrations {
+  margin-top: 1.3rem;
+}
+.illustrations figure {
+  margin: 0 0 1rem;
+}
+.illustrations figure:last-child {
+  margin-bottom: 0;
+}
+.illustrations img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 9px;
+}
+.illustrations figcaption {
+  color: #465866;
+  font-size: 0.8rem;
+  padding-top: 0.4rem;
+}
+.image-placeholder {
+  border: 1px dashed #a4bbc7;
+  background: #f5f9fa;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  border-radius: 9px;
+  color: #465866;
+}
+.image-placeholder span {
+  font-size: 2rem;
+  color: #356373;
+}
+.practice-footnote {
+  color: #465866;
+  font-size: 0.85rem;
+  margin-top: 1.6rem;
+}
+.practice-card .crash {
+  border-color: #e4a8a8;
+  background: #fff4f2;
+  overflow-wrap: anywhere;
+}
+.crash pre {
+  overflow-wrap: anywhere;
+}
+button:focus-visible,
+a:focus-visible,
+summary:focus-visible {
+  outline: 3px solid #d39b19;
+  outline-offset: 4px;
+}
+@media (max-width: 650px) {
+  .practice-header {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1rem 1.25rem;
+  }
+  .practice-columns {
+    grid-template-columns: 1fr;
+  }
+  .practice-page {
+    padding-top: 2rem;
+  }
+  .practice-card {
+    padding: 1.25rem;
+  }
+}

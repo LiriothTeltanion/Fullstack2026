@@ -4,23 +4,30 @@ import { Component } from "react";
 class ErrorBoundary extends Component {
   constructor(props) {
     super(props);
-    this.state = { error: null, errorInfo: null };
+    this.state = { hasError: false, error: null, errorInfo: null };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error };
   }
 
   componentDidCatch(error, errorInfo) {
-    this.setState({ error, errorInfo });
+    console.error("Error boundary caught a render error:", error, errorInfo);
+    this.setState({ errorInfo });
   }
 
   reset = () => {
-    this.setState({ error: null, errorInfo: null });
+    // The parent must also remove the cause of the failing paragraph before retrying.
+    this.props.onReset?.();
+    this.setState({ hasError: false, error: null, errorInfo: null });
   };
 
   render() {
-    const { error, errorInfo } = this.state;
+    const { hasError, error, errorInfo } = this.state;
 
-    if (error) {
+    if (hasError) {
       return (
-        <div className="crash">
+        <div className="crash" role="alert">
           <strong>{this.props.fallback || "Something went wrong."}</strong>
           <details>
             <summary>Details</summary>
@@ -29,7 +36,7 @@ class ErrorBoundary extends Component {
               {errorInfo?.componentStack}
             </pre>
           </details>
-          <button onClick={this.reset}>Try again</button>
+          <button onClick={this.reset}>{this.props.resetLabel || "Try again"}</button>
         </div>
       );
     }

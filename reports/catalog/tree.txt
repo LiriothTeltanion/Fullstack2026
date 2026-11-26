@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-26
-Base HEAD: 54a1c496bd1b09ca878693fa1876d2c80646af15
-Source-index SHA-256 (generated outputs excluded): 504e74417793b0df95ffc9ac95917883148bf8d7a4106d15669b77fd2b469ed7
-Indexed files: 2952
+Base HEAD: 08af7a28024462267444e32b08168deee1c418ef
+Source-index SHA-256 (generated outputs excluded): 7a8b5bfe392492acec9322255cf7b2162e4ac5be38a25d5fab88c738bad457f0
+Indexed files: 2968
 
 .
 ├── .github
@@ -1274,6 +1274,9 @@ Indexed files: 2952
 │   │   │   │   └── vite.config.js
 │   │   │   ├── MemeGenerator
 │   │   │   │   ├── src
+│   │   │   │   │   ├── assets
+│   │   │   │   │   │   ├── header-fallback.svg
+│   │   │   │   │   │   └── README.md
 │   │   │   │   │   ├── components
 │   │   │   │   │   │   ├── Header.jsx
 │   │   │   │   │   │   ├── MemeForm.jsx
@@ -1286,7 +1289,9 @@ Indexed files: 2952
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── tests
 │   │   │   │   │   ├── app.test.js
+│   │   │   │   │   ├── classroom-config.test.js
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── .gitignore
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
@@ -2991,14 +2996,29 @@ Indexed files: 2952
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── ErrorBoundary
+│   │   │   │   ├── public
+│   │   │   │   │   ├── images
+│   │   │   │   │   │   ├── night-studio.svg
+│   │   │   │   │   │   ├── quiet-harbor.svg
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── images.json
+│   │   │   │   │   └── README.md
 │   │   │   │   ├── src
 │   │   │   │   │   ├── components
 │   │   │   │   │   │   ├── BuggyCounter.jsx
 │   │   │   │   │   │   ├── ErrorBoundary.jsx
-│   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── ImageColumn.jsx
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── TextColumn.jsx
 │   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── CounterDemo.jsx
 │   │   │   │   │   ├── index.css
 │   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── browser.test.cjs
+│   │   │   │   │   ├── package-lock.json
+│   │   │   │   │   ├── package.json
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package.json

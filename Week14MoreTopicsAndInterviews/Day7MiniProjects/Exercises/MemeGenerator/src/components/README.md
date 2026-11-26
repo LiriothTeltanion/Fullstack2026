@@ -12,7 +12,7 @@ The React components for Meme Generator.
 
 ## Contents
 
-- [`Header.jsx`](Header.jsx)
+- [`Header.jsx`](Header.jsx) — function component with a remote header reference and original local SVG fallback
 - [`MemeGenerator.jsx`](MemeGenerator.jsx) — class state, lifecycle loading, generation and error handling
 - [`MemeForm.jsx`](MemeForm.jsx)
 - [`MemePreview.jsx`](MemePreview.jsx)
