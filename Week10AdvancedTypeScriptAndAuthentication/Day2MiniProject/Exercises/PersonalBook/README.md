@@ -26,6 +26,10 @@ npm run dev
 | `BookForm` | Adds a book through `onAdd(book: Omit<Book, "id" \| "status">)`; genre defaults to "Other" |
 | `App` | Status button that cycles with `NEXT_STATUS`, Remove, and the sorted author list |
 
+## Accessible form validation
+
+Title and author are required. Empty or whitespace-only values display an error next to the affected field, associated with it through `aria-describedby`; submission focuses the first invalid field. The form keeps all entered values while errors are corrected. Valid title and author values are trimmed before adding the book, and an omitted genre defaults to "Other". Fields clear only after a valid addition.
+
 ## 🧠 What I learned
 
 - A generic component is a normal function component with `<T>` after its name, and TypeScript infers `T` from the props

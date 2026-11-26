@@ -126,3 +126,34 @@ ul.plain li {
   font-weight: 700;
   margin: 8px 0;
 }
+
+/* Keep each field and its feedback together when the form wraps on small screens. */
+.book-form {
+  align-items: flex-start;
+}
+
+.form-field {
+  display: flex;
+  flex: 1 1 160px;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.form-field label,
+.field-error {
+  font-size: 0.875rem;
+}
+
+.form-field input {
+  min-width: 0;
+  width: 100%;
+}
+
+.form-field input[aria-invalid="true"] {
+  border-color: var(--danger);
+}
+
+.book-form > button {
+  margin-top: 25px;
+}
