@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-26
-Base HEAD: 8391ed3956b01b181b4f43548eab3b46f13cf9b8
-Source-index SHA-256 (generated outputs excluded): ae1707215c293e47abb2f5d5a54c5943aa7a7bd7e8623f6f865f01490b2e5a71
-Indexed files: 3201
+Base HEAD: cf0c3cdc89b134bf79fdacbee0ae56427d506c80
+Source-index SHA-256 (generated outputs excluded): 9f37d8416790241d5ac512a7f3166e4d098b77d9206c30737d220fc614766113
+Indexed files: 3204
 
 .
 ├── .github
@@ -805,6 +805,7 @@ Indexed files: 3201
 │   │   │   │   │   │   ├── migrations
 │   │   │   │   │   │   │   ├── README.md
 │   │   │   │   │   │   │   ├── story-comment-lifecycle-hosted.sql
+│   │   │   │   │   │   │   ├── story-comment-settings-hosted.sql
 │   │   │   │   │   │   │   └── story-comments-hosted.sql
 │   │   │   │   │   │   ├── init.js
 │   │   │   │   │   │   ├── README.md
@@ -816,6 +817,7 @@ Indexed files: 3201
 │   │   │   │   │   │   └── requireAuth.js
 │   │   │   │   │   ├── models
 │   │   │   │   │   │   ├── commentModel.js
+│   │   │   │   │   │   ├── commentSettingsModel.js
 │   │   │   │   │   │   ├── db.js
 │   │   │   │   │   │   ├── README.md
 │   │   │   │   │   │   ├── refreshModel.js
@@ -829,6 +831,7 @@ Indexed files: 3201
 │   │   │   │   │   ├── tests
 │   │   │   │   │   │   ├── comments.memory.test.js
 │   │   │   │   │   │   ├── comments.postgres.test.js
+│   │   │   │   │   │   ├── commentSettings.test.js
 │   │   │   │   │   │   ├── commentsFixture.js
 │   │   │   │   │   │   ├── email-auth.test.js
 │   │   │   │   │   │   ├── README.md

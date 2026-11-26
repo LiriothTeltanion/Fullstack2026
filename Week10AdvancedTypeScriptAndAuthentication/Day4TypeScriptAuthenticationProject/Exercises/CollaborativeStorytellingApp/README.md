@@ -130,18 +130,17 @@ The server tests exercise the real session-store SQL against disposable embedded
 
 Built with AI-assisted tooling; I reviewed, tested and can explain every change.
 
-
 ## Comment lifecycle extension
 
 This extension preserves the existing comment JSON and authenticated GET/POST routes.
 It adds the following story-scoped operations:
 
-| Operation | Route | Permission |
-| --- | --- | --- |
-| Read | `GET /api/stories/:id/comments` | Signed-in readers |
-| Create | `POST /api/stories/:id/comments` | Signed-in readers; identity comes from JWT |
-| Edit | `PATCH /api/stories/:id/comments/:commentId` | Comment author only |
-| Delete | `DELETE /api/stories/:id/comments/:commentId` | Comment author or story author |
+| Operation | Route                                         | Permission                                 |
+| --------- | --------------------------------------------- | ------------------------------------------ |
+| Read      | `GET /api/stories/:id/comments`               | Signed-in readers                          |
+| Create    | `POST /api/stories/:id/comments`              | Signed-in readers; identity comes from JWT |
+| Edit      | `PATCH /api/stories/:id/comments/:commentId`  | Comment author only                        |
+| Delete    | `DELETE /api/stories/:id/comments/:commentId` | Comment author or story author             |
 
 Editing accepts `{ "body": "Updated text" }`. The normalized body must contain
 1–2000 Unicode code points. IDs, authorship, story ownership and the original
@@ -179,7 +178,7 @@ PGlite coverage does not verify a native PostgreSQL TCP/TLS connection or produc
 The client is checked with `cd client && npm run build`; route parsing tests run
 with `node --test tests/routes.test.mjs` in the client directory.
 
-This is a bounded comments extension. Comment disabling, reactions, WebSockets,
+This is a bounded comments lifecycle extension. Reactions, WebSockets,
 version history and the remaining advanced chapter features are not implemented
 by this change, and passing these tests does not certify an entire optional rubric.
 
@@ -192,7 +191,6 @@ The Vercel links above remain an alternative demo. All use the same relative `/a
 contract. These URLs identify the existing deployment; the new lifecycle extension
 still requires publication, the owner-applied migration and deployment QA.
 Auth state is now owned by `authSlice.ts`; `storySlice.ts` owns the story collection.
-
 
 ### Compatibility before hosted grants
 
@@ -213,3 +211,48 @@ is required. Each mutation independently rechecks the effective role. The API ro
 still has to satisfy the existing RLS policy; the capability endpoint does not grant
 anything or replace per-user authorization. The PGlite HTTP fixture tests the same
 running server first with SELECT/INSERT only, then with added UPDATE(body)/DELETE.
+
+## Story author controls for new comments
+
+The story author can close or reopen **new** comments. Existing comments remain
+visible, and their existing author-edit and author/story-author delete rules are
+unchanged. Contributors and readers cannot change this setting. The reader keeps
+a failed comment draft and disables posting while settings are unavailable.
+A stale page receives 409 if another session closed the discussion; reopening
+lets the reader retry the retained draft. Use **Refresh comment settings** to
+check another session's change without reloading the page or discarding a draft.
+
+Authenticated `GET /api/stories/:id/comment-settings` returns `supported`,
+`commentsOpen` and the current user's `canChange`. Author-only `PATCH` accepts
+`{ "commentsOpen": false }` or `true`; non-boolean values return 400. Original
+comment payloads and GET/POST response shapes are preserved.
+
+### Optional database rollout
+
+The default local schema and an unchanged older database keep discussions open
+and report `supported: false`. In-memory demo storage supports the setting for
+the life of that process. The optional owner-reviewed migration
+[`story-comment-settings-hosted.sql`](server/db/migrations/story-comment-settings-hosted.sql)
+adds `stories.comments_open` with `DEFAULT TRUE`, without rewriting comments. It
+grants only the new column's SELECT/UPDATE to the two existing backend roles.
+Publish this compatible API to every writer of the same database before opting in.
+Older API processes do not enforce the new setting or join its locking protocol.
+The migration is not run by startup, setup or deployment. Review the schema name and existing
+roles before opting in on a local database. No hosted migration was executed by
+this change, and it does not resolve unrelated hosted lifecycle grants.
+
+Capability checks use the effective connection role without caching. Without the
+column, the old read/create contract continues. With the column but without its
+SELECT permission, new-comment writes fail closed rather than assuming open.
+Without UPDATE permission, readers can still post to an open discussion but no
+settings control is offered. A previous API without the settings route retains
+its original open behavior. Reload a discussion after an owner changes grants.
+
+PostgreSQL posting and setting changes acquire the same transaction-scoped
+advisory lock, keyed by the qualified stories table and story ID. If a post
+commits first, that comment remains; if closing commits first, the post returns 409. These rules cover application writes using this model across processes.
+Direct owner SQL outside this protocol is not an application operation. Existing
+comment editing/deletion does not use the new-comments setting.
+
+This bounded extension does not implement reactions, live collaboration or
+version history, and it is not a claim of complete optional-chapter coverage.

@@ -37,3 +37,9 @@
 .story-comments .row {
   flex-wrap: wrap;
 }
+
+/* Busy settings actions stay focusable; their handlers reject duplicate requests. */
+.story-comments button[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: wait;
+}

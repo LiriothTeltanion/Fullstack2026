@@ -20,3 +20,9 @@ export interface StoryComment {
   body: string;
   createdAt: string;
 }
+
+export interface CommentSettings {
+  supported: boolean;
+  commentsOpen: boolean;
+  canChange: boolean;
+}

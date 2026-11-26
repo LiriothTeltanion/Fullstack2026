@@ -253,10 +253,11 @@ export async function exerciseComments(t, mode) {
           body: "One SQL write.",
         });
         assertComment(added, story.id, reader, "One SQL write.");
-        assert.equal(queries.length, 1);
-        assert.match(queries[0], /WITH inserted/);
-        assert.match(queries[0], /JOIN/);
-        assert.ok(!queries[0].includes("password_hash") && !queries[0].includes("email"));
+        assert.equal(queries.length, 2);
+        assert.match(queries[0], /pg_attribute/); // Uncached optional-schema discovery.
+        assert.match(queries[1], /WITH inserted/);
+        assert.match(queries[1], /JOIN/);
+        assert.ok(!queries[1].includes("password_hash") && !queries[1].includes("email"));
       });
     }
 
@@ -422,6 +423,8 @@ export async function exerciseComments(t, mode) {
                 503
               );
               assert.match(failure.error, /currently unavailable/);
+              assert.match(failure.error, /read existing comments/);
+              assert.doesNotMatch(failure.error, /add comments/);
               assert.ok(
                 !failure.error.includes("role") &&
                   !failure.error.includes("permission") &&

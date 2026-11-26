@@ -5,6 +5,8 @@ import {
   patchComment,
   removeComment,
   getCommentCapabilities,
+  getCommentSettings,
+  patchCommentSettings,
 } from "../controllers/commentsController.js";
 import {
   addContributor,
@@ -24,6 +26,8 @@ router.get("/comment-capabilities", getCommentCapabilities);
 router.post("/", postStory);
 // Any authenticated reader can see the existing story list and join its comments.
 // Commenting does not grant permission to edit the story or its contributors.
+router.get("/:id/comment-settings", loadStory, getCommentSettings);
+router.patch("/:id/comment-settings", loadStory, patchCommentSettings);
 router.get("/:id/comments", loadStory, getComments);
 router.post("/:id/comments", loadStory, postComment);
 router.patch("/:id/comments/:commentId", loadStory, patchComment);
