@@ -8,6 +8,32 @@
 
 </div>
 
+## 📅 Calendar challenges
+
+Find out how long it is until the next January 1, how many whole minutes have elapsed since a birth date, and which Israeli public holiday is underway or coming next. From this directory, run:
+
+```sh
+npm ci
+node calendar-cli.js
+node calendar-cli.js 2000-01-01
+node calendar-cli.js --ask
+npm test
+```
+
+Use the sample date or enter a date at the prompt. The calendar prints its answer and does not store your input. An impossible date (for example, `2023-02-29`) or a future date returns an error and exit code 1.
+
+[The calendar module](calendar.js) exports three functions. Each accepts a reference clock so the tests can reproduce a leap day, midnight on New Year's Eve, or the precise instant a holiday begins.
+
+| Function | Convention |
+| --- | --- |
+| `timeUntilNewYear(now)` | Milliseconds until the next January 1 at 00:00 UTC. |
+| `minutesLived('YYYY-MM-DD', now)` | Whole minutes from midnight UTC on the supplied date. A date without a birth time gives a date-based estimate. |
+| `nextHoliday(now)` | The holiday's name, start, remaining milliseconds and whether it is already underway. The CLI displays the start in Jerusalem time. |
+
+The holiday lookup uses the installed [date-holidays calendar](https://github.com/commenthol/date-holidays) and works offline after installation. It uses the package's public-holiday list and start/end times for Israel, including holidays that start in the evening. The supported years are 1970–2100. After the last listed holiday in 2100 the program reports that the next one is unavailable.
+
+## 📝 Notes CLI
+
 A notes app for the terminal. [notes.js](notes.js) reads the command, and [notesStore.js](notesStore.js) loads, changes and saves the notes in a `notes.json` file next to them.
 
 ## ▶️ How to run

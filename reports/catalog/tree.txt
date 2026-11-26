@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-26
-Base HEAD: 54a1c496bd1b09ca878693fa1876d2c80646af15
-Source-index SHA-256 (generated outputs excluded): 504e74417793b0df95ffc9ac95917883148bf8d7a4106d15669b77fd2b469ed7
-Indexed files: 2952
+Base HEAD: 148d3797160d758ecaf35e894b478f6b36b9f4c3
+Source-index SHA-256 (generated outputs excluded): 10631b27cb20dd96a58b4342e0393056d59dd3626f057763979ac4873e1bb696
+Indexed files: 2956
 
 .
 ├── .github
@@ -2443,8 +2443,12 @@ Indexed files: 2952
 │   │   │   │   └── word-count.js
 │   │   │   ├── MoreNodejsChallenges
 │   │   │   │   ├── .gitignore
+│   │   │   │   ├── calendar-cli.js
+│   │   │   │   ├── calendar.js
+│   │   │   │   ├── calendar.test.js
 │   │   │   │   ├── notes.js
 │   │   │   │   ├── notesStore.js
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   └── README.md
 │   │   │   └── README.md
