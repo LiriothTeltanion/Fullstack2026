@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import Column from "./Column.jsx";
 import { COLUMNS, boardReset, cardAdded } from "./boardSlice.js";
@@ -6,6 +6,8 @@ import { COLUMNS, boardReset, cardAdded } from "./boardSlice.js";
 export default function Board() {
   const dispatch = useDispatch();
   const [title, setTitle] = useState("");
+  // The receiving column restores focus after React moves the card's controls.
+  const focusRequest = useRef(null);
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -30,7 +32,7 @@ export default function Board() {
       </form>
       <div className="board">
         {COLUMNS.map((column, index) => (
-          <Column key={column.id} column={column} index={index} />
+          <Column key={column.id} column={column} index={index} focusRequest={focusRequest} />
         ))}
       </div>
     </>
