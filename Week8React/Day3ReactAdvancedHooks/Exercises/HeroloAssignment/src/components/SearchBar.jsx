@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { searchCities } from "../api/weather.js";
 
-function SearchBar({ onSelect }) {
+function SearchBar({ onSelect, provider = "open-meteo" }) {
   const [query, setQuery] = useState("");
   const [options, setOptions] = useState([]);
   const [error, setError] = useState("");
@@ -19,13 +19,15 @@ function SearchBar({ onSelect }) {
 
   // Wait 400 ms after the last key before asking for suggestions.
   useEffect(() => {
+    setOptions([]);
+    setError("");
     if (query.trim().length < 2) {
       setOptions([]);
       return;
     }
     let ignore = false;
     const timer = setTimeout(() => {
-      searchCities(query.trim())
+      searchCities(query.trim(), provider)
         .then(cities => !ignore && setOptions(cities))
         .catch(err => !ignore && setError(err.message));
     }, 400);
@@ -33,7 +35,7 @@ function SearchBar({ onSelect }) {
       ignore = true;
       clearTimeout(timer);
     };
-  }, [query]);
+  }, [query, provider]);
 
   const choose = city => {
     onSelect(city);
@@ -49,7 +51,11 @@ function SearchBar({ onSelect }) {
         placeholder="Search a city"
         aria-label="Search a city"
       />
-      {error && <p className="error">{error}</p>}
+      {error && (
+        <p className="error" role="alert">
+          {error}
+        </p>
+      )}
       {options.length > 0 && (
         <ul className="options">
           {options.map(city => (
