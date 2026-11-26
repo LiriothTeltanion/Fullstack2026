@@ -37,7 +37,7 @@ function Gallery() {
 
   if (queryError) return <p className="error" role="alert">{queryError}</p>;
   if (loading) return <p className="muted">Loading {query} pictures…</p>;
-  if (error) return <p className="error">{error}</p>;
+  if (error) return <p className="error" role="alert">{error}</p>;
 
   return (
     <section>
@@ -51,7 +51,7 @@ function Gallery() {
               <a href={photo.url} target="_blank" rel="noreferrer">
                 <img src={photo.src.medium} alt={photo.alt || query} loading="lazy" />
               </a>
-              <span className="credit">{photo.photographer}</span>
+              {photo.photographer && <span className="credit">{photo.photographer}</span>}
             </li>
           ))}
         </ul>
