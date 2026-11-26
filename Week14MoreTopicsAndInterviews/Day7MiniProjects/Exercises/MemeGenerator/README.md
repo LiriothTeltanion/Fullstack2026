@@ -50,6 +50,11 @@ To use a reference sheet supplied to you for private classroom work, place it at
 `.classroom/App.css`, then run `npm run dev:classroom`. That ignored file is served
 only by the explicit loopback development mode and loaded before the project's
 own styles. The command explains a missing file rather than downloading one.
+The resolved classroom configuration binds to `127.0.0.1` and rejects server or
+preview host overrides that are outside loopback. Classroom preview is disabled;
+use the development command for that mode. Vite keeps its existing file exclusions
+and adds `.classroom` to them in every mode. The classroom middleware serves only
+the explicit reference stylesheet entry described above.
 Normal production builds never load or copy the classroom file; a production
 build with `--mode classroom` is deliberately rejected. The public version uses
 the project's own stylesheet and does not claim exact reuse of the supplied
@@ -87,6 +92,11 @@ and keeps keyboard focus. The preview changes when you choose to generate.
 
 The retry test covers a double click during loading, keyboard focus after
 recovery and the edited caption and size on the newly generated template.
+
+The configuration tests use an original CSS fixture in a disposable local project.
+They check resolved loopback hosts and file exclusions, reject classroom builds
+and previews, and verify the intentional stylesheet middleware through ordinary
+development requests.
 
 `npm test` mounts the real components in a DOM environment with API fixtures to verify the initial image remains unchanged after loading, live text/style controls, random generation, error feedback and lifecycle cleanup. `npm run build` creates the production bundle. Imgflip remains an external service; the application reports its failure rather than claiming offline image storage.
 
