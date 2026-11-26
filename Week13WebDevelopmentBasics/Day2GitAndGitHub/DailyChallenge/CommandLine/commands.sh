@@ -4,7 +4,21 @@
 # folder, so running it never touches my real files.
 set -euo pipefail
 
-WORKDIR="$(mktemp -d)"
+# Git may pass its repository and index through the environment when launching
+# another process. This practice commit belongs only to the temporary repository.
+unset GIT_DIR GIT_WORK_TREE GIT_COMMON_DIR GIT_INDEX_FILE GIT_OBJECT_DIRECTORY GIT_ALTERNATE_OBJECT_DIRECTORIES
+temp_root="$(cd -- "${TMPDIR:-/tmp}" && pwd -P)"
+WORKDIR="$(mktemp -d -- "${temp_root%/}/fullstack-cli.XXXXXXXX")"
+cleanup() {
+  cd -- "$temp_root" || return 1
+  case "$WORKDIR" in
+    "${temp_root%/}"/fullstack-cli.????????)
+      if [[ -d "$WORKDIR" && ! -L "$WORKDIR" && "$(cd -- "$WORKDIR" && pwd -P)" == "$WORKDIR" ]]; then
+        rm -rf -- "$WORKDIR"
+      fi ;;
+  esac
+}
+trap cleanup EXIT
 cd "$WORKDIR"
 echo "1) Working in a temporary folder"
 
@@ -38,11 +52,12 @@ find my-site -type f \( -name "*.css" -o -name "*.js" \) | sort
 cd my-site
 git init --quiet
 git -c core.autocrlf=false add .
-git -c user.name="Practice" -c user.email="practice@example.com" commit --quiet -m "Initial commit"
+git -c core.hooksPath=/dev/null -c commit.gpgSign=false \
+  -c user.name="Practice" -c user.email="practice@example.com" commit --quiet -m "Initial commit"
 echo "7) Git log:"
 git log --oneline | sed 's/^[0-9a-f]* /<hash> /'
 
 # Clean up the temporary folder
-cd /
-rm -rf "$WORKDIR"
+cleanup
+trap - EXIT
 echo "8) Temporary folder removed"
