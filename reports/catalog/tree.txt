@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-26
-Base HEAD: cc9e872d554c8c2e5a5b1fbdb48b705b03b8fa7a
-Source-index SHA-256 (generated outputs excluded): b9d0413bace848cf82192540a88f4b25abe45f8e3fad02d6a5120ccf133a5fa3
-Indexed files: 3000
+Base HEAD: 64827ede21fa636aca880c1c85c3e419e6d72ca4
+Source-index SHA-256 (generated outputs excluded): 1621540d1a31465efa28bb154162b979ee1e513b8c1e3b83aefe2d58f1078e43
+Indexed files: 3013
 
 .
 ├── .github
@@ -1053,8 +1053,23 @@ Indexed files: 3000
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── Components
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── browser-check.cjs
+│   │   │   │   │   ├── preservation.test.cjs
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── vendor
+│   │   │   │   │   ├── bootstrap.min.css
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── .gitignore
 │   │   │   │   ├── app.js
+│   │   │   │   ├── gallery.html
+│   │   │   │   ├── GALLERY.md
 │   │   │   │   ├── index.html
+│   │   │   │   ├── layout.css
+│   │   │   │   ├── layout.js
+│   │   │   │   ├── package-lock.json
+│   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── style.css
 │   │   │   ├── RecreateLandingPage
