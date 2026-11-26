@@ -5,17 +5,31 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Create an account · Riff Shop</title>
     <link href="style.css" rel="stylesheet" />
+    <link href="login-signup.css" rel="stylesheet" />
   </head>
   <body>
     <header class="site-header">
-      <a class="logo" href="index.html">Riff Shop</a
-      ><a class="products-link" href="products.html">Products</a>
+      <a class="logo" href="index.html" aria-label="Riff Shop home"
+        ><img
+          class="brand-icon"
+          src="assets/fontawesome/guitar.svg"
+          alt=""
+          aria-hidden="true"
+          width="28"
+          height="28"
+        />Riff<span>Shop</span></a
+      >
+      <nav class="account-links" aria-label="Account navigation">
+        <a href="products.html">Products</a><a href="login.html">Log in</a>
+      </nav>
     </header>
     <main>
       <h1>Create an account</h1>
       <p>This bonus form practices HTML validation with test values.</p>
       <form id="account-demo" class="account-form">
-        <label>Name <input name="name" required autocomplete="name" /></label
+        <label>First name <input name="firstName" required autocomplete="given-name" /></label
+        ><label>Last name <input name="lastName" required autocomplete="family-name" /></label
+        ><label>Username <input name="username" required autocomplete="username" /></label
         ><label>Email <input type="email" name="email" required autocomplete="email" /></label
         ><label
           >Password

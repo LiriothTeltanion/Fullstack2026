@@ -1,4 +1,4 @@
-import { readNotes, saveNotes } from "../models/notesModel.js";
+import { readNotes, mutateNotes } from "../models/notesModel.js";
 
 function checkNote({ title, body }) {
   if (typeof title !== "string" || title.trim() === "") return "title is required";
@@ -22,15 +22,16 @@ export async function createNote(req, res, next) {
   const error = checkNote(req.body);
   if (error) return res.status(400).json({ error });
   try {
-    const notes = await readNotes();
-    const note = {
-      id: notes.length ? Math.max(...notes.map(n => n.id)) + 1 : 1,
-      title: req.body.title.trim(),
-      body: req.body.body.trim(),
-      updatedAt: new Date().toISOString(),
-    };
-    notes.push(note);
-    await saveNotes(notes);
+    const note = await mutateNotes(notes => {
+      const created = {
+        id: notes.length ? Math.max(...notes.map(n => n.id)) + 1 : 1,
+        title: req.body.title.trim(),
+        body: req.body.body.trim(),
+        updatedAt: new Date().toISOString(),
+      };
+      notes.push(created);
+      return created;
+    });
     res.status(201).json(note);
   } catch (err) {
     next(err);
@@ -41,13 +42,15 @@ export async function updateNote(req, res, next) {
   const error = checkNote(req.body);
   if (error) return res.status(400).json({ error });
   try {
-    const notes = await readNotes();
-    const note = notes.find(n => n.id === Number(req.params.id));
+    const note = await mutateNotes(notes => {
+      const current = notes.find(n => n.id === Number(req.params.id));
+      if (!current) return undefined;
+      current.title = req.body.title.trim();
+      current.body = req.body.body.trim();
+      current.updatedAt = new Date().toISOString();
+      return current;
+    });
     if (!note) return res.status(404).json({ error: "Note not found" });
-    note.title = req.body.title.trim();
-    note.body = req.body.body.trim();
-    note.updatedAt = new Date().toISOString();
-    await saveNotes(notes);
     res.json(note);
   } catch (err) {
     next(err);
@@ -56,10 +59,12 @@ export async function updateNote(req, res, next) {
 
 export async function deleteNote(req, res, next) {
   try {
-    const notes = await readNotes();
-    const remaining = notes.filter(n => n.id !== Number(req.params.id));
-    if (remaining.length === notes.length) return res.status(404).json({ error: "Note not found" });
-    await saveNotes(remaining);
+    const removed = await mutateNotes(notes => {
+      const position = notes.findIndex(n => n.id === Number(req.params.id));
+      if (position === -1) return undefined;
+      return notes.splice(position, 1)[0];
+    });
+    if (!removed) return res.status(404).json({ error: "Note not found" });
     res.status(204).end();
   } catch (err) {
     next(err);

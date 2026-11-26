@@ -1,11 +1,17 @@
 // The text sits on top of the image with absolute positioning (see .meme-frame in App.css)
 export default function MemePreview({ meme, onImageError }) {
-  const textStyle = { fontSize: `${meme.fontSize}px`, color: meme.color };
+  // The chosen size is an upper bound: small previews also cap it by width.
+  const textStyle = { "--meme-font-size": `${meme.fontSize}px`, color: meme.color };
 
   return (
-    <figure className="meme">
-      <div className="meme-frame">
-        <img src={meme.randomImage} alt={`Meme template: ${meme.name}`} onError={onImageError} />
+    <figure className="meme-preview">
+      <div className="meme meme-frame">
+        <img
+          src={meme.randomImage}
+          alt={`Meme template: ${meme.name}`}
+          className={meme.imageError ? "is-unavailable" : undefined}
+          onError={onImageError}
+        />
         <h2 className="meme-text top" style={textStyle}>
           {meme.topText}
         </h2>

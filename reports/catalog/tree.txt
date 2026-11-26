@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-26
-Base HEAD: 0303ccac982653aff73e1c7a9a5d35cbd626b0a1
-Source-index SHA-256 (generated outputs excluded): 8d56baa5bdb4c075f4ba71beec4527b4ca18140261a4102e41c3ad5345e183c1
-Indexed files: 2965
+Base HEAD: 64827ede21fa636aca880c1c85c3e419e6d72ca4
+Source-index SHA-256 (generated outputs excluded): 1621540d1a31465efa28bb154162b979ee1e513b8c1e3b83aefe2d58f1078e43
+Indexed files: 3013
 
 .
 ├── .github
@@ -555,6 +555,9 @@ Indexed files: 2965
 │   │   │   │   │   ├── main.tsx
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   └── types.ts
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── components.test.js
+│   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
@@ -977,10 +980,33 @@ Indexed files: 2965
 │   │   │   │   ├── README.md
 │   │   │   │   └── style.css
 │   │   │   ├── ShoppingWebsite
+│   │   │   │   ├── assets
+│   │   │   │   │   ├── fontawesome
+│   │   │   │   │   │   ├── guitar.svg
+│   │   │   │   │   │   ├── LICENSE.txt
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── products
+│   │   │   │   │   │   ├── cable.svg
+│   │   │   │   │   │   ├── capo.svg
+│   │   │   │   │   │   ├── cloth.svg
+│   │   │   │   │   │   ├── headphones.svg
+│   │   │   │   │   │   ├── metronome.svg
+│   │   │   │   │   │   ├── mic-stand.svg
+│   │   │   │   │   │   ├── music-stand.svg
+│   │   │   │   │   │   ├── picks.svg
+│   │   │   │   │   │   ├── pop-filter.svg
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── strap.svg
+│   │   │   │   │   │   ├── strings.svg
+│   │   │   │   │   │   ├── tuner.svg
+│   │   │   │   │   │   └── windscreen.svg
+│   │   │   │   │   └── README.md
 │   │   │   │   ├── account-demo.js
 │   │   │   │   ├── app.js
 │   │   │   │   ├── index.html
+│   │   │   │   ├── login-signup.css
 │   │   │   │   ├── login.html
+│   │   │   │   ├── products.css
 │   │   │   │   ├── products.html
 │   │   │   │   ├── README.md
 │   │   │   │   ├── signup.html
@@ -1289,6 +1315,9 @@ Indexed files: 2965
 │   │   │   │   └── vite.config.js
 │   │   │   ├── MemeGenerator
 │   │   │   │   ├── src
+│   │   │   │   │   ├── assets
+│   │   │   │   │   │   ├── header-fallback.svg
+│   │   │   │   │   │   └── README.md
 │   │   │   │   │   ├── components
 │   │   │   │   │   │   ├── Header.jsx
 │   │   │   │   │   │   ├── MemeForm.jsx
@@ -1301,7 +1330,9 @@ Indexed files: 2965
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── tests
 │   │   │   │   │   ├── app.test.js
+│   │   │   │   │   ├── classroom-config.test.js
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── .gitignore
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
@@ -2458,8 +2489,13 @@ Indexed files: 2965
 │   │   │   │   └── word-count.js
 │   │   │   ├── MoreNodejsChallenges
 │   │   │   │   ├── .gitignore
+│   │   │   │   ├── calendar-cli.js
+│   │   │   │   ├── calendar.js
+│   │   │   │   ├── calendar.test.js
 │   │   │   │   ├── notes.js
+│   │   │   │   ├── notes.test.js
 │   │   │   │   ├── notesStore.js
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   └── README.md
 │   │   │   └── README.md
@@ -2753,6 +2789,7 @@ Indexed files: 2965
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── tests
 │   │   │   │   │   ├── notes-cli.test.js
+│   │   │   │   │   ├── notes-http.test.js
 │   │   │   │   │   ├── offline-guard.cjs
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── .env.example
@@ -3006,14 +3043,29 @@ Indexed files: 2965
 │   │   │   └── README.md
 │   │   ├── Exercises
 │   │   │   ├── ErrorBoundary
+│   │   │   │   ├── public
+│   │   │   │   │   ├── images
+│   │   │   │   │   │   ├── night-studio.svg
+│   │   │   │   │   │   ├── quiet-harbor.svg
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── images.json
+│   │   │   │   │   └── README.md
 │   │   │   │   ├── src
 │   │   │   │   │   ├── components
 │   │   │   │   │   │   ├── BuggyCounter.jsx
 │   │   │   │   │   │   ├── ErrorBoundary.jsx
-│   │   │   │   │   │   └── README.md
+│   │   │   │   │   │   ├── ImageColumn.jsx
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   └── TextColumn.jsx
 │   │   │   │   │   ├── App.jsx
+│   │   │   │   │   ├── CounterDemo.jsx
 │   │   │   │   │   ├── index.css
 │   │   │   │   │   ├── main.jsx
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── browser.test.cjs
+│   │   │   │   │   ├── package-lock.json
+│   │   │   │   │   ├── package.json
 │   │   │   │   │   └── README.md
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package.json
@@ -3435,6 +3487,9 @@ Indexed files: 2965
 │   │   │   │   │   ├── index.css
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── store.test.js
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
@@ -3694,6 +3749,9 @@ Indexed files: 2965
 │   │   │   │   │   ├── index.css
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── selectors.test.js
 │   │   │   │   ├── index.html
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md

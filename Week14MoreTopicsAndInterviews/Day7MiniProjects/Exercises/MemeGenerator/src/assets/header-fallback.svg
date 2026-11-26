@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Original smiling face icon</title>
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="#f4f0ff" />
+  <circle cx="24" cy="25" r="3" fill="#382255" />
+  <circle cx="42" cy="25" r="3" fill="#382255" />
+  <path
+    d="M20 38c6 10 18 10 25-2"
+    fill="none"
+    stroke="#382255"
+    stroke-width="4"
+    stroke-linecap="round"
+  />
+  <path d="m47 12 2 5 5 1-5 2-2 5-2-5-5-2 5-1z" fill="#a626d3" />
+</svg>

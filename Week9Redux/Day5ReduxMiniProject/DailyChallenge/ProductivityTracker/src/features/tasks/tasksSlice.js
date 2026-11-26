@@ -53,11 +53,17 @@ export const selectTasksByCategory = createSelector(
         )
 );
 export const selectVisibleTasks = selectTasksByCategory;
-export const selectCompletedTasks = createSelector([selectTasksByCategory], tasks =>
+// Keep the completed records available independently of the numeric summary.
+export const selectCompletedTaskItems = createSelector([selectTasksByCategory], tasks =>
   tasks.filter(task => task.done)
 );
 
-export const selectCompletedCount = createSelector([selectCompletedTasks], tasks => tasks.length);
+export const selectCompletedTasks = createSelector(
+  [selectCompletedTaskItems],
+  tasks => tasks.length
+);
+// Existing components can retain the descriptive alias without changing their behavior.
+export const selectCompletedCount = selectCompletedTasks;
 
 // One row per category: { id, name, total, done, percent }
 export const selectProgressByCategory = createSelector(

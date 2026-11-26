@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 320" role="img" aria-labelledby="title desc">
+  <title id="title">Nickel guitar strings</title>
+  <desc id="desc">A packet of nickel guitar strings beside neatly coiled silver strings. Original Riff Shop product illustration.</desc>
+  <defs><linearGradient id="paper" x2="1" y2="1"><stop stop-color="#fbe8d9"/><stop offset="1" stop-color="#f0d1b9"/></linearGradient></defs>
+  <rect width="512" height="320" fill="url(#paper)"/>
+  <circle cx="435" cy="57" r="92" fill="#fff7e9" opacity=".35"/>
+  <ellipse cx="256" cy="282" rx="135" ry="14" fill="#714d36" opacity=".13"/>
+  <rect x="122" y="58" width="185" height="214" rx="10" fill="#eee1c9" stroke="#735646" stroke-width="4"/><path d="M122 74h185v47H122z" fill="#b4441a"/><text x="214" y="105" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="white">NICKEL / 010</text><path d="M145 150h130M145 164h88" stroke="#735646" stroke-width="5"/><g fill="none" stroke="#747979" stroke-width="3"><ellipse cx="289" cy="210" rx="82" ry="51"/><ellipse cx="289" cy="210" rx="73" ry="45"/><ellipse cx="289" cy="210" rx="63" ry="39"/><ellipse cx="289" cy="210" rx="53" ry="33"/><ellipse cx="289" cy="210" rx="43" ry="27"/></g><path d="m366 188 30-25" stroke="#747979" stroke-width="3"/><circle cx="398" cy="161" r="7" fill="#c59b47"/>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 320" role="img" aria-labelledby="title desc">
+  <title id="title">Pop filter</title>
+  <desc id="desc">A round black microphone pop filter with a mesh screen and curved mounting arm. Original Riff Shop product illustration.</desc>
+  <defs><linearGradient id="paper" x2="1" y2="1"><stop stop-color="#fbe8d9"/><stop offset="1" stop-color="#f0d1b9"/></linearGradient></defs>
+  <rect width="512" height="320" fill="url(#paper)"/>
+  <circle cx="435" cy="57" r="92" fill="#fff7e9" opacity=".35"/>
+  <ellipse cx="256" cy="282" rx="135" ry="14" fill="#714d36" opacity=".13"/>
+  <circle cx="239" cy="129" r="87" fill="#34444a" stroke="#1e3037" stroke-width="13"/><g stroke="#708085" stroke-width="2" opacity=".6"><path d="M177 84h124M165 101h148M160 119h157M160 137h157M166 155h146M178 173h122M193 188h91M193 62v130M212 51v151M231 47v158M250 48v156M269 53v145M288 65v122"/></g><path d="M249 216q2 28 64 27t63 30" fill="none" stroke="#2b3e46" stroke-width="12"/><rect x="350" y="263" width="58" height="25" rx="7" fill="#4d5d67"/><path d="M379 285v15" stroke="#293a43" stroke-width="8"/>
+</svg>

@@ -1,0 +1,23 @@
+/* Shared only by the bonus login and signup pages. */
+.account-form {
+  max-width: 420px;
+  margin: 24px 0;
+  padding: 20px;
+  background: white;
+  border: 1px solid #eadfd4;
+  border-radius: 8px;
+}
+.account-form label {
+  display: block;
+  margin-bottom: 14px;
+}
+.account-form input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #8d8175;
+  border-radius: 3px;
+}
+#account-status {
+  max-width: 420px;
+}

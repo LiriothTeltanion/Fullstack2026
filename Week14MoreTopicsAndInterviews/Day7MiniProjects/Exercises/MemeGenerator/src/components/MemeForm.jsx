@@ -12,7 +12,7 @@ export default function MemeForm({ meme, onChange, onRandom, disabled }) {
       </label>
       <div className="row">
         <label>
-          Size: {meme.fontSize}px
+          Maximum size: {meme.fontSize}px
           <input
             name="fontSize"
             type="range"

@@ -23,15 +23,19 @@ Vite prints a local address (usually `http://localhost:5173`). Open it in the br
 
 1. **Counter reducer.** `counterReducer` handles `counter/increment`, `counter/decrement` and `counter/reset` with a `switch` and returns a new object each time.
 2. **Todo reducer.** `todosReducer` adds, toggles and removes todos without changing the old array (`[...state]`, `map`, `filter`).
-3. **Store and React wiring.** `store.js` combines the reducers with `configureStore`, `main.jsx` wraps the app in `<Provider>`, and `TodoList` uses `connect` to receive the array and bound actions through props. The counter and history use hooks.
+3. **Store and React wiring.** `store.js` passes the three reducers to Redux's `combineReducers` and creates the store with `createStore`. `main.jsx` wraps the app in `<Provider>`, and `TodoList` uses `connect` to receive the array and bound actions through props. The counter and history use hooks.
 4. **Action history.** `historyReducer` keeps the last five action types and skips the internal `@@` actions.
 
-| File | What it holds |
-|---|---|
-| `src/redux/actionTypes.js` | The six action type strings |
-| `src/redux/actions.js` | Action creators such as `addTodo(text)` |
-| `src/redux/*Reducer.js` | The three reducers |
-| `src/components/` | `Counter`, `TodoList` and `ActionHistory` |
+| File                       | What it holds                             |
+| -------------------------- | ----------------------------------------- |
+| `src/redux/actionTypes.js` | The six action type strings               |
+| `src/redux/actions.js`     | Action creators such as `addTodo(text)`   |
+| `src/redux/*Reducer.js`    | The three reducers                        |
+| `src/components/`          | `Counter`, `TodoList` and `ActionHistory` |
+
+## Verification
+
+Run `npm test` for the store API contract, counter actions, todo add/toggle/remove, immutable prior state and five-entry action history. `npm run build` compiles the normal application entry. The classic API is intentional for this introductory example; later exercises use Redux Toolkit.
 
 ## 🧠 What I learned
 

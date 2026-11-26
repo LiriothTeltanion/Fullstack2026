@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 320" role="img" aria-labelledby="title desc">
+  <title id="title">Microphone stand</title>
+  <desc id="desc">A black tripod microphone stand with an adjustable boom and microphone clip. Original Riff Shop product illustration.</desc>
+  <defs><linearGradient id="paper" x2="1" y2="1"><stop stop-color="#fbe8d9"/><stop offset="1" stop-color="#f0d1b9"/></linearGradient></defs>
+  <rect width="512" height="320" fill="url(#paper)"/>
+  <circle cx="435" cy="57" r="92" fill="#fff7e9" opacity=".35"/>
+  <ellipse cx="256" cy="282" rx="135" ry="14" fill="#714d36" opacity=".13"/>
+  <g stroke="#2d4149" stroke-width="9" stroke-linecap="round" fill="none"><path d="M243 128v128M243 248l-76 39M243 248l76 39M243 248v43M157 130l185-58"/><path d="m319 63 36-12 9 25-36 12" stroke-width="13"/><path d="M243 184h18" stroke-width="16"/></g><circle cx="243" cy="103" r="15" fill="#b9653c"/><path d="m157 120-27 8" stroke="#829590" stroke-width="12"/>
+</svg>

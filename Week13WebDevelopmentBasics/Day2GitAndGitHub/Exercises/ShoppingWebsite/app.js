@@ -1,13 +1,124 @@
 // Riff Shop: renders the products and keeps a cart in localStorage.
 const products = [
-  { id: 1, name: "Nickel guitar strings", price: 39, category: "guitar", icon: "🎸" },
-  { id: 2, name: "Picks, 12 pack", price: 15, category: "guitar", icon: "🔺" },
-  { id: 3, name: "Trigger capo", price: 49, category: "guitar", icon: "🗜️" },
-  { id: 4, name: "Instrument cable, 3 m", price: 59, category: "studio", icon: "🔌" },
-  { id: 5, name: "Closed-back headphones", price: 349, category: "studio", icon: "🎧" },
-  { id: 6, name: "Pop filter", price: 45, category: "studio", icon: "🎙️" },
-  { id: 7, name: "Digital metronome", price: 79, category: "practice", icon: "⏱️" },
-  { id: 8, name: "Folding music stand", price: 89, category: "practice", icon: "📖" },
+  {
+    id: 1,
+    name: "Nickel guitar strings",
+    price: 39,
+    category: "guitar",
+    icon: "🎸",
+    image: "assets/products/strings.svg",
+    imageAlt: "A packet of nickel guitar strings beside neatly coiled silver strings",
+    previousPrice: 49,
+  },
+  {
+    id: 2,
+    name: "Picks, 12 pack",
+    price: 15,
+    category: "guitar",
+    icon: "🔺",
+    image: "assets/products/picks.svg",
+    imageAlt: "Three rounded triangular guitar picks in burnt orange, cream and dark teal",
+  },
+  {
+    id: 3,
+    name: "Trigger capo",
+    price: 49,
+    category: "guitar",
+    icon: "🗜️",
+    image: "assets/products/capo.svg",
+    imageAlt: "A black spring trigger capo with silver hinge and padded jaws",
+  },
+  {
+    id: 4,
+    name: "Instrument cable, 3 m",
+    price: 59,
+    category: "studio",
+    icon: "🔌",
+    image: "assets/products/cable.svg",
+    imageAlt: "A coiled black instrument cable with two silver quarter-inch jack plugs",
+  },
+  {
+    id: 5,
+    name: "Closed-back headphones",
+    price: 349,
+    category: "studio",
+    icon: "🎧",
+    image: "assets/products/headphones.svg",
+    imageAlt: "Closed-back studio headphones with padded headband and two copper-trimmed ear cups",
+    previousPrice: 399,
+  },
+  {
+    id: 6,
+    name: "Pop filter",
+    price: 45,
+    category: "studio",
+    icon: "🎙️",
+    image: "assets/products/pop-filter.svg",
+    imageAlt: "A round black microphone pop filter with a mesh screen and curved mounting arm",
+  },
+  {
+    id: 7,
+    name: "Digital metronome",
+    price: 79,
+    category: "practice",
+    icon: "⏱️",
+    image: "assets/products/metronome.svg",
+    imageAlt: "A compact digital metronome showing 76 beats per minute with tempo controls",
+  },
+  {
+    id: 8,
+    name: "Folding music stand",
+    price: 89,
+    category: "practice",
+    icon: "📖",
+    image: "assets/products/music-stand.svg",
+    imageAlt: "A black folding music stand with a wide sheet-music rest and three stable legs",
+  },
+  {
+    id: 9,
+    name: "Woven guitar strap",
+    price: 29,
+    category: "guitar",
+    icon: "🎸",
+    image: "assets/products/strap.svg",
+    imageAlt: "A rust-colored woven guitar strap with leather ends and a brass adjustment buckle",
+  },
+  {
+    id: 10,
+    name: "Clip-on tuner",
+    price: 69,
+    category: "guitar",
+    icon: "🎵",
+    image: "assets/products/tuner.svg",
+    imageAlt: "A clip-on instrument tuner with a green display reading A 440 and a padded clamp",
+  },
+  {
+    id: 11,
+    name: "Foam microphone windscreen",
+    price: 19,
+    category: "studio",
+    icon: "🎙️",
+    image: "assets/products/windscreen.svg",
+    imageAlt: "A charcoal foam microphone windscreen with a rounded top and open lower sleeve",
+  },
+  {
+    id: 12,
+    name: "Microphone stand",
+    price: 119,
+    category: "studio",
+    icon: "🎙️",
+    image: "assets/products/mic-stand.svg",
+    imageAlt: "A black tripod microphone stand with an adjustable boom and microphone clip",
+  },
+  {
+    id: 13,
+    name: "Microfiber polishing cloth",
+    price: 12,
+    category: "practice",
+    icon: "🧵",
+    image: "assets/products/cloth.svg",
+    imageAlt: "A folded mustard-yellow microfiber polishing cloth with stitched edges",
+  },
 ];
 
 const STORAGE_KEY = "riff-shop-cart";
@@ -48,10 +159,16 @@ function renderProducts(category) {
     const item = document.createElement("li");
     item.className = "product";
     item.innerHTML = `
-      <div class="product-image" aria-hidden="true">${product.icon}</div>
+      <div class="product-image">
+        <img src="${product.image}" alt="${product.imageAlt}" width="512" height="320" />
+        ${product.previousPrice ? '<span class="sale-label">Sale</span>' : ""}
+      </div>
       <h3>${product.name}</h3>
       <p class="tag">${product.category}</p>
-      <p class="price">${money.format(product.price)}</p>
+      <p class="price">
+        ${product.previousPrice ? `<span class="previous-price">Was <s>${money.format(product.previousPrice)}</s></span>` : ""}
+        <span class="current-price">${money.format(product.price)}</span>
+      </p>
       <button type="button" class="add" data-id="${product.id}">Add to cart</button>`;
     grid.append(item);
   }
