@@ -41,6 +41,16 @@ Category URLs and existing `/search/<term>` links remain supported, including an
 
 Run `npm test` for URL decoding and key-configuration regression tests, then `npm run build` for the production bundle.
 
+Photo responses are checked before rendering. A valid empty collection displays
+"No images found". An unreadable response, a missing photo array or a nonempty
+collection with no usable records displays an announced error instead. If the
+provider mixes usable and malformed records, the gallery retains the usable
+photos and available credits. A missing optional credit or caption keeps the
+image usable; its validated absolute HTTP/HTTPS image URL also supplies a
+fallback when the optional photo link is missing or invalid. Enter another search
+or choose a category to recover.
+The response tests use local fixtures without a real API key or service calls.
+
 ## 🧠 What I learned
 
 - One `Gallery` component serves every category because the URL decides what to search
