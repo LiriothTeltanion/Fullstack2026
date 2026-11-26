@@ -2,8 +2,8 @@
 
 > Regenerated from the exact Git index on `2026-11-26` by `tools/refresh_structure_catalogs.py`.
 
-- Base HEAD: `148d3797160d758ecaf35e894b478f6b36b9f4c3`
-- Source-index fingerprint: `sha256:10631b27cb20dd96a58b4342e0393056d59dd3626f057763979ac4873e1bb696` (generated outputs excluded)
+- Base HEAD: `aaf83fe9647680fa02d3ef664ac14fdc3a7c4cf4`
+- Source-index fingerprint: `sha256:8eb1ba67049f8922487f73924fe1060716c785522045fbf73523fbda676fec3e` (generated outputs excluded)
 
 This catalog proves repository presence and path integrity only. It does not prove that an exercise runs, that Kevin can explain it, or that it is mastered or portfolio-ready.
 
@@ -53,7 +53,7 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week14MoreTopicsAndInterviews/Day3FullStackDeployment/Exercises/DeployFullStackApp` | Exercise | CSS \| HTML \| JSON \| JavaScript | 30 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day3FullStackDeployment/Exercises/DeployFullStackApp>); runtime unverified |
 | `Week14MoreTopicsAndInterviews/Day7MiniProjects/DailyChallenge/LoginAndRegister` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript \| SQL | 28 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day7MiniProjects/DailyChallenge/LoginAndRegister>); runtime unverified |
 | `Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/GoogleMap` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 11 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/GoogleMap>); runtime unverified |
-| `Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/MemeGenerator` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 16 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/MemeGenerator>); runtime unverified |
+| `Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/MemeGenerator` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 20 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/MemeGenerator>); runtime unverified |
 | `Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/SearchBookApp` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 15 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/SearchBookApp>); runtime unverified |
 | `Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/TicTacToe` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 9 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/TicTacToe>); runtime unverified |
 | `Week14MoreTopicsAndInterviews/Day8InterviewAssignments/Exercises/BalinkBookstore` | Interview Practice | HTML \| JSON \| JavaScript | 20 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day8InterviewAssignments/Exercises/BalinkBookstore>); runtime unverified |
@@ -254,7 +254,7 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week7NodejsAndReact/Day5ReactComponentsAndState/Exercises/ExercisesXPNinja` | Exercise | CSS \| HTML \| JSON \| JavaScript | 12 | present (canonical) | [source](<../../Week7NodejsAndReact/Day5ReactComponentsAndState/Exercises/ExercisesXPNinja>); runtime unverified |
 | `Week7NodejsAndReact/RemoteLearningNodejs/Exercises/RSSFactsFeed` | Mini Project | CSS \| JSON \| JavaScript | 22 | present (canonical) | [source](<../../Week7NodejsAndReact/RemoteLearningNodejs/Exercises/RSSFactsFeed>); runtime unverified |
 | `Week8React/Day1MultipleComponentsAndEvents/DailyChallenge/FormContainer` | Daily Challenge | CSS \| HTML \| JSON \| JavaScript | 11 | present (canonical) | [source](<../../Week8React/Day1MultipleComponentsAndEvents/DailyChallenge/FormContainer>); runtime unverified |
-| `Week8React/Day1MultipleComponentsAndEvents/Exercises/ErrorBoundary` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 11 | present (canonical) | [source](<../../Week8React/Day1MultipleComponentsAndEvents/Exercises/ErrorBoundary>); runtime unverified |
+| `Week8React/Day1MultipleComponentsAndEvents/Exercises/ErrorBoundary` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 23 | present (canonical) | [source](<../../Week8React/Day1MultipleComponentsAndEvents/Exercises/ErrorBoundary>); runtime unverified |
 | `Week8React/Day1MultipleComponentsAndEvents/Exercises/ExercisesXP` | Exercise | CSS \| HTML \| JSON \| JavaScript | 19 | present (canonical) | [source](<../../Week8React/Day1MultipleComponentsAndEvents/Exercises/ExercisesXP>); runtime unverified |
 | `Week8React/Day1MultipleComponentsAndEvents/Exercises/ExercisesXPGold` | Exercise | CSS \| HTML \| JSON \| JavaScript | 15 | present (canonical) | [source](<../../Week8React/Day1MultipleComponentsAndEvents/Exercises/ExercisesXPGold>); runtime unverified |
 | `Week8React/Day1MultipleComponentsAndEvents/Exercises/ExercisesXPNinja` | Exercise | CSS \| HTML \| JSON \| JavaScript | 12 | present (canonical) | [source](<../../Week8React/Day1MultipleComponentsAndEvents/Exercises/ExercisesXPNinja>); runtime unverified |

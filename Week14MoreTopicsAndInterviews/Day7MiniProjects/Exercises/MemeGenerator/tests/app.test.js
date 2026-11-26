@@ -15,19 +15,25 @@ test("class meme generator preserves the initial image, edits overlays and handl
     IS_REACT_ACT_ENVIRONMENT: true,
   });
   const bundle = await build({
-    entryPoints: [fileURLToPath(new URL("../src/App.jsx", import.meta.url))],
+    stdin: {
+      contents:
+        'export { default } from "./src/App.jsx"; export { default as MemeGenerator } from "./src/components/MemeGenerator.jsx";',
+      resolveDir: fileURLToPath(new URL("../", import.meta.url)),
+      loader: "jsx",
+    },
     bundle: true,
     write: false,
     platform: "node",
     format: "esm",
     packages: "external",
     jsx: "automatic",
+    loader: { ".svg": "dataurl", ".css": "empty" },
   });
   const code = bundle.outputFiles[0].text.replace(
     /from "([^"]+)"/g,
     (_, name) => `from ${JSON.stringify(import.meta.resolve(name))}`
   );
-  const { default: App } = await import(
+  const { default: App, MemeGenerator } = await import(
     `data:text/javascript;base64,${Buffer.from(code).toString("base64")}`
   );
   const { createRoot } = await import("react-dom/client");
@@ -66,6 +72,21 @@ test("class meme generator preserves the initial image, edits overlays and handl
   const image = () => document.querySelector(".meme img");
   try {
     await t.test(
+      "the named class state and required preview structure remain explicit",
+      async () => {
+        const instance = new MemeGenerator({});
+        assert.deepEqual(instance.state.allMemeImgs, []);
+        assert.equal(instance.state.randomImage, initial);
+        await mount();
+        assert.equal(document.querySelectorAll("h1").length, 1);
+        assert.equal(document.querySelector("main h1").textContent, "Create a captioned meme");
+        assert.equal(document.querySelectorAll("header h1").length, 0);
+        assert.equal(document.querySelectorAll("div.meme > h2.top").length, 1);
+        assert.equal(document.querySelectorAll("div.meme > h2.bottom").length, 1);
+        assert.equal(document.querySelector("div.meme > img").src, initial);
+      }
+    );
+    await t.test(
       "initial image is present before and after componentDidMount finishes",
       async () => {
         await mount();
@@ -88,6 +109,24 @@ test("class meme generator preserves the initial image, edits overlays and handl
         assert.equal(document.querySelector("button").disabled, false);
       }
     );
+    await t.test(
+      "the header uses the external reference and an original local fallback",
+      async () => {
+        const headerImage = document.querySelector("header img");
+        assert.equal(
+          headerImage.src,
+          "https://www.pngall.com/wp-content/uploads/2016/05/Trollface.png"
+        );
+        assert.equal(headerImage.getAttribute("referrerpolicy"), "no-referrer");
+        await act(async () => headerImage.dispatchEvent(new dom.window.Event("error")));
+        assert.match(headerImage.src, /^data:image\/svg\+xml/);
+        assert.equal(headerImage.alt, "Original smiling face icon");
+        const fallback = headerImage.src;
+        await act(async () => headerImage.dispatchEvent(new dom.window.Event("error")));
+        assert.equal(headerImage.src, fallback);
+        assert.ok(document.querySelector('input[name="topText"]'));
+      }
+    );
     await t.test("text, size and color update the overlays and Gen chooses randomly", async () => {
       await fill("topText", "Top from input");
       await fill("bottomText", "Bottom from input");
@@ -96,7 +135,7 @@ test("class meme generator preserves the initial image, edits overlays and handl
       const headings = document.querySelectorAll(".meme h2");
       assert.equal(headings[0].textContent, "Top from input");
       assert.equal(headings[1].textContent, "Bottom from input");
-      assert.equal(headings[0].style.fontSize, "52px");
+      assert.equal(headings[0].style.getPropertyValue("--meme-font-size"), "52px");
       assert.equal(headings[1].style.color, "rgb(255, 0, 0)");
       const random = t.mock.method(Math, "random", () => 0.99);
       await act(async () => document.querySelector("button").click());
@@ -111,6 +150,7 @@ test("class meme generator preserves the initial image, edits overlays and handl
         document.querySelector('[role="alert"]').textContent,
         /image could not be loaded/
       );
+      assert.ok(image().classList.contains("is-unavailable"));
       assert.ok(document.querySelector('input[name="topText"]'));
     });
     await t.test(
