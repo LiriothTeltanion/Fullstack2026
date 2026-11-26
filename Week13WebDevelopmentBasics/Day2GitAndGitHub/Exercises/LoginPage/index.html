@@ -12,44 +12,46 @@
     <main class="card">
       <div class="brand" aria-hidden="true">SH</div>
       <h1>Welcome back</h1>
-      <p class="subtitle">Log in to Study Hub to continue your lessons.</p>
+      <p class="subtitle">Try the Study Hub login form with made-up details.</p>
 
-      <!-- This page has no server: app.js stops the submit and shows a message instead -->
+      <!-- The form stays disabled until the local demo is ready. -->
       <form id="login-form" class="form">
-        <label for="email">Email</label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          autocomplete="email"
-          placeholder="you@example.com"
-          required
-        />
-
-        <label for="password">Password</label>
-        <div class="password-row">
+        <fieldset id="demo-fields" class="form-fields" aria-label="Demo login" disabled>
+          <label for="email">Email</label>
           <input
-            id="password"
-            name="password"
-            type="password"
-            autocomplete="current-password"
-            minlength="8"
+            id="email"
+            type="email"
+            autocomplete="email"
+            placeholder="you@example.com"
             required
-            aria-describedby="password-hint"
           />
-          <button type="button" id="toggle-password" class="toggle" aria-pressed="false">
-            Show
-          </button>
-        </div>
-        <p id="password-hint" class="hint">At least 8 characters.</p>
 
-        <div class="row">
-          <label class="checkbox"><input type="checkbox" name="remember" /> Remember me</label>
-          <a href="#" class="link">Forgot password?</a>
-        </div>
+          <label for="password">Password</label>
+          <div class="password-row">
+            <input
+              id="password"
+              type="password"
+              autocomplete="current-password"
+              minlength="8"
+              required
+              aria-describedby="password-hint"
+            />
+            <button type="button" id="toggle-password" class="toggle" aria-pressed="false">
+              Show
+            </button>
+          </div>
+          <p id="password-hint" class="hint">At least 8 characters.</p>
 
-        <button type="submit" class="submit">Log in</button>
-        <p id="message" class="message" role="status" aria-live="polite"></p>
+          <div class="row">
+            <label class="checkbox"><input type="checkbox" /> Remember me</label>
+            <a href="#" class="link">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="submit">Log in</button>
+        </fieldset>
+        <p id="message" class="message" role="status" aria-live="polite">
+          This local demo needs JavaScript. Enable it or reload the page to try the form.
+        </p>
       </form>
 
       <p class="signup">New here? <a href="#" class="link">Create an account</a></p>

@@ -14,6 +14,11 @@ A login card for a made-up site called Study Hub. The browser does the validatio
 
 Open [index.html](index.html). Try an empty form, a bad email or a 5-character password to see the browser stop it.
 
+Use made-up details for this local demo. The fields stay disabled until the
+script has installed its event handlers. If JavaScript is disabled or fails
+to load, the page explains how to enable the demo. Profile links remain available.
+The inputs have no submission names, so their values are excluded from form data.
+
 ## 🎯 The challenge
 
 | Piece       | How it works                                                                                              |
