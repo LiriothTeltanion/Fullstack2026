@@ -1,0 +1,14 @@
+{
+  "name": "week8-day3-gold-browser-tests",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test storage.test.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.65.1"
+  },
+  "engines": {
+    "node": "^22.13.0 || >=24"
+  }
+}

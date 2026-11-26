@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  color-scheme: dark;
+  font-family: system-ui, sans-serif;
+  color: #edf4ff;
+  background: #0b1627;
+}
+body {
+  margin: 0;
+}
+header {
+  max-width: 52rem;
+  margin: auto;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+header p {
+  margin: 0;
+  color: #b8cbe6;
+}
+a {
+  color: #8ecbff;
+}
+main {
+  max-width: 46rem;
+  margin: 1rem auto 3rem;
+  padding: 0 1.5rem;
+}
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 0.5rem;
+}
+p {
+  line-height: 1.6;
+}
+#quiz {
+  padding: clamp(1rem, 4vw, 2rem);
+  margin-top: 1.5rem;
+  border: 1px solid #3c5371;
+  border-radius: 1rem;
+  background: #14253b;
+}
+#progress {
+  color: #b8cbe6;
+  margin-top: 0;
+}
+#score {
+  font-weight: 700;
+}
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 1.4rem 0;
+  min-width: 0;
+}
+legend {
+  font-size: 1.25rem;
+  font-weight: 650;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+label {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem;
+  margin: 0.65rem 0;
+  border: 1px solid #58718e;
+  border-radius: 0.5rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+input[type="radio"] {
+  flex: 0 0 auto;
+  width: 1.15rem;
+  height: 1.15rem;
+  accent-color: #8ac6ff;
+}
+label:has(input:checked) {
+  background: #244d78;
+  border-color: #a0d4ff;
+}
+button {
+  padding: 0.8rem 1.1rem;
+  border: 0;
+  border-radius: 0.4rem;
+  font: inherit;
+  font-weight: 650;
+  color: #081422;
+  background: #91caff;
+  cursor: pointer;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+}
+button:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+#restart {
+  background: transparent;
+  color: #d5e8ff;
+  border: 1px solid #91accd;
+}
+:focus-visible {
+  outline: 3px solid #ffcf66;
+  outline-offset: 4px;
+}
+#feedback {
+  padding: 1rem;
+  line-height: 1.6;
+  border-left: 4px solid;
+  margin: 1rem 0;
+}
+.correct {
+  background: #133d32;
+  border-color: #7ee0b1;
+}
+.incorrect,
+#error {
+  background: #4e2833;
+  border-color: #ffb2c0;
+}
+#error {
+  padding: 1rem;
+  border: 1px solid #ffb2c0;
+  border-radius: 0.4rem;
+}
+.note {
+  font-size: 0.9rem;
+  color: #b8cbe6;
+}
+[hidden] {
+  display: none !important;
+}
+@media (max-width: 400px) {
+  header,
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  button {
+    width: 100%;
+    margin-right: 0;
+  }
+}

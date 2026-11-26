@@ -8,7 +8,27 @@
 
 </div>
 
-Four Node scripts that go past the basics: streams with `readline`, a recursive folder tree, a logger module and a countdown timer.
+Four native Node examples cover streams, recursive directory traversal, logging and timers. The command-line app below adds an interactive city weather dashboard alongside the original scripts.
+
+## Stage tools
+
+Use Node 24 or later and install the locked dependencies with `npm ci` in this directory.
+
+| Command | What happens |
+| --- | --- |
+| `npm run cli -- greet "Sam Reed"` | Print a greeting using Chalk, with color on supported terminals. |
+| `npm run cli -- fetch 2` | Use Axios to request a sample post from JSONPlaceholder and display its title and body. |
+| `npm run cli -- read sample.txt` | Read a local UTF-8 file, preserving its contents and line endings. |
+| `npm run weather` | Enter a city at the prompt. A blank line lets you try again. |
+| `npm run weather -- "Berlin"` | Run the same weather lookup directly for a supplied city. |
+
+Commander dispatches the greeting, fetch and file commands to individual modules. The weather dashboard displays the first city match, its region and country, the local observation time, temperature in Celsius and wind speed in km/h. The weather client first resolves the city to coordinates, then requests its current conditions. An unavailable service or an unmatched city produces a readable error and a nonzero exit code.
+
+Weather data comes from [Open-Meteo](https://open-meteo.com/). The exercise uses its [geocoding](https://open-meteo.com/en/docs/geocoding-api) and [forecast APIs](https://open-meteo.com/en/docs) under their [terms of use](https://open-meteo.com/en/terms). A network connection is required for the `fetch` and `weather` commands. No API key is needed for this noncommercial example.
+
+Run `npm test` for offline tests of the commands, prompt, lookup failures and presentation. Each service test supplies local example responses.
+
+## Original native-module exercises
 
 ## ▶️ How to run
 

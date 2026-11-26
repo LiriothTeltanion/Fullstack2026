@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-26
-Base HEAD: d87c63847b368d693196c99c66866c383d898f36
-Source-index SHA-256 (generated outputs excluded): 520a1cf08fef5e0cfe28252e97b1e1ce393bf06756a77b965279a729ab335d6d
-Indexed files: 3036
+Base HEAD: 571329220c3aae89cd09f64fcf1e9e7e812a6ff1
+Source-index SHA-256 (generated outputs excluded): 267306b226c5a6114291ac503e892eb96a3eadd3dabad7af88358deb54aca29c
+Indexed files: 3068
 
 .
 ├── .github
@@ -2476,19 +2476,32 @@ Indexed files: 3036
 │   │   │   ├── ExercisesXPGold
 │   │   │   │   ├── calculator.js
 │   │   │   │   ├── events-demo.js
+│   │   │   │   ├── examples.js
+│   │   │   │   ├── file-info.js
 │   │   │   │   ├── json-store.js
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── path-explorer.js
+│   │   │   │   ├── practice.js
+│   │   │   │   ├── practice.test.js
 │   │   │   │   ├── README.md
 │   │   │   │   └── system-info.js
 │   │   │   ├── ExercisesXPNinja
+│   │   │   │   ├── commands.js
+│   │   │   │   ├── commands.test.js
 │   │   │   │   ├── countdown.js
+│   │   │   │   ├── fetch-post.js
+│   │   │   │   ├── greet.js
 │   │   │   │   ├── logger.js
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
+│   │   │   │   ├── read-text.js
 │   │   │   │   ├── README.md
 │   │   │   │   ├── sample.txt
 │   │   │   │   ├── tree.js
 │   │   │   │   ├── use-logger.js
+│   │   │   │   ├── weather-dashboard.js
+│   │   │   │   ├── weather.js
 │   │   │   │   └── word-count.js
 │   │   │   ├── MoreNodejsChallenges
 │   │   │   │   ├── .gitignore
@@ -2559,9 +2572,22 @@ Indexed files: 3036
 │   │   │   │   │   ├── index.html
 │   │   │   │   │   ├── README.md
 │   │   │   │   │   └── style.css
+│   │   │   │   ├── quiz-public
+│   │   │   │   │   ├── index.html
+│   │   │   │   │   ├── quiz.css
+│   │   │   │   │   ├── quiz.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── quiz.test.js
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
+│   │   │   │   ├── quiz-app.js
+│   │   │   │   ├── quiz-questions.js
+│   │   │   │   ├── quiz-server.js
 │   │   │   │   ├── README.md
-│   │   │   │   └── static-server.js
+│   │   │   │   ├── static-server.js
+│   │   │   │   └── STATIC_SERVER.md
 │   │   │   └── README.md
 │   │   └── README.md
 │   └── README.md
@@ -3348,7 +3374,17 @@ Indexed files: 3036
 │   │   │   │   │   ├── index.css
 │   │   │   │   │   ├── main.jsx
 │   │   │   │   │   └── README.md
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── fixtures
+│   │   │   │   │   │   ├── generic.html
+│   │   │   │   │   │   ├── generic.jsx
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── package-lock.json
+│   │   │   │   │   ├── package.json
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── storage.test.mjs
 │   │   │   │   ├── index.html
+│   │   │   │   ├── package-lock.json
 │   │   │   │   ├── package.json
 │   │   │   │   ├── README.md
 │   │   │   │   └── vite.config.js
