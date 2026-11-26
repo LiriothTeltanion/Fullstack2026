@@ -88,6 +88,17 @@ test("blank edited posts stay editable until valid text is saved", async ({ page
   await expect(edit).toHaveValue("   ");
   await expect(edit).toHaveAttribute("aria-invalid", "true");
   await expect(row.getByRole("alert")).toHaveText(/Enter post text/);
+  expect(
+    await row
+      .getByRole("button")
+      .evaluateAll(buttons =>
+        buttons.every(
+          button =>
+            button.getBoundingClientRect().right <=
+            button.closest("section").getBoundingClientRect().right - 8
+        )
+      )
+  ).toBe(true);
   await expect(page.getByRole("listitem")).toHaveCount(3);
   await edit.fill("  Revised Fixture  ");
   await row.getByRole("button", { name: "Save", exact: true }).click();

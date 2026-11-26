@@ -26,7 +26,7 @@ export default function PostItem({ post }) {
 
   return (
     <li>
-      <span>
+      <span className="post-content">
         <strong>{author?.name ?? "Unknown"}:</strong>{" "}
         {isEditing ? (
           <input
@@ -50,7 +50,7 @@ export default function PostItem({ post }) {
           </span>
         )}
       </span>
-      <span className="row">
+      <span className="row post-actions">
         {isEditing ? (
           <button onClick={save}>Save</button>
         ) : (
