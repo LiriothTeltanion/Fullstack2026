@@ -125,7 +125,8 @@ button {
   cursor: pointer;
 }
 
-button:disabled {
+button:disabled,
+button[aria-disabled="true"] {
   opacity: 0.5;
   cursor: wait;
 }
@@ -148,7 +149,7 @@ button:focus-visible {
 .meme-frame {
   position: relative;
   aspect-ratio: 4 / 3;
-  min-height: 16rem;
+  width: 100%;
   container-type: inline-size;
   overflow: hidden;
   border-radius: 8px;

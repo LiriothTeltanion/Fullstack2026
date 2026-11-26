@@ -19,8 +19,14 @@ export default class MemeGenerator extends Component {
   };
 
   componentDidMount() {
+    this.loadTemplates();
+  }
+
+  loadTemplates = () => {
+    if (this.controller) return;
     const controller = new AbortController();
     this.controller = controller;
+    if (!this.state.loading) this.setState({ loading: true });
     fetch(MEMES_URL, { signal: controller.signal })
       .then(response => {
         if (!response.ok) throw new Error("Could not load meme templates.");
@@ -46,11 +52,15 @@ export default class MemeGenerator extends Component {
             error: error.message || "Could not load meme templates.",
           });
         }
+      })
+      .finally(() => {
+        if (this.controller === controller) this.controller = null;
       });
-  }
+  };
 
   componentWillUnmount() {
     this.controller?.abort();
+    this.controller = null;
   }
 
   handleChange = event => {
@@ -72,11 +82,12 @@ export default class MemeGenerator extends Component {
           meme={this.state}
           onChange={this.handleChange}
           onRandom={this.pickRandomImage}
+          onRetry={this.loadTemplates}
           disabled={!this.state.allMemeImgs.length}
         />
         <div className="preview-panel">
           <p role="status">{this.state.loading ? "Loading templates…" : ""}</p>
-          {this.state.error && (
+          {this.state.error && !this.state.loading && (
             <p className="error" role="alert">
               {this.state.error} You can still edit the initial meme.
             </p>
