@@ -24,6 +24,10 @@ Select a user to see their posts. If a request fails, use **Retry users** or
 message. Run `npm test` to check duplicate user loads and recovery from a
 temporary server error without contacting the API.
 
+If the API returns HTTP 200 with a malformed list, the directory shows the same
+retry control. A failed posts response leaves other users' cached posts available.
+An empty array is valid and shows the empty state.
+
 ## 🎯 The challenge
 
 1. **Users thunk.** `fetchUsers` loads the list once, when `usersStatus` is still `idle`.

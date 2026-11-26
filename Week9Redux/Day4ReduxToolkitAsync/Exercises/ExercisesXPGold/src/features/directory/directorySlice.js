@@ -2,15 +2,23 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const API_URL = "https://jsonplaceholder.typicode.com";
 
-async function getJson(url, signal) {
+async function fetchDirectoryList(url, signal, labelField) {
   const response = await fetch(url, { signal });
   if (!response.ok) throw new Error(`Server answered ${response.status}`);
-  return response.json();
+  const rows = await response.json();
+  // A successful HTTP status can still carry an error object or an incomplete row.
+  if (
+    !Array.isArray(rows) ||
+    !rows.every(row => Number.isSafeInteger(row?.id) && typeof row[labelField] === "string")
+  ) {
+    throw new Error("Unexpected response format.");
+  }
+  return rows;
 }
 
 export const fetchUsers = createAsyncThunk(
   "directory/fetchUsers",
-  (_, { signal }) => getJson(`${API_URL}/users`, signal),
+  (_, { signal }) => fetchDirectoryList(`${API_URL}/users`, signal, "name"),
   {
     // Read the live store so two effects cannot start the same initial request.
     condition: (_, { getState }) => {
@@ -23,7 +31,7 @@ export const fetchUsers = createAsyncThunk(
 export const fetchPostsByUser = createAsyncThunk(
   "directory/fetchPostsByUser",
   // thunkAPI.signal is aborted when the component calls promise.abort()
-  (userId, { signal }) => getJson(`${API_URL}/posts?userId=${userId}`, signal),
+  (userId, { signal }) => fetchDirectoryList(`${API_URL}/posts?userId=${userId}`, signal, "title"),
   {
     // Cache: skip the request when this user's posts are already loaded.
     condition: (userId, { getState }) =>
