@@ -17,6 +17,7 @@ React projects for working with external services, forms and game state. Each fo
 - [ReactCalculator/](ReactCalculator/) — Number/operator keypad and React class state
 - [SearchBookApp/](SearchBookApp/) — Mini Project - Search Book App
 - [TicTacToe/](TicTacToe/) — Mini Project - Tic Tac Toe
+- [Weather App (Python)](../../../Week2OOP/Day5MiniProject/Exercises/WeatherApp/README.md) — run the original city forecast and three-day humidity chart from Week 2.
 
 ---
 

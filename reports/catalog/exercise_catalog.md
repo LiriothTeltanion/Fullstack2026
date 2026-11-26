@@ -2,8 +2,8 @@
 
 > Regenerated from the exact Git index on `2026-11-26` by `tools/refresh_structure_catalogs.py`.
 
-- Base HEAD: `cf4a02e3c06543f0e4746b682398b85db4637b5f`
-- Source-index fingerprint: `sha256:ff277926d3ca42fa713398d89172aa69dee3795919072b72f36a110862ed7848` (generated outputs excluded)
+- Base HEAD: `a48d1cddf58bfc3714e1c09888df4924e49c939a`
+- Source-index fingerprint: `sha256:681ce192fa33d678e893314312a4b94ad4f679ad743b721335055307c962fc7d` (generated outputs excluded)
 
 This catalog proves repository presence and path integrity only. It does not prove that an exercise runs, that Kevin can explain it, or that it is mastered or portfolio-ready.
 
@@ -122,7 +122,7 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week2OOP/Day5MiniProject/DailyChallenge/OOPQuiz` | Daily Challenge | Python | 3 | present (canonical) | [source](<../../Week2OOP/Day5MiniProject/DailyChallenge/OOPQuiz>); runtime unverified |
 | `Week2OOP/Day5MiniProject/Exercises/AnagramChecker` | Mini Project | Python | 4 | present (canonical) | [source](<../../Week2OOP/Day5MiniProject/Exercises/AnagramChecker>); runtime unverified |
 | `Week2OOP/Day5MiniProject/Exercises/RockPaperScissors` | Mini Project | Python | 3 | present (canonical) | [source](<../../Week2OOP/Day5MiniProject/Exercises/RockPaperScissors>); runtime unverified |
-| `Week2OOP/Day5MiniProject/Exercises/WeatherApp` | Mini Project | Python | 3 | present (canonical) | [source](<../../Week2OOP/Day5MiniProject/Exercises/WeatherApp>); runtime unverified |
+| `Week2OOP/Day5MiniProject/Exercises/WeatherApp` | Mini Project | Python | 4 | present (canonical) | [source](<../../Week2OOP/Day5MiniProject/Exercises/WeatherApp>); runtime unverified |
 | `Week2OOP/RemoteLearningOOP/DailyChallenge/AirManagement` | Daily Challenge | Python | 2 | present (canonical) | [source](<../../Week2OOP/RemoteLearningOOP/DailyChallenge/AirManagement>); runtime unverified |
 | `Week2OOP/RemoteLearningOOP/Exercises/MiniProjectVaccines` | Mini Project | Python | 2 | present (canonical) | [source](<../../Week2OOP/RemoteLearningOOP/Exercises/MiniProjectVaccines>); runtime unverified |
 | `Week3JavaScriptandDOM/Day1IntroductiontoJavaScript/DailyChallenge/BubbleSort` | Daily Challenge | JavaScript | 2 | present (canonical) | [source](<../../Week3JavaScriptandDOM/Day1IntroductiontoJavaScript/DailyChallenge/BubbleSort>); runtime unverified |
