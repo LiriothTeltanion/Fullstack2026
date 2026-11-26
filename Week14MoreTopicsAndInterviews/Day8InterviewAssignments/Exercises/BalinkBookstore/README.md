@@ -25,6 +25,25 @@ npm run preview
 
 Preview needs the fixture API running separately with npm run api. The browser remembers cart contents in localStorage. Receipts exist in the fixture process memory and disappear when that process restarts.
 
+### Editing cart quantities
+
+Quantity fields keep an editable draft. Clearing a field or entering a fraction,
+zero or a value above 99 leaves the previous valid quantity and total unchanged,
+marks the field and explains the accepted range. Correct it to a whole number
+from 1 to 99 to apply the change. Checkout stays disabled while any visible row
+has an invalid draft. Removing that row also clears its validation state.
+
+The browser saves valid quantities when the cart changes. If storage refuses a write,
+the cart remains editable in the current tab and an English/Spanish status
+message explains that persistence failed. A later successful edit clears that
+message. Book/store pairs are identified separately even when their concatenated
+IDs would look alike.
+
+Try changing a quantity from 2 to an empty field, then to 1.5, and finally to 3.
+Only the last valid change should affect the total and enable checkout. The
+native tests cover these quantity boundaries and exact-row updates alongside
+the existing HTTP order tests.
+
 ## Six screens, one complete flow 🧭
 
 | Screen          | Route after #                  | Behavior                                                              |

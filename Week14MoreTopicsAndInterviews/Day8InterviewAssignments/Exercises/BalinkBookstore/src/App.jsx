@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { HashRouter, Routes, Route, Link, useParams, useNavigate } from "react-router-dom";
 import { BookstoreProvider, useBookstore } from "./context.jsx";
 import { submitOrder, loadReceipt } from "./api.js";
 import * as U from "./ui.jsx";
+import CartQuantity from "./CartQuantity.jsx";
 const money = value =>
   new Intl.NumberFormat("en-IE", { style: "currency", currency: "EUR" }).format(value / 100);
 function BookCover({ book }) {
@@ -114,6 +115,15 @@ function Product() {
 }
 function Cart() {
   const { lines, change, remove, amountCents, t } = useBookstore();
+  const [invalidRows, setInvalidRows] = useState(() => new Set());
+  const quantityErrorId = useId();
+  const markValid = (key, valid) =>
+    setInvalidRows(current => {
+      const next = new Set(current);
+      if (valid) next.delete(key);
+      else next.add(key);
+      return next;
+    });
   return (
     <>
       <h1>{t("cart")}</h1>
@@ -124,6 +134,11 @@ function Cart() {
         </>
       ) : (
         <>
+          {invalidRows.size > 0 && (
+            <p id={quantityErrorId} role="alert">
+              {t("quantityError")}
+            </p>
+          )}
           <U.TableWrap>
             <table>
               <thead>
@@ -137,7 +152,7 @@ function Cart() {
               </thead>
               <tbody>
                 {lines.map(line => (
-                  <tr key={line.book.id + line.store.id}>
+                  <tr key={JSON.stringify([line.book.id, line.store.id])}>
                     <td>
                       <Link to={"/stores/" + line.store.id + "/books/" + line.book.id}>
                         {line.book.title}
@@ -147,21 +162,24 @@ function Cart() {
                     </td>
                     <td>{money(line.book.priceCents)}</td>
                     <td>
-                      <input
-                        aria-label={t("quantity") + " " + line.book.title}
-                        type="number"
-                        min="1"
-                        max="99"
-                        step="1"
-                        value={line.quantity}
-                        onChange={event => change(line.book.id, line.store.id, event.target.value)}
+                      <CartQuantity
+                        line={line}
+                        change={change}
+                        t={t}
+                        errorId={quantityErrorId}
+                        onValidity={valid =>
+                          markValid(JSON.stringify([line.book.id, line.store.id]), valid)
+                        }
                       />
                     </td>
                     <td>{money(line.quantity * line.book.priceCents)}</td>
                     <td>
                       <U.Button
                         $secondary
-                        onClick={() => remove(line.book.id, line.store.id)}
+                        onClick={() => {
+                          markValid(JSON.stringify([line.book.id, line.store.id]), true);
+                          remove(line.book.id, line.store.id);
+                        }}
                         aria-label={t("remove") + " " + line.book.title}
                       >
                         {t("remove")}
@@ -175,7 +193,11 @@ function Cart() {
           <h2>
             {t("total")}: {money(amountCents)}
           </h2>
-          <U.Action to="/checkout">{t("checkout")}</U.Action>
+          {invalidRows.size ? (
+            <U.Button disabled>{t("checkout")}</U.Button>
+          ) : (
+            <U.Action to="/checkout">{t("checkout")}</U.Action>
+          )}
         </>
       )}
     </>

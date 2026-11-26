@@ -2,8 +2,8 @@
 
 > Regenerated from the exact Git index on `2026-11-26` by `tools/refresh_structure_catalogs.py`.
 
-- Base HEAD: `595b409ac2c219711b7b58fe92988b257ca3ba97`
-- Source-index fingerprint: `sha256:0bea23fa1d53b1112d5b8dbf5e9f730df7335cbb92499222c56759901f10b513` (generated outputs excluded)
+- Base HEAD: `433b21f7061897b12fcb6d799132b853efb40de8`
+- Source-index fingerprint: `sha256:5f98ba559d2b5cbb1cb74dd81e0798db588e70dffee51b96337cac3b1c2b3cbb` (generated outputs excluded)
 
 This catalog proves repository presence and path integrity only. It does not prove that an exercise runs, that Kevin can explain it, or that it is mastered or portfolio-ready.
 
@@ -57,7 +57,7 @@ This catalog proves repository presence and path integrity only. It does not pro
 | `Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/ReactCalculator` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 12 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/ReactCalculator>); runtime unverified |
 | `Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/SearchBookApp` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 15 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/SearchBookApp>); runtime unverified |
 | `Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/TicTacToe` | Mini Project | CSS \| HTML \| JSON \| JavaScript | 12 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day7MiniProjects/Exercises/TicTacToe>); runtime unverified |
-| `Week14MoreTopicsAndInterviews/Day8InterviewAssignments/Exercises/BalinkBookstore` | Interview Practice | HTML \| JSON \| JavaScript | 20 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day8InterviewAssignments/Exercises/BalinkBookstore>); runtime unverified |
+| `Week14MoreTopicsAndInterviews/Day8InterviewAssignments/Exercises/BalinkBookstore` | Interview Practice | HTML \| JSON \| JavaScript | 21 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day8InterviewAssignments/Exercises/BalinkBookstore>); runtime unverified |
 | `Week14MoreTopicsAndInterviews/Day8InterviewAssignments/Exercises/FSSalesDashboard` | Interview Assignment | CSS \| HTML \| JSON \| JavaScript | 12 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day8InterviewAssignments/Exercises/FSSalesDashboard>); runtime unverified |
 | `Week14MoreTopicsAndInterviews/Day8InterviewAssignments/Exercises/JuniorDeveloperAssignment` | Interview Assignment | Python | 23 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day8InterviewAssignments/Exercises/JuniorDeveloperAssignment>); runtime unverified |
 | `Week14MoreTopicsAndInterviews/Day8InterviewAssignments/Exercises/TikalAssignment` | Interview Assignment | CSS \| HTML \| JSON \| JavaScript | 12 | present (canonical) | [source](<../../Week14MoreTopicsAndInterviews/Day8InterviewAssignments/Exercises/TikalAssignment>); runtime unverified |

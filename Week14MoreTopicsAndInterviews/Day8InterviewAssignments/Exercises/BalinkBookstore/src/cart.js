@@ -17,6 +17,27 @@ export function cleanCart(value) {
       return result;
     }, []);
 }
+
+export function parseQuantity(value) {
+  if (typeof value !== "number" && typeof value !== "string") return null;
+  if (typeof value === "string" && !value.trim()) return null;
+  const quantity = Number(value);
+  return Number.isSafeInteger(quantity) && quantity >= 1 && quantity <= 99 ? quantity : null;
+}
+
+// Invalid drafts must never silently clamp or overwrite a committed quantity.
+export function changeQuantity(cart, bookId, storeId, value) {
+  const quantity = parseQuantity(value);
+  if (quantity === null) return cart;
+  let changed = false;
+  const next = cart.map(line => {
+    if (line.bookId !== bookId || line.storeId !== storeId || line.quantity === quantity)
+      return line;
+    changed = true;
+    return { ...line, quantity };
+  });
+  return changed ? next : cart;
+}
 export function cartLines(cart, books, stores) {
   return cart.flatMap(line => {
     const book = books.find(
