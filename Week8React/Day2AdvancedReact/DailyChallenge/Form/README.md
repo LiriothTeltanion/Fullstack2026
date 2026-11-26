@@ -68,11 +68,31 @@ npm run build
 npm run dev
 ```
 
-`npm test` runs five Node behavior tests for country filtering/data and the
-preserved sign-up validator. These tests do not mount React. Real browser QA also
+`npm test` runs eleven Node behavior tests: five for country filtering/data and the
+preserved sign-up validator, and six for the class component's markup and state
+transitions. Vite's existing JSX transform loads the component for these tests;
+they do not mount it in a browser DOM. Real browser QA also
 checks the rendered class component, pointer/keyboard flow and retained sign-up
 behavior at desktop and narrow widths. No third-party course source, stylesheet,
 illustration or private assignment text is bundled. This README describes the
 implemented scope; publication and any academic completion are separate steps.
 
 Built with AI-assisted tooling; I reviewed, tested and can explain every change.
+
+## Reusing the picker safely
+
+`<CountryAutocomplete countries={items} />` accepts an optional array of country
+labels. Pass a new array when choices change. Each mounted picker has its own
+input, heading, option and status IDs, so labels and keyboard focus remain local
+when two pickers share a page. The footer reports the supplied list's size.
+
+Replacing the list clears the active keyboard option. If a confirmed country is
+removed, its text remains editable but the confirmation is cleared and its list
+stays closed until the user focuses or edits the input again; the user can
+choose again or clear the input. Enter cannot select an absent option, including
+during a list update. Try selecting Canada, replace the choices with France in a
+parent component, then continue typing: the old confirmation must disappear.
+
+The six component regression tests exercise these changes, ID references, stale
+selection guards, input composition and focus after clearing. The default list
+still contains the same 56 labels; no external country service is needed.

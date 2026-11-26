@@ -133,7 +133,7 @@ input[aria-invalid="true"] {
 .country-options-frame {
   position: relative;
 }
-#country-options {
+.country-options {
   position: absolute;
   top: 0.3rem;
   left: 0;
@@ -149,16 +149,16 @@ input[aria-invalid="true"] {
   border-radius: 6px;
   box-shadow: 0 8px 20px #1f29331f;
 }
-#country-options[hidden] {
+.country-options[hidden] {
   display: none;
 }
-#country-options [role="option"] {
+.country-options [role="option"] {
   padding: 0.6rem;
   border-radius: 4px;
   cursor: pointer;
 }
-#country-options [role="option"]:hover,
-#country-options .active {
+.country-options [role="option"]:hover,
+.country-options .active {
   background: #e7edff;
   color: #203eaa;
 }
