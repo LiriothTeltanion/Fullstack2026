@@ -60,6 +60,8 @@ GET  /api/profile        (made-up token)   → 401 Token expired or invalid
 
 The token is kept in `sessionStorage`, so it survives a refresh and is gone when the tab closes. A page script could still read it, which is the trade-off against the httpOnly cookie I used in the Day 4 project.
 
+Switching between sign up and log in clears the previous error while preserving entered fields, and the mode switch stays disabled until the current request finishes.
+
 ## Local data and profile behavior
 
 Accounts and profiles live only in the server process's memory. Restarting the server loses them; create an account again after a restart. Each process also has its own random JWT issuer, so a previous process's saved session is no longer accepted, even when `JWT_SECRET` stays the same. The client explains an unavailable saved session (401/404); a temporary connection failure keeps the saved session and offers **Retry session**.
