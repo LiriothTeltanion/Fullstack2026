@@ -19,6 +19,14 @@ script has installed its event handlers. If JavaScript is disabled or fails
 to load, the page explains how to enable the demo. Profile links remain available.
 The inputs have no submission names, so their values are excluded from form data.
 
+**Forgot password?** and **Create an account** lead to the local **About this demo**
+section. It explains the practice-only form and links back to it. Both fragment
+links work with JavaScript disabled; keyboard activation moves focus to the
+explanation, and **Back to login demo** returns focus to the form. No account,
+password-reset request or email is created by these actions.
+The explanation stays hidden until its fragment is selected, preserving the
+initial card layout. Returning to the form hides it again using CSS `:target`.
+
 ## 🎯 The challenge
 
 | Piece       | How it works                                                                                              |
