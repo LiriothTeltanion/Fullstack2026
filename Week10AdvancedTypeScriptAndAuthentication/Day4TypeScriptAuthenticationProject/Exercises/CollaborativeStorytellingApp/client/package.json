@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "typecheck": "tsc",
+    "test": "node --test tests/routes.test.mjs tests/comment-responses.test.mjs",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
