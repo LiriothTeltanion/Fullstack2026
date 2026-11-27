@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { configureStore } from "@reduxjs/toolkit";
-import { loadBoard, persistBoard } from "./src/app/persist.js";
-import boardReducer, { cardMoved } from "./src/features/board/boardSlice.js";
+import { loadBoard, persistBoard, saveFailedReducer } from "./src/app/persist.js";
+import boardReducer, { cardAdded, cardMoved } from "./src/features/board/boardSlice.js";
 
 // Use an in-memory storage adapter so tests never touch a developer's board.
 function withStorage(t, initial) {
@@ -58,4 +58,69 @@ test("unreadable or unrelated saved data falls back to the initial board", t => 
     assert.equal(loadBoard(), undefined);
     assert.equal(storage.get("kanban-board"), value);
   }
+});
+
+test("a failed save retains edits in memory and the previous save until a later edit succeeds", t => {
+  const original = JSON.stringify({
+    cards: { saved: { id: "saved", title: "Previously saved" } },
+    columns: { todo: [], doing: ["saved"], done: [] },
+  });
+  const entries = withStorage(t, original);
+  let failWrites = true;
+  globalThis.localStorage.setItem = (key, value) => {
+    if (failWrites) throw new DOMException("Synthetic storage quota", "QuotaExceededError");
+    entries.set(key, value);
+  };
+  const store = configureStore({
+    reducer: { board: boardReducer, saveFailed: saveFailedReducer },
+    preloadedState: { board: loadBoard() },
+    middleware: defaults => defaults().concat(persistBoard),
+  });
+  assert.equal(store.getState().saveFailed, false);
+  const action = cardAdded("Unsaved fixture");
+  store.dispatch(action);
+  let notifications = 0;
+  const unsubscribe = store.subscribe(() => notifications++);
+  store.dispatch(cardMoved({ id: action.payload.id, direction: 1 }));
+  assert.equal(notifications, 1);
+  assert.equal(store.getState().saveFailed, true);
+  assert.ok(store.getState().board.columns.doing.includes(action.payload.id));
+  assert.equal(entries.get("kanban-board"), original);
+
+  failWrites = false;
+  store.dispatch(cardMoved({ id: action.payload.id, direction: 1 }));
+  assert.equal(store.getState().saveFailed, false);
+  assert.deepEqual(loadBoard(), store.getState().board);
+  assert.ok(loadBoard().columns.done.includes(action.payload.id));
+  assert.equal(loadBoard().cards.saved.title, "Previously saved");
+  assert.deepEqual(Object.keys(JSON.parse(entries.get("kanban-board"))).sort(), [
+    "cards",
+    "columns",
+  ]);
+  notifications = 0;
+  store.dispatch(cardMoved({ id: action.payload.id, direction: -1 }));
+  assert.equal(notifications, 1);
+  unsubscribe();
+});
+
+test("unavailable storage is visible in state and a later successful save clears it", t => {
+  const entries = withStorage(t, "");
+  const available = globalThis.localStorage;
+  Object.defineProperty(globalThis, "localStorage", { configurable: true, value: undefined });
+  const store = configureStore({
+    reducer: { board: boardReducer, saveFailed: saveFailedReducer },
+    middleware: defaults => defaults().concat(persistBoard),
+  });
+  assert.equal(store.getState().saveFailed, true);
+  const action = cardAdded("Unavailable storage fixture");
+  assert.doesNotThrow(() => store.dispatch(action));
+  assert.equal(
+    store.getState().board.cards[action.payload.id].title,
+    "Unavailable storage fixture"
+  );
+  Object.defineProperty(globalThis, "localStorage", { configurable: true, value: available });
+  store.dispatch(cardMoved({ id: action.payload.id, direction: 1 }));
+  assert.equal(store.getState().saveFailed, false);
+  assert.deepEqual(loadBoard(), store.getState().board);
+  assert.ok(entries.get("kanban-board"));
 });

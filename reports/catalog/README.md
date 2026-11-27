@@ -10,7 +10,7 @@
 - `rename_plan.csv` — unapproved later-wave proposals only.
 - `catalog_manifest.json` — generation date, base HEAD, and stable source-index fingerprint.
 
-Generation basis: HEAD `a6785fec98e88954e60512a941ae361d322cca0d` plus the staged source index fingerprint `sha256:9b5f66d12db11946f3dbd3df9c500c1e86ccc1a46830e1979934da3c98be1831`.
+Generation basis: HEAD `967c2207623d55720bafd72ce89c14e740b429a5` plus the staged source index fingerprint `sha256:3e3d8e2ab8de5069f7ef8e35e2325fcdf2dd0499d899f2fc2dc3c4079e184b10`.
 
 Regenerate with `python tools/refresh_structure_catalogs.py --repo . --write`; verify drift with `python tools/refresh_structure_catalogs.py --repo . --check`.
 

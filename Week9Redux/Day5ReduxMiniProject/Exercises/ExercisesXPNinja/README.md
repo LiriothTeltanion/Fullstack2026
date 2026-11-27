@@ -29,6 +29,15 @@ or last column, focus moves to its available return arrow. This uses the card ID
 so repeated titles work too. Creating a card or restoring a saved board leaves
 focus where the browser placed it.
 
+If browser storage is unavailable or a save fails (for example, because its quota
+is full), an announced warning explains that unsaved changes will be lost on
+reload. The board stays editable in memory and keeps the last successful save.
+After storage recovers, the next successful board edit saves the complete current
+board and clears the warning without reloading or moving focus. Normal successful
+saves show no warning. This transient status is not part of the saved board format.
+The `npm test` fixtures cover failed writes, the unchanged previous save, unavailable
+storage and recovery alongside the existing saved-board restoration checks.
+
 ## 🎯 The challenge
 
 1. **Board shape.** `cards` is a lookup by id and `columns` keeps only ordered id lists, so a card is stored once.

@@ -1,10 +1,11 @@
 import { useRef, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Column from "./Column.jsx";
 import { COLUMNS, boardReset, cardAdded } from "./boardSlice.js";
 
 export default function Board() {
   const dispatch = useDispatch();
+  const saveFailed = useSelector(state => state.saveFailed);
   const [title, setTitle] = useState("");
   // The receiving column restores focus after React moves the card's controls.
   const focusRequest = useRef(null);
@@ -30,6 +31,10 @@ export default function Board() {
           Reset board
         </button>
       </form>
+      <p role="alert" className="card error" hidden={!saveFailed}>
+        Saving is unavailable in this browser. Unsaved changes will be lost if you reload. You can
+        keep editing. The next successful edit saves the whole board.
+      </p>
       <div className="board">
         {COLUMNS.map((column, index) => (
           <Column key={column.id} column={column} index={index} focusRequest={focusRequest} />
