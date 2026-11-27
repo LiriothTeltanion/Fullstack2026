@@ -2,8 +2,8 @@
   "schema_version": 2,
   "generated_on": "2026-11-27",
   "generator": "tools/refresh_structure_catalogs.py",
-  "base_head": "a6785fec98e88954e60512a941ae361d322cca0d",
-  "source_index_sha256": "9b5f66d12db11946f3dbd3df9c500c1e86ccc1a46830e1979934da3c98be1831",
+  "base_head": "967c2207623d55720bafd72ce89c14e740b429a5",
+  "source_index_sha256": "3e3d8e2ab8de5069f7ef8e35e2325fcdf2dd0499d899f2fc2dc3c4079e184b10",
   "source_index_file_count": 3212,
   "fingerprint_excludes": [
     "reports/catalog/catalog_manifest.json",

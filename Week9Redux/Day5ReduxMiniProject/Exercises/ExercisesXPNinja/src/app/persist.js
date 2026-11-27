@@ -1,6 +1,27 @@
 import { COLUMNS } from "../features/board/boardSlice.js";
 
 const KEY = "kanban-board";
+const SAVE_FAILED = "persistence/saveFailed";
+
+function storageForSave() {
+  const storage = globalThis.localStorage;
+  return typeof storage?.getItem === "function" && typeof storage?.setItem === "function"
+    ? storage
+    : undefined;
+}
+
+function savingUnavailable() {
+  try {
+    return !storageForSave();
+  } catch {
+    return true;
+  }
+}
+
+// This UI status is separate from board data and never enters the saved format.
+export function saveFailedReducer(state = savingUnavailable(), action) {
+  return action.type === SAVE_FAILED ? action.payload : state;
+}
 
 // Rebuild the index before Redux renders it. Older saves may have missing
 // columns, a card listed twice, or a reference left behind after deletion.
@@ -38,10 +59,18 @@ export function loadBoard() {
 export const persistBoard = store => next => action => {
   const result = next(action);
   if (action.type.startsWith("board/")) {
+    let failed = true;
     try {
-      globalThis.localStorage?.setItem(KEY, JSON.stringify(store.getState().board));
+      const storage = storageForSave();
+      if (storage) {
+        storage.setItem(KEY, JSON.stringify(store.getState().board));
+        failed = false;
+      }
     } catch {
-      // storage is optional
+      // Keep the working board and the last good save when browser storage fails.
+    }
+    if (store.getState().saveFailed !== failed) {
+      store.dispatch({ type: SAVE_FAILED, payload: failed });
     }
   }
   return result;
