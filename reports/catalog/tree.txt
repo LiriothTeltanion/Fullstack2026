@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
-Regenerated: 2026-11-26
-Base HEAD: 433b21f7061897b12fcb6d799132b853efb40de8
-Source-index SHA-256 (generated outputs excluded): 5f98ba559d2b5cbb1cb74dd81e0798db588e70dffee51b96337cac3b1c2b3cbb
-Indexed files: 3214
+Regenerated: 2026-11-27
+Base HEAD: 61897dc3151968a6d770d7effd466a4eb07ccfe2
+Source-index SHA-256 (generated outputs excluded): dff67c8751bb225566bef87344f7376a6899a9b3c391a99a3bbabf277fc99de0
+Indexed files: 3216
 
 .
 ├── .github
@@ -480,6 +480,7 @@ Indexed files: 3214
 │   ├── js
 │   │   ├── book_list.test.mjs
 │   │   ├── calculator.test.mjs
+│   │   ├── herolo_open_meteo.test.mjs
 │   │   ├── math_helpers.test.mjs
 │   │   ├── optional_facebook.test.mjs
 │   │   ├── README.md
@@ -3589,6 +3590,7 @@ Indexed files: 3214
 │   │   │   │   ├── accuweather.server.js
 │   │   │   │   ├── accuweather.test.js
 │   │   │   │   ├── index.html
+│   │   │   │   ├── open-meteo.test.js
 │   │   │   │   ├── package.json
 │   │   │   │   ├── preferences.test.js
 │   │   │   │   ├── README.md
