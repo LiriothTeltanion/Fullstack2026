@@ -68,7 +68,11 @@ export default function AuthPage() {
       <button
         type="button"
         className="secondary"
-        onClick={() => setMode(mode === "login" ? "register" : "login")}
+        disabled={busy}
+        onClick={() => {
+          setError("");
+          setMode(mode === "login" ? "register" : "login");
+        }}
       >
         {mode === "login" ? "No account yet? Sign up" : "Have an account? Log in"}
       </button>
