@@ -52,16 +52,30 @@ export async function getForecast(city, unit) {
     forecast_days: "5",
   });
   const data = await getJson(`${FORECAST_URL}?${params}`);
+  const { current, daily } = data ?? {};
+  const dates = daily?.time;
+  // JSON null would otherwise round to zero and look like a real measurement.
+  if (
+    !Number.isFinite(current?.temperature_2m) ||
+    !Array.isArray(dates) ||
+    dates.length === 0 ||
+    ![daily.temperature_2m_min, daily.temperature_2m_max].every(
+      series =>
+        Array.isArray(series) && series.length === dates.length && series.every(Number.isFinite)
+    )
+  ) {
+    throw new Error("Open-Meteo returned incomplete temperatures. Please try again.");
+  }
   return {
     current: {
-      temperature: Math.round(data.current.temperature_2m),
-      code: data.current.weather_code,
+      temperature: Math.round(current.temperature_2m),
+      code: current.weather_code,
     },
-    days: data.daily.time.map((date, i) => ({
+    days: dates.map((date, i) => ({
       date,
-      code: data.daily.weather_code[i],
-      max: Math.round(data.daily.temperature_2m_max[i]),
-      min: Math.round(data.daily.temperature_2m_min[i]),
+      code: daily.weather_code?.[i],
+      max: Math.round(daily.temperature_2m_max[i]),
+      min: Math.round(daily.temperature_2m_min[i]),
     })),
   };
 }

@@ -105,6 +105,10 @@ Saved-preference tests cover malformed JSON, incorrectly typed fields and mixed
 valid/invalid favorites. A damaged saved entry cannot prevent the app from
 loading; usable legacy Open-Meteo and AccuWeather favorites retain their data.
 
+In Open-Meteo mode, zero is a valid temperature. If the current reading is
+missing or daily highs and lows do not cover the returned dates, Home offers
+**Retry weather**. A successful retry restores the forecast.
+
 Production Edge checks exercised the actual Node proxy with a synthetic upstream
 at 320, 390 and 1440 px: both provider modes, old/new favorites, unit/theme controls,
 search failure, weather retry and persistence. A build with an ephemeral test value
