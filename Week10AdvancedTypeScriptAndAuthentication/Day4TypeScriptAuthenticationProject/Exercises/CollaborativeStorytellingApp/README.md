@@ -256,3 +256,17 @@ comment editing/deletion does not use the new-comments setting.
 
 This bounded extension does not implement reactions, live collaboration or
 version history, and it is not a claim of complete optional-chapter coverage.
+
+### Comment response validation — 2026-11-27
+
+An empty list opens an empty discussion. If a successful response is missing the
+list or a comment is incomplete, the reader offers **Retry loading comments**.
+It displays the discussion once the server returns a complete list.
+
+If the server acknowledges a new comment or an edit but omits the saved record,
+the form keeps the draft. Reload the discussion to see whether the change was
+saved before submitting it again.
+
+Run `cd client && npm test` for pure response-validation and route tests using
+synthetic records (Node 22.18+ or a supported newer Node release). Then run
+`npm run build` for semantic TypeScript checks and the production bundle.

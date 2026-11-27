@@ -1,4 +1,5 @@
-import type { Story, StoryComment, User, CommentSettings } from "./types";
+import type { Story, User, CommentSettings } from "./types";
+import { readCommentsResponse, readCommentResponse } from "./commentResponses";
 
 let readAccessToken: () => string | null = () => null;
 let writeAccessToken: (token: string | null) => void = () => {};
@@ -58,7 +59,7 @@ async function request<T>(path: string, method = "GET", body?: unknown, retry = 
   });
   if (response.status === 204) return undefined as T;
   const data = await response.json().catch(() => ({}));
-  const error = (data as { error?: string }).error;
+  const error = (data as { error?: string } | null)?.error;
   // After a server restart the old session is gone, so the saved token stops matching.
   if (response.status === 403 && error?.startsWith("CSRF token") && retry) {
     csrfToken = null;
@@ -116,13 +117,13 @@ export const api = {
   changeCommentSettings: (storyId: number, commentsOpen: boolean) =>
     request<CommentSettings>(`/stories/${storyId}/comment-settings`, "PATCH", { commentsOpen }),
   comments: (storyId: number) =>
-    request<{ comments: StoryComment[] }>(`/stories/${storyId}/comments`),
+    request<unknown>(`/stories/${storyId}/comments`).then(readCommentsResponse),
   addComment: (storyId: number, body: string) =>
-    request<{ comment: StoryComment }>(`/stories/${storyId}/comments`, "POST", { body }),
+    request<unknown>(`/stories/${storyId}/comments`, "POST", { body }).then(readCommentResponse),
   updateComment: (storyId: number, commentId: number, body: string) =>
-    request<{ comment: StoryComment }>(`/stories/${storyId}/comments/${commentId}`, "PATCH", {
+    request<unknown>(`/stories/${storyId}/comments/${commentId}`, "PATCH", {
       body,
-    }),
+    }).then(readCommentResponse),
   deleteComment: (storyId: number, commentId: number) =>
     request<void>(`/stories/${storyId}/comments/${commentId}`, "DELETE"),
   addContributor: (id: number, username: string) =>

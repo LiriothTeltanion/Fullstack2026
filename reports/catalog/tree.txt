@@ -1,8 +1,8 @@
 Fullstack2026 canonical Git-index tree
 Regenerated: 2026-11-27
-Base HEAD: 61897dc3151968a6d770d7effd466a4eb07ccfe2
-Source-index SHA-256 (generated outputs excluded): dff67c8751bb225566bef87344f7376a6899a9b3c391a99a3bbabf277fc99de0
-Indexed files: 3216
+Base HEAD: 033731a177a6786e69089115390665dd1cc5c266
+Source-index SHA-256 (generated outputs excluded): 773b77bb3d64d1999022dc88935be49e2f195435b6eabf62be0ee7f58c1b9ed5
+Indexed files: 3219
 
 .
 ├── .github
@@ -485,6 +485,7 @@ Indexed files: 3216
 │   │   ├── optional_facebook.test.mjs
 │   │   ├── README.md
 │   │   ├── repository_health.test.mjs
+│   │   ├── story_comment_responses.test.mjs
 │   │   ├── typescript_declarations.test.mjs
 │   │   ├── typescript_syntax.test.mjs
 │   │   ├── week12_items.test.mjs
@@ -780,6 +781,7 @@ Indexed files: 3216
 │   │   │   │   │   │   ├── api.ts
 │   │   │   │   │   │   ├── App.tsx
 │   │   │   │   │   │   ├── authSlice.ts
+│   │   │   │   │   │   ├── commentResponses.ts
 │   │   │   │   │   │   ├── index.css
 │   │   │   │   │   │   ├── main.tsx
 │   │   │   │   │   │   ├── navigation.tsx
@@ -789,6 +791,7 @@ Indexed files: 3216
 │   │   │   │   │   │   ├── storySlice.ts
 │   │   │   │   │   │   └── types.ts
 │   │   │   │   │   ├── tests
+│   │   │   │   │   │   ├── comment-responses.test.mjs
 │   │   │   │   │   │   ├── README.md
 │   │   │   │   │   │   └── routes.test.mjs
 │   │   │   │   │   ├── index.html
