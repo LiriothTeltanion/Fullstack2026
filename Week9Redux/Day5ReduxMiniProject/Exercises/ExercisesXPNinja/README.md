@@ -29,6 +29,11 @@ or last column, focus moves to its available return arrow. This uses the card ID
 so repeated titles work too. Creating a card or restoring a saved board leaves
 focus where the browser placed it.
 
+After deleting a card with the keyboard, focus moves to **Rename** on the next
+card in that column, or the previous card when deleting the last one. If the
+column becomes empty, its heading receives focus. Mouse clicks and intervening
+focus changes keep the browser's normal behavior.
+
 If browser storage is unavailable or a save fails (for example, because its quota
 is full), an announced warning explains that unsaved changes will be lost on
 reload. The board stays editable in memory and keeps the last successful save.
