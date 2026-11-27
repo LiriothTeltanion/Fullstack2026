@@ -15,7 +15,7 @@
       <p class="subtitle">Try the Study Hub login form with made-up details.</p>
 
       <!-- The form stays disabled until the local demo is ready. -->
-      <form id="login-form" class="form">
+      <form id="login-form" class="form" tabindex="-1">
         <fieldset id="demo-fields" class="form-fields" aria-label="Demo login" disabled>
           <label for="email">Email</label>
           <input
@@ -44,7 +44,7 @@
 
           <div class="row">
             <label class="checkbox"><input type="checkbox" /> Remember me</label>
-            <a href="#" class="link">Forgot password?</a>
+            <a href="#demo-help" class="link">Forgot password?</a>
           </div>
 
           <button type="submit" class="submit">Log in</button>
@@ -54,7 +54,7 @@
         </p>
       </form>
 
-      <p class="signup">New here? <a href="#" class="link">Create an account</a></p>
+      <p class="signup">New here? <a href="#demo-help" class="link">Create an account</a></p>
 
       <p id="profiles-label" class="profiles-label">Find Kevin online</p>
       <nav class="social-links" aria-labelledby="profiles-label">
@@ -92,6 +92,16 @@
           LinkedIn
         </a>
       </nav>
+
+      <section id="demo-help" class="demo-help" aria-labelledby="demo-help-title" tabindex="-1">
+        <h2 id="demo-help-title">About this demo</h2>
+        <p>
+          Study Hub is a local practice form. Password resets and account creation are not available
+          here. Use made-up details to try the form. No account is created and no email or form data
+          is sent.
+        </p>
+        <a href="#login-form" class="link">Back to login demo</a>
+      </section>
     </main>
   </body>
 </html>
